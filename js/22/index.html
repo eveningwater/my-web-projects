@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>random</title>
+    <link rel="stylesheet" href="https://www.eveningwater.com/static/css/common.css">
+    <link rel="shortcut icon" href="https://www.eveningwater.com/static/image/icon.jpg" type="image/x-icon">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #list-image {
+            position: relative;
+            margin-top: 25px;
+        }
+
+        #list-image::after {
+            content: "";
+            clear: both;
+            height: 0;
+            display: block;
+            visibility: hidden;
+        }
+
+        #list-image .list-image-item {
+            width: 120px;
+            height: 150px;
+            float: left;
+            margin-left: 15px;
+        }
+
+        .list-image-item-active {
+            box-shadow: 0 0 15px #2396ef;
+        }
+
+        #list-image .list-image-item img {
+            width: 120px;
+            height: 120px;
+            display: block;
+            cursor: zoom-in;
+        }
+
+        #list-image .list-image-item p {
+            text-align: center;
+            font-size: 18px;
+        }
+
+        #list-button {
+            margin: 15px;
+        }
+
+        .btn {
+            line-height: 1;
+            white-space: nowrap;
+            background: #fff;
+            border: 1px solid #dcdfe6;
+            color: #606266;
+            -webkit-appearance: none;
+            transition: 0.1s;
+            font-weight: 500;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            padding: 12px 14px;
+            font-size: 14px;
+            text-align: center;
+            display: inline-block;
+            cursor: pointer;
+            border-radius: 4px;
+            outline: none;
+        }
+
+        .start-btn,
+        .upload-btn {
+            background: #66b1ff;
+            border-color: #66b1ff;
+            color: #fff;
+        }
+
+        .start-btn:hover,
+        .upload-btn:hover,
+        .start-btn:active,
+        .upload-btn:active {
+            color: #fff;
+            background-color: #409eff;
+            border-color: #409eff;
+        }
+
+        .stop-btn:hover,
+        .stop-btn:active,
+        .reset-btn:hover,
+        .reset-btn:active,
+        .origin-btn:hover,
+        .origin-btn:active {
+            color: #57a3f3;
+            background-color: #fff;
+            border-color: #57a3f3;
+        }
+
+        #result {
+            color: #2396ef;
+            font-size: 25px;
+            margin: 2em;
+        }
+
+        @media screen and (max-width: 765px) {
+            #list-image {
+                padding: 20px;
+                margin-top: 0;
+            }
+
+            #list-image .list-image-item {
+                width: 50%;
+                margin-left: 0;
+            }
+
+            #list-image .list-image-item img {
+                width: 100px;
+                height: 100px;
+                margin: 10px auto;
+            }
+
+            #result {
+                margin: 0;
+                text-align: center;
+                margin-bottom: 1em;
+            }
+
+            #list-button {
+                margin: 0;
+                margin-bottom: 1em;
+                text-align: center;
+            }
+        }
+
+        input[type="file"] {
+            display: none !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="list-image"></div>
+    <div id="result">
+        点击开始选择吧!
+    </div>
+    <div id="list-button">
+        <button class="upload-btn btn" id="upload-btn" type="button">
+            上传
+            <input type="file" id="upload-input" class="upload-input" multiple>
+        </button>
+        <button class="start-btn btn" id="start-btn" type="button">开始</button>
+        <button class="stop-btn btn" id="stop-btn" type="button">停止</button>
+        <button class="reset-btn btn" id="reset-btn" type="button">重置</button>
+        <button class="origin-btn btn" id="origin-btn" type="button">还原</button>
+    </div>
+    <script src="./plugins/ewViewer.js"></script>
+    <script src="./plugins/popbox.js"></script>
+    <script src="./js/index.js"></script>
+    <script>
+        let page = new Page({
+            data: [
+                {
+                    url: "./image/1.jpg",
+                    text: "1"
+                },
+                {
+                    url: "./image/2.jpg",
+                    text: "2"
+                },
+                {
+                    url: "./image/3.jpg",
+                    text: "3"
+                },
+                {
+                    url: "./image/4.jpg",
+                    text: "4"
+                },
+                {
+                    url: "./image/5.jpg",
+                    text: "5"
+                }
+            ]
+        });
+    </script>
+</body>
+
+</html>

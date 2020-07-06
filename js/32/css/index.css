@@ -1,0 +1,271 @@
+@charset "utf-8";
+
+/******************************/
+/*首页功能*/
+/*作者:eveningwater*/
+/*日期:2017/1/5*/
+/******************************/
+/*********************************************/
+/* 样式初始化部分 */
+/*********************************************/
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font: 18px "微软雅黑";
+}
+
+/* 转换为IE盒子模型 */
+body,
+div,
+input,
+button {
+    box-sizing: border-box;
+}
+
+input,
+button {
+    margin: 0;
+}
+
+/*********************************************/
+/* 样式元件部分 */
+/*********************************************/
+/* 手型按钮 */
+button,
+input[type="checkbox"],
+a,
+thead {
+    cursor: pointer;
+}
+
+/* 消除轮廓线 */
+button,
+input {
+    outline: none;
+}
+
+/* 表单字体 */
+button,
+input {
+    font: 18px "微软雅黑";
+}
+
+/* 行内块元素 */
+#dataTable a {
+    display: inline-block;
+}
+
+/*********************************************/
+/* 样式细节设置部分 */
+/*********************************************/
+body {
+    padding: 20px;
+    color: #333;
+}
+
+/**** 表格设置部分 ****/
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table,
+th,
+td {
+    border: 1px solid #0ecf72;
+}
+
+#dataTable {
+    margin-top: 20px;
+}
+
+/* 表格行的设置 */
+#dataTable tbody tr:nth-child(odd) {
+    background-color: #f5f0f4;
+}
+
+#dataTable tbody tr:nth-child(even) {
+    background-color: #e4e4e1;
+}
+
+/* 单元格的设置 */
+th {
+    background-color: #2be98a;
+    color: #fff;
+}
+
+th span {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+th span.sort {
+    margin-left: 8px;
+}
+
+th,
+td {
+    border-left: none;
+    border-right: none;
+    padding: 6px 12px;
+    text-align: left;
+    font: normal 18px "微软雅黑";
+}
+
+td {
+    color: #666;
+}
+
+/**** 全选按钮首列 ****/
+table input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+}
+
+th.checkbox {
+    width: 20px;
+}
+
+th.checkbox input[type="checkbox"] {
+    cursor: not-allowed;
+}
+
+/**** 操作按钮 ****/
+.bodyHead button {
+    margin-left: 12px;
+    outline: none;
+    display: inline-block;
+    padding: 4px 6px;
+    background-color: transparent;
+    color: #17b64c;
+    border-radius: 4px;
+    border: 1px solid #17b64c;
+    transition: all .1s ease;
+}
+
+.bodyHead button:first-child {
+    margin-left: 0;
+}
+
+.bodyHead button:hover,
+.bodyHead button:active,
+.bodyHead button.active {
+    color: #0b9e17;
+    border-color: #0b9e17;
+}
+
+/*超链接*/
+a {
+    text-decoration: none;
+    color: #78da88;
+}
+
+a:last-child {
+    margin-left: 8px;
+}
+a:hover,
+a:active {
+    color: #17b64c;
+}
+
+.sortSort {
+    transform: rotate(90deg);
+}
+
+.sortReverse {
+    transform: rotate(270deg);
+}
+
+/*弹出框*/
+.popBox-maskLayer {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.popBox-maskLayer .popBox-content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 300px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.popBox-maskLayer .popBox-content .popBox-header {
+    color: #535353;
+    text-align: center;
+    font: 18px / 20px "微软雅黑", "楷体";
+    padding-bottom: 8px;
+    border-bottom: 1px dashed #232323;
+}
+
+.popBox-maskLayer .popBox-content .information-container {
+    padding: 15px;
+}
+
+.popBox-maskLayer .popBox-content .information {
+    margin: 4px 7px;
+}
+
+.popBox-maskLayer .popBox-content .information .property,
+.popBox-maskLayer .popBox-content .information .property-value {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.popBox-maskLayer .popBox-content .information .property {
+    width: 120px;
+    text-align: right;
+}
+
+.popBox-maskLayer .popBox-content .information .property-value {
+    margin-left: 10px;
+}
+
+.popBox-maskLayer .popBox-content .footerButtonGroup {
+    text-align: center;
+}
+
+.popBox-maskLayer .popBox-content .footerButtonGroup button {
+    outline: none;
+    display: inline-block;
+    padding: 6px 18px;
+    border: 1px solid;
+    border-radius: 3px;
+    vertical-align: middle;
+    background-color: transparent;
+}
+
+.popBox-maskLayer .popBox-content .footerButtonGroup button.sureBtn {
+    border-color: #218547;
+    color: #fff;
+    background-color: #218547;
+}
+
+.popBox-maskLayer .popBox-content .footerButtonGroup button.sureBtn:hover,
+.popBox-maskLayer .popBox-content .footerButtonGroup button.sureBtn:active {
+    border-color: #0b9942;
+    background-color: #0b9942;
+}
+
+.popBox-maskLayer .popBox-content .footerButtonGroup button.cancelBtn {
+    border-color: #535455;
+    color: #535455;
+    margin-left: 15px;
+}
+
+.popBox-maskLayer .popBox-content .footerButtonGroup button.cancelBtn:hover,
+.popBox-maskLayer .popBox-content .footerButtonGroup button.cancelBtn:active {
+    border-color: #1cd377;
+    color: #1cd377;
+}

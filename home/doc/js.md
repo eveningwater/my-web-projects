@@ -1,0 +1,36 @@
+# 原生 js 实现的 web 项目
+
+| 序号 |                                                 Project                                                  |                                        在线 demo                                        |
+| :--: | :------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------: |
+|  01  |                [表单验证](https://github.com/eveningwater/my-web-projects/tree/master/js/1)                 |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/1/)           |
+|  02  |              [挑选电影座位](https://github.com/eveningwater/my-web-projects/tree/master/js/2)               |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/2/)           |
+|  03  |               [视频播放器](https://github.com/eveningwater/my-web-projects/tree/master/js/3)                |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/3/)           |
+|  04  |               [汇率计算器](https://github.com/eveningwater/my-web-projects/tree/master/js/4)                |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/4/)           |
+|  05  |              [DOM 数组方法](https://github.com/eveningwater/my-web-projects/tree/master/js/5)               |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/5/)           |
+|  06  |             [弹窗与滑块菜单](https://github.com/eveningwater/my-web-projects/tree/master/js/6)              |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/6/)           |
+|  07  |            [猜单词的双人游戏](https://github.com/eveningwater/my-web-projects/tree/master/js/7)             |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/7/)           |
+|  08  |                [膳食 APP](https://github.com/eveningwater/my-web-projects/tree/master/js/8)                 |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/8/)           |
+|  09  |               [费用追踪器](https://github.com/eveningwater/my-web-projects/tree/master/js/9)                |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/9/)           |
+|  10  |        [音乐播放器](https://github.com/eveningwater/my-web-projects/tree/master/js/10)        |     [在线 demo](https://www.eveningwater.com/my-web-projects/js/10/)     |
+|  11  | [无限滚动](https://github.com/eveningwater/my-web-projects/tree/master/js/11) | [在线 demo](https://www.eveningwater.com/my-web-projects/js/11/) |
+|  12  |         [打字游戏](https://github.com/eveningwater/my-web-projects/tree/master/js/12)         |     [在线 demo](https://www.eveningwater.com/my-web-projects/js/12/)      |
+|  13  |  [文本阅读器](https://github.com/eveningwater/my-web-projects/tree/master/js/13)  |  [在线 demo](https://www.eveningwater.com/my-web-projects/js/13/)  |
+|  14  |        [记忆卡片](https://github.com/eveningwater/my-web-projects/tree/master/js/14)        |     [在线 demo](https://www.eveningwater.com/my-web-projects/js/14/)     |
+|  15  |     [歌词搜索器](https://github.com/eveningwater/my-web-projects/tree/master/js/15)      |    [在线 demo](https://www.eveningwater.com/my-web-projects/js/15/)     |
+|  16  |               [呼吸调节器](https://github.com/eveningwater/my-web-projects/tree/master/js/16)               |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/16/)          |
+|  17  |       [打砖块游戏](https://github.com/eveningwater/my-web-projects/tree/master/js/17)       |    [在线 demo](https://www.eveningwater.com/my-web-projects/js/17/)     |
+|  18  |  [新年倒计时](https://github.com/eveningwater/my-web-projects/tree/master/js/18)  |  [在线 demo](https://www.eveningwater.com/my-web-projects/js/18/)  |
+|  19  |       [拖拽排列列表](https://github.com/eveningwater/my-web-projects/tree/master/js/19)       |    [在线 demo](https://www.eveningwater.com/my-web-projects/js/19/)     |
+|  20  |                 [猜数字](https://github.com/eveningwater/my-web-projects/tree/master/js/20)                 |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/20/)          |
+|  21  |               [相册展示器](https://github.com/eveningwater/my-web-projects/tree/master/js/21)               |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/21/)          |
+|  22  |                [挑选衣服](https://github.com/eveningwater/my-web-projects/tree/master/js/22)                |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/22/)          |
+|  23  |                [柱状图表](https://github.com/eveningwater/my-web-projects/tree/master/js/23)                |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/23/)          |
+|  24  |               [九九乘法表](https://github.com/eveningwater/my-web-projects/tree/master/js/24)               |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/24/)          |
+|  25  |           [公路开车 404 页面](https://github.com/eveningwater/my-web-projects/tree/master/js/25)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/25/)          |
+|  26  |           [图片画廊](https://github.com/eveningwater/my-web-projects/tree/master/js/26)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/26/)          |
+|  27  |           [unicode编码与解码器](https://github.com/eveningwater/my-web-projects/tree/master/js/27)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/27/)
+|  28  |           [爱心鱼小游戏](https://github.com/eveningwater/my-web-projects/tree/master/js/28)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/28/)          
+|  29  |           [将表格数据导出为JSON数据](https://github.com/eveningwater/my-web-projects/tree/master/js/29)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/29/)   
+|  30  |           [动态下拉菜单](https://github.com/eveningwater/my-web-projects/tree/master/js/30)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/30/)
+|  31  |           [计分器](https://github.com/eveningwater/my-web-projects/tree/master/js/31)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/31/)
+|  32  |           [数据的操作(模拟ajax)](https://github.com/eveningwater/my-web-projects/tree/master/js/32)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/32/)          

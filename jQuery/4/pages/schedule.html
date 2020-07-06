@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>日常安排</title>
+    <link href="../plugins/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/bootstrap-datetimepicker.css">
+</head>
+
+<body>
+    <ul class="header nav nav-pills">
+        <li><a href="#">个人简历</a></li>
+        <li class="nav-active"><a href="#">日常安排</a></li>
+        <li><a href="#">日常阅读</a></li>
+    </ul>
+    <main class="schedule-main">
+        <h1>日程安排表</h1>
+        <div class="row">
+            <div class="center">
+                <div class="form-inline">
+                    <div class="form-group">
+                        <label>日期:</label>
+                        <input type="text" id="date" class="form-control">
+                    </div>
+                    <div class="form-group ml-30">
+                        <label>内容:</label>
+                        <input type="text" id="content" class="form-control">
+                    </div>
+                    <div class="form-group ml-5">
+                        <button type="button" class="btn btn-warning" id="addSchedule">添加</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mw-960">
+            <table class="table table-hover mt-10" id="scheduleList">
+                <thead>
+                    <tr>
+                        <th>日期</th>
+                        <th>安排内容</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </main>
+</body>
+<script src="../plugins/jquery.js"></script>
+<script src="../plugins/bootstrap-datetimepicker.js"></script>
+<script src="../js/util.js"></script>
+<script src="../js/popbox.js"></script>
+<script src="../js/nav.js"></script>
+<script src="../js/schedule.js"></script>
+
+</html>

@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+.flip-list-move {
+  transition: transform 1s;
+}
+
+.items {
+  width: 300px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background: linear-gradient(45deg, #234, #567);
+  color: #ffffff;
+}

@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>将表格数据导出为json文件</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <button type="button" class="export-btn" onclick="exportTableData()">导出为JSON数据</button>
+    <table>
+        <thead>
+            <tr>
+                <th>代码</th>
+                <th>中文</th>
+                <th>英文</th>
+                <th>图标</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>100</td>
+                <td>晴</td>
+                <td>Sunny/Clear</td>
+                <td><img src="https://cdn.heweather.com/cond_icon/100.png" title="晴天图标"></td>
+            </tr>
+            <tr>
+                <td>101</td>
+                <td>多云</td>
+                <td>Cloudy</td>
+                <td><img src="https://cdn.heweather.com/cond_icon/101.png" title="多云图标"></td>
+            </tr>
+            <tr>
+                <td>102</td>
+                <td>少云</td>
+                <td>Few Clouds</td>
+                <td><img src="https://cdn.heweather.com/cond_icon/102.png" title="少云图标"></td>
+            </tr>
+            <tr>
+                <td>103</td>
+                <td>晴间多云</td>
+                <td>Partly Cloudy</td>
+                <td><img src="https://cdn.heweather.com/cond_icon/103.png" title="晴间多云图标"></td>
+            </tr>
+            <tr>
+                <td>104</td>
+                <td>阴</td>
+                <td>Overcast</td>
+                <td><img src="https://cdn.heweather.com/cond_icon/104.png" title="阴图标"></td>
+            </tr>
+            <tr>
+                <td>200</td>
+                <td>有风</td>
+                <td>Windy</td>
+                <td><img src="https://cdn.heweather.com/cond_icon/200.png" title="有风图标"></td>
+            </tr>
+            <tr>
+                <td>201</td>
+                <td>平静</td>
+                <td>Calm</td>
+                <td><img src="https://cdn.heweather.com/cond_icon/201.png" title="平静图标"></td>
+            </tr>
+            <tr>
+                <td>202</td>
+                <td>微风</td>
+                <td>Light Breeze</td>
+                <td><img src="https://cdn.heweather.com/cond_icon/202.png" title="微风图标"></td>
+            </tr>
+            <tr>
+                <td>203</td>
+                <td>和风</td>
+                <td>Moderate/Gentle Breeze</td>
+                <td><img src="https://cdn.heweather.com/cond_icon/203.png" title="和风图标"></td>
+            </tr>
+            <tr>
+                <td>204</td>
+                <td>清风</td>
+                <td>Fresh Breeze</td>
+                <td><img src="https://cdn.heweather.com/cond_icon/204.png" title="清风图标"></td>
+            </tr>
+            <tr>
+                <td>205</td>
+                <td>强风/劲风</td>
+                <td>Strong Breeze</td>
+                <td><img src="https://cdn.heweather.com/cond_icon/205.png" title="强风图标"></td>
+            </tr>
+            <tr>
+                <td>206</td>
+                <td>疾风</td>
+                <td>High Wind, Near Gale</td>
+                <td><img src="https://cdn.heweather.com/cond_icon/206.png" title="疾风图标"></td>
+            </tr>
+            <tr>
+                <td>207</td>
+                <td>大风</td>
+                <td>Gale</td>
+                <td><img src="https://cdn.heweather.com/cond_icon/207.png" title="大风图标"></td>
+            </tr>
+            <tr>
+                <td>208</td>
+                <td>烈风</td>
+                <td>Strong Gale</td>
+                <td><img src="https://cdn.heweather.com/cond_icon/208.png" title="烈风图标"></td>
+            </tr>
+            <tr>
+                <td>209</td>
+                <td>风暴</td>
+                <td>Storm</td>
+                <td><img src="https://cdn.heweather.com/cond_icon/209.png" title="风暴图标"></td>
+            </tr>
+            <tr>
+                <td>210</td>
+                <td>狂爆风</td>
+                <td>Violent Storm</td>
+                <td><img src="https://cdn.heweather.com/cond_icon/210.png" title="狂爆风图标"></td>
+            </tr>
+            <tr>
+                <td>211</td>
+                <td>飓风</td>
+                <td>Hurricane</td>
+                <td><img src="https://cdn.heweather.com/cond_icon/211.png" title="飓风图标"></td>
+            </tr>
+            <tr>
+                <td>212</td>
+                <td>龙卷风</td>
+                <td>Tornado</td>
+                <td><img src="https://cdn.heweather.com/cond_icon/212.png" title="龙卷风图标"></td>
+            </tr>
+            <tr>
+                <td>213</td>
+                <td>热带风暴</td>
+                <td>Tropical Storm</td>
+                <td><img src="https://cdn.heweather.com/cond_icon/213.png" title="热带风暴图标"></td>
+            </tr>
+            <tr>
+                <td>300</td>
+                <td>阵雨</td>
+                <td>Shower Rain</td>
+                <td><img src="https://cdn.heweather.com/cond_icon/300.png" title="阵雨图标"></td>
+            </tr>
+            <tr>
+                <td>301</td>
+                <td>强阵雨</td>
+                <td>Heavy Shower Rain</td>
+                <td><img src="https://cdn.heweather.com/cond_icon/301.png" title="强阵雨图标"></td>
+            </tr>
+            <tr>
+                <td>302</td>
+                <td>雷阵雨</td>
+                <td>Thundershower</td>
+                <td><img src="https://cdn.heweather.com/cond_icon/302.png" title="雷阵雨图标"></td>
+            </tr>
+            <tr>
+                <td>303</td>
+                <td>强雷阵雨</td>
+                <td>Heavy Thunderstorm</td>
+                <td><img src="https://cdn.heweather.com/cond_icon/303.png" title="强雷阵雨图标"></td>
+            </tr>
+            <tr>
+                <td>304</td>
+                <td>雷阵雨伴有冰雹</td>
+                <td>Thundershower with hail</td>
+                <td><img src="https://cdn.heweather.com/cond_icon/304.png" title="雷阵雨伴有冰雹图标"></td>
+            </tr>
+            <tr>
+                <td>305</td>
+                <td>小雨</td>
+                <td>Light Rain</td>
+                <td><img src="https://cdn.heweather.com/cond_icon/305.png" title="小雨图标"></td>
+            </tr>
+            <tr>
+                <td>306</td>
+                <td>中雨</td>
+                <td>Moderate Rain</td>
+                <td><img src="https://cdn.heweather.com/cond_icon/306.png" title="中雨图标"></td>
+            </tr>
+            <tr>
+                <td>307</td>
+                <td>大雨</td>
+                <td>Heavy Rain</td>
+                <td><img src="https://cdn.heweather.com/cond_icon/307.png" title="大雨图标"></td>
+            </tr>
+            <tr>
+                <td>308</td>
+                <td>极端降雨</td>
+                <td>Extreme Rain</td>
+                <td><img src="https://cdn.heweather.com/cond_icon/308.png" title="极端降雨图标"></td>
+            </tr>
+            <tr>
+                <td>309</td>
+                <td>毛毛雨/细雨</td>
+                <td>Drizzle Rain</td>
+                <td><img src="https://cdn.heweather.com/cond_icon/309.png" title="毛毛雨图标"></td>
+            </tr>
+            <tr>
+                <td>310</td>
+                <td>暴雨</td>
+                <td>Storm</td>
+                <td><img src="https://cdn.heweather.com/cond_icon/310.png" title="暴雨图标"></td>
+            </tr>
+            <tr>
+                <td>311</td>
+                <td>大暴雨</td>
+                <td>Heavy Storm</td>
+                <td><img src="https://cdn.heweather.com/cond_icon/311.png" title="大暴雨图标"></td>
+            </tr>
+            <tr>
+                <td>312</td>
+                <td>特大暴雨</td>
+                <td>Severe Storm</td>
+                <td><img src="https://cdn.heweather.com/cond_icon/312.png" title="特大暴雨图标"></td>
+            </tr>
+            <tr>
+                <td>313</td>
+                <td>冻雨</td>
+                <td>Freezing Rain</td>
+                <td><img src="https://cdn.heweather.com/cond_icon/313.png" title="冻雨图标"></td>
+            </tr>
+            <tr>
+                <td>314</td>
+                <td>小到中雨</td>
+                <td>Light to moderate rain</td>
+                <td><img src="https://cdn.heweather.com/cond_icon/314.png" title="小到中雨图标"></td>
+            </tr>
+            <tr>
+                <td>315</td>
+                <td>中到大雨</td>
+                <td>Moderate to heavy rain</td>
+                <td><img src="https://cdn.heweather.com/cond_icon/315.png" title="中到大雨图标"></td>
+            </tr>
+            <tr>
+                <td>316</td>
+                <td>大到暴雨</td>
+                <td>Heavy rain to storm</td>
+                <td><img src="https://cdn.heweather.com/cond_icon/316.png" title="大到暴雨图标"></td>
+            </tr>
+            <tr>
+                <td>317</td>
+                <td>暴雨到大暴雨</td>
+                <td>Storm to heavy storm</td>
+                <td><img src="https://cdn.heweather.com/cond_icon/317.png" title="暴雨到大暴雨图标"></td>
+            </tr>
+            <tr>
+                <td>318</td>
+                <td>大暴雨到特大暴雨</td>
+                <td>Heavy to severe storm</td>
+                <td><img src="https://cdn.heweather.com/cond_icon/318.png" title="大暴雨到特大暴雨图标"></td>
+            </tr>
+            <tr>
+                <td>399</td>
+                <td>雨</td>
+                <td>Rain</td>
+                <td><img src="https://cdn.heweather.com/cond_icon/399.png" title="雨图标"></td>
+            </tr>
+            <tr>
+                <td>400</td>
+                <td>小雪</td>
+                <td>Light Snow</td>
+                <td><img src="https://cdn.heweather.com/cond_icon/400.png" title="小雪图标"></td>
+            </tr>
+            <tr>
+                <td>401</td>
+                <td>中雪</td>
+                <td>Moderate Snow</td>
+                <td><img src="https://cdn.heweather.com/cond_icon/401.png" title="中雪图标"></td>
+            </tr>
+            <tr>
+                <td>402</td>
+                <td>大雪</td>
+                <td>Heavy Snow</td>
+                <td><img src="https://cdn.heweather.com/cond_icon/402.png" title="大雪图标"></td>
+            </tr>
+            <tr>
+                <td>403</td>
+                <td>暴雪</td>
+                <td>Snowstorm</td>
+                <td><img src="https://cdn.heweather.com/cond_icon/403.png" title="暴雪图标"></td>
+            </tr>
+            <tr>
+                <td>404</td>
+                <td>雨夹雪</td>
+                <td>Sleet</td>
+                <td><img src="https://cdn.heweather.com/cond_icon/404.png" title="雨夹雪图标"></td>
+            </tr>
+            <tr>
+                <td>405</td>
+                <td>雨雪天气</td>
+                <td>Rain And Snow</td>
+                <td><img src="https://cdn.heweather.com/cond_icon/405.png" title="雨雪天气图标"></td>
+            </tr>
+            <tr>
+                <td>406</td>
+                <td>阵雨夹雪</td>
+                <td>Shower Snow</td>
+                <td><img src="https://cdn.heweather.com/cond_icon/406.png" title="阵雨夹雪图标"></td>
+            </tr>
+            <tr>
+                <td>407</td>
+                <td>阵雪</td>
+                <td>Snow Flurry</td>
+                <td><img src="https://cdn.heweather.com/cond_icon/407.png" title="阵雪图标"></td>
+            </tr>
+            <tr>
+                <td>408</td>
+                <td>小到中雪</td>
+                <td>Light to moderate snow</td>
+                <td><img src="https://cdn.heweather.com/cond_icon/408.png" title="小到中雪图标"></td>
+            </tr>
+            <tr>
+                <td>409</td>
+                <td>中到大雪</td>
+                <td>Moderate to heavy snow</td>
+                <td><img src="https://cdn.heweather.com/cond_icon/409.png" title="中到大雪图标"></td>
+            </tr>
+            <tr>
+                <td>410</td>
+                <td>大到暴雪</td>
+                <td>Heavy snow to snowstorm</td>
+                <td><img src="https://cdn.heweather.com/cond_icon/410.png" title="大到暴雪图标"></td>
+            </tr>
+            <tr>
+                <td>499</td>
+                <td>雪</td>
+                <td>Snow</td>
+                <td><img src="https://cdn.heweather.com/cond_icon/499.png" title="雪图标"></td>
+            </tr>
+            <tr>
+                <td>500</td>
+                <td>薄雾</td>
+                <td>Mist</td>
+                <td><img src="https://cdn.heweather.com/cond_icon/500.png" title="薄雾图标"></td>
+            </tr>
+            <tr>
+                <td>501</td>
+                <td>雾</td>
+                <td>Foggy</td>
+                <td><img src="https://cdn.heweather.com/cond_icon/501.png" title="雾图标"></td>
+            </tr>
+            <tr>
+                <td>502</td>
+                <td>霾</td>
+                <td>Haze</td>
+                <td><img src="https://cdn.heweather.com/cond_icon/502.png" title="霾图标"></td>
+            </tr>
+            <tr>
+                <td>503</td>
+                <td>扬沙</td>
+                <td>Sand</td>
+                <td><img src="https://cdn.heweather.com/cond_icon/503.png" title="扬沙图标"></td>
+            </tr>
+            <tr>
+                <td>504</td>
+                <td>浮尘</td>
+                <td>Dust</td>
+                <td><img src="https://cdn.heweather.com/cond_icon/504.png" title="浮尘图标"></td>
+            </tr>
+            <tr>
+                <td>507</td>
+                <td>沙尘暴</td>
+                <td>Duststorm</td>
+                <td><img src="https://cdn.heweather.com/cond_icon/507.png" title="沙尘暴图标"></td>
+            </tr>
+            <tr>
+                <td>508</td>
+                <td>强沙尘暴</td>
+                <td>Sandstorm</td>
+                <td><img src="https://cdn.heweather.com/cond_icon/508.png" title="强沙尘暴图标"></td>
+            </tr>
+            <tr>
+                <td>509</td>
+                <td>浓雾</td>
+                <td>Dense fog</td>
+                <td><img src="https://cdn.heweather.com/cond_icon/509.png" title="浓雾图标"></td>
+            </tr>
+            <tr>
+                <td>510</td>
+                <td>强浓雾</td>
+                <td>Strong fog</td>
+                <td><img src="https://cdn.heweather.com/cond_icon/510.png" title="强浓雾图标"></td>
+            </tr>
+            <tr>
+                <td>511</td>
+                <td>中度霾</td>
+                <td>Moderate haze</td>
+                <td><img src="https://cdn.heweather.com/cond_icon/511.png" title="中度霾图标"></td>
+            </tr>
+            <tr>
+                <td>512</td>
+                <td>重度霾</td>
+                <td>Heavy haze</td>
+                <td><img src="https://cdn.heweather.com/cond_icon/512.png" title="重度霾图标"></td>
+            </tr>
+            <tr>
+                <td>513</td>
+                <td>严重霾</td>
+                <td>Severe haze</td>
+                <td><img src="https://cdn.heweather.com/cond_icon/513.png" title="重度霾图标"></td>
+            </tr>
+            <tr>
+                <td>514</td>
+                <td>大雾</td>
+                <td>Heavy fog</td>
+                <td><img src="https://cdn.heweather.com/cond_icon/514.png" title="大雾图标"></td>
+            </tr>
+            <tr>
+                <td>515</td>
+                <td>特强浓雾</td>
+                <td>Extra heavy fog</td>
+                <td><img src="https://cdn.heweather.com/cond_icon/515.png" title="特强浓雾图标"></td>
+            </tr>
+            <tr>
+                <td>900</td>
+                <td>热</td>
+                <td>Hot</td>
+                <td><img src="https://cdn.heweather.com/cond_icon/900.png" title="热图标"></td>
+            </tr>
+            <tr>
+                <td>901</td>
+                <td>冷</td>
+                <td>Cold</td>
+                <td><img src="https://cdn.heweather.com/cond_icon/901.png" title="冷图标"></td>
+            </tr>
+            <tr>
+                <td>999</td>
+                <td>未知</td>
+                <td>Unknown</td>
+                <td><img src="https://cdn.heweather.com/cond_icon/999.png" title="未知图标"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+<script src="index.js"></script>
+<script>
+    function exportTableData() {
+        return new toJSONData({
+            el: 'table', //表格元素的DOM字符串
+            keyNames: ['code', 'zhName', 'enName'], //导出的JSON字段名，与表头的每一个字段一一对应
+            fileName: 'weather.json' //导出的文件名
+        });
+    }
+</script>
+
+</html>

@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body,html{
+    overflow: hidden;
+    height: 100%;
+}
+.ew-all-bg{
+    width: 100%;
+    height: 100%;
+}
+.ew-all-bg > .ew-all-canvas{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin: 0;
+}
+.ew-canvas-1,.ew-canvas-2{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+}
+.ew-canvas-1{
+    z-index: 1;
+}
+.ew-canvas-2{
+    z-index: 0;
+}

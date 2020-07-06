@@ -1,0 +1,26 @@
+/**
+* 功能:主页面样式
+* 日期:2017/8/23
+*/
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+section{
+	position: fixed;
+	width: 850px;
+	height: 400px;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+}
+@media screen and (max-width:768px){
+	section{
+		width: 100%;
+		height: 100%;
+	}
+}

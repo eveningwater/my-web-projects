@@ -1,0 +1,150 @@
+/******************功能:计分器**********************/
+/*****************************/
+/*作者:loho*/
+/*****************************/
+/*****************************/
+/*日期:2017/2/27*/
+/*****************************/
+/********************公共样式************************/
+/*初始化页边距*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*标准盒子模型*/
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+
+/*手型按钮*/
+input,
+button {
+    cursor: pointer;
+}
+
+/*消除边框线*/
+input,
+button {
+    outline: none;
+}
+
+/*消除项目符号*/
+ul,
+li {
+    list-style: none;
+}
+
+/********************细节样式************************/
+/*body*/
+body,
+html {
+    font: 16px "微乳雅黑";
+    overflow: hidden;
+    color: #666;
+    height: 100%;
+}
+
+/*main*/
+#main {
+    width: 100%;
+    height: 100%;
+}
+
+#main header,
+#content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#main header ul {
+    min-width: 50%;
+}
+
+/*div*/
+header ul li {
+    padding: 10px;
+    float: left;
+}
+
+header ul li:nth-child(5n) {
+    float: none;
+}
+
+/*label*/
+#main label {
+    min-width: 30px;
+    height: 32px;
+    line-height: 32px;
+    text-align: right;
+    display: inline-block;
+}
+
+#main label:after {
+    content: ".";
+}
+
+/*input*/
+input[type="text"] {
+    max-width: 70px;
+    height: 32px;
+    padding-left: 10px;
+    margin-left: 10px;
+    border: 1px solid #666;
+    display: inline-block;
+}
+
+#content {
+    padding: 0.3em 0;
+    min-height: 55px;
+}
+
+#content div {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#content div:last-of-type {
+    font-size: 30px;
+    margin-left: 2em;
+}
+
+/*button*/
+#content button {
+    width: 80px;
+    height: 100%;
+    background-color: #d7d8db;
+    border: 1px solid #f6f7fa;
+    font-size: 20px;
+    letter-spacing: 2px;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+#content button:last-of-type {
+    margin-left: 20px;
+}
+
+#content button:hover,
+#content button:active {
+    color: #fff;
+    box-shadow: 0 0 10px #b1f7f7;
+    background-color: #73c3e7;
+}
+.ew-popBox input {
+    width: 100%;
+    display: block;
+    border-radius: 4px;
+    max-width: 100%;
+    margin-left: 0;
+}
+.ew-popBox input:last-of-type {
+    margin-top: 15px;
+}
+.ew-popBox input:focus {
+    border-color: #2396ef;
+}

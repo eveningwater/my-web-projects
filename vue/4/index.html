@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vue.js拖拽列表</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div id="content">
+        <transition-group name="flip-list">
+            <div v-for="item in items" :key="item" draggable="true" class="items" @dragstart="dragstart(item)"
+                @dragenter="dragenter(item)" @dragend="dragend(item)">{{item}}</div>
+        </transition-group>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+<script src="index.js"></script>
+
+</html>

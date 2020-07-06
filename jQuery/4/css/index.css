@@ -1,0 +1,441 @@
+/*
+* 功能:页面样式
+* 日期:2019/5/29
+*/
+
+body,html{
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+*,*:before,*:after{
+    box-sizing: border-box;
+}
+button,input{
+    outline: none;
+}
+.pos-r{
+    position: relative;
+}
+a{
+    text-decoration: none;
+}
+body{
+    overflow: hidden;
+}
+ul,li{
+    list-style: none;
+}
+::-webkit-scrollbar{
+    width: 10px;
+    height: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #f2f2f2;
+    border-radius: 5px;
+}
+.mt-10{
+    margin-top: 10px;
+}
+.ml-5{
+    margin-left: 5px!important;
+}
+.ml-30{
+    margin-left: 30px;
+}
+.mw-960{
+    max-width: 960px;
+    margin: auto;
+}
+/* 
+*  登陆页样式
+*/
+.login-page{
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-image: url('../images/snow.jpg');
+}
+.login-box{
+    min-width: 300px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #ffffff;
+    z-index: 3;
+    padding: 20px;
+    border-radius: 5px;
+}
+/* 
+* 弹框样式
+*/
+.ew-popbox-mask{
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 999;
+}
+.ew-popbox{
+    min-width: 300px;
+    min-height: 80px;
+    background-color: #ffffff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 5px;
+}
+.ew-popbox-title{
+    padding: 8px 9px;
+    font-weight: 500;
+    font-size: 18px;
+}
+.ew-popbox-content{
+    padding: 20px;
+}
+.ew-popbox-btngroup:after{
+    content: "";
+    height: 0;
+    display: block;
+    clear: both;
+    visibility: hidden;
+}
+.ew-popbox-btngroup{
+    padding: 8px 10px;
+}
+.ew-popbox-btngroup button{
+    float: right;
+    letter-spacing: 2px;
+}
+.ew-popbox-btngroup button:hover,
+.ew-popbox-btngroup button:active{
+    color: #56585a;
+}
+.ew-popbox-btngroup button:focus {
+    box-shadow: none;
+}
+/*
+*  简历页样式
+*/
+.resume-main{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+/* 左半部分 */
+.left-menu{
+    width: 250px;
+    background-color: #535353;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+/* 头像 */
+.left-menu .avator{
+    width: 160px;
+    height: 160px;
+    margin: 2em auto;
+    border:5px solid #fff;
+    transition: all .5s;
+    border-radius: 50%;
+}
+.left-menu .avator img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: block;
+}
+.left-menu .avator:hover,
+.left-menu .avator:hover img{
+    transform: rotate(360deg);
+}
+/* 左边导航 */
+.left-menu > .left-nav{
+    width: 100%;
+}
+.left-menu > .left-nav > .left-nav-item{
+    width: 100%;
+    padding: 1em;
+    text-align: center;
+    display: block;
+    cursor: pointer;
+    color: #ffffff;
+}
+.left-menu > .left-nav > .left-nav-item:hover,.left-menu > .left-nav > .left-nav-item:active,.left-nav-active{
+    background: rgba(0,0,0,0.2);
+}
+/* 右半部分 */
+.main{
+    width: calc(100% - 250px);
+    margin-left: 250px;
+    height: 100%;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.main > section > .wrap{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+    padding: 0 1.25em;
+    box-sizing: content-box;
+}
+.main > section{
+    width: 100%;
+    padding: 5em 0;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.main > section p{
+    line-height: 1.8em;
+    margin-bottom: 1em;
+}
+.main > section .title{
+    margin-bottom: 1em;
+}
+.main > section .title:before{
+    content: "";
+    width: 24px;
+    height: 24px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: inline-block;
+    margin-right: 0.5em;
+}
+/* 个人资料部分 */
+#introduce{
+    background-image: url('../images/bg-1.png');
+}
+#introduce .title:before{
+    background-image: url('../images/star.svg');
+}
+/* 经历部分 */
+#experience{
+    background-image: url('../images/bg-2.png');
+}
+#experience .title:before{
+    background-image: url('../images/experience.svg');
+}
+#experience .timeline{
+    margin-left: 1em;
+    padding-left: 1.5em;
+    border-left: 2px solid #535353;
+}
+#experience .timeline > li{
+    line-height: 1.5em;
+    position: relative;
+    margin-bottom: 1.5em;
+}
+#experience .timeline > li:before{
+    content: "";
+    left: -2.3em;
+    width: 1.5em;
+    height: 1.5em;
+    display: block;
+    position: absolute;
+    background: #eec358;
+    border-radius: 100%;
+    transition: transform .3s;
+}
+#experience .photo{
+    width: 307px;
+    height: 307px;
+    cursor: zoom-in;
+}
+/* 爱好部分 */
+#hobby{
+    background-image: url('../images/bg-3.png');
+}
+#hobby .title:before{
+    background-image: url('../images/hobby.svg');
+}
+#hobby .wrap em{
+    color: #936f77;
+    font-size: 18px;
+    font-style: normal;
+}
+/* 日常安排页 */
+.schedule-main{
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100%;
+    height: 100%;
+}
+.schedule-main h1{
+    text-align: center;
+    margin-bottom: 1em;
+}
+.schedule-main .center{
+    margin: auto;
+    text-align: center;
+}
+.schedule-main .mw-960 > .table{
+    border: 1px solid #d2e2e6;
+    text-align: center;
+}
+/* 阅读页面 */
+.novel-header{
+    width: 100%;
+    height: 50px;
+    background-color: #535353;
+    text-align: center;
+    color: #ffffff;
+    line-height: 50px;
+    position: relative;
+}
+/* 头部 */
+.novel-header > .back,.novel-header > .set{
+    top: 0;
+    cursor: pointer;
+    position: absolute;
+}
+.novel-header > .back{
+    left: 15px;
+}
+.novel-header > .set{
+    right: 15px;
+}
+.novel-header > .back:hover,
+.novel-header > .set:hover,
+.novel-header > .set:active,
+.novel-header > .back:active{
+    color: #eeeeee;
+}
+/* 主体目录部分 */
+.novel-main{
+    width: 100%;
+    position: relative;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.novel-directory{
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    border-bottom: 2px solid #535353;
+    box-shadow: 0 0 15px rgb(224, 235, 82);
+    padding: 0 5px;
+    position: relative;
+    font-weight: 600;
+    cursor: pointer;
+}
+.novel-directory > .arrow-right{
+    width: 15px;
+    height: 15px;
+    background-color: #535353;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 16px;
+    color: #ffffff;
+    line-height: 15px;
+    position: absolute;
+    right: 5px;
+    top: 10px;
+}
+.novel-content{
+    padding: 2em;
+}
+.novel-content > h2{
+    margin-bottom: 1em;
+}
+/* 回到顶部按钮 */
+.toTop{
+    position: fixed;
+    right: 2px;
+    bottom: 25px;
+    width: 45px;
+    height: 45px;
+    background: url('../images/totop.svg')no-repeat 50%/cover;
+    font: 35px/45px '微软雅黑';
+    text-align: center;
+    color: #f7ebeb;
+    border-radius: 5px;
+    transition: all .5s;
+    cursor: pointer;
+    display: none;
+}
+.toTop:hover,
+.toTop:active{
+    transform: scale(1.2);
+}
+/* 底部 */
+.main > .footer{
+    width: 100%;
+    background-color: #72655c;
+    color: #ffffff;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+.main > .footer p{
+    text-align: center;
+}
+.main > .footer a{
+    color: #ffffff;
+    text-decoration: none;
+}
+.main > .footer a:hover,
+.main > .footer a:active{
+    color: #ccc6c6;
+}
+/* 收缩菜单 */
+.fold-menu{
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    left: 252px;
+    top: 0;
+    border-radius: 2px;
+    cursor: pointer;
+    z-index: 999;
+}
+.fold-menu span{
+    height: 2px;
+    width: 100%;
+    background-color: #535353;
+    display: block;
+    margin-top: 3px;
+}
+.fold-menu:hover,
+.fold-menu:active{
+    opacity: .8;
+}
+/*
+*  胶囊导航选中样式
+*/
+.header.nav{
+    width: 100%;
+    height: 35px;
+    position: relative;
+    border-bottom: 1px solid #f2f2f2;
+}
+.header.nav li{
+    width: 33.3333%;
+    height: 100%;
+}
+.header.nav li a{
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-align: center;
+    line-height: 35px;
+    font-size: 18px;
+    text-decoration: none;
+    color: #535353;
+}
+.nav-active a,.nav li a:hover,.nav li a:active{
+    background-color: #72655b;
+    color: #ffffff!important;
+}

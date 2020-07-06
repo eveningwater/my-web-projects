@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#ew-moon-star {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.error {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    perspective: 500px;
+}
+
+.error>.center {
+    transform: rotateX(20deg);
+    position: relative;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.error>.center>.car-banner {
+    position: absolute;
+    left: 50%;
+    top: 40vh;
+    z-index: 1000;
+    width: 100px;
+    transform: translateX(-50%) rotateX(20deg);
+}
+
+.error>.center img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.error>.center>.road {
+    width: 100%;
+    height: 1346px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+}
+
+.error>.center>.road_h_1,
+.error>.center>.road_h_2 {
+    animation-duration: 5000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.error>.center>.road_h_1 {
+    animation-name: road_h1;
+
+}
+
+.error>.center>.road_h_2 {
+    animation-name: road_h2;
+}
+.goback {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.goback p {
+    font: 28px "幼圆","楷体";
+    text-align: center;
+    color: #535353;
+    background-color: #eeeeee;
+    padding: 15px;
+    border-radius: 15px;
+}
+.goback p a {
+    text-decoration: none;
+    color: #535353;
+}
+.goback p a:hover,
+.goback p a:active {
+    color: #999999;
+}
+@keyframes road_h1 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(0, 1336px);
+    }
+
+    50.1% {
+        transform: translate(0, -1336px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes road_h2 {
+    0% {
+        transform: translate(0, -1336px);
+    }
+
+    50% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(0, 1336px);
+    }
+}
+
+@media screen and (max-width:765px) {
+    .error>.center>.car-banner {
+        width: 60px;
+    }
+    .goback p {
+        font-size: 12px;
+    }
+}

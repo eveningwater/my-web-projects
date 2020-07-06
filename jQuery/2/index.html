@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>love you</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/page.css">
+    <link rel="shortcut icon" href="./image/1.gif" type="image/x-icon">
+</head>
+
+<body>
+    <div id="page-1" class="page-1">
+        <p id="text" class="text"></p>
+        <div class="middle-img">
+            <img src="./image/1.gif" alt="图片加载中">
+        </div>
+        <p id="name" class="name"></p>
+        <div class="not-well" id="not-well"></div>
+        <div class="btn-group">
+            <button>好</button>
+            <button>不好</button>
+        </div>
+    </div>
+    <div id="page-2" class="page-2"></div>
+    <div class="popBox">
+        <div class="popBox-content">
+            <p></p>
+            <button>下一步</button>
+        </div>
+    </div>
+    <audio src="https://www.eveningwater.com/project/lovepage/music/%E6%84%BF%E5%BE%97%E4%B8%80%E4%BA%BA%E5%BF%83.mp3" autoplay loop></audio>
+</body>
+<script src="./plugins/jquery.min.js"></script>
+<script src="./plugins/jQuery.firework.js"></script>
+<script src="./js/index.js"></script>
+<script>
+    new girlFriend({
+        text: "做我女朋友好不好?",
+        textEl: $('#text'),
+        name: "XXX",
+        nameEl: $('#name'),
+        notWellTextArr: ["房产证写你名字", "难产保大人", "我妈会游泳", "余生请多指教"],
+        notWellEl: $('#not-well'),
+        buttonEls: $('.btn-group button'),
+        wellTextArr: ["太好了，我太开心了", "接下来，我要给你一个惊喜", "继续下一步"],
+        popBox: $('.popBox'),
+        isBirth: false,
+        poems: [
+            '为伊一求长江水，共饮焉知君无言？<br>千风万雨当不住，此情可比山石坚。',
+            '情如风雨无寻常，不动平平动即殇。<br>愿得世上有情人，心心相印似鸳鸯。',
+            '语动流水心甚乱，倍思闲。<br>尝望天，复见，日悠然。<br>争忍不为情？又羞赧。<br>送我心，安你心，已然迷伊颜。',
+            '抬首望天上的明月，低头窥地下的小河。<br>他们亲密的接吻，只不过是在镜子的表面。<br>就像——你和我。',
+            '风雨却至愁伊人，欲语还惧伊人心。<br>相思一夜未敢言，只愿风雨寄余情。',
+            '秋风吹尽叶谢飞，犹思初见泪如水。<br>一番珍重别离后，江湖相忘竟不知。'
+        ]
+    });
+</script>
+
+</html>

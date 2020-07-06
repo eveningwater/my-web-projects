@@ -1,0 +1,49 @@
+/**************************************/
+/*首页功能*/
+/*作者:loho*/
+/*日期:2017/2/7*/
+/**************************************/
+@charset "utf-8";
+
+/**
+* 功能：普通页面样式设置
+**/
+/*********************************************/
+/* 样式初始化部分 */
+/*********************************************/
+* {
+    margin: 0;
+    padding: 0;
+}
+body,html {
+    height: 100%;
+    font: 20px "微软雅黑";
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    overflow: hidden;
+}
+/* 转换为IE盒子模型 */
+*,*::before,*::after {
+    box-sizing: border-box;
+}
+
+/* 手型按钮 */
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="radio"],
+input[type="checkbox"],
+a {
+    cursor: pointer;
+}
+
+button,
+input,
+textarea,
+select {
+    outline: none;
+}
+

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>个人简历</title>
+    <link href="../plugins/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/index.css">
+
+</head>
+
+<body>
+    <ul class="header nav nav-pills">
+        <li class="nav-active"><a href="#">个人简历</a></li>
+        <li><a href="#">日常安排</a></li>
+        <li><a href="#">日常阅读</a></li>
+    </ul>
+    <div class="resume-main">
+        <aside class="left-menu">
+            <div class="avator">
+                <img src="../images/intro.jpg" alt="">
+            </div>
+            <nav class="left-nav">
+                <div class="left-nav-active left-nav-item" data-option="introduce">资料</div>
+                <div class="left-nav-item" data-option="experience">经历</div>
+                <div class="left-nav-item" data-option="hobby">爱好</div>
+            </nav>
+        </aside>
+        <div class="fold-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <main class="main">
+            <section id="introduce">
+                <div class="wrap">
+                    <h2 class="title">个人资料</h2>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <p>姓名：XXX</p>
+                            <p>性别：男</p>
+                            <p>学号：XXX</p>
+                            <p>专业：XXX</p>
+                            <p>联系方式：XXX</p>
+                        </div>
+                        <div class="col-md-4">
+                            <p>QQ：XXX</p>
+                            <p>微信：XXX</p>
+                            <p>博客：XXX</p>
+                            <p>github：XXX</p>
+                            <p>邮箱：XXX</p>
+                        </div>
+                        <div class="col-md-4">
+                            <p>
+                                我是一个热爱钻研计算机技术的青少年，从小开始对计算机有极大的兴趣。目前我专注网站开发领域。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="experience">
+                <div class="wrap">
+                    <h2 class="title">我的经历</h2>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <ul class="timeline">
+                                <li>2016.07.03:毕业于XXX大学</li>
+                                <li>2016.07.03:毕业于XXX大学</li>
+                                <li>2016.07.03:毕业于XXX大学</li>
+                                <li>2016.07.03:毕业于XXX大学</li>
+                                <li>2016.07.03:毕业于XXX大学</li>
+                                <li>2016.07.03:毕业于XXX大学</li>
+                                <li>2016.07.03:毕业于XXX大学</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <img src="../images/intro.jpg" alt="" class="photo"
+                                onclick="preview(event.target.src,600)" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="hobby">
+                <div class="wrap">
+                    <h2 class="title">我的爱好</h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>我喜欢<em>阅读</em></p>
+                            <p>我喜欢<em>唱歌</em></p>
+                            <p>我喜欢<em>浏览技术网站</em></p>
+                            <p>我喜欢<em>看僵尸片</em></p>
+                        </div>
+                        <div class="col-md-6">
+                            <p>
+                                <a href="https://www.qidian.com/" target="_blank">在线书城</a>
+                            </p>
+                            <p>
+                                <a href="https://y.qq.com/" target="_blank">QQ音乐</a>
+                            </p>
+                            <p>
+                                <a href="https://stackoverflow.com/" target="_blank">stackoverflow</a>
+                            </p>
+                            <p>
+                                <a href="http://so.iqiyi.com/so/q_%E6%9E%97%E6%AD%A3%E8%8B%B1?source=input&sr=45339960021" target="_blank">林正英僵尸剧集</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer class="footer">
+                <p>
+                    © 2019 By
+                    <a href="#">XXX</a>
+                </p>
+            </footer>
+            <div class="toTop"></div>
+        </main>
+    </div>
+</body>
+<script src="../plugins/jquery.js"></script>
+<script src="../js/util.js"></script>
+<script src="../js/popbox.js"></script>
+<script src="../js/nav.js"></script>
+<script src="../js/resume.js"></script>
+<script src="../js/preiview.js"></script>
+<script src="../js/toTop.js"></script>
+
+
+</html>

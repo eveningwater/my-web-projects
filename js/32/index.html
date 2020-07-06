@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="shortcut icon" href="https://eveningwater.com/static/image/icon.jpg" type="image/x-icon">
+    <title>数据操作</title>
+</head>
+
+<body>
+    <div class="bodyHead">
+        <button type="button" id="load">加载数据</button>
+        <button type="button" id="delete">删除选中</button>
+    </div>
+    <table id="dataTable">
+        <thead>
+            <tr>
+                <th class="checkbox">
+                    <input type="checkbox" id="checkbox" disabled>
+                </th>
+                <th data-key="goodsId">货号<span class="sort" data-sort="goodsId">&gt;</span></th>
+                <th data-key="Name">货物名</th>
+                <th data-key="productDate">生产日期<span class="sort" data-sort="productDate">&gt;</span></th>
+                <th data-key="buyDate">进货日期<span class="sort" data-sort="buyDate">&gt;</span></th>
+                <th data-key="expDate">保质期</th>
+                <th data-key="Price">售价<span class="sort" data-sort="Price">&gt;</span></th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!--动态加载数据-->
+        </tbody>
+    </table>
+    <div id="popBoxContainer"></div>
+</body>
+<!--js部分-->
+<script src="js/index.js"></script>
+
+</html>

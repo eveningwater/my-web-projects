@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>vue.js封装下拉框组件</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div id="demo">
+        <base-select :list="selectList" key-name="value" @change="selectContent" :is-search="true"></base-select>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script id="template" type="text/template">
+        <div class="select-container">
+            <div class="select-title" @click="showSelect">
+                <input 
+                type="text" 
+                class="select-search-input" 
+                v-if="isSearch" 
+                v-model="selectValue" 
+                @blur="searchBlur"
+                @compositionstart="inputFlag=true;"
+                @compositionend ="inputFlag=false;searchSuccess($event.target.value);"
+                />
+                <div class="select-content" v-text="selectValue" v-else tabindex="0" hidefocus="true" @blur="searchBlur"></div>
+                <i class="select-icon" :class="'select-' + selectIcon"></i>
+            </div>
+            <ul class="select-items" v-if="showSelectPanel">
+                <li class="select-option" v-for="(item,index) in selectData" :key="index" @click="selectItem(item)">{{ item[keyName] }}</li>
+            </ul>
+        </div>
+    </script>
+    <script src="index.js"></script>
+</body>
+
+</html>

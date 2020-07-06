@@ -1,0 +1,42 @@
+[
+    {
+      "id":1,
+      "goodsId":"food-04",
+      "Name":"猪肉",
+      "productDate":"2014-6-11",
+      "buyDate":"2014-6-10",
+      "expDate":"10年",
+      "Price":"1001",
+      "Play":"<a class='playLook' data-id='1'>查看</a><a class='playDel'>删除</a>"
+    },
+     {
+      "id":2,
+      "goodsId":"drink-03",
+      "Name":"酸奶",
+      "productDate":"2014-6-10",
+      "buyDate":"2014-6-09",
+      "expDate":"1年",
+      "Price":"10",
+      "Play":"<a class='playLook' data-id='2'>查看</a><a class='playDel'>删除</a>"
+    },
+     {
+      "id":3,
+      "goodsId":"elect-05",
+      "Name":"电视机",
+      "productDate":"2014-6-12",
+      "buyDate":"2014-6-12",
+      "expDate":"30年",
+      "Price":"1000",
+      "Play":"<a class='playLook' data-id='3'>查看</a><a class='playDel'>删除</a>"
+    },
+     {
+      "id":4,
+      "goodsId":"fruit-01",
+      "Name":"苹果",
+      "productDate":"2014-6-9",
+      "buyDate":"2014-6-11",
+      "expDate":"2年",
+      "Price":"10000",
+      "Play":"<a class='playLook' data-id='4'>查看</a><a class='playDel'>删除</a>"
+    }
+]

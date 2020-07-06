@@ -1,0 +1,30 @@
+html, body {
+    margin: 0; padding: 0;
+}
+body {
+    height: 512px;
+    padding: 28px;
+    padding-left: 30px;
+    box-sizing: border-box;
+}
+.line {
+    width: 900px; height: 50px;
+    border-bottom: none;
+}
+.line > span {
+    width: 100px; height: 100%;
+    background: linear-gradient(145deg,#c853eb,#8509c7);
+    text-align: center;
+    font: 26px arial;
+    line-height: 50px;
+    box-sizing: border-box;
+    display: inline-block;
+    color: #fff;
+    transition-duration: 0.1s;
+    cursor: default;
+}
+.line > span:hover {
+    transform: scale(1.5) rotate(-8deg);
+    box-shadow: 4px 4px 8px rgba(49, 53, 56, 0.3);
+    font-family: "goudy stout";
+}

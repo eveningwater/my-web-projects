@@ -1,0 +1,170 @@
+@charset "utf-8";
+
+/**
+* 功能：统计图表样式
+**/
+/**** 图表自定义标签初始化部分 ****/
+.ew-charts,
+ew-charts-body,
+ew-charts-x,
+ew-charts-y,
+ew-charts-zone,
+ew-charts-legend {
+    display: block;
+}
+
+ew-charts-x,
+ew-charts-x>div,
+ew-charts-y,
+ew-charts-y>div {
+    box-sizing: border-box;
+    position: absolute;
+    overflow: hidden;
+}
+
+ew-charts-zone,
+ew-charts-zone>div,
+ew-charts-zone>div bar {
+    box-sizing: border-box;
+}
+
+ew-charts-body,
+ew-charts-zone>div,
+ew-charts-zone>div bar {
+    position: relative;
+}
+
+ew-charts-zone,
+ew-charts-zone>div bar,
+ew-charts-legend,
+ew-charts-zone>div bar>span {
+    position: absolute;
+}
+
+/* 图表容器 */
+.ew-charts {
+    width: 100%;
+    height: 100%;
+    color: #f8f5fa;
+    background: linear-gradient(to right, #234, #789);
+    margin: auto;
+    color: #b3b3b3;
+}
+
+/*表体*/
+ew-charts-body {
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+}
+
+/*X轴*/
+ew-charts-x {
+    width: 90%;
+    height: 8%;
+    border-top: 1px solid #fefefe;
+    left: 6%;
+    bottom: 0;
+}
+
+ew-charts-x>div {
+    height: 100%;
+    text-align: center;
+    line-height: 30px;
+    top: 0;
+}
+
+/*Y轴*/
+ew-charts-y {
+    width: 6%;
+    height: 80%;
+    border-right: 1px solid #fefefe;
+    overflow: visible;
+    left: 0;
+    top: 12%;
+}
+
+ew-charts-y>div {
+    width: 100%;
+    height: 24px;
+    text-align: right;
+    padding-right: 6px;
+    left: 0;
+}
+
+/*表格数据区间*/
+ew-charts-zone {
+    width: 90%;
+    height: 80%;
+    left: 6%;
+    top: 12%;
+}
+
+ew-charts-zone>div {
+    height: 100%;
+    float: right;
+}
+
+ew-charts-zone>div bar {
+    height: 0;
+    bottom: 0;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+    transition: 0.6s cubic-bezier(.19, .55, .58, 1.3);
+    /*默认值设置*/
+    background-color: #606060;
+    border: 1px solid #cdcdcd;
+    box-shadow: 0 0 5px #606060;
+}
+
+ew-charts-zone>div bar:hover {
+    z-index: 10;
+}
+
+ew-charts-zone>div bar>span {
+    left: 50%;
+    top: -40px;
+    transform: translateX(-50%);
+    font: 32px "方正姚体", "arial";
+    opacity: 0;
+}
+
+ew-charts-zone>div bar>span.animation {
+    animation: data-value-show 0.6s forwards;
+}
+
+/*图注*/
+ew-charts-legend {
+    top: 10px;
+    right: 4%;
+}
+
+ew-charts-legend i,
+ew-charts-legend span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+ew-charts-legend i {
+    width: 34px;
+    height: 20px;
+    border-radius: 3px;
+    margin-left: 12px;
+    margin-right: 6px;
+    background-color: #606060;
+    border: 1px solid #cdcdcd;
+}
+ew-charts-legend span {
+    letter-spacing: 2px;
+}
+/*图表动画部分*/
+@keyframes data-value-show {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

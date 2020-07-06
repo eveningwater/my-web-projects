@@ -1,0 +1,119 @@
+@charset "utf-8";
+/*公共样式*/
+body,html,div,p{
+	margin: 0;padding: 0;
+	box-sizing: border-box;
+}
+div,button{
+	display: block;
+}
+.head,.body{
+	position: absolute;
+}
+a{
+	display: inline-block;
+	text-decoration: none;
+}
+button{
+	outline: none;
+}
+/*细节样式*/
+body{
+	height: 100%;
+	font: 16px "微软雅黑";
+	background-color: #eee;
+	color: #666;
+	overflow-x: hidden;
+}
+::-webkit-scrollbar{
+	width: 10px;
+	background-color: #f2f2f2;
+}
+::-webkit-scrollbar-thumb{
+	width: 10px;height: 30px;
+	background-color: #b1b0b6;
+}
+.box {
+	width: 100%;height: 100%;
+}
+.head {
+	width: 1200px;height: 50px;
+    background-color: #46b3df;
+    border-radius: 4px;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%,0%);
+}
+.head .changeBtn{
+	width: 100px;height: 50px;
+    background-color: #68e1f7;
+    outline: none;
+    border-radius: 5px;
+    border:none;
+	font: 16px/50px "微软雅黑";
+	text-align: center;
+	color: #46464b;
+	margin:0 auto;
+	cursor: pointer;
+}
+.head .changeBtn:hover,.head .changeBtn:active{
+	background-color: #fff;
+	color: #0f5677;
+}
+.body {
+	width: 1200px;height: 400px;
+    top: 90px;
+    left: 50%;
+    transform: translate(-50%,0%);
+	font-size: 0;
+}
+.body .img{
+	position: relative;
+	width: 400px;height: 400px;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	overflow: hidden;
+	box-shadow: 0 15px 50px rgba(0,0,0,.5);
+	cursor: pointer;
+	bottom: 20px;
+}
+.body .img:hover{
+	/* opacity: 0.5;*/
+}
+.body .img::after,.body .img::before{
+	box-sizing: border-box;
+	position: absolute;
+	z-index: 999;
+	width: 400px;height: 200px;
+	overflow: hidden;
+	transition: transform .4s ease-out;
+	color: #fff;
+}
+.body .img::after{
+	content: attr(data-title);
+	top: 0;padding-top: 55px;
+	background-color: rgba(23, 19, 19, 0.4);
+	font-size: 25px;
+	text-align: center;
+	transform: translateY(-100%) scale(.8);
+}
+.body .img::before{
+	content: attr(data-content);
+	top: 50%;
+	transform: translateY(100%) scale(.8);
+	background: rgba(139, 125, 131, 0.6);
+	font-size: 16px;
+}
+.body .img:hover::after,.body .img:hover::before{
+	transform: translateY(0%) scale(1);
+}
+.body .img:nth-child(1){
+	background-image: url(../img/1.gif);
+}
+.body .img:nth-child(2){
+	background-image: url(../img/2.gif);
+}
+.body .img:nth-child(3){
+	background-image: url(../img/3.jpg);
+}

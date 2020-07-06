@@ -1,0 +1,331 @@
+/**************功能:备忘录****************/
+/**************作者:eveningwater*****************/
+/**************日期:2017/3/21************/
+/**************公共样式******************/
+/*页面初始化*/
+body,
+html,
+p,
+span,
+div,
+header,
+footer,
+main,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button {
+    margin: 0;
+    padding: 0;
+}
+
+/*标准盒子模型*/
+body,
+html,
+p,
+span,
+div,
+header,
+footer,
+main,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button {
+    box-sizing: border-box;
+}
+
+/*块级元素*/
+.loadingDot span,
+.maincontent i {
+    display: block;
+}
+
+/*行内块元素*/
+.maincontent div {
+    display: inline-block;
+}
+
+/*绝对定位*/
+.loadingMemo,
+.loadingDot,
+header .topEdit,
+footer .footerEdit,
+header .topKeep,
+header .back,
+footer .footeredit,
+.footerDelete {
+    position: absolute;
+}
+
+/*相对定位*/
+.loading,
+.mainpage,
+header,
+footer,
+main,
+.editpage {
+    position: relative;
+}
+
+/*固定定位*/
+/*消除边框线*/
+button {
+    outline: none;
+}
+
+/*手型按钮*/
+button,
+.maincontent i,
+header .topEdit,
+footer .footerEdit,
+header .topKeep,
+header .back,
+footer .footerDelete {
+    cursor: pointer;
+}
+
+/*共同样式*/
+header .topEdit,
+header .topKeep {
+    top: 5px;
+    right: 5px;
+    border-radius: 4px;
+    font: normal 14px/30px "楷体";
+    color: #fff;
+}
+
+header h1,
+footer h1 {
+    font: normal 18px "幼圆";
+    font-weight: 100;
+    text-align: center;
+    line-height: 40px;
+}
+
+h1>span {
+    color: #eaad25;
+}
+
+/**************细节样式******************/
+/*body*/
+body,
+html {
+    height: 100%;
+    font: 16px "微软雅黑";
+    overflow: hidden;
+    letter-spacing: 2px;
+}
+
+/*启动界面部分*/
+.loading {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(248, 231, 209, 0.31);
+}
+
+.loadingMemo {
+    width: 100px;
+    height: 100px;
+    background: url("../img/memo1.svg")no-repeat;
+    background-size: cover;
+    background-position: center;
+    left: 50%;
+    top: 30%;
+    margin-left: -50px;
+}
+
+.loadingDot {
+    width: 90px;
+    height: 30px;
+    left: 50%;
+    top: 50%;
+    margin-left: -45px;
+}
+
+.loadingDot span {
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    background-color: rgba(208, 156, 15, 0.81);
+    float: left;
+    margin-left: 10px;
+    margin-top: 7px;
+    /* 值分别代表：动画名、运动速度曲线、执行时间、执行次数（无限）、轮流反相播放 */
+    animation: loadingAnimate linear .3s infinite 0s alternate;
+}
+
+.loadingDot span:first-child {
+    /*执行延迟*/
+    animation-delay: 0.1s;
+}
+
+.loadingDot span:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.loadingDot span:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+.loadingDot span:last-child {
+    margin-right: 0;
+}
+
+/*首页部分*/
+.mainpage {
+    width: 100%;
+    height: 100%;
+    left: 0;
+}
+
+/*首页头部部分*/
+header {
+    width: 100%;
+    height: 40px;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+header button {
+    width: 50px;
+    height: 30px;
+    background-color: #9f9b9b;
+    border: 1px solid #eee;
+}
+
+button.disabled {
+    background-color: #f2f2f2;
+    color: #535353;
+    cursor: not-allowed;
+    border: none;
+}
+
+/*首页中间内容部分*/
+main {
+    width: 100%;
+    height: calc(100% - 80px);
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+main>p {
+    font: normal 16px "微软雅黑";
+    color: #0a0909;
+}
+
+main.content {
+    outline: none;
+    padding-left: 5px;
+    border-radius: 5px;
+}
+
+main.content:focus {
+    border: 1px solid #2396ef;
+}
+
+.maincontent {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+.maincontent i {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    border: 1px solid #d9d9d9;
+    text-align: center;
+    font: 18px/20px "微软雅黑";
+    margin-left: 10px;
+    float: left;
+    margin-top: 15px;
+}
+
+.maincontent i.checked {
+    background-color: rgba(226, 209, 82, 0.95);
+    color: #fff;
+}
+
+.maincontent>div {
+    width: calc(100% - 35px);
+    height: auto;
+    margin-top: 5px;
+}
+
+.maincontent div p:first-child {
+    margin-left: 15px;
+}
+
+.maincontent div p:last-child {
+    margin-left: 15px;
+}
+
+/*首页尾部部分*/
+footer {
+    width: 100%;
+    height: 40px;
+    border-top: 1px solid #d9d9d9;
+    bottom: 0;
+}
+
+footer .footerEdit,
+footer .footeredit {
+    width: 50px;
+    height: 30px;
+    background: url("../img/edit.svg")no-repeat;
+    background-size: contain;
+    background-position: center;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+}
+
+footer .footerDelete {
+    width: 50px;
+    height: 30px;
+    background: url("../img/delete.svg")no-repeat;
+    background-size: contain;
+    background-position: center;
+    top: 5px;
+    right: 5px;
+}
+
+/*编辑页面*/
+.editpage {
+    width: 0;
+    height: 0;
+    left: 100%;
+}
+
+header .back {
+    width: 30px;
+    height: 30px;
+    font: normal 25px/30px "幼圆";
+    text-align: center;
+    left: 5px;
+    top: 5px;
+}
+
+/**************动画部分******************/
+@keyframes loadingAnimate {
+    0% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: scale(1.5);
+        opacity: 1;
+    }
+}
+
+/**************自定义滚动条样式***********/
+-webkit-scrollbar {
+    width: 0;
+}

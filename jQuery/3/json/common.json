@@ -1,0 +1,63 @@
+{
+	"title": "动画",
+	"id": "0001",
+	"time": "2017-8-23",
+	"number": 6,
+	"class": "game",
+	"data": [
+		{
+			"word": "第一个说话的就是我",
+			"color": "rgb(149, 19, 19)",
+			"speed": 5,
+			"top": "23.9931",
+			"fontSize": "16",
+			"action": "marquee",
+			"time": "1"
+		},
+		{
+			"word": "第二个说话的就是我",
+			"color": "rgb(8, 170, 8)",
+			"speed": 10,
+			"top": "47.9861",
+			"fontSize": "16",
+			"action": "stay",
+			"time": "2"
+		},
+		{
+			"word": "第三个说话的就是我",
+			"color": "rgb(17, 17, 183)",
+			"speed": 15,
+			"top": "71.9965",
+			"fontSize": "16",
+			"action": "stay",
+			"time": "3"
+		},
+		{
+			"word": "第四个说话的就是我",
+			"color": "rgb(167, 158, 16)",
+			"speed": 20,
+			"top": "95.9896",
+			"fontSize": "16",
+			"action": "marquee",
+			"time": "4"
+		},
+		{
+			"word": "第五个说话的就是我",
+			"color": "rgb(43, 222, 195)",
+			"speed": 15,
+			"top": "120",
+			"fontSize": "16",
+			"action": "marquee",
+			"time": "5"
+		},
+		{
+			"word": "第六个说话的就是我",
+			"color": "rgb(185, 24, 185)",
+			"speed": 10,
+			"top": "30",
+			"fontSize": "16",
+			"action": "marquee",
+			"time": "6"
+		}
+	]
+}

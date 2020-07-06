@@ -1,0 +1,92 @@
+@charset "utf-8";
+/**********首页功能***********************
+***********作者:eveningwater*********************
+***********日期:2016/12/30**************/
+body,html {
+	margin: 0; padding: 0;
+	font: 18px "微软雅黑";
+}
+/**** 样式初始化部分 ****/
+body {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+ul {
+	list-style: none;
+	margin: 0; padding: 0;
+}
+ul li {
+	line-height: 46px;
+}
+ul li a {
+	display: block;
+}
+ul li a, ul li {
+	overflow: hidden;
+}
+ul li a > div, ul li > div {
+	padding-left: 10px; padding-right: 10px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	float: left;
+}
+ul li a > div:nth-child(1), ul li > div:nth-child(1),
+ul li a > div:nth-child(2), ul li > div:nth-child(2) {
+	width: 10%;
+}
+ul li a > div:nth-child(3), ul li > div:nth-child(3),
+ul li a > div:nth-child(4), ul li > div:nth-child(4) {
+	width: 34%;
+}
+
+ul li a,ul li a > div, ul li > div {
+	box-sizing: border-box;
+}
+ul li a {
+}
+/**** 细节设置部分 ****/
+.box {
+	margin:0 20px;
+}
+.box > li > a, .box ul2 {
+	cursor: pointer;
+}
+.box > li > a {
+	background-color: #7b7e7b;
+	border: none;
+	border-radius: 5px;
+	padding:0 20px;
+	color: rgb(247, 245, 245);
+    margin-top: 10px;
+    box-shadow: 2px 4px 2px rgba(0,0,0,.2);
+}
+.box > li > a:hover {
+	background-color: #666768;
+}
+.box .ul1 + ul {
+	display: none;
+}
+.box .ul2 {
+    background-color: #818285;
+    border-radius: 5px;
+	color: rgb(243, 236, 236);
+}
+.box .ul2:hover {
+	background-color: #303131;
+}
+.box li:first-of-type .ul2 {
+	border-top: none;
+}
+.box .ul3 {
+    background-color: #4b4a4a;
+    color: #ffffff;
+    border-radius: 5px;
+	display: none;
+}
+.box .ul3 li {
+	font-size: 20px;
+	color: rgb(245, 239, 239);
+}

@@ -1,0 +1,38 @@
+module.exports = [
+    {
+        title: '介绍',
+        path: '/doc/introduce.md', 
+        collapsable: true,
+        sidebarDepth:1
+    },
+    {
+        title: 'css-web项目',
+        path: '/doc/css.md', 
+        collapsable: true,
+        sidebarDepth:1
+    },
+    {
+        title: 'js-web项目',
+        path: '/doc/js.md', 
+        collapsable: true,
+        sidebarDepth:1
+    },
+    {
+        title: 'jQuery-web项目',
+        path: '/doc/jquery.md', 
+        collapsable: true,
+        sidebarDepth:1
+    },
+    {
+        title: 'threejs-web项目',
+        path: '/doc/threejs.md', 
+        collapsable: true,
+        sidebarDepth:1
+    },
+    {
+        title: 'vue-web项目',
+        path: '/doc/vue.md', 
+        collapsable: true,
+        sidebarDepth:1
+    }
+]
