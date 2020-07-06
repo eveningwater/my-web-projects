@@ -1,0 +1,17 @@
+@charset "utf-8";
+/*功能*/
+/*作者:loho*/
+/*日期:2017/2/15*/
+/*********公共样式**********/
+body,html{
+  margin: 0; padding: 0;
+}
+body{
+  background-color: #eee;
+}
+#canvas{
+  margin-left: 440px;
+  margin-top: 80px;
+ background-color: #fff;
+ border:1px solid #666;
+}

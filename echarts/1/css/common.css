@@ -1,0 +1,12 @@
+@charset "utf-8";
+/*
+ **功能:图表
+ **作者:eveningwater
+ **日期:2017-04-07
+ */
+html,body{
+	font:normal 16px "微软雅黑";
+}
+#echarts-1,#echarts-2,#echarts-3{
+	height: 420px;
+}

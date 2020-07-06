@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+body,
+html {
+  box-sizing: border-box;
+  font: 16px "微软雅黑";
+}
+
+#box,
+#concat {
+  text-align: center;
+  margin-top: 20px;
+}
+
+img {
+  border: 1px solid #ccc;
+  width: 200px;
+  height: 200px;
+}
+
+button {
+  display: block;
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  font: 16px/50px "方正兰亭";
+  color: #fff;
+  background-color: #9ebff0;
+  outline: 0;
+  border: 1px solid rgb(186, 213, 238);
+  cursor: pointer;
+  margin: 0 auto;
+  border-radius: 5px;
+  letter-spacing: 2px;
+}
+
+button:hover {
+  background-color: #4e99df;
+  border-color: #9ebff0;
+}
+
+p {
+  text-align: center;
+}

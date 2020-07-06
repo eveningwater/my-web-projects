@@ -1,0 +1,113 @@
+@charset "utf-8";
+
+/**************************/
+/*功能:首页*/
+/*作者:eveningwater*/
+/*日期:2017-1-18*/
+/**************************/
+/**********************/
+/*公共样式*/
+/**********************/
+/*初始化间距*/
+body,
+html,
+main,
+aside,
+button,
+div {
+    margin: 0;
+    padding: 0;
+}
+
+/*标准盒子模型*/
+body,
+html,
+main,
+aside,
+div {
+    box-sizing: border-box;
+}
+
+/*块级元素*/
+div {
+    display: block;
+}
+
+/*消除边框线*/
+button,
+input {
+    outline: none;
+    font: 18px "微软雅黑";
+}
+
+/**********************/
+/*细节样式*/
+/**********************/
+body {
+    height: 100%;
+    font: 20px "微软雅黑";
+    color: #fff;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    background: #fff center center no-repeat;
+    background-size: cover;
+    position: absolute;
+    transition: 0.3s ease-in;
+    filter: blur(0px);
+}
+
+.bg-1 {
+    background-image: url("../img/18.jpg");
+}
+
+.bg-2 {
+    background-image: url("../img/8.jpg");
+}
+
+main>button {
+    width: 100px;
+    height: 50px;
+    margin-left: 25px;
+    color: #000;
+    font: 18px "微软雅黑";
+    border:none;
+    background-color: #49cec9;
+    cursor: pointer;
+    float: left;
+    position: relative;
+    left: 30%;
+    top: 10%;
+    transform: translate(-50%, -50%);
+    opacity: 0.6;
+    transition: all .3s;
+    border-radius: 5px;
+    letter-spacing: 2px;
+}
+
+main>button:hover,
+main>button:active {
+    background-color: aquamarine;
+    color: #fff;
+    opacity: 1;
+}
+
+@media only screen and (min-width:660px) {
+    main {
+        box-sizing: border-box;
+        padding-top: 20px;
+    }
+
+    main>button {
+        margin-bottom: 20px;
+        margin-top: 0;
+        display: block;
+    }
+}
+
+/*模糊样式*/
+.blur {
+    filter: blur(10px);
+}

@@ -1,0 +1,51 @@
+body,
+html {
+    height: 100%;
+    background: url("../img/bg.jpg")no-repeat center/cover;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.content {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -200px;
+    margin-top: -200px;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 2px #dddde9 solid;
+}
+
+.photo-2 {
+    background-image: url("../img/2.jpg");
+}
+
+.photo-3 {
+    background-image: url("../img/3.jpg");
+}
+
+.photo-4 {
+    background-image: url("../img/4.jpg");
+}
+
+.photo-5 {
+    background-image: url("../img/5.jpg");
+}
+
+.photo-6 {
+    background-image: url("../img/6.jpg");
+}
+
+.photo-7 {
+    background-image: url("../img/7.jpg");
+}

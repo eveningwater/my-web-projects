@@ -1,0 +1,162 @@
+@charset "utf-8"
+/*****************公共样式*******************/
+/*页面初始化*/
+body,html,div,ul,li,span,a,p{
+		margin: 0;padding: 0;
+}
+/*标准盒子模型*/
+body,html,div,ul,li,span,a,p{
+	box-sizing: border-box;
+}
+/*块级元素*/
+header{
+   display: block;
+}
+/*绝对定位*/
+/*相对定位*/
+header .navbar-nav{
+	position: relative;
+}
+/*****************细节样式*******************/
+body,html{
+	height: 100%;
+	font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans !important;
+	overflow: hidden;
+}
+header{
+	background-image: linear-gradient(-190deg, #0060F9 1%, #F7F7F7 100%) !important;
+	height: 700px;
+	padding: 0 0 50px 0;
+}
+header .navbar{
+	margin-top: 20px;
+}
+header .navbar-header button:hover{
+	border: 2px solid #fff;
+}
+header .navbar-header button .icon-bar{
+	background-color: #fff;
+}
+header .navbar-brand{
+	width: 203px;
+	background: url(../img/title.png)no-repeat;
+	background-size: 203px;
+	background-position: 0 50%;
+	padding: 10px 15px 0 15px;
+}
+header .navbar-nav{
+	float: right;
+	top: 1px;
+}
+header #mobile{
+	float: none;
+	display: none;
+}
+header .navbar-nav li a{
+	padding: 10px 15px;
+	font-weight: bold;
+	font-size: 16px;
+	color: #fff;
+	border-radius: 5px;
+	transition: 200ms;
+}
+header .navbar-nav li a:hover{
+	background-color: rgba(255, 255, 255, 0.39);
+	color: #fff;
+}
+header .navbar-collapse.in{
+	overflow: hidden;
+}
+header .left ul li{
+	font-size: 24px;
+	font-weight: 400;
+	list-style: none;
+	line-height: 60px;
+	vertical-align: middle;
+	display: inline-block;
+	font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans !important;
+	color: #fff;
+}
+header .left .home-title{
+	font-size: 36px;
+	color: #fff;
+	line-height: 125%;
+	font-weight: 600 !important;
+}
+header .left ul li span{
+	width: 40px;height: 40px;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 20px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+}
+header .left ul li span#tools{
+	background-image: url(../img/tool.png);
+}
+header .left ul li span#stackups{
+	background-image: url(../img/stackup.png);
+}
+header .left ul li span#stacks{
+	background-image: url(../img/stack.png);
+}
+header .left .btn-orange{
+	color: #fff;
+	background-color: #ff7200;
+	border-radius: 5px;
+	padding: 10px;
+	font-weight: 700;
+	font-size: 24px;
+	margin-top: 10px;
+	margin-bottom: 50px !important;
+	transition: 200ms;
+	outline: none;
+	box-shadow: 1px 1px 0px #e45635;
+}
+header .left .btn-orange:hover{
+	background-color: #fe933c;
+}
+header .service-logo img{
+	width: 69px;height: 69px;
+	margin: 5px auto;
+
+}
+header .hero-tool{
+	background-color: #fff;
+	border-radius: 5px;
+	margin-bottom: 10px;
+	padding: 13px;
+}
+header .stack-name-cat{
+	color: #333;
+	display: inline-block;
+}
+header .stack-name-cat .stack-name{
+	font-weight: 600;
+	font-size: 22px;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+header .stack-name-cat .stack-category{
+	font-family: 'Roboto Slab', serif;
+	font-weight: 300;
+	font-size: 14px;
+	color: grey;
+	text-transform: capitalize;
+	word-wrap: break-word;
+	margin-top: 5px;
+	margin-left: 10px;
+}
+header .stack-stats .stat-amount{
+	font-size: 24px;
+	font-weight: 600;
+	color: #0690FA;
+}
+header .stack-stats .stat-name{
+	font-family: 'Roboto Slab', serif;
+	font-size: 16px;
+	font-weight: 300;
+	color: #333;
+	text-transform: capitalize;
+}

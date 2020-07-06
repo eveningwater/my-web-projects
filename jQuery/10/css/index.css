@@ -1,0 +1,81 @@
+/*
+* 功能:页面样式;
+*/ 
+*{
+	margin: 0;padding: 0;
+}
+a{
+	text-decoration: none;
+}
+html,body{
+	box-sizing: border-box;
+	overflow: auto;
+	height: 100%;
+	overflow-x: hidden;
+}
+.box{
+	width: calc(100% - 200px);
+	margin-left: 100px;
+	margin-right: 100px;
+	height: 600px;
+	background-color: #eee;
+	border: 1px solid #ccc;
+	margin-top: 20px; 
+}
+.box > img{
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+	border: none;
+}
+p{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-align:center;
+}
+p a.btn{
+	border: 1px solid #ccc;
+	padding: 10px;
+	background-color: #eee;
+	text-align: center;
+	color: #999;
+	font: italic 16px "方正兰亭";
+}
+p a.btn:hover{
+	background-color: #fff;
+}
+p a.btn:last-child{
+	margin-left:50px; 
+}
+.loading{
+	position: fixed;
+	left: 0;
+	top: 0;
+	background-color: #eee;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	font:bold 28px "幼圆";
+	color: #999;
+}
+.loading .progress{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+}
+@media screen and (max-width: 768px){
+	.box{
+		width: calc(100% - 40px);
+		margin-left: 20px;
+		margin-right: 20px; 
+	}
+}
+::-webkit-scrollbar{
+	width: 2px;
+	background-color: #eee;
+}
+::-webkit-scrollbar-thumb{
+	background-color: #999;
+	width: 2px;
+}

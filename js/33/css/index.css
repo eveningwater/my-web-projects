@@ -1,0 +1,82 @@
+body {
+    background: linear-gradient(to right, rgb(150, 148, 148), rgb(65, 61, 61));
+    overflow: auto;
+}
+
+canvas {
+    display: block;
+    margin: 50px auto;
+    border: 1px solid #5e5e5e;
+    box-shadow: -2px -2px 2px #e7e7e7,
+        5px 5px 5px #c0c0c0;
+    background-color: #c4c4c4;
+}
+
+aside {
+    width: 300px;
+    height: 150px;
+    background-color: #fcfffa;
+    box-shadow: 0 0 10px #dbdbdb;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    transition: all .3s ease-out;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+aside h1 {
+    text-align: center;
+    font: 25px "微软雅黑";
+    color: #ffb568;
+    line-height: 200%;
+    position: relative;
+}
+
+aside button {
+    width: 100px;
+    height: 35px;
+    outline: none;
+    border: 1px solid #f8b166;
+    margin-left: 20px;
+    letter-spacing:2px;
+    background-color: #ffb346;
+    color: #ffffff;
+    font: 18px/35px "幼圆";
+    text-align: center;
+    cursor: pointer;
+}
+
+aside button:hover,
+aside button:active {
+    background-color: #ffdc36;
+}
+
+.popBoxAnimate {
+    animation: display .5s ease-out;
+}
+
+@keyframes display {
+    0% {
+        left: -100%;
+    }
+
+    25% {
+        left: -50%;
+    }
+
+    50% {
+        left: 0;
+    }
+
+    75% {
+        left: 25%;
+    }
+
+    100% {
+        left: 50%;
+    }
+}

@@ -1,0 +1,136 @@
+body,
+ul,
+li,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+ul,
+ol {
+  list-style: none;
+}
+.wrapper {
+  height: 128px;
+  border: 1px solid #d3d3d3;
+  border-color: rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  width: 938px;
+  background-color: #fff;
+}
+.wrapper ul * {
+  transition: all linear 0.1s;
+}
+.wrapper li {
+  width: 156px;
+  height: 128px;
+  float: left;
+  overflow: hidden;
+}
+.wrapper li a {
+  width: 156px;
+  height: 128px;
+  display: block;
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+  overflow: hidden;
+}
+.wrapper li a:hover .mask {
+  opacity: 0;
+}
+.wrapper li img {
+  height: 72px;
+  width: 117px;
+  position: absolute;
+  bottom: 0;
+  right: -13px;
+}
+.wrapper li .line {
+  height: 128px;
+  width: 0;
+  border-right: 1px dashed #cacaca;
+  font-size: 0;
+  position: absolute;
+  top: 4px;
+  right: 0;
+}
+.wrapper li .info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 136px;
+  padding: 4px 10px;
+}
+.wrapper li .info h3 {
+  font-size: 14px;
+  font-weight: 700;
+}
+.wrapper li .info p {
+  color: #868686;
+  font-size: 12px;
+  overflow: hidden;
+  width: 136px;
+  height: 22px;
+  line-height: 22px;
+}
+.wrapper li .info p.price {
+  font-size: 14px;
+  font-style: italic;
+  color: #fa2a5d;
+  height: 35px;
+}
+.wrapper li .info p.price strong {
+  font-size: 22px;
+  font-family: Arial;
+  padding-right: 2px;
+}
+.wrapper li .info p.price i {
+  font-size: 14px;
+}
+.wrapper .mask {
+  height: 128px;
+  width: 156px;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 0;
+}
+.wrapper:hover .mask {
+  opacity: 0.15;
+}
+.wrapper .big,
+.wrapper .big a {
+  width: 314px;
+}
+.wrapper .big img {
+  width: 195px;
+  height: 120px;
+  right: 0;
+  bottom: 0;
+}
+.wrapper .big .info {
+  width: 294px;
+}
+.wrapper .big .info h3 {
+  font-size: 18px;
+}
+.wrapper .big .info p {
+  font-size: 14px;
+  width: 166px;
+}
+.wrapper .big .info p.price {
+  font-size: 16px;
+  padding-top: 7px;
+}
+.wrapper .big .info p.price strong {
+  font-size: 28px;
+}
+.wrapper .big .info p.price i {
+  font-size: 16px;
+}
+.wrapper .big .mask {
+  width: 314px;
+}

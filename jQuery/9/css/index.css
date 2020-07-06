@@ -1,0 +1,154 @@
+/* 
+* 功能:幻灯片播放
+* 作者:loho
+* 日期:2017/9/5
+*/
+/* ***********公共样式********** */
+body,
+html,
+ul,
+li,
+div,
+a,
+span {
+  margin: 0;
+  padding: 0;
+}
+body,
+html,
+ul,
+li,
+div,
+a,
+span {
+  box-sizing: border-box;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.nav {
+  position: relative;
+}
+.header,
+.headerImg {
+  display: inline-block;
+}
+.close,
+.fullscreen,
+.fullscreen a {
+  position: absolute;
+}
+.fullscreen a,
+.nav .header ul li,
+.close {
+  cursor: pointer;
+}
+.nav,
+.close,
+.fullscreen,
+.headerImg,
+#prev,
+#next {
+  transition: all 0.3s cubic-bezier(0.28, 0.59, 0.32, 0.99);
+}
+/* ***********细节样式********** */
+body {
+  height: 100%;
+  overflow: hidden;
+  font: 16px "微软雅黑";
+  background-color: #f2f2f2;
+}
+.nav {
+  width: 300px;
+  height: 60px;
+  margin: 10px auto;
+  z-index: 1;
+}
+.nav .close {
+  width: 20px;
+  height: 20px;
+  background-color: #f5f6f7;
+  font: 16px/20px "微软雅黑";
+  color: #535353;
+  text-align: center;
+  box-shadow: 0 2px 8px #f2f2f3;
+  border-radius: 50%;
+  top: -3px;
+  right: -20px;
+}
+.header {
+  font-size: 0;
+}
+.nav .header ul li {
+  width: 60px;
+  height: 60px;
+  border-radius: 5px;
+  float: left;
+}
+.nav .header .headerImg {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#first {
+  background-image: url(../img/background_1.jpg);
+}
+#second {
+  background-image: url(../img/background_2.jpg);
+}
+#third {
+  background-image: url(../img/background_3.jpg);
+}
+#fourth {
+  background-image: url(../img/background_4.jpg);
+}
+#fifth {
+  background-image: url(../img/background_5.jpg);
+}
+.fullscreen {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background: url(../img/background_1.jpg) no-repeat center/cover;
+}
+.fullscreen a {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #f1f2f3;
+  background-color: #f2f3f4;
+  color: #535353;
+  text-align: center;
+  font: 20px/40px "微软雅黑";
+  top: 50%;
+  transform: translate(0, -50%);
+  display: none;
+  border-radius: 8px;
+}
+.fullscreen a:hover,
+.fullscreen a:active {
+  background-color: #f2f2f2;
+  color: #545454;
+}
+#next {
+  right: 10px;
+}
+#prev {
+  left: 10px;
+}
+/* 媒体查询 */
+@media screen and (max-width: 768px) {
+  .nav {
+    width: 100%;
+  }
+  .header ul li {
+    width: 20%;
+  }
+  .nav .close {
+    right: 0;
+  }
+}

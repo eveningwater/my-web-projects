@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 100%;
+  background: url(images/1.jpg) no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+.menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120px;
+  height: 216px;
+  background: #fff;
+  padding: 5px;
+  display: none;
+}
+.menu ul {
+  list-style: none;
+  overflow: hidden;
+}
+.menu ul li {
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+  vertical-align: middle;
+  display: inline-block;
+  width: 100%;
+  padding-left: 10px;
+  cursor: pointer;
+}
+.menu ul li:nth-child(1) {
+  background: url(images/ico1.jpg) no-repeat 10px center;
+}
+.menu ul li:nth-child(2) {
+  background: url(images/ico2.jpg) no-repeat 10px center;
+}
+.menu ul li:nth-child(3) {
+  background: url(images/ico3.jpg) no-repeat 10px center;
+}
+.menu ul li:nth-child(4) {
+  background: url(images/ico4.jpg) no-repeat 10px center;
+}
+.menu ul li:nth-child(5) {
+  background: url(images/ico5.jpg) no-repeat 10px center;
+}
+.menu ul li:nth-child(6) {
+  background: url(images/ico6.jpg) no-repeat 10px center;
+}
+.menu ul li:nth-child(7) {
+  border-bottom: 0;
+  background: url(images/ico7.jpg) no-repeat 10px center;
+}
+.wall {
+  position: absolute;
+  width: 650px;
+  height: 340px;
+  background: rgba(0, 0, 0, 0.4);
+  top: 50%;
+  left: 50%;
+  margin-left: -325px;
+  margin-top: -170px;
+  display: none;
+}
+.wall h4 {
+  line-height: 50px;
+  height: 50px;
+  width: 640px;
+  color: #fff;
+  padding: 5px;
+  font-weight: bolder;
+  font-size: 20px;
+  background: #333;
+}
+.wall .close {
+  cursor: pointer;
+  float: right;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background: url("images/close.png") no-repeat center center;
+}
+.wall ul {
+  list-style: none;
+  width: 640px;
+  height: 270px;
+  padding: 5px;
+}
+.wall ul li {
+  float: left;
+  width: 200px;
+  height: 125px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.wall ul li img {
+  width: 200px;
+  height: 125px;
+}

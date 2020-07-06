@@ -1,0 +1,110 @@
+/***************功能：计算器*****************/
+/***************作者：loho*****************/
+/***************日期：2017/3/8**************/
+/***************公共样式*****************/
+body,
+html,
+div,
+button,
+header,
+section {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html,
+div,
+button,
+header,
+section {
+    box-sizing: border-box;
+}
+
+button {
+    display: block;
+}
+
+/***************细节样式*****************/
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font: 15px "微软雅黑";
+    color: #666;
+}
+
+.main {
+    width: 80%;
+    min-height: 300px;
+    margin: 50px auto;
+    position: relative;
+    background-color: #eee;
+}
+.main > header {
+    padding: 8px 0;
+    position: relative;
+}
+.main header .content {
+    width: calc(75% - 10px);
+    height: 42px;
+    border: 1px solid #5a5c5e;
+    font: 18px "华文琥珀";
+    color: #535353;
+    overflow: auto;
+    overflow-x: hidden;
+    background-color: transparent;
+    border-radius: 5px;
+    padding-left: 8px;
+    outline: none;
+    margin-left: 5px;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+.main header .content:focus {
+    border-color: #2396ef;
+}
+
+section {
+    width: 100%;
+    height: 250px;
+}
+
+.firstLine,
+.secondLine,
+.thirdLine,
+.forthLine {
+    width: 100%;
+    float: left;
+}
+
+section div button {
+    width: calc(25% - 10px);
+    height: 42px;
+    border-radius: 3px;
+    outline: none;
+    border: 1px solid rgb(104, 103, 103);
+    background-color: #edeff1;
+    margin-left: 5px;
+    margin-top: 5px;
+    display: inline-block;
+    text-align: center;
+    font:bold 20px/30px "微软雅黑";
+    color: #535353;
+    cursor: pointer;
+}
+
+section div button:hover,
+section div button:active {
+    background-color: #f4f3f5;
+    color: #999;
+}
+
+.firstLine>button:first-child {
+    position: absolute;
+    top: 3px;
+    right: 7px;
+}

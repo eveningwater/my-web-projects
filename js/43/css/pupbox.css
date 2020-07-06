@@ -1,0 +1,208 @@
+@charset "utf-8";
+
+/**************************/
+/*功能:弹出框*/
+/*作者:eveningwater*/
+/*日期:2017-1-18*/
+/**************************/
+/**********************/
+/*公共样式*/
+/**********************/
+/*绝对定位*/
+#popbox-main masklayer,
+#popbox-main popbox,
+#popbox-main popbox popbox-close {
+    position: absolute;
+}
+
+/*相对定位*/
+#popbox-main .form div {
+    position: relative;
+}
+
+/*块级元素*/
+#popbox-main popbox-content {
+    display: block;
+}
+
+/*标准盒子模型*/
+#popbox-main popbox-content,
+#popbox-main .form .errinfo {
+    box-sizing: border-box;
+}
+
+/**********************/
+/*细节样式*/
+/**********************/
+/*弹出框组件*/
+#popbox-main {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in;
+    color: #333;
+}
+
+/*遮罩层*/
+#popbox-main masklayer {
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+
+/*弹出框主体*/
+#popbox-main popbox {
+    width: auto;
+    height: auto;
+    background-color: #fff;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1001;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+/*弹出框关闭按钮*/
+#popbox-main popbox-close {
+    width: 32px;
+    height: 32px;
+    background-color: #969696;
+    border-radius: 50%;
+    text-align: center;
+    font: 16px/32px arial;
+    color: #fff;
+    cursor: pointer;
+    right: -5px;
+    top: -5px;
+    transition: 0.2s;
+    opacity: 0.4;
+}
+
+#popbox-main popbox-close:hover,
+#popbox-main popbox-close:active {
+    opacity: 1;
+    background-color: #000;
+}
+
+/*弹出框内容*/
+#popbox-main popbox-content {
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
+    margin: 20px;
+    overflow: hidden;
+}
+
+/*文本类样式*/
+#popbox-main .text {
+    min-width: 350px;
+    max-width: 500px;
+    padding: 40px 50px;
+}
+
+/*确认框样式*/
+#popbox-main .confirm {
+    min-width: 360px;
+    max-width: 500px;
+    padding: 40px 50px 20px;
+}
+
+#popbox-main .btnGroup {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#popbox-main .btnGroup button {
+    width: 100px;
+    height: 34px;
+    background-color: #33d8e6;
+    border:none;
+    border-radius: 4px;
+    font: 18px "微软雅黑";
+    letter-spacing: 2px;
+    color: #fff;
+    cursor: pointer;
+}
+
+#popbox-main .btnGroup button:hover,
+#popbox-main .btnGroup button:active {
+    background-color: #5df8f8;
+}
+
+#popbox-main .btnGroup button:last-child {
+    margin-left: 40px;
+}
+
+/*图片框样式*/
+#popbox-main .image img {
+    min-width: 400px;
+    min-height: 200px;
+    max-width: 600px;
+    max-height: 400px;
+    display: block;
+}
+
+/*表单框样式*/
+#popbox-main .form {
+    min-width: 360px;
+    padding-top: 15px;
+}
+
+#popbox-main .form div {
+    line-height: 300%;
+}
+
+#popbox-main .form .btnGroup {
+    margin-top: 5px;
+}
+
+#popbox-main .form label,
+#popbox-main .form input {
+    vertical-align: middle;
+}
+
+#popbox-main .form label {
+    width: 95px;
+    text-align: right;
+    letter-spacing: 2px;
+    display: inline-block;
+}
+
+#popbox-main .form input {
+    width: 205px;
+    padding: 6px 10px;
+    border: 1px solid #bfc2c0;
+    border-radius: 3px;
+    color: #000;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+#popbox-main .form input::-webkit-input-placeholder {
+    font: 20px "微软雅黑";
+    color: #747070;
+}
+
+#popbox-main .form input:focus {
+    box-shadow: 0 0 8px rgb(193, 248, 253);
+}
+
+/*表单错误信息*/
+#popbox-main .form .errinfo {
+    width: 100%;
+    height: 20px;
+    text-align: left;
+    font-size: 16px;
+    padding-left: 96px;
+    padding-right: 32px;
+    line-height: normal;
+    margin: 0;
+    color: #f00;
+    position: absolute;
+    top: -10px;
+}

@@ -1,0 +1,67 @@
+ @charset "utf-8"
+/*
+**功能：每周消费统计表
+**作者：loho
+**日期：2017/4/8
+*/
+/************公共样式*************/
+/*页面初始化*/
+body,html,table,div,main,input{
+  margin: 0;padding: 0;		 
+}
+/*标准盒子模型*/
+body,html,table,div,main,input{
+	box-sizing: border-box;
+}
+/*块级元素*/
+/************细节样式*************/
+body{
+	height: 100%;
+	font: 16px "微软雅黑";
+	/*overflow: hidden;*/
+}
+/*表格部分*/
+.table{
+	width: calc(100% - 180px);
+	margin-left: 90px;
+	margin-right: 90px;
+}
+.table thead th{
+	width: 100px;
+}
+table th,.table tbody tr td,.table tfoot tr td{
+	font-weight: normal;
+	text-align: center;
+	border: 1px solid #1d1d1d;
+}
+table th,table tfoot tr td{
+	background-color: rgba(44, 145, 219, 0.89);
+	color: #fff;
+	border: 1px solid #1d1d1d;
+}
+table tbody input{
+	width: 100%;height: 100%;
+	outline: none;
+	background-color: transparent;
+	border: none;
+	text-align: center;
+	padding: 3px;
+}
+/*图表部分*/
+#chartbar,#chartpie {
+	min-height: 400px;
+}
+/*自定义滚动条*/
+body::-webkit-scrollbar{
+    width: 10px;
+    background-color: #eee;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: #2f2fdb;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #5597e5;
+    cursor: all-scroll;
+}
+body::-webkit-scrollbar-thumb:hover,::-webkit-scrollbar-thumb:active{
+    background-color: #64cdf4;
+}

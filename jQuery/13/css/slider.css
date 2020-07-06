@@ -1,0 +1,110 @@
+/*
+*功能:滑块插件样式
+*作者:eveningwater
+*日期:2017/7/11
+*/
+#range {
+    -webkit-appearance: none;
+    width: 100%;
+    border-radius: 10px;
+    /*这个属性设置使填充进度条时的图形为圆角*/
+    cursor: pointer;
+}
+
+#range:focus {
+    outline: none;
+}
+
+#range::-webkit-slider-runnable-track {
+    height: 25px;
+    border-radius: 10px;
+    /*将轨道设为圆角的*/
+    box-shadow: 0 1px 1px #def3f8, inset 0 .125em .125em #0d1112;
+    /*轨道内置阴影效果*/
+}
+
+#range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 35px;
+    width: 35px;
+    margin-top: -5px;
+    /*使滑块超出轨道部分的偏移量相等*/
+    background: #ffffff;
+    border-radius: 50%;
+    /*外观设置为圆形*/
+    border: solid 0.125em rgba(205, 224, 230, 0.5);
+    /*设置边框*/
+    box-shadow: 0 .125em .125em #3b4547;
+    /*添加底部阴影*/
+}
+
+#range::-moz-range-track {
+    height: 15px;
+    border-radius: 10px;
+    /*将轨道设为圆角的*/
+    box-shadow: 0 1px 1px #def3f8, inset 0 .125em .125em #0d1112;
+    /*轨道内置阴影效果*/
+}
+
+#range::-moz-range-thumb {
+    appearance: none;
+    height: 25px;
+    width: 25px;
+    margin-top: -5px;
+    /*使滑块超出轨道部分的偏移量相等*/
+    background: #ffffff;
+    border-radius: 50%;
+    /*外观设置为圆形*/
+    border: solid 0.125em rgba(205, 224, 230, 0.5);
+    /*设置边框*/
+    box-shadow: 0 .125em .125em #3b4547;
+    /*添加底部阴影*/
+}
+
+#range::-moz-range-progress {
+    background: linear-gradient(to right, #059CFA, white 100%, white);
+    height: 13px;
+    border-radius: 10px;
+}
+
+#range::-ms-track {
+    height: 25px;
+    border-radius: 10px;
+    box-shadow: 0 1px 1px #def3f8, inset 0 .125em .125em #0d1112;
+    border-color: transparent;
+    /*去除原有边框*/
+    color: transparent;
+    /*去除轨道内的竖线*/
+}
+
+#range::-ms-thumb {
+    border: solid 0.125em rgba(205, 224, 230, 0.5);
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background: #ffffff;
+    margin-top: -5px;
+    box-shadow: 0 .125em .125em #3b4547;
+}
+
+#range::-ms-fill-lower {
+    /*进度条已填充的部分*/
+    height: 22px;
+    border-radius: 10px;
+    background: linear-gradient(to right, #059CFA, white 100%, white);
+}
+
+#range::-ms-fill-upper {
+    /*进度条未填充的部分*/
+    height: 22px;
+    border-radius: 10px;
+    background: #ffffff;
+}
+
+#range:focus::-ms-fill-lower {
+    background: linear-gradient(to right, #059CFA, white 100%, white);
+}
+
+#range:focus::-ms-fill-upper {
+    background: #ffffff;
+}

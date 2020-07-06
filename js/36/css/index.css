@@ -1,0 +1,61 @@
+/*
+*功能:诏书
+*作者:eveningwater
+*日期:2017/7/27
+*/
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    overflow: hidden;
+}
+.book-container {
+    box-sizing: border-box;
+    position: relative;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.book {
+    width: 840px;
+    height: 260px;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+    background: url("../img/bookbg.jpg")no-repeat 100%/cover;
+    margin: 20px auto;
+    top: 60px;
+    box-sizing: border-box;
+}
+.white {
+    position: absolute;
+    background: url("../img/bookwhite.jpg")no-repeat 100%/cover;
+    width: 1000px;
+    height: 260px;
+    left: 0;
+    top: 60px;
+    z-index: 1;
+}
+.book-container>.book>.font {
+    width: 821px;
+    height: 244px;
+    background: url('../img/bookfont.png')no-repeat;
+    background-size: contain;
+}
+
+.book-container>.left,.book-container>.right{
+    width: 100px;
+    height: 426px;
+    background: url('../img/book.png')no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+}
+.book-container>.left {
+    left: 0;
+}
+.book-container>.right {
+    left: 0;
+}

@@ -1,0 +1,62 @@
+/*
+*功能:滑块其它样式
+*作者:eveningwater
+*日期:2017/7/11
+*/
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+.slider {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.slider-btn,
+.slider-data {
+    position: relative;
+}
+
+.slider-data span {
+    display: inline-block;
+    font-size: 0;
+    height: 8px;
+    border-width: 0 0 0 1px;
+    border-style: solid;
+    margin-left: 67px;
+}
+
+.slider-data span:first-child {
+    margin-left: 5px;
+}
+
+.slider-data num {
+    display: inline-block;
+    text-align: center;
+    font: 16px/20px "微软雅黑";
+    color: #999;
+    width: auto;
+    height: 20px;
+    margin-left: 50px;
+}
+
+.slider-data num:first-child {
+    margin-left: 1px;
+}
+
+.data-value {
+    position: absolute;
+    top: 0;
+    right: -50px;
+}
+
+#data {
+    font: 25px "华文琥珀";
+    text-align: center;
+    line-height: 100%;
+    color: #2681ba;
+}

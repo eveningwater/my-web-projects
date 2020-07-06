@@ -1,0 +1,154 @@
+/*
+*功能:死亡时间测试
+*作者:loho
+*日期:2017/7/13
+*/
+/****************公共样式*************/
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+/****************细节样式*************/
+body {
+    background: url("../img/1.jpg")no-repeat;
+    background-size: cover;
+}
+
+#deathTime {
+    width: 1200px;
+    height: 100%;
+    font: 60px "微软雅黑";
+    color: #f00;
+    padding-left: 150px;
+}
+
+#img {
+    position: absolute;
+    bottom: 100px;
+    left: 100px;
+    border-radius: 20px;
+}
+
+#gif {
+    position: absolute;
+    bottom: 200px;
+    left: 750px;
+}
+
+#inputTime {
+    width: 400px;
+    height: 100px;
+    position: absolute;
+    top: 200px;
+    left: 150px;
+    outline: none;
+
+}
+
+#inputTime select {
+    width: 100px;
+    height: 20px;
+    border: 1px solid #999;
+    font: 14px/20px "幼圆";
+    color: #000;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+#inputTime button {
+    width: 80px;
+    height: 20px;
+    border: 1px solid #999;
+    outline: none;
+    background-color: #fff;
+    color: #f00;
+    font: 12px/20px "华文琥珀";
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+#inputTime button:hover,
+#inputTime button:active {
+    background-color: #eee;
+}
+
+#inputTime span {
+    color: #f00;
+    background-color: #fff;
+    font-size: 14px;
+    border-radius: 5px;
+    opacity: 0.8;
+}
+
+#reset a {
+    text-decoration: none;
+    color: #f00;
+    cursor: pointer;
+}
+
+#reset a:hover,
+#reset a:active {
+    text-decoration: underline;
+}
+
+#timeText {
+    width: 450px;
+    height: 250px;
+    border: 1px solid #999999;
+    position: absolute;
+    right: 20px;
+    top: 50px;
+    border-radius: 10px;
+}
+
+#timeText .adviceFont {
+    width: 450px;
+    height: 50px;
+    border-bottom: 1px dashed #999999;
+    font: 20px/50px "微软雅黑";
+    text-align: center;
+    color: #75000a;
+}
+
+#timeText .deathFont {
+    color: #f00;
+    margin-top: 10px;
+    width: 330px;
+    margin-left: 10px;
+}
+
+#remainTime {
+    width: 450px;
+    height: 50px;
+    background-color: #e8e8e9;
+    opacity: 0.7;
+    border-radius: 10px;
+    margin-top: 10px;
+    text-align: center;
+    line-height: 50px;
+}
+
+#remainTime span {
+    color: #f00;
+    font: 30px "微软雅黑";
+}
+
+#quotes {
+    color: #00f;
+    width: 450px;
+    height: 90px;
+    margin-top: 10px;
+    background-color: #fff;
+    opacity: 0.8;
+    border-radius: 10px;
+}
+
+#dead {
+    text-align: center;
+    color: #f00;
+    font-size: 20px;
+    line-height: 50px;
+}

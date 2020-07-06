@@ -1,0 +1,84 @@
+@charset "utf-8";
+
+/*功能*/
+/*作者:loho*/
+/*日期:2017/2/15*/
+/*******公共样式*********/
+body,
+html,
+section,
+div,
+span {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+div {
+	display: block;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	background-color: #eee;
+}
+
+section {
+	position: absolute;
+}
+
+/*******细节样式*********/
+section {
+	width: 100%;
+	padding: 10px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+section div {
+	width: 33.333333%;
+	padding: 20px 0;
+	float: left;
+	text-align: center;
+}
+
+section span {
+	display: inline-block;
+	font: 120px "华文琥珀";
+	color: #27bec9;
+	background-color: rgb(222, 220, 228);
+	padding: 4px 6px;
+	border-radius: 5px;
+}
+
+section div:first-child::after,
+section div:nth-child(2)::after {
+	content: ":";
+	font: 120px "幼圆";
+	color: #a6ccf1;
+	float: right;
+}
+
+section div span:last-of-type {
+	margin-left: 25px;
+}
+
+section div i {
+	font: 150px "华文琥珀";
+	display: inline-block;
+	color: #000;
+}
+
+@media screen and (max-width:765px) {
+
+	section span,
+	section div:first-child::after,
+	section div:nth-child(2)::after {
+		font-size: 50px;
+	}
+	section div span:last-of-type {
+		margin-left: 5px;
+	}
+}

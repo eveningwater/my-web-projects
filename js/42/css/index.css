@@ -1,0 +1,184 @@
+@charset "utf-8";
+
+/*****************************/
+/*功能:首页*/
+/*作者:eveningwater*/
+/*日期:2017-1-16*/
+/*****************************/
+/*公共样式*/
+body,
+html,
+header,
+input,
+div,
+p,
+section {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html,
+header,
+input,
+div,
+p,
+section {
+    box-sizing: border-box;
+}
+
+div,
+input,
+p,
+section,
+a {
+    display: block;
+}
+
+input,
+button {
+    outline: none;
+}
+
+header,
+section {
+    position: absolute;
+}
+
+/*细节样式*/
+body {
+    background-color: #fff;
+    font: 16px "微软雅黑";
+    color: #070505;
+    overflow: hidden;
+}
+
+header {
+    width: 400px;
+    height: 64px;
+    left: 20px;
+    top: 5px;
+}
+
+input[type="button"] {
+    background-color: #fff;
+    width: 100%;
+    height: 50px;
+    cursor: pointer;
+    border: 1px solid #807d7d;
+    border-radius: 5px;
+}
+
+input[type="button"]:hover,
+input[type="button"]:active {
+    opacity: .6;
+}
+
+header input[type="button"] {
+    width: 100px;
+    float: left;
+    margin-left: 15px;
+}
+
+section {
+    width: 100%;
+    height: 600px;
+    top: 70px;
+    left: 5px;
+}
+
+section [class *= 'content-img'] {
+    width: 400px;
+    height: 400px;
+    background-size: cover;
+    background-image: url('../img/The-female-emperor.jpg');
+    transition: all .4s ease-out;
+    background-repeat: no-repeat;
+    transform: scale(0.6);
+    cursor: pointer;
+}
+section .content-img {
+    background-position: -50% 0%;
+}
+
+section .content-img-2 {
+    background-image: url('../img/baixing.jpg');
+    background-position: center;
+}
+
+section .content-img-2:hover {
+    background-image: url('../img/namei.jpg');
+}
+
+section .content-img:hover {
+    background-position: 147% 0%;
+}
+
+section input[type="button"] {
+    position: relative;
+    top: 10px;
+    left: 5px;
+}
+
+.popbox {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.popbox-inner {
+    min-width: 400px;
+    min-height: 570px;
+    background-color: #fff;
+    transition: all .3s ease-out;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #d2d2d2;
+    border-radius: 15px;
+    padding: 2em;
+}
+
+.popbox .btn-close {
+    font-size: 25px;
+    color: #553355;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: transform 1s;
+    background: transparent;
+}
+
+.popbox .btn-close:hover,
+.popbox .btn-close:active {
+    transform: scale(1.2);
+}
+
+.popbox h1 {
+    font: 25px "微软雅黑";
+    color: #545556;
+    text-align: center;
+}
+
+.popbox p {
+    text-align: center;
+    padding: 20px;
+    font-size: 16px;
+}
+
+.popbox img {
+    width: 380px;
+    height: 500px;
+    cursor: pointer;
+    margin: .8em;
+    transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}

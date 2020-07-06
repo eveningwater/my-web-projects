@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<title>幻灯片播放</title>
+		<link rel="stylesheet" href="css/index.css">
+</head>
+	<body>
+		<div class="nav">
+			<span class="close">↑</span>
+			<div class="header">
+				<ul>
+					<li>
+						<a href="#" class="headerImg" id="first"></a>
+					</li>
+					<li>
+						<a href="#" class="headerImg" id="second"></a>
+					</li>
+					<li>
+						<a href="#" class="headerImg" id="third"></a>
+					</li>
+					<li>
+						<a href="#" class="headerImg" id="fourth"></a>
+					</li>
+					<li>
+						<a href="#" class="headerImg" id="fifth"></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="fullscreen">
+			<a href="#" id="next" class="hover">&gt;</a>
+			<a href="#" id="prev" class="hover">&lt;</a>
+		</div>
+	</body>
+	<!-- js引入部分 -->
+	<script src="plugin/jquery.min.js"></script>
+	<script src="js/index.js"></script>
+	<script>
+		$(function(){
+			//调用封装好的函数
+			$('.fullscreen').pagePlay({
+				imgID:1,
+				imgSrc:'img/background_1.jpg'
+			});
+		});
+	</script>
+</html>

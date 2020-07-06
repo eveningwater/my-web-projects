@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		 <meta name="viewport" content="width=device-width,initial-scale=1.0"> 
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>js翻译工具</title>
+		<link rel="stylesheet" href="./css/index.css">
+		<link rel="shortcut icon" href="data:image/jpeg;base64,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" type="image/x-icon">	
+	</head>
+	<body>
+		<main class="translate">
+			<header class="t-header">
+				<span class="title">当前翻译语言类型:</span>
+				<span class="result">英语</span>
+				<div class="iconfont menu more"></div>
+				<ul class="lang-panel">
+					<li data-type="en" class="checked">英语</li>
+					<li data-type="zh">汉语</li>
+					<li data-type="jp">日语</li>
+					<li data-type="kor">韩语</li>
+					<li data-type="fra">法语</li>
+					<li data-type="ru">俄语</li>
+					<li data-type="de">德语</li>
+				</ul>
+			</header>
+			<section class="content">
+				<textarea class="input" placeholder="请输入你要翻译的单词或语句"></textarea>
+				<textarea class="output" placeholder="翻译结果" disabled></textarea>
+				<span class="playing-btn playing-default-btn"></span>
+			</section>
+			<footer class="t-footer">
+				<button type="button" class="transbtn">翻译</button>
+				<button type="button" class="clear">清除</button>
+			</footer>
+		</main>
+	</body>
+    <!--js引入部分-->
+	<script src="./plugins/md5.js"></script>
+    <script src="./js/index.js"></script>
+    
+</html>

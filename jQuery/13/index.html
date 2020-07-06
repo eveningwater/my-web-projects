@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>slider-demo</title>
+    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/demo.css">
+    <link rel="shortcut icon" href="https://www.eveningwater.com/static/image/icon.jpg" type="image/x-icon">
+</head>
+
+<body>
+    <div class="slider">
+        <div class="slider-btn">
+            <input type="range" id="range">
+            <div class="data-value">
+                <span id="data">50</span>
+            </div>
+        </div>
+        <div class="slider-data">
+            <div>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div>
+                <num>0</num>
+                <num>25</num>
+                <num>50</num>
+                <num>70</num>
+                <num>100</num>
+            </div>
+        </div>
+    </div>
+</body>
+<!-- js引入部分 -->
+<script src="plugin/jquery.min.js"></script>
+<script src="js/slider.js"></script>
+<script type="text/javascript">
+    var change = function ($input) {
+        var val = $('#range').val();
+        $('#data').text(val);
+    }
+    $('#range').rangeSlider({
+        min: 0,
+        max: 100,
+        step: 10,
+        callback: change
+    });
+</script>
+
+</html>

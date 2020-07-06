@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>每周生活消费数据图表</title>
+	<link rel="stylesheet" href="plugin/bootstrap.css">
+	<link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+	<table class="table table-striped  table-responsive">
+		<thead>
+			<tr>
+				<th class="titleType"></th>
+				<!--<th>食品酒水</th>
+					<th>购物消费</th>
+					<th>居家生活</th>
+					<th>行车交通</th>
+					<th>休闲娱乐</th>
+					<th>人情费用</th>
+					<th>金融保险</th>
+					<th>药品医疗</th>
+					<th>其它消费</th>-->
+			</tr>
+		</thead>
+		<tbody class="tbody">
+			<!--ajax加载-->
+		</tbody>
+		<tfoot>
+			<tr class="total">
+				<td>总计</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</tfoot>
+	</table>
+	<main class="container">
+		<div class="row">
+			<div class="col-xs-8" id="chartbar"></div>
+			<div class="col-xs-4" id="chartpie"></div>
+		</div>
+	</main>
+</body>
+<!--js部分-->
+<script src="plugin/jquery.min.js"></script>
+<script src="plugin/echarts.js"></script>
+<script src="js/index.js"></script>
+
+</html>

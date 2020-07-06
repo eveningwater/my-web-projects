@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+		<title>图片预加载封装</title>
+		<link rel="stylesheet" href="css/index.css">
+	</head>
+	<body>
+		<div class="box">
+			<img src="images/background_1.jpg" alt="scene_1" title="scene" id="img">
+		</div>
+		<div class="loading">
+			<div class="progress">0%</div>
+		</div>
+		<p>
+			<a href="javascript:;" class="btn" data-control="prev">上一页</a>
+			<a href="javascript:;" class="btn" data-control="next">下一页</a>
+		</p>
+	</body>
+	<script src="plugin/jquery.min.js"></script>
+	<script src="js/preLoad.js"></script>
+	<script src="js/index.js"></script>
+</html>

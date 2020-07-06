@@ -34,5 +34,11 @@ module.exports = [
         path: '/doc/vue.md', 
         collapsable: true,
         sidebarDepth:1
-    }
+    },
+    {
+        title: 'echarts-web项目',
+        path: '/doc/echarts.md', 
+        collapsable: true,
+        sidebarDepth:1
+    },
 ]
