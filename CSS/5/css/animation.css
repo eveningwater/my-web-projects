@@ -1,0 +1,119 @@
+/*
+* 功能:人物行走动画
+* 作者:eveningwater
+* 日期:2017/8/17
+*/
+
+@keyframes me {
+	0% { transform:   rotate(5deg) translate( 5px,   0px); }
+	25% { transform:  rotate(5deg) translate(-5px, -14px); }
+	50% { transform:  rotate(5deg) translate( 5px,   0px); }
+	75% { transform:  rotate(5deg) translate(-5px, -14px); }
+	100% { transform: rotate(5deg) translate( 5px,   0px); }
+}
+
+@keyframes right-bicep {
+	0%   { transform: rotate(26deg); }
+	50%  { transform: rotate(-20deg); }
+	100% { transform: rotate(26deg); }
+}
+
+@keyframes left-bicep {
+	0%   { transform: rotate(-20deg); }
+	50%  { transform: rotate(26deg); }
+	100% { transform: rotate(-20deg); }
+}
+
+@keyframes right-forearm {
+	0%   { transform: rotate(-10deg); }
+	50%  { transform: rotate(-45deg); }
+	100% { transform: rotate(-10deg); }
+}
+@keyframes left-foearm {
+	0%   { transform: rotate(-45deg); }
+	50%  { transform: rotate(-10deg); }
+	100% { transform: rotate(-45deg); }
+}
+
+@keyframes right-thigh {
+	0%   { transform: rotate(-45deg); }
+	50%  { transform: rotate(10deg); }
+	100% { transform: rotate(-45deg); }
+}
+
+@keyframes left-thigh {
+	0%   { transform: rotate(10deg); }
+	50%  { transform: rotate(-45deg); }
+	100% { transform: rotate(10deg); }
+}
+
+@keyframes right-shin {
+	0%   { transform: rotate(30deg); }
+	25%  { transform: rotate(20deg); }
+	50%  { transform: rotate(20deg); }
+	75%  { transform: rotate(85deg); }
+	100% { transform: rotate(30deg); }
+}
+
+@keyframes left-shin {
+	0%   { transform: rotate(20deg); }
+	25%  { transform: rotate(85deg); }
+	50%  { transform: rotate(30deg); }
+	75%  { transform: rotate(20deg); }
+	100% { transform: rotate(20deg); }
+}
+
+@keyframes right-foot {
+	0%   { transform: rotate(-5deg); }
+	25%  { transform: rotate(-7deg); }
+	50%  { transform: rotate(-16deg); }
+	75%  { transform: rotate(-10deg); }
+	100% { transform: rotate(-5deg); }
+}
+
+@keyframes left-foot {
+	0%   { transform: rotate(-16deg); }
+	25%  { transform: rotate(-10deg); }
+	50%  { transform: rotate(-5deg); }
+	75%  { transform: rotate(-7deg); }
+	100% { transform: rotate(-16deg); }
+}
+
+@keyframes right-toes {
+	0%   { transform: rotate(0deg); }
+	25%  { transform: rotate(-10deg); }
+	50%  { transform: rotate(-10deg); }
+	75%  { transform: rotate(-25deg); }
+	100% { transform: rotate(0deg); }
+}
+
+@keyframes left-toes {
+	0%   { transform: rotate(-10deg); }
+	25%  { transform: rotate(-25deg); }
+	50%  { transform: rotate(0deg); }
+	75%  { transform: rotate(-10deg); }
+	100% { transform: rotate(-10deg); }
+}
+
+@keyframes shadow {
+	0%   { opacity: 1; }
+	25%  { opacity: 0.75; }
+	50%  { opacity: 1; }
+	75%  { opacity: 0.75; }
+	100% { opacity: 1; }
+}
+
+@keyframes prop-600 {
+	0%   { transform: translateX(0px); }
+	100% { transform: translateX(-600px); }
+}
+
+@keyframes prop-1200 {
+	0%   { transform: translateX(0px); }
+	100% { transform: translateX(-1200px); }
+}
+
+@keyframes prop-2000 {
+	0%   { transform: translateX(0px); }
+	100% { transform: translateX(-2000px); }
+}
