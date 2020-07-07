@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow: hidden;
+  height: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+.fontTextarea,
+.btnGroup,
+.costTime {
+  width: calc(100% - 40px);
+  margin: 0 20px;
+  position: relative;
+}
+
+.fontTextarea {
+  outline: none;
+  resize: none;
+  overflow-y: auto;
+  height: 200px;
+  border: 1px solid #bebebe;
+  border-radius: 4px;
+}
+
+textarea:disabled {
+  background-color: #f3f4f5;
+  color: #535353;
+}
+
+.fontString {
+  padding: 20px;
+}
+
+.fontTextarea:focus {
+  box-shadow: 0 0 10px rgba(204, 243, 239, 0.73);
+}
+
+.btnGroup > button {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid transparent;
+  padding: 4px 12px;
+  font: 16px "幼圆";
+  color: #141313;
+  outline: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.btnGroup > button:last-child {
+  margin-left: 15px;
+}
+
+.btnGroup > button:hover,
+.btnGroup > button:active {
+  border-color: #a3ecec;
+}
+
+.costTime {
+  margin-top: 10px;
+}
+
+.costTime::after {
+  content: " ";
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+}
+
+.costTime p {
+  width: 33.33%;
+  font-size: 16px;
+  float: left;
+}
+
+.costTime p span {
+  color: #ff3119;
+  padding: 0 2px;
+}
+
+.error-font {
+  color: #cf2c1a;
+}
+
+.right-font {
+  color: #29bbff;
+}
+
+@media screen and (max-width: 750px) {
+  .costTime p {
+    font-size: 12px;
+  }
+}
