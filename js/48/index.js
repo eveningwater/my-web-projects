@@ -29,7 +29,7 @@ xhr.onreadystatechange = function () {
             let read = function () {
                 if (count <= jsObj.length) {
                     let obj = jsObj[count];
-                    readContent(obj.title + "," + obj.content);
+                    readContent(obj.title + "," + obj.content.replace(/<br>/g,''));
                     audio.addEventListener('timeupdate', () => {
                         if (audio.ended) {
                             count++;
