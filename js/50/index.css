@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("https://ss2.bdstatic.com/lfoZeXSm1A5BphGlnYG/skin/253.jpg?2");
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+img {
+  display: block;
+  margin: auto;
+}
+
+img {
+  width: 270px;
+  height: 129px;
+  margin-top: 50px;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+}
+
+.container input {
+  width: 540px;
+  height: 40px;
+  outline: none;
+  vertical-align: middle;
+}
+
+.container button {
+  width: 104px;
+  height: 44px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  font-size: 16px;
+  cursor: pointer;
+  vertical-align: middle;
+  margin-left: -5px;
+}
+
+#menu {
+  width: 542px;
+  height: auto;
+  border: 1px solid #666666;
+  border-top: none;
+  display: none;
+  background-color: #fff;
+  margin: auto;
+  position: relative;
+  left: -52px;
+}
+
+#menu li {
+  padding: 10px 6px;
+}
+
+#menu li:hover,
+#menu li:active {
+  background-color: #f2f2f2;
+  cursor: pointer;
+}

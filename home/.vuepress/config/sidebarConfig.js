@@ -47,4 +47,10 @@ module.exports = [
         collapsable: true,
         sidebarDepth:1
     },
+    {
+        title: 'animate-web项目',
+        path: '/doc/animate.md', 
+        collapsable: true,
+        sidebarDepth:1
+    },
 ]
