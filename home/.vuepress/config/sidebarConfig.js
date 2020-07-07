@@ -41,4 +41,10 @@ module.exports = [
         collapsable: true,
         sidebarDepth:1
     },
+    {
+        title: 'react-web项目',
+        path: '/doc/react.md', 
+        collapsable: true,
+        sidebarDepth:1
+    },
 ]
