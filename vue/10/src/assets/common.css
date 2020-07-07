@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*::before {
+  box-sizing: border-box;
+}
+
+*::after {
+  box-sizing: border-box;
+}
+
+.resumeEditor,
+.styleEditor {
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 0.5em;
+  margin: 0.5em;
+}
+
+.styleEditor {
+  outline: none;
+  white-space: pre-wrap;
+  font-size: 14px;
+}
+
+.styleEditor:focus {
+  box-shadow: 0 0 30px #fff;
+}
+
+.resumeEditor a {
+  transition: color 0.3s linear;
+}
+
+#music {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  background: url(./musicIcon.svg) no-repeat center/cover;
+  margin-left: 15px;
+  display: none;
+}
+
+audio {
+  opacity: 0;
+}
+
+.rotate {
+  animation: rotate 5s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.header {
+  max-width: 355px;
+  background-color: #ffffff;
+  padding: 5px;
+  margin: auto;
+  position: relative;
+  border-radius: 4px;
+}
+
+.down {
+  position: absolute;
+  border-width: 15px;
+  border-style: solid;
+  left: 50%;
+  top: 15px;
+  z-index: 999;
+  transform: translate(0%, -50%);
+  cursor: pointer;
+  border-color: rgba(60, 211, 231, 0.2) transparent transparent transparent;
+  transition: border-color 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.down:hover,
+.down:active {
+  border-color: #388ae7 transparent transparent transparent;
+}
+
+.header>.w-inter-text {
+  color: #535353;
+}
+
+.header>.w-inter-input {
+  outline: none;
+  padding: 0 10px;
+  border-radius: 5px;
+  border: 1px solid #010a11;
+  color: #535353;
+  font-size: 14px;
+  text-align: center;
+  min-width: 200px;
+  line-height: 20px;
+}
+
+.header>.w-inter-btn {
+  outline: none;
+  padding: 4px 5px;
+  display: inline-block;
+  color: #fff;
+  text-align: center;
+  background-color: rgb(65, 209, 235);
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+}
+
+.header>.w-inter-btn:hover,
+.header>.w-inter-btn:active {
+  background-color: rgb(51, 86, 240);
+}
+
+.slide-enter-active,
+.slide-leave-active {
+  transition: all 1s;
+}
+
+.slide-enter,
+.slide-leave-to {
+  height: 20px;
+}
+
+.main {
+  width: 100%;
+  position: relative;
+}
+
+#bottom {
+  background-color: #ffffff;
+  position: fixed;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+}
+
+#bottom p {
+  float: right;
+}
+
+#bottom a {
+  text-decoration: none;
+  color: #999;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+#bottom a:hover,
+#bottom a:active {
+  color: #010a11;
+}
+
+.code{
+  display:none;
+}
