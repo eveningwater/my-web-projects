@@ -1,6 +1,7 @@
 {
   "name": "react-admin-system",
   "version": "0.1.0",
+  "homepage": "./",
   "private": true,
   "dependencies": {
     "history": "^4.9.0",

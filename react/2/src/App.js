@@ -3,7 +3,7 @@ import './css/App.css';
 import Login from './views/login/login'
 import Main from './views/main/main'
 
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
     return (
