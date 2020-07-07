@@ -1,0 +1,131 @@
+/**
+*
+* 大家好,我叫夕水, 我目前在成都工作.
+*
+* 我写了一个个人网站
+*
+* 那么这个网站的代码是怎么样的呢?
+*/
+
+
+/**
+* 让我们现在就开始看看吧. 我们开始于写动画.....废话不多说,往下看:
+*/
+
+* {
+    transition: all 5s;
+}
+
+
+/**
+* 这行代码并没有干啥,就是添加一个动画的过渡效果而已, 接着你会看到.
+*
+* 背景变色,
+* 好吧,让我们写点代码改变颜色吧.
+*/
+
+html {
+    background: rgb(54, 80, 80);
+}
+
+
+/***
+* 耐心等待字体的变化吧...
+*/
+
+pre,
+a {
+    color: rgb(248, 241, 241);
+}
+
+
+/**
+* 太好了. 实在对不起你的眼睛,就看到这么点东西.
+*
+* 那肯定不过瘾,是不是啊.
+*
+* 我打算写一个编辑器,把代码包含在里面.
+*/
+
+pre:not(:empty) {
+    overflow: auto;
+    background: rgba(44, 32, 20, 0.541);
+    border: 1px solid #ccc;
+    max-height: 41.5%;
+    width: 50%;
+    font-size: 14px;
+    font-family: monospace;
+    padding: 10px 10px 20px;
+    box-shadow: -4px 4px 2px 0 rgba(0, 0, 0, 0.3);
+    white-space: pre-wrap;
+    outline: 0;
+}
+
+
+/**
+* 好了. 接下来我们把屏幕填满吧.
+* 让我们继续写点代码,开始.
+*/
+
+#style-text {
+    transform: translateX(95%);
+    position: absolute;
+}
+
+
+/**
+* 好了, 但是所有的字体都是白色的,是不是太单调了点!
+* 让我们把字体颜色变得高亮些.
+*/
+
+.commont {
+    color: #857F6B;
+    font-style: italic;
+}
+
+.selector {
+    color: #E69F0F;
+}
+
+.selector .key {
+    color: #64D5EA;
+}
+
+.key {
+    color: #64D5EA;
+}
+
+.value {
+    color: #BE84F2;
+}
+
+.value.px {
+    color: #F92772;
+}
+
+
+/**
+* 这编辑器没有点3D效果看着不爽....
+* 好吧,接下来我们就加点3D效果.
+*/
+
+body {
+    perspective: 1000px;
+}
+
+#style-text {
+    transform: translateX(98.5%) rotateY(-10deg);
+    transform-origin: right;
+    max-height: 90.5%;
+}
+
+
+/**
+* 现在,还是看看我的项目案例吧. 这不就是你为什么在这里的原因吗?
+* 我能想象你肯定想看到五花八门的东西.
+*/
+
+pre:not(#style-text) {
+    transform: rotateY(10deg);
+    transform-origin: left;
+}

@@ -1,0 +1,57 @@
+/**
+* 文本可以做一些调整.
+*/
+
+.md {
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.md h1,
+.md h2,
+.md h3,
+.md h4,
+.md h5,
+.md h6 {
+    display: inline-block;
+    color: #ddd;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+
+
+/*
+* 嗯,加点外边距....
+*/
+
+.md li {
+    margin: 5px 0;
+}
+
+.md h1,
+.md h2,
+.md h3,
+.md h4,
+.md h5,
+.md h6,
+.md ul,
+.md p {
+    margin: 0px;
+}
+
+.md p {
+    padding-left: 25px;
+}
+
+
+/**
+* 很好.
+*
+* 如果你想看到我其他的爱好或者作品什么的,看我左边的编辑器加载的内容.
+*
+* 你知道的,我其实就是想寻一个知己(知音啦)......
+*/
+
+#other-text {
+    font-size: 16px;
+    color: #f1ecec;
+}

@@ -1,0 +1,85 @@
+/* 我其实作弊了! */
+
+html,
+body {
+    margin-top: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+pre {
+    overflow: auto;
+    max-height: 90%;
+    width: 100%;
+    border-radius: 1px;
+    /* Prevents bad clipping in Chrome */
+}
+
+#content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 20px;
+}
+
+#bottom {
+    position: absolute;
+    bottom: 8px;
+    height: 20px;
+    left: 0;
+    right: 0;
+    padding: 0 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #999;
+}
+
+pre a button {
+    outline: none;
+}
+
+pre:focus {
+    border: 1px solid #0c0d0c;
+}
+
+a:hover,
+a:active {
+    text-decoration: underline;
+}
+
+li {
+    list-style: none;
+}
+
+a:after {
+    content: '';
+    padding-right: 5px;
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-color: inherit;
+}
+
+.music {
+    position: absolute;
+    left: 0;
+    bottom: 8px;
+    width: 20px;
+    height: 20px;
+    display: none;
+}
+
+a:last-of-type:after {
+    border: none;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    background-color: #f3f3f3;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #314246;
+}
