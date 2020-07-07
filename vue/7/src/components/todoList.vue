@@ -86,7 +86,6 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less">
   @import '../styles/todolist.less';
-  @import '../styles/alert.less';
   .public,
   .visible {
     .setInput;
