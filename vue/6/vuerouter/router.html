@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8">
+		<title>Vue-路由</title>
+		<link rel="stylesheet" href="./static/bootstrap.min.css">
+		<link rel="stylesheet" href="./router.css">
+		<link rel="shortcut icon" href="./static/logo.png">
+		<link rel="bookmark" href="./static/logo.png">
+	</head>
+	<body>
+		<main id="app">
+			<h1>Vue的路由基本配置</h1>
+			<header>
+				<nav>
+					<!-- 使用 router-link 组件来导航. -->
+					<!-- 通过传入 `to` 属性指定链接. -->
+					<!-- <router-link> 默认会被渲染成一个 `<a>` 标签，可以在vue-router.js源码里搜索到 -->
+					<router-link to="/home">网站首页</router-link>
+					<router-link to="/product">产品介绍</router-link>
+					<router-link to="/service">服务支持</router-link>
+					<router-link to="/about">联系我们</router-link>
+				</nav>
+			</header>
+			<div class="content">
+				<!-- 路由出口，该组件同样是在vue-router.js里定义好的 -->
+				<!-- 路由匹配到的组件将渲染在这里 -->
+				<router-view></router-view>
+			</div>
+		</main>
+	</body>
+	<script src="./static/vue.min.js"></script>
+	<script src="./static/vue-router.min.js"></script>
+	<script src="./router-demo.js"></script>
+</html>

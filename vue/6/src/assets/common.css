@@ -1,0 +1,188 @@
+/*
+* 功能:公共样式
+* 日期:2017/9/20
+* 作者:loho
+*/
+/****************页面初始化****************/
+html,body{
+	margin: 0;padding: 0;
+}
+a{
+	color: #41b883;
+}
+a:hover{
+	color: #35495e;
+}
+button{
+	outline: none;
+}
+button.btn:focus,button.btn:active{
+	outline: none;
+}
+.list-group-item{
+	border-color: #aaaaaa;
+}
+/****************样式元件****************/
+/*外间距*/
+.ml-50{
+	margin-left: 50px;
+}
+.ml-100{
+	margin-left: 100px;
+}
+.mr-50{
+	margin-right: 50px;
+}
+.mr-100{
+	margin-right: 100px;
+}
+.mt-10 {
+	margin-top: 10px;
+}
+.mt-50 {
+	margin-top: 50px;
+}
+/*宽度*/
+.w-164{
+	width: 164px;
+}
+/* 主题色 */
+.bg-theme {
+	background-color: #41B883;
+	color: #ffffff;
+}
+/* 无效果列表 */
+.list-none {
+	list-style: none;
+	color: #666666;
+	position: relative;
+	left: -40px;
+}
+/* 字体控制 */
+.text-weight-normal, .text-weight-normal th, .text-weight-normal td {
+	font-weight: normal;
+}
+/* bootstrap表单控件重定义 */
+input.form-control,select.form-control{
+	height: auto;
+	font-size: 20px;
+}
+.checkbox-inline input[type="checkbox"] {
+	width: 16px;
+	height: 16px;
+	position: relative;
+	top: -2px;
+}
+.checkbox-inline input[type="checkbox"],.checkbox-inline span {
+	vertical-align: middle;
+	display: inline-block;
+}
+/*手型效果*/
+.pointer{
+	cursor: pointer;
+}
+.transition_0_3{
+	transition-property: all;
+	transition-duration: .3s;
+}
+.section_h2{
+	font-size: 16px;
+	color: #999;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.section_h3 {
+	font-size: 18px;
+	color: #666666;
+	margin-top: 36px;
+	margin-bottom: 12px;
+}
+.fz-24{
+	font-size: 24px !important;
+}
+.fz-28{
+	font-size: 28px !important;
+}
+.fz-30{
+	font-size: 30px !important;
+}
+.fz-32{
+	font-size: 32px !important;
+}
+.gif-img{
+	width: auto;height: 260px;
+	background: #eee url('./img-loader.jpg') center center no-repeat;
+	background-size: contain;
+	display: block;
+}
+/****************细节设置****************/
+body{
+	background-color: #f3f3f3;
+	font: normal 24px/1.6 "Microsoft YaHei UI";
+	padding-bottom: 50px;
+}
+main{
+	width: calc(100% - 10px);
+	margin: 0 auto;
+}
+main article{
+	border: 1px solid #aaaaaa;
+	border-radius: 10px;
+	overflow: hidden;
+}
+main article h1, main section {
+	border-bottom: 1px solid #aaaaaa;
+}
+main article h1 {
+	padding: 10px 0;
+	background-color: #41B883;
+	color: #35495E;
+	text-align: center;
+	line-height: 50px;
+	margin: 0;
+}
+main section {
+	background-color: #fff;
+	padding: 10px;
+}
+main section:last-child {
+	border-bottom: none;
+}
+main section ul li {
+	color: #2aa3e1;
+}
+
+input,select,textarea,button.btn {
+	font-size: 22px;
+}
+/****************滚动条样式****************/
+::-webkit-scrollbar{
+	width: 5px;
+	background-color: #f3f3f3;
+}
+::-webkit-scrollbar-thumb{
+	background-color: #6ed9ed;
+}
+/****************图标****************/
+.vue-icon{
+	width: 32px;
+	height: 32px;
+	background: url('./logo.png')no-repeat center/cover;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 10px;
+}
+/* 列表末尾删除按钮 */
+.li-delete {
+	padding: 0 10px;
+	background-color: transparent;
+	border: none;
+	font-size: 20px;
+	color: #999999;
+}
+.li-delete:hover {
+	color: #d67676;
+}
+.li-delete:active {
+	color: #b1441c;
+}

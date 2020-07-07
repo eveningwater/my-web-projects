@@ -1,0 +1,38 @@
+@charset "utf-8";
+/**
+* 功能：Vue路由基础
+* 日期：2017/9/25
+**/
+
+body {
+	font: 16px "微软雅黑",serif;
+}
+
+main {
+	width: 960px;
+	min-width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.content div {
+	padding: 20px 12px;
+}
+
+header nav a {
+	padding: 8px 20px;
+	display: inline-block;
+}
+@media (max-width: 1024px) {
+	main {
+		width: 96%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+@media (max-width: 420px) {
+	main {
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}

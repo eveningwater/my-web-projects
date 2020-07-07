@@ -7,3 +7,4 @@
 |  3   | [活动秒杀倒计时](https://github.com/eveningwater/my-web-projects/tree/master/vue/3/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/3/) |
 |  4   | [拖拽列表](https://github.com/eveningwater/my-web-projects/tree/master/vue/4/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/4/) |
 |  5   | [树形下拉菜单](https://github.com/eveningwater/my-web-projects/tree/master/vue/5/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/5/) |
+|  6   | [vue-master](https://github.com/eveningwater/my-web-projects/tree/master/vue/6/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/6/) |
