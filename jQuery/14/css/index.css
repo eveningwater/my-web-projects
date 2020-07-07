@@ -1,0 +1,54 @@
+.wrap,
+.wrap > div {
+  width: 100%;
+  position: absolute;
+}
+.wrap div .img-child,
+.wrap > div {
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 100%;
+  overflow: hidden;
+  font: 16px "微软雅黑";
+}
+.wrap {
+  height: 100%;
+}
+.wrap > div {
+  background-position: center center;
+}
+.wrap .img-01 {
+  background-image: url(../img/background_1.jpg);
+}
+.wrap .img-02 {
+  background-image: url(../img/background_2.jpg);
+}
+.wrap .img-03 {
+  background-image: url(../img/background_3.jpg);
+}
+.wrap .img-04 {
+  background-image: url(../img/background_4.jpg);
+}
+.wrap div .img-child {
+  background-position: 0 0;
+  display: inline-block;
+  z-index: 1;
+}
+.img-rotate {
+  animation: rotate 0.6s both;
+}
+@keyframes rotate {
+  from {
+    transform: rotateY(0);
+  }
+  to {
+    transform: rotateY(90deg);
+  }
+}

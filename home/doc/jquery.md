@@ -16,3 +16,4 @@
 |  11   | [stackshare](https://github.com/eveningwater/my-web-projects/tree/master/jQuery/11/) | [在线 demo](https://www.eveningwater.com/my-web-projects/jQuery/11/) |
 |  12   | [手风琴背景与选项切换轮播图](https://github.com/eveningwater/my-web-projects/tree/master/jQuery/12/) | [在线 demo](https://www.eveningwater.com/my-web-projects/jQuery/12/) |
 |  13   | [滑块插件](https://github.com/eveningwater/my-web-projects/tree/master/jQuery/13/) | [在线 demo](https://www.eveningwater.com/my-web-projects/jQuery/13/) |
+|  14   | [百叶窗轮播](https://github.com/eveningwater/my-web-projects/tree/master/jQuery/14/) | [在线 demo](https://www.eveningwater.com/my-web-projects/jQuery/14/) |
