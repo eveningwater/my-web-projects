@@ -50,3 +50,4 @@
 |  46  |           [右键菜单效果](https://github.com/eveningwater/my-web-projects/tree/master/js/46)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/46/) 
 |  47  |           [打字测试](https://github.com/eveningwater/my-web-projects/tree/master/js/47)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/47/) 
 |  48  |           [美女自动阅读文章](https://github.com/eveningwater/my-web-projects/tree/master/js/48)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/48/) 
+|  49  |           [户里](https://github.com/eveningwater/my-web-projects/tree/master/js/49)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/49/) 

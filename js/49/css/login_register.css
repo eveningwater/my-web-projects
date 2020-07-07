@@ -1,0 +1,107 @@
+/**************功能:登陆与注册页面****************/
+/**************作者:loho******************/
+/**************日期:2017/2/28*************/
+/*中间页面登陆标题部分*/
+.content h1.mt-100{
+    width: 100%;
+    text-align: center;
+    font: normal 32px/140% "微软雅黑";
+    color: #333;
+}
+.content .mt-100 {
+	margin-top: 100px;
+}
+/*中间页面注册标题部分*/
+.content .subhead {
+	text-align: center;
+    font: normal 18px/140% "微软雅黑";
+    color: #888;
+}
+.content .mt-10 {
+	margin-top: 10px;
+}
+/*中间页面注册超链接*/
+.content .subhead a{
+    text-decoration: underline;
+    color: #4375ad;
+}
+/*悬浮样式*/
+.content .subhead a:hover{
+    color: #679bd4;
+}
+/*登陆框*/
+.content .loginBox{
+    width: 402px;
+    height: auto;
+    margin-bottom: 180px;
+    margin-left: auto;margin-right: auto;
+}
+/*登陆框label*/
+.content .loginBox form > div{
+    position: relative;
+}
+.content .loginBox label{
+    font-size: 18px;
+    line-height: 200%;
+}
+.content .loginBox .mt-50 {
+	margin-top: 50px;
+}
+/*登陆框input*/
+.content .loginBox .baseStyle{
+	width: 400px;height: 50px;
+    font-size: 18px;
+    color: #555;
+}
+input::-webkit-input-placeholder{
+    font-size: 18px;
+    color: #999;
+}
+.content .loginBox .mt-24{
+    margin-top: 24px;
+}
+.content .loginBox [type="text"],.content .loginBox [type="password"]{
+    background-color: #fff;
+    border: 1px solid #cccbca;
+    padding: 0 10px;
+    transition: box-shadow .3s;
+}
+/*悬浮样式*/
+.content .loginBox [type="text"]:focus,.content .loginBox [type="password"]:focus{
+    border: 1px solid #82c353;
+    box-shadow: 0 0 10px rgba(130, 195, 83, 0.6);
+}
+/*登陆框文本样式p*/
+.content .loginBox p{
+    text-align: right;
+    margin-top: 15px;
+}
+/*错误信息*/
+.content .loginBox p.Error{
+	color: #f00;
+    visibility: hidden;
+    position: absolute;
+    left: 233px;top: -7px;
+    transition: all .3s ease-in;
+}
+/*登陆框文本超链接*/
+.content .loginBox p a{
+    text-decoration: underline;
+    font-size: 18px;
+    color: #333;
+}
+/*悬浮样式*/
+.content .loginBox p a:hover{
+    color: #4375ad;
+}
+/*登陆与注册提交按钮*/
+.content .loginBox .loginBtn, .content .loginBox .regbtn{
+	width: 400px;height: 64px;
+    background-color: #838281;
+    border: none;
+    text-align: center;
+    font: normal 32px/64px "微软雅黑";
+    color: #fff;
+    cursor: not-allowed;
+    margin-top: 40px;
+}

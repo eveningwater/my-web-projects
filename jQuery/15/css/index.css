@@ -1,0 +1,576 @@
+/************功能:w18系统******************/
+/************作者:loho********************/
+/************日期:2017/3/25***************/
+/************公共样式***************/
+/*页面初始化*/
+body,html,section,div,header,main,footer,h1,h2,h3,h4,h5,h6,input,button,a,ul,li{
+	margin: 0;padding: 0;
+}
+/*标准盒子模型*/
+body,html,section,div,header,main,footer,h1,h2,h3,h4,h5,h6,input,button,a,ul,li{
+	box-sizing: border-box;
+}
+/*块级元素*/
+aside > h1,.mouseRightlist ul > li span.changespan{
+	display: block;
+}
+/*行内块元素*/
+aside img,.nowDate p,.date p,aside > .dot i,.loadingpage > .loadingcontent > span,.mouseRightlist ul i,.createList div input,.createList div label,.createList div a,.filelist li,.filelist li a{
+	display: inline-block;
+}
+/*绝对定位*/
+aside > h1,aside img,.mainpage,.mainpage .loginPass,.popbox,.nowDate,aside > .dot,.loadingpage > .loadingcontent,.date,.rightnav,.mouseRightlist,.browser,.browser .header .back,.browser .header .forward,.browser .header .refresh,.browser .header .moremenu,.browser .headerclose span,.filelist{
+	position: absolute;
+}
+/*相对定位*/
+body,aside,.userHead,.loginEnter,button.loginBtn,.popbox .surebtn,.winpage,.loadingpage,.bottomlogo,.rightnav > .rightlogo,.mouseRightlist ul li,.mouseRightlist ul,.mouseRightlist ul li,.createList,.browser > .header,.browser .headerclose{
+	position: relative;
+}
+/*固定定位*/
+.bottomnav {
+	position: fixed;
+}
+/*手型按钮*/
+aside > h1,button.loginBtn,.loginEnter,.popbox .surebtn,.nowDate,.bottomlogo,.rightnav > .rightlogo,.mouseRightlist ul li,.createList .submit,.browser span,.browser i,.filelist li span{
+	cursor: pointer;
+}
+/*消除边框线*/
+button,input{
+	outline: none;
+	border: none;
+}
+/*消除列表符号*/
+ul,li,dt{
+	list-style: none;
+}
+/*背景图样式*/
+.mainpage,.userHead{
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.loginPass,.loginBtn {
+	vertical-align: middle;
+}
+.ani_1,.ani_2 {
+	transition: all .3s ease-out .2s;
+}
+/************细节样式***************/
+/*body,html*/
+body,html{
+	height: 100%;
+	font: 16px "微软雅黑";
+	overflow: hidden;
+}
+/*遮罩层*/
+aside,.banner{
+	width: 100%;height: 100%;
+	top: 0;
+	transition: all .2s ease-in;
+	font-size: 0;
+	white-space: nowrap;
+}
+aside img{
+	width: 100%;
+	height: 100%;
+	transition: all .3s ease-in;
+}
+aside > h1{
+	width: 250px;
+	height: 50px;
+	font: normal 25px/50px "幼圆";
+	text-align: center;
+	color: #fff;
+	text-shadow: 0 0 5px rgba(209, 195, 147, 0.76);
+	right: 240px;top: 40px;
+	z-index: 12;
+}
+aside > .dot{
+	width: 200px;height: 30px;
+	bottom: 50px;left: 50%;
+	z-index: 15;
+	margin-left: -100px;
+}
+aside > .dot i{
+	width: 20px;height: 20px;
+	border: 1px solid #f2f2f2;
+	border-radius: 10px;
+	margin-left: 15px;
+	margin-top: 5px;
+	z-index: 15;
+}
+aside > .dot i.checked{
+	background-color: rgba(255, 255, 255, 0.86);
+}
+/*主页面*/
+.mainpage {
+	width: 100%;height: 100%;
+	background-image: url(../img/bg.jpg);
+	/*top: 100%;*/
+	transition: all .2s ease-out;
+}
+.userHead {
+	width: 200px;height: 200px;
+	border-radius: 50%;
+	background-image: url(../img/userhead.jpg);
+	border: 1px solid rgba(208, 183, 115, 0.82);
+	top: 50%;left: 50%;
+	margin-top: -160px;
+	margin-left: -130px;
+}
+.loginEnter {
+	width: 91px;height: 71px;
+	background: url(../img/bird.png)-182px 0 no-repeat;
+	top: 50%;left: 50%;
+	transition: all .3s;
+	z-index: 10;
+}
+.loginEnter > .loginPass,.loginEnter > .loginBtn {
+	margin-left: 25px;
+}
+.mainpage input.loginPass{
+	width: 250px;
+	height: 40px;
+	border: 1px solid #f2f2f2;
+	box-shadow: 0 0 5px rgba(156, 226, 232, 0.75);
+	font: 18px/40px "幼圆";
+	text-align: left;
+	background-color: #fff;
+	color: #49cdd8;
+	border-radius: 2px;
+	left: 60px;top: 25px;
+}
+button.loginBtn{
+	width: 48px;
+	height: 48px;
+	border-radius: 2px;
+	background:url(../img/loginEnter.png)no-repeat;
+	background-color: transparent;
+	top: 22px;left: 305px;
+	display: none;
+}
+button.loginBtn:hover{
+	background-position: -48px 0;
+}
+button.loginBtn:active{
+	background-position: -96px 0;
+}
+/*日期显示*/
+.nowDate {
+	width: 300px;height: 50px;
+	left: 15px;bottom: 50px;
+}
+.nowDate p{
+	text-align: center;
+	font: normal 25px "幼圆";
+	color: rgba(59, 183, 193, 0.9);
+	margin-top: 10px;
+}
+.nowDate p span{
+	font: 25px "Algerian","arial";
+	animation: textshadow .5s linear infinite;
+	border-bottom:1px dashed rgba(70, 217, 217, 0.7); 
+}
+.nowDate:hover{
+	transform: scale(1.5);
+	left: 100px;
+}
+/*弹出框*/
+.popbox {
+	width: 400px;height: 200px;
+	border-radius: 5px;
+	border: 1px solid #f2f2f2;
+	background-color: #eee;
+	left: 50%;top: 50%;
+	transform: translate(-50%,-50%);
+	display: none;
+	z-index: 12;
+}
+.popbox > h2{
+	text-align: center;
+	font:normal 25px "幼圆";
+	vertical-align: middle;
+	margin-top: 70px;
+}
+.popbox  button{
+	font:normal 25px/40px "楷体";
+	background-color: rgba(104, 201, 209, 0.43);
+	text-align: center;
+	color: #fff;
+}
+.popbox .surebtn{
+	width: 100%;height: 40px;
+	top: 50px;
+}
+.popbox  button:hover,.popbox  button:active{
+	background-color: rgba(33, 237, 198, 0.76);
+}
+/*加载动画*/
+.loadingpage{
+	width: 100%;height: 100%;
+	background: url(../img/fenhongzhu.jpg)no-repeat;
+	background-size: cover;
+}
+.loadingpage > .loadingcontent{
+	width: 400px;height: 30px;
+	left: 50%;bottom: 50px;
+	border-radius: 2px;
+	margin-left: -200px;
+}
+.loadingpage > .loadingcontent > h1{
+	color: #500453;
+	font: 20px/30px "华文琥珀";
+	text-align: center;
+}
+.loadingpage > .loadingcontent > span{
+	width: 400px;height: 30px;
+	background-color: rgba(203, 40, 171, 0.8);
+	box-shadow: 0 0 10px rgba(100, 14, 87, 0.69);
+	animation: loadingAnimate 5s ease-in;
+}
+/*系统页面部分*/
+.winpage {
+	width: 100%;height: 100%;
+	background: url("../img/testImg-00.jpg") no-repeat;
+	background-size: cover;
+	top: 0;
+}
+/*主页面菜单*/
+.filelist {
+	width: auto;height: calc(100% - 64px);
+}
+.filelist li{
+	width: 100px;height: 100px;
+	border-radius: 5px;
+	margin-top: 3px;
+	margin-left: 5px;
+}
+.filelist li:hover{
+	background-color: rgba(255, 255, 255, 0.27);
+	border: 1px solid #f2f2f2;
+}
+.filelist li a{
+	width: 100px;height: 65px;
+	text-decoration: none;
+	background-size: 80%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.filelist li span{
+	width: 100px;height: 30px;
+	font: 16px/30px "微软雅黑";
+	text-align: center;
+	display: inline-block;
+	color: #897f7f;
+	text-shadow: 0 0 10px rgba(21, 20, 20, 0.76);
+}
+/*右键菜单*/
+.mouseRightlist {
+	width: auto;height: auto;
+	min-width: 250px;
+	background-color: rgba(29, 29, 29, 0.53);
+	border: 1px solid rgba(11, 11, 11, 0.51);
+}
+.mouseRightlist ul{
+	border-bottom: 1px solid #eeeeee;
+}
+.mouseRightlist ul:last-child{
+	border-bottom: none;
+}
+.mouseRightlist ul li{
+	width: calc(100% - 40px);height: 30px;
+	text-align: center;
+	font: normal 16px/30px "微软雅黑";
+	color: #fff;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 3px;
+}
+.mouseRightlist ul > li  i.createfile{
+	width: 30px;height: 30px;
+	border-radius: 5px;
+	background: url(../img/icon-gt.png)no-repeat;
+	background-position: center;
+	margin-right: 15px;	
+	position: absolute;
+	right: 1px;top: 0;
+}
+.mouseRightlist ul > li i.icon{
+	width: 30px;height: 30px;
+	background: url(../img/folder_32.png)no-repeat;
+	background-position: center;
+	margin-left: -45px;
+}
+.mouseRightlist ul > li i.large{
+	background-size: 80% 80%;
+}
+.mouseRightlist ul > li i.middle{
+	background-size: 65% 65%;
+}
+.mouseRightlist ul > li i.small{
+	background-size: 45% 45%;
+}
+.mouseRightlist ul > li span{
+	font-size: 18px;
+	vertical-align: top;
+}
+.mouseRightlist ul > li span.changespan{
+	overflow: hidden;
+	text-align: center;
+}
+.mouseRightlist .changespan input[type="file"]{
+	width: 100%;
+	position: absolute;
+	right: 0;top: 0;
+	font-size: 20px;
+	opacity: 0;
+	filter:alpha(opacity:0);
+}
+.mouseRightlist .changespan input[type="file"]:hover{
+	cursor: pointer;
+}
+.createList{
+	width: 400px;height: 200px;
+	background-color: #fff;
+	border: 1px solid #f2f2f2;
+	border-radius: 5px;
+	left: 50%;top: 50%;
+	transform: translate(-50%,-50%);
+	display: none;
+}
+.createList div{
+	margin-top: 15px;
+}
+.createList div label{
+	width: auto;height: 30px;
+	text-align: right;
+	font: 18px/30px "微软雅黑";
+	color: #999;
+	vertical-align: middle;
+	margin-left: 30px;
+}
+.createList div input[type="text"],.createList div a{
+	width: 260px;height: 30px;
+	border: 1px solid #a39f9f;
+	background-color: transparent;
+	font: 16px "微软雅黑";
+}
+.createList div input:focus{
+	box-shadow: 0 0 10px rgba(164, 227, 235, 0.9);
+}
+.createList div a input[type="file"]{
+	width: 100%;height: 100%;
+	opacity: 0;
+}
+.createList .submit{
+	width: calc(100% - 60px);
+	height: 35px;
+	background-color: rgba(173, 240, 240, 0.93);
+	text-align: center;
+	font: 18px/35px "微软雅黑";
+	margin-left: 30px;margin-right: 30px;
+	margin-top: 20px;
+	color: #fff;
+}
+.createList .submit:hover,.createList .submit:active{
+	background-color: rgba(78, 230, 219, 0.9);
+}
+/*加载页面*/
+.browser{
+	width: 100%;height: calc(100% - 64px);
+	top: 0;
+	background-color: rgb(255, 255, 255);
+}
+.browser .headerclose{
+	width: 100%;height: 30px;
+	border-bottom: 1px solid #f2f2f2;
+}
+.browser .headerclose span{
+	width: 30px;height: 30px;
+	font: 16px/30px "微软雅黑";
+	text-align: center;
+	margin-left: 5px;
+	top: 0;
+}
+.browser .headerclose span.minsize{
+	right: 65px;
+	font-size: 35px;
+}
+.browser .headerclose span.maxsize{
+	right: 35px;
+}
+.browser .headerclose span.closebrowser{
+	right: 5px;
+}
+.browser .headerclose
+.browser > .header{
+	width: 100%;height: 40px;
+	border-bottom: 1px solid #f2f2f2;
+	top: 30px;bottom: 1px;
+}
+.browser .header .back,.browser .header .forward,.browser .header .refresh{
+	width: 20px;height: 20px;
+	background-repeat:no-repeat;
+	background-size: cover;
+	top: 10px;
+}
+.browser .header .back{
+	background-image: url(../img/backoff.png);
+	left: 10px;
+}
+.browser .header .forward {
+	background-image: url(../img/forward.png);
+    left: 40px;
+}
+.browser .header .refresh{
+	background-image: url(../img/refresh.png);
+	left: 70px;
+}
+.browser .header input[type="text"]{
+	width: calc(100% - 140px);
+	height: 30px;
+	border: 1px solid #eee;
+	margin-left: 100px;margin-right: 80px;
+	margin-top: 5px;
+	font: 18px/30px "微软雅黑";
+}
+.browser .header .moremenu{
+	width: 30px;height: 30px;
+	font: bold 14px/20px "幼圆";
+	text-align: center;
+	right: 5px;top: 5px;
+}
+.browser > iframe{
+	width: 100%;height: calc(100% - 68px);
+	border: 1px solid #100f0f;
+}
+/*底部菜单栏*/
+.rightnav {
+	width: 350px;height: 500px;
+	border: 1px solid #fff;
+	bottom: 64px;left: 0;
+	background-color: rgba(29, 29, 29, 0.53);
+	display: none;
+	border-radius: 6px;
+	z-index: 15;
+}
+.rightnav > .rightlogo{
+	width: 100px;height: 100px;
+	border-radius: 50%;
+	border: 1px solid #fff;
+	background: url(../img/fileimg.jpg)no-repeat;
+	background-size: cover;
+	top: -50px;left:2px;
+	display: none;
+}
+.rightnav > .rightlogo:hover,.rightnav > .rightlogo:active{
+	transform: rotate(-45deg);
+}
+/*底部导航*/
+.bottomnav {
+	width: 100%;height: 64px;
+	background-color: rgba(25, 22, 22, 0.71);
+	bottom: 0;
+}
+.bottomlogo {
+	width: 60px;height: 60px;
+	background: url(../img/fileimg.jpg)no-repeat;
+	background-size: cover;
+	border-radius: 2px;
+	border: 1px solid #fff;
+	left: 15px;top: 2px;
+	z-index: 20;
+}
+.bottomlogo.select{
+	box-shadow: 0 0 10px rgba(15, 14, 14, 0.91);
+}
+.date {
+	width: 200px;height: 60px;
+	right: 15px;bottom: 2px;
+	line-height: 60px;
+	text-align: right;
+	border-left:1px solid #fff;
+}
+.date p{
+	text-align:right;
+	font: normal 16px "幼圆";
+	color: rgba(241, 245, 245, 0.9);
+	margin-top: 10px;
+	margin-right: 2px;
+}
+.date p span{
+	font: 18px "Algerian","arial";
+}
+/************动画部分***************/
+.ani_1{
+	animation: leftuser 3s linear;
+}
+.ani_2{
+	animation: widthinput 2s linear;
+}
+.ani_3{
+	animation: bird-fly .2s step-start infinite;
+}
+@keyframes leftuser{
+	0%{
+		transform: rotate(0deg);
+		top: 0;
+		box-shadow: 0 0 20px #decc3c;
+	}25%{
+		transform: rotate(120deg);
+		top: 15%;
+		box-shadow: 0 0 20px #20d9cb;
+	}50%{
+		transform: rotate(360deg);
+		box-shadow: 0 0 20px #3cde3c;
+		top: 25%;
+	}75%{
+		transform: rotate(120deg);
+		box-shadow: 0 0 20px #de3cde;
+		top: 35%;
+	}100%{
+		transform: rotate(0deg);
+		box-shadow: 0 0 20px #de8d3c;
+		top: 50%;
+	}
+}
+@keyframes widthinput{
+	0%{
+		width: 0;
+	}25%{
+		width: 50px;
+	}50%{
+		width: 150px;
+	}75%{
+		width: 200px;
+	}100%{
+		width: 250px;
+	}
+}
+@keyframes bird-fly{
+	0% {
+		background-position: -182px 0px;
+	}
+	50% {
+		background-position: 0px 0px;
+	}
+	75% {
+		background-position: -91px 0px;
+	}
+	100% {
+		background-position: -182px 0px;
+	}
+}
+@keyframes textshadow{
+	0%{text-shadow: 0 0 15px rgba(230, 206, 104, 0.92)}
+	25%{text-shadow: 0 0 25px rgba(242, 242, 242, 0.95)}
+	50%{text-shadow: 0 0 30px rgba(133, 232, 152, 0.95)}
+	75%{text-shadow: 0 0 40px rgba(237, 232, 114, 0.97)}
+	100%{text-shadow: 0 0 55px rgba(226, 96, 206, 0.99)}
+}
+@keyframes loadingAnimate{
+	0%{width: 0px;}
+	25%{width: 100px;}
+	50%{width: 200px;}
+	75%{width: 300px;}
+	100%{width: 400px;}
+}

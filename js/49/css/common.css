@@ -1,0 +1,51 @@
+/**************功能:公共样式****************/
+/**************作者:loho******************/
+/**************日期:2017/2/28*************/
+/*页面初始化*/
+body,html,div,main,section,iframe,input,a,img,h1,h2,h3,h4,h5,h6,textarea,p,form{
+    margin: 0;padding: 0;
+}
+/*标准盒子模型*/
+body,html,div,main,section,iframe,input,a,img,h1,h2,h3,h4,h5,h6,textarea,form,p{
+    box-sizing: border-box;
+}
+/*块级元素*/
+body,.header_bg img,.trea_count,.select_add i,.main_nav ul,.nav_search,.nav_search input,.nav_search i,.main_nav ul li .lev1-lo-1,.main_nav ul li .lev2-lo-1,.footer_mark-keyword i,.footer_mark-keyword span,.footer_info-content p,.home_h1,iframe,.content .loginBox label,ul.subnav li,ul.subnav li a,.classifyFilter > div a.filter,.goodsChoose .goodsImg{
+    display: block;
+}
+/*行内块元素*/
+.login,.gap_line,.shoppingCar,.dist-select,.main_nav ul a,.footer_mark-keyword,.footer_info-content,.sina_logo-small,.weixin_logo-small{
+	display: inline-block;
+}
+/*消除列表符号*/
+ul,li,ol,dl,dt{
+    list-style: none;
+}
+/*手型按钮*/
+a,input,.shoppingCar,.dist-select,.nav_search i,.imgLink-area span{
+    cursor: pointer;
+}
+/*消除选择*/
+.header，body,html,div,main,section,iframe,input,a,img,h1,h2,h3,h4,h5,h6,textarea,form,p{
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+/*消除下划线*/
+a{
+    text-decoration: none;
+}
+/*消除边框线*/
+input,button{
+    outline: none;
+}
+/*绝对定位*/
+.header_bg,.contUS_mark,.loginOrShop,.trea_count,.select_add,.main_nav,.imgLink-area .slideList img,.classify_banner h1,ul.subnav,.classifyFilter,.treas_brief{
+	position: absolute;
+}
+/*相对定位*/
+.header,.pos-rela,.logo,.shoppingCar,.select_list,.imgLink-area .slideList,.imgLink-area span,.classify_banner,.goodsShowImg > .mainImg{
+    position: relative;
+}

@@ -51,5 +51,7 @@ xhr.onreadystatechange = function () {
 function readContent(value) {
     var api = "http://tts.baidu.com/text2audio?lan=zh&ie=UTF-8&spd=2&text=" + encodeURI(value);
     audio.src = api;
-    audio.play();
+    audio.oncanplay = function(){
+        audio.play();
+    }
 }
