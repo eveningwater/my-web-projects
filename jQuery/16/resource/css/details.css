@@ -1,0 +1,222 @@
+@charset "UTF-8";
+/**
+* 功能：页面细节样式设置设置
+* 最后修改日期：2016年6月24日
+* 开发人员：全组
+**/
+
+/******************************************/
+/* “首页”部分 */
+/******************************************/
+
+/* 预定时间块 */
+.appointmentTime {
+	background-color: #fff;
+	border-top: 1px solid #ddd; border-bottom: 1px solid #ddd;
+	padding-top: 20px; padding-bottom: 20px;
+}
+
+/* 时间段选择容器 */
+.timeBucket {
+	width: 100%;
+	background-color: #89d3de;
+	border-bottom: 1px solid #79c3ce;
+	padding-top: 20px; padding-bottom: 20px; padding-left: 10px; padding-right: 10px;
+	overflow: auto;
+}
+.timeBucket input, .timeBucket span.inblock {
+	display: block;
+	float: left;
+}
+.timeBucket input {
+	width: calc(50% - 30px); height: 35px;
+	background-color: transparent;
+	border: 1px solid #fff;
+	border-radius: 18px;
+	outline: none;
+	padding-left: 10px; padding-right: 10px;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	color: #fff;
+}
+.timeBucket input:focus {
+	background-color: #f3f3f3;
+	color: #666;
+}
+.timeBucket span.inblock {
+	width: 40px; height: 35px;
+	line-height: 35px;
+	text-align: center;
+	font-size: 16px;
+	color: #fff;
+}
+input.hInput::-webkit-input-placeholder, textarea.hTxtArea::-webkit-input-placeholder {
+	color: #f3f3f3;
+}
+input.hInput::input-placeholder, textarea.hTxtArea::input-placeholder {
+	color: #f3f3f3;
+}
+/* B超显示页面 */
+.BUltrasonic {
+	padding: 10px;
+}
+.BUltrasonic p {
+	line-height: 30px;
+	font-size: 16px;
+}
+.dispBUltrasonic {
+	width: 100%; height: auto;
+	background-color: #fff;
+	padding-top: 10px; padding-bottom: 10px;
+}
+.dispBUltrasonic img {
+	max-width: 98%; max-height: 98%;
+	margin: 0 auto;
+	display: block;
+}
+
+/******************************************/
+/* “我的”部分 */
+/******************************************/
+
+/* 用户主要信息 */
+.userMainInfo {
+	width: 100%;
+	background-color: #64d0e7;
+	padding-top: 20px; padding-bottom: 30px;
+}
+.userMainInfo a {
+	text-decoration: none;
+	outline: none;
+}
+/* 信息居中显示 */
+.userMainInfo .userPhoto, .userMainInfo .userName, .userMainInfo .level {
+	margin: 0 auto;
+	text-align: center;
+}
+.userMainInfo .userPhoto, .editPhoto .userPhoto {
+	width: 128px; height: 128px;
+	border: 1px solid #97dee8;
+	border-radius: 64px;
+	overflow: hidden;
+}
+.userMainInfo .userPhoto img, .editPhoto .userPhoto img {
+	width: 100%; height: auto;
+}
+.userMainInfo .userName {
+	margin-top: 10px; margin-bottom: 15px;
+}
+.userMainInfo .userName i, .userMainInfo .userName span {
+	vertical-align: middle;
+	font-size: 17px;
+	color: #fff;
+	position: relative;
+	left: -10px;
+	display: inline-block;
+}
+.userMainInfo .userName i.ico-gender-girl {
+	width: 20px; height: 20px;
+	background: url("../img/content/gender-girl@2x.png") no-repeat;
+	-webkit-background-size: auto 100%;
+	background-size: auto 100%;
+	background-position: center;
+	top:-2px;
+}
+.userMainInfo .level span {
+	width: 128px; height: 24px;
+	background-color: #91dfee;
+	border-radius: 12px;
+	line-height: 24px;
+	text-align: center;
+	font-size: 14px;
+	display: inline-block;
+	color: #008a9b;
+}
+/* 修改头像 & 我的订单（支付状态） */
+.editPhoto, .payStatusChoose {
+	background-color: #fff;
+	border-top: 1px solid #ddd; border-bottom: 1px solid #ddd;
+	padding: 10px;
+}
+.editPhoto a {
+	text-decoration: none;
+}
+.editPhoto .userPhoto {
+	width: 72px; height: 72px;
+	border: none;
+	float: left;
+}
+.editPhoto span {
+	line-height: 72px;
+	text-align: right;
+	color: #b7b7b7;
+	display: block;
+}
+/* 我的订单--支付状态选择 */
+.payStatusChoose {
+	padding: 15px 10px;
+	border-bottom: none;
+	overflow: auto;
+}
+.payStatusChoose span {
+	width: 50%; height: 40px;
+	border: 1px solid #11a8bb;
+	line-height: 38px;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	text-align: center;
+	color: #11a8bb;
+	float: left;
+	display: block;
+}
+.payStatusChoose span:first-child {
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+}
+.payStatusChoose span:last-child {
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+	border-left: none;
+}
+.payStatusChoose span.checked {
+	background-color: #11a8bb;
+	color: #fff;
+}
+/* 投诉建议 */
+.complaintAndAdvice {
+	padding: 10px; padding-bottom: 0;
+}
+.complaintAndAdvice textarea {
+	width: 100%; height: 130px;
+	background-color: #fff;
+	border: none;
+	border-radius: 5px;
+	outline: none;
+	line-height: 22px;
+	font-size: 14px;
+	padding: 10px;
+	color: #666;
+}
+/**** 登录注册相关设置 ****/
+.loginPage .blockBtn { margin-bottom: 0;}
+.loginCtrl {
+	padding-left: 10px; padding-right: 10px;
+}
+.loginCtrl a {
+	display: inline-block;
+	text-decoration: none;
+	font-size: 16px;
+}
+.loginCtrl a:first-child {
+	float: left;
+}
+.loginCtrl a:last-child {
+	float: right;
+}
+.bindAccountCtrl {
+	line-height: 45px;
+	text-align: center;
+}
+.bindAccountCtrl a {
+	text-decoration: none;
+}

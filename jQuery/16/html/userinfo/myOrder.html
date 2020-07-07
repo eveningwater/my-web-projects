@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
+    <title>我的订单</title>
+    <link rel="shortcut icon" href="../../resource/img/favicon.ico"> 
+    <link rel="stylesheet" href="../../resource/plugin/baseCSS-1.0.5.min.css">
+    <link rel="stylesheet" href="../../resource/css/common.css">
+    <link rel="stylesheet" href="../../resource/css/details.css">
+    <style type="text/css">
+		.paid {
+			display: none;
+		}
+	</style>
+</head>
+<body>
+    <!-- header -->
+    <header class="header">
+        <a class="leftBtn goBack"></a>
+        <span>我的订单</span>
+        <!--<a class="rightBtn ico-home goHome"></a>-->
+    </header>
+    <!-- 支付状态  -->
+	<div class="payStatusChoose">
+		<span class="checked">未支付</span>
+		<span>已支付</span>
+	</div>
+    <section class="unpay">
+    	<ul class="leftSlipBtnCkbli">
+			<li>
+				<div>
+					<p>血常规检查<span class="label-font-red">待支付</span></p>
+					<p class="font-light-gray">下单时间:2016-06-21 20:45</p>
+				</div>
+				<i class="checkbox checked"></i>
+				<input name="payliCkb" type="checkbox" checked>
+				<button type="button" class="slipBtn_right">删除</button>
+			</li>
+			<li>
+				<div>
+					<p>花王Merries纸尿裤<span class="label-font-red">待支付</span></p>
+					<p class="font-light-gray">下单时间:2016-06-21 20:45</p>
+				</div>
+				<i class="checkbox checked"></i>
+				<input name="payliCkb" type="checkbox" checked>
+				<button type="button" class="slipBtn_right">删除</button>
+			</li>
+			<li>
+				<div>
+					<p>肝功能检查<span class="label-font-red">待支付</span></p>
+					<p class="font-light-gray">下单时间:2016-06-21 20:45</p>
+				</div>
+				<i class="checkbox"></i>
+				<input name="payliCkb" type="checkbox">
+				<button type="button" class="slipBtn_right">删除</button>
+			</li>
+		</ul>
+		<div class="blockBtn">
+			<a href="payConfirm.html" class="pay">支付</a>
+		</div>
+    </section>
+    <section class="paid">
+    	<ul class="orderli">
+			<li>
+				<div>
+					<p>
+						<pan>血常规检查</pan>
+						<span class="ico-mark-checkstand"></span></p>
+					<p class="font-light-gray">下单时间:2016-06-21 20:45</p>
+				</div>
+				<div>
+					<p>￥22334.92</p>
+				</div>
+			</li>
+			<li>
+				<div>
+					<p>
+						<span>肝功能检查</span>
+						<span class="ico-mark-alipay"></span>
+					</p>
+					<p class="font-light-gray">下单时间:2016-06-21 20:45</p>
+				</div>
+				<div>
+					<p>￥22334.92</p>
+				</div>
+			</li>
+			<li>
+				<div>
+					<p>
+						<span>花王Merries纸尿裤</span>
+						<span class="ico-mark-weixin"></span>
+					</p>
+					<p class="font-light-gray">下单时间:2016-06-21 20:45</p>
+				</div>
+				<div>
+					<p>￥22334.92</p>
+				</div>
+			</li>
+		</ul>
+    </section>
+    
+</body>
+<!-- JS引入部分 -->
+<script src="../../resource/plugin/jquery-2.2.4.min.js"></script>
+<script src="../../resource/js/common.js"></script>
+<script>
+	/* 用于切换点击显示不同状态页面 */
+	$(".payStatusChoose span").click(function() {
+		// 获取点击index
+		var idx = $(this).index();
+		switch(idx) {
+			case 0:
+				swicthToPage(this, ".unpay");
+				break;
+			case 1:
+				swicthToPage(this, ".paid");
+				break;
+			default:
+				swicthToPage(this, ".unpay");
+				break;
+		}
+	});
+	// 用于显示当前点击，隐藏其它同级元素
+	// 参数：1、点击的按钮class选择符；2、section的class选择符
+	function swicthToPage(btn,sec) {
+		$(btn).addClass("checked").siblings().removeClass("checked");
+		$(sec).show().siblings("section").hide();
+	}
+</script>
+</html>

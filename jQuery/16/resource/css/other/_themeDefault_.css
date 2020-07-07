@@ -1,0 +1,139 @@
+/**
+* 功能：设置示例文件样式
+* 最后修改日期：2016年6月22日
+* 开发人员：魏叶
+**/
+@charset "UTF-8";
+body {
+    background-color: #e2d6cb;
+}
+/* 导航 */
+nav {
+    width: 100%; height: 70px;
+    background-color: #fff;
+    border-bottom: 1px solid #acacac;
+    box-sizing: border-box;
+    padding-top: 10px; padding-bottom: 10px;
+    position: fixed;
+    left: 0; top: 0;
+    z-index: 1;
+    -webkit-transition: opacity 0.6s;
+    -o-transition: opacity 0.6s;
+    transition: opacity 0.6s;
+}
+nav button {
+    width: 90%; height: 50px;
+    background: url("../../img/content/arrow_down-gray_sm.png") no-repeat;
+    background-color: #f1f3fc;
+    background-position: 93% 20px;
+    border: 1px solid #acacac;
+    outline: none;
+    font-size: 16px;
+    color: #666;
+    margin-left: 5%;
+    display: block;
+    cursor: pointer;
+}
+nav .navWin {
+    border: 1px solid #acacac;
+    background-color: #f1f3fc;
+    border-top: none; border-bottom: none;
+    overflow: hidden;
+    position: absolute;
+    z-index: 1;
+    display: none;
+    left: 5%; right: 5%;
+    -webkit-box-shadow: 0 5px 10px rgba(74, 110, 142, 0.76);
+    box-shadow: 0 5px 10px rgba(74, 110, 142, 0.76);
+}
+nav div.shadow {
+    -webkit-box-shadow: 0 5px 10px rgba(74, 110, 142, 0.76);
+    box-shadow: 0 5px 10px rgba(74, 110, 142, 0.76);
+}
+nav .navWin a {
+    width: 50%; line-height: 40px;
+    border-bottom: 1px solid #acacac;
+    padding: 0 4px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #666;
+    display: block;
+    float: left;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+nav .navWin a:hover {
+    text-decoration: underline;
+    color: #2398fd;
+}
+nav .navWin a:nth-child(even) {
+    border-left: 1px solid #acacac;
+    border-right: none;
+}
+/* 正文容器 */
+.expContent{
+    margin-top: 70px;
+    padding-bottom: 20px;
+}
+/* 章节 */
+section {
+    margin-bottom: 20px;
+}
+/* 章节标题 */
+h1 {
+    width: 100%; height: 40px;
+    line-height: 40px;
+    background-color: #245182;
+    text-indent: 10px;
+    font-size: 16px;
+    color: #fff;
+    box-sizing: border-box;
+}
+/* 医生图标 */
+.ico-doctor {
+    background: url("../../img/content/doctor.png") no-repeat;
+}
+/* 文档图标 */
+.ico-document {
+    background: url("../../img/content/document.png") no-repeat;
+}
+/* 微信图标 */
+.ico-weixin {
+    background: url("../../img/content/weixin.png") no-repeat;
+}
+/* 支付宝图标 */
+.ico-alipay {
+    background: url("../../img/content/alipay.png") no-repeat;
+}
+/* 手机图标 */
+.ico-mobile {
+    background: url("../../img/content/mobile.png") no-repeat;
+    background-size: 80% !important;
+}
+/* 密码锁图标 */
+.ico-password {
+    background: url("../../img/content/lock.png") no-repeat;
+}
+/* 邮件图标 */
+.ico-email {
+    background: url("../../img/content/email.png") no-repeat;
+}
+/* 时间图标 */
+.ico-clock {
+    background: url("../../img/content/clock2x.png") no-repeat;
+}
+/* 手机图标 */
+.ico-mobile {
+    background: url("../../img/content/mobile.png") no-repeat;
+    background-size: 80% !important;
+}
+/******************************************/
+/* 媒体查询部分 */
+/******************************************/
+/* 分辨率宽度小于340 */
+@media screen and (max-width:340px) {
+    nav .navWin a {
+        width: 50%; line-height: 36px;
+        font-size: 13px;
+    }
+}

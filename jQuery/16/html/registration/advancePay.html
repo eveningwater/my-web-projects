@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
+    <title>预约支付</title>
+    <link rel="shortcut icon" href="../../resource/img/favicon.ico"> 
+    <link rel="stylesheet" href="../../resource/plugin/baseCSS-1.0.5.min.css">
+    <link rel="stylesheet" href="../../resource/css/common.css">
+</head>
+<body>
+    <!-- header -->
+    <header class="header">
+        <a class="leftBtn goBack"></a>
+        <span>预约支付</span>
+        <!--<a class="rightBtn"></a>-->
+    </header>
+    <section>
+        <!-- 医生基本信息 -->
+        <ul class="imginfoli">
+            <li>
+                <img src="../../resource/img/user/doctor-1.jpg" alt="">
+                <div>
+                    <p class="row-3 font-strong-blue">
+                        <span>倪寿菱</span>
+                    </p>
+                    <p class="row-3 font-blue">
+                        <span>安琪儿妇产医院妇产科专家</span>
+                    </p>
+                    <p class="row-3 font-lighter">
+                        <span>主任医师</span>
+                        <span>成都安琪儿妇产医院院长</span>
+                    </p>
+                </div>
+            </li>
+        </ul>
+        <!-- 预约时间 -->
+        <ul class="iconli mt-1">
+            <li>
+                <i class="icon ico-clock"></i>
+                <span>预约时间 <time class="font-blue">2016-06-23 周四</time></span>
+            </li>
+        </ul>
+        <!-- 就诊卡信息 -->
+        <div class="forminfocard">
+            <div class="card-head">
+                <p>就诊卡信息</p>
+            </div>
+            <div class="card-body">
+                <ul>
+                    <li>
+                        <p>
+                            <label>姓名:</label>
+                            <input type="text" placeholder="必填">
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <label>性别:</label>
+                            <input type="text" placeholder="必填">
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <label>出生日期:</label>
+                            <input type="text" placeholder="必填">
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 金额统计 -->
+        <ul class="resultli">
+            <li>
+                <span>应付金额</span>
+                <span>￥126.00</span>
+            </li>
+        </ul>
+        <div class="blockBtn">
+            <button type="button" class="pay">立即支付</button>
+        </div>
+    </section>
+</body>
+<!-- JS引入部分 -->
+<script src="../../resource/plugin/jquery-2.2.4.min.js"></script>
+<script src="../../resource/js/common.js"></script>
+</html>

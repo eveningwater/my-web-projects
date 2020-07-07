@@ -1,0 +1,21 @@
+@charset "utf-8";
+body {
+    background: linear-gradient(to left, #a432ab, #3c89cd);
+}
+body.row{
+    margin:0;
+}
+main{
+    padding: 20px 0px;
+    background-color: #fff;
+    height: 100%;
+    margin:0;
+    overflow: auto;
+}
+form div textarea.form-control{
+    height: 80px;
+    resize: none;
+}
+form div>.form-control{
+    margin-bottom: 0px;
+}

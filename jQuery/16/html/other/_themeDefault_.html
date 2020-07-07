@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
+    <title>安琪儿CSS框架示例</title>
+    <link rel="shortcut icon" href="../../resource/img/favicon.ico">
+    <link rel="stylesheet" href="../../resource/plugin/baseCSS-1.0.5.min.css">
+    <link rel="stylesheet" href="../../resource/css/common.css">
+    <link rel="stylesheet" href="../../resource/css/other/_themeDefault_.css">
+</head>
+<body>
+    <!-- 导航部分 -->
+    <nav>
+        <button type="button" class="navBtn">选择章节</button>
+        <div class="navWin">
+            <a href="#sec1">1:基本列表</a>
+            <a href="#sec2">2:带图标列表</a>
+            <a href="#sec3">3:带缩进列表</a>
+            <a href="#sec4">4:带主题色的列表</a>
+            <a href="#sec5">5:支付方式列表</a>
+            <a href="#sec6">6:图文信息列表</a>
+            <a href="#sec7">7:表单列表</a>
+            <a href="#sec8">8:带图标表单列表</a>
+            <a href="#sec9">9:按钮图标表单列表</a>
+            <a href="#sec10">10:带按钮表单列表</a>
+            <a href="#sec11">11:左滑按钮复选列表</a>
+            <a href="#sec12">12:订单列表</a>
+            <a href="#sec13">13:统计结果列表</a>
+            <a href="#sec14">14:信息卡</a>
+            <a href="#sec15">15:凭证卡</a>
+            <a href="#sec16">16:行按钮</a>
+            <a href="#sec17">17:搜索框</a>
+            <a href="#sec18">18:时间选择</a>
+        </div>
+    </nav>
+    <!-- 正文部分 -->
+    <div class="expContent">
+        <section id="sec1">
+            <h1>1、基本列表</h1>
+            <ul class="baseli">
+                <li>
+                    <a href="#">
+                        <span>gergreggergre</span>
+                        <i class="arrRight"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>列表内容1</span>
+                        <i class="arrRight"></i>
+                    </a>
+                </li>
+            </ul>
+            <ul class="baseli" style="margin-top:10px">
+                <li>
+                    <a href="#">
+                        <div>
+                        	<p>列表内容1</p>
+                        	<p>开始时间:2016-6-24&nbsp;&nbsp;结束时间:2016-6-26</p>
+                        </div>
+                        <i class="arrRight"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div>
+                        	<p>列表内容2</p>
+                        	<p>开始时间:2016-6-24&nbsp;&nbsp;结束时间:2016-6-26</p>
+                        </div>
+                        <i class="arrRight"></i>
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <section id="sec2">
+            <h1>2、带图标列表</h1>
+            <ul class="iconli">
+                <li>
+                    <a href="#">
+                        <i class="icon ico-doctor"></i>
+                        <span>列表内容1列表内容1列表内容1列表内容1列表内容1列表内容1</span>
+                        <i class="arrRight"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="icon ico-document"></i>
+                        <span>列表内容1</span>
+                        <i class="arrRight"></i>
+                    </a>
+                </li>
+            </ul>
+            <ul class="iconli" style="margin-top:10px">
+            	<li>
+                    <a href="#">
+                        <i class="icon ico-email"></i>
+                        <span>列表内容1</span>
+                        <i class="icon ico-editdocument"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="icon ico-mobile"></i>
+                        <span>列表内容1</span>
+                        <i class="icon ico-tel"></i>
+                    </a>
+                </li>
+			</ul>
+        </section>
+        <section id="sec3">
+            <h1>3、带缩进列表</h1>
+            <ul class="indentli">
+                <li>
+                    <i class="icon ico-doctor"></i>
+                    <span>2016-06-21 周二</span>
+                    <button type="button" class="blue">预约</button>
+                </li>
+                <li>
+                    <i class="icon ico-document"></i>
+                    <span>列表内容1列表内容1列表内容1列表内容1列表内容1列表内容1</span>
+                    <button type="button" class="red">已满</button>
+                </li>
+            </ul>
+        </section>
+        <section id="sec4">
+            <h1>4、带主题色的列表</h1>
+            <ul class="baseli blue">
+                <li>
+                    <a href="#">
+                        <span>列表内容1列表内容1列表内容1列表内容1列表内容1列表内容1</span>
+                        <i class="arrRight"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>列表内容1</span>
+                        <i class="arrRight"></i>
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <section id="sec5">
+            <h1>5、支付方式列表</h1>
+            <ul class="payli">
+                <li>
+                    <i class="icon ico-weixin"></i>
+                    <span>微信支付</span>
+                    <i class="radio checked"></i>
+                    <input name="payliRdo" type="radio" checked>
+                </li>
+                <li>
+                    <i class="icon ico-alipay"></i>
+                    <span>支付宝支付</span>
+                    <i name="payliRdo" class="radio"></i>
+                    <input name="payliRdo" type="radio">
+                </li>
+            </ul>
+        </section>
+        <section id="sec6">
+            <h1>6、图文信息列表</h1>
+            <ul class="imginfoli">
+                <li>
+                    <a href="">
+                        <img src="../../resource/img/user/doctor-1.jpg" alt="">
+                        <div>
+                            <p class="row-2">
+                                <span class="font-strong-blue">倪寿菱</span>
+                                <span class="font-light-gray">安琪儿妇产科专家</span>
+                            </p>
+                            <p class="row-2 font-lighter">
+                                <span>副主任医师</span>
+                                <span>门诊部主任</span>
+                            </p>
+                        </div>
+                        <i class="arrRight"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="../../resource/img/user/doctor-2.jpg" alt="">
+                        <div>
+                            <p class="row-3 font-strong-blue">
+                                <span>隆玉华</span>
+                            </p>
+                            <p class="row-3 font-blue">
+                                <span>安琪儿妇产医院妇产科专家</span>
+                            </p>
+                            <p class="row-3 font-lighter">
+                                <span>主任医师</span>
+                                <span>成都安琪儿妇产医院院长</span>
+                            </p>
+                        </div>
+                        <i class="arrRight"></i>
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <section id="sec7">
+            <h1>7、表单列表</h1>
+            <ul class="formli">
+                <li>
+                    <label>姓名</label>
+                    <div>
+                        <span>王小倩(这是纯文本)</span>
+                    </div>
+                </li>
+                <li>
+                    <label>怀孕周期</label>
+                    <div>
+                        <input type="text" name="" id="" placeholder="请输入...">
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section id="sec8">
+            <h1>8、带图标表单列表</h1>
+            <ul class="formiconli">
+                <li>
+                    <i class="icon ico-mobile"></i>
+                    <div>
+                        <input type="text" name="" id="" placeholder="请输入手机号码">
+                    </div>
+                </li>
+                <li>
+                    <i class="icon ico-password"></i>
+                    <div>
+                        <input type="password" name="" id="" placeholder="6~16位字符，区分大小写">
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section id="sec9">
+            <h1>9、按钮图标表单列表</h1>
+            <ul class="formbtniconli">
+                <li>
+                    <i class="icon ico-mobile"></i>
+                    <div>
+                        <input type="text" name="" id="" placeholder="请输入手机号码">
+                    </div>
+                    <!--<button type="button" class="blue">获取</button>-->
+                </li>
+                <li>
+                    <i class="icon ico-email"></i>
+                    <div>
+                        <input type="text" name="" id="" placeholder="请输入验证码">
+                    </div>
+                    <button type="button" class="blue">获取</button>
+                </li>
+            </ul>
+        </section>
+        <section id="sec10">
+            <h1>10、带按钮表单列表</h1>
+            <ul class="formbtnli">
+                <li>
+                    <label>验证码</label>
+                    <div>
+                        <input type="text" name="" id="" placeholder="请输入验证码">
+                    </div>
+                    <button type="button" class="blue">获取</button>
+                </li>
+                <li>
+                    <label>旧密码</label>
+                    <div>
+                        <input type="password" name="" id="" placeholder="请输入原始密码">
+                    </div>
+                    <button id="switchPwd" type="button" class="red">显示</button>
+                </li>
+                <li>
+                    <label>新密码</label>
+                    <div>
+                        <input type="password" name="" id="" placeholder="请输入新密码">
+                    </div>
+                </li>
+                <li>
+                    <label>确认密码</label>
+                    <div>
+                        <input type="password" name="" id="" placeholder="请再次确认您的新密码">
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section id="sec11"> 
+            <h1>11、左滑按钮复选列表</h1>
+            <ul class="leftSlipBtnCkbli">
+                <li>
+                    <div>
+                        <p>血常规检查<span class="label-font-blue">已支付</span></p>
+                        <p class="font-light-gray">下单时间:2016-06-21 20:45</p>
+                    </div>
+                    <i class="checkbox checked"></i>
+                    <input name="payliCkb" type="checkbox" checked>
+                    <button type="button" class="slipBtn_right">删除</button>
+                </li>
+                <li>
+                    <div>
+                        <p>可以是单行<span class="label-font-red">待支付</span></p>
+                    </div>
+                    <i class="checkbox"></i>
+                    <input name="payliCkb" type="checkbox">
+                    <button type="button" class="slipBtn_right">删除</button>
+                </li>
+            </ul>
+        </section>
+        <section id="sec12">
+            <h1>12、订单列表</h1>
+            <ul class="orderli">
+                <li>
+                    <div>
+                        <p>血常规检查<span class="label-font-blue">已支付</span></p>
+                        <p class="font-light-gray">下单时间:2016-06-21 20:45</p>
+                    </div>
+                    <div>
+                        <p>￥22334.92</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <p>CNG柠檬酸钙片</p>
+                        <p class="font-light-gray">
+                            <span>规格：1000mg</span>
+                            <span>180粒</span>
+                        </p>
+                    </div>
+                    <div class="count">
+                        <p>￥3000.40</p>
+                        <p>
+                            <i>-</i>
+                            <span>1</span>
+                            <i>+</i>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section id="sec13">
+            <h1>13、统计结果列表(margin-top:20px)</h1>
+            <ul class="resultli">
+                <li>
+                    <span>原始价格</span>
+                    <span>￥234234.03</span>
+                </li>
+                <li>
+                    <span>折后价格</span>
+                    <span>￥34234.03</span>
+                </li>
+            </ul>
+        </section>
+        <section id="sec14">
+            <h1>14、信息卡</h1>
+            <div class="infocard">
+                <div class="card-head">
+                    <p>基本信息卡</p>
+                    <p>
+                        <span class="f-16 font-white">李晓倩</span>
+                        <span class="f-13">医生</span>
+                    </p>
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li>
+                            <div>
+                                <p>
+                                    <label>就诊人:</label>
+                                    <span>王小倩</span>
+                                </p>
+                                <p>
+                                    <label>就诊时间:</label>
+                                    <span>2016/6/23 下午 14:00-15:00</span>
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="forminfocard">
+                <div class="card-head">
+                    <p>表单信息卡</p>
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li>
+                            <p>
+                                <label>姓名:</label>
+                                <input type="text" placeholder="请输入你的姓名">
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <label>密码:</label>
+                                <input type="password" placeholder="请输入你的密码">
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="progressinfocard">
+                <div class="card-head">
+                    <p>进度信息卡</p>
+                    <p>进行中</p>
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li>
+                            <div>
+                                <p>
+                                    <label>预约时间:</label>
+                                    <span>2016/6/23 14:00</span>
+                                </p>
+                                <p>
+                                    <label>到达时间:</label>
+                                    <span>2016/6/23 13:50</span>
+                                </p>
+                                <p>
+                                    <label>等待人数:</label>
+                                    <span>1人</span>
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="progressAnimate"></div>
+                </div>
+            </div>
+            <div class="listinfocard">
+                <div class="card-head">
+                    <p>列表信息卡</p>
+                    <p>2016-6-22</p>
+                </div>
+                <div class="card-body">
+                    <ul class="unordlist">
+                        <li>
+                            <span>血压、体重、身高</span>
+                        </li>
+                        <li>
+                            <span>唐氏筛查</span>
+                        </li>
+                        <li>
+                            <span>多普勒听胎心</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="infolinkcard">
+                <div class="card-head">
+                    <p>链接信息卡</p>
+                </div>
+                <div class="card-body">
+                    <ul class="cardiconarrli">
+                        <li>
+                            <a href="_themeDefault_.html">
+                                <div>
+                                    <p>
+                                        <i class="icon ico-clock"></i>
+                                        <label>预约时间:</label>
+                                        <span>2016/6/23</span>
+                                    </p>
+                                    <p>
+                                        <i class="icon ico-doctor"></i>
+                                        <label>预约医生:</label>
+                                        <span>隆玉华</span>
+                                    </p>
+                                </div>
+                                <i class="arrRight"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="sec15">
+            <h1>15、凭证卡</h1>
+            <div class="vouchercard">
+                <div class="card-head">
+                    <p>预约挂号</p>
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li>
+                            <div>
+                                <p>
+                                    <label>就诊人:</label>
+                                    <span>王小倩</span>
+                                </p>
+                                <p>
+                                    <label>就诊卡号:</label>
+                                    <span>454578210248</span>
+                                </p>
+                                <p>
+                                    <label>科室:</label>
+                                    <span>妇产科</span>
+                                </p>
+                                <p>
+                                    <label>医生:</label>
+                                    <span>倪寿菱</span>
+                                </p>
+                                <p>
+                                    <label>就诊时间:</label>
+                                    <span>2016/6/23 下午 14:00-15:00</span>
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="sec16">
+            <h1>16、行按钮</h1>
+            <div class="blockBtn">
+                <button type="button" class="ack">确认注册</button>
+            </div>
+            <div class="blockBtn">
+                <button type="button" class="pay">立即支付</button>
+            </div>
+        </section>
+        <section id="sec17">
+            <h1>17、搜索框</h1>
+            <div class="searchBar">
+                <input name="" id="" type="search" placeholder="请搜索....">
+            </div>
+        </section>
+        <section id="sec18">
+            <h1>17、时间选择</h1>
+            <div style="padding-top:10px;padding-bottom:10px;background-color:#fff;border-bottom:1px solid #ddd">
+                <input name="" id="" type="text" class="dateSelectro" placeholder="请选择日期">
+            </div>
+        </section>
+    </div>
+<!-- JS引入部分 -->
+<!--<script src="../resource/plugin/jquery-3.0.0.min.js"></script>-->
+<script src="../../resource/plugin/jquery-2.2.4.min.js"></script>
+<script src="../../resource/js/common.js"></script>
+<script src="../../resource/js/other/_themeDefault_.js"></script>
+</body>
+</html>

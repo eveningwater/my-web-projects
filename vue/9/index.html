@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>vue.js简单表单</title>
+    <link rel="stylesheet" href="plugin/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="shortcut icon" href="https://www.eveningwater.com/static/image/icon.jpg" type="image/x-icon">
+</head>
+<body class="row">
+    <main class="col-sm-6 col-sm-offset-3 col-lg-4 col-lg-offset-4">
+        <h1>注册</h1>
+        <form id="app-1">
+            <div class="form-group">
+                <label>邮箱</label>
+                <input v-model="form.email" type="email" class="form-control" placeholder="请输入邮箱">
+            </div>
+            <div class="form-group">
+                <label>昵称：</label>
+                <input v-model="form.nick" type="text" class="form-control" placeholder="请输入昵称"/>
+            </div>
+            <div class="form-group">
+                <label>密码：</label>
+                <input v-model="form.pwd" type="password" class="form-control" placeholder="请输入6~16位数密码"/>
+            </div>
+            <div class="form-group">
+                <label>确认密码：</label>
+                <input v-model="form.rePwd" type="password" class="form-control" placeholder="再次输入密码"/>
+            </div>
+            <div class="form-group">
+                <label>性别：</label>
+                <label class="radio-inline">
+                    <input v-model="form.sex" type="radio" name="sex" value="男"/>男
+                </label>
+                <label class="radio-inline">
+                    <input  v-model="form.sex" type="radio" name="sex" value="女"/>女
+                </label>
+                <label class="radio-inline">
+                    <input  v-model="form.sex" type="radio" name="sex" value="保密"/>保密
+                </label>
+            </div>
+            <div class="form-group">
+                <label>手机号：</label>
+                <input v-model="form.tel" class="form-control" type="tel"  placeholder="请输入手机号"/>
+            </div>
+            <div class="form-group">
+                <label>职业：</label>
+                <select v-model="form.occupation" class="form-control">
+                    <option value="">请选择...</option>
+                    <option value="学生">学生</option>
+                    <option value="老师">老师</option>
+                    <option value="其他">其他</option>
+                </select>
+            </div>
+            <div class="form-group" >
+                <label>自我介绍：</label>
+                <textarea v-model="form.introduce" class="form-control" placeholder="面如冠玉、目如朗星、鼻若悬胆、唇若涂脂、长身玉立、风流倜傥..."></textarea>
+            </div>
+            <div class="form-group">
+                <button @click="submit" class="btn btn-default col-xs-4" type="button">提交</button>
+                <button @click="reset" class="btn btn-default col-xs-4 col-xs-offset-4" type="reset">重置</button>
+            </div>
+            <div class="form-group">
+                <p>{{ submitText }}</p>
+            </div>
+        </form>
+    </main>
+    <script src="plugin/vue.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

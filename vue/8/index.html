@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/iconfont.css">
+    <title>vue phone record</title>
+</head>
+
+<body>
+    <div id="container">
+        <div id="header"  v-if="defaultData">
+            <span class="back">&lt;</span>
+            <p>通讯录</p>
+            <span class="more">...</span>
+        </div>
+        <div id="search"  v-if="defaultData">
+            <i class="icon-seach iconfont iconsearch" @click="suresearch"></i>
+            <input type="text" class="search_input" placeholder="请输入联系人名字" @input="searchName($event)" :value="search_name"/>
+            <div class="seachlist" v-if="seachlist.length">
+                <li v-for="(item,index) in seachlist" :key="index" @click="loadPerson(item,index)">
+                    <span>{{ item.name }}</span>
+                </li>
+            </div>
+        </div>
+        <div id="content" v-if="defaultData">
+                <div id="right_menu">
+                    <ul>
+                        <li v-for="(item,index) in rightItems" :key="index">
+                            <a href="#" @click.prevent="toDetailData(item)">{{ item.name }}</a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="leftList">
+                    <ul>
+                        <li v-for="(list,key) in leftList" :key="key" ref="listitem">
+                            <h2 class="title">{{ list.title }}</h2>
+                            <div class="detailInfo" v-for="(left,count) in list.content" :key="count">
+                                <!-- <img src="" alt="" /> -->
+                                <span>{{ left.value }}</span>
+                                <span class="position">({{ left.position }})</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+        <div id="addPhone" v-else>
+            <div class="add_header">
+                <button type="button" class="cancelAdd" @click="cancelAdd">取消</button>
+                <p>新建联系人</p>
+                <button type="button" class="sureAdd" @click="sureAdd">确定</button>
+            </div>
+            <!-- <div class="header_picture"></div> -->
+            <div class="personName">
+                <input type="text" class="input_name" placeholder="姓名"  @input="inputName($event)" :value="person.name"/>
+            </div>
+            <div class="position">
+                <input type="text" class="input_position" placeholder="职位" @input="inputPosition($event)" :value="person.position"/>
+            </div>
+        </div>
+        <div class="addphone" @click="addPhonePerson">
+            <button type="button">+</button>
+        </div>
+        <div id="bottom">
+            <ul>
+                <li>
+                    <a href="">
+                        <i class="iconfont"></i>
+                        <span>联系人</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="iconfont"></i>
+                        <span>通讯录</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="iconfont"></i>
+                        <span>首页</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="iconfont"></i>
+                        <span>应用</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="iconfont"></i>
+                        <span>我的</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+    <script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.min.js"></script>
+    <script src="https://cdn.bootcss.com/axios/0.18.0/axios.min.js"></script>
+    <script src="./js/util.js"></script>
+    <script src="./js/dictionary.js"></script>
+    <script src="./js/getPinyin.js"></script>
+    <script src="./js/main.js"></script>
+</html> 

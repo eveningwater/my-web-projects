@@ -1,0 +1,1055 @@
+@charset "UTF-8";
+/**
+* 功能：公共样式设置
+* 最后修改日期：2016年6月20日
+* 开发人员：全组
+**/
+body,html {
+    background-color: #eeeff1;
+	padding-bottom: 25px;
+}
+/******************************************/
+/* 公共声明部分 */
+/******************************************/
+body,a,button,input,textarea {
+    /*font-family: "微软雅黑";*/
+    font-family: "HiraginoSansGB W3", "arial";
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/******************************************/
+/* 标题栏部分 */
+/******************************************/
+.header {
+    width: 100%; height: 40px;
+    background-color: #11a8bb;
+    line-height: 40px;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+}
+/* 标题栏上的按钮 */
+.header .leftBtn, .header .rightBtn {
+    background-color: transparent;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: none;
+    padding: 0;
+    text-decoration: none;
+	font-size: 14px;
+    color: #fff;
+    display: block;
+    position: absolute;
+    cursor: pointer;
+}
+.header .leftBtn {
+    width: 32px; height: 32px;
+    background: url("../img/content/arrow_left-white.png") no-repeat;
+    -webkit-background-size: 36%;
+    background-size: 36%;
+    background-position: center;
+    top: 4px;
+}
+.header .leftBtn.text {
+	width: auto; height: 32px;
+    background: none;
+	line-height: 32px;
+	margin-left: 10px;
+}
+.header .rightBtn {
+    width: 40px; height: 40px;
+    background-repeat: no-repeat;
+    -webkit-background-size: 22px auto;
+    background-size: 22px auto;
+    background-position: 100% 50%!important;
+    top: 0px; right: 10px;
+}
+.header .rightBtn.w_auto {
+	width: auto;
+}
+/* header按钮图标--咨询热线 */
+.header .ico-consult {
+    background-image: url("../img/content/arrow_right-consult-white.png");
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+}
+/* header按钮图标--缴费检查历史 */
+.header .ico-history {
+    background-image: url("../img/content/history@2x-white.png");
+}
+/* header按钮图标--回到主頁 */
+.header .ico-home {
+    background-image: url("../img/content/home@2x.png");
+}
+/* header按钮图标--搜索 */
+.header .ico-search {
+    background-image: url("../img/content/search@2x-white.png");
+}
+
+/******************************************/
+/* 页面公共元素设置部分 */
+/******************************************/
+/* 搜索栏 */
+.searchBar {
+    width: 100%;
+    /*background-color: #ccc;*/
+    padding-top: 15px; padding-bottom: 15px;
+    position: relative;
+    box-sizing: border-box;
+}
+.searchBar input {
+    width: calc(100% - 20px); height: 36px;
+    background: #fff url("../../resource/img/content/search2x.png") no-repeat;
+    -webkit-background-size: 22px 22px;
+    background-size: 22px 22px;
+    background-position: 15px 6px;
+    border: none;
+    border-radius: 18px;
+    outline: none;
+    color: #666;
+    padding-left: 48px; padding-right: 10px;
+    margin-left: 10px; margin-right: 10px;
+    display: block;
+}
+/* 时间选择 */
+.dateSelectro {
+    width: calc(100% - 20px); height: 38px;
+    background: #fff url("../img/content/ico-schedule.png") no-repeat;
+    background-position: 8px 8px;
+    -webkit-background-size: 24px 24px;
+    background-size: 24px 24px;
+    border: 1px solid #11a8bb;
+    border-radius: 3px;
+    outline: none;
+    padding-left: 36px; padding-right: 6px;
+    font-size: 16px;
+    color: #666;
+    display: block;
+    margin-left: 10px; margin-right: 10px;
+    box-sizing: border-box;
+}
+
+/******************************************/
+/* 页面常用布局 */
+/******************************************/
+/**** 文本行 ****/
+.txt-line {
+    line-height: 24px;
+    padding: 15px 10px;
+    display: block;
+}
+/**** 外间距设置 ****/
+.mt-1 { margin-top: -1px}
+.mt0 { margin-top: 0!important }
+.mt10 { margin-top: 10px}
+.mt12 { margin-top: 12px}
+/* 内间距设置 */
+.pl10 { padding-left: 10px }
+.pr10 { padding-right: 10px }
+
+/******************************************/
+/* (DEMO文件请查看"html/_themeDefault_.html") */
+/* 主题列表部分 */
+/******************************************/
+/**** 常用列表集合 *****/
+.baseli, .iconli, .indentli, .payli, .imginfoli, .formli, .formiconli, .formbtniconli, .formbtnli, .leftSlipBtnCkbli, .orderli, .resultli, .cardiconarrli {
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+/* 默认列表样式 */
+.baseli li, .iconli li, .indentli li, .payli li, .imginfoli li, .formli li, .formiconli li, .formbtniconli li, .formbtnli li, .leftSlipBtnCkbli li, .orderli li, .resultli li, .cardiconarrli li {
+    background-color: #fff;
+    border-bottom: 1px solid #dddddd;
+    padding-left: 15px; padding-right: 15px;
+    font-size: 16px;
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
+}
+.baseli li:first-child, .iconli li:first-child, .indentli li:first-child, .imginfoli li:first-child, .formli li:first-child, .formiconli li:first-child, .formbtniconli li:first-child, .formbtnli li:first-child, .leftSlipBtnCkbli li:first-child, .orderli li:first-child, .resultli li:first-child, .cardiconarrli li:first-child {
+    border-top: 1px solid #dddddd;
+}
+/* 带有超链接的列表 */
+.baseli li a, .iconli li a, .indentli li a, .imginfoli li a, .cardiconarrli li a {
+    width: 100%;
+    text-decoration: none;
+    color: #1e1e1e;
+    display: block;
+}
+/* 带有右箭头的列表(图标列表可带其他图标) */
+.baseli li i.arrRight, .iconli li i.icon:last-child, .iconli li i.arrRight, .imginfoli li i.arrRight, .cardiconarrli li i.arrRight {
+    width: 36px; height: 50px;
+    background: url("../img/content/arrow_right-gray.png") no-repeat;
+    background-position: center;
+    -webkit-background-size: 24% auto;
+    background-size: 24% auto;
+    display: block;
+    position: absolute;
+    top: 50%; right: 0;
+	margin-top: -25px;
+}
+.imginfoli li i.arrRight {
+    height: 98px;
+    -webkit-background-size: 24% 12%;
+    background-size: 24%;
+	margin-top: -50px;
+}
+/* 列表文本 */
+.baseli li span, .iconli li span, .indentli li span, .payli li span, .resultli li span {
+    width: 256px;
+    line-height: 46px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+}
+.iconli li span, .indentli li span {
+    width: 228px;
+    margin-left: 22px;
+}
+/* 基本列表 */
+.baseli a > div {
+	padding-top: 8px; padding-bottom: 8px;
+	margin-right: 24px;
+}
+.baseli a > div p {
+	line-height: 26px;
+}
+.baseli p:first-child {
+	font-size: 16px;
+}
+.baseli p:last-child {
+	font-size: 13px;
+	color: #999;
+}
+.baseli a > div span {
+	width: auto; height: auto;
+	line-height: 26px;
+	display: inline;
+}
+/* 带缩进列表 */
+.indentli li span {
+    width: 176px;
+    color: #666666;
+}
+.indentli li button {
+    width: auto; height: 36px;
+    background: #fff;
+    padding: 0 16px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+    color: #fff;
+    display: block;
+    position: absolute;
+    top: 50%; right: 10px;
+    margin-top: -20px;
+    cursor: pointer;
+}
+.indentli li button.blue {
+    background-color: #11a8bb;
+}
+.indentli li button.red {
+    background-color: #ff3334;
+}
+/* 支付列表 */
+.payli li span {
+    width: 208px;
+    margin-left: 32px;
+}
+.payli li i.radio, .leftSlipBtnCkbli li i.checkbox {
+    width: 24px; height: 24px;
+    background: url("../img/content/radio.png") no-repeat;
+    background-position: 0% 0%;
+    -webkit-background-size: 200% 100%;
+    background-size: 200%;
+    display: block;
+    position: absolute;
+    top: 50%; right: 10px;
+    margin-top: -12px;
+    cursor: pointer;
+}
+.payli li i.radio.checked, .leftSlipBtnCkbli li i.checkbox.checked {
+    background-position: 100% 0%;
+}
+.payli li input[type="radio"], .leftSlipBtnCkbli li input[type="checkbox"] {
+    display: none;
+}
+/* 带图标列表 & 支付列表 & 表单图标列表 & 表单按钮图标列表 */
+.iconli .icon, .payli .icon, .formiconli .icon, .formbtniconli .icon, .cardiconarrli .icon {
+    width: 24px; height: 46px;
+    background-position: center;
+    background-size: 90%;
+    position: absolute;
+    left: 8px;
+    display: block;
+}
+.payli .icon {
+    width: 32px;
+}
+/* 带图标列表 */
+.iconli li i.icon:last-child {
+	-webkit-background-size: 65% auto;
+	background-size: 65% auto;
+	left: auto;
+}
+/* 带图片列表 */
+.imginfoli li {
+    padding-top: 12px; padding-bottom: 12px;
+}
+.imginfoli li img {
+    width: 72px; height: 72px;
+    border-radius: 40px;
+    display: block;
+    margin-right: 12px;
+    float: left;
+    overflow: hidden;
+}
+.imginfoli a > div, .imginfoli li > div {
+    width: auto;
+    max-height: 60px; min-height: 60px;
+    display: block;
+    overflow: hidden;
+     margin-left: 32px; margin-right: 20px;
+    position: relative;
+    top: 8px;
+}
+.imginfoli p {
+    white-space: nowrap;
+    overflow: hidden;
+}
+.imginfoli p.row-2 span {
+    line-height: 30px;
+}
+.imginfoli p.row-3 span {
+    line-height: 20px;
+}
+.imginfoli p span {
+    display: inline-block;
+}
+/* 表单列表 & 带图标表单列表 & 带按钮图标表单列表 & 带按钮表单列表 */
+.formli li label, .formbtnli li label {
+    width: 76px;
+    line-height: 48px;
+    color: #11a8bb;
+    display: block;
+    overflow: hidden;
+    float: left;
+}
+.formli.normal li label, .formbtnli.normal li label {
+	color: #666;
+}
+.formiconli li .icon, .formbtniconli li .icon {
+    margin-right: 10px;
+    overflow: hidden;
+    float: left;
+    position: static;
+}
+.formli li > div, .formiconli li > div, .formbtniconli li > div, .formbtnli li > div {
+    line-height: 46px;
+    overflow: hidden;
+}
+.formbtniconli li > div, .formbtnli li > div {
+    margin-right: 90px;
+}
+.formli li > div input, .formiconli li > div input, .formbtniconli li > div input, .formbtnli li > div input {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 0;
+    font-size: 16px;
+}
+.formbtniconli li button, .formbtnli li button {
+    width: auto; height: 32px;
+    background: #fff;
+    padding: 0 12px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+    color: #fff;
+    display: block;
+    position: absolute;
+    top: 50%; right: 10px;
+    margin-top: -16px;
+    cursor: pointer;
+    overflow: hidden;
+}
+.formbtniconli li button.blue, .formbtnli li button.blue{
+    background-color: #11a8bb;
+}
+.formbtniconli li button.red, .formbtnli li button.red {
+    background-color: #ff3334;
+}
+/* 左滑动按钮复选框列表 & 订单列表 */
+.leftSlipBtnCkbli li, .orderli li {
+    padding-top: 8px; padding-bottom: 8px;
+}
+.leftSlipBtnCkbli li > div {
+    line-height: 32px;
+    margin-right: 24px;
+}
+.leftSlipBtnCkbli li .slipBtn_right {
+    width: 65px;
+    background-color: #999999;
+    border: none;
+    outline: none;
+    padding: 0; margin: 0;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    top: 0; right: -65px; bottom: 0;
+    z-index: 2;
+}
+/* 订单列表 */
+.orderli li > div {
+    line-height: 32px;
+    margin-right: 106px;
+}
+.orderli li > div:last-child {
+    margin-right: 0;
+    text-align: right;
+    position: absolute;
+    top: 50%; right: 10px;
+    margin-top: -16px;
+}
+.orderli li > div:last-child.count {
+	margin-top: -32px;
+}
+.orderli li > div:last-child p:first-child {
+    font-size: 18px;
+}
+.orderli li > div:last-child.count i {
+    width: 34px; height: 24px;
+    line-height: 24px;
+    vertical-align: middle;
+    font-size: 20px;
+    text-align: center;
+    font-size: 18px;
+    display: inline-block;
+    cursor: pointer;
+}
+.orderli li > div:last-child.count i.disabled {
+    color: #999999;
+    cursor: not-allowed;
+}
+/* 统计结果列表 */
+.resultli {
+    margin-top: 20px;
+}
+.resultli li span {
+    display: block;
+    float: left;
+}
+.resultli li span:first-child {
+    width: 40%;
+}
+.resultli li span:last-child {
+    width: 60%;
+    text-align: right;
+    font-size: 18px;
+    color: #ff0404;
+}
+
+/* 带主题色列表样式 */
+.baseli.blue li, .iconli.blue li, .indentli.blue li, .payli.blue li {
+    background-color: #11a8bb;
+    border-bottom: 1px solid #0A91A2;
+}
+.baseli.blue li a, .iconli.blue li a, .indentli.blue li a {
+    color: #fefefe;
+}
+.baseli.blue li i.arrRight, .iconli.blue li i.arrRight, .indentli.blue li i.arrRight {
+    background: url("../img/content/arrow_right-white.png") no-repeat;
+    background-position: center;
+    -webkit-background-size: 24%;
+    background-size: 24%;
+}
+
+/******************************************/
+/* (DEMO文件请查看"html/_themeDefault_.html") */
+/* 信息卡部分 */
+/******************************************/
+/* 基本的信息卡 */
+.infocard, .forminfocard, .progressinfocard, .listinfocard, .infolinkcard, .vouchercard {
+	margin-left: 10px; margin-right: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(98, 122, 154, 0.16);
+    border-radius: 5px;
+    margin-top: 18px;
+    overflow: hidden;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+/* 基本的信息卡--头部 */
+.infocard .card-head, .forminfocard .card-head, .progressinfocard .card-head, .listinfocard .card-head, .infolinkcard .card-head {
+	height: 40px;
+    background-color: #11a8bb;
+    color: #fff;
+}
+.infocard .card-head p, .forminfocard .card-head p, .progressinfocard .card-head p, .listinfocard .card-head p, .infolinkcard .card-head p {
+    line-height: 40px;
+    display: block;
+    position: absolute;
+}
+.infocard .card-head p:nth-child(1), .forminfocard .card-head p:nth-child(1), .progressinfocard .card-head p:nth-child(1), .listinfocard .card-head p:nth-child(1), .infolinkcard .card-head p:nth-child(1) {
+    left: 10px;
+    font-size: 16px;
+}
+.infocard .card-head p:nth-child(2), .progressinfocard .card-head p:nth-child(2), .listinfocard .card-head p:nth-child(2), .infolinkcard .card-head p:nth-child(2) {
+    right: 10px;
+    font-size: 14px;
+    color: #cde7ec;
+}
+/* 基本信息卡--内容 & 列表信息卡--内容 */
+.infocard .card-body, .forminfocard .card-body, .progressinfocard .card-body, .listinfocard .card-body, .vouchercard .card-body {
+    font-size: 15px;
+    color: #666;
+}
+/* 基本信息卡--内容 */
+.infocard .card-body, .progressinfocard .card-body, .vouchercard .card-body {
+    line-height: 28px;
+    padding: 10px;
+    position: relative;
+}
+.infocard label, .forminfocard label, .progressinfocard label, .vouchercard label {
+    width: 72px;
+    display: inline-block;
+}
+/* 表单信息卡 */
+.forminfocard .card-body li {
+    line-height: 40px;
+    border-bottom: 1px solid #ddd;
+    padding-left: 10px; padding-right: 10px;
+}
+.forminfocard .card-body input {
+    background-color: transparent;
+    border:none;
+    outline: none;
+    color: #666;
+}
+/* 列表信息卡--内容 */
+.listinfocard .card-body {
+    line-height: 40px;
+}
+/* 进度信息卡*/
+.progressinfocard ul {
+    margin-right: 56px;
+}
+.progressinfocard .progressAnimate {
+    width: 50px; height: 100%;
+    background: url("../img/content/ingAnimation.gif") no-repeat;
+    background-position: center;
+    -webkit-background-size: 100% auto;
+    background-size: 100%;
+    display: block;
+    position: absolute;
+    top: 0; right: 10px;
+}
+/* 基本的信息卡--无序列表 */
+.unordlist {
+    list-style:inside url("../img/content/point.png");
+}
+.unordlist li {
+    border-bottom: 1px solid #dddddd; 
+    padding-left: 10px; padding-right: 10px;
+}
+.unordlist li > i:first-child {
+    width: 8px; height: 8px;
+    display: inline-block;
+    color: #11a8bb;
+}
+/* 信息链接卡 */
+.cardiconarrli .card-body {
+	color: #666;
+}
+.cardiconarrli li {
+    padding-top: 4px; padding-right: 32px; padding-bottom: 4px;
+}
+.cardiconarrli .icon {
+    height: 30px;
+}
+.cardiconarrli li p {
+    color: #666;
+}
+.cardiconarrli label {
+    width: 72px;
+    line-height: 30px;
+    margin-left: 24px;
+    display: inline-block;
+}
+.cardiconarrli li i.arrRight {
+    height: 100%;
+}
+/* 凭证卡 */
+.vouchercard {
+    background-color: transparent;
+    box-shadow: none;
+    overflow: visible;
+}
+.vouchercard .card-head, .vouchercard .card-body {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(98, 122, 154, 0.16);
+}
+.vouchercard .card-head {
+    height: 36px;
+    padding-left: 10px; padding-right: 10px;
+    line-height: 36px;
+    border-top: 7px solid #11a8bb; border-bottom: 2px dotted #ddd;
+    font-size: 16px;
+    color: #11a8bb;
+}
+/**** footer ****/
+footer.footerNav {
+	width: 100%;
+	background-color: #f6f6f6;
+	border-top: 1px solid #ddd;
+	overflow: hidden;
+	position: fixed;
+	left: 0; bottom: 0;
+	z-index: 995;
+}
+footer.footerNav a {
+	width: 33.33333333%; height: 50px;
+	padding-top: 6px; padding-bottom: 6px;
+	text-decoration: none;
+	color: #808080;
+	float: left;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+footer.footerNav a i.icon, footer.footerNav a span {
+	margin: 0 auto;
+	display: block;
+}
+footer.footerNav a span {
+	height: 18px;
+	line-height: 26px;
+	text-align: center;
+	font-size: 13px;
+}
+footer.footerNav a i.icon {
+	width: 20px; height: 20px;
+	-webkit-background-size: 200% 100%;
+	background-size: 200% 100%;
+	background-position: left;
+	background-repeat: no-repeat;
+}
+footer.footerNav a i.icon.ico-home_footer {
+	background-image: url("../img/content/home-footer@2x.png");
+}
+footer.footerNav a i.icon.ico-shoppingCar_footer {
+	background-image: url("../img/content/shoppingCar-footer@2x.png");
+}
+footer.footerNav a i.icon.ico-user_footer {
+	background-image: url("../img/content/user-footer@2x.png");
+}
+/* 选中后 */
+footer.footerNav a.checkd {
+	color: #11a8bb;
+}
+footer.footerNav a.checkd i.icon.ico-home_footer, footer.footerNav a.checkd i.icon.ico-shoppingCar_footer, footer.footerNav a.checkd i.icon.ico-user_footer {
+	background-position: right;
+}
+
+/******************************************/
+/* (DEMO文件请查看"html/_themeDefault_.html") */
+/* 信息卡部分 */
+/******************************************/
+/* 行按钮 */
+.blockBtn {
+    width: 100%; 
+    padding-left: 10px; padding-right: 10px;
+    margin-top: 40px; margin-bottom: 20px;
+    box-sizing: border-box;
+}
+.blockBtn button, .blockBtn a {
+    width: 100%; height: 45px;
+    background-color: #999999;
+    border: none;
+    outline:none;
+    border-radius: 3px;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+}
+.blockBtn a {
+	line-height: 45px;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+	display: block;
+}
+.blockBtn button.ack, .blockBtn a.ack {
+    background-color: #11a8bb;
+}
+.blockBtn button.pay, .blockBtn a.pay {
+    background-color: #ff9c00;
+}
+
+/******************************************/
+/* (DEMO文件请查看"html/_themeDefault_.html") */
+/* 弹出框部分 */
+/******************************************/
+.popupbox {
+	position: fixed;
+	top: 0; right: 0; bottom: 0; left: 0;
+}
+/* 纯文本型 & 支付密码型 */
+.popupbox.text, .popupbox.pay {
+	text-align: center;
+}
+/* 表单型 */
+.popupbox.form {
+	text-align: left;
+}
+.popupbox-maskLayer {
+	width: 100%; height: 100%;
+	background-color: rgba(0, 0, 0, 0.6);
+	position: absolute;
+	z-index: 99997;
+}
+.popupbox-window {
+	width: 280px; height: auto;
+	background-color: #fff;
+	border-radius: 3px;
+	position: absolute;
+	left: 50%; top: 50px;
+	margin-left: -140px;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	z-index: 99998;
+}
+.popupbox-window.windowContent {
+	overflow: hidden;
+}
+.popupbox-window .header {
+	width: 100%; height: 50px;
+	line-height: 50px;
+	text-align: center;
+	font-size: 16px;
+	display: block;
+}
+.popupbox-window .content {
+	padding: 20px 15px;
+}
+.popupbox-window .bottom {
+	margin-bottom: 65px;
+}
+.popupbox-window .bottom button {
+	width: 100%; height: 65px;
+	background-color: #11a8bb;
+	border: none;
+	outline: none;
+	font-size: 18px;
+	color: #fff;
+	position: absolute;
+	left: 0; bottom: 0;
+}
+/* 支付密码型详细设置 */
+.popupbox.pay .content i.icon {
+	width: 56px; height: 56px;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin: 15px auto 20px;
+	display: block;
+}
+.popupbox.pay .content i.icon.ico-warning {
+	background-image: url("../img/content/Warning-2@2x.png");
+}
+.popupbox.pay .content p.txt {
+	text-align: center;
+	font-size: 16px;
+	color: #666;
+}
+.popupbox.pay .content .password {
+	width: 90%; height: 30px;
+	margin: 25px auto 5px;
+	border: 1px solid #999;
+	border-radius: 3px;
+}
+
+/******************************************/
+/* 主题字体设置部分 */
+/******************************************/
+/* 白色字体 */
+.font-white { color: #fff !important }
+/* 蓝色强调字体 */
+.font-strong-blue {
+    font-size: 18px;
+    color: #11a8bb !important;
+}
+/* 蓝色字体 */
+.font-blue { color: #11a8bb !important }
+/* 灰色字体 */
+.font-gray { color: #999999 !important }
+/* 小灰色字体 */
+.font-light-gray {
+    font-size: 14px;
+    color: #999999 !important;
+}
+/* 红色字体 */
+.font-red { color: #f54343 !important }
+/* 小红色字体 */
+.font-light-red {
+    font-size: 14px;
+    color: #f54343 !important;
+}
+/* 更小字体 */
+.font-lighter { font-size: 13px; }
+/**** 常用行高 ****/
+.lh20 { line-height: 20px }
+.lh25 { line-height: 20px }
+.lh30 { line-height: 30px }
+.lh35 { line-height: 35px }
+.lh40 { line-height: 40px }
+.lh45 { line-height: 45px }
+.lh50 { line-height: 50px }
+/**** 带边框标注性字体 ****/
+.label-font-red, .label-font-blue {
+    height: 20px;
+    line-height: 18px;
+    border-radius: 3px;
+    font-size: 14px;
+    padding-left: 6px; padding-right: 6px;
+    margin-left: 6px; margin-right: 6px;
+    display: inline-block;
+    box-sizing: border-box;
+}
+/* 红色 */
+.label-font-red {
+    border: 1px solid #ff3334;
+    color: #ff3334;
+}
+/* 蓝色 */
+.label-font-blue {
+    border: 1px solid #11a8bb;
+    color: #11a8bb;
+}
+/**** 图标部分 ****/
+/* 文档图标 */
+.ico-document {
+    background: url("../img/content/document.png") no-repeat;
+    -webkit-background-size: 80% auto!important;
+    background-size: 80% auto!important;
+}
+/* 编辑图标 */
+.ico-editdocument {
+    background-image: url("../img/content/editdocument-3@2x.png")!important;
+}
+/* 医生图标 */
+.ico-doctor {
+    background: url("../img/content/doctor.png") no-repeat;
+}
+/* 编辑角色 */
+.ico-doctor {
+    background: url("../img/content/edituser-2@2x.png") no-repeat;
+}
+/* 微信图标 */
+.ico-weixin {
+    background: url("../img/content/weixin.png") no-repeat;
+}
+/* 支付宝图标 */
+.ico-alipay {
+    background: url("../img/content/alipay.png") no-repeat;
+}
+/* 手机图标 */
+.ico-mobile {
+    background: url("../img/content/mobile.png") no-repeat;
+    background-size: 80% !important;
+}
+/* 手机图标-蓝 */
+.ico-mobile-blue {
+    background: url("../img/content/mobile-2.png") no-repeat;
+    background-size: 80% !important;
+}
+/* 电话图标 */
+.ico-tel {
+    background-image: url("../img/content/tel@2x.png")!important;
+}
+/* 密码锁图标 */
+.ico-password {
+    background: url("../img/content/lock.png") no-repeat;
+}
+/* 密码锁图标-蓝 */
+.ico-password-blue {
+    background: url("../img/content/locked-2@2x.png") no-repeat;
+}
+/* 邮件图标 */
+.ico-email {
+    background: url("../img/content/email.png") no-repeat;
+}
+/* 邮件图标-蓝 */
+.ico-email-blue {
+    background: url("../img/content/email-2@2x.png") no-repeat;
+}
+/* 时间图标 */
+.ico-clock {
+    background: url("../img/content/clock2x.png") no-repeat;
+}
+.ico-clock-white {
+    background: url("../img/content/clock2x-white.png") no-repeat;
+}
+/* 医牌图标 */
+.ico-doctornote {
+    background: url("../img/content/doctorNote2x.png") no-repeat;
+}
+/* 医疗图标 */
+.ico-medical {
+    background: url("../img/content/medical2x.png") no-repeat;
+}
+/* 信息图标-蓝 */
+.ico-info {
+    background: url("../img/content/about@2x.png") no-repeat;
+}
+/**** 标注图标 ****/
+.ico-mark-checkstand, .ico-mark-alipay, .ico-mark-weixin {
+	width: 68px; height: 20px;
+	background-repeat: no-repeat;
+	background-position: left;
+	-webkit-background-size: auto 100%;
+	background-size: auto 100%;
+	vertical-align: text-bottom;
+	margin-left: 6px;
+	display: inline-block;
+}
+/* 标注--收银台 */
+.ico-mark-checkstand {
+	background-image: url("../img/content/ico-checkstand@2x.png");
+}
+/* 标注--支付宝 */
+.ico-mark-alipay {
+	background-image: url("../img/content/ico-alipay2x.png");
+}
+/* 标注--微信 */
+.ico-mark-weixin {
+	background-image: url("../img/content/ico-weixin@2x.png");
+}
+
+/******************************************/
+/* 媒体查询部分 */
+/******************************************/
+
+/* 分辨率宽度小于340 */
+@media screen and (max-width:340px) {
+    body,a,button,input,textarea {
+        font-size: 14px;
+    }
+    /* 基本列表样式 */
+    .baseli li, .iconli li, .indentli li, .payli li, .imginfoli li, .formli li, .formiconli li, .formbtniconli li, .formbtnli li, .leftSlipBtnCkbli li, .orderli li, .resultli li, .cardiconarrli li {
+        padding-left: 10px; padding-right: 10px;
+        font-size: 14px;
+    }
+    .baseli li i.arrRight, .iconli li i.arrRight, .imginfoli li i.arrRight {
+        width: 34px; height: 46px;
+        -webkit-background-size: 24%;
+        background-size: 24%;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+    .baseli li i.arrRight.arrDown, .iconli li i.arrRight.arrDown, .imginfoli li i.arrRight.arrDown {
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+    /* 表单列表 & 带图标表单列表 & 带按钮图标表单列表 & 带按钮表单列表 */
+    .formli li label, .formbtnli li label {
+        width: 66px;
+        line-height: 46px;
+    }
+    .formli li > div input, .formiconli li > div input, .formbtniconli li > div input, .formbtnli li > div input {
+      font-size: 14px;
+    }
+    /* 图标列表 & 支付列表 & 表单图标列表 & 表单按钮图标列表 */
+    .iconli .icon, .payli .icon, .formiconli .icon, .formbtniconli .icon {
+        -webkit-background-size: 80% auto;
+        background-size: 80%;
+    }
+    /* 文档图标 */
+    .icon.ico-document {
+        -webkit-background-size: 70% auto!important;
+        background-size: 70% auto!important;
+    }
+    .imginfoli li > div {
+        width: auto;
+        max-height: 60px; min-height: 60px;
+        display: block;
+        overflow: hidden;
+        margin-left: 32px; margin-right: 20px;
+    }
+    .iconli li span, .indentli li span {
+        margin-left: 26px;
+    }
+    /* 图片列表图片 */
+    .imginfoli li img {
+        width: 64px; height: 64px;
+        border-radius: 36px;
+        margin-right: 6px;
+    }
+    .imginfoli a > div, .imginfoli li > div {
+        margin-right: 18px;
+        top: 4px;
+    }
+    .imginfoli li i.arrRight {
+        height: 89px;
+    }
+	/* 获取验证码按钮 */
+	.formbtniconli li button, .formbtnli li button {
+		width: auto; height: 28px;
+		padding: 0 8px;
+		font-size: 14px;
+		margin-top: -14px;
+	}
+	.formbtniconli li > div, .formbtnli li > div {
+		margin-right: 75px;
+	}
+	/* 订单列表 */
+	.orderli li > div {
+		margin-right: 90px;
+	}
+	.orderli li > div:last-child p:first-child {
+		font-size: 16px;
+	}
+    /* 蓝色强调字体 */
+    .font-strong-blue {
+        font-size: 16px;
+        color: #11a8bb;
+    }
+    /* 小灰色字体 */
+    .font-light-gray {
+        font-size: 13px;
+        color: #999999;
+    }
+    /* 更小字体 */
+    .font-lighter { font-size: 12px}
+	/* 标注图标 */
+	.ico-mark-checkstand, .ico-mark-alipay, .ico-mark-weixin {
+		width: 64px; height: 18px;
+		margin-left: 2px;
+	}
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,231 @@
+*{
+    margin: 0;padding: 0;
+}
+body,html{
+    overflow: hidden;
+    overflow-y: auto;
+    width: 100%;
+    height: 100%;
+    background: #eee;
+}
+button,input{
+    outline: none;
+    border:none;
+}
+ul,li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+#container{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+#header{
+    width: 100%;
+    height: 50px;
+    background: #63e68e;
+    position: relative;
+}
+#header span.back{
+    float: left;
+    margin-left: 10px;
+    font-size: 25px;
+    line-height: 50px;
+    color: #fff;
+}
+#header p{
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    line-height: 50px;
+}
+#header span.more{
+    color: #fff;
+    width: 50px;
+    text-align: center;
+    font-size: 25px;
+    line-height: 40px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+#search{
+    width: 100%;
+    height: 60px;
+    background: #63e68e;
+    position: relative;
+    text-align: center;
+}
+#search .iconsearch{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left:31px;
+    top: 3px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 27px;
+    cursor: pointer;
+}
+#search input.search_input{
+    width: calc(100% - 40px);
+    height: 40px;
+    border-radius: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+    padding: 3px 4px;
+    color: #999;
+}
+#search .seachlist{
+    width: calc(100% - 40px);
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 5px;
+    height: auto;
+    background: #ffffff;
+    z-index: 2;
+    position: absolute;
+}
+.seachlist li{
+    padding: 6px 7px;
+}
+#bottom{
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    bottom: 0;
+    background: #fcfcfc;
+}
+#bottom ul li{
+    float: left;
+    width: 20%;
+    text-align: center;
+    line-height: 50px;
+}
+#bottom ul li a{
+    color: #000000;
+}
+#content{
+    width: 100%;
+    height: calc(100% - 160px);
+    position: relative;
+    overflow: auto;
+    z-index: 0;
+}
+#content #right_menu{
+    width: 15px;
+    height: calc(100% - 160px);
+    position: fixed;
+    right: 0;
+    overflow-y: auto;
+}
+#content #right_menu li{
+    width: 100%;
+    height: 25px;
+}
+#content #right_menu li a{
+    width: 100%;
+    height: 100%;
+    color: #63e68e;
+    text-align: center;
+    line-height: 25px;
+    font-size: 16px;
+    display: block;
+}
+#content #leftList{
+    position: absolute;
+    width: calc(100% - 15px);
+    height: 100%;
+    right: 15px;
+    top: 0;
+}
+#content #leftList .title{
+    color: #63e68e;
+    padding: 7px 8px;
+}
+#content #leftList .detailInfo{
+    background: #fff;
+    padding: 8px 12px;
+}
+#content #leftList .detailInfo .position{
+    color: #999;
+    font-size: 14px;
+}
+.addphone{
+	position: fixed;
+	bottom: 60px;
+	right: 20px;
+	width: 45px;
+	height: 45px;
+	border-radius: 50%;
+	background: #63e68e;
+	cursor: pointer;
+}
+.addphone > button{
+	width: 100%;
+	height: 100%;
+	display:block;
+	background: transparent;
+	font-size: 25px;
+	color: #fff;
+}
+#addPhone{
+    width: 100%;
+    height: auto;
+    position: relative;
+    background: #fff;
+}
+#addPhone .add_header{
+    width: 100%;
+    height: 45px;
+    background-color: rgb(7, 151, 4);
+    position: relative;
+}
+.add_header .cancelAdd{
+    border: 1px solid #f2f2f2;
+    background:transparent;
+    width: 45px;
+    height: 30px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    color: #fff;
+    border-radius: 5px;
+}
+.add_header p{
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    line-height: 45px;
+}
+.add_header .sureAdd{
+    float: right;
+    width: 45px;
+    height: 30px;
+    background: #fff;
+    color: #63e68e;
+    border-radius: 5px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.personName,.position{
+    width: 100%;
+    height: 35px;
+    padding: 5px 15px;
+}
+.personName input.input_name,.position input.input_position{
+    width: 100%;
+    height: 100%;
+    color: #666666;
+    text-align: left;
+    font-size: 16px;
+    border-bottom: 1px solid #eeeeee;
+}
+::-webkit-scrollbar{
+    width: 0;
+}

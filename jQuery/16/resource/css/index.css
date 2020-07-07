@@ -1,0 +1,78 @@
+@charset "UTF-8";
+/**
+* 功能：首页样式设置
+* 最后修改日期：2016年6月20日
+**/
+.header .rightBtn {
+	width: 40px; height: 40px;
+    background: url("../img/content/arrow_right-consult-white.png") no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+    background-position: center;
+    top: 0px; right: 10px;
+}
+/* Banner images */
+.bannerImg {
+    width: 100%; height: auto;
+    max-height: 220px;
+    overflow: hidden;
+}
+.bannerImg img {
+    width: 100%; height: auto;
+}
+/* 导航 */
+nav {
+    background-color: #fff;
+    overflow: hidden;
+}
+nav a {
+    width: 50%; height: 115px;
+    border-right: 1px solid #ddd; border-bottom: 1px solid #ddd;
+    text-decoration: none;
+    text-align: center;
+    font-size: 16px;
+    color: #1e1e1e;
+    display: block;
+    box-sizing: border-box;
+    float: left;
+    cursor: pointer;
+}
+nav a:nth-child(even) {
+    border-right: none;
+}
+nav a i.icon {
+    width: 54px; height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+    margin-right: 6px;
+}
+nav a i.icon, nav a span {
+    display: inline-block;
+    vertical-align: middle;
+}
+/* 预约挂号 */
+i.icon.ico-schedule {
+    background-image: url("../img/content/schedule@2x.png");
+}
+/* B超预约 */
+i.icon.ico-heartrate {
+    background-image: url("../img/content/heartRate@2x.png");
+}
+/* 缴费检查 */
+i.icon.ico-payfees {
+    background-image: url("../img/content/payFees@2x.png");
+}
+/* 就诊凭证 */
+i.icon.ico-barcode {
+    background-image: url("../img/content/barCode@2x.png");
+}
+/* 就诊提醒 */
+i.icon.ico-remind {
+    background-image: url("../img/content/remind@2x.png");
+}
+/* 电子报告 */
+i.icon.ico-ereport {
+    background-image: url("../img/content/eReport@2x.png");
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
+    <title>预约支付</title>
+    <link rel="shortcut icon" href="../../resource/img/favicon.ico"> 
+    <link rel="stylesheet" href="../../resource/plugin/baseCSS-1.0.5.min.css">
+    <link rel="stylesheet" href="../../resource/css/common.css">
+    <link rel="stylesheet" href="../../resource/css/details.css">
+</head>
+<body>
+    <!-- header -->
+    <header class="header">
+        <a class="leftBtn goBack"></a>
+        <span>预约支付</span>
+        <!--<a class="rightBtn"></a>-->
+    </header>
+    <section>
+        <!-- 医生基本信息 -->
+        <ul class="baseli">
+            <li>
+                <a href="#">
+                    <span>二级B超</span>
+                    <i class="arrRight arrDown"></i>
+                </a>
+            </li>
+        </ul>
+        <!-- 预约时间 -->
+        <section class="appointmentTime mt12">
+            <input id="" name="" type="text" class="dateSelectro" placeholder="请选择日期">
+            <p class="txt-line font-red">该天预约已满，建议您选择以下时间</p>
+        </section>
+        <!-- 就诊卡信息 -->
+        <div class="forminfocard">
+            <div class="card-head">
+                <p>就诊卡信息</p>
+            </div>
+            <div class="card-body">
+                <ul>
+                    <li>
+                        <p>
+                            <label>姓名:</label>
+                            <input type="text" placeholder="必填">
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <label>性别:</label>
+                            <input type="text" placeholder="必填">
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <label>出生日期:</label>
+                            <input type="text" placeholder="必填">
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <label>末次月经:</label>
+                            <input type="text" placeholder="必填">
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <p class="txt-line font-light-red">支付成功后请到院内【客服中心】领取就诊卡</p>
+        <!-- 金额统计 -->
+        <ul class="resultli mt0">
+            <li>
+                <span>应付金额</span>
+                <span>￥2000.00</span>
+            </li>
+        </ul>
+        <div class="blockBtn">
+            <button type="button" class="pay">立即支付</button>
+        </div>
+    </section>
+</body>
+<!-- JS引入部分 -->
+<script src="../../resource/plugin/jquery-2.2.4.min.js"></script>
+<script src="../../resource/js/common.js"></script>
+</html>
