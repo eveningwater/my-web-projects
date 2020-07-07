@@ -1,0 +1,76 @@
+/*
+* 功能:todolist
+* 日期:2017/12/6
+* author:loho
+*/
+/****样式初始化****/
+body,html,ul,ol,li,div,p,span,h1,h2,h3,h4,h5,h6,input,button,textarea,article,section,main,header,footer,aside{
+    margin: 0;padding: 0;
+}
+body,html{
+    box-sizing: border-box;
+}
+section,article,main,header,footer,aside{
+    display: block;
+}
+ul,li{
+    list-style: none;
+}
+input,button{
+    outline: none;
+}
+.setInput{
+    @color:#993421;
+    color: @color;
+    font-size:18px;
+    border:1px solid #662311;
+    border-radius:5px;
+    position: relative;
+    &:focus{
+        box-shadow: 0 0 15px #f1f0a2;
+    }
+}
+.list{
+    margin-top: 25px;
+}
+.list li{
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.list li{
+    line-height: 45px;
+}
+.visible{
+    display: block;
+}
+.hidden{
+    display: none;
+}
+.delete{
+    width: 25px;
+    height: 25px;
+    background: url(../assets/checkbox.svg)no-repeat center/cover;
+    display: inline-block;
+    float: left;
+    margin-left: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.checked{
+    background: url(../assets/checkedbox.svg)no-repeat center/cover;
+    color: #ffae00;
+}
+.checked ~ span{
+    text-decoration: line-through;
+}
+.total{
+    margin-top: 25px;
+    font-size: 18px;
+}
+.total span:first-child{
+    color: #0084ff;
+}
+.total span:last-child{
+    color: #ff0000;
+}
