@@ -22,9 +22,9 @@ function updateCountDown() {
     const diff = newYearTime - currentTime;
 
     day.innerHTML = formatTime(diff / 1000 / 60 / 60 / 24);
-    hour.innerHTML = formatTime(diff / 1000 / 60 / 60) % 24;
-    minute.innerHTML = formatTime(diff / 1000 / 60) % 60;
-    second.innerHTML = formatTime(diff / 1000) % 60;
+    hour.innerHTML = formatTime(diff / 1000 / 60 / 60,true) % 24;
+    minute.innerHTML = formatTime(diff / 1000 / 60,true) % 60;
+    second.innerHTML = formatTime(diff / 1000,true) % 60;
 
     setTimeout(updateCountDown,1000);
 }
