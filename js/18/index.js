@@ -30,7 +30,7 @@ function updateCountDown() {
 }
 
 function formatTime(time, isFilter) {
-    const newTime = isFilter ? time < 10 ? 0 + time : time : time;
+    const newTime = isFilter ? time < 10 ? '0' + time : time : time;
     return Math.floor(newTime);
 }
 year.innerHTML = currentYear + 1;
