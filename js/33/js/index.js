@@ -231,7 +231,7 @@ chessGame.prototype.createPopBox = function (text) {
 	popBox.classList.add("popBoxAnimate");
 	popBox.style.display = "block";
 	this.popBoxContent.textContent = text;
-	if (popBox.style.display = "block") {
+	if (popBox.style.display === "block") {
 		this.sure.onclick = function () {
 			closePopBox(popBox);
 		}
