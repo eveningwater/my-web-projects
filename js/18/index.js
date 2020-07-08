@@ -23,14 +23,14 @@ function updateCountDown() {
 
     day.innerHTML =  Math.floor(diff / 1000 / 60 / 60 / 24);
     hour.innerHTML = formatTime(Math.floor(diff / 1000 / 60 / 60) % 24);
-    minute.innerHTML = formatTime(Math.floor(diff / 1000 / 60,true) % 60);
-    second.innerHTML = formatTime(Math.floor(diff / 1000,true) % 60);
+    minute.innerHTML = formatTime(Math.floor(diff / 1000 / 60) % 60);
+    second.innerHTML = formatTime(Math.floor(diff / 1000) % 60);
 
     setTimeout(updateCountDown,1000);
 }
 
 function formatTime(time) {
-    return time < 10 ? ('0' + time ): time;
+    return time < 10 ? '0' + time : time;
 }
 year.innerHTML = currentYear + 1;
 setTimeout(() => {
