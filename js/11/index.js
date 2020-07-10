@@ -88,14 +88,14 @@ async function showPost() {
 function filterPost(e) {
     const value = e.target.value.toLowerCase();
     const posts = $$(".post");
-
-    posts.forEach((post) => {
+    const menu_children = menuEl.querySelectorAll('.menu-item');
+    posts.forEach((post,index) => {
         const title = post.querySelector('.post-info h2').innerText.toLowerCase();
         const body = post.querySelector('.post-info .post-body').innerText.toLowerCase();
-
-        post.style.display = title.indexOf(value) > -1 || body.indexOf(value) > -1 ? 'flex' : 'none';
-    })
-
+        const expression = title.indexOf(value) > -1 || body.indexOf(value) > -1;
+        post.style.display = expression ? 'flex' : 'none';
+        menu_children[index].style.display = expression ? 'block' : 'none';
+    });
 }
 showPost();
 window.addEventListener('scroll', () => {
@@ -108,7 +108,7 @@ window.addEventListener('scroll', () => {
 
 filter.addEventListener('input', filterPost);
 topEl.addEventListener('click', () => {
-    let value = document.documentElement.scrollTop ||document.body.scrollTop, timer = null;
+    let value = document.documentElement.scrollTop || document.body.scrollTop, timer = null;
     let updateTop = () => {
         value -= 10;
         document.body.scrollTop = document.documentElement.scrollTop = value;

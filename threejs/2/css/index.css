@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    overflow: hidden;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.footer {
+    width: 100%;
+    position: fixed;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    text-align: center;
+}
+.mainCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 90;
+}
+.btn {
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: 1px solid #91c2f0;
+    background-color: #86c1f8;
+    display: inline-block;
+    margin: 0 15px;
+    outline: none;
+    color: #ffffff;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    letter-spacing: 2px;
+}
+.btn:hover,.btn:active {
+    background-color: #2396ef;
+    border-color: #2396ef;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>恐龙AR</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+
+<div class="footer">
+    <input class="btn" type="button" value="开始识别" id="start" />
+    <input class="btn" type="button" value="停止识别" id="stop" />
+</div>
+
+<script type="text/javascript" src="js/adapter.js"></script>
+<script type="text/javascript" src="plugins/vconsole.min.js"></script>
+<script type="text/javascript" src="plugins/three.min.js"></script>
+<script type="text/javascript" src="plugins/FBXLoader.js"></script>
+<script type="text/javascript" src="plugins/inflate.min.js"></script>
+<script type="text/javascript" src="plugins/OrbitControls.js"></script>
+<script type="text/javascript" src="plugins/message.js"></script>
+<script type="text/javascript" src="js/ThreeHelper.js"></script>
+<script type="text/javascript" src="js/webar.js"></script>
+<script>
+    (function(){
+        var vConsole = new VConsole();
+
+        const now = (new Date()).getTime();
+
+        const e = document.createElement('script');
+        e.setAttribute('src', `js/app.js?t=${now}`);
+        document.body.appendChild(e);
+    })();
+</script>
+
+</body>
+</html>
