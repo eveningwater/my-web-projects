@@ -1,5 +1,5 @@
 # react music player
-[viewSites](http://eveningwater.com/project/react-music-player/#/?_k=ez16ip)
+[viewSites](http://www.eveningwater.com/my-web-projects/react/1/)
 > A react.js project
 
 ## Build Setup

@@ -26,7 +26,7 @@ export default {
             this.audio = new Audio();
             this.audio.loop = 'loop';
             this.audio.autoplay = 'autoplay';
-            this.audio.src = "https://www.eveningwater.com/project/newReact-music-player/audio/%E9%BB%84%E5%9B%BD%E4%BF%8A%20-%20%E7%9C%9F%E7%88%B1%E4%BD%A0%E7%9A%84%E4%BA%91.mp3";
+            this.audio.src = "https://www.eveningwater.com/static/resouces/audio/5.mp3";
         },
         // 播放音乐
         playMusic() {

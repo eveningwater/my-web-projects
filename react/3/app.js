@@ -235,5 +235,5 @@ function createMusic(){
 	//添加动画效果
 	musicEL.classList.add('rotate');
 	//往页面添加audio标签播放音乐
-	musicEL.innerHTML = '<audio src="https://www.eveningwater.com/static/resources/audio/%E6%9C%AC%E5%85%AE%20-%20%E4%B8%8B%E9%9B%AA%E7%9A%84%E5%AD%A3%E8%8A%82.mp3" loop="loop" style="opacity: 0;" id="audio" autoplay="autoplay"></audio>';
+	musicEL.innerHTML = '<audio src="https://www.eveningwater.com/static/resouces/audio/2.mp3" loop="loop" style="opacity: 0;" id="audio" autoplay="autoplay"></audio>';
 }
