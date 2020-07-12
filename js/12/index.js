@@ -110,7 +110,7 @@ function gameOver(){
             updateWordDom();
             updateTime();
         },
-        footAlign:"center",
+        footerAlign:"center",
         showCancel:false
     })
 }
