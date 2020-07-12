@@ -16,10 +16,12 @@ body {
   align-items: center;
   justify-content: center;
   color: #535353;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 .music-container {
   display: flex;
-  padding: 20px 30px;
+  padding: 20px 1em;
   margin: 120px 0;
   box-shadow: 0 20px 20px rgba(100, 165, 240, 0.6);
   border-radius: 15px;
@@ -103,7 +105,7 @@ body {
   cursor: pointer;
   padding: 10px;
   border: 0;
-  margin: 0 20px;
+  margin: 0 .4em;
   color: #535353;
 }
 .music-container > .navigation > .action-btn:hover,
@@ -170,4 +172,13 @@ body {
   100% {
     transform: rotate(360deg);
   }
+}
+@media screen and (max-width: 765px) {
+    .music-container > .music-list.show {
+        top: 100%;
+        transform: translateY(0%) translateX(50%);
+        right:50%;
+        width: 100%;
+        max-height: 200px;
+    }
 }
