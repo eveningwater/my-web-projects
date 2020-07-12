@@ -109,6 +109,7 @@ function gameOver(){
             time = 10;
             updateWordDom();
             updateTime();
+            score = 0;
         },
         footerAlign:"center",
         showCancel:false
