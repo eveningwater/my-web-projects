@@ -268,7 +268,7 @@ nextBtn.addEventListener('click', () => {
 });
 // 歌曲播放完时自动播放下一首
 audio.addEventListener('ended', () => {
-    songIndex = selectSongByMode(child.className);
+    songIndex = selectSongByMode(child.className,true);
     loadSong(songs[songIndex],songIndex);
     playSong();
 });
