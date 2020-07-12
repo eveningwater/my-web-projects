@@ -19,20 +19,31 @@
                 <label>游戏难易程度:</label>
                 <div class="select-container select-hard">
                     <div class="select-title">
-                        <div class="select-content" tabindex="0" hidefocus="true">一般</div>
+                        <div class="select-content" tabindex="0" hidefocus="true"></div>
                         <i class="select-icon select-down"></i>
                     </div>
-                    <ul class="select-items">
-                        <div class="select-option" data-value="easy">容易</div>
-                        <div class="select-option" data-value="medium">一般</div>
-                        <div class="select-option" data-value="hard">困难</div>
-                    </ul>
+                    <ul class="select-items"></ul>
                 </div>
             </div>
         </form>
     </div>
+    <div class="container">
+        <h2>👩‍💻 速度打字机 👨‍💻</h2>
+        <small>键入如下的单词:</small>
+        <h1 id="word">juice</h1>
+        <input type="text" class="text" id="text" placeholder="请输入示例单词">
+        <p class="time-container">
+            剩余时间:
+            <span id="time">0s</span>
+        </p>
+        <p class="score-container">
+            得分:
+            <span id="score">0分</span>
+        </p>
+    </div>
 </body>
 <script src="plugins/popbox.js"></script>
+<script src="plugins/message.js"></script>
 <script src="index.js"></script>
 
 </html>

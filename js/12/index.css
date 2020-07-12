@@ -2,8 +2,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    user-select: none;
 }
-
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #b3f3f5;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
 /* select 样式 */
 
 .select-container {
@@ -175,4 +184,61 @@
 .setting-btn:active {
     background-color: #4499fe;
     border-color: #4598fe;
+}
+/* 打字机页面 */
+.container {
+    background-color: #5577f2;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.12);
+    position: relative;
+    width: 500px;
+    text-align: center;
+    color: #ffffff;
+}
+.container > h2 {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 8px;
+    letter-spacing: 2px;
+    border-radius: 4px;
+    margin: 0 0 40px;
+}
+.container > .time-container,.container > .score-container {
+    position: absolute;
+    top: 80px;
+    letter-spacing: 2px;
+}
+.container > .time-container {
+    left: 20px;
+}
+.container > .score-container {
+    right: 20px;
+}
+.container > .time-container > span,.container > .score-container > span {
+    color: #070c53;
+    font-size: 25px;
+}
+.container > small {
+    font-size: 16px;
+    letter-spacing: 2px;
+    font-family: "幼圆";
+    margin-bottom: 5px;
+}
+.container > h1 {
+    margin-top: 5px;
+    letter-spacing: 1px;
+    font-family: "华文琥珀","楷体";
+    margin-bottom: 8px;
+}
+.container > .text {
+    outline: none;
+    background-color: #ffffff;
+    border: 1px solid #f2f4f5;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+    padding: 10px 12px;
+    margin: .2em 0;
+    border-radius: 5px;
+    color: #535455;
+    width: 100%;
+    letter-spacing: 2px;
 }
