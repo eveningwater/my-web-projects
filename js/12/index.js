@@ -110,7 +110,7 @@ function gameOver(){
             updateWordDom();
             updateTime();
             score = 0;
-            updateScore();
+            scoreEl.innerHTML = 0;
         },
         footerAlign:"center",
         showCancel:false
