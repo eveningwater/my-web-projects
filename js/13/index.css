@@ -37,6 +37,9 @@ body {
     line-height: 38px;
     outline: none;
     color: #535353;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .select-icon {
@@ -72,7 +75,7 @@ body {
     left: 0;
     padding: 5px 0;
     z-index: 899;
-    min-width: 100%;
+    width: 100%;
     border: 1px solid #d2d2d2;
     max-height: 300px;
     overflow-y: auto;
@@ -229,17 +232,17 @@ body {
     transform: translate(-50%,0);
 }
 @media (max-width:1100px) {
-    .main {
+    .container > .main {
         grid-template-columns: repeat(3,1fr);
     }
 }
 @media (max-width:760px) {
-    .main {
+    .container > .main {
         grid-template-columns: repeat(2,1fr);
     }
 }
 @media (max-width:500px) {
-    .main {
-        grid-template-columns: 1fr);
+    .container > .main {
+        grid-template-columns: 1fr;
     }
 }

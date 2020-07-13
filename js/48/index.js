@@ -23,7 +23,6 @@ xhr.onreadystatechange = function () {
         }
         box.innerHTML = str;
         setTimeout(() => {
-            let content = box.innerText;
             let timer = null;
             let count = 0;
             let read = function () {
@@ -54,4 +53,7 @@ function readContent(value) {
     audio.oncanplay = function(){
         audio.play();
     }
+}
+window.onload = function(){
+    audio.muted = false;
 }
