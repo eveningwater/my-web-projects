@@ -109,6 +109,9 @@ input,button {
 .song-result > .songs > li > span {
     font-size: 18px;
     color: #3159df;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 .btn {
     border: 1px solid #a0caeb;
@@ -127,4 +130,9 @@ input,button {
 .pagination {
     text-align: center;
     margin: 1em 0;
+}
+@media (max-width:1000px) {
+    .song-result {
+        width: 100%;
+    }
 }
