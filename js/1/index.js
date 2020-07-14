@@ -56,32 +56,46 @@ function getFieldName(el) {
  * @param {*} el 
  */
 function allCheck(el) {
-    [].slice.call(el).forEach((item, index) => {
-        if (!item.value.trim()) {
-            showError(item, getFieldName(item) + '不能为空!');
-        } else {
-            showSuccess(item);
-            switch (index) {
-                case 0:
-                    checkLength(item, 3, 20);
-                    break;
-                case 1:
-                    let regEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-                    if (regEmail.test(item.value)) {
-                        showSuccess(item);
-                    } else {
-                        showError(item, '输入的' + getFieldName(item) + '格式有误!');
-                    }
-                    break
-                case 2:
-                    checkLength(item, 6, 20);
-                    break;
-                case 3:
-                    checkLength(item, 6, 20);
-                    break;
-            }
+    return new Promise(resolve => {
+        [].slice.call(el).forEach((item, index) => {
+            checkDetail(item, index);
+            item.addEventListener('blur', () => {
+                checkDetail(item, index);
+            });
+        });
+        resolve();
+    })
+}
+/**
+ * 详情检查
+ * @param {*} item 
+ * @param {*} index 
+ */
+function checkDetail(item, index) {
+    if (!item.value.trim()) {
+        showError(item, getFieldName(item) + '不能为空!');
+    } else {
+        showSuccess(item);
+        switch (index) {
+            case 0:
+                checkLength(item, 3, 20);
+                break;
+            case 1:
+                let regEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                if (regEmail.test(item.value)) {
+                    showSuccess(item);
+                } else {
+                    showError(item, '输入的' + getFieldName(item) + '格式有误!');
+                }
+                break
+            case 2:
+                checkLength(item, 6, 20);
+                break;
+            case 3:
+                checkLength(item, 6, 20);
+                break;
         }
-    });
+    }
 }
 /**
  * 检查输入的字符数
@@ -100,5 +114,18 @@ function checkLength(el, min, max) {
 }
 
 submitBtn.addEventListener('click', function () {
-    allCheck(input);
+    allCheck(input).then(_ => {
+        // 验证成功
+        if (form.querySelectorAll('.success').length === form.querySelectorAll('.form-control').length) {
+            if(input[2].value === input[3].value){
+                ewConfirm({
+                    title:"温馨提示",
+                    content:"验证成功",
+                    showCancel:false
+                });
+            }else{
+                showError(input[3],'两次密码不一致');
+            }
+        }
+    })
 }, false);
