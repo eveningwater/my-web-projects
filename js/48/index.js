@@ -51,9 +51,9 @@ function readContent(value) {
     var api = "http://tts.baidu.com/text2audio?lan=zh&ie=UTF-8&spd=2&text=" + encodeURI(value);
     audio.src = api;
     audio.oncanplay = function(){
-        audio.play();
+        audio.muted = false;
+        setTimeout(() => {
+            audio.play();
+        },0)
     }
-}
-window.onload = function(){
-    audio.muted = false;
 }

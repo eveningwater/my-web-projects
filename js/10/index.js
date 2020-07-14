@@ -20,7 +20,9 @@ const openMusicList = $("#open-music-list");
 const musicList = $("#music-list");
 const musicTime = $("#music-time");
 const mode = $("#mode");
+const searchContainer = $("#search-container");
 const child = mode.querySelector('.icon');
+const baseSearchAPI = "https://v1.alapi.cn/api/music/search";
 const songs = [
     {
         name: "她不是真的爱我",
@@ -253,6 +255,9 @@ function setProgress(e) {
     const time = (x / width) * duration;
     if (isNaN(time)) return false;
     audio.currentTime = time;
+}
+function searchSuccess(data){
+    console.log(data);
 }
 // 点击上一首
 prevBtn.addEventListener('click', () => {
