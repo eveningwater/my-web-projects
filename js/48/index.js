@@ -46,14 +46,20 @@ xhr.onreadystatechange = function () {
         }, 1000)
     }
 }
-
+/**
+ * 阅读文本
+ * @param {*} value 
+ */
 function readContent(value) {
     var api = "http://tts.baidu.com/text2audio?lan=zh&ie=UTF-8&spd=2&text=" + encodeURI(value);
     audio.src = api;
     audio.oncanplay = function(){
-        audio.muted = false;
+        audio.play();
         setTimeout(() => {
-            audio.play();
-        },0)
+            audio.muted = false;
+        },0);
     }
 }
+document.addEventListener('keydown',() => {
+    if(!audio.muted)audio.muted = true;
+});
