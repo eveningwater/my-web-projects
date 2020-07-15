@@ -112,7 +112,7 @@ function checkLength(el, min, max) {
         showSuccess(el);
     }
 }
-
+// 点击提交
 submitBtn.addEventListener('click', function () {
     allCheck(input).then(_ => {
         // 验证成功
