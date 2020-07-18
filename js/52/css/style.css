@@ -1,0 +1,147 @@
+@charset "utf-8";
+html, body, main, fieldset, figure {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+/* 图像区域 */
+fieldset {
+	border: none;
+	position: relative;
+}
+fieldset figure {
+	background: #eee url("../img/test.jpg") 0 0 no-repeat;
+	background-size: cover;
+}
+fieldset a {
+	width: 64px;
+	height: 64px;
+	position: absolute;
+	cursor: pointer;
+	transform: translate(-50%,-50%);
+	z-index: 1;
+}
+a[href="#clothes"] {
+	left: 50%;
+	top: 28%;
+}
+a[href="#skirt"] {
+	left: 60%;
+	top: 48%;
+}
+a[href="#shoe"] {
+	left: 62%;
+	top: 97%;
+}
+/* 商品指示焦点 */
+fieldset a i {
+	width: 12px;
+	height: 12px;
+	background-color: rgba(255, 255, 255, 0.8);
+	border-radius: 50%;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	animation: focusPointer 0.8s ease-in infinite;
+}
+/* 商品信息面板 */
+.infoPanel {
+	width: 100%;
+	height: 100%;
+	padding: 12px;
+	background-color: rgba(103, 50, 122, 0.75);
+	font: lighter 18px "微软雅黑";
+	color: #fff;
+	position: absolute;
+	z-index: 2;
+	box-sizing: border-box;
+	position: absolute;
+	left: 0;
+	top: -100%;
+	transition: top 0.2s ease-in;
+}
+.infoPanel p {
+	line-height: 50px;
+	border-bottom: 1px solid rgba(169, 126, 191, 0.6);
+	margin: 0;
+	padding: 0 5px;
+	box-sizing: border-box;
+	white-space: nowrap;
+}
+.infoPanel label, .infoPanel span {
+	display: inline-block;
+	vertical-align: middle;
+}
+.infoPanel span {
+	line-height: 1.6;
+	margin-left: 10px;
+	margin-right: 20px;
+	white-space: normal;
+}
+.infoPanel span.brand {
+	font: 32px "Harrington";
+	position: relative;
+	top: -2px;
+}
+/* 显示信息面板的动态class */
+.infoPanel.show {
+	top: 0;
+}
+/**********************************/
+/* 动画设置部分 */
+/**********************************/
+@keyframes focusPointer {
+	0% {
+		box-shadow: 0 0 0 2px rgba(238, 238, 238, 0.3);
+	}
+	100% {
+		box-shadow: 0 0 0 4px rgba(238, 238, 238, 0.3);
+	}
+}
+/**********************************/
+/* 响应式设置部分 */
+/**********************************/
+@media screen and (min-height: 520px) and (max-height: 640px) {
+	a[href="#clothes"] {
+		left: 59%;
+		top: 28%;
+	}
+	a[href="#skirt"] {
+		left: 70%;
+		top: 48%;
+	}
+	a[href="#shoe"] {
+		left: 74%;
+		top: 96%;
+	}
+}
+@media screen and (min-height: 641px) and (max-height: 660px) {
+	a[href="#clothes"] {
+		left: 54%;
+		top: 28%;
+	}
+	a[href="#skirt"] {
+		left: 65%;
+		top: 48%;
+	}
+	a[href="#shoe"] {
+		left: 67%;
+		top: 96%;
+	}
+}
+@media screen and (min-height: 661px) {
+	a[href="#clothes"] {
+		left: 59%;
+		top: 29%;
+	}
+	a[href="#skirt"] {
+		left: 70%;
+		top: 48%;
+	}
+	a[href="#shoe"] {
+		left: 74%;
+		top: 96%;
+	}
+}

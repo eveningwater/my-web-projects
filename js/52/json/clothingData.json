@@ -1,0 +1,26 @@
+{
+	"clothes": {
+		"brand": "Christian Dior",
+		"type": "上衣",
+		"texture": "蚕丝",
+		"nationality": "法国",
+		"price": "2699",
+		"describe": "可手洗，干洗，不要水洗"
+	},
+	"skirt": {
+		"brand": "Donna Karan",
+		"type": "裙子",
+		"texture": "纯棉",
+		"nationality": "美国",
+		"price": "1488",
+		"describe": "避免高温熨烫"
+	},
+	"shoe": {
+		"brand": "Chanel",
+		"type": "高跟鞋",
+		"texture": "羊皮",
+		"nationality": "意大利",
+		"price": "1988",
+		"describe": "正常清洁即可"
+	}
+}

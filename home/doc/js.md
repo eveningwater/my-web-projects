@@ -53,3 +53,4 @@
 |  49  |           [户里](https://github.com/eveningwater/my-web-projects/tree/master/js/49)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/49/) 
 |  50  |           [百度搜索](https://github.com/eveningwater/my-web-projects/tree/master/js/50)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/50/) 
 |  51  |           [左右自动滑动轮播](https://github.com/eveningwater/my-web-projects/tree/master/js/51)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/51/) 
+|  52  |           [淘衣示例](https://github.com/eveningwater/my-web-projects/tree/master/js/52)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/52/) 

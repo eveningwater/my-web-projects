@@ -19,6 +19,8 @@
 
 > vue目录:主要使用vue.js完成的示例。
 
+> demo目录:一些小功能demo集合。
+
 > home目录:本项目的官网，使用vuepress搭建。
 
 
