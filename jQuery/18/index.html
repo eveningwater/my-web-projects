@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>电梯程序</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <!-- 电梯建筑 -->
+    <div class="building">
+        <!-- 电梯井 -->
+        <div class="elevatoShaft">
+            <!-- 电梯 -->
+            <div class="elevato">
+                <!-- 电梯门 -->
+                <div class="elevato-left"></div>
+                <div class="elevato-right"></div>
+            </div>
+        </div>
+        <!-- 楼层 -->
+        <div class="storeyZone">
+            <div class="storey floorOn-01">
+                <div class="ctroller">
+                    <button type="button" class="toTop" disabled>↑</button>
+                    <button type="button" class="toBottom">↓</button>
+                </div>
+                <div class="displayElevato">6</div>
+            </div>
+            <div class="storey floorOn-02">
+                <div class="ctroller">
+                    <button type="button" class="toTop">↑</button>
+                    <button type="button" class="toBottom">↓</button>
+                </div>
+                <div class="displayElevato">5</div>
+            </div>
+            <div class="storey floorOn-03">
+                <div class="ctroller">
+                    <button type="button" class="toTop">↑</button>
+                    <button type="button" class="toBottom">↓</button>
+                </div>
+                <div class="displayElevato">4</div>
+            </div>
+            <div class="storey floorOn-04">
+                <div class="ctroller">
+                    <button type="button" class="toTop">↑</button>
+                    <button type="button" class="toBottom">↓</button>
+                </div>
+                <div class="displayElevato">3</div>
+            </div>
+            <div class="storey floorOn-05">
+                <div class="ctroller">
+                    <button type="button" class="toTop">↑</button>
+                    <button type="button" class="toBottom">↓</button>
+                </div>
+                <div class="displayElevato">2</div>
+            </div>
+            <div class="storey floorOn-06">
+                <div class="ctroller">
+                    <button type="button" class="toTop">↑</button>
+                    <button type="button" class="toBottom" disabled>↓</button>
+                </div>
+                <div class="displayElevato">1</div>
+            </div>
+        </div>
+    </div>
+    <!-- JS引用部分 -->
+    <script src="plugin/jquery.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

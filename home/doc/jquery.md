@@ -20,3 +20,4 @@
 |  15   | [window18系统](https://github.com/eveningwater/my-web-projects/tree/master/jQuery/15/) | [在线 demo](https://www.eveningwater.com/my-web-projects/jQuery/15/) |
 |  16   | [安琪儿医院页面](https://github.com/eveningwater/my-web-projects/tree/master/jQuery/16/) | [在线 demo](https://www.eveningwater.com/my-web-projects/jQuery/16/) |
 |  17   | [矿产销售页面](https://github.com/eveningwater/my-web-projects/tree/master/jQuery/17/) | [在线 demo](https://www.eveningwater.com/my-web-projects/jQuery/17/) |
+|  18   | [电梯小程序](https://github.com/eveningwater/my-web-projects/tree/master/jQuery/18/) | [在线 demo](https://www.eveningwater.com/my-web-projects/jQuery/18/) |
