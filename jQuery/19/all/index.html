@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>焦点轮播图示例</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		.change-code-btn {
+			padding: 8px 12px;
+			display: inline-block;
+			border: 1px solid #cecfd1;
+			border-radius: 5px;
+			outline: none;
+			background-color: transparent;
+			transition: all .1s linear;
+			cursor: pointer;
+			color: #535455;
+			letter-spacing: 2px;
+			font-size: 14px;
+			margin: 1em 0;
+		}
+
+		.change-code-btn:hover,
+		.change-code-btn:active {
+			background-color: #2396ef;
+			border-color: #2499fe;
+			color: #ffffff;
+		}
+
+		body {
+			display: flex;
+			justify-content: center;
+			min-height: 100vh;
+			align-items: center;
+			flex-direction: column;
+			overflow: hidden;
+		}
+		.ew-iframe {
+			border: none;
+			overflow: hidden;
+			margin: 0 auto;
+			display: block;
+			width: 600px;
+			height: 400px;
+		}
+	</style>
+</head>
+
+<body>
+	<button class="change-code-btn" type="button" id="change-code-btn">切换jQuery版本</button>
+	<iframe src="./js.html" frameborder="0" class="ew-iframe" id="ew-iframe"></iframe>
+</body>
+<script>
+	const iframe = document.getElementById("ew-iframe");
+	const btn = document.getElementById('change-code-btn');
+	let flag = false;
+
+	function changeCodeVersion() {
+		flag = !flag;
+		this.textContent = flag ? this.textContent.replace(/jQuery/g, 'js') : this.textContent.replace(/js/g, 'jQuery');
+		iframe.setAttribute('src',(flag ? './jq.html' : './js.html'));
+	}
+	btn.addEventListener('click', changeCodeVersion);
+</script>
+
+</html>

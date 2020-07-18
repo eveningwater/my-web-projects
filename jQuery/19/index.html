@@ -26,6 +26,7 @@
             width: 100%;
             height: auto;
             display: block;
+            overflow: hidden;
         }
 
         #header {
@@ -41,7 +42,7 @@
         }
 
         #header>.nav-container>.tab-item {
-            width: 25%;
+            width: 20%;
             padding: 10px 12px;
             float: left;
             text-align: center;
@@ -59,7 +60,8 @@
             background-color: rgba(255, 255, 255, 0.2);
             color: #667788;
         }
-        @media (max-width:750px){
+
+        @media (max-width:750px) {
             #header>.nav-container>.tab-item {
                 width: 100%;
             }
@@ -74,6 +76,7 @@
             <div class="tab-item" data-value="./pointer.html">点击轮播</div>
             <div class="tab-item" data-value="./slide.html">滑动轮播</div>
             <div class="tab-item" data-value="./window-shades.html">百叶窗轮播</div>
+            <div class="tab-item" data-value="./all/index.html">完整轮播</div>
         </nav>
     </header>
     <iframe src="./default.html" frameborder="0" class="ew-iframe"></iframe>
@@ -88,15 +91,18 @@
             tabItems.forEach(tab => tab.classList.remove('active'));
             this.classList.add('active');
             const url = this.dataset.value;
-            iframe.setAttribute('src',url);
+            iframe.setAttribute('src', url);
             setIframeHeight();
         }
     });
 
     function setIframeHeight() {
         iframe.onload = function () {
-            const height = iframe.contentWindow.outerHeight;
-            iframe.style.height = height + 'px';
+            setTimeout(() => {
+                const _document = iframe.contentWindow.document;
+                const height = Math.max(_document.body.scrollHeight, _document.documentElement.scrollHeight);
+                iframe.style.height = height + 'px';
+            }, 0)
         }
     }
     setIframeHeight();

@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+#container {
+    width: 600px;
+    height: 400px;
+    border: none;
+    overflow: hidden;
+    position: relative;
+    border-radius: 5px;
+}
+
+#list {
+    width: 4200px;
+    height: 400px;
+    position: absolute;
+    z-index: 1;
+}
+
+#list img {
+    float: left;
+}
+
+#buttons {
+    position: absolute;
+    height: 10px;
+    width: 100px;
+    z-index: 2;
+    bottom: 20px;
+    left: 250px;
+}
+
+#buttons span {
+    cursor: pointer;
+    float: left;
+    border: 1px solid #fff;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #333;
+    margin-right: 5px;
+}
+
+#buttons .on {
+    background: rgb(245, 167, 138);
+}
+
+.arrow {
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    z-index: 2;
+    top: 180px;
+    color: #fff;
+    font-size: 40px;
+    font-family: "华文琥珀","楷体";
+}
+
+.arrow:hover {
+    color: #535455;
+}
+
+#container:hover .arrow {
+    display: block;
+}
+
+#prev {
+    left: 20px;
+}
+
+#next {
+    right: 20px;
+}
