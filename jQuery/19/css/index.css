@@ -1,0 +1,70 @@
+@charset "utf-8";
+html,body {
+    margin: 0; padding: 0;
+}
+.banner {
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 0;
+    /* 消除Chrome浏览器对最小字体的限制 */
+    -webkit-text-size-adjust:none;
+    position: relative;
+}
+.banner > div {
+    width: 100%; height: 100%;
+    /*display: inline-block;*/
+	display: block;
+    background-position: center center;
+    background-size: cover;
+	position: absolute;
+	overflow: hidden;
+}
+.banner > div.img-01 {
+    background-image: url("../img/01.jpg");
+}
+.banner > div.img-02 {
+    background-image: url("../img/02.jpg");
+}
+.banner > div.img-03 {
+    background-image: url("../img/03.jpg");
+}
+.banner > div.img-04 {
+    background-image: url("../img/04.jpg");
+}
+.banner > div.img-05 {
+    background-image: url("../img/05.jpg");
+}
+/* 百叶窗页面背景设置 */
+.childPanel {
+	height: 100%;
+	background-size: cover;
+	background-position: 0 0;
+	display: inline-block;
+	z-index: 1;
+}
+.rotatePanel {
+	animation: rotatePanel 0.9s both;
+}
+/* 轮播控制点 */
+.point {
+    position: absolute;
+    left: 50%; bottom: 20px;
+	display: block;
+	z-index: 2;
+}
+.point i {
+    width: 16px; height: 16px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 0 6px;
+	box-shadow: 0 0 0 1px rgba(0,0,0,0.3);
+}
+.point i.ckd {
+	background-color: #fff;
+}
+@keyframes rotatePanel {
+	0% { transform: rotateY(0deg);}
+	100% { transform: rotateY(90deg);}
+}

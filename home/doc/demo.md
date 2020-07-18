@@ -7,7 +7,6 @@
 ```html
     <div id="box"></div>
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/index.js"></script>
 ```
 ```css
 @charset "utf-8";
@@ -107,6 +106,137 @@ function buttonClick(){
     data-pen-title="qBbQaEq">
     <span>See the Pen <a href="https://codepen.io/eveningwater/pen/qBbQaEq">
      qBbQaEq</a> by eveningwater (<a href="https://codepen.io/eveningwater">@eveningwater</a>)
+    on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+### 幻灯片切换
+
+详情代码如下:
+
+```html
+    <page class="page1">
+		<div>页面一</div>
+	</page>
+	<page class="page2">
+		<div>页面二</div>
+	</page>
+	<page class="page3">
+		<div>页面三</div>
+	</page>
+```
+```css
+@charset "utf-8";
+html,body {
+	width: 100%; height: 100%;
+	margin: 0; padding: 0;
+	overflow: hidden;
+}
+/**************************************************/
+/* 细节设置部分 */
+/**************************************************/
+page {
+	width: 100%; height: 100%;
+	font-size: 32px;
+	color: #fff;
+	display: block;
+	position: absolute;
+}
+
+.page1 {
+	background-color: #9f0b0b;
+}
+.page2 {
+	background-color: #0b9f7d;
+	left: 100%;
+}
+.page3 {
+	background-color: #0b669f;
+	left: 100%;
+}
+/**************************************************/
+/* 动画执行部分 */
+/**************************************************/
+.page2_anim-1 {
+	animation: page2_anim-1 2.4s both;
+}
+.page3_anim-1 {
+	animation: page3_anim-1 1.2s both;
+}
+
+/**************************************************/
+/* 动画定义部分 */
+/**************************************************/
+/* page2 */
+@keyframes page2_anim-1 {
+	0% {
+		transform: rotate(0deg);
+		left: 100%;
+	}
+	100% {
+		transform: rotate(720deg);
+		left: 0%;
+	}
+}
+/* page3 */
+@keyframes page3_anim-1 {
+	0% {
+		transform: scale(0.8);
+		left: -100%; top: -100%
+	}
+	50% {
+		transform: scale(0.8);
+		left: 5%; top: 5%
+	}
+	100% {
+		transform: scale(1);
+		left: 0%; top: 0;
+	}
+}
+```
+```js
+var count = 0;
+var page = document.getElementsByTagName("page");
+var page1 = page[0],	
+	page2 = page[1],
+	page3 = page[2];
+page1.onclick = function() {
+	count++;
+	if(count == 1) {
+		page2.classList.add("page2_anim-1");
+	}
+}
+page2.onclick = function() {
+	count++;
+	if(count == 2) {
+		page3.classList.add("page3_anim-1");
+	}
+}
+
+document.oncontextmenu = function(event) {
+	event.preventDefault();
+	if(count == 0) {
+		return;
+	}
+	else {
+		count--;
+	}
+	if(count == 0) {
+		page2.classList.remove("page2_anim-1");
+	}
+	if(count == 1) {
+		page3.classList.remove("page3_anim-1");
+	}
+}
+```
+运行效果如下:
+
+<p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="result" data-user="eveningwater"
+    data-slug-hash="GRowjjd"
+    style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center;border: 2px solid; margin: 1em 0; padding: 1em;"
+    data-pen-title="GRowjjd">
+    <span>See the Pen <a href="https://codepen.io/eveningwater/pen/GRowjjd">
+     GRowjjd</a> by eveningwater (<a href="https://codepen.io/eveningwater">@eveningwater</a>)
     on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
