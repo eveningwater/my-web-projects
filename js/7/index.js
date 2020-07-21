@@ -1,7 +1,6 @@
 
 /**
  * 页面逻辑
- * github:https://github.com/eveningwater/vanilla-js-20
  */
 function $(selector) {
     return document.querySelector(selector);
@@ -14,7 +13,7 @@ const figurePart = $$('.figure-part');
 
 // 需要猜测的单词数组，从这个数组中挑选单词
 const words = ["html", 'css', 'javascript', 'vue', 'react', 'typescript'];
-const wordInfos = ["超文本标记语言","层叠样式表","开发web页面的脚本语言","是一套用于构建用户界面的渐进式框架","用于构建用户界面的 JavaScript 库","JavaScript的超集"]
+const wordInfos = ["超文本标记语言", "层叠样式表", "开发web页面的脚本语言", "是一套用于构建用户界面的渐进式框架", "用于构建用户界面的 JavaScript 库", "JavaScript的超集"]
 // 随机抽选
 let selectWord = selectWordRandom();
 
@@ -125,16 +124,21 @@ function eventHandle(letter) {
         }
     }
 }
-function openMobileKeyboard(){
+function openMobileKeyboard() {
     isShowKeyboard = !isShowKeyboard;
     keyboardContainer.style.display = isShowKeyboard ? "block" : 'none';
     this.innerHTML = isShowKeyboard ? '关闭虚拟键盘' : "开启虚拟键盘";
 }
 window.onload = function () {
-    if (navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i)) isMobile = true;
-    $('#seeConfirm').addEventListener('click',function () { 
+    isMobile = navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i);
+    // 查看提示
+    $('#seeConfirm').addEventListener('click', function () {
         $('#confirm-text').innerHTML = wordInfos[words.indexOf(selectWord)];
-     })
+    })
+    pageHandle();
+    displayWord();
+}
+function pageHandle() {
     if (!isMobile) {
         window.addEventListener('keydown', (e) => {
             if (playStatus) {
@@ -148,11 +152,11 @@ window.onload = function () {
     } else {
         $("#keyboard").style.display = "block";
         keyboardContainer.innerHTML = "";
-        $("#openKeyboard").addEventListener('click',openMobileKeyboard);
+        $("#openKeyboard").addEventListener('click', openMobileKeyboard);
         letters.split("").forEach((item) => {
             let button = document.createElement("button");
             button.innerHTML = item;
-            keyboardContainer.appendChild(button)
+            keyboardContainer.appendChild(button);
         });
         [].slice.call(keyboardContainer.children).map((btn) => {
             btn.addEventListener('click', function () {
@@ -160,7 +164,5 @@ window.onload = function () {
             })
         })
     }
-    displayWord();
 }
-
 

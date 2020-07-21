@@ -1,4 +1,10 @@
 
+/***
+ * 节选自:https://www.eveningwater.com/my-web-projects/
+ * github:https://github.com/eveningwater/my-web-projects/tree/master/js/2
+ * author:eveningwater
+ * date:2020/7
+ */
 /**
  *  页面功能
  */
