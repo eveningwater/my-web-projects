@@ -1,3 +1,9 @@
+/***
+ * 节选自:https://www.eveningwater.com/my-web-projects/
+ * github:https://github.com/eveningwater/my-web-projects/tree/master/js/4
+ * author:eveningwater
+ * date:2020/7
+ */
 /**
  * 获取选择器
  * @param {*} selector 

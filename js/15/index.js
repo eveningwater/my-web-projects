@@ -1,3 +1,9 @@
+/***
+ * 节选自:https://www.eveningwater.com/my-web-projects/
+ * github:https://github.com/eveningwater/my-web-projects/tree/master/js/15
+ * author:eveningwater
+ * date:2020/7
+ */
 function $(selector) {
     return document.querySelector(selector);
 }
@@ -94,11 +100,10 @@ pageEl.addEventListener('click', (e) => {
     if (e.target.tagName.toLowerCase() === 'button') {
         if (e.target.hasClass('next-page-btn')) {
             currentPage++;
-            searchSong(searchValue);
         } else {
             currentPage--;
             if (currentPage < 1) currentPage = 1;
-            searchSong(searchValue);
         }
+        searchSong(searchValue);
     }
 })

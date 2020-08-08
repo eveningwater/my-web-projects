@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+#app > .page {
+    text-align: center;
+}
+.el-footer {
+    margin-top: 10px;
+    color: #535455;
+}
+.radio-item {
+    margin: 10px 0;
+    text-align: left;
+}
+.max-width-800 {
+    max-width: 800px;
+}
+.title {
+    color: #535353;
+}
+.lh-60 {
+    line-height: 60px;
+}
+.display-inline-block {
+    display: inline-block;
+}
+.text-align-center {
+    text-align: center;
+}
+.w-80p {
+    width: 80%;
+}
+@media (max-width:700px) {
+    #app {
+        width: 100%;
+        display: block;
+    }
+    .el-form-item__label {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    .el-radio-group,.el-checkbox-group {
+        display: block;
+        text-align: left;
+    }
+    .el-radio-group >.el-radio {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .el-form-item__content {
+        margin-left: 0!important;
+    }
+}
