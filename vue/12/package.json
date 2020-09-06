@@ -1,0 +1,20 @@
+{
+  "name": "timeline",
+  "version": "1.0.0",
+  "description": "a project about timeline component",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc",
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "doc":"vuepress dev doc/.",
+    "doc-build":"vuepress build doc/."
+  },
+  "keywords": [
+    "timeline"
+  ],
+  "author": "eveningwater",
+  "license": "ISC"
+}
