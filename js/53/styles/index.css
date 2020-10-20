@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+*,*::before,*::after {
+    box-sizing: border-box;
+}
+body,html {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif,"幼圆";
+}
+button,input,select {
+    outline: none;
+}
+#app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+#app .page {
+    padding: 1rem;
+    margin:1rem;
+    border: 1px solid #f3f4f5;
+    border-radius: 4px;
+    box-shadow: 0 2px 3px #f4c6f9;
+}
+#app h1 {
+    text-align: center;
+    color: #998765;
+    margin-bottom: 10px;
+}
+#app > .page > .base-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 4px;
+}
+#app > .page > .base-table,#app > .page > .base-table tr th,#app > .page > .base-table tr td {
+    border: 1px solid #e3e4e5;
+}
+#app > .page > .base-table tr th,#app > .page > .base-table tr td {
+    text-align: center;
+    padding: 12px 16px;
+    color: #535455;
+}
+#app > .page > .table-header {
+    margin-bottom: 10px;
+    text-align: right;
+}
+#app > .page > .base-form {
+    padding: 0 20px;
+    margin-bottom: 15px;
+}
+#app > .page > .base-form.base-inline-form .base-form-item {
+    display: inline-block;
+    vertical-align: middle;
+}
+.form-item-btnGroup {
+    display: flex;
+    justify-content: center;
+}
+.form-item-btnGroup .base-btn {
+    margin: 0 8px;
+}
+.base-form .base-form-item {
+    margin: 0 6px 15px 0;
+}
+#app > .page > .base-form .base-form-item label {
+    color: #676869;
+    width: 80px;
+    display: inline-block;
+    text-align: right;
+}
+.base-input {
+    padding: 8px 12px;
+    display: inline-block;
+    border: 1px solid #dadada;
+    border-radius: 5px;
+}
+.base-input:focus {
+    border-color: #2396ef;
+}
+.base-btn {
+    display: inline-block;
+    padding: 8px 14px;
+    border:1px solid #d5d7da;
+    cursor: pointer;
+    border-radius: 6px;
+    background-color: transparent;
+    transition: all .2s;
+    font-size: 14px;
+}
+.base-btn:hover {
+    border-color: #4097fe;
+    color: #4199ef;
+}
+.base-btn.base-btn-primary {
+    background-color: #2396ef;
+    border-color: #2497ef;
+    color: #ffffff;
+}
+.base-btn.base-btn-primary:hover {
+    background-color: #4eabf3;
+    border-color: #50abf1;
+    color: #ffffff;
+}
+.base-btn.base-btn-danger {
+    background-color: #ef2323;
+    border-color: #ef2424;
+    color: #ffffff;
+}
+.base-btn.base-btn-danger:hover {
+    background-color: #f34e4e;
+    border-color: #f15050;
+    color: #ffffff;
+}
