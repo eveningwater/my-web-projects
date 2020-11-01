@@ -21,7 +21,7 @@ request = indexedDB.open("personDB",2);
  */
 function createForm(data,keyPath){
     return ewConfirm({
-        title:`${ data ? '编辑' : '新增'}学生`,
+        title:`${ data ? '编辑' : '新增'}人员`,
         content:`
             <form class="base-form" id="handle-form">
                 <div class="base-form-item">
