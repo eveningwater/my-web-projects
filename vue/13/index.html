@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>composition API实现的一个简易版to-do list</title>
+  <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+  <div id="app">
+    <div class="container">
+      <input type="text" class="todo-input" placeholder="请输入待办事项" @keydown.enter="addTodo" v-model="state.todoValue">
+      <button class="todo-button todo-add-edit-button" type="button" @click="addTodo">确认{{ state.editIndex > -1 ? '编辑' : '添加'}}</button>
+    </div>
+    <ul class="todo-list">
+      <li v-for="(item,index) in state.todoList" :key="index" class="todo-list-item" :order="(index + 1) + '.'">
+        <p @click="seeDetail(item.text)">{{ item.text }}</p>
+        <button class="todo-button todo-edit-button" type="button" @click="editTodo(item,index)">{{ state.editIndex === index ? '取消编辑' : '编辑'}}</button>
+        <button class="todo-button todo-remove-button" type="button" @click="deleteTodo(index)">删除</button>
+      </li>
+    </ul>
+  </div>
+</body>
+<script src="./plugins/vue-next.min.js"></script>
+<script src="./plugins/message.js"></script>
+<script src="./plugins/modal.js"></script>
+<script src="./index.js"></script>
+
+</html>

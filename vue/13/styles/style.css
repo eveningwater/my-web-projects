@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  button,
+  input {
+    outline: none;
+  }
+
+  body,
+  html {
+    height: 100%;
+  }
+
+  #app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+  }
+
+  ul,
+  li {
+    list-style: none;
+  }
+  .container {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .todo-input {
+    width: 80%;
+    display: inline-block;
+    border: 1px solid #989796;
+    background-color: #ffffff;
+    padding: 12px;
+    border-radius: 3px;
+  }
+  .todo-button {
+    display: inline-block;
+    padding: 12px 16px;
+    border-radius: 4px;
+    border: 1px solid #d4d5d6;
+    color: #666968;
+    border-radius: 3px;
+    background-color: transparent;
+    transition: border-color .3s linear, color .2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    cursor: pointer;
+  }
+
+  .todo-button.todo-remove-button,
+  .todo-button.todo-edit-button {
+    padding: 0;
+    position: absolute;
+    top: 0;
+    border: none;
+    font-size: 16px;
+    line-height: 45px;
+  }
+
+  .todo-button.todo-remove-button {
+    right: 5px;
+  }
+
+  .todo-button.todo-edit-button {
+    right: 45px;
+  }
+
+  .todo-button:hover {
+    border-color: #2397ef;
+    color: #2396ef;
+  }
+  .todo-button.todo-add-edit-button {
+    margin-left: 25px;
+    width: 15%;
+  }
+  .todo-list {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 10px;
+  }
+
+  .todo-list .todo-list-item::before {
+    content: attr(order);
+    font-size: 18px;
+    color: #535455;
+    font-family: "幼圆";
+    margin-right: 4px;
+  }
+
+  .todo-list .todo-list-item {
+    width: 100%;
+    position: relative;
+    padding: 10px 0;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .todo-list-item p {
+    width: 70%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    position: relative;
+  }
+  ::-webkit-input-placeholder {
+    color: #f18622;
+    letter-spacing: 2px;
+  }
