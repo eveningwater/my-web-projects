@@ -44,10 +44,8 @@ createPopBox.prototype.create = function (tagName) {
  * @param {*} time
  */
 createPopBox.prototype.close = function (time) {
-    setTimeout(() => {
-        this.$('.ew-popBox-mask').classList.add('hidden');
-        this.$('.ew-popBox-mask').classList.remove('show');
-    }, time)
+    this.$('.ew-popBox-mask').classList.add('hidden');
+    this.$('.ew-popBox-mask').classList.remove('show');
 }
 createPopBox.prototype.renderStyle = function (option) {
     option.footerAlign =

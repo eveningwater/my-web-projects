@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  *::before,
+  *::after,
+  * {
+    box-sizing: border-box;
+  }
+
+  body,
+  html {
+    height: 100%;
+  }
+
+  #canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: url('./images/1.jfif')no-repeat center/cover;
+  }
