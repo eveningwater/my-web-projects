@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+.ew-tree-list {
+  padding: 20px;
+}
+
+.ew-tree-list .ew-tree-list-item {
+  padding: 6px 16px;
+  cursor: pointer;
+}
+
+.ew-tree-list .ew-tree-list-item .ew-tree-item-folder {
+  background-color: #2396ef;
+  display: inline-block;
+  position: relative;
+  right: 8px;
+  font: 20px/20px "幼圆", "楷体";
+  width: 20px;
+  height: 20px;
+  color: #ffffff;
+  border-radius: 2px;
+  text-align: center;
+}
+.ew-tree-list .ew-tree-list-item .ew-tree-children .no-folder {
+  padding-bottom: 5px;
+}
+.ew-tree-list .ew-tree-list-item .ew-tree-item-content {
+  color: #535455;
+  font-size: 14px;
+  font-family: "宋体";
+  position: relative;
+  padding-left: 6px;
+}
