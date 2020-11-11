@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+button,
+input {
+  outline: none;
+}
+
+.flex-center {
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.handle-container {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ml-15 {
+  margin-left: 15px;
+}
+
+.todo-list {
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+}
+
+.todo-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.ew-btn-group {
+  display: inline-flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.todo-list-item::before {
+  content: attr(order);
+  color: #f3a42d;
+  font: 18px "宋体", "楷体";
+}
+
+.todo-list-item p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  color: #535455;
+  letter-spacing: 2px;
+  font: 16px "黑体", "楷体";
+}
+
+.todo-list-item p:hover {
+  border-bottom: 1px solid #2396ef;
+  color: #2396ef;
+}
+
+.ew-input {
+  display: inline-block;
+  padding: 12px 20px;
+  border: 1px solid #535455;
+  background-color: transparent;
+  color: #535455;
+  font: 14px "幼圆", "楷体";
+  letter-spacing: 2px;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.ew-input::-webkit-input-placeholder {
+  color: #535455;
+}
+
+.ew-btn {
+  display: inline-block;
+  padding: 12px 20px;
+  border: 1px solid #dcdfe5;
+  background-color: #ffffff;
+  font-size: 14px;
+  line-height: 1;
+  white-space: nowrap;
+  color: #606265;
+  text-align: center;
+  transition: all 0.1s;
+  cursor: pointer;
+  border-radius: 4px;
+  letter-spacing: 2px;
+}
+
+.ew-btn:hover {
+  color: #57a5f3;
+  border-color: #d1e6fc;
+  background-color: #e6ecf3;
+}
+
+.ew-btn.ew-btn-primary {
+  color: #fff;
+  background-color: #57a5f3;
+  border-color: #57a5f3;
+}
+
+.ew-btn.ew-btn-primary:hover {
+  background: #3f94f0;
+  border-color: #3f94f0;
+  color: #fff;
+}
+
+.ew-btn.ew-btn-danger {
+  color: #fff;
+  background-color: #fc7c7c;
+  border-color: #fc7c7c;
+}
+
+.ew-btn.ew-btn-danger:hover {
+  background: #f78585;
+  border-color: #f78585;
+  color: #fff;
+}
