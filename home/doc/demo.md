@@ -240,3 +240,116 @@ document.oncontextmenu = function(event) {
     on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+### 随机验证码
+
+```html
+    <div class="font"></div>
+```
+
+```css
+    .font {
+        width: 70px;
+        height: 40px;
+        margin: 120px auto;
+        background-color: rgba(44, 83, 167, 0.39);
+        box-shadow: 0 0 5px rgba(241, 241, 235, 0.69);
+        color: #fff;
+        font: 17px/40px "微软雅黑";
+        text-align: center;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+```
+
+```js
+    window.onload = function () {
+        //获取容器
+        var f = document.getElementsByClassName("font")[0];
+        //定义随机验证码
+        var num = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        /*var num =/^\w{4}$/;*/
+        function numRandom(param) {
+            var str = "";
+            for (var i = 0; i < param; i++) {
+                str += num[Math.floor(Math.random() * num.length)];
+            }
+            f.textContent = str;
+        }
+        numRandom(6);
+        //随机取验证码并添加到容器中
+        f.onclick = function () {
+            numRandom(6);
+        }
+    }
+```
+
+运行效果如下:
+
+<p class="codepen" data-height="265" data-theme-id="light" data-default-tab="js,result" data-user="eveningwater" data-slug-hash="wvWNpwM" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="随机验证码">
+  <span>See the Pen <a href="https://codepen.io/eveningwater/pen/wvWNpwM">
+  随机验证码</a> by eveningwater (<a href="https://codepen.io/eveningwater">@eveningwater</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+### 20行js代码实现贪吃蛇
+
+```html
+    <p><span>游戏说明:</span>键盘方向键上下左右控制蛇移动,撞墙或者撞到自己都会游戏结束.</p>
+	<canvas id="canvas" width="400" height="400" style="background:#999;">当前浏览器不支持canvas标签</canvas>
+```
+
+```css
+    body{
+    	margin: 0;padding: 0;
+    }
+    canvas{
+    	display: block;
+    	margin: 20px auto;
+    }
+    p{
+    	text-align: center;
+    }
+    span{
+    	color: #f00;
+    }
+```
+
+```js
+    var s = [41,40],
+		d = 1,
+		f = 43,
+		x,
+		b = document.getElementById('canvas').getContext('2d');
+	function w(s,c){
+		b.fillStyle = c;
+		b.fillRect(s % 20 * 20, ~~(s / 20) * 20 , 18 , 18);
+	}
+	document.onkeydown = function(e){
+		d = s[1] - s[0] == (x = [-1,-20,1,20][(e || event).keyCode - 37] || d ) ? d : x;
+	}
+	!(function(){
+		s.unshift(x = s[0] + d);
+		if(s.indexOf(x,1) > 0 || x < 0 || x > 399 || d == 1 && x % 20 == 0 || d == -1 && x % 20 == 19){
+			return alert('游戏结束!');
+		}
+		w(x,'#e641d3');
+		if(x == f){
+			while (s.indexOf(f = ~~(Math.random() * 399)) > 0);
+			w(f,'#35e3dc');
+		}else{
+			w(s.pop(),'#999');
+		}
+		setTimeout(arguments.callee,300);
+	})();
+```
+
+运行效果如下:
+
+<p class="codepen" data-height="265" data-theme-id="light" data-default-tab="js,result" data-user="eveningwater" data-slug-hash="jOrdzMO" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="20行js代码实现贪吃蛇">
+  <span>See the Pen <a href="https://codepen.io/eveningwater/pen/jOrdzMO">
+  20行js代码实现贪吃蛇</a> by eveningwater (<a href="https://codepen.io/eveningwater">@eveningwater</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
