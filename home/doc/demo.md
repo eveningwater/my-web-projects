@@ -353,3 +353,77 @@ document.oncontextmenu = function(event) {
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+### computed year day
+
+```html
+    <section>
+        <span>距离今年最后一天还有:</span>
+        <span class="day">0</span>天
+        <span class="hour">0</span>小时
+        <span class="minute">0</span>分
+        <span class="second">0</span>秒
+    </section>
+```
+
+```css
+    body,
+    html {
+        margin: 0;
+        padding: 0;
+        font: 16px "微软雅黑";
+        overflow: hidden;
+        color: #e2156d;
+        height: 100%;
+    }
+    section {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #efefef;
+    }
+    section > span {
+        vertical-align: baseline;
+    }
+    section span:first-child {
+        font-size: 30px;
+        color: #29b7d9;
+        text-shadow: 0 0 5px rgba(233, 226, 202, 0.87);
+    }
+    section span:not(:first-child) {
+        font-size: 18px;
+    }
+```
+
+```js
+    //定义今年的最后一天
+    var lastTime = new Date(new Date().getFullYear(), 11, 31, 23, 59, 59, 999);
+    //获取容器
+    var sec = document.getElementsByTagName("section")[0];
+    var day = document.getElementsByClassName("day")[0],
+        hour = document.getElementsByClassName("hour")[0],
+        minute = document.getElementsByClassName("minute")[0],
+        second = document.getElementsByClassName("second")[0];
+    function computedTime(){
+        //获取当前时间
+        var nowTime = new Date();
+        //获取时间差
+        var x = lastTime - nowTime;
+        second.textContent = Math.ceil(x / 1000);
+        minute.textContent = Math.ceil(x / 1000 / 60);
+        hour.textContent = Math.ceil(x / 1000 / 60 / 60);
+        day.textContent = Math.ceil(x / 1000 / 60 / 60 / 24);
+        return setTimeout(computedTime,1000);
+    }
+    computedTime();
+```
+
+运行效果如下:
+
+<p class="codepen" data-height="265" data-theme-id="light" data-default-tab="js,result" data-user="eveningwater" data-slug-hash="abZXYJy" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="computed year day">
+  <span>See the Pen <a href="https://codepen.io/eveningwater/pen/abZXYJy">
+  computed year day</a> by eveningwater (<a href="https://codepen.io/eveningwater">@eveningwater</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
