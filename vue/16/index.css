@@ -1,0 +1,34 @@
+.checkbox-select .el-poper-input {
+  width: 240px;
+}
+
+.checkbox-select .el-poper-input.el-input.is-disabled .el-input__inner {
+  background-color: #fff;
+  border-color: #c0c4cc;
+  color: #606266;
+  cursor: pointer;
+}
+
+.checkbox-select
+  .el-poper-input.el-input.is-disabled
+  .el-input__icon.el-icon-circle-close {
+  cursor: pointer;
+  color: #606266;
+}
+
+.el-popover.el-popper.select-poper {
+  padding: 12px;
+  box-sizing: border-box;
+  overflow: auto;
+  height: 250px;
+}
+
+.el-popover.el-popper.select-poper .el-checkbox {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.el-input__prefix {
+  top: 4px;
+}

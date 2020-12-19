@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>下拉多选选择组件</title>
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css" />
+  <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+  <div id="app">
+    <check-box-select :select-data="dataList" v-model="selectData" @change="onChange"></check-box-select>
+  </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script type="text/template" id="checkboxSelect">
+  <div class="checkbox-select" :style="{'width':popoverWidth + 'px'}">
+    <el-popover
+      :placement="placeMent"
+      :width="popoverWidth"
+      trigger="click"
+      :checkSelectValue="finallySelectValue"
+      popper-class="select-poper"
+      @show="onShow"
+      @hide="onHide"
+    >
+      <el-checkbox
+        :indeterminate="isIndeterminate"
+        v-model="checkAll"
+        @change="handleCheckAllChange"
+        v-if="showAll"
+      >{{ this.allProps.allValue }}</el-checkbox>
+      <el-checkbox-group v-model="selectValue" @change="handleCheckedChange">
+        <el-checkbox
+          v-for="(item,index) in selectData"
+          :key="item[getValue] + index"
+          :label="item[getValue]"
+        >{{ item[getLabel] }}</el-checkbox>
+      </el-checkbox-group>
+      <div slot="reference">
+        <el-input
+        :placeholder="getSelectValue.length ? '' : selectPlaceholder"
+        disabled
+        class="el-poper-input"
+        :suffix-icon="'el-icon-arrow-' + (visible ? 'up' :'down')"
+      >
+        <template>
+          <span slot="prefix">
+            <el-tag
+              v-for="(tag,index) in getSelectValue.slice(0,1)"
+              :key="tag.value + index"
+              closable
+              type="info"
+              @close="onClose(tag.value)"
+            >{{tag.label}}</el-tag>
+            <el-tag type="info" v-if="getSelectValue.length > 1">+{{ selectValue.length }}</el-tag>
+          </span>
+        </template>
+      </el-input>
+      </div>
+    </el-popover>
+  </div>
+</script>
+<script src="./checkbox_select.js"></script>
+<script src="./index.js"></script>
+
+</html>
