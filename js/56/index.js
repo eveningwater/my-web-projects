@@ -1,4 +1,4 @@
-const fonts = ['新', '年', '快', '乐'];
+const fonts = ['新','年', '快', '乐'];
 const createLayOut = (value) => `
         <div class="lantern-box">
             <div class="lantern-light">

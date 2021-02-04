@@ -6,6 +6,7 @@
 .lantern-box {
     position: fixed;
     pointer-events: none;
+    z-index: 9999;
 }
 .lantern-light {
     position: relative;
@@ -118,4 +119,38 @@
 .container .lantern-box:last-child {
     right: 10px;
     top: -26px;
+}
+@media only screen and (max-width:700px){
+    .lantern-light{
+        margin: 50px 0;
+        width: 90px;
+    }
+    .lantern-circle {
+        width: 75px;
+    }
+    .lantern-light::before,.lantern-light::after {
+        width: 30px;
+    }
+    .lantern-line {
+        left: 45px;
+    }
+    .lantern-tassel-top {
+        margin:-5px 0 0 43px;
+    }
+    .lantern-rect {
+        width: 40px;
+        margin: -2px 8px 8px 14px;
+    }
+    .container .lantern-box:first-child{
+        left: 0;
+    }
+    .container .lantern-box:nth-child(2) {
+        left: 95px;
+    }
+    .container .lantern-box:nth-child(3) {
+        right: 95px;
+    }
+    .container .lantern-box:last-child{
+        right: 0;
+    }
 }
