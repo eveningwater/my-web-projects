@@ -57,3 +57,4 @@
 |  53  |           [indexedDB示例](https://github.com/eveningwater/my-web-projects/tree/master/js/53)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/53/) 
 |  54  |           [爱心示例](https://github.com/eveningwater/my-web-projects/tree/master/js/54)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/54/) 
 |  55  |           [流星雨示例](https://github.com/eveningwater/my-web-projects/tree/master/js/55)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/55/) 
+|  56  |           [灯笼示例](https://github.com/eveningwater/my-web-projects/tree/master/js/56)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/56/) 
