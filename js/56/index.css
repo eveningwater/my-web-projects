@@ -121,34 +121,47 @@
     top: -26px;
 }
 @media only screen and (max-width:700px){
+    .lantern-circle,.lantern-rect,.lantern-light {
+        height: 70px;
+    }
     .lantern-light{
         margin: 50px 0;
-        width: 90px;
+        width: 80px;
     }
     .lantern-circle {
-        width: 75px;
+        width: 65px;
     }
     .lantern-light::before,.lantern-light::after {
-        width: 30px;
+        width: 20px;
+    }
+    .lantern-light::before {
+        top: -10px;
+    }
+    .lantern-light::after {
+        bottom: -10px;
     }
     .lantern-line {
-        left: 45px;
+        left: 40px;
     }
     .lantern-tassel-top {
-        margin:-5px 0 0 43px;
+        margin:-5px 0 0 38px;
     }
     .lantern-rect {
-        width: 40px;
+        width: 30px;
         margin: -2px 8px 8px 14px;
+    }
+    .lantern-text {
+        line-height: 65px;
+        font-size: 1.6rem;
     }
     .container .lantern-box:first-child{
         left: 0;
     }
     .container .lantern-box:nth-child(2) {
-        left: 95px;
+        left: 85px;
     }
     .container .lantern-box:nth-child(3) {
-        right: 95px;
+        right: 85px;
     }
     .container .lantern-box:last-child{
         right: 0;
