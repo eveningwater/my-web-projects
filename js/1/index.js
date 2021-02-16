@@ -59,9 +59,6 @@ function allCheck(el) {
     return new Promise(resolve => {
         [].slice.call(el).forEach((item, index) => {
             checkDetail(item, index);
-            item.addEventListener('blur', () => {
-                checkDetail(item, index);
-            });
         });
         resolve();
     })
