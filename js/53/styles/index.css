@@ -1,26 +1,45 @@
 *{
     margin: 0;
     padding: 0;
+    user-select: none;
+    /*三角箭头的颜色*/
+    scrollbar-arrow-color: #c0c4cc;
+    /*滚动条滑块按钮的颜色*/
+    scrollbar-face-color: #A2A2A3;
+    /*滚动条整体颜色*/
+    scrollbar-highlight-color: #A2A2A3;
+    /*滚动条阴影*/
+    scrollbar-shadow-color: #A2A2A3;
+    /*滚动条轨道颜色*/
+    scrollbar-track-color: #f4f4f5;
+    /*滚动条3d亮色阴影边框的外观颜色——左边和上边的阴影色*/
+    scrollbar-3dlight-color: #A2A2A3;
+    /*滚动条3d暗色阴影边框的外观颜色——右边和下边的阴影色*/
+    scrollbar-darkshadow-color: #A2A2A3;
+    /*滚动条基准颜色*/
+    scrollbar-base-color: #f4f4f5;
 }
 *,*::before,*::after {
     box-sizing: border-box;
 }
 body,html {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif,"幼圆";
+    overflow: hidden;
+    height: 100%;
+    font-size: 16px;
 }
 button,input,select {
     outline: none;
 }
 #app {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    overflow-x:hidden;
+    overflow-y: auto;
 }
 #app .page {
     padding: 1rem;
-    margin:1rem;
     border: 1px solid #f3f4f5;
     border-radius: 4px;
     box-shadow: 0 2px 3px #f4c6f9;
@@ -30,20 +49,29 @@ button,input,select {
     color: #998765;
     margin-bottom: 10px;
 }
-#app > .page > .base-table {
+#app > .page > .table-wrapper {
     width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+#app > .page > .table-wrapper > .base-table {
+    width: 100%;
+    width: 1200px;
     border-collapse: collapse;
     border-radius: 4px;
 }
-#app > .page > .base-table,#app > .page > .base-table tr th,#app > .page > .base-table tr td {
+#app > .page > .table-wrapper > .base-table,
+#app > .page > .table-wrapper > .base-table tr th,
+#app > .page > .table-wrapper .base-table tr td {
     border: 1px solid #e3e4e5;
 }
-#app > .page > .base-table tr th,#app > .page > .base-table tr td {
+#app > .page > .table-wrapper .base-table tr th,
+#app > .page > .table-wrapper .base-table tr td {
     text-align: center;
     padding: 12px 16px;
     color: #535455;
 }
-#app > .page > .table-header {
+#app > .page  > .table-header {
     margin-bottom: 10px;
     text-align: right;
 }
@@ -70,6 +98,7 @@ button,input,select {
     width: 80px;
     display: inline-block;
     text-align: right;
+    margin-right: 5px;
 }
 .base-input {
     padding: 8px 12px;
@@ -113,4 +142,40 @@ button,input,select {
     background-color: #f34e4e;
     border-color: #f15050;
     color: #ffffff;
+}
+@media only screen and (max-width:960px) {
+    #app > .page > .base-form.base-inline-form .base-form-item {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+/* 清除滑条样式 */
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    background: none;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgb(244, 245, 245);
+    border-radius: 6px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to right,#c8e0f1,#248df7);
+    border-radius: 6px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to right,#b8daf5,#0672df);
 }

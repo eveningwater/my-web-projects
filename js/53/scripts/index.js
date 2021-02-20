@@ -76,16 +76,16 @@ function judgeInputs(inputs){
         job = inputs[3].value, //职业
         hobby = inputs[4].value; //爱好
     let errorText = "";
-    if(!name || name.length <= 1 || name.length > 20){
-        errorText = "请输入姓名，并且姓名字数不得小于1个或者大于20个!";
+    if(!name || name.length <= 2 || name.length > 20){
+        errorText = "请输入姓名，并且姓名字数不得小于2个或者大于20个!";
     }else if(isNaN(age) || age <= 0){
         errorText = "请输入年龄，并且年龄不能为小于0的数，也不能为小数等!"
     }else if(!tel || !/^1[345678]\d{9}$/.test(tel)){
         errorText = "请输入正确格式的电话号码，示例如:18283984473!"
-    }else if(!job || job.length <= 1){
-        errorText = "请输入职业，并且字数不能小于1!";
-    }else if(!hobby || hobby.length <= 1){
-        errorText = "请输入爱好，并且字数不能小于1!";
+    }else if(!job || job.length <= 2){
+        errorText = "请输入职业，并且字数不能小于2!";
+    }else if(!hobby || hobby.length <= 2){
+        errorText = "请输入爱好，并且字数不能小于2!";
     }else{
         errorText = "";
     }
