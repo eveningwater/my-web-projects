@@ -54,17 +54,15 @@ html {
     height: 100%;
 }
 
-#main header,
-#content {
+#main header,#main header > ul {
+    width: 100%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
-
-#main header ul {
-    min-width: 50%;
+#main header > ul {
+    max-width: 700px;
 }
-
 /*div*/
 header ul li {
     padding: 10px;
@@ -147,4 +145,9 @@ input[type="text"] {
 }
 .ew-popBox input:focus {
     border-color: #2396ef;
+}
+@media only screen and (max-width:1300px) {
+    header ul li:nth-child(5n) {
+        float: left;
+    }
 }

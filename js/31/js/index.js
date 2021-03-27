@@ -107,7 +107,7 @@ function createScoreBox(){
         `,
         sure:(scope) => {
             let input = scope.$('input.user-score-input',false);
-            if(input[0].value && input[0].value){
+            if(input[0].value && input[1].value){
                 const scoreBox = new ewScoreCounter({
                     count:Number(input[1].value),
                     total:Number(input[0].value)

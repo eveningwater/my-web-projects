@@ -143,6 +143,11 @@ const songs = [
         name: "新娘不是我",
         singer: "程响",
         imgName: "chengxiang"
+    },
+    {
+        name: "仙剑问情",
+        singer: "萧人凤",
+        imgName: "xiaorenfeng"
     }
 ];
 let modeCount = 0;
