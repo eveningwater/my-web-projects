@@ -1,0 +1,37 @@
+.news-card-container {
+    width: 100%;
+    padding: 2rem;
+    height: calc(100% - 50px);
+    overflow: hidden;
+    overflow-y: auto;
+
+    .news-card {
+        padding: 25px 35px;
+        margin-bottom: 15px;
+        width: 100%;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        cursor: pointer;
+        border: 1px solid #dedfde;
+        &:hover,&.active {
+            box-shadow: 0 2px 10px rgb(66, 219, 240, .2);
+        }
+        h3 {
+            font-weight: 600;
+            color: rgb(116, 113, 116);
+            margin-bottom: 15px;
+            font-family: "华文琥珀";
+        }
+        img {
+            width: auto;
+            height: auto;
+            max-width: 250px;
+            max-height: 250px;
+            display: block;
+            border-radius: 4px;
+        }
+    }
+}

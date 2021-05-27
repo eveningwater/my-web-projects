@@ -1,0 +1,34 @@
+{
+  "name": "es6-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "start": "webpack serve --open",
+    "server": "nodemon server.js"
+  },
+  "author": "eveningwater",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.14.0",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "@babel/plugin-proposal-decorators": "^7.13.15",
+    "@babel/preset-env": "^7.14.0",
+    "axios": "^0.21.1",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.2.4",
+    "express": "^4.17.1",
+    "html-webpack-plugin": "^5.3.1",
+    "less": "^4.1.1",
+    "less-loader": "^8.1.1",
+    "nodemon": "^2.0.7",
+    "regenerator-runtime": "^0.13.7",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.36.2",
+    "webpack-cli": "^4.6.0",
+    "webpack-dev-middleware": "^4.1.0"
+  }
+}
