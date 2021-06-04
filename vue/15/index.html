@@ -6,91 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>vue3.0动态自定义指令用法</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-        *,
-        *::before,
-        *::after {
-            box-sizing: border-box;
-        }
-
-        #app,
-        body,
-        html {
-            height: 100%;
-            overflow: hidden;
-        }
-
-        button,
-        select,
-        input {
-            outline: none;
-        }
-
-        .box {
-            width: 150px;
-            height: 150px;
-            position: absolute;
-        }
-
-        .box-container {
-            position: relative;
-            width: calc(100% - 200px);
-            margin-left: 200px;
-            height: 100%;
-            left: 0;
-            top: 0;
-            border: 1px solid #f2f3f4;
-            background-color: #dddddd;
-            overflow: hidden;
-        }
-
-        .menu {
-            width: 200px;
-            position: fixed;
-            left: 0;
-            top: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-        }
-
-        .menu h2 {
-            font: 18px "幼圆", "楷体";
-            color: #535455;
-            padding: 10px;
-        }
-
-        .menu-item {
-            margin: 10px 0;
-        }
-
-        .menu-item .color-picker,
-        .menu-item input[type="range"] {
-            margin-left: 5px;
-        }
-
-        .menu-item .color-picker,
-        .menu-item label,
-        .menu-item input[type="range"] {
-            display: inline-block;
-            vertical-align: middle;
-        }
-
-        .menu-item label {
-            color: #535455;
-            font: 14px "宋体", "楷体";
-        }
-
-        .menu-item input[type="range"] {
-            border: 1px solid #d2d3d4;
-        }
-    </style>
+    <link rel="stylesheet" href="https://www.unpkg.com/ew-color-picker/dist/ew-color-picker.min.css">
+    <link rel="stylesheet" href="./index.css">
 </head>
 
 <body>
@@ -138,65 +55,7 @@
     </div>
 </body>
 <script src="https://unpkg.com/vue@next"></script>
-<script src="https://www.unpkg.com/ew-color-picker@1.5.1/dist/ew-color-picker.js"></script>
-<script>
-    const App = {
-        setup() {
-            const state = Vue.reactive({
-                distance: {
-                    left: 0,
-                    top: 0,
-                    right: 0,
-                    bottom: 0
-                },
-                direction: "left",
-                background: "#2396ef",
-                maxHorValue: 0,
-                maxVerValue: 0,
-                boxEl: null
-            });
-            Vue.onBeforeUpdate(() => {
-                state.boxEl = null
-            })
-            Vue.onMounted(() => {
-                new ewColorPicker({
-                    el: "#color-picker",
-                    sure: (color) => {
-                        state.background = color;
-                    },
-                    clear: () => {
-                        state.background = "#2396ef";
-                    }
-                })
-                // 元素有一个本身的宽高为150，所以要减去
-                state.maxHorValue = state.boxEl.offsetWidth - 150;
-                state.maxVerValue = state.boxEl.offsetHeight - 150;
-            })
-            return {
-                state
-            }
-        }
-    };
-    const app = Vue.createApp(App);
-    app.directive('fixed', {
-        mounted(el, binding) {
-            const s = binding.arg || 'top';
-            el.style[s] = binding.value + 'px'
-        },
-        updated(el, binding) {
-            const s = binding.arg || 'top'
-            const css = el.style.cssText;
-            ['left', 'right', 'bottom', 'top'].forEach(item => {
-                if (item !== s) {
-                    if (css.indexOf(item) > -1) {
-                        el.style[item] = null;
-                    }
-                }
-            })
-            el.style[s] = binding.value + 'px'
-        }
-    })
-    app.mount('#app');
-</script>
+<script src="https://www.unpkg.com/ew-color-picker/dist/ew-color-picker.min.js"></script>
+<script src="./app.js"></script>
 
 </html>

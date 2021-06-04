@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+#app,
+body,
+html {
+    height: 100%;
+    overflow: hidden;
+}
+
+button,
+select,
+input {
+    outline: none;
+}
+
+.box {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+}
+
+.box-container {
+    position: relative;
+    width: calc(100% - 200px);
+    margin-left: 200px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border: 1px solid #f2f3f4;
+    background-color: #dddddd;
+    overflow: hidden;
+}
+
+.menu {
+    width: 200px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.menu h2 {
+    font: 18px "幼圆", "楷体";
+    color: #535455;
+    padding: 10px;
+}
+
+.menu-item {
+    margin: 10px 0;
+}
+
+.menu-item .color-picker,
+.menu-item input[type="range"] {
+    margin-left: 5px;
+}
+
+.menu-item .color-picker,
+.menu-item label,
+.menu-item input[type="range"] {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.menu-item label {
+    color: #535455;
+    font: 14px "宋体", "楷体";
+}
+
+.menu-item input[type="range"] {
+    border: 1px solid #d2d3d4;
+}

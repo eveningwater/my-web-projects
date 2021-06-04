@@ -1,0 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.el-make-pagination-container {
+    margin-top: 15px;
+    text-align: right;
+}
