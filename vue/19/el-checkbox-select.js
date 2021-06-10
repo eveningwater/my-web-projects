@@ -17,9 +17,14 @@ const ElBoxSelect = {
                     :label="item[selectProps.label]"
                     :value="item[selectProps.value]"
                 >
-                    <el-checkbox :value="item[selectProps.status]" @change="changeStatus" :true-label="item[selectProps.value]" :false-label="item[selectProps.value]">
+                    <el-checkbox 
+                        :value="item[selectProps.status]" 
+                        @change="changeStatus" 
+                        :true-label="item[selectProps.value]" 
+                        :false-label="item[selectProps.value]"
+                    >
+                        {{ item[selectProps.label] }}
                     </el-checkbox>
-                    {{ item[selectProps.label] }}
                 </el-option>
             </template>
             <template v-else>

@@ -39,6 +39,22 @@ const app = new Vue({
                 more:[]
             }
         }
+    },
+    computed:{
+        getSelectFormLabel(){
+            const { single,more } = this.selectForm;
+            const singleLabelItem = data.find(i => i.value === single);
+            const moreLabelItem = data.reduce((res,item) => {
+                if(more.indexOf(item.value) > -1){
+                    res.push(item.label);
+                }
+                return res;
+            },[]);
+            return {
+                single:singleLabelItem && singleLabelItem['label'],
+                more:moreLabelItem.join(",")
+            }
+        }
     }
 });
 app.$mount("#app");

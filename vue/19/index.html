@@ -15,8 +15,8 @@
       <el-box-select v-model="selectForm.single" placeholder="请选择一个人物" :select-list="selectSingleData" :select-props="singleProps"></el-box-select>
       <el-box-select v-model="selectForm.more" placeholder="请选择一个或多个人物" :select-list="selectMoreData" multiple></el-box-select>
       <hr>
-      <p>你选择的是(单选):{{ selectForm.single }}</p>
-      <p>你选择的是(多选):{{ selectForm.more.join(",") }}</p>
+      <p>你选择的是(单选):{{ getSelectFormLabel.single }}</p>
+      <p>你选择的是(多选):{{ getSelectFormLabel.more }}</p>
   </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
