@@ -1,0 +1,41 @@
+/*
+* 功能:元件样式
+* 作者:eveningwater
+* 日期:2017/9/29
+*/
+*{
+	margin: 0;padding: 0;
+}
+body,html{
+	box-sizing: border-box;
+}
+body{
+	font: 16px "微软雅黑";
+}
+.display{
+	display: inline-block;
+	border: 1px solid rgb(241, 239, 239);
+	background-color: transparent;
+	text-align: center;
+	cursor: pointer;
+	outline: none;
+	padding: 6px 14px;
+	color: #535455;
+	border-radius: 5px;
+	transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .4s;
+	margin:15px 45px;
+}
+.display:hover{
+	border-color:#469bf0;
+	color:#2396ef;
+}
+.content{
+	width: 200px;
+	height: 200px;
+	background-color: rgb(180, 138, 23);
+	color: #fff;
+	text-align: center;
+	margin-left: 15px;
+	line-height: 200px;
+	display: none;
+}

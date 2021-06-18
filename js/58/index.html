@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8">
+		<title>slideDown</title>
+		<link rel="stylesheet" href="css/index.css">
+	</head>
+	<body>
+		<button id="display" class="display" type="button">下滑或者上拉</button>
+		<div class="content" id="content">下滑或者上拉的面板</div>
+	</body>
+	<script src="./js/index.js"></script>
+	<script type="text/javascript">
+		var display = document.getElementById('display'),
+			content = document.getElementById('content');
+		var flag = false;
+		display.onclick = function(){
+			flag = !flag;
+			slider[flag ? 'slideDown' : 'slideUp'](content,600);
+		}
+	</script>
+</html>
