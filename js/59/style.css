@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body,html {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    display: flex;
+    width: 90vw;
+}
+.container > .panel {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    flex: 0.5;
+    padding: 10px;
+    color: #fff;
+    border-radius: 50px;
+    margin: 10px;
+    transition: flex .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    cursor: pointer;
+    height: 90vh;
+}
+.container > .panel > h3 {
+    color:#f23441;
+    font-size: 25px;
+    text-align: center;
+    line-height: 90vh;
+}
+.container > .panel.active {
+    flex: 5;
+}
