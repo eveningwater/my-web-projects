@@ -52,9 +52,9 @@ class NormalLoginForm extends React.Component {
                         valuePropName: 'checked',
                         initialValue: true,
                     })(<Checkbox>自动登录</Checkbox>)}
-                    <a className="login-form-forgot" href="#">忘记密码?</a>
+                    <a className="login-form-forgot" href="/">忘记密码?</a>
                     <Button type="primary" htmlType="submit" className="login-button">登录</Button>
-                    没有账号?<a href="#">现在注册!</a>
+                    没有账号?<a href="/">现在注册!</a>
                 </Form.Item>
             </Form>
         );

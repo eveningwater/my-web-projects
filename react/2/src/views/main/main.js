@@ -46,6 +46,8 @@ class MainLayOut extends React.Component {
                     },
                 });
                 break;
+            default:
+                break;
         }
     };
     handleVisibleChange = flag => {
@@ -64,7 +66,7 @@ class MainLayOut extends React.Component {
                 <Layout className="page-layout">
                     <Sider theme="light" trigger={null} collapsible collapsed={this.state.collapsed} className="left-nav-container">
                         <div className="left-header">
-                            <img src={logo} />
+                            <img src={logo} alt="logo"/>
                         </div>
                         <div className="left-nav">
                             <Menu
@@ -127,8 +129,8 @@ class MainLayOut extends React.Component {
                                             <span>menu-3</span>
                                         }
                                     >
-                                        <Menu.Item key="9">menu3-1</Menu.Item>
-                                        <Menu.Item key="10">menu3-2</Menu.Item>
+                                        <Menu.Item key="11">menu3-1</Menu.Item>
+                                        <Menu.Item key="12">menu3-2</Menu.Item>
                                     </SubMenu>
                                 </SubMenu>
                             </Menu>
