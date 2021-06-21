@@ -10,33 +10,48 @@ nextBtn.addEventListener("click",() => {
     if(nextBtn.classList.contains('disabled'))return;
     if(currentActive >= max - 1){
         // currentActive = min;
-        nextBtn.classList.add('disabled');
-        prevBtn.classList.remove("disabled");
-        nextBtn.classList.remove("active");
-        prevBtn.classList.add("active");
+        handleClass(prevBtn).addClass("active").removeClass("disabled");
+        handleClass(nextBtn). addClass("disabled").removeClass("active");
     }
     if(currentActive <= max - 1){
         currentActive++;
     }
-    progress.style.width = (100 / max * currentActive).toFixed(4) + '%';
-    circleElements.forEach((item,index) => {
-        if(index <= currentActive){
-            item.classList.add('active');
-        }
-    });
+    update();
 });
 prevBtn.addEventListener("click",() => {
     if(prevBtn.classList.contains('disabled'))return;
     if(currentActive <= 1){
-        nextBtn.classList.remove('disabled');
-        prevBtn.classList.add("disabled");
-        nextBtn.classList.add("active");
-        prevBtn.classList.remove("active");
         // currentActive = max -  1;
+        handleClass(prevBtn).addClass("disabled").removeClass("active");
+        handleClass(nextBtn).addClass("active").removeClass("disabled");
     }
     if(currentActive > 0){
         currentActive--;
     }
-    progress.style.width = (100 / max * currentActive).toFixed(4) + '%';
-    circleElements[currentActive + 1].classList.remove('active');
+    update();
 });
+function handleClass(el){
+    let methods = {
+        addClass,
+        removeClass
+    };
+    function addClass(c){
+        el.classList.add(c);
+        return methods;
+    };
+    function removeClass(c){
+        el.classList.remove(c);
+        return methods;
+    }
+    return methods
+}
+function update(){
+    circleElements.forEach((item,index) => {
+        if(index <= currentActive){
+            item.classList.add('active');
+        }else{
+            item.classList.remove('active');
+        }
+    });
+    progress.style.width = (100 / max * currentActive).toFixed(4) + '%';
+}
