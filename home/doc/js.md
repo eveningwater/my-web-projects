@@ -62,3 +62,4 @@
 |  58  |           [slideDown与slideUp动画](https://github.com/eveningwater/my-web-projects/tree/master/js/58)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/58) 
 |  59  |           [扩展卡片](https://github.com/eveningwater/my-web-projects/tree/master/js/59)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/59) 
 |  60  |           [步骤条](https://github.com/eveningwater/my-web-projects/tree/master/js/60)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/60) 
+|  61  |           [旋转导航动画](https://github.com/eveningwater/my-web-projects/tree/master/js/61)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/61) 
