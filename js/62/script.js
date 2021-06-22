@@ -1,10 +1,8 @@
-const searchBtn = document.querySelector("#searchBtn");
-const searchContainer = document.querySelector(".search");
+const $ = v => document.querySelector(v);
+const searchBtn = $("#searchBtn");
+const searchContainer = $(".search");
+const searchInput = $(".input");
 searchBtn.addEventListener('click',() => {
-    const classList = searchContainer.classList
-    if(classList.contains('active')){
-        classList.remove('active');
-    }else{
-        classList.add('active');
-    }
+    searchContainer.classList.toggle('active');
+    searchInput.focus();
 })
