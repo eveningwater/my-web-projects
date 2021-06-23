@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body,html {
+    height: 100%;
+    overflow: hidden;
+}
+.background {
+    width: 100%;
+    height: 100%;
+    background: url("https://www.eveningwater.com/my-web-projects/jQuery/15/img/testImg-00.jpg")no-repeat center/cover;
+    filter: blur(0);
+}
+.loading-text {
+    color: #fff;
+    font-size: 50px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
