@@ -65,3 +65,4 @@
 |  61  |           [旋转导航动画](https://github.com/eveningwater/my-web-projects/tree/master/js/61)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/61) 
 |  62  |           [隐藏搜索小组件](https://github.com/eveningwater/my-web-projects/tree/master/js/62)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/62) 
 |  63  |           [模糊加载](https://github.com/eveningwater/my-web-projects/tree/master/js/63)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/63) 
+|  64  |           [滚动动画](https://github.com/eveningwater/my-web-projects/tree/master/js/64)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/64) 
