@@ -1,0 +1,105 @@
+
+:root {
+    --speed:1000ms;
+    --hover-width:80%;
+    --leave-width:20%;
+    --left-bg-color:rgba(160,197,245,.8);
+    --right-bg-color:rgba(227, 184, 247, 0.7);
+    --left-btn-color:#4497fe;
+    --right-btn-color:#b313e4;
+    --default-color:#fff;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    overflow:hidden;
+    font-family: 'Courier New', Courier, monospace;
+}
+.container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.container > .split {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container > .split-left {
+    left: 0;
+    background-image: url("./images/left.png");
+}
+.container > .split-right {
+    right: 0;
+    background-image: url("./images/right.png");
+}
+.container > .split-left,
+.container > .split-left::before,
+.container > .split-right,
+.container > .split-right::before {
+    transition: all var(--speed) ease-in-out;
+}
+.container > .split > h3 {
+    font-size: 2rem;
+    color: var(--default-color);
+    white-space: nowrap;
+}
+.container > .split > .btn {
+    text-decoration: none;
+    border: .4rem solid var(--default-color);
+    border-radius: 8px;
+    width: 15rem;
+    padding: 1rem;
+    background-color: transparent;
+    font-size: 1.5rem;
+    color: var(--default-color);
+    text-align: center;
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 2;
+    top: 10px;
+    text-transform: uppercase;
+}
+.container > .split-left > .btn:hover {
+    background-color: var(--left-btn-color);
+    border-color: var(--left-btn-color);
+}
+.container > .split-right > .btn:hover {
+    background-color: var(--right-btn-color);
+    border-color: var(--right-btn-color);
+}
+.container > .split::before {
+    content:"";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.container > .split-left::before {
+    background-color: var(--left-bg-color);
+}
+.container > .split-right::before {
+    background-color: var(--right-bg-color);
+}
+.container.hover-left > .split-left{
+    width: var(--hover-width);
+}
+.container.hover-left > .split-right {
+    width: var(--leave-width);
+}
+.container.hover-right > .split-left{
+    width: var(--leave-width);
+}
+.container.hover-right > .split-right {
+    width: var(--hover-width);
+}
