@@ -67,3 +67,4 @@
 |  63  |           [模糊加载](https://github.com/eveningwater/my-web-projects/tree/master/js/63)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/63) 
 |  64  |           [滚动动画](https://github.com/eveningwater/my-web-projects/tree/master/js/64)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/64) 
 |  65  |           [面板分割](https://github.com/eveningwater/my-web-projects/tree/master/js/65)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/65) 
+|  66  |           [表单波浪特效](https://github.com/eveningwater/my-web-projects/tree/master/js/66)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/66) 
