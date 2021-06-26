@@ -10,11 +10,13 @@ nextBtn.addEventListener("click",() => {
     if(nextBtn.classList.contains('disabled'))return;
     if(currentActive >= max - 1){
         // currentActive = min;
-        handleClass(prevBtn).addClass("active").removeClass("disabled");
         handleClass(nextBtn). addClass("disabled").removeClass("active");
     }
     if(currentActive <= max - 1){
         currentActive++;
+    }
+    if(currentActive > 0){
+        handleClass(prevBtn).addClass("active").removeClass("disabled");
     }
     update();
 });
@@ -23,10 +25,12 @@ prevBtn.addEventListener("click",() => {
     if(currentActive <= 1){
         // currentActive = max -  1;
         handleClass(prevBtn).addClass("disabled").removeClass("active");
-        handleClass(nextBtn).addClass("active").removeClass("disabled");
     }
     if(currentActive > 0){
         currentActive--;
+    }
+    if(currentActive <= max - 1){
+        handleClass(nextBtn).addClass("active").removeClass("disabled");
     }
     update();
 });
