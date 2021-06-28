@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: linear-gradient(45deg,#f5e488,#dae63d);
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.container {
+    background-color: #fff;
+    width: 100%;
+    max-width: 800px;
+    min-height: 300px;
+    border-radius: 15px;
+    box-shadow: 0 4px 5px #ccda15;
+    padding: 50px 20px;
+    text-align: center;
+}
+.container > h1 {
+    color: #95c5f1;
+    letter-spacing: 2px;
+}
+.container > p {
+    color: #535455;
+    font-size: 35px;
+    line-height: 40px;
+    margin: 40px auto;
+    max-width: 600px;
+}
+.container > .btn {
+    display: inline-block;
+    padding: 14px 26px;
+    outline: none;
+    border: none;
+    background-color: #bfec83;
+    box-shadow: 0 6px 8px #75b423;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.container > .btn:last-child {
+    margin-left: 15px;
+}
+.container > .btn:hover {
+    transform: scale(0.98);
+}
