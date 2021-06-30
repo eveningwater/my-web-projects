@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background: linear-gradient(15deg,#ddeeff,#ffeedd);
+}
+h1 {
+    color: #989999;
+    text-align: center;
+    font-size: 26px;
+    margin-top: 3rem;
+}
+.faq-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+.faq-container > .faq {
+    border: 1px solid #535455;
+    padding: 30px;
+    margin: 20px;
+    position: relative;
+    background: linear-gradient(45deg,#e7e7e7,#bebcbc);
+    color: #535455;
+    border-radius: 15px;
+    overflow:hidden;
+    transition:all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.faq-container > .faq > .faq-title {
+    margin: 0 40px 0 0;
+}
+.faq-container > .faq > .faq-text {
+    margin:8px 0;
+    display: none;
+}
+.faq-container > .faq > .faq-icon {
+    width: 25px;
+    height: 25px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('./images/arrow_down.svg');
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.faq-container > .faq.active::before,.faq-container > .faq.active::after {
+    content:"\f075";
+    font-family: 'Font Awesome 5 Free';
+    color: #2396ef;
+    left: 20px;
+    top: 20px;
+    opacity: .2;
+    font-size: 7.3rem;
+    z-index: 0;
+    position: absolute;
+}
+.faq-container > .faq.active::before {
+    top: -5px;
+    left: -30px;
+    transform: rotateY(180deg);
+    color:#dd9529;
+}
+.faq-container > .faq.active {
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0,0,0,.5),
+                0 2px 5px rgba(0,0,0,.4);
+}
+.faq-container > .faq.active .faq-text {
+    display: block;
+}
+.faq-container > .faq.active > .faq-icon {
+    background-image: url('./images/close.svg');
+}

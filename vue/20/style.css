@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#app {
+    padding: 25px;
+}
+hr {
+    margin:20px 0;
+}
+.el-date-table td span.el-date-text {
+    top: 25px;
+    color: #f00;
+    width: 64px;
+}
+.el-date-picker {
+    width: 360px;
+}
+.el-date-picker .el-picker-panel__content {
+    width: 340px;
+}
+.date-picker-footer {
+    margin-top: 15px;
+}
+.w-60 {
+    width: 60px;
+    height: 28px;
+}
+.base-icon,.base-input {
+    vertical-align: middle;
+    margin-left: 5px;
+}
+.base-icon {
+    line-height: 2;
+    cursor: pointer;
+}
+.base-icon:hover {
+    color:#535455;
+}
