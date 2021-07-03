@@ -73,3 +73,5 @@
 |  69  |           [键盘事件](https://github.com/eveningwater/my-web-projects/tree/master/js/69)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/69) 
 |  70  |           [折叠元素](https://github.com/eveningwater/my-web-projects/tree/master/js/70)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/70) 
 |  71  |           [随机选择器](https://github.com/eveningwater/my-web-projects/tree/master/js/71)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/71) 
+|  72  |           [动画导航](https://github.com/eveningwater/my-web-projects/tree/master/js/72)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/72) 
+|  73  |           [递增计数器](https://github.com/eveningwater/my-web-projects/tree/master/js/73)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/73) 

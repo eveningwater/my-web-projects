@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+body {
+    height: 100vh;
+    background: linear-gradient(to right,#a809ad,#ec9cff);
+    overflow: hidden;
+}
+body,.counter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.counter-container {
+    color: #fff;
+    margin: 40px 50px;
+    flex-direction: column;
+}
+.counter-container > .counter {
+    font-size: 60px;
+    margin: 10px 0;
+}
+.counter-container > span {
+    font-size: 20px;
+}
