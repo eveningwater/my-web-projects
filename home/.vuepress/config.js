@@ -28,7 +28,7 @@ module.exports = {
         smoothScroll: true,
         editLinks: true,
         repo:"/eveningwater/my-web-projects",
-        docsDir: 'home/doc/doc',
+        docsDir: 'home',
         locales: {
             '/': {
                 label: '简体中文',
