@@ -1,7 +1,7 @@
 {
   "name": "my-web-projects",
   "version": "1.0.0",
-  "description": "我的个人项目的一个集合",
+  "description": "This is a collection of my personal projects",
   "main": "index.js",
   "directories": {
     "doc": "docs"
