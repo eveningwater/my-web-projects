@@ -74,4 +74,5 @@
 |  70  |           [Faq Collapse](https://github.com/eveningwater/my-web-projects/tree/master/js/70)            |          [online demo](https://www.eveningwater.com/my-web-projects/js/70) 
 |  71  |           [Random Choice Picker](https://github.com/eveningwater/my-web-projects/tree/master/js/71)            |          [online demo](https://www.eveningwater.com/my-web-projects/js/71) 
 |  72  |           [Animated Navigation](https://github.com/eveningwater/my-web-projects/tree/master/js/72)            |          [online demo](https://www.eveningwater.com/my-web-projects/js/72) 
-|  73  |           [Incrementing Counter](https://github.com/eveningwater/my-web-projects/tree/master/js/73)            |          [online demo](https://www.eveningwater.com/my-web-projects/js/73) 
+|  73  |           [Incrementing Counter](https://github.com/eveningwater/my-web-projects/tree/master/js/73)            |          [online demo](https://www.eveningwater.com/my-web-projects/js/73)
+|  74  |           [Drink Water](https://github.com/eveningwater/my-web-projects/tree/master/js/74)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/74)   

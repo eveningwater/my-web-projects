@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #fff;
+    background: linear-gradient(12deg,#2396ef,#4470ef);
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h2 {
+    text-align: center;
+    margin: 15px 0;
+}
+.total {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+.class-cup {
+    width: 150px;
+    height: 350px;
+    border: 4px solid #0a2f9e;
+    border-bottom-left-radius: 28px;
+    border-bottom-right-radius: 28px;
+    background-color: #fff;
+    color: #2396ef;
+    overflow: hidden;
+}
+.class-cup > .remind,.class-cup > .percent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: all .3s linear;
+}
+.class-cup > .remind > .cup-container {
+    font-weight: 700;
+    font-size: 22px;
+}
+.class-cup > .remind > span:not(.cup-container){
+    font-size:16px;
+}
+.class-cup > .percent {
+    color: #0d5c99;
+    background: #b6c4ee;
+}
+p {
+    margin: 1em 0;
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+.select-cup {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+}
+.select-cup > .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+.select-cup > .row > .cup {
+    width: 50px;
+    height: 100px;
+    border: 4px solid #0a2f9e;
+    border-bottom-left-radius: 28px;
+    border-bottom-right-radius: 28px;
+    background-color: #fff;
+    margin: 0 15px;
+    color: #2396ef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    transition: all .3s linear;
+}
+.select-cup > .row > .cup.active {
+    color: #fff;
+    background: #b6c4ee;
+}
