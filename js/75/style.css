@@ -128,7 +128,15 @@ body {
     background-color: #0b4877;
 }
 @media screen and (max-width:600px){
+    .main > .movie-list::after {
+        content:"";
+        clear: both;
+        height: 0;
+        visibility: hidden;
+        display: table;
+    }
     .main > .movie-list > .movie {
         width: 100%;
+        float: left;
     }
 }
