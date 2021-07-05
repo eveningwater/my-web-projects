@@ -36,17 +36,20 @@
 <script src="./plugins/jQuery.firework.js"></script>
 <script src="./js/index.js"></script>
 <script>
+    let params = location.search;
+    let name = decodeURIComponent(params.slice(params.indexOf('name') + 5,params.indexOf('birth') - 1)) || 'xxx';
+    let birth = !!decodeURIComponent(params.slice(params.indexOf('birth') + 6)) || false;
     new girlFriend({
         text: "做我女朋友好不好?",
         textEl: $('#text'),
-        name: "XXX",
+        name: name,
         nameEl: $('#name'),
         notWellTextArr: ["房产证写你名字", "难产保大人", "我妈会游泳", "余生请多指教"],
         notWellEl: $('#not-well'),
         buttonEls: $('.btn-group button'),
         wellTextArr: ["太好了，我太开心了", "接下来，我要给你一个惊喜", "继续下一步"],
         popBox: $('.popBox'),
-        isBirth: false,
+        isBirth: birth,
         poems: [
             '为伊一求长江水，共饮焉知君无言？<br>千风万雨当不住，此情可比山石坚。',
             '情如风雨无寻常，不动平平动即殇。<br>愿得世上有情人，心心相印似鸳鸯。',
