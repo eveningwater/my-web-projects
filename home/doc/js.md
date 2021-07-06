@@ -76,4 +76,5 @@
 |  72  |           [动画导航](https://github.com/eveningwater/my-web-projects/tree/master/js/72)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/72) 
 |  73  |           [递增计数器](https://github.com/eveningwater/my-web-projects/tree/master/js/73)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/73)
 |  74  |           [喝水](https://github.com/eveningwater/my-web-projects/tree/master/js/74)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/74)
-|  75  |           [电影列表](https://github.com/eveningwater/my-web-projects/tree/master/js/75)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/75)    
+|  75  |           [电影列表](https://github.com/eveningwater/my-web-projects/tree/master/js/75)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/75) 
+|  76  |           [背景轮播](https://github.com/eveningwater/my-web-projects/tree/master/js/76)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/76)   
