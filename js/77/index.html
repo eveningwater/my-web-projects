@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>theme-clock</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="btn-group">
+        <button type="button" class="btn" id="mode-btn">黑暗模式</button>
+        <button type="button" class="btn" id="lang-btn">English</button>
+    </div>
+    <div class="clock-container">
+        <div class="clock">
+            <div class="needle hour"></div>
+            <div class="needle minute"></div>
+            <div class="needle second"></div>
+            <div class="center-point"></div>
+        </div>
+        <div class="time" id="time"></div>
+        <div class="date" id="date"><span class="circle"></span></div>
+    </div>
+</body>
+<script src="./script.js"></script>
+</html>
