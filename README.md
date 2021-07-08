@@ -1,3 +1,4 @@
+[English](./README_en.md) | [简体中文](./README.md)
 
 ### 介绍
 
@@ -24,6 +25,22 @@
 
 如果觉得本项目帮助到您学习，还望不吝啬 star。
 
->温馨提示:所有项目 demo 仅供学习，不得用于商业用途，违者必究。
+> 温馨提示:所有项目 demo 仅供学习，不得用于商业用途，违者必究。
 
 [在线访问地址](https://www.eveningwater.com/my-web-projects/)。
+
+### 友情链接
+
+* [首页](/)
+* [个人网站](https://www.eveningwater.com)
+* [ewColorPicker](https://eveningwater.github.io/ew-color-picker/)
+* [门素材](https://www.17sucai.com/user/800544)
+* [掘金](https://juejin.cn/user/4054654613988718)
+* [思否](https://segmentfault.com/u/xishui_5ac9a340a5484)
+* [知乎](https://www.zhihu.com/people/eveningwater)
+* [stackoverflow](https://stackoverflow.com/users/10505577/eveningwater)
+* [我的博客](https://www.cnblogs.com/eveningwater/)
+* [我的博客](https://eveningwater.github.io/#/)
+* [code-segment](https://eveningwater.github.io/code-segment/#/)
+* [github](https://github.com/eveningwater/my-web-projects)
+* [码云](https://gitee.com/eveningwater)
