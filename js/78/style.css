@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-image: radial-gradient(circle at 50% 30%,#7d7ff0,#8d31d8),
+                      linear-gradient(90deg,#7d7ff0,#8d31d8),
+                      linear-gradient(180deg,#62b1f1,#27b4ec),
+                      radial-gradient(ellipse at bottom center,#62b1f1,#27b4ec);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.btn {
+    display: inline-block;
+    outline: none;
+    padding: 20px 35px;
+    color: #fff;
+    border-radius: 5px;
+    background-image: linear-gradient(90deg,#f19b62,#ec7627),
+                      radial-gradient(circle,#f0df7d,#d8cd31);
+    cursor: pointer;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    font-size: 25px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.btn > .circle {
+    width: 100px;
+    height: 100px;
+    transform: translate(-50%,-50%) scale(0);
+    transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    position: absolute;
+    background-image: linear-gradient(to left,#f0d3c0,#f0a574),
+                      radial-gradient(circle,#f3ebbf,#ece57e);
+    border-radius: 50%;
+    animation: scale .3s ease-in-out;
+}
+@keyframes scale {
+    to {
+        transform: translate(-50%,-50%) scale(3);
+        opacity: 0;
+    }
+}
