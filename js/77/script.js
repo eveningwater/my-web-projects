@@ -8,7 +8,6 @@ const langText = {
         "lang-text":"中文",
         "time-before-text":"上午",
         "time-after-text":"下午",
-        "week-text":"星期三",
         "date-day-text":"日"
     },
     'en':{
