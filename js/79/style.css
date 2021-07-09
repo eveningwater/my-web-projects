@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    overflow: hidden;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to right,red, orange, yellow, green, cyan, blue, purple, red );   
+}
+.drag-list {
+    display: flex;
+    justify-content: space-between;
+}
+.drag-list > .drag-item {
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    border:2px solid #535455;
+    cursor: pointer;
+    margin:0 15px;
+    background-color: #f3f3f5;
+    position: relative;
+}
+.drag-list > .drag-item > .drag-fill {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 15px;
+}
+.drag-list > .drag-item > .drag-fill.drag-move {
+    border: 5px solid #989796;
+}
+.drag-list > .drag-item.drag-active {
+    border: 2px dashed #535455;
+    background-color: #2396ef;
+}
+@media (max-width:800px) {
+    body {
+        flex-direction: column;
+    }
+}
