@@ -74,7 +74,7 @@ function setCurrentDate(){
         `translate(-50%,-100%) rotate(${ scale(second,0,59,0,360) }deg)`
     ];
     [hourEl,minuteEl,secondEl].forEach((item,index) => setTransForm(item,values[index]));
-    timeEl.innerHTML = `${ hour }:${ minute > 10 ? minute : '0' + minute }&nbsp;${ amPm }`;
+    timeEl.innerHTML = `${ hour }:${ minute >= 10 ? minute : '0' + minute }&nbsp;${ amPm }`;
     dateEl.innerHTML = `${w[day]},${ m[month]}<span class="circle">${ time }</span>${ langText[currentLang]['date-day-text'] }`;
     timer = setTimeout(setCurrentDate,1000);
 }
