@@ -18,7 +18,7 @@ body {
     position: relative;
     width: 150px;
     height: 150px;
-    margin: 0 15%;
+    margin: 25% 15%;
 }
 .kinetic::before,.kinetic::after {
     content:"";
@@ -62,5 +62,10 @@ body {
     }
     100% {
         transform: rotate(450deg);
+    }
+}
+@media (max-width:600px){
+    body {
+        flex-direction: column;
     }
 }

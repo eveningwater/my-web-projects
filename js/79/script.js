@@ -1,51 +1,151 @@
-const dragItems = document.querySelectorAll('.drag-list > .drag-item');
-const dragFill = document.querySelector('.drag-fill');
-function random(){
-    return Math.floor(Math.random() * 15);
-}
-function setFillImage(){
-    dragFill.style.backgroundImage = `url("https://www.eveningwater.com/my-web-projects/js/26/img/${ random() }.jpg")`
-}
-function on(el,type,handler,useCapture = false){
+const $ = v => document.querySelector(v);
+const board = $("#draw-board");
+const ctx = board.getContext("2d");
+const decrease = $("#decrease");
+const increase = $("#increase");
+const inputSize = $("#size");
+const clear = $("#clear");
+let size = 10;//线或者圆半径大小
+let x,y;//x与y坐标
+let color = "black";//画笔颜色
+let colorPicker = null;//颜色选择器实例
+let isPressed = false;//按下状态
+function on(el,type,handler,useCapture = true){
     if(el && type && handler){
         el.addEventListener(type,handler,useCapture);
     }
 }
-function off(el,type,handler,useCapture = false){
-    if(el && type && handler){
-        el.removeEventListener(type,handler,useCapture);
+function mouseDownHandler(e){
+    isPressed = true;
+    x = e.offsetX;
+    y = e.offsetY;
+}
+function mouseUpHandler(e){
+    isPressed = false;
+    x = undefined;
+    y = undefined;
+}
+function mouseMoveHandler(e){
+    if(isPressed){
+        const x2 = e.offsetX,y2 = e.offsetY;
+        drawCircle(x2,y2);
+        drawLine(x,y,x2,y2);
+        x = x2;
+        y = y2;
     }
 }
-function onDragStart(){
-    this.classList.add('drag-move');
-    setTimeout(() => this.className = "invisible",200);
+function drawCircle(x,y){
+    ctx.beginPath();
+    ctx.arc(x,y,size,0,Math.PI * 2);
+    ctx.fillStyle = color;
+    ctx.fill();
 }
-function onDragEnd(){
-    this.classList.add("drag-fill");
+function drawLine(x1,y1,x2,y2){
+    ctx.beginPath();
+    ctx.moveTo(x1,y1);
+    ctx.lineTo(x2,y2);
+    ctx.strokeStyle = color;
+    ctx.lineWidth = size * 2;
+    ctx.stroke();
 }
-
-function onDragOver(e){
-    e.preventDefault();
+function initColorPicker(){
+    colorPicker = new ewColorPicker({
+        el:"#color",
+        pickerAnimation:"height",
+        pickerAnimationTime:300,
+        predefinedColor:[
+            "red",
+            "orange",
+            "#2396ef",
+            "#4097ef",
+            "#fff",
+            {
+                color:"#9744ee"
+            }
+        ],
+        alpha:true,
+        size:{
+            width:35,
+            height:35
+        },
+        alphaDirection:"horizontal",
+        defaultColor:color,
+        clear:() => {
+            color = "black";
+        },
+        sure:(value) => {
+            color = value;
+        }
+    });
 }
-function onDragEnter(e){
-    e.preventDefault();
-    this.classList.add('drag-active');
+function clearHandler(){
+    ctx.clearRect(0,0,board.width,board.height);
 }
-function onDragLeave(){
-    this.className = "drag-item";
+function updateSize(){
+    inputSize.value = size;
 }
-function onDrop(){
-    this.className = "drag-item";
-    this.appendChild(dragFill);
+function decreaseHandler(){
+    size -= 5;
+    if(size <= 5){
+        size = 5;
+    }
+    updateSize();
+}
+function increaseHandler(){
+    size += 5;
+    if(size >= 50){
+        size = 50;
+    }
+    updateSize();
+}
+function sizeChangeHandler(e){
+    const sizeValue = Number(e.target.value);
+    if(isNaN(sizeValue)){
+        size = 5;
+    }
+    size = sizeValue;
+    if(sizeValue >= 50){
+        size = 50;
+    }
+    if(sizeValue <= 5){
+        size = 5;
+    }
+    updateSize();
+}
+function throttle(fn,wait = 100){
+    let done = false;
+    return (...args) => {
+        if(!done){
+            fn.call(this,args);
+            done = true;
+        }
+        setTimeout(() => {
+            done = false;
+        },wait);
+    }
 }
 window.onload = () => {
-    setFillImage();
-    on(dragFill,'dragstart',onDragStart);
-    on(dragFill,'dragend',onDragEnd);
-    for(const item of dragItems){
-        on(item,'dragover',onDragOver);
-        on(item,'dragenter',onDragEnter);
-        on(item,'dragleave',onDragLeave);
-        on(item,'drop',onDrop);
+    initColorPicker();
+    updateSize();
+    const handlers = [
+        {
+            type:"mousedown",
+            handler:mouseDownHandler
+        },
+        {
+            type:"mouseup",
+            handler:mouseUpHandler
+        },
+        {
+            type:"mousemove",
+            handler:mouseMoveHandler
+        }
+    ];
+    for(let i = 0,l = handlers.length;i < l;i++){
+        on(board,handlers[i].type,handlers[i].handler);
     }
+    on(clear,'click',clearHandler);
+    on(decrease,'click',decreaseHandler);
+    on(increase,'click',increaseHandler);
+    on(inputSize,'input',sizeChangeHandler);
 }
