@@ -12,11 +12,13 @@ import { getCurrentQuestion, parseObject,questions,getCurrentAnswers,QuestionArr
 import { LangContext, lang } from "../store/lang";
 import { OrderReducer, initOrder } from "../store/count";
 import { marked } from "../utils/marked";
+import { computeSameAnswer } from "../utils/same";
 let collectionUsersAnswers:string [] = [];
 let collectionCorrectAnswers:string [] = questions.reduce<string []>((v,r:QuestionArray) => {
   v.push(r.correct);
   return v;
 },[]);
+let correctNum = 0;
 function App() {
   const [langValue, setLangValue] = useState(lang);
   const [usersAnswers,setUsersAnswers] = useState(collectionUsersAnswers);
@@ -27,8 +29,12 @@ function App() {
     setLangValue(value);
   };
   const startQuestionHandler = () => orderDispatch({ type:"reset",payload:1 });
-  const endQuestionHandler = () => orderDispatch({ type:"reset",payload:0 });
+  const endQuestionHandler = () => {
+    orderDispatch({ type:"reset",payload:0 });
+    correctNum = 0;
+  };
   const onSelectHandler = (select:string) => {
+    // console.log(select)
     orderDispatch({ type:"increment"});
     if(orderState.count > 25){
         orderDispatch({ type:"reset",payload:25 });
@@ -36,8 +42,8 @@ function App() {
     if(select){
       collectionUsersAnswers.push(select);
     }
-    const correctNum = collectionUsersAnswers.filter((ua:string) => collectionCorrectAnswers.indexOf(ua) > -1);
-    setCorrectTotal(correctNum.length);
+    correctNum = computeSameAnswer(correctNum,select,collectionCorrectAnswers,orderState.count);
+    setCorrectTotal(correctNum);
     setUsersAnswers(collectionUsersAnswers);
   }
   const { count:order } = orderState;
@@ -46,7 +52,7 @@ function App() {
       <LangContext.Provider value={langValue}>
         <LangComponent lang={langValue} changeLang={changeLangHandler}></LangComponent>
         {
-          order > 0 ? order < 25 ? 
+          order > 0 ? order <= 25 ? 
             (
                 <div className="flex-center flex-direction-column w-100p">
                   <QuizWrapperComponent 
