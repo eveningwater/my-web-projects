@@ -1,0 +1,8 @@
+.bottom {
+    position: fixed;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 18px;
+}

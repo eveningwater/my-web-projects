@@ -1,0 +1,16 @@
+.App {
+  height: 100vh;
+  overflow:hidden;
+}
+.App h1 {
+  color: #fff;
+  font-size: 32px;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+.App .button-wrapper {
+  max-width: 25rem;
+  width: 100%;
+  display: flex;
+}

@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height:100vh;
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: radial-gradient(49% 81% at 45% 47%, var(--bg-first-radial-first-color) 0,var(--bg-first-radial-second-color) 100%),
+                    radial-gradient(113% 91% at 17% -2%,var(--bg-first-radial-third-color) 1%,var(--bg-first-radial-fourth-color) 99%),
+                    radial-gradient(142% 91% at 83% 7%,var(--bg-first-radial-fifth-color) 1%,var(--bg-first-radial-sixth-color) 99%),
+                    radial-gradient(142% 91% at -6% 74%,var(--bg-first-radial-seventh-color) 1%,var(--bg-first-radial-sixth-color) 99%),
+                    radial-gradient(142% 91% at 111% 84%,var(--bg-first-radial-eighth-color) 0,var(--bg-first-radial-ninth-color) 100%);
+  animation:background 50s linear infinite;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.mt-10 {
+  margin-top: 10px;
+}
+.ml-5 {
+  margin-left: 5px;
+}
+.text-align {
+  text-align: center;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-direction-column {
+  flex-direction: column;
+}
+.w-100p {
+  width: 100%;
+}
+::-webkit-scrollbar {
+  width: 5px;
+  height: 10px;
+  background: linear-gradient(45deg,#e9bf89,#c9a120,#c0710a);
+}
+::-webkit-scrollbar-thumb {
+   width: 5px;
+   height: 5px;
+   background: linear-gradient(180deg,#d33606,#da5d4d,#f0c8b8);
+}
+@keyframes background {
+    0% {
+      background-image: radial-gradient(49% 81% at 45% 47%, var(--bg-first-radial-first-color) 0,var(--bg-first-radial-second-color) 100%),
+                        radial-gradient(113% 91% at 17% -2%,var(--bg-first-radial-third-color) 1%,var(--bg-first-radial-fourth-color) 99%),
+                        radial-gradient(142% 91% at 83% 7%,var(--bg-first-radial-fifth-color) 1%,var(--bg-first-radial-sixth-color) 99%),
+                        radial-gradient(142% 91% at -6% 74%,var(--bg-first-radial-seventh-color) 1%,var(--bg-first-radial-sixth-color) 99%),
+                        radial-gradient(142% 91% at 111% 84%,var(--bg-first-radial-eighth-color) 0,var(--bg-first-radial-ninth-color) 100%);
+    }
+    25%,50% {
+      background-image: radial-gradient(49% 81% at 45% 47%, var(--bg-second-radial-first-color) 0,var(--bg-second-radial-second-color) 100%),
+                        radial-gradient(113% 91% at 17% -2%,var(--bg-second-radial-third-color) 1%,var(--bg-second-radial-fourth-color) 99%),
+                        radial-gradient(142% 91% at 83% 7%,var(--bg-second-radial-fifth-color) 1%,var(--bg-second-radial-sixth-color) 99%),
+                        radial-gradient(142% 91% at -6% 74%,var(--bg-second-radial-seventh-color) 1%,var(--bg-second-radial-sixth-color) 99%),
+                        radial-gradient(142% 91% at 111% 84%,var(--bg-second-radial-eighth-color) 0,var(--bg-second-radial-ninth-color) 100%);
+    }
+    50%,75% {
+      background-image: radial-gradient(49% 81% at 45% 47%, var(--bg-third-radial-first-color) 0,var(--bg-third-radial-second-color) 100%),
+                        radial-gradient(113% 91% at 17% -2%,var(--bg-third-radial-third-color) 1%,var(--bg-third-radial-fourth-color) 99%),
+                        radial-gradient(142% 91% at 83% 7%,var(--bg-third-radial-fifth-color) 1%,var(--bg-third-radial-sixth-color) 99%),
+                        radial-gradient(142% 91% at -6% 74%,var(--bg-third-radial-seventh-color) 1%,var(--bg-third-radial-sixth-color) 99%),
+                        radial-gradient(142% 91% at 111% 84%,var(--bg-third-radial-eighth-color) 0,var(--bg-third-radial-ninth-color) 100%);
+    }
+    100% {
+      background-image: radial-gradient(49% 81% at 45% 47%, var(--bg-fourth-radial-first-color) 0,var(--bg-fourth-radial-second-color) 100%),
+                        radial-gradient(113% 91% at 17% -2%,var(--bg-fourth-radial-third-color) 1%,var(--bg-fourth-radial-fourth-color) 99%),
+                        radial-gradient(142% 91% at 83% 7%,var(--bg-fourth-radial-fifth-color) 1%,var(--bg-fourth-radial-sixth-color) 99%),
+                        radial-gradient(142% 91% at -6% 74%,var(--bg-fourth-radial-seventh-color) 1%,var(--bg-fourth-radial-sixth-color) 99%),
+                        radial-gradient(142% 91% at 111% 84%,var(--bg-fourth-radial-eighth-color) 0,var(--bg-fourth-radial-ninth-color) 100%);
+    }
+}
