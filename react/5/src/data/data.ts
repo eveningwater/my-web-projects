@@ -512,7 +512,7 @@ Number([,]); // -> 0***
         endContent:`
             I hope you thought this little quiz was fun, and, hopefully, you even learned something new. 
             This quiz was made by [Jacob Bergdahl](https://jacobbergdahl.com/). 
-            If you have any suggestions, corrections, or feedback, do send me an [e-mail](854806732@qq.com).
+            If you have any suggestions, corrections, or feedback, do send me an [e-mail](mailto:854806732@qq.com).
             I'm sure I've made some mistakes! 
             If you want more of this, I'd recommend checking out [this GitHub repository by Denys Dovhan](https://github.com/denysdovhan/wtfjs), 
             which is full of funny and tricky JavaScript examples. 
@@ -739,7 +739,7 @@ Number([,]); // -> 0***
         startContent:"JavaScript 是一种很棒的编程语言，但由于它的初始版本是在 1995 年仅用十天时间构建的，再加上 JS 向后兼容的事实，它也有点奇怪。 它并不总是像你想象的那样行事。 在这个测验中，您将看到 25 个古怪的表达式，并且必须猜测输出。 即使您是一名 JS 开发人员，大部分语法也可能并且希望不是您在日常生活中使用的东西。",
         endContent:`
             我希望你觉得这个小测验很有趣，希望你甚至学到了一些新东西。本测验由 [Jacob Bergdahl](https://jacobbergdahl.com/) 制作。
-            如果您有任何建议、更正或反馈，请发送给我 [邮件](854806732@qq.com)。我确定我犯了一些错误！
+            如果您有任何建议、更正或反馈，请发送给我 [邮件](mailto:854806732@qq.com)。我确定我犯了一些错误！
             如果你想要更多这样的东西，我建议你查看 [通过 Denys Dovhan 创建的这个代码库](https://github.com/denysdovhan/wtfjs)，里面有很多有趣和棘手的 JavaScript 示例。
             这个代码库是启发我创建这个测验的一部分。如果你想更深入，你可以随时提着灯笼进入[depths of the ECMAScript publications](https://www.ecma-international.org/publications-and-standards/standards/)。
             你将在那里玩得开心！

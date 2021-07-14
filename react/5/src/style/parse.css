@@ -2,6 +2,7 @@
   width: 100%;
   height: 100%;
   padding: 60px 15px 40px;
+  overflow-x: hidden;
   overflow-y: auto;
 }
 .result-wrapper .result-list {
