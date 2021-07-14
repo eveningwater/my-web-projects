@@ -34,6 +34,12 @@ a {
 }
 .nav > .container .nav-menu {
     display: none;
+    position: absolute;
+    right: 15px;
+    cursor: pointer;
+}
+.nav > .container .nav-menu:hover path{
+    fill:#e9543a;
 }
 .nav > .container > .left-logo a {
     color: #fff;
@@ -111,6 +117,22 @@ a {
 @media (max-width:500px) {
     .nav > .container .nav-menu {
         display: block;
+    }
+    .nav > .container > .nav-list {
+        position: absolute;
+        right: 0;
+        width: 0;
+        display: none;
+        background-color: #ffffff;
+        padding: 20px;
+        top: 70px;
+        transition: all 3s ease-out;
+    }
+    .nav > .container > .nav-list li a {
+        color: #535455;
+        width: 100%;
+        display: block;
+        margin: .8rem 0;
     }
 }
 ::-webkit-scrollbar {
