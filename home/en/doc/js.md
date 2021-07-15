@@ -83,4 +83,5 @@
 |  79  |           [drawing-app](https://github.com/eveningwater/my-web-projects/tree/master/js/79)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/79)
 |  80  |           [drag-n-drop](https://github.com/eveningwater/my-web-projects/tree/master/js/80)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/80)
 |  81  |           [content-placeholder](https://github.com/eveningwater/my-web-projects/tree/master/js/81)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/81)
-|  82  |           [sticky-navbar](https://github.com/eveningwater/my-web-projects/tree/master/js/82)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/82)                    
+|  82  |           [sticky-navbar](https://github.com/eveningwater/my-web-projects/tree/master/js/82)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/82)
+|  83  |           [double-vertical-slider](https://github.com/eveningwater/my-web-projects/tree/master/js/83)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/83)                     

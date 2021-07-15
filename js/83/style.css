@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.slide-container {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+.left-slide,.right-slide {
+    position: absolute;
+    transition: transform .6s ease-in-out;
+    height: 100%;
+    top: 0;
+}
+.left-slide {
+    width: 35%;
+    left: 0;
+}
+.right-slide {
+    width: 65%;
+    left: 35%;
+}
+.left-slide > .left-slide-item,
+.right-slide > .right-slide-item {
+    width: 100%;
+    height: 100%;
+}
+.left-slide > .left-slide-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    flex-direction: column;
+    letter-spacing: 2px;
+    line-height: 1.5;
+}
+.right-slide > .right-slide-item {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.left-slide > .left-slide-item:first-child {
+    background-image: linear-gradient(to bottom,#eff1ef,#989997);
+}
+.left-slide > .left-slide-item:nth-child(2) {
+    background-image: linear-gradient(to top,#e77864,#db3721);
+}
+.left-slide > .left-slide-item:nth-child(3) {
+    background-image: linear-gradient(to right,#e7b364,#db9a21);
+}
+.left-slide > .left-slide-item:last-child {
+    background-image: linear-gradient(to left,#64e764,#84db21);
+}
+.right-slide > .right-slide-item:first-child {
+    background-image: url("https://www.eveningwater.com/my-web-projects/jQuery/12/img/1.jpg");
+}
+.right-slide > .right-slide-item:nth-child(2) {
+    background-image: url("https://www.eveningwater.com/my-web-projects/jQuery/12/img/2.jpg");
+}
+.right-slide > .right-slide-item:nth-child(3) {
+    background-image: url("https://www.eveningwater.com/my-web-projects/jQuery/12/img/3.jpg");
+}
+.right-slide > .right-slide-item:last-child {
+    background-image: url("https://www.eveningwater.com/my-web-projects/jQuery/12/img/4.jpg");
+}
+.action-button .btn {
+    position: absolute;
+    left: 35%;
+    top: 50%;
+    z-index: 100;
+    background-color: #f2f3f4;
+    padding: 12px;
+    font-size: 15px;
+    border: 1px solid #dedede;
+    outline: none;
+    cursor: pointer;
+}
+.action-button .btn.arrow-down-btn {
+    transform: translateX(-100%);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.action-button .btn.arrow-up-btn {
+    transform: translateY(-100%);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.action-button > button > .arrow-icon {
+    width: 25px;
+    height: 25px;
+}
+.action-button button.btn:hover .arrow-icon path {
+    filter: drop-shadow(#0a4b8b 70px 0);
+    transform: translateX(-70px);
+}
