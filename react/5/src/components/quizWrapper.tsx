@@ -31,7 +31,7 @@ export default class QuizWrapperComponent extends React.Component<PropType,PropS
                             <ButtonComponent 
                                 nativeType="button" 
                                 onClick={ this.onSelectHandler.bind(this,select)}
-                                className="mt-10"
+                                className="mt-10 btn-no-hover btn-no-active"
                                 key={select}
                                 long
                             >{ select }</ButtonComponent>

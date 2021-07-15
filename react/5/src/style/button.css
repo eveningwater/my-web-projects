@@ -13,7 +13,10 @@
 .btn.btn-size-default {
     padding: 14px 18px;
 }
-.btn:hover,.btn:active,.btn.btn-active {
+.btn.btn-size-mini {
+    padding: 6px 8px;
+}
+.btn:not(.btn-no-hover):hover,.btn:not(.btn-no-active):active,.btn.btn-active {
     border-color: var(--btn-default-hover-border-color);
     background-color: var(--btn-default-hover-color);
     color:var(--btn-default-hover-font-color);

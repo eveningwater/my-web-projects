@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React, { ForwardedRef, ReactNode } from "react";
 import "../style/button.css";
 interface PropType {
     nativeType?:"button" | "submit" | "reset" | undefined,
@@ -7,7 +7,8 @@ interface PropType {
     size?:string,
     long?:boolean,
     onClick?:Function,
-    className?:string
+    className?:string,
+    forwardedRef?:ForwardedRef<HTMLButtonElement>
 }
 interface StateType {
     typeArr:string [],
@@ -25,7 +26,7 @@ export default class ButtonComponent extends React.Component<PropType,StateType>
         this.props.onClick && this.props.onClick();
     }
     render(){
-        const { nativeType,type,long,size,className } = this.props;
+        const { nativeType,type,long,size,className,forwardedRef } = this.props;
         const { typeArr,sizeArr } = this.state;
         const buttonType:string = type && typeArr.indexOf(type) > -1 ? type : 'default';
         const buttonSize:string = size && sizeArr.indexOf(size) > -1 ? size : 'default';
@@ -38,7 +39,8 @@ export default class ButtonComponent extends React.Component<PropType,StateType>
             longClassName = "long-btn";
         }
         return (
-            <button 
+            <button
+                ref={forwardedRef}
                 type={nativeType} 
                 className={ `btn btn-${ buttonType } ${ longClassName } btn-size-${buttonSize} ${parentClassName}`} 
                 onClick={ this.onClickHandler.bind(this)}

@@ -1,4 +1,4 @@
-import React, { useReducer, useState } from "react";
+import React, { RefObject, useReducer, useState } from "react";
 import "../style/App.css";
 import LangComponent from "../components/langComponent";
 import TitleComponent from "../components/titleComponent";
@@ -8,6 +8,7 @@ import BottomComponent from "../components/bottomComponent";
 import QuizWrapperComponent from "../components/quizWrapper";
 import ParseComponent from "../components/parseComponent";
 import RenderHTMLComponent from '../components/renderHTML';
+import TopComponent from '../components/topComponent';
 import { getCurrentQuestion, parseObject,questions,getCurrentAnswers,QuestionArray } from "../data/data";
 import { LangContext, lang } from "../store/lang";
 import { OrderReducer, initOrder } from "../store/count";
@@ -47,6 +48,7 @@ function App() {
     setUsersAnswers(collectionUsersAnswers);
   }
   const { count:order } = orderState;
+  const wrapperRef:RefObject<HTMLDivElement> = React.createRef();
   return (
     <div className="App flex-center">
       <LangContext.Provider value={langValue}>
@@ -64,7 +66,7 @@ function App() {
             ) 
             : 
             (
-              <div className="w-100p result-wrapper">
+              <div className="w-100p result-wrapper" ref={wrapperRef}>
                  <div className="flex-center flex-direction-column result-content">
                     <TitleComponent level={1}>{ getCurrentAnswers(langValue,correctTotal)}</TitleComponent>
                     <ParseComponent lang={langValue} userAnswers={ usersAnswers }></ParseComponent>
@@ -75,6 +77,7 @@ function App() {
                       </ButtonComponent>
                     </div>
                  </div>
+                 <TopComponent scrollElement={wrapperRef} color="#ffffff"></TopComponent>
               </div>
             )
             : 

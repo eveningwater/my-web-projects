@@ -1,0 +1,9 @@
+.to-Top-btn {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+}
+.to-Top-btn .icon {
+    width: 35px;
+    height: 35px;
+}
