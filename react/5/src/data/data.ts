@@ -519,6 +519,7 @@ Number([,]); // -> 0***
             This repository is part of what inspired me to create this quiz. 
             If you want to go deeper, you can always grab a lantern and head into the [depths of the ECMAScript publications](https://www.ecma-international.org/publications-and-standards/standards/). 
             Have fun in there!
+            <blockquote>Special Note:This website inspired by <a href="https://jsisweird.com/" target="blank">https://jsisweird.com/</a></blockquote>
         `,
         startBtn:"let's start",
         endBtn:"Start over"
@@ -743,6 +744,7 @@ Number([,]); // -> 0***
             如果你想要更多这样的东西，我建议你查看 [通过 Denys Dovhan 创建的这个代码库](https://github.com/denysdovhan/wtfjs)，里面有很多有趣和棘手的 JavaScript 示例。
             这个代码库是启发我创建这个测验的一部分。如果你想更深入，你可以随时提着灯笼进入[depths of the ECMAScript publications](https://www.ecma-international.org/publications-and-standards/standards/)。
             你将在那里玩得开心！
+            <blockquote>特别说明:本网站启发于 <a href="https://jsisweird.com/" target="blank">https://jsisweird.com/</a></blockquote>
         `,
         startBtn:"让我们开始吧",
         endBtn:"重来"

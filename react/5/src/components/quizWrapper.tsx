@@ -5,7 +5,7 @@ import TitleComponent from './titleComponent';
 import "../style/quiz-wrapper.css";
 interface PropType {
     onSelect?:Function;
-    question:QuestionArray
+    question:QuestionArray;
 }
 interface PropState {
     selectActiveIndex?:number | null | undefined

@@ -59,7 +59,8 @@ function App() {
                 <div className="flex-center flex-direction-column w-100p">
                   <QuizWrapperComponent 
                       question={ questions[(order - 1 < 0 ? 0 : order - 1)] } 
-                      onSelect={ onSelectHandler }>
+                      onSelect={ onSelectHandler }
+                    >
                     </QuizWrapperComponent>
                   <BottomComponent lang={langValue}>{getCurrentQuestion(langValue, order)}</BottomComponent>
                 </div>

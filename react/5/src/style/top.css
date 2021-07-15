@@ -2,6 +2,8 @@
     position: fixed;
     bottom: 15px;
     right: 15px;
+    display: none;
+    transition: all .4s ease-in-out;
 }
 .to-Top-btn .icon {
     width: 35px;
