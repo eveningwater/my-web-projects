@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    overflow: hidden;
+    background-image: linear-gradient( 135deg, #81FFEF 10%, #F067B4 100%);
+    height: 100vh;
+}
+.btn-group {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient( 135deg, #3B2667 10%, #BC78EC 100%);
+    box-shadow: 0 4px 8px #5d7bb6;
+    color: #fff;
+}
+.createToastBtn {
+    outline: none;
+    display: inline-block;
+    padding: 10px 14px;
+    background: radial-gradient(#75b4e4,#4407fe,#0074ef,#5d7bb6);
+    color: #fff;
+    border:none;
+    border-radius: 8px;
+    transition: all .4s ease-in-out;
+    margin: 2em;
+    cursor: pointer;
+}
+.createToastBtn:hover {
+    background: radial-gradient(#e4b875,#fe7e07,#ef6c00,#b6925d);
+    transform: scale(1.2);
+}
+.toast-container {
+    width: 100%;
+    height: calc(100% - 60px);
+    position: relative;
+}
+.toast-container > .toast {
+    border-radius: 15px;
+    padding: .6rem 4rem;
+    margin: 1rem;
+    position: absolute;
+    letter-spacing: 2px;
+    font-size: 14px;
+}
+.toast-container > .toast > .toast-close-btn {
+    position: absolute;
+    right: 6px;
+    top: 3px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.toast-container > .toast > .toast-close-btn:hover{
+    opacity: .8;
+}
+.toast-container > .toast.toast-default,
+.toast-container > .toast.toast-default > .toast-close-btn {
+    color: #0f2972;
+}
+.toast-container > .toast.toast-info,
+.toast-container > .toast.toast-info > .toast-close-btn {
+    color: #494948;
+}
+.toast-container > .toast.toast-success,
+.toast-container > .toast.toast-success > .toast-close-btn {
+    color: #4a9104;
+}
+.toast-container > .toast.toast-error,
+.toast-container > .toast.toast-error > .toast-close-btn {
+    color: #970707;
+}
+.toast-container > .toast.toast-warning,
+.toast-container > .toast.toast-warning > .toast-close-btn {
+    color: #864f07;
+}
+.toast-container > .toast.toast-default {
+    background: linear-gradient(to top,#a0a5f3,#758cca);
+}
+.toast-container > .toast.toast-info {
+    background: linear-gradient(to top,#eff1ef,#989997);
+}
+.toast-container > .toast.toast-success {
+    background: linear-gradient(to top,#85e585,#83d136);
+}
+.toast-container > .toast.toast-error {
+    background: linear-gradient(to top,#e59385,#d13636);
+}
+.toast-container > .toast.toast-warning {
+    background: linear-gradient(to top,#e5b085,#d18e36);
+}
