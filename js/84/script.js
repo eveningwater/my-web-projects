@@ -58,8 +58,8 @@ function createNotification({message = null,type = null,auto = false,autoTime = 
     toastItem.textContent = message;
     if(closeItem)toastItem.appendChild(closeItem);
     container.appendChild(toastItem);
-    const leftValue = (left - toastItem.clientWidth) <= 0 ? 0 : left - toastItem.clientWidth;
-    const topValue = (top - toastItem.clientHeight) <= 0 ? 0 : top - toastItem.clientHeight;
+    const leftValue = (left - toastItem.clientWidth) <= 0 ? 0 : left - toastItem.clientWidth - 30;
+    const topValue = (top - toastItem.clientHeight) <= 0 ? 0 : top - toastItem.clientHeight - 30;
     toastItem.style.left = leftValue + 'px';
     toastItem.style.top = topValue + 'px';
     if(auto){
