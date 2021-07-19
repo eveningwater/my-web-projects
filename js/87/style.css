@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image: linear-gradient( 135deg, #97ABFF 10%, #123597 100%);
+    overflow: hidden;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+.text {
+    color: #030d50;
+    font-size: 200%;
+    letter-spacing: 2px;
+}
+.speed {
+    position: fixed;
+    bottom: 15px;
+    background-image: linear-gradient( 135deg, #FD6585 10%, #0D25B9 100%);
+    color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+}
+.speed > input {
+    display: inline-block;
+    padding: .6rem .8rem;
+    border: 1px solid #f2f3f4;
+    border-radius: 8px;
+    outline: none;
+    width: 85px;
+}
