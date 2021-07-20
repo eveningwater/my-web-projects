@@ -1,3 +1,4 @@
+// https://github.com//eveningwater/my-web-projects
 const $ = v => document.querySelector(v);
 const slideContainer = $(".slide-container");
 const leftSlide = $(".left-slide");

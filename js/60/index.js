@@ -1,3 +1,4 @@
+// https://github.com//eveningwater/my-web-projects
 const $ = v => document.querySelector(v);
 const $$ = v => document.querySelectorAll(v);
 const prevBtn = $("#prev");

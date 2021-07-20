@@ -1,3 +1,4 @@
+// https://github.com//eveningwater/my-web-projects
 const githubAPI = 'https://api.github.com/users/';
 const $ = v => document.querySelector(v);
 const main = $("#main");

@@ -1,3 +1,4 @@
+// https://github.com//eveningwater/my-web-projects
 const $ = v => document.querySelector(v);
 const board = $("#draw-board");
 const ctx = board.getContext("2d");

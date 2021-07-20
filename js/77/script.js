@@ -1,3 +1,4 @@
+// https://github.com//eveningwater/my-web-projects
 // https://stackoverflow.com/questions/10756313/javascript-jquery-map-a-range-of-numbers-to-another-range-of-numbers
 const scale = (n,inMin,inMax,outerMin,outerMax) => (n - inMin) * (outerMax - outerMin) / (inMax - inMin) + outerMin;
 const $ = v => document.querySelector(v);
