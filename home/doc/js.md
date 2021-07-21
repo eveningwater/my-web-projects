@@ -89,4 +89,5 @@
 |  85  |           [github-简介](https://github.com/eveningwater/my-web-projects/tree/master/js/85)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/85)
 |  86  |           [点击生成爱心](https://github.com/eveningwater/my-web-projects/tree/master/js/86)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/86)
 |  87  |           [自动文本效果](https://github.com/eveningwater/my-web-projects/tree/master/js/87)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/87)
-|  88  |           [密码生成器](https://github.com/eveningwater/my-web-projects/tree/master/js/88)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/88)                   
+|  88  |           [密码生成器](https://github.com/eveningwater/my-web-projects/tree/master/js/88)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/88)
+|  89  |           [开关小组件](https://github.com/eveningwater/my-web-projects/tree/master/js/89)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/89)                   

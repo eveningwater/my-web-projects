@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+h1 {
+    text-align: center;
+    color: #535455;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+.flex-center {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+.switch-container {
+    position: relative;
+    display: inline-block;
+    padding: 5px;
+    width: 180px;
+    cursor: pointer;
+    color: #5e5a5a;
+}
+.switch-container .switch {
+    border-radius: 25px;
+    background-color: #9fa0a1;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    width: 80px;
+    height: 42px;
+    margin-right: 8px;
+}
+.switch-container.disabled .switch,.switch-container.disabled .switch.active {
+    background-color: #d3d5d6;
+    cursor: not-allowed;
+}
+.switch-container.disabled > .switch-checkbox,.switch-container.disabled {
+    cursor: not-allowed;
+}
+.switch-container .switch.active,.switch-container > .switch-checkbox:checked+.switch {
+    background-color: #298ce9;
+}
+.switch-container > .switch-checkbox {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    display: none;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.switch::after {
+    content:"";
+    background-color: #f2f3f4;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    animation-timing-function: linear;
+    animation-duration: .3s;
+    animation-fill-mode:forwards;
+    animation-name: slideOff;
+    cursor: pointer;
+}
+.switch.active::after,.switch-container > .switch-checkbox:checked + .switch::after {
+    animation-name: slideOn;
+}
+.switch-container.disabled .switch::after {
+    background-color: #acacac;
+}
+@keyframes slideOn {
+    0% {
+        transform: translateX(0px) scale(1);
+    }
+    50% {
+        transform: translateX(20px) scale(1.2);
+    }
+    100% {
+        transform: translateX(40px) scale(1);
+    }
+}
+@keyframes slideOff {
+    0% {
+        transform: translateX(40px) scale(1);
+    }
+    50% {
+        transform: translateX(20px) scale(1.2);
+    }
+    100% {
+        transform: translateX(0px) scale(1);
+    }
+}
