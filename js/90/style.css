@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    background-image: linear-gradient(135deg, #FEC163 10%, #DE4313 100%);
+    overflow: hidden;
+}
+.header {
+    width: 100%;
+    height: 3rem;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+.header > .add {
+    display: inline-block;
+    padding: 8px 10px;
+    background-image: linear-gradient(135deg, #F1CA74 10%, #A64DB6 100%);
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    margin-right: 1rem;
+    font-size: 17px;
+    cursor: pointer;
+}
+.header > .add:hover {
+    background-image: linear-gradient(135deg, #F1CA74 10%, #980eb1 100%);
+}
+.header > .add > i {
+    margin-right: 5px;
+}
+.note-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+    top: 3rem;
+}
+.note-container > .note {
+    margin: 30px 20px;
+    width: 400px;
+    height: 400px;
+    max-width: 100%;
+    background-image: linear-gradient(135deg, #f3f3f2 10%, #ffffff 100%);
+    box-shadow: 0 0 10px rgba(0,0,0,.5);
+    border-radius: 5px;
+    position: relative;
+}
+.note-container > .note > .tool {
+    display: flex;
+    justify-content: flex-end;
+    padding: .5rem;
+    background-image: linear-gradient( 135deg, #FEB692 10%, #EA5455 100%);
+}
+.note-container > .note > .tool > button {
+    background-color: transparent;
+    border:none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-left: 0.5rem;
+    outline: none;
+}
+.note-container > .note > .tool > button:hover {
+    color: #eec7bb;
+}
+.note-container > .note > .main {
+    width: 100%;
+    height: calc(100% - 2rem);
+    outline: none;
+    padding: 20px;
+    resize: none;
+    display: block;
+    color: #d753ee;
+}
+.note-container > .note > .textarea {
+    position: absolute;
+    top: 2rem;
+    left: 0;
+}
+.note-container > .note > .textarea.hidden {
+    display: none;
+}
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
