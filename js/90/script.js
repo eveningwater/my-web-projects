@@ -75,7 +75,11 @@ function addNoteHandler(note, dataId,focusStatus) {
             if(textarea.classList.contains("hidden")){
                 textarea.classList.remove("hidden");
             }
+            if(!focusStatus){
+                textarea.value = notes[index].text;
+            }
             const text = textarea.value.trim();
+            // console.log(text);
             if (textarea.setSelectionRange) {
                 textarea.focus();
                 textarea.setSelectionRange(text.length, text.length);
