@@ -1,5 +1,6 @@
 const $ = (v,el = document) => el.querySelector(v);
 const $$ = (v,el = document) => el.querySelectorAll(v);
+const carouselContainer = $(".carousel-container");
 const carousel = $("#carousel");
 const carouselItems = $$("img",carousel);
 const prev = $("#prev");
@@ -7,7 +8,9 @@ const next = $("#next");
 let currentIndex = 0;
 let interval = setInterval(run,1000);
 // let interval = mySetInterval(run,1000);
-// why use this method can't achieve the desired effect?
+// Why use this method can't achieve the desired effect?
+// Use this method as follow to replace window.setInterval,clicked the prev button more to get the stranger effect.
+// Maybe this method does not conform to the specification,So make sure to use window.setInterval.
 // function mySetInterval(handler,time = 1000){
 //     let timer = null;
 //     const interval = () => {
@@ -31,7 +34,7 @@ function changeCarouselItem(){
     }else if(currentIndex < 0){
         currentIndex = carouselItems.length - 1;
     }
-    carousel.style.transform = `translateX(-${ currentIndex * 500 }px)`;
+    carousel.style.transform = `translateX(-${ currentIndex * carouselContainer.offsetWidth }px)`;
 }
 function resetInterval(){
     clearInterval(interval);

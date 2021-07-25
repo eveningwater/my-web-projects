@@ -93,4 +93,5 @@
 |  89  |           [good-cheap-fast](https://github.com/eveningwater/my-web-projects/tree/master/js/89)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/89)
 |  90  |           [notes-app](https://github.com/eveningwater/my-web-projects/tree/master/js/90)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/90)
 |  91  |           [animated-countdown](https://github.com/eveningwater/my-web-projects/tree/master/js/91)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/91)
-|  92  |           [image-carousel](https://github.com/eveningwater/my-web-projects/tree/master/js/92)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/92)                                        
+|  92  |           [image-carousel](https://github.com/eveningwater/my-web-projects/tree/master/js/92)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/92)
+|  93  |           [hover-board](https://github.com/eveningwater/my-web-projects/tree/master/js/93)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/93)                                        
