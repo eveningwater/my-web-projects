@@ -40,7 +40,7 @@ function createPokemon(pokemon){
     const poke_types = pokemon.types.map(type => type.type.name);
     const type = main_types.find(type => poke_types.indexOf(type) > -1);
     const color = colors[type];
-    pokemonItem.style.background = `background-image: linear-gradient(135deg, ${ color } 10%, ${ randomColor() } 100%);`
+    pokemonItem.style.background = `linear-gradient(135deg, ${ color } 10%, ${ randomColor() } 100%)`;
     pokemonItem.innerHTML = `
     <div class="pokedex-avatar">
         <img src="https://pokeres.bastionbot.org/images/pokemon/${pokemon.id}.png" alt="the pokemon">
