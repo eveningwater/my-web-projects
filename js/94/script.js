@@ -35,7 +35,7 @@ function createPokemon(pokemon){
     const pokemonItem = document.createElement("div");
     pokemonItem.classList.add("pokedex");
 
-    const name = pokemon.name[0].toUpperCase() + pokemon.name[1].toLowerCase();
+    const name = pokemon.name[0].toUpperCase() + pokemon.name.slice(1).toLowerCase();
     const id = pokemon.id.toString().padStart(3,"0");
     const poke_types = pokemon.types.map(type => type.type.name);
     const type = main_types.find(type => poke_types.indexOf(type) > -1);

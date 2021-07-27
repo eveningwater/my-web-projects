@@ -66,7 +66,7 @@ function setCurrentDate(){
     const hourForClock = hour % 12;
     const minute = date.getMinutes();
     const second = date.getSeconds();
-    const amPm = hourForClock >= 12 ? langText[currentLang]['time-before-text'] : langText[currentLang]['time-after-text'];
+    const amPm = hour >= 12 ? langText[currentLang]['time-after-text'] : langText[currentLang]['time-before-text'];
     const w = currentLang === 'zh' ? dayZHs : days;
     const m = currentLang === 'zh' ? monthZHs : months;
     const values = [

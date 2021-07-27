@@ -95,4 +95,5 @@
 |  91  |           [倒计时动画](https://github.com/eveningwater/my-web-projects/tree/master/js/91)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/91)
 |  92  |           [图片轮播](https://github.com/eveningwater/my-web-projects/tree/master/js/92)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/92)
 |  93  |           [悬浮面板](https://github.com/eveningwater/my-web-projects/tree/master/js/93)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/93)
-|  94  |           [宠物图鉴](https://github.com/eveningwater/my-web-projects/tree/master/js/94)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/94)                             
+|  94  |           [宠物图鉴](https://github.com/eveningwater/my-web-projects/tree/master/js/94)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/94)
+|  95  |           [手机选项卡导航](https://github.com/eveningwater/my-web-projects/tree/master/js/95)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/95)                              

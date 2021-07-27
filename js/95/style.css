@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(120deg,#e48305 10%,#e9b687 90%);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.phone {
+    max-width: 100%;
+    width: 350px;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    height: 600px;
+    max-height: 100%;
+    border:3px solid #f0d664;
+}
+.carousel {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: calc(100% - 60px);
+}
+.carousel .carousel-item {
+    width: 100%;
+    object-fit: fill;
+    height: 100%;
+    display: block;
+    transition: opacity 1s linear;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.carousel .carousel-item.active {
+    opacity: 1;
+}
+.nav {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin-top: -5px;
+}
+.nav ul {
+    list-style: none;
+    display: flex;
+    height: 60px;
+    background: linear-gradient(120deg,#ebe4a6 10%,#e6d814 90%);
+}
+.nav ul li {
+    flex: 1;
+    padding: 1rem;
+    text-align: center;
+    color: #535455;
+    cursor: pointer;
+    font-size: 14px;
+}
+.nav ul li p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 12px;
+    margin-top: 0.2rem;
+}
+.nav ul li:hover,.nav ul li.active {
+    color: #ce7611;
+}

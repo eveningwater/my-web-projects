@@ -121,12 +121,14 @@ function createSettings(){
 function createLangItem(){
     const langArr = dataObject[currentLang].lang;
     let langHTML = "";
-    langArr.forEach(item => langHTML += `<div class="lang-item ${ item === currentLang ? 'lang-item-active' : ''}">${ item }</div>`);
+    langArr.forEach(item => langHTML += `<div class="lang-item ${ item === currentLang ? 'lang-item-active' : ''}" data-lang=${ item }>${ item }</div>`);
     langEle.innerHTML = langHTML;
     const langItems = langEle.children;
     langEle.addEventListener("click",e => {
         const { className } = e.target;
         if(className.indexOf("lang-item") > -1){
+            const currentDataLang = e.target.getAttribute("data-lang");
+            if(currentDataLang === currentLang)return;
             currentLang = currentLang === "en" ? "zh" : "en";
             siblings(e.target).forEach(item => item.classList.remove("lang-item-active"));
             e.target.classList.add("lang-item-active");
