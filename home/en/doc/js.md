@@ -96,4 +96,5 @@
 |  92  |           [image-carousel](https://github.com/eveningwater/my-web-projects/tree/master/js/92)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/92)
 |  93  |           [hover-board](https://github.com/eveningwater/my-web-projects/tree/master/js/93)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/93)
 |  94  |           [pokedex](https://github.com/eveningwater/my-web-projects/tree/master/js/94)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/94)
-|  95  |           [mobile-tab-navigation](https://github.com/eveningwater/my-web-projects/tree/master/js/95)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/95)                                        
+|  95  |           [mobile-tab-navigation](https://github.com/eveningwater/my-web-projects/tree/master/js/95)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/95)
+|  96  |           [password-strength-background](https://github.com/eveningwater/my-web-projects/tree/master/js/96)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/96)                                        

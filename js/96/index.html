@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>password-strength-background</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="background" id="background"></div>
+    <div class="bg-white rounded p-10 text-center shadow-md">
+        <h1 class="text-3xl text-blue-300">Image Password Strength</h1>
+        <p class="text-sm text-gray-700 mt-2">Change the password to see the effect</p>
+        <div class="my-4 text-left">
+            <label class="text-gray-900">Email</label>
+            <input type="text" class="border block w-full p-2 mt-2 rounded" placeholder="enter email" />
+        </div>
+        <div class="my-4 text-left">
+            <label class="text-gray-900">password</label>
+            <input type="password" id="password" class="border block w-full p-2 mt-2 rounded" placeholder="enter password" />
+        </div>
+        <button class="bg-black text-white py-2 inline-block mt-4 w-full rounded" type="button">Submit</button>
+    </div>
+</body>
+<script src="./script.js"></script>
+</html>
