@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    overflow: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-image: linear-gradient(135deg, #E2B0FF 10%, #9F44D3 100%);
+}
+.magic-btn {
+    padding: .6rem 2rem;
+    display: inline-block;
+    background-image: linear-gradient( 135deg, #d07df1 10%, #8f0cb7 100%);
+    border-radius: 8px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #fff;
+    transition: all .3s cubic-bezier(0.215, 0.610, 0.355, 1);
+    margin-bottom: 2rem;
+}
+.magic-btn:hover {
+    background-image: linear-gradient(135deg, #c937e6 10%, #bd06e2 100%);
+}
+.boxes {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around;
+    width: 60vw;
+    height: 60vh;
+    position: relative;
+    transition: all .4s ease-in-out;
+}
+.boxes.big {
+    width: 65vw;
+    height: 65vh;
+}
+.boxes.big .box {
+    transform: rotateZ(360deg);
+}
+.boxes .box {
+    width: 15vw;
+    height: 15vh;
+    transition: all .4s ease-in-out;
+    background-size: 60vw 60vh;
+    background-repeat: no-repeat;
+    background-image: url("https://www.eveningwater.com/my-web-projects/js/21/img/1.gif");
+    position: relative;
+}
+.boxes .box::before,.boxes .box::after {
+    content: "";
+    position: absolute;
+}
+.boxes .box::before {
+    transform: skewX(45deg);
+    background: linear-gradient(135deg, #c074ec 10%, #8a16ce 100%);
+    left: 8px;
+    bottom: -2vh;
+    width: 100%;
+    height: 2vh;
+}
+.boxes .box::after {
+    transform: skewY(45deg);
+    background: linear-gradient(135deg, #d7a8f1 10%, #aa3ee9 100%);
+    top: 8px;
+    right: -2vh;
+    width: 2vh;
+    height: 100%;
+}
