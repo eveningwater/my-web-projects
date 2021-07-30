@@ -60,7 +60,7 @@
                         <img class="img-responsive ew-img" src="website/images/about.jpg">
                     </div>
                     <div class="col-md-6 right" id="about_right">
-                        <a href="#index" class="btn ew-btn back"> <i class="fa fa-angle-left"
+                        <a href="/" class="btn ew-btn back"> <i class="fa fa-angle-left"
                                 aria-hidden="true"></i>{{ aboutData[currentLang]["backBtnText"] }}</a>
                         <div class="watermark">
                             <h2 class="page-title" text-center>{{ aboutData[currentLang]["title"] }}</h2>
@@ -94,14 +94,14 @@
                         </div>
                     </div>
                     <div class="col-md-6" id="work_right">
-                        <a href="#index" class="btn ew-btn back"> <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        <a href="/" class="btn ew-btn back"> <i class="fa fa-angle-left" aria-hidden="true"></i>
                             {{ workData[currentLang]["backBtnText"] }}</a>
                         <div class="watermark">
                             <h2 class="page-title" text-center>{{ workData[currentLang]["title"] }}</h2>
                             <div class="marker">w</div>
                         </div>
                         <p class="subtitle">{{ workData[currentLang]["description"] }}</p>
-                        <div class="info" v-html="marked(workData[currentLang]['content'])"></div>
+                        <div class="info" v-html="renderMarkdown(workData[currentLang]['content'])"></div>
                     </div>
                 </div>
             </div>
@@ -113,7 +113,7 @@
                         <img class="img-responsive ew-img" src="website/images/contact.jpg">
                     </div>
                     <div class="col-md-6 right" id="contact_right">
-                        <a href="#index" class="btn ew-btn back"> <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        <a href="/" class="btn ew-btn back"> <i class="fa fa-angle-left" aria-hidden="true"></i>
                             {{ contactData[currentLang]["backBtnText"] }} </a>
                         <div class="watermark">
                             <h2 class="page-title" text-center>{{ contactData[currentLang]["title"] }}</h2>
@@ -150,7 +150,7 @@
         </footer>
     </div>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.9/vue.min.js"></script>
 <script src="https://cdn.bootcdn.net/ajax/libs/highlight.js/11.0.0-alpha1/highlight.min.js"></script>
 <script src="https://cdn.bootcdn.net/ajax/libs/Swiper/6.8.0/swiper-bundle.min.js"></script>
 <script src="https://cdn.bootcdn.net/ajax/libs/marked/2.0.3/marked.min.js"></script>

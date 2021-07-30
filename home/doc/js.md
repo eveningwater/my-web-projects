@@ -98,4 +98,5 @@
 |  94  |           [宠物图鉴](https://github.com/eveningwater/my-web-projects/tree/master/js/94)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/94)
 |  95  |           [手机选项卡导航](https://github.com/eveningwater/my-web-projects/tree/master/js/95)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/95)
 |  96  |           [密码强度背景](https://github.com/eveningwater/my-web-projects/tree/master/js/96)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/96)
-|  97  |           [3D背景盒子](https://github.com/eveningwater/my-web-projects/tree/master/js/97)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/97)                                   
+|  97  |           [3D背景盒子](https://github.com/eveningwater/my-web-projects/tree/master/js/97)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/97)
+|  98  |           [验证账户页面](https://github.com/eveningwater/my-web-projects/tree/master/js/98)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/98)                                      

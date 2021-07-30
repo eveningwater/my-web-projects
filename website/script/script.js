@@ -35,6 +35,21 @@ function markedTemplate(template) {
     });
     return marked(template);
 }
+function runSwiper(container) {
+    let swiperOptions = {
+        autoplay: {
+            delay: 1500,
+            disableOnInteraction: false,
+        },
+        autoplay:true,
+        observer:true,
+        observeParents:true,
+        initialSlide: 0,
+        loop:true,
+        speed: 1000
+    };
+    new Swiper(container, swiperOptions);
+}
 const app = new Vue({
     data() {
         return {
@@ -82,23 +97,8 @@ const app = new Vue({
                 ["Left", "Right"].forEach(dir => $("#" + value + "_" + dir.toLowerCase()).addClass("animated " + "slideIn" + dir));
             });
         },
-        marked(data) {
+        renderMarkdown(data) {
             return markedTemplate(data);
         }
     }
 }).$mount("#app");
-function runSwiper(container) {
-    let swiperOptions = {
-        autoplay: {
-            delay: 1500,
-            disableOnInteraction: false,
-        },
-        autoplay:true,
-        observer:true,
-        observeParents:true,
-        initialSlide: 0,
-        loop:true,
-        speed: 1000
-    };
-    new Swiper(container, swiperOptions);
-}
