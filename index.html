@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="website/plugins/bootstrap.min.css" rel="stylesheet">
+    <link href="website/plugins/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="website/plugins/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,700,700i|Josefin+Sans:700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link href="https://cdn.bootcdn.net/ajax/libs/highlight.js/11.1.0/styles/base16/horizon-light.min.css"
+        rel="stylesheet">
+    <link href="https://cdn.bootcdn.net/ajax/libs/Swiper/6.8.0/swiper-bundle.min.css" rel="stylesheet">
+    <link rel="icon" href="website/images/logo.png">
+    <link rel="stylesheet" href="./website/styles/main.css">
+</head>
+
+<body>
+    <div id="app" v-cloak>
+        <div class="btn-lang-container">
+            <div v-for="(item,index) in currentLangArr" :key="item.value + index" @click="changeLang(item.value)"
+                class="btn ew-btn">{{ item.label }}</div>
+        </div>
+        <div id="index">
+            <div class="container main">
+                <div class="row home">
+                    <div id="index_left" class="col-md-6 left">
+                        <img class="img-responsive ew-img" src="website/images/home.jpg">
+                    </div>
+                    <div id="index_right" class="col-md-6 text-center right">
+                        <div class="logo">
+                            <img src="website/images/logo.png">
+                            <h4>{{ indexData[currentLang]["who"] }}</h4>
+                        </div>
+                        <p class="home-description">{{ indexData[currentLang]["description"] }}</p>
+                        <div class="btn-group-vertical custom_btn animated slideinright">
+                            <div class="btn ew-btn" v-for="(text,index) in indexData[currentLang]['btn']"
+                                :key="text.id + index" :id="text.id" @click="toLocate(text.id)">{{ text.content }}</div>
+                        </div>
+                        <div class="social">
+                            <a href="https://www.eveningwater.com/my-web-projects/vue/10/" target="blank"><i class="fa fa-pinterest"
+                                    aria-hidden="true"></i></a>
+                            <a href="https://github.com/eveningwater" target="blank"><i class="fa fa-github"
+                                    aria-hidden="true"></i></a>
+                            <a href="https://www.eveningwater.com/my-web-projects/" target="blank"><i class="fa fa-linkedin"
+                                    aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="about_scroll" class="pages">
+            <div class="container main">
+                <div class="row">
+                    <div class="col-md-6 left" id="about_left">
+                        <img class="img-responsive ew-img" src="website/images/about.jpg">
+                    </div>
+                    <div class="col-md-6 right" id="about_right">
+                        <a href="#index" class="btn ew-btn back"> <i class="fa fa-angle-left"
+                                aria-hidden="true"></i>{{ aboutData[currentLang]["backBtnText"] }}</a>
+                        <div class="watermark">
+                            <h2 class="page-title" text-center>{{ aboutData[currentLang]["title"] }}</h2>
+                            <div class="marker">a</div>
+                        </div>
+                        <p class="subtitle">{{ aboutData[currentLang]["description"] }}</p>
+                        <p class="info">"{{ aboutData[currentLang]["content"]  }}"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="work_scroll" class="pages">
+            <div class="container main">
+                <div class="row">
+                    <div class="col-md-6" id="work_left">
+                        <div class="swiper-container" ref="slideContainer">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="slide-inner" style="background-image:url(website/images/work.jpg)">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="slide-inner" style="background-image:url(website/images/home.jpg)">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="slide-inner" style="background-image:url(website/images/contact.jpg)">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6" id="work_right">
+                        <a href="#index" class="btn ew-btn back"> <i class="fa fa-angle-left" aria-hidden="true"></i>
+                            {{ workData[currentLang]["backBtnText"] }}</a>
+                        <div class="watermark">
+                            <h2 class="page-title" text-center>{{ workData[currentLang]["title"] }}</h2>
+                            <div class="marker">w</div>
+                        </div>
+                        <p class="subtitle">{{ workData[currentLang]["description"] }}</p>
+                        <div class="info" v-html="marked(workData[currentLang]['content'])"></div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <div id="contact_scroll" class="pages">
+            <div class="container main">
+                <div class="row">
+                    <div class="col-md-6 left" id="contact_left">
+                        <img class="img-responsive ew-img" src="website/images/contact.jpg">
+                    </div>
+                    <div class="col-md-6 right" id="contact_right">
+                        <a href="#index" class="btn ew-btn back"> <i class="fa fa-angle-left" aria-hidden="true"></i>
+                            {{ contactData[currentLang]["backBtnText"] }} </a>
+                        <div class="watermark">
+                            <h2 class="page-title" text-center>{{ contactData[currentLang]["title"] }}</h2>
+                            <div class="marker">c</div>
+                        </div>
+                        <p class="subtitle">{{ contactData[currentLang]["description"] }}</p>
+                        <form class="form_edit">
+                            <div class="form-group">
+                                <input type="name" class="form-control" :placeholder="contactData[currentLang]['name']">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control"
+                                    :placeholder="contactData[currentLang]['email']">
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" rows="5"
+                                    :placeholder="contactData[currentLang]['message']"></textarea>
+                            </div>
+                            <button type="submit"
+                                class="btn ew-btn submit">{{ contactData[currentLang]["sendBtnText"]}}</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="text-center">
+            <div class="container bottom">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <p>{{ footerData[currentLang] }}</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/highlight.js/11.0.0-alpha1/highlight.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/Swiper/6.8.0/swiper-bundle.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/marked/2.0.3/marked.min.js"></script>
+<script src="./website/plugins/jquery-3.1.0.min.js"></script>
+<script src="./website/plugins/bootstrap.min.js"></script>
+<script src="./website/script/index.data.js"></script>
+<script src="./website/script/about.data.js"></script>
+<script src="./website/script/work.data.js"></script>
+<script src="./website/script/contact.data.js"></script>
+<script src="./website/script/footer.data.js"></script>
+<script src="./website/script/script.js"></script>
+
+</html>

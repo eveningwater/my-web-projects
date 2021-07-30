@@ -5,7 +5,7 @@ const sidebarEnConfig = require('./config/en/sidebarConfig.js');
 
 module.exports = {
     dest: "./dist",
-    base: "/my-web-projects/",
+    base: "/my-web-projects/home/",
     head: [
         ['link', {
             rel: 'icon',
