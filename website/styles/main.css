@@ -6,9 +6,10 @@
 [v-cloak] {
   display: none;
 }
-body {
+body,html {
   background-color: #f9f9f9;
   font-family: "Crimson Text";
+  overflow-x:hidden;
 }
 ul {
   list-style: none;
