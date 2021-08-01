@@ -110,7 +110,7 @@ export default defineComponent({
       state.startContent = getStartContent(lang.value);
       state.startButtonText = getStartButtonText(lang.value);
       state.endButtonText = getEndButtonText(lang.value);
-      state.endContent = parseObject[lang.value].endContent;
+      state.endContent = renderMarkedContent(parseObject[lang.value].endContent);
       state.answerTitle = getCurrentAnswers(lang.value,state.answerCorrect,questions.length);
       if(state.userAnswers.length > 25){
         state.userAnswers = state.userAnswers.slice(0,25);
