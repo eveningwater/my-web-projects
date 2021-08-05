@@ -32,13 +32,15 @@
 }
 .nav.nav-second {
     width: 95%;
-    background-image: linear-gradient( 135deg, #FEC163 10%, #DE4313 100%);
+    background-image: linear-gradient(135deg, #FEC163 10%, #DE4313 100%);
+    transition-delay: .2s;
 }
 .nav.nav-third {
     position: relative;
     width: 95%;
     padding: 40px;
     transition-delay: 0s;
+    background-image: linear-gradient(135deg, #e99a2b 10%, #e4562b 100%);
 }
 .nav.visible {
     transform: translateX(0);

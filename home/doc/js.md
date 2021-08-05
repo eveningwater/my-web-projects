@@ -105,4 +105,5 @@
 |  101 |           [自定义范围滑块](https://github.com/eveningwater/my-web-projects/tree/master/js/101)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/101)
 |  102 |           [移动导航](https://github.com/eveningwater/my-web-projects/tree/master/js/102)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/102)
 |  103 |           [小测验](https://github.com/eveningwater/my-web-projects/tree/master/js/103)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/103)
-|  104 |           [翻牌小游戏](https://github.com/eveningwater/my-web-projects/tree/master/js/104)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/104)                                        
+|  104 |           [翻牌小游戏](https://github.com/eveningwater/my-web-projects/tree/master/js/104)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/104)
+|  105 |           [推荐盒切换台](https://github.com/eveningwater/my-web-projects/tree/master/js/105)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/105)                                        
