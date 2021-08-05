@@ -1,0 +1,126 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.tile {
+  display: block;
+  float: left;
+  border-radius: 5%;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+.tile:nth-of-type(4n + 1) {
+  clear: left;
+}
+.tile:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 5%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transition: transform 0.2s;
+}
+.tile_open:after {
+  transition: transform 0.2s;
+  transform: translateX(-105%);
+}
+.tile .fa {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+}
+.tile_closed {
+  cursor: normal;
+  opacity: 0.7;
+  transition: opacity 0.5s;
+}
+/*Colours*/
+body {
+  background: linear-gradient(to right, #97c7ec, #4490ef);
+}
+.tile:after {
+  background: linear-gradient(120deg, #979fec, #0c3ddf);
+}
+.tile:hover:after {
+  background: linear-gradient(120deg, #a997ec, #4519e2);
+}
+.tile {
+  background: linear-gradient(120deg, #9c86eb, #3107c7);
+}
+.tile_closed {
+  background: linear-gradient(120deg, #4320c2, #2907a5);
+}
+/*Dimensions*/
+/*This is be used to make it more responsive*/
+.tile_container {
+  overflow: hidden;
+  width: 90vmin;
+  height: 90vmin;
+  margin-left: auto;
+  margin-right: auto;
+}
+.tile .fa {
+  font-size: 70px;
+  font-size: 10vmin;
+  line-height: 100px;
+  line-height: 16vmin;
+}
+.tile {
+  width: 100px;
+  width: 17%;
+  height: 100px;
+  height: 17%;
+  margin: 20px;
+  margin: 4%;
+}
+/*Overlay*/
+.overlay_win {
+  position: absolute;
+  top: 25vmin;
+  left: 0;
+  height: 40vmin;
+  width: 100%;
+  text-align: center;
+}
+.overlay_win {
+  background-color: #fff;
+}
+.overlay_win h2 {
+  font-size: 15vmin;
+  line-height: 15vmin;
+  margin: 5vmin 0px;
+}
+.overlay_win h2 {
+  color: #0c3ddf;
+  font-family: "Roboto", sans-serif;
+}
+#replay {
+  font-size: 7vmin;
+  display: inline-block;
+  border-radius: 1vmin;
+  padding: 2vmin 4vmin;
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
+}
+#replay {
+  background-color: #2296ef;
+  color: #fff;
+}
+#replay:hover {
+  background-color: #4490ef;
+}
+.overlay_win {
+  opacity: 0;
+  transition: opacity 0.4s;
+  pointer-events: none;
+}
+.overlay_win_open {
+  opacity: 0.9;
+  transition: opacity 0.4s;
+  pointer-events: auto;
+}
