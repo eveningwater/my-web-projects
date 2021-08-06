@@ -106,4 +106,5 @@
 |  102 |           [netflix-mobile-navigation](https://github.com/eveningwater/my-web-projects/tree/master/js/102)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/102)
 |  103 |           [quiz-app](https://github.com/eveningwater/my-web-projects/tree/master/js/103)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/103)
 |  104 |           [flip-card-game](https://github.com/eveningwater/my-web-projects/tree/master/js/104)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/104)
-|  105 |           [testimonial-box-switcher](https://github.com/eveningwater/my-web-projects/tree/master/js/105)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/105)                                                    
+|  105 |           [testimonial-box-switcher](https://github.com/eveningwater/my-web-projects/tree/master/js/105)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/105)
+|  106 |           [random-image-feed](https://github.com/eveningwater/my-web-projects/tree/master/js/106)            |          [在线 demo](https://www.eveningwater.com/my-web-projects/js/106)                                                       

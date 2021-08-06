@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: linear-gradient( 135deg, #ABDCFF 10%, #0396FF 100%);
+    height: 100%;
+}
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+h1 {
+    color: #ececec;
+    text-align: center;
+    margin: 1rem 0;
+    cursor: pointer;
+    position: relative;
+}
+h1:hover {
+    color: #fff;
+}
+h1:hover::before{
+    display: block;
+}
+h1::before {
+    content:attr(confirm-title);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    top: 100%;
+    min-width: 300px;
+    box-shadow: 0 2px 14px rgba(255,255,255,.5);
+    background: linear-gradient( 135deg, #43CBFF 10%, #9708CC 100%);
+    border-radius: 15px;
+    color: #fff;
+    font-size: 14px;
+    display: none;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    flex-wrap: wrap;
+}
+.container > img {
+    object-fit: cover;
+    width: 300px;
+    height: 300px;
+    border-radius: 5px;
+    box-shadow: -3px -2px 12px #7123ef;
+    display: block;
+    margin: .4rem;
+    max-width: 100%;
+}
+.back{
+    position: fixed;
+    bottom: 15px;
+    right: 5px;
+    border-radius: 50%;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512'%3E %3Cpath fill='%23ffffff' d='M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z'%3E%3C/path%3E %3C/svg%3E") center no-repeat #b523ef;
+    background-size: 40%;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    display: none;
+  }
