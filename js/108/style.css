@@ -10,6 +10,7 @@ body {
     font-family: 'Press Start 2P', sans-serif;
     overflow: hidden;
     background: linear-gradient(135deg,#9cc8e9 10%,#0b6be0 90%);
+    min-height: 100vh;
 }
 .screen {
     display: flex;
@@ -20,6 +21,7 @@ body {
     height: 100vh;
     transition: all .4s cubic-bezier(0.165, 0.84, 0.44, 1);
     position: relative;
+    overflow: hidden;
 }
 .screen.hidden {
     margin-top: -100vh;
@@ -48,8 +50,14 @@ body {
     opacity: .8;
 }
 .screen .inspect-list {
-    display: flex;
     list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    overflow: hidden;
+    overflow-y: auto;
 }
 .screen .inspect-list li {
     margin: 10px;
@@ -133,7 +141,7 @@ body {
 .tab-container {
     position: absolute;
     left: 50%;
-    top: 10px;
+    bottom: 10px;
     transform: translateX(-50%);
     display: flex;
     align-items: center;
@@ -154,4 +162,9 @@ body {
 }
 .tab-container .tab-item:last-of-type {
     border-radius: 0 4px 4px 0;
+}
+@media screen and (max-width:600px){
+    .screen .time span, .screen .score span {
+        font-size: 12px;
+    }
 }

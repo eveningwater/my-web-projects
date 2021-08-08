@@ -1,0 +1,290 @@
+body {
+    background: linear-gradient(135deg,#e0e0e0 10%,#ffffff 90%);
+    animation: background 5s linear infinite;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: "Anton", sans-serif;
+    perspective: 1000px;
+    align-items: flex-start;
+}
+div {
+    transform-style: preserve-3d;
+}
+.g-container {
+    display: flex;
+    width: 100vw;
+    height: 30vh;
+    justify-content: center;
+    align-items: center;
+}
+.rail {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform: rotateX(-30deg) rotateY(-30deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rail .stamp {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background: linear-gradient(135deg,#3a322b 10%,#0f3b68 90%);
+    font-size: 7rem;
+    animation: stampSlide 40s linear infinite;
+}
+.rail .stamp:nth-child(1) {
+    animation-delay: -2.3s;
+}
+.rail .stamp:nth-child(2) {
+    animation-delay: -4.3s;
+}
+.rail .stamp:nth-child(3) {
+    animation-delay: -6.3s;
+}
+.rail .stamp:nth-child(4) {
+    animation-delay: -8.3s;
+}
+.rail .stamp:nth-child(5) {
+    animation-delay: -10.3s;
+}
+.rail .stamp:nth-child(6) {
+    animation-delay: -12.3s;
+}
+.rail .stamp:nth-child(7) {
+    animation-delay: -14.3s;
+}
+.rail .stamp:nth-child(8) {
+    animation-delay: -16.3s;
+}
+.rail .stamp:nth-child(9) {
+    animation-delay: -18.3s;
+}
+.rail .stamp:nth-child(10) {
+    animation-delay: -20.3s;
+}
+.rail .stamp:nth-child(11) {
+    animation-delay: -22.3s;
+}
+.rail .stamp:nth-child(12) {
+    animation-delay: -24.3s;
+}
+.rail .stamp:nth-child(13) {
+    animation-delay: -26.3s;
+}
+.rail .stamp:nth-child(14) {
+    animation-delay: -28.3s;
+}
+.rail .stamp:nth-child(15) {
+    animation-delay: -30.3s;
+}
+.rail .stamp:nth-child(16) {
+    animation-delay: -32.3s;
+}
+.rail .stamp:nth-child(17) {
+    animation-delay: -34.3s;
+}
+.rail .stamp:nth-child(18) {
+    animation-delay: -36.3s;
+}
+.rail .stamp:nth-child(19) {
+    animation-delay: -38.3s;
+}
+.rail .stamp:nth-child(20) {
+    animation-delay: -40.3s;
+}
+.world {
+    transform: rotateX(-30deg) rotateY(-30deg);
+}
+.world .forward {
+    position: absolute;
+    animation: slide 2s linear infinite;
+}
+.world .box {
+    width: 200px;
+    height: 200px;
+    transform-origin: 100% 100%;
+    animation:roll 2s cubic-bezier(0.075, 0.82, 0.165, 1) infinite;
+}
+.world .box .wall {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(135deg,rgba(54, 45, 37, 0.4) 10%,rgba(8, 69, 131, 0.4) 90%);
+    border: 1px solid #ffffff;
+    box-sizing: border-box;
+}
+.world .box .wall::before {
+    font-size: 7rem;
+    color: #fff;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.world .box .wall:nth-child(1) {
+    transform: translateZ(100px);
+}
+.world .box .wall:nth-child(2) {
+    transform: rotateX(180deg) translateZ(100px);
+}
+.world .box .wall:nth-child(3) {
+    transform: rotateX(90deg) translateZ(100px);
+}
+.world .box .wall:nth-child(3)::before {
+    transform: rotateX(180deg) rotateZ(90deg) translateZ(-1px);
+    animation:zeroFour 4s -2s linear infinite;
+}
+.world .box .wall:nth-child(4) {
+    transform: rotateX(-90deg) translateZ(100px);
+}
+.world .box .wall:nth-child(4)::before {
+    transform: rotateX(180deg) rotateZ(-90deg) translateZ(-1px);
+    animation:zeroFour 4s -2s linear infinite;
+}
+.world .box .wall:nth-child(5) {
+    transform: rotateY(90deg) translateZ(100px);
+}
+.world .box .wall:nth-child(5)::before {
+    transform: rotateX(180deg) translateZ(-1px);
+    animation:zeroFour 4s linear infinite;
+}
+.world .box .wall:nth-child(6) {
+    transform: rotateY(-90deg) translateZ(100px);
+}
+.world .box .wall:nth-child(6)::before {
+    transform: rotateX(180deg) rotateZ(180deg) translateZ(-1px);
+    animation:zeroFour 4s linear infinite;
+}
+.g-to {
+    width: 100vw;
+    padding: 12px 0;
+    margin-top: 5vh;
+}
+.g-to p {
+    color: #535455;
+    padding: 0 12px;
+    letter-spacing: 2px;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 24px;
+}
+.g-to .go-btn-box {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: center;
+}
+.g-to .go-btn-box .svg-border-animation {
+    position: relative;
+    width: 108px;
+    height: 32px;
+    margin: 12px;
+}
+.g-to .go-btn-box .svg-border-animation .hover-text {
+    width: 108px;
+    top: 5px;
+    line-height: 32px;
+    position: absolute;
+    color: #7c7c7c;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all .4s;
+}
+.g-to .go-btn-box .svg-border-animation .hover-text:active {
+    background-color: rgba(8, 69, 131, 0.4);
+}
+.g-to .go-btn-box .svg-border-animation .shape {
+    fill: transparent;
+    stroke-width: 2px;
+    stroke: #7c7c7c;
+    stroke-dasharray: 30 150;
+    stroke-dashoffset: 42;
+}
+.g-to .go-btn-box .svg-border-animation:hover .hover-text{
+    color:rgba(8, 69, 131, 0.9);
+}
+.g-to .go-btn-box .svg-border-animation:hover .shape {
+    animation: draw .4s linear forwards;
+}
+footer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    font-size: 12px;
+    color: #6a6a6a;
+    height: 32px;
+}
+@keyframes background {
+    from {
+        background: linear-gradient(135deg,#e0e0e0 10%,#ffffff 90%);
+    }
+    to {
+        background: linear-gradient(135deg,#ffffff 10%,#e0e0e0 90%);
+    }
+}
+@keyframes stampSlide {
+    0% {
+        transform: rotateX(90deg) rotateZ(-90deg) translateZ(-200px) translateY(130px);
+    }
+    100% {
+        transform: rotateX(90deg) rotateZ(-90deg) translateZ(-200px) translateY(-4000px);
+    }
+}
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-200px);
+    }
+}
+@keyframes roll {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    85% {
+        transform: rotateZ(90deg);
+    }
+    87% {
+        transform: rotateZ(88deg);
+    }
+    90% {
+        transform: rotateZ(90deg);
+    }
+    100% {
+        transform: rotateZ(90deg);
+    }
+}
+@keyframes zeroFour {
+    0% {
+        content:"4";
+    }
+    100% {
+        content:"0";
+    }
+}
+@keyframes draw {
+    0% {
+        stroke-dasharray: 30 150;
+        stroke-dashoffset: 42;
+    }
+    100% {
+        stroke:rgba(8, 69, 131, 0.9);
+        stroke-dasharray: 224;
+        stroke-dashoffset: 0;
+    }
+}
