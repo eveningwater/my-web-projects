@@ -8,3 +8,4 @@
 |  3   | [react personal dynamic resume](https://github.com/eveningwater/my-web-projects/tree/master/react/3/) | [online demo](https://www.eveningwater.com/my-web-projects/react/3/) |
 |  4   | [react-todo-list](https://github.com/eveningwater/my-web-projects/tree/master/react/4/) | [online demo](https://www.eveningwater.com/my-web-projects/react/4/) |
 |  5   | [JS Is Weird](https://github.com/eveningwater/my-web-projects/tree/master/react/5/) | [在线 demo](https://www.eveningwater.com/my-web-projects/react/5/) |
+|  6   | [Expanding Cards](https://github.com/eveningwater/my-web-projects/tree/master/react/6/) | [在线 demo](https://www.eveningwater.com/my-web-projects/react/6/) |

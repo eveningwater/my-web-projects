@@ -1,0 +1,25 @@
+.app {
+   display: flex;
+   width: 90vw;
+}
+.app > .panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #e02323;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    position: relative;
+    height: 90vh;
+    margin: 10px;
+    padding: 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    transition: flex .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    flex: 0.5;
+}
+.app > .panel.active {
+   flex: 5;
+}
