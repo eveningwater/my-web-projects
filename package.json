@@ -1,0 +1,23 @@
+{
+  "name": "my-web-projects",
+  "version": "1.0.0",
+  "description": "this is my website project collection",
+  "main": "website/script/script.js",
+  "scripts": {
+    "start":"live-server ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eveningwater/my-web-projects.git"
+  },
+  "keywords": [
+    "web",
+    "projects"
+  ],
+  "author": "eveningwater",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eveningwater/my-web-projects/issues"
+  },
+  "homepage": "https://github.com/eveningwater/my-web-projects#readme"
+}
