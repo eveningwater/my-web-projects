@@ -1,0 +1,27 @@
+.app {
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+button {
+   display: inline-block;
+   padding: 8px 16px;
+   background-color: var(--color_active--);
+   border-radius: 10px;
+   outline: none;
+   border:1px solid var(--color--);
+   color: var(--default_color--);
+   margin:0 1rem;
+   transition: all .4s linear;
+   cursor: pointer;
+}
+button:active {
+   transform: scale(.8);
+}
+button[disabled] {
+   color: var(--font_color--);
+   background-color: var(--color--);
+   cursor: not-allowed;
+}
