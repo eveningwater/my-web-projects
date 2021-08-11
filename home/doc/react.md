@@ -10,3 +10,4 @@
 |  5   | [奇怪的JavaScript](https://github.com/eveningwater/my-web-projects/tree/master/react/5/) | [在线 demo](https://www.eveningwater.com/my-web-projects/react/5/) |
 |  6   | [扩展卡片](https://github.com/eveningwater/my-web-projects/tree/master/react/6/) | [在线 demo](https://www.eveningwater.com/my-web-projects/react/6/) |
 |  7   | [步骤条](https://github.com/eveningwater/my-web-projects/tree/master/react/7/) | [在线 demo](https://www.eveningwater.com/my-web-projects/react/7/) |
+|  8   | [旋转导航动画](https://github.com/eveningwater/my-web-projects/tree/master/react/8/) | [在线 demo](https://www.eveningwater.com/my-web-projects/react/8/) |

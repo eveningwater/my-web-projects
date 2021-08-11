@@ -1,0 +1,129 @@
+.app {
+    width: 100%;
+    overflow-x: hidden;
+    background: linear-gradient(135deg,#41525f,#2c2020);
+}
+.page-container {
+    transform-origin: left top;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #fafafa;
+    transition: transform .4s ease-in-out;
+    padding: 60px;
+}
+.page-container.show-nav {
+    transform: rotate(-20deg);
+}
+.page-container > .circle-container {
+    position: fixed;
+    left: -75px;
+    top: -75px;
+}
+.page-container > .circle-container > .circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #2396ef;
+    position: relative;
+    transition: transform .4s ease-in-out;
+}
+.page-container > .circle-container > .circle i {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 60%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    z-index: 2;
+}
+.page-container > .circle-container > .circle > .open {
+    background-image: url('https://eveningwater.com/my-web-projects/js/61/images/close.svg');
+    left: 50%;
+}
+.page-container > .circle-container > .circle > .close {
+    background-image: url('https://eveningwater.com/my-web-projects/js/61/images/menu.svg');
+    left: 60%;
+}
+.page-container > .circle-container > .circle > .open.hidden {
+    left: -60%;
+}
+.page-container > .circle-container > .circle > .close.hidden {
+    transform: rotate(90deg);
+    transform-origin: top left;
+    left: 30%;
+}
+.page-container > .circle-container > .circle i:hover {
+    transform: scale(1.2);
+}
+.page-container .page-content h1 {
+    color: #2396ef;
+    font-size: 26px;
+    letter-spacing: 2px;
+}
+.page-container .page-content small {
+    color: #6e706e;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+.page-container .page-content p{
+    text-indent: 2em;
+    color: #535455;
+    line-height: 2;
+    margin-bottom: 15px;
+}
+.page-container .page-content img {
+    border-radius: 15px;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+.navList {
+    position: absolute;
+    bottom: 80px;
+    left: 0;
+}
+.navList ul li{
+    list-style: none;
+    padding-left: 15px;
+    margin: 20px 0;
+    transition: transform .4s ease-in-out;
+    transform: translateX(-100%);
+}
+.navList ul li::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 25px;
+    height: 25px;
+    margin-right: 15px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.navList ul li:first-child::before {
+    background-image:url('https://eveningwater.com/my-web-projects/js/61/images/Website.png');
+}
+.navList ul li:nth-child(2)::before {
+    background-image:url('https://eveningwater.com/my-web-projects/js/61/images/project.png');
+}
+.navList ul li:last-child::before {
+    background-image:url('https://eveningwater.com/my-web-projects/js/61/images/github.png');
+}
+.navList ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+.page-container.show-nav + .navList ul {
+    transform: translateX(15px);
+}
+.page-container.show-nav + .navList ul li {
+    transform: translateX(0);
+    transition-delay: .4s;
+}
+.page-container.show-nav + .navList ul li + li {
+    margin-left: 10px;
+}
+.page-container.show-nav + .navList ul li + li + li {
+    margin-left: 20px;
+}
