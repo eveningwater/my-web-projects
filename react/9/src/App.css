@@ -1,0 +1,58 @@
+:root {
+    --input-color--:#535455;
+    --bg-color-1--:#2396ef;
+    --bg-color-2--:#4496ef;
+    --input-bg-color-1--:#f2f3f4;
+    --input-bg-color-2--:#ffffff;
+}   
+.app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(90deg,var(--bg-color-1--),var(--bg-color-2--));
+}
+.search-container {
+    height: 45px;
+}
+.search-container > .search-btn,.search-container > input {
+    width: 45px;
+    height: 45px;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    transition: all .4s cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+.search-container > .search-btn {
+    background: linear-gradient(to right,var(--input-bg-color-1--) 10%,var(--input-bg-color-2--) 90%);
+    line-height: 45px;
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.search-container > .search-btn > .search-icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin: auto;
+    background: url("https://eveningwater.com/my-web-projects/js/62/images/search.svg") no-repeat center/cover;
+    display: block;
+}
+.search-container > .search-btn:hover .search-icon {
+    transform: scale(1.2);
+}
+.search-container.active > .search-btn {
+    border-radius: 0 8px 8px 0;
+}
+.search-container.active > input {
+    border-radius: 8px 0 0 8px;
+}
+.search-container.active > input {
+    width: 240px;
+}
+.search-container.active > .search-btn {
+    transform: translateX(238px);
+}

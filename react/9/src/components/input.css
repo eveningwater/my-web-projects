@@ -1,0 +1,15 @@
+.input-container {
+    position: relative;
+}
+.input-container > input {
+    color: var(--input-color--);
+    background: linear-gradient(135deg,var(--input-bg-color-1--) 10%,var(--input-bg-color-2--) 90%);
+    padding: 15px;
+    font-size: 16px;
+    display: inline-block;
+}
+.input-container > input::-webkit-input-placeholder {
+    color: var(--input-color--);
+    letter-spacing: 2px;
+    font-size: 14px;
+}

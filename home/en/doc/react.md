@@ -11,3 +11,4 @@
 |  6   | [Expanding Cards](https://github.com/eveningwater/my-web-projects/tree/master/react/6/) | [在线 demo](https://www.eveningwater.com/my-web-projects/react/6/) |
 |  7   | [Progress Steps](https://github.com/eveningwater/my-web-projects/tree/master/react/7/) | [在线 demo](https://www.eveningwater.com/my-web-projects/react/7/) |
 |  8   | [rotating-navigation-animation](https://github.com/eveningwater/my-web-projects/tree/master/react/8/) | [在线 demo](https://www.eveningwater.com/my-web-projects/react/8/) |
+|  9   | [Hidden Search Widget](https://github.com/eveningwater/my-web-projects/tree/master/react/9/) | [在线 demo](https://www.eveningwater.com/my-web-projects/react/9/) |

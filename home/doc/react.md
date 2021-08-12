@@ -11,3 +11,4 @@
 |  6   | [扩展卡片](https://github.com/eveningwater/my-web-projects/tree/master/react/6/) | [在线 demo](https://www.eveningwater.com/my-web-projects/react/6/) |
 |  7   | [步骤条](https://github.com/eveningwater/my-web-projects/tree/master/react/7/) | [在线 demo](https://www.eveningwater.com/my-web-projects/react/7/) |
 |  8   | [旋转导航动画](https://github.com/eveningwater/my-web-projects/tree/master/react/8/) | [在线 demo](https://www.eveningwater.com/my-web-projects/react/8/) |
+|  9   | [隐藏搜索小组件](https://github.com/eveningwater/my-web-projects/tree/master/react/9/) | [在线 demo](https://www.eveningwater.com/my-web-projects/react/9/) |

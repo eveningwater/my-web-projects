@@ -25,6 +25,7 @@ The first 20` demos of the `web` project implemented by the native `js` of this 
 
 > home directory: the official website of this project, built using vuepress.
 
+> website directory: the personal responsive website.
 
 If you feel that this project helps you learn, I hope you don’t be stingy with star.
 
