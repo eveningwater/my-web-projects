@@ -1,0 +1,39 @@
+.app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+h1 {
+    text-align: center;
+    color: #535455;
+    margin: 1rem;
+}
+.box {
+    width: 100%;
+    max-width: 300px;
+    height: 250px;
+    background: linear-gradient(to right,#b89af1,#9544fe);
+    box-shadow: 3px 6px 9px rgba(255,255,255,.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform .4s cubic-bezier(0.47, 0, 0.745, 0.715);
+    margin: 15px;
+    border-radius: 8px;
+    transform: translateX(-400%);
+}
+.box > h3 {
+    font-size: 3rem;
+    color: #fff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.box:nth-child(even){
+    transform: translateX(400%);
+}
+.box.show {
+    transform: translateX(0);
+}
