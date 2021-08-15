@@ -1,5 +1,5 @@
 <template>
-    <button :class="classObject" :type="nativeType" @click="onClickHandler">
+    <button :class="classObject" :type="nativeType" @click="onClickHandler" :style="topStyle">
         <slot>
             <template v-if="isRenderHTML">
                 <span v-html="content"></span>
@@ -10,7 +10,7 @@
 </template>
 <script lang="ts">
     import emitter from '../event/eventBus';
-    import { computed, defineComponent, PropType, reactive, toRefs } from 'vue';
+    import { computed, defineComponent, Prop, PropType, reactive, toRefs } from 'vue';
     export default defineComponent({
         props:{
             nativeType:{
@@ -44,7 +44,8 @@
                 type:Boolean as PropType<Boolean>,
                 default:false
             },
-            clickType:String as PropType<string>
+            clickType:String as PropType<string>,
+            style:String as PropType<string>
         },
         setup(props){
             const { nativeType,isRenderHTML,content,type,size,isLong } = toRefs(props);
@@ -60,9 +61,11 @@
             const onClickHandler = () => {
                 emitter.$emit("on-click",() => props.clickType);
             }
+            const topStyle = computed(() => ({ "display":props.style }));
             return {
                 ...toRefs(state),
                 classObject,
+                topStyle,
                 onClickHandler
             }
         }
