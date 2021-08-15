@@ -1,0 +1,97 @@
+:root {
+    --speed:1000ms;
+    --hover-width:80%;
+    --leave-width:20%;
+    --left-bg-color:rgba(152, 182, 223, 0.8);
+    --right-bg-color:rgba(229, 183, 250, 0.7);
+    --left-btn-color:#0e6fe6;
+    --right-btn-color:#b730e0;
+    --default-color:#fff;
+}
+.app {
+    height: 100vh;
+}
+.container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.container > .split {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-direction: column;
+}
+.container > .split::before {
+    content:"";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.container > .split.split-left {
+    left: 0;
+    background-image: url("https://eveningwater.com/my-web-projects/js/65/images/left.png");
+}
+.container > .split.split-right {
+    right: 0;
+    background-image: url("https://eveningwater.com/my-web-projects/js/65/images/right.png");
+}
+.container > .split.split-left,
+.container > .split.split-right,
+.container > .split.split-left::before,
+.container > .split.split-right::before {
+    transition: all var(--speed) cubic-bezier(0.55, 0.085, 0.68, 0.53);
+}
+.container > .split.split-left::before {
+    background-color: var(--left-bg-color);
+}
+.container > .split.split-right::before {
+    background-color: var(--right-bg-color);
+}
+.container > .split > h3 {
+    font-size: 2rem;
+    color:var(--default-color);
+    white-space: nowrap;
+}
+.container > .split > .btn {
+    text-decoration: none;
+    border-radius: 8px;
+    width: 15rem;
+    padding: 1rem;
+    border: .3rem solid var(--default-color);
+    font-size: 1.5rem;
+    background-color: transparent;
+    color:var(--default-color);
+    text-transform: uppercase;
+    top: 10px;
+    z-index: 2;
+    position: relative;
+    text-align: center;
+    letter-spacing: 2px;
+}
+.container > .split-left > .btn:hover {
+    background-color: var(--left-btn-color);
+    border-color: var(--left-btn-color);
+}
+.container > .split-right > .btn:hover {
+    background-color: var(--right-btn-color);
+    border-color: var(--right-btn-color);
+}
+.container.hover-left > .split-left {
+    width: var(--hover-width);
+}
+.container.hover-left > .split.split-right {
+    width: var(--leave-width);
+}
+.container.hover-right > .split-left {
+    width: var(--leave-width);
+}
+.container.hover-right > .split.split-right {
+    width: var(--hover-width);
+}

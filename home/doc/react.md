@@ -14,3 +14,4 @@
 |  9   | [隐藏搜索小组件](https://github.com/eveningwater/my-web-projects/tree/master/react/9/) | [在线 demo](https://www.eveningwater.com/my-web-projects/react/9/) |
 |  10   | [模糊加载](https://github.com/eveningwater/my-web-projects/tree/master/react/10/) | [在线 demo](https://www.eveningwater.com/my-web-projects/react/10/) |
 |  11   | [滚动动画](https://github.com/eveningwater/my-web-projects/tree/master/react/11/) | [在线 demo](https://www.eveningwater.com/my-web-projects/react/11/) |
+|  12   | [面板分割](https://github.com/eveningwater/my-web-projects/tree/master/react/12/) | [在线 demo](https://www.eveningwater.com/my-web-projects/react/12/) |
