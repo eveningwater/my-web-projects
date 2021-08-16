@@ -100,6 +100,7 @@ class App extends React.Component {
             newState['todo_value'] = "";
             newState['editUUid'] = -1;
         }
+        debugger;
         this.setState(newState);
     }
     onHandleDelete(item) {

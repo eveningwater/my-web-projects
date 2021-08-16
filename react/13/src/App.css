@@ -1,0 +1,85 @@
+.app {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    background: linear-gradient(180deg,#a2aaf0,#202cda);
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    position: relative;
+    background: radial-gradient(#e9c2a2,#dda565,#eba140,#ec7a10);
+    border-radius: 15px;
+    padding: 30px 40px;
+}
+.container > form > h1 {
+    margin-bottom: 30px;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 26px;
+    letter-spacing: 2px;
+}
+.container > form > .form-control {
+    position: relative;
+    width: 350px;
+    margin: 20px 0 20px;
+    color: #fff;
+    font-size: 15px;
+}
+.container > form > .form-control > .input {
+    display: block;
+    width: 100%;
+    color: #fff;
+    background-color: transparent;
+    outline: none;
+    border:none;
+    border-bottom: 4px solid #fff;
+    font-size: 18px;
+    padding: 15px 0;
+}
+.container > form > .form-control > input:focus,
+.container > form > .form-control > input:valid {
+    color:#2396ef;
+    border-color: #2396ef;
+}
+.container > form > .form-control > .input:focus + label span,
+.container > form > .form-control > .input:valid + label span {
+    transform: translateY(-34px);
+    color: #2396ef;
+}
+.container > form > .form-control > label {
+    position: absolute;
+    left: 0;
+    top: 15px;
+    color: #fff;
+}
+.container > form > .form-control > label > span {
+    display: inline-block;
+    min-width: 5px;
+    transition: all .3s cubic-bezier(0.47, 0, 0.745, 0.715);
+    font-size: 22px;
+}
+.container > form > .form-control > .btn {
+    display: inline-block;
+    width: 100%;
+    padding: 16px 18px;
+    outline: none;
+    border-radius: 5px;
+    border:1px solid #a381f3;
+    background: linear-gradient(90deg,#b57fe7 20%,#b521e2 80%);
+    cursor: pointer;
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 18px;
+}
+.container > form > .form-control > .btn:hover {
+    border-color: #ad75e0;
+    background: linear-gradient(90deg,#a15ce2 20%,#b10ee2 80%);
+}
+.container > form > .form-control > a {
+    text-decoration: none;
+    color: #4c5cec;
+    font-size: 20px;
+    text-transform: capitalize;
+}

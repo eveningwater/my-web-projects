@@ -44,11 +44,13 @@ body {
     color: #fff;
     outline: none;
 }
-.container > form > .form-control > input:focus {
+.container > form > .form-control > input:focus,
+.container > form > .form-control > input:valid {
     border-color: #2396ef;
     color: #2396ef;
 }
-.container > form > .form-control > input:focus + label span {
+.container > form > .form-control > input:focus + label span,
+.container > form > .form-control > input:valid + label span  {
     transform: translateY(-25px);
     color: #2396ef;
 }
