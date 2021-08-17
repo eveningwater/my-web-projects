@@ -1,0 +1,29 @@
+.app {
+    overflow: hidden;
+    background: linear-gradient(to right,#ef8623,#ffbe44);
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.button-container {
+    position: relative;
+    text-align: center;
+}
+.button-container > button {
+    background: linear-gradient(90deg,#c59909,#864406);
+    border-radius: 8px;
+    color: #fff;
+    padding: 14px 20px;
+    font-size: 14px;
+    display: inline-block;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    min-width: 8rem;
+    letter-spacing: 2px;
+    margin: 15px;
+}
+.button-container > button:hover {
+    background: linear-gradient(90deg,#df6a26,#5f2c03);
+}
