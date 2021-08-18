@@ -1,0 +1,76 @@
+.app {
+    background: linear-gradient(45deg,#f5e488,#dae63d);
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 15px;
+    min-height: 300px;
+    box-shadow: 1px 3px 12px #dae63d;
+    padding: 50px 30px;
+    text-align: center;
+    background: linear-gradient(45deg,#ffffff,#f1f1f1);
+}
+.container > h1 {
+    letter-spacing: 2px;
+    color: #3de0e6;
+}
+.container > p {
+    max-width: 600px;
+    line-height: 40px;
+    font-size: 35px;
+    color: #535455;
+    margin: 40px auto;
+}
+.container > .btn {
+    box-shadow: 1px 3px 12px #8fe63d;
+    display: inline-block;
+    padding: 12px 18px;
+    margin: 10px;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    letter-spacing: 2px;
+    border-radius: 8px;
+    background: linear-gradient(45deg,#b0f588,#15ca15);
+}
+.container > .btn:hover {
+    background: linear-gradient(45deg,#6ee02c,#05be05);
+}
+.loading {
+    opacity: 0;
+    display: flex;
+    transition: opacity 0.4s ease-in-out;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 35px;
+}
+.loading > .circle {
+    background: linear-gradient(45deg,#b0f588,#15ca15);
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    margin: 5px;
+    animation: bounce .5s ease-in infinite;
+}
+.loading > .circle:nth-of-type(2) {
+    animation-delay: 0.1s;
+}
+.loading > .circle:last-of-type {
+    animation-delay: 0.2s;
+}
+@keyframes bounce {
+    0%,100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
