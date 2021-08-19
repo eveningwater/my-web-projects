@@ -1,0 +1,36 @@
+.app {
+    overflow: hidden;
+    height: 100vh;
+    background: linear-gradient(135deg,#f2f3f4 10%,#e4e4e4 90%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.key {
+    position: relative;
+    border: 1px solid #535455;
+    border-radius: 12px;
+    padding: 1rem;
+    margin: 18px;
+    color: #221fd3;
+    background: linear-gradient(135deg,#f7f7f7 10%,#eeecec 90%);
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 3px 12px rgba(0,0,0,.4);
+    min-width: 150px;
+}
+.key > small {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -35px;
+    color: #0655a5;
+    font-size: 22px;
+}
