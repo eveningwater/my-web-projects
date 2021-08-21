@@ -19,3 +19,5 @@
 |  14   | [音板](https://github.com/eveningwater/my-web-projects/tree/master/react/14/) | [在线 demo](https://www.eveningwater.com/my-web-projects/react/14/) |
 |  15   | [开玩笑](https://github.com/eveningwater/my-web-projects/tree/master/react/15/) | [在线 demo](https://www.eveningwater.com/my-web-projects/react/15/) |
 |  16   | [键盘事件](https://github.com/eveningwater/my-web-projects/tree/master/react/16/) | [在线 demo](https://www.eveningwater.com/my-web-projects/react/16/) |
+|  17   | [折叠元素](https://github.com/eveningwater/my-web-projects/tree/master/react/17/) | [在线 demo](https://www.eveningwater.com/my-web-projects/react/17/) |
+|  18   | [随机选择器](https://github.com/eveningwater/my-web-projects/tree/master/react/18/) | [在线 demo](https://www.eveningwater.com/my-web-projects/react/18/) |

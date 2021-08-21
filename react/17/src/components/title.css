@@ -1,0 +1,9 @@
+:root {
+    --font-color:#989999;
+}
+h1 {
+    color:var(--font-color);
+    margin-top: 3rem;
+    font-size: 26px;
+    text-align: center;
+}

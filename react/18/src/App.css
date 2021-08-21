@@ -1,0 +1,36 @@
+.app {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(95deg,#a9d2f1 10%,#2275d4 90%);
+    padding: 20px;
+}
+.choicesTextarea {
+    outline: none;
+    resize: none;
+    border: 1px solid #dedcde;
+    width: 100%;
+    display: block;
+    height: 8rem;
+    padding: 15px;
+    background-color: var(--font-color);
+    max-width: 600px;
+    border-radius: 12px;
+}
+.tag-container {
+    max-width: 600px;
+    margin-top: 1rem;
+}
+.tag {
+    display: inline-block;
+    padding: 8px 20px;
+    background: linear-gradient(120deg,#0581c9 15%,#0787f0 35%,#377be0 50%);
+    border-radius: 8px;
+    color: var(--font-color);
+    margin: 8px;
+}
+.tag.active {
+    background: linear-gradient(120deg,#c95305 15%,#f09307 35%,#e09137 50%);
+}

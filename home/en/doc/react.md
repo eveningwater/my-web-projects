@@ -19,3 +19,5 @@
 |  14   | [sound board](https://github.com/eveningwater/my-web-projects/tree/master/react/14/) | [在线 demo](https://www.eveningwater.com/my-web-projects/react/14/) |
 |  15   | [dad jokes](https://github.com/eveningwater/my-web-projects/tree/master/react/15/) | [在线 demo](https://www.eveningwater.com/my-web-projects/react/15/) |
 |  16   | [Event keyCodes](https://github.com/eveningwater/my-web-projects/tree/master/react/16/) | [在线 demo](https://www.eveningwater.com/my-web-projects/react/16/) |
+|  17   | [faq-collapse](https://github.com/eveningwater/my-web-projects/tree/master/react/17/) | [在线 demo](https://www.eveningwater.com/my-web-projects/react/17/) |
+|  18   | [random-choice-picker](https://github.com/eveningwater/my-web-projects/tree/master/react/18/) | [在线 demo](https://www.eveningwater.com/my-web-projects/react/18/) |
