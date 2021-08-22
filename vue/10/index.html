@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vue resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            background: linear-gradient(135deg,#84c0ee 10%,#423fe6 90%);
+        }
+        .flex-center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        a {
+            text-decoration: none;
+            border: 1px solid #fefdfe;
+            padding: 12px 20px;
+            margin: 15px;
+            color: #fff;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+        a:hover {
+            transition: all .3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            animation: draw .4s linear forwards;
+            color:#d6960b;
+        }
+        @keyframes draw {
+            from {
+                border-color:#ef9d23;
+            }
+            to {
+                border-color:#d6960b;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-center">
+        <a href="https://www.eveningwater.com/vue-resume/old/" target="_blank" rel="noopener noreferrer">vue-resume-old</a>
+        <a href="https://www.eveningwater.com/vue-resume/new/" target="_blank" rel="noopener noreferrer">vue-resume-new</a>
+        <a href="https://www.eveningwater.com/vue-resume/vue3.0/" target="_blank" rel="noopener noreferrer">vue-resume-3.0</a>
+        <a href="https://www.eveningwater.com/vue-resume/vue3.2/" target="_blank" rel="noopener noreferrer">vue-resume-3.2</a>
+        <a href="https://github.com/eveningwater/vue-resume" target="_blank" rel="noopener noreferrer">github</a>
+    </div>
+</body>
+</html>

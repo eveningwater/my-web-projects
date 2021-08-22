@@ -28,7 +28,7 @@
 
 > 温馨提示:所有项目 demo 仅供学习，不得用于商业用途，违者必究。
 
-[在线访问地址](https://www.eveningwater.com/my-web-projects/)。
+[在线访问地址](https://www.eveningwater.com/my-web-projects/home/)。
 
 ### 友情链接
 

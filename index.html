@@ -42,12 +42,15 @@
                                 :key="text.id + index" :id="text.id" @click="toLocate(text.id)">{{ text.content }}</div>
                         </div>
                         <div class="social">
-                            <a href="https://www.eveningwater.com/my-web-projects/vue/10/" target="blank"><i class="fa fa-pinterest"
-                                    aria-hidden="true"></i></a>
-                            <a href="https://github.com/eveningwater" target="blank"><i class="fa fa-github"
-                                    aria-hidden="true"></i></a>
-                            <a href="https://eveningwater.github.io/ew-color-picker/" target="blank"><i class="fa fa-linkedin"
-                                    aria-hidden="true"></i></a>
+                            <a 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                v-for="(url,index) in iconURLList" 
+                                :key="url.href + index" 
+                                :href="url.href"
+                            >
+                                <i aria-hidden="true" :class="url.iconName"></i>
+                            </a>
                         </div>
                     </div>
                 </div>

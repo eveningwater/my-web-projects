@@ -59,7 +59,21 @@ const app = new Vue({
             aboutData: aboutData,
             workData: workData,
             contactData: contactData,
-            footerData: footerData
+            footerData: footerData,
+            iconURLList:[
+                {
+                    href:"https://www.eveningwater.com/my-web-projects/vue/10/",
+                    iconName:"fa fa-pinterest"
+                },
+                {
+                    href:"https://github.com/eveningwater",
+                    iconName:"fa fa-github"
+                },
+                {
+                    href:"https://eveningwater.github.io/ew-color-picker/",
+                    iconName:"fa fa-linkedin"
+                }
+            ]
         }
     },
     created() {
