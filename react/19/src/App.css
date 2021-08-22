@@ -1,0 +1,80 @@
+.app {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg,#8abbec 10%,#2686e6 90%);
+}
+.nav {
+    width: 80px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 1px 2px 12px #6eabe7;
+    transition: width .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    background: linear-gradient(45deg,#f1f2f3 10%,#ffffff 90%);
+}
+.nav.active {
+    width: 350px;
+}
+.nav.active > ul {
+    width: 100%;
+}
+.nav > ul {
+    transition: width .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    list-style: none;
+    width: 0;
+    display: flex;
+}
+.nav > ul > li {
+    opacity: 0;
+    transform: rotateY(0deg);
+    transition: opacity .3s cubic-bezier(0.445, 0.05, 0.55, 0.95),transform .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+.nav.active > ul > li {
+    opacity: 1;
+    transform: rotateY(360deg);
+}
+.nav > ul > li > a {
+    color: #7a7a6a;
+    white-space: nowrap;
+    font-size: 16px;
+    position: relative;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: 600;
+}
+.nav > ul > li > a:hover{
+    color:#383824;
+}
+.nav > .btn {
+    background: transparent;
+    width: 40px;
+    height: 40px;
+    outline: none;
+    border: none;
+    position: relative;
+    cursor: pointer;
+}
+.nav > .btn > .line {
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background: linear-gradient(135deg,#65a7e9 10%,#147de7 90%);
+    left: 10px;
+    transition: transform .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+.nav > .btn > .line.line-1 {
+    top: 15px;
+}
+.nav > .btn > .line.line-2 {
+    bottom: 15px;
+}
+.nav.active > .btn > .line.line-1 {
+    transform: rotate(-765deg) translateY(5.5px);
+}
+.nav.active > .btn > .line.line-2 {
+    transform: rotate(765deg) translateY(-5.5px);
+}
