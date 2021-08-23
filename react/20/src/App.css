@@ -1,0 +1,22 @@
+.app {
+    height: 100vh;
+    background: linear-gradient(135deg,#ec75e6 10%,#e711c4 90%);
+    overflow: hidden;
+}
+.app,.counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.counter {
+    flex-direction: column;
+    color: #fff;
+    margin: 40px 50px;
+}
+.counter-value {
+    font-size: 60px;
+    margin: 10px 0;
+}
+.counter-text {
+    font-size: 20px;
+}
