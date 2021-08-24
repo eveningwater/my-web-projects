@@ -2,6 +2,7 @@
     height: 100vh;
     background: linear-gradient(135deg,#ec75e6 10%,#e711c4 90%);
     overflow: hidden;
+    flex-wrap: wrap;
 }
 .app,.counter {
     display: flex;
@@ -19,4 +20,9 @@
 }
 .counter-text {
     font-size: 20px;
+}
+@media screen and (max-width:780px) {
+    .counter {
+        margin:20px 30px;
+    }
 }

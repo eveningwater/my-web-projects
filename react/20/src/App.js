@@ -46,12 +46,13 @@ export default class App extends Component {
           const increment = value / 100;
           if (counter.initValue < value) {
             counter.initValue = Math.ceil(counter.initValue + increment);
-            counter.timer = setTimeout(updateCounter, 10);
+            // use setTimeout or setInterval ?
+            counter.timer = setTimeout(updateCounter, 60);
           } else {
             counter.initValue = value;
             clearTimeout(counter.timer);
           }
-          // update the array
+          // update the array,maybe it's not a best way,is there any other way?
           this.setState({ counterList });
       }
       updateCounter();

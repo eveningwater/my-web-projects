@@ -1,6 +1,7 @@
 .app {
     height: 100vh;
     overflow: hidden;
+    overflow-y: auto;
     background: linear-gradient(135deg,#ddeeff 10%,#ffeedd 90%);
 }
 .faq-container {
