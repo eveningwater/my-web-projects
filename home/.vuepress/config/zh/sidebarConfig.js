@@ -54,6 +54,12 @@ module.exports = [
         sidebarDepth: 1
     }, 
     {
+        title: 'typescript-web项目',
+        path: '/doc/typescript.md',
+        collapsable: true,
+        sidebarDepth: 1
+    }, 
+    {
         title: 'demo',
         path: '/doc/demo.md',
         collapsable: true,

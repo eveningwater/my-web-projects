@@ -1,0 +1,29 @@
+{
+  "name": "count-down-container",
+  "version": "1.0.0",
+  "description": "count-down-container",
+  "main": "main.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack-dev-server",
+    "build": "webpack"
+  },
+  "keywords": [
+    "validator"
+  ],
+  "author": "eveningwater",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^5.0.1",
+    "less": "^4.1.0",
+    "less-loader": "^7.2.1",
+    "style-loader": "^2.0.0",
+    "ts-loader": "^8.0.14",
+    "webpack": "^5.12.2",
+    "webpack-cli": "^4.3.1",
+    "webpack-dev-server": "^3.11.1"
+  },
+  "dependencies": {
+    "eventemitter3": "^4.0.7"
+  }
+}

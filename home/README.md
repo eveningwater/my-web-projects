@@ -15,4 +15,4 @@ features:
 footer: MIT Licensed | Copyright © 2020-present eveningwater
 ---
 
-- [在线访问地址](https://www.eveningwater.com/my-web-projects/)
+- [在线访问地址](https://www.eveningwater.com/my-web-projects/home/)
