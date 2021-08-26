@@ -6,6 +6,7 @@ const next = $("#next");
 const slideItems = $$('.slide-container .slide-item');
 let currentActive = 0;
 function setBackgroundImage(){
+    if(!slideItems[currentActive])return;
     const url = slideItems[currentActive].style.backgroundImage;
     background.style.backgroundImage = url;
 }
