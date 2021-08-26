@@ -1,0 +1,75 @@
+body,html,#root {
+    height: 100%;
+    overflow: hidden;
+}
+.app {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: all .4s;
+    flex-direction: column;
+    overflow: hidden;
+}
+.app::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.5);
+}
+.slider-container {
+    box-shadow: 0 3px 4px 5px rgba(112, 176, 236, 0.5),
+                0 2px 6px 3px rgba(3, 45, 107, 0.5);
+    width: 70vw;
+    height: 70vh;
+    overflow: hidden;
+    position: relative;
+}
+.slider-container > .slider-item {
+    width: 100vw;
+    height: 100vh;
+    transition: all .3s;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    position: absolute;
+    z-index: 1;
+    left: -15vw;
+    top: -15vh;
+}
+.slider-container > .slider-item.active {
+    opacity: 1;
+}
+.btn {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 4px solid #2396ef;
+    color: #fff;
+    background: transparent;
+    outline: none;
+    padding: 20px;
+    font-size: 35px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+.btn:hover {
+    background: rgba(255,255,255,.1);
+}
+.btn.prev {
+    left: calc(15vw - 80px);
+    border-right: 0;
+}
+.btn.next {
+    right:calc(15vw - 80px);
+    border-left: 0;
+}
