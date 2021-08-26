@@ -12,6 +12,7 @@ function setBackgroundImage(){
 }
 function setSlideItem(){
     const currentSlide = slideItems[currentActive];
+    if(!currentSlide)return;
     const siblings = [].filter.call(slideItems,slide => slide !== currentSlide);
     currentSlide.classList.add('active');
     siblings.forEach(slide => slide.classList.remove('active'));
