@@ -1,0 +1,174 @@
+
+ ::-webkit-scrollbar {
+    width: 5px;
+    /*对垂直流动条有效*/
+    height: 5px;
+    /*对水平流动条有效*/
+}
+/*定义滚动条的轨道颜色、内阴影及圆角*/
+
+::-webkit-scrollbar-track {
+    /* background-color: rgba(50, 50, 50, 0.1); */
+    background-color: transparent;
+    border-radius: 5px;
+}
+/*定义滑块颜色、内阴影及圆角*/
+
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+/*定义两端按钮的样式*/
+
+::-webkit-scrollbar-button {
+    background-color: transparent;
+}
+/*定义右下角汇合处的样式*/
+
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
+html {
+   touch-action: none;
+   content-zooming: none;
+}
+
+body {
+   position: fixed;
+   margin: 0;
+   padding: 0;
+   background: #000;
+   width: 100%;
+   height: 100%;
+   color: white;
+}
+
+#screen {
+   position: fixed;
+   left: 0;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   background: #aaa;
+   user-select: none;
+   overflow: hidden;
+}
+
+#scene {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   width: 0;
+   height: 0;
+   transform: translateZ(1000px);
+   -webkit-transform: translateZ(1000px);
+}
+
+#scene .side {
+   position: absolute;
+   visibility: hidden;
+   margin: -300px -500px;
+   backface-visibility: hidden;
+   -webkit-backface-visibility: hidden;
+   display: inline-block;
+   width: 1000px;
+   height: 600px;
+   cursor: move;
+   background: #111 url(./images/wall.png);
+   background-size: cover;
+}
+#scene .top, 
+#scene .bottom{
+   margin: -500px -500px!important;
+   width: 1000px!important;
+   height: 1000px!important;
+}
+#scene .bottom{
+   background: #111 url(./images/floor.jpg);
+   background-size: cover;
+   text-align: center;
+}
+#scene .top{
+   background: #111 url(./images/ceiling.jpg);
+   background-size: cover;
+}
+.bottom .head{
+   text-align: center;
+}
+.bottom .head img{
+   width: 120px;
+   border-radius: 20px;
+   box-shadow: 1px 1px 10px rgba(0,0,0,0.8);
+}
+.bottom .user{
+   margin-top: 100px;
+   background-color: rgba(0,0,0,0.3);
+   display: inline-block;
+   border-radius: 20px;
+   padding: 80px 100px;
+}
+.bottom .name{
+   text-align: center;
+   font-size:32px;
+   margin-top: 20px;
+   text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
+}
+.bottom .bio{
+   text-align: center;
+   font-size:14px;
+   margin-top: 5px;
+   text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
+}
+.bottom .copyright{
+   text-align: center;
+   font-size:14px;
+   margin-top: 5px;
+   text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
+}
+.bottom .footer{
+   position: absolute;
+   top:200px;
+   left:50px;
+   right: 50px;
+   text-align: center;
+}
+.front .main{
+   position: absolute;
+   left:0;
+   right: 0;
+   top: 30%;
+   color: yellow;
+   text-align: center;
+   text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+}
+.front .title{
+   font-size: 32px;
+}
+.front .tips{
+   color: #aaa;
+}
+.front .copyright{
+   position: absolute;
+   right: 50px;
+   bottom: 50px;
+   font-size: 12px;
+   color: #999;
+}
+.main{
+   position: absolute;
+   left:0;
+   right: 0;
+   top: 30%;
+   color: yellow;
+   text-align: center;
+   text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+}
+.main .iconfont{
+   font-size: 64px;
+   display: block;
+}
+.main .link{
+   cursor: pointer;
+   display: inline-block;
+}
