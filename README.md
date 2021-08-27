@@ -20,6 +20,8 @@
 
 > vue目录:主要使用vue.js完成的示例。
 
+> typescript目录:主要使用typescript完成的示例。
+
 > home目录:本项目的官网，使用vuepress搭建。
 
 > website目录:个人响应式网站。

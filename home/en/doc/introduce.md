@@ -18,14 +18,17 @@ The first 20` demos of the `web` project implemented by the native `js` of this 
 
 > vue directory: mainly use vue.js to complete the example.
 
+> typescript-directory:mainly use typescript to complete the example.
+
 > demo directory: a collection of demos for some small functions.
 
 > home directory: the official website of this project, built using vuepress.
 
+> website directory: the personal responsive website.
 
 If you feel that this project helps you learn, I hope you don’t be stingy with star.
 
->Reminder: All project demos are for learning only, not for commercial use, offenders must be investigated.
+> Reminder: All project demos are for learning only, not for commercial use, offenders must be investigated.
 
 [Online access address](https://www.eveningwater.com/my-web-projects/home/).
 

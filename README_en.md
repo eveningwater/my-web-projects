@@ -21,6 +21,8 @@ The first 20` demos of the `web` project implemented by the native `js` of this 
 
 > vue directory: mainly use vue.js to complete the example.
 
+> typescript-directory:mainly use typescript to complete the example.
+
 > demo directory: a collection of demos for some small functions.
 
 > home directory: the official website of this project, built using vuepress.
