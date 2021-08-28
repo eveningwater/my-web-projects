@@ -1,0 +1,43 @@
+
+.app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    flex-direction: column;
+    height: 100vh;
+    background: linear-gradient(135deg,#8ee4b9 10%,#26d626 90%);
+}
+.btn {
+    outline: none;
+    display: inline-block;
+    padding: 1.2rem;
+    border-radius: 8px;
+    background: linear-gradient(135deg,#dee48e 10%,#d6c426 90%),radial-gradient(circle,#d8bd23,#aa9f0a);
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    text-transform: uppercase;
+}
+.btn:hover {
+    opacity: .9;
+}
+.btn > .circle {
+    position: absolute;
+    transform: translate(-50%,-50%) scale(0);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    animation: scale .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background: linear-gradient(135deg,#e4cd8e 10%,#d69026 90%),radial-gradient(circle,#d88a23,#aa570a);
+}
+@keyframes scale {
+    to {
+        opacity: 0;
+        transform: translate(-50%,-50%) scale(3);
+    }
+}
