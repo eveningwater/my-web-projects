@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+body,html {
+    scroll-behavior: smooth;
+}
+.sec {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 2rem;
+}
+.sec-1 {
+    background: linear-gradient(135deg,#ef8623 10%,#f1960d);
+}
+.sec-2 {
+    background: linear-gradient(135deg,#ef4123 10%,#ee3102);
+}
+.sec-3 {
+    background: linear-gradient(135deg,#ef23b2 10%,#ff40c6);
+}
+.toTop {
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(135deg,#3b9de7 10%,#4097ff);
+    color: #fff;
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    display: none;
+    text-align: center;
+    line-height: 45px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background: linear-gradient(135deg,#a23be7 10%,#b613f7);
+}
+::-webkit-scrollbar-thumb {
+    width: 6px;
+    height: 6px;
+    background: linear-gradient(135deg,#e7d63b 10%,#f7cd13);
+}
