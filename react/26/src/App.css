@@ -1,0 +1,62 @@
+
+.app {
+    height: 100vh;
+}
+.board,.tool-box {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+}
+.tool-box {
+    position: relative;
+    padding: 20px;
+    height: 80px;
+    margin-bottom: 8px;
+    display: flex;
+    background: linear-gradient(to right,#e73434, #e6ad45, #e6d543, #32bb54, #47acd4, #5b34e7,#e734c0, #e73434);
+}
+.board {
+    border: 2px solid #2396ef;
+    height: 100%;
+    max-height: 700px;
+    display: block;
+}
+.tool-box > .btn,.tool-box > .size,.tool-box > .color-picker {
+    display: inline-block;
+}
+.tool-box > .btn,.tool-box > .size {
+    outline: none;
+    border:1px solid #dfe0e2;
+    padding: 6px 16px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.tool-box > .btn {
+    background: radial-gradient(closest-corner circle at 50% top,#98aee9,#183ad3);
+    color: #fff;
+    font-size: 25px;
+    border-color: transparent;
+}
+.tool-box > .btn:hover {
+    opacity: .8;
+}
+.tool-box > .btn.decrease {
+    margin-right: 8px;
+}
+.tool-box > .btn.increase {
+    margin-left: 8px;
+}
+.tool-box > .size {
+    background-color: transparent;
+    color: #fff;
+    font-size: 18px;
+    width: 85px;
+}
+.tool-box > .clear {
+    position: absolute;
+    right: 15px;
+}
+.tool-box > .color-picker {
+    margin-left: 8px;
+    margin-top: 3px;
+}
