@@ -1,0 +1,45 @@
+
+.app {
+    background-image: linear-gradient(to right,red, orange, yellow, green, cyan, blue, purple, red );
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.drag-list {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+}
+.drag-list > .drag-item {
+    width: 200px;
+    height: 200px;
+    border: 2px solid #a6a7a5;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    margin: 0 15px;
+    background: linear-gradient(135deg,#e8eaeb 10%,#efeff1 90%);
+}
+.drag-list > .drag-item.drag-active {
+    border:2px dashed #2396ef;
+    background: linear-gradient(135deg,#63bbe7 10%,#0f73e6 90%);
+}
+.drag-list > .drag-item > .drag-fill {
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-position: center;
+    border-radius: 10px;
+}
+.drag-list > .drag-item > .drag-fill.drag-move {
+    border:5px solid #83beeb;
+}
+.drag-list > .drag-item > .invisible {
+    visibility: hidden;
+}

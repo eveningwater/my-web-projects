@@ -27,7 +27,7 @@ module.exports = {
     themeConfig: {
         smoothScroll: true,
         editLinks: true,
-        repo:"/eveningwater/my-web-projects",
+        repo:"eveningwater/my-web-projects",
         docsDir: 'home',
         locales: {
             '/': {
