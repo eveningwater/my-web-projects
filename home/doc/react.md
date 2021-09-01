@@ -31,3 +31,4 @@
 |  26   | [画板小应用](https://github.com/eveningwater/my-web-projects/tree/master/react/26/) | [在线 demo](https://www.eveningwater.com/my-web-projects/react/26/) |
 |  27   | [HTML5拖拽](https://github.com/eveningwater/my-web-projects/tree/master/react/27/) | [在线 demo](https://www.eveningwater.com/my-web-projects/react/27/) |
 |  28   | [骨架屏](https://github.com/eveningwater/my-web-projects/tree/master/react/28/) | [在线 demo](https://www.eveningwater.com/my-web-projects/react/28/) |
+|  29   | [图形旋转动画](https://github.com/eveningwater/my-web-projects/tree/master/react/29/) | [在线 demo](https://www.eveningwater.com/my-web-projects/react/29/) |
