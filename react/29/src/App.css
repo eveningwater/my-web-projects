@@ -61,3 +61,8 @@
         transform: rotate(450deg);
     }
 }
+@media screen and (max-width:600px) {
+    .app {
+        flex-direction: column;
+    }
+}

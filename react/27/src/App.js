@@ -61,7 +61,13 @@ export default class App extends Component {
   dropHandler(index){
     const { dragItems } = this.state;
     dragItems[index].dragClass = "drag-item";
-    this.setState({ dragItems:dragItems,currentIndex:index });
+    this.setState({ dragItems:dragItems });
+    // If you don't use setTimeout to delay the React element render,
+    // this will make the children element's `onDragEnd` event not firing!
+    // see `dragEndHandler` as follows:
+    setTimeout(() => {
+      this.setState({currentIndex:index});
+    },0)
   }
   dragStartHandler(){
       let { fillClass } = this.state;
@@ -69,16 +75,15 @@ export default class App extends Component {
          fillClass += " drag-move";
       }
       this.setState({ fillClass:fillClass });
-      // setTimeout(() => {
-      //   this.setState({ fillClass:"invisible" });
-      // },200);
+      setTimeout(() => {
+        this.setState({ fillClass:"invisible" });
+      },200);
   }
   dragEndHandler(){
     // `onDragEnd` not firing when you attempt to drag item,why?
     // so this is the bug of react.js?
-    setTimeout(() => {
-      this.setState({ fillClass:"drag-fill" });
-    },200)
+    // console.log("dragend triggered")
+    this.setState({ fillClass:"drag-fill" });
   }
   render() {
     const { dragItems,imageIndex,currentIndex,fillClass } = this.state;
