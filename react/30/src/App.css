@@ -1,0 +1,146 @@
+
+.container {
+    max-width: 1200px;
+    margin:0 auto;
+    padding: 15px;
+}
+.header {
+    width: 100%;
+    background: linear-gradient(135deg,#5e3dd6 10%,#5910df 90%);
+    box-shadow: 1px 3px 12px #9778cf;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    transition: all .3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.header.active {
+    background: linear-gradient(135deg,#3d91d6 10%,#1071df 90%);
+    box-shadow: 1px 3px 12px #7894cf;
+}
+.header .flex-between {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header a {
+    text-decoration: none;
+    color: #fff;
+}
+.header .left-logo {
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+.header .nav-menu {
+    position: absolute;
+    right: 15px;
+    cursor: pointer;
+    display: none;
+}
+.header .nav-menu:hover {
+    opacity: .8;
+}
+.header .nav-list {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+.header .nav-list a {
+    margin: .4em;
+}
+.header a:hover {
+    color: #e67272;
+}
+.main {
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.main .intro {
+    background-repeat: no-repeat;
+    position: relative;
+    height: 100vh;
+    z-index: -2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-size: cover;
+    background-image: url("https://www.eveningwater.com/static/page/CSS/css-code-50-image/comic-girl-01.jpg");
+    color: #fff;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.main .intro h1 {
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    font-family: "宋体","楷体";
+}
+.main .intro p {
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+.main .content h2 {
+    font-size: 160%;
+    letter-spacing: 1.3px;
+    counter-increment: articleOrder;
+}
+.main .content h2::before {
+    content: counter(articleOrder);
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    border-radius: 50%;
+    font-size: 18px;
+    color: #fff;
+    background: linear-gradient(135deg,#6c8de9 10%,#1f54e4 90%);
+    text-align: center;
+    line-height: 35px;
+    margin-right: 0.4rem;
+    vertical-align: text-top;
+}
+.content article {
+    margin: 1.2rem 0;
+}
+.content article p {
+    text-indent: 2em;
+    color: #7f8285;
+    line-height: 1.8;
+    margin-bottom: 5px;
+}
+@media screen and (max-width:400px){
+    .header .nav-menu {
+        display: block;
+    }
+    .header .nav-list {
+        position: absolute;
+        top: 70px;
+        padding: 20px;
+        left: 0;
+        overflow-x: hidden;
+        overflow-y: auto;
+        background: linear-gradient(135deg,#746ce9 10%,#231fe4 90%);
+        display: none;
+    }
+    .header .nav-list li {
+        margin-bottom: 10px;
+    }
+    .header .nav-list.show {
+        width: 100%;
+        height: 200px;
+        display: block;
+    }
+}
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background: linear-gradient(135deg,#746ce9 10%,#231fe4 90%);
+}
+::-webkit-scrollbar-thumb {
+    width: 5px;
+    height: 5px;
+    background: linear-gradient(135deg,#bebaf5 10%,#706fd3 90%);
+}
