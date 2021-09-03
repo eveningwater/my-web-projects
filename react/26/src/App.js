@@ -137,6 +137,9 @@ export default class App extends Component {
     this.ctx.beginPath();
     this.ctx.strokeStyle = color;
     this.ctx.lineWidth = size * 2;
+    // this.ctx.lineJoin = "round";
+    // If you don't set the `lineCap` to `round`,the line style is a bit range,like gears.
+    this.ctx.lineCap = "round";
     this.ctx.moveTo(x1, y1);
     this.ctx.lineTo(x2, y2);
     this.ctx.stroke();
