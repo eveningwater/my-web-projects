@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>juejin-2020</title>
+    <link rel="stylesheet" href="./carousel.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header class="cs-header">
+        <ul class="cs-nav">
+            <li><a href="https://github.com/eveningwater/juejin-2020-project" target="_blank" rel="noopener noreferrer">github源码</a></li>
+            <li><a href="https://juejin.cn/post/6923009467810971662" target="_blank" rel="noopener noreferrer">掘金文章</a></li>
+            <li><a href="https://segmentfault.com/a/1190000039129377" target="_blank" rel="noopener noreferrer">思否文章</a></li>
+        </ul>
+    </header>
+    <div class="carousel-box">
+        <!-- 轮播内容 -->
+        <div class="carousel-content">
+            <div class="carousel-item active">
+                <img src="./images/1.png" alt="picture loss">
+            </div>
+            <div class="carousel-item">
+                <img src="./images/2.png" alt="picture loss">
+            </div>
+            <div class="carousel-item">
+                <img src="./images/3.png" alt="picture loss">
+            </div>
+            <div class="carousel-item">
+                <img src="./images/4.png" alt="picture loss">
+            </div>
+            <div class="carousel-item">
+                <img src="./images/5.png" alt="picture loss">
+            </div>
+            <div class="carousel-item">
+                <img src="./images/6.png" alt="picture loss">
+            </div>
+            <div class="carousel-item">
+                <img src="./images/7.png" alt="picture loss">
+            </div>
+        </div>
+        <!-- 轮播标志 -->
+        <ol class="carousel-sign">
+            <li class="active">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+        </ol>
+        <!-- 轮播控件 -->
+        <div class="carousel-ctrl left">&lt;</div>
+        <div class="carousel-ctrl right">&gt;</div>
+    </div>
+</body>
+<script src="./carousel.js"></script>
+<script>
+    window.onload = function () {
+        // 轮播选项
+        const options = {
+            el: '.carousel-box',
+            speed: 1000, // 轮播速度(ms)
+            delay: 0, // 轮播延迟(ms)
+            direction: 'left', // 图片滑动方向
+            monitorKeyEvent: true, // 是否监听键盘事件
+            monitorTouchEvent: true // 是否监听屏幕滑动事件
+        }
+        const carouselInstance = new Carousel(options);
+        carouselInstance.start();
+    }
+</script>
+
+</html>

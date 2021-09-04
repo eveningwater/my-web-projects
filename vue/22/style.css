@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg,#105ed3 10%,#8ed8e6 90%);
+    overflow: hidden;
+}
+.cs-header,.cs-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cs-header {
+    width: 100%;
+    height: 3rem;
+}
+.cs-nav {
+    list-style: none;
+}
+.cs-nav li a {
+    color: #fff;
+    text-decoration: none;
+    margin: 15px;
+    letter-spacing: 2px;
+}
+.cs-nav li a:hover {
+    color: #3c14ce;
+}
