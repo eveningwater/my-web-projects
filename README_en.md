@@ -37,6 +37,12 @@ If you feel that this project helps you learn, I hope you don’t be stingy with
 
 ### how to run
 
+#### website directory
+
+```shell
+npm run start //or yarn start
+```
+
 #### 1.home directory,the document directory.
 
 ```shell

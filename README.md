@@ -34,6 +34,12 @@
 
 ### 如何运行
 
+#### website目录
+
+```shell
+npm run start //或者yarn start
+```
+
 #### 1.home目录，即文档目录。
 
 ```shell
