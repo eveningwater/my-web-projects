@@ -33,3 +33,6 @@
 |  28   | [骨架屏](https://github.com/eveningwater/my-web-projects/tree/master/react/28/) | [在线 demo](https://www.eveningwater.com/my-web-projects/react/28/) |
 |  29   | [图形旋转动画](https://github.com/eveningwater/my-web-projects/tree/master/react/29/) | [在线 demo](https://www.eveningwater.com/my-web-projects/react/29/) |
 |  30   | [固定导航](https://github.com/eveningwater/my-web-projects/tree/master/react/30/) | [在线 demo](https://www.eveningwater.com/my-web-projects/react/30/) |
+|  31   | [双滑动轮播](https://github.com/eveningwater/my-web-projects/tree/master/react/31/) | [在线 demo](https://www.eveningwater.com/my-web-projects/react/31/) |
+|  32   | [消息提示框](https://github.com/eveningwater/my-web-projects/tree/master/react/32/) | [在线 demo](https://www.eveningwater.com/my-web-projects/react/32/) |
+|  33   | [github简介](https://github.com/eveningwater/my-web-projects/tree/master/react/33/) | [在线 demo](https://www.eveningwater.com/my-web-projects/react/33/) |

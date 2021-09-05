@@ -1,0 +1,53 @@
+.toast {
+    border-radius: 15px;
+    padding: .6rem 4rem;
+    margin: 1rem;
+    position: absolute;
+    letter-spacing: 2px;
+    font-size: 14px;
+}
+.toast > .toast-close-btn {
+    position: absolute;
+    right: 6px;
+    top: 3px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.toast > .toast-close-btn:hover{
+    opacity: .8;
+}
+.toast.toast-default,
+.toast.toast-default > .toast-close-btn {
+    color: #0f2972;
+}
+.toast.toast-info,
+.toast.toast-info > .toast-close-btn {
+    color: #494948;
+}
+.toast.toast-success,
+.toast.toast-success > .toast-close-btn {
+    color: #4a9104;
+}
+.toast.toast-error,
+.toast.toast-error > .toast-close-btn {
+    color: #970707;
+}
+.toast.toast-warning,
+.toast.toast-warning > .toast-close-btn {
+    color: #864f07;
+}
+.toast.toast-default {
+    background: linear-gradient(to top,#a0a5f3,#758cca);
+}
+.toast.toast-info {
+    background: linear-gradient(to top,#eff1ef,#989997);
+}
+.toast.toast-success {
+    background: linear-gradient(to top,#85e585,#83d136);
+}
+.toast.toast-error {
+    background: linear-gradient(to top,#e59385,#d13636);
+}
+.toast.toast-warning {
+    background: linear-gradient(to top,#e5b085,#d18e36);
+}

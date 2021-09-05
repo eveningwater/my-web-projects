@@ -1,0 +1,35 @@
+.app {
+    overflow: hidden;
+    background-image: linear-gradient(135deg, #81FFEF 10%, #F067B4 100%);
+}
+.btn-group {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient(135deg, #3B2667 10%, #BC78EC 100%);
+    box-shadow: 0 4px 8px #5d7bb6;
+    color: #fff;
+}
+.createToastBtn {
+    outline: none;
+    display: inline-block;
+    padding: 10px 14px;
+    background: radial-gradient(#0074ef 10%,#5d7bb6 90%);
+    color: #fff;
+    border:none;
+    border-radius: 8px;
+    transition: all .4s ease-in-out;
+    margin: 2em;
+    cursor: pointer;
+}
+.createToastBtn:hover {
+    background: radial-gradient(#e4b875 10%,#fe7e07 90%);
+    transform: scale(1.1);
+}
+.toast-container {
+    width: 100%;
+    height: calc(100% - 60px);
+    position: relative;
+}

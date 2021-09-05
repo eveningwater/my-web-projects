@@ -33,3 +33,6 @@
 |  28   | [content-placeholder](https://github.com/eveningwater/my-web-projects/tree/master/react/28/) | [在线 demo](https://www.eveningwater.com/my-web-projects/react/28/) |
 |  29   | [kinetic-loader](https://github.com/eveningwater/my-web-projects/tree/master/react/29/) | [在线 demo](https://www.eveningwater.com/my-web-projects/react/29/) |
 |  30   | [sticky-navbar](https://github.com/eveningwater/my-web-projects/tree/master/react/30/) | [在线 demo](https://www.eveningwater.com/my-web-projects/react/30/) |
+|  31   | [double-slider](https://github.com/eveningwater/my-web-projects/tree/master/react/31/) | [在线 demo](https://www.eveningwater.com/my-web-projects/react/31/) |
+|  32   | [toast-notification](https://github.com/eveningwater/my-web-projects/tree/master/react/32/) | [在线 demo](https://www.eveningwater.com/my-web-projects/react/32/) |
+|  33   | [github-profiles](https://github.com/eveningwater/my-web-projects/tree/master/react/33/) | [在线 demo](https://www.eveningwater.com/my-web-projects/react/33/) |
