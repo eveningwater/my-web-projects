@@ -32,6 +32,111 @@
 
 [在线访问地址](https://www.eveningwater.com/my-web-projects/home/)。
 
+### 如何运行
+
+#### 1.home目录，即文档目录。
+
+```shell
+npm run home
+```
+
+打包:
+
+```shell
+npm run home:build
+```
+#### 2.animate示例目录。
+
+运行哪一个示例，就携带哪一个参数。如运行第一个示例，目录名为1。则运行命令如下:
+
+```shell
+npm run animate 1 //或者yarn run animate 1
+```
+
+#### 3.CSS目录
+
+原理同animate目录
+
+```shell
+npm run css 1  //或者yarn run css 1
+```
+
+#### 4.jQuery目录
+
+原理同上。
+
+```shell
+npm run jQuery 1 //或者yarn run jQuery 1
+```
+
+#### 5.js目录
+
+原理同上。
+
+```shell
+npm run js 1 //或者yarn js 1 (run可省略可不省略)
+```
+
+#### 6.react目录
+
+react目录有些不一样，如果执行第一个目录，则同上。
+
+```shell
+npm run react 1 //或者yarn react 1
+```
+
+如果是第2个目录，则需要安装依赖:
+
+```shell
+cd react/2
+yarn install
+npm run react 2 start //本地运行
+npm run react 2 build //打包命令
+```
+
+如果是第3个目录，如果是以下命令:
+
+```shell
+npm run react 3 //无需下载依赖
+```
+如果是以下命令,也就是说命令行传了第二个参数:
+
+```shell
+npm run react dev/build/watch //需要先安装依赖,即执行命令yarn install/npm install/cnpm install
+```
+
+后续目录依次原理类推（由项目目录构建决定，如采用webpack则需要注意 webpack相关的命令）。
+
+#### 7.vue目录
+
+第1到第5个示例命令执行如下:
+
+```shell
+npm run vue 1 //或者yarn vue 1,这里的1指的就是目录名
+```
+
+#### 8.threejs目录
+
+原理同animate目录
+
+```shell
+npm run threejs 1 //或者yarn threejs 1
+```
+
+#### 9.typescript目录
+
+需要先安装依赖，然后再执行命令，比如要运行第一个项目，命令如下:
+
+```shell
+yarn install //第一步安装依赖
+npm run typescript 1 dev/build
+```
+
+第二个示例同第一个示例。
+
+> 注意:需要安装git客户端，在git-bash中运行，如果有配置环境变量，则无需在git-bash中运行。当然,home目录除外。
+
+
 ### 友情链接
 
 * [首页](/)

@@ -35,6 +35,112 @@ If you feel that this project helps you learn, I hope you don’t be stingy with
 
 [Online access address](https://www.eveningwater.com/my-web-projects/home/).
 
+### how to run
+
+#### 1.home directory,the document directory.
+
+```shell
+npm run home
+```
+
+build:
+
+```shell
+npm run home:build
+```
+#### 2.animate directory。
+
+Which example is run, which parameter is carried.If you run the first example, the directory name is 1.Then run the command as follows:
+
+```shell
+npm run animate 1 //or yarn run animate 1
+```
+
+#### 3.CSS directory
+
+The principle is same as the animate directory
+
+```shell
+npm run css 1  //or yarn run css 1
+```
+
+#### 4.jQuery directory
+
+Same principle as above.
+
+```shell
+npm run jQuery 1 //or yarn run jQuery 1
+```
+
+#### 5.js directory
+
+Same principle as above.
+
+```shell
+npm run js 1 //or yarn js 1 (run can be omitted or not)
+```
+
+#### 6.react directory
+
+The react directory is a bit different, if the first directory is executed, the same as above:
+
+```shell
+npm run react 1 //or yarn react 1
+```
+
+If it is the second directory, you need to install dependencies:
+
+```shell
+cd react/2
+yarn install
+npm run react 2 start //Run locally
+npm run react 2 build //Packing command
+```
+
+If it is the third directory, if it is the following command:
+
+```shell
+npm run react 3 //Need not to download dependencies
+```
+
+If it is the following command, it means that the second parameter is passed on the command line:
+
+```shell
+npm run react dev/build/watch //Need not to download dependencies,run command `yarn install/npm install/cnpm install`
+```
+
+Subsequent directories can be deduced by analogy (determined by the project directory construction, if you use webpack, you need to pay attention to webpack-related commands).
+
+#### 7.vue directory
+
+The first to fifth example commands are executed as follows:
+
+```shell
+npm run vue 1 //or yarn vue 1,The 1 here refers to the directory name
+```
+
+#### 8.threejs directory
+
+The principle is same as the animate directory
+
+```shell
+npm run threejs 1 //or yarn threejs 1
+```
+
+#### 9.typescript directory
+
+You need to install the dependencies first, and then execute the command. For example, to run the first project, the command is as follows:
+
+```shell
+yarn install //The first step is install dependencies
+npm run typescript 1 dev/build
+```
+
+The second example is the same as the first example.
+
+> notice:You need to install the git client and run it in git-bash. If you have configured environment variables, you don’t need to run it in git-bash.Of course, except for the home directory.
+
+
 ### links
 
 * [home](/)

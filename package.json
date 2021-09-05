@@ -4,7 +4,18 @@
   "description": "this is my website project collection",
   "main": "website/script/script.js",
   "scripts": {
-    "start":"live-server ./"
+    "start":"live-server ./",
+    "home":"cd home & yarn dev",
+    "home:build":"cd home & yarn build",
+    "animate":"bash scripts/animate.sh",
+    "css":"bash scripts/css.sh",
+    "echarts":"bash scripts/echarts.sh",
+    "jQuery":"bash scripts/jQuery.sh",
+    "js":"bash scripts/js.sh",
+    "react":"bash scripts/react.sh",
+    "vue":"bash scripts/vue.sh",
+    "threejs":"bash scripts/threejs.sh",
+    "typescript":"bash scripts/typescript.sh"
   },
   "repository": {
     "type": "git",
