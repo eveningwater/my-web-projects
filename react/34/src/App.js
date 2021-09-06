@@ -39,10 +39,11 @@ export default class App extends Component {
             left:clientX - offsetLeft + 'px',
             top:clientY - offsetTop + 'px'
         }
+        const { count } = this.state;
         setTimeout(() => {
            const container = document.querySelector(".cs-love");
-           this.setState((state) => {
-              return { count:state.count++ };
+           this.setState({
+               count:count + 1
            });
            ReactDOM.render(<Heart style={ heartStyle } className="heart grow"></Heart>,container);
            setTimeout(() => {
