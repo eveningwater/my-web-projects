@@ -1,0 +1,103 @@
+.app {
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    background: linear-gradient(135deg,#415161 10%,#06396b 90%);
+}
+
+.heart {
+    width: 25px;
+    height: 25px;
+    background: #ec140c;
+    display: inline-block;
+    position: relative;
+    transform: rotate(45deg);
+    margin: 30px 15px 0;
+}
+.cs-scale {
+    animation: scale .3s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+}
+.heart::before,.heart::after {
+    background: #ec140c;
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 50%;
+}
+.heart.grow {
+    z-index: 100;
+    animation: grow .5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    transform: scale(0) rotate(45deg);
+    opacity: 1;
+}
+.heart::before {
+    left: 0;
+    top: -15px;
+}
+.heart::after {
+    left: -15px;
+    top: 0;
+}
+.cs-h3 {
+    margin-top: 2em;
+    color: #fff;
+}
+.cs-sm {
+    color: #fff;
+    margin-top: 1em;
+    display: block;
+}
+.cs-count {
+    color: #e60f0f;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.cs-love {
+    position: relative;
+    width: 350px;
+    height: 55vh;
+    max-width: 100%;
+    background: url("https://www.eveningwater.com/my-web-projects/js/21/img/2.gif")no-repeat center/cover;
+    box-shadow: 1px 2px 12px rgba(255, 255, 255, .2);
+    cursor: pointer;
+    margin: 2em auto;
+    border-radius: 12px;
+}
+.cs-button {
+    display: inline-block;
+    padding: 12px 20px;
+    background: linear-gradient(135deg,#7eaddb 10%,#1577d8 90%);
+    border: 0;
+    outline: none;
+    border-radius: 10px;
+    box-shadow: 1px -2px 14px rgba(255, 255, 255, .2);
+    cursor: pointer;
+    color: #fff;
+    font-size: 18px;
+    transition: background .4s cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+.cs-button:hover {
+    background: linear-gradient(135deg,#63a2e0 10%,#0b77e2 90%);
+}
+@keyframes scale {
+    0% {
+        transform: scale(1) rotate(45deg);
+    }
+    30%,60% {
+        transform: scale(1.2) rotate(45deg);
+    }
+    90%,99% {
+        transform: scale(1.4) rotate(45deg);
+    }
+    100% {
+        transform: scale(1.1) rotate(45deg);
+    }
+}
+@keyframes grow {
+    to {
+        transform: scale(5) rotate(45deg);
+        opacity: 0;
+    }
+}
