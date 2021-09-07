@@ -37,3 +37,4 @@
 |  32   | [toast-notification](https://github.com/eveningwater/my-web-projects/tree/master/react/32/) | [在线 demo](https://www.eveningwater.com/my-web-projects/react/32/) |
 |  33   | [github-profiles](https://github.com/eveningwater/my-web-projects/tree/master/react/33/) | [在线 demo](https://www.eveningwater.com/my-web-projects/react/33/) |
 |  34   | [double-click-heart](https://github.com/eveningwater/my-web-projects/tree/master/react/34/) | [在线 demo](https://www.eveningwater.com/my-web-projects/react/34/) |
+|  35   | [auto-text-effect](https://github.com/eveningwater/my-web-projects/tree/master/react/35/) | [在线 demo](https://www.eveningwater.com/my-web-projects/react/35/) |

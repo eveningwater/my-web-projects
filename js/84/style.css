@@ -22,17 +22,56 @@ body {
     outline: none;
     display: inline-block;
     padding: 10px 14px;
-    background: radial-gradient(#75b4e4,#4407fe,#0074ef,#5d7bb6);
+    background: radial-gradient(#75b4e4 10%,#4407fe 20%,#0074ef 30%,#5d7bb6 40%);
     color: #fff;
     border:none;
     border-radius: 8px;
     transition: all .4s ease-in-out;
     margin: 2em;
     cursor: pointer;
+    max-width: 100px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 .createToastBtn:hover {
-    background: radial-gradient(#e4b875,#fe7e07,#ef6c00,#b6925d);
+    background: radial-gradient(#e4b875 10%,#fe7e07 20%,#ef6c00 30%,#b6925d 40%);
     transform: scale(1.2);
+}
+.tip {
+    padding: 15px;
+    background: #0074ef;
+    color: #fff;
+    border-radius: 8px;
+    position: fixed;
+    top: 70px;
+    z-index: 1000;
+    display: none;
+}
+.tip::after {
+    content:"";
+    border-width: 25px;
+    border-color:transparent transparent #0074ef transparent;
+    border-style: solid;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: -40px;
+}
+.createToastBtn:hover + .tip {
+    display: block;
+}
+.createToastBtn:first-of-type + .tip{
+    left: .4em;
+}
+.createToastBtn:first-of-type:hover + .tip::after {
+    left: 0.6em;
+}
+.createToastBtn:last-of-type:hover + .tip{
+    right: .4em;
+}
+.createToastBtn:last-of-type:hover + .tip::after{
+    right: .6em;
 }
 .toast-container {
     width: 100%;

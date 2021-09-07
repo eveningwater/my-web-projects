@@ -41,6 +41,9 @@ small > span {
     display: inline-block;
     margin: 0 15px;
 }
+.heart-scale {
+    animation: scale .3s cubic-bezier(0.47, 0, 0.745, 0.715) infinite;
+}
 .heart.grow {
     animation: grow .5s ease-in-out;
     transform: scale(0) rotate(45deg);
@@ -77,5 +80,19 @@ small > span {
     to {
         transform: scale(5) rotate(45deg);
         opacity: 0;
+    }
+}
+@keyframes scale {
+    0% {
+        transform: scale(1) rotate(45deg);
+    }
+    30%,60% {
+        transform: scale(1.2) rotate(45deg);
+    }
+    90%,99% {
+        transform: scale(1.6) rotate(45deg);
+    }
+    100% {
+        transform: scale(1.2) rotate(45deg);
     }
 }

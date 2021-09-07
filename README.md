@@ -31,6 +31,8 @@
 > 温馨提示:所有项目 demo 仅供学习，不得用于商业用途，违者必究。
 
 [在线访问地址](https://www.eveningwater.com/my-web-projects/home/)。
+[在线百度查询代码错误](https://www.eveningwater.com/my-web-projects/error-baidu.html)。
+[在线谷歌查询代码错误](https://www.eveningwater.com/my-web-projects/error-google.html)。
 
 ### 如何运行
 
@@ -141,7 +143,6 @@ npm run typescript 1 dev/build
 第二个示例同第一个示例。
 
 > 注意:需要安装git客户端，在git-bash中运行，如果有配置环境变量，则无需在git-bash中运行。当然,home目录除外。
-
 
 ### 友情链接
 
