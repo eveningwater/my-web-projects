@@ -86,7 +86,18 @@ export default class App extends Component {
   }
   onChangeSize(e) {
     const { value } = e.target;
-    this.setState({ size: value });
+    let newValue = value;
+    if(Number.isNaN(Number(newValue))){
+      newValue = 5;
+    }else {
+       if(Number(newValue) < 5){
+          newValue = 5;
+       }
+       if(Number(newValue) > 50){
+         newValue = 50;
+       }
+    }
+    this.setState({ size: newValue });
   }
   onMouseDownHandler(e) {
     this.isPressed = true;
