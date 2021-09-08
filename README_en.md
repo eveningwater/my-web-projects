@@ -29,13 +29,19 @@ The first 20` demos of the `web` project implemented by the native `js` of this 
 
 > website directory: the personal responsive website.
 
+> plugins directory: Collection of plugins written in JavaScript.
+
+> error directory:the error html.
+
+> scripts directory:A collection of script files for running.
+
 If you feel that this project helps you learn, I hope you don’t be stingy with star.
 
 > Reminder: All project demos are for learning only, not for commercial use, offenders must be investigated.
 
-[Online access address](https://www.eveningwater.com/my-web-projects/home/).
-[Online Baidu query code error](https://www.eveningwater.com/my-web-projects/error-baidu.html).
-[Online Google query code error](https://www.eveningwater.com/my-web-projects/error-google.html).
+* [Online access address](https://www.eveningwater.com/my-web-projects/home/).
+* [Online Baidu query code error](https://www.eveningwater.com/my-web-projects/error-baidu.html).
+* [Online Google query code error](https://www.eveningwater.com/my-web-projects/error-google.html).
 
 ### how to run
 

@@ -26,13 +26,19 @@
 
 > website目录:个人响应式网站。
 
+> plugins目录:通过JavaScript编写的插件集合。
+
+> error目录:一些错误的html。
+
+> scripts目录:一些用于运行的脚本文件集合。
+
 如果觉得本项目帮助到您学习，还望不吝啬 star。
 
 > 温馨提示:所有项目 demo 仅供学习，不得用于商业用途，违者必究。
 
-[在线访问地址](https://www.eveningwater.com/my-web-projects/home/)。
-[在线百度查询代码错误](https://www.eveningwater.com/my-web-projects/error-baidu.html)。
-[在线谷歌查询代码错误](https://www.eveningwater.com/my-web-projects/error-google.html)。
+* [在线访问地址](https://www.eveningwater.com/my-web-projects/home/)。
+* [在线百度查询代码错误](https://www.eveningwater.com/my-web-projects/error-baidu.html)。
+* [在线谷歌查询代码错误](https://www.eveningwater.com/my-web-projects/error-google.html)。
 
 ### 如何运行
 

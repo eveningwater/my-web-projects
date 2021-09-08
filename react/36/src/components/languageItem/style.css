@@ -1,0 +1,28 @@
+.lang-container {
+    position: fixed;
+    right: 15px;
+    top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg,#0d0ad4 10%,#7561e7 90%);
+    border-radius: 8px;
+}
+.lang-item {
+    color: #fff;
+    padding: 8px;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+.lang-item:first-of-type {
+    border-radius: 8px 0 0 8px;
+}
+.lang-item:last-of-type {
+    border-radius: 0 8px 8px 0;
+}
+.lang-item.active {
+    color: #2396ef;
+    background: linear-gradient(135deg,#dcdcdf 10%,#f6f5f7 90%);
+}
