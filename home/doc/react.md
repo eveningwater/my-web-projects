@@ -38,3 +38,4 @@
 |  33   | [github简介](https://github.com/eveningwater/my-web-projects/tree/master/react/33/) | [在线 demo](https://www.eveningwater.com/my-web-projects/react/33/) |
 |  34   | [点击生成爱心](https://github.com/eveningwater/my-web-projects/tree/master/react/34/) | [在线 demo](https://www.eveningwater.com/my-web-projects/react/34/) |
 |  35   | [自动打字效果](https://github.com/eveningwater/my-web-projects/tree/master/react/35/) | [在线 demo](https://www.eveningwater.com/my-web-projects/react/35/) |
+|  36   | [密码生成器](https://github.com/eveningwater/my-web-projects/tree/master/react/36/) | [在线 demo](https://www.eveningwater.com/my-web-projects/react/36/) |

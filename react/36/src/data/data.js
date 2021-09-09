@@ -26,7 +26,9 @@ const dataObject ={
         ],
         "btnContent":"Generate Password",
         "confirmTitle":"Tips",
-        "confirmContent":"Password copied to clipboard!"
+        "confirmContent":"Password copied to clipboard!",
+        "confirmWarning":"Please generate a password first",
+        "typeText":"Please select a password type"
     },
     "zh":{
         "title":"密码生成器",
@@ -54,7 +56,9 @@ const dataObject ={
         ],
         "btnContent":"生成密码",
         "confirmTitle":"温馨提示",
-        "confirmContent":"密码已复制到剪贴板上"
+        "confirmContent":"密码已复制到剪贴板上",
+        "confirmWarning":"请先生成密码",
+        "typeText":"请选择一种密码类型"
     }
 };
 export default dataObject;
