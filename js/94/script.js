@@ -43,7 +43,7 @@ function createPokemon(pokemon){
     pokemonItem.style.background = `linear-gradient(135deg, ${ color } 10%, ${ randomColor() } 100%)`;
     pokemonItem.innerHTML = `
     <div class="pokedex-avatar">
-        <img src="https://pokeres.bastionbot.org/images/pokemon/${pokemon.id}.png" alt="the pokemon">
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png" alt="the pokemon">
     </div>
     <div class="info">
         <span class="number">#${ id }</span>

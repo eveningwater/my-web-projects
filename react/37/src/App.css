@@ -1,0 +1,18 @@
+.app {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(135deg,#e6af67 10%,#e69113 90%);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+h1 {
+    color: #234567;
+    margin-bottom: 15px;
+}
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

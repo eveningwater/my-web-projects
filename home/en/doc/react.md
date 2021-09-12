@@ -39,3 +39,7 @@
 |  34   | [double-click-heart](https://github.com/eveningwater/my-web-projects/tree/master/react/34/) | [在线 demo](https://www.eveningwater.com/my-web-projects/react/34/) |
 |  35   | [auto-text-effect](https://github.com/eveningwater/my-web-projects/tree/master/react/35/) | [在线 demo](https://www.eveningwater.com/my-web-projects/react/35/) |
 |  36   | [generate-password](https://github.com/eveningwater/my-web-projects/tree/master/react/36/) | [在线 demo](https://www.eveningwater.com/my-web-projects/react/36/) |
+|  37   | [good-cheap-fast](https://github.com/eveningwater/my-web-projects/tree/master/react/37/) | [在线 demo](https://www.eveningwater.com/my-web-projects/react/37/) |
+|  38   | [Notes App](https://github.com/eveningwater/my-web-projects/tree/master/react/38/) | [在线 demo](https://www.eveningwater.com/my-web-projects/react/38/) |
+|  39   | [animated-countdown](https://github.com/eveningwater/my-web-projects/tree/master/react/39/) | [在线 demo](https://www.eveningwater.com/my-web-projects/react/39/) |
+|  40   | [image-carousel](https://github.com/eveningwater/my-web-projects/tree/master/react/40/) | [在线 demo](https://www.eveningwater.com/my-web-projects/react/40/) |

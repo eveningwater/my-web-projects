@@ -1,0 +1,71 @@
+.ew-switch {
+    position: relative;
+    cursor: pointer;
+    width: 180px;
+    padding: 5px;
+    color: #535355;
+    display: inline-block;
+    color: #fff;
+    font-size: 14px;
+}
+.ew-switch-checkbox {
+    display: none;
+}
+.ew-switch-inner {
+    display: inline-block;
+    vertical-align: middle;
+    width: 80px;
+    height: 42px;
+    background-color: #c3c3c4;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-right: 8px;
+}
+.ew-switch-inner::after {
+    content:"";
+    width: 35px;
+    height: 35px;
+    background-color: #f2f1f3;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    cursor: pointer;
+    border-radius: 50%;
+    animation-timing-function: linear;
+    animation-duration: .4s;
+    animation-fill-mode: forwards;
+    animation-name: slideOff;
+}
+.ew-switch.active .ew-switch-inner::after {
+    animation-name: slideOn;
+}
+.ew-switch.active .ew-switch-inner {
+    background-color: #2396ef;
+}
+.ew-switch.disabled .ew-switch-inner::after{
+    background-color: #909092;
+}
+@keyframes slideOn {
+    0% {
+        transform: translateX(0) scale(1);
+    }
+    50% {
+        transform: translateX(20px) scale(1.2);
+    }
+    100% {
+        transform: translateX(40px) scale(1);
+    }
+}
+@keyframes slideOff {
+    0% {
+        transform: translateX(40px) scale(1);
+    }
+    50% {
+        transform: translateX(20px) scale(1.2);
+    }
+    100% {
+        transform: translateX(0) scale(1);
+    }
+}

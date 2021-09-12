@@ -1,0 +1,119 @@
+:focus:focus-visible {
+    outline: none;
+}
+.app {
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(135deg,#79ace0 10%,#227cd6 90%);
+}
+.counter,.final {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.counter.hide {
+    transform: translate(-50%,-50%) scale(0);
+    animation: hide .3s linear;
+}
+.counter > h4,.final > h1 {
+    color: #fff;
+    font-family: sans-serif;
+    text-transform: uppercase;
+}
+.final {
+    transform: translate(-50%,-50%) scale(0);
+}
+.final.show {
+    transform: translate(-50%,-50%) scale(1);
+    animation: show .4s linear;
+}
+.num-group {
+    position: relative;
+    overflow: hidden;
+    font-size: 50px;
+    color: #600fe2;
+    width: 100%;
+    max-width: 250px;
+    height: 50px;
+}
+.num-group > span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(120deg);
+    transform-origin: bottom center;
+}
+.num-group > span.out {
+    animation: goOut .6s ease-in-out;
+}
+.num-group > span.in {
+    transform: translate(-50%,-50%) rotate(0deg);
+    animation:goIn .6s ease-in-out;
+}
+.counter > h4 {
+    margin: 1rem 10px;
+}
+.final > h1 {
+    margin: 5px;
+}
+.final > .replay-btn {
+    display: inline-block;
+    cursor: pointer;
+    padding: .6rem 2rem;
+    border-radius: 8px;
+    font-size: 22px;
+    margin-top: 1rem;
+    letter-spacing: 2px;
+    color: #fff;
+    border: none;
+    background: linear-gradient(135deg,#e0b779 10%,#d68e22 90%);
+}
+.final > .replay-btn:hover {
+    background: linear-gradient(135deg,#e6ab54 10%,#dd8b11 90%);
+}
+@keyframes hide {
+    0% {
+        transform: translate(-50%,-50%) scale(1);
+    }
+    100% {
+        transform: translate(-50%,-50%) scale(0);
+    }
+}
+@keyframes show {
+    0% {
+        transform: translate(-50%,-50%) scale(0);
+    }
+    30% {
+        transform: translate(-50%,-50%) scale(1.4);
+    }
+    100% {
+        transform: translate(-50%,-50%) scale(1);
+    }
+}
+@keyframes goIn {
+    0% {
+        transform: translate(-50%,-50%) rotate(120deg);
+    }
+    30% {
+        transform: translate(-50%,-50%) rotate(-20deg);
+    }
+    60% {
+        transform: translate(-50%,-50%) rotate(10deg);
+    }
+    100% {
+        transform: translate(-50%,-50%) rotate(0deg);
+    }
+}
+@keyframes goOut {
+    0% {
+        transform: translate(-50%,-50%) rotate(0);
+    }
+    60% {
+        transform: translate(-50%,-50%) rotate(20deg);
+    }
+    100% {
+        transform: translate(-50%,-50%) rotate(-120deg);
+    }
+}

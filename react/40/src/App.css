@@ -1,0 +1,46 @@
+:focus:focus-visible {
+    outline: none;
+}
+.app {
+    height: 100vh;
+    background: linear-gradient(135deg,#e9984d 10%,#e0630f 90%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 20px;
+    flex-direction: column;
+}
+.carousel-container {
+    box-shadow: 0 1px 2px 12px rgba(255,255,255,.4);
+    max-width: 100%;
+    width: 500px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+.carousel {
+    display: flex;
+    transform: translateX(0);
+    transition: transform .5s ease-in-out;
+}
+.carousel > img {
+    object-fit: cover;
+    width: 100%;
+    min-height: 470px;
+}
+.button-group {
+    display: flex;
+    justify-content: space-between;
+}
+.btn {
+    width: 50%;
+    display: inline-block;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 0.5rem;
+    background: linear-gradient(135deg,#e2ab77 10%,#e65f06 90%);
+}
+.btn:hover {
+    background: linear-gradient(135deg,#ecc8a7 10%,#e67225 90%);
+}
