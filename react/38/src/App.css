@@ -2,6 +2,7 @@
     height: 100vh;
     background-image: linear-gradient(135deg, #FEC163 10%, #DE4313 100%);
     overflow: hidden;
+    overflow-y: auto;
 }
 :focus:focus-visible {
     outline: none;
