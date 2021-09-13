@@ -1,4 +1,4 @@
-import React, { FunctionComponent,ReactNode }from "react";
+import React, { FunctionComponent,ReactNode } from "react";
 import "../style/content.css";
 interface propType {
     children?:ReactNode

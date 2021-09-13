@@ -1,0 +1,26 @@
+.app {
+    height: 100vh;
+    background: linear-gradient(135deg, #2d2d2e 10%, #150124 100%);
+    overflow: hidden;
+}
+.app,.container {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    width: 400px;
+    max-width: 100%;
+    flex-wrap: wrap;
+}
+.square {
+    background: linear-gradient(135deg, #6a6ab4 10%, #8023c7 100%);
+    box-shadow: 0 0 2px #610ca1;
+    width: 16px;
+    height: 16px;
+    margin: 2px;
+    transition: 2s ease;
+}
+.square:hover {
+    transition-duration: 0s;
+}
