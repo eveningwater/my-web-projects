@@ -44,3 +44,4 @@
 |  39   | [倒计时动画](https://github.com/eveningwater/my-web-projects/tree/master/react/39/) | [在线 demo](https://www.eveningwater.com/my-web-projects/react/39/) |
 |  40   | [图片轮播](https://github.com/eveningwater/my-web-projects/tree/master/react/40/) | [在线 demo](https://www.eveningwater.com/my-web-projects/react/40/) |
 |  41   | [悬浮面板](https://github.com/eveningwater/my-web-projects/tree/master/react/41/) | [在线 demo](https://www.eveningwater.com/my-web-projects/react/41/) |
+|  42   | [宠物图鉴](https://github.com/eveningwater/my-web-projects/tree/master/react/42/) | [在线 demo](https://www.eveningwater.com/my-web-projects/react/42/) |

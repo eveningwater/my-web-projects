@@ -9,7 +9,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(135deg, #e65d54 10%, #8510df 100%);
   overflow: hidden;
+  overflow-y: auto;
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
