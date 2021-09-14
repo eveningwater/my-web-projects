@@ -1,0 +1,278 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  background-color: #333;
+  font-family: Lobster, "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+main {
+  --text: "Spotlight";
+  --hue1: 30deg;
+  --hue2: 10deg;
+  --spin: 20deg;
+  --light-color: #ffeab1;
+  --stripe: .17em;
+  --stripe-angle: -25deg;
+  --perspective: 80vmin;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-image: linear-gradient(to bottom, #383838, #3c3c3c 50%, #2f2f2f 60%, #0b0e13);
+  font-size: 17.5vmin;
+}
+main .light {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 90%;
+  height: 60%;
+  min-height: 6em;
+  transform: translateX(-50%) translateY(-1em);
+  z-index: 1;
+  mix-blend-mode: screen;
+  filter: blur(0.15em);
+  opacity: 0.6;
+}
+main .light::before {
+  content: "";
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, var(--light-color), transparent);
+  clip-path: polygon(25% 0, 75% 0, 100% 100%, 0% 100%);
+  border-radius: 0 0 1em 1em;
+}
+main figure {
+  display: block;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-style: preserve-3d;
+  perspective: var(--perspective);
+}
+main figure span::before {
+  text-align: center;
+  content: var(--text);
+  white-space: pre;
+  display: block;
+  position: absolute;
+}
+main figure .text {
+  animation: rotate 3s ease-in-out infinite both alternate;
+  transform-style: preserve-3d;
+  perspective: var(--perspective);
+}
+main figure .text span:first-child::before {
+  position: static;
+  animation: shine 3s linear infinite;
+}
+main figure .text span::before {
+  top: 0;
+}
+main figure .text span:nth-child(1)::before {
+  transform: translateZ(-0.01em);
+  background: repeating-linear-gradient(var(--stripe-angle), hsl(var(--hue1), 60%, 83%), hsl(var(--hue1), 60%, 83%) var(--stripe), hsl(var(--hue2), 50%, 68%) var(--stripe), hsl(var(--hue2), 50%, 68%) calc(var(--stripe) * 2));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+main figure .text span:nth-child(2)::before {
+  transform: translateZ(-0.02em);
+  background: repeating-linear-gradient(var(--stripe-angle), hsl(var(--hue1), 60%, 81%), hsl(var(--hue1), 60%, 81%) var(--stripe), hsl(var(--hue2), 50%, 66%) var(--stripe), hsl(var(--hue2), 50%, 66%) calc(var(--stripe) * 2));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+main figure .text span:nth-child(3)::before {
+  transform: translateZ(-0.03em);
+  background: repeating-linear-gradient(var(--stripe-angle), hsl(var(--hue1), 60%, 79%), hsl(var(--hue1), 60%, 79%) var(--stripe), hsl(var(--hue2), 50%, 64%) var(--stripe), hsl(var(--hue2), 50%, 64%) calc(var(--stripe) * 2));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+main figure .text span:nth-child(4)::before {
+  transform: translateZ(-0.04em);
+  background: repeating-linear-gradient(var(--stripe-angle), hsl(var(--hue1), 60%, 77%), hsl(var(--hue1), 60%, 77%) var(--stripe), hsl(var(--hue2), 50%, 62%) var(--stripe), hsl(var(--hue2), 50%, 62%) calc(var(--stripe) * 2));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+main figure .text span:nth-child(5)::before {
+  transform: translateZ(-0.05em);
+  background: repeating-linear-gradient(var(--stripe-angle), hsl(var(--hue1), 60%, 75%), hsl(var(--hue1), 60%, 75%) var(--stripe), hsl(var(--hue2), 50%, 60%) var(--stripe), hsl(var(--hue2), 50%, 60%) calc(var(--stripe) * 2));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+main figure .text span:nth-child(6)::before {
+  transform: translateZ(-0.06em);
+  background: repeating-linear-gradient(var(--stripe-angle), hsl(var(--hue1), 60%, 73%), hsl(var(--hue1), 60%, 73%) var(--stripe), hsl(var(--hue2), 50%, 58%) var(--stripe), hsl(var(--hue2), 50%, 58%) calc(var(--stripe) * 2));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+main figure .text span:nth-child(7)::before {
+  transform: translateZ(-0.07em);
+  background: repeating-linear-gradient(var(--stripe-angle), hsl(var(--hue1), 60%, 71%), hsl(var(--hue1), 60%, 71%) var(--stripe), hsl(var(--hue2), 50%, 56%) var(--stripe), hsl(var(--hue2), 50%, 56%) calc(var(--stripe) * 2));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+main figure .text span:nth-child(8)::before {
+  transform: translateZ(-0.08em);
+  background: repeating-linear-gradient(var(--stripe-angle), hsl(var(--hue1), 60%, 69%), hsl(var(--hue1), 60%, 69%) var(--stripe), hsl(var(--hue2), 50%, 54%) var(--stripe), hsl(var(--hue2), 50%, 54%) calc(var(--stripe) * 2));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+main figure .text span:nth-child(9)::before {
+  transform: translateZ(-0.09em);
+  background: repeating-linear-gradient(var(--stripe-angle), hsl(var(--hue1), 60%, 67%), hsl(var(--hue1), 60%, 67%) var(--stripe), hsl(var(--hue2), 50%, 52%) var(--stripe), hsl(var(--hue2), 50%, 52%) calc(var(--stripe) * 2));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+main figure .text span:nth-child(10)::before {
+  transform: translateZ(-0.1em);
+  background: repeating-linear-gradient(var(--stripe-angle), hsl(var(--hue1), 60%, 65%), hsl(var(--hue1), 60%, 65%) var(--stripe), hsl(var(--hue2), 50%, 50%) var(--stripe), hsl(var(--hue2), 50%, 50%) calc(var(--stripe) * 2));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+main figure .text span:nth-child(11)::before {
+  transform: translateZ(-0.11em);
+  background: repeating-linear-gradient(var(--stripe-angle), hsl(var(--hue1), 60%, 63%), hsl(var(--hue1), 60%, 63%) var(--stripe), hsl(var(--hue2), 50%, 48%) var(--stripe), hsl(var(--hue2), 50%, 48%) calc(var(--stripe) * 2));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+main figure .text span:nth-child(12)::before {
+  transform: translateZ(-0.12em);
+  background: repeating-linear-gradient(var(--stripe-angle), hsl(var(--hue1), 60%, 61%), hsl(var(--hue1), 60%, 61%) var(--stripe), hsl(var(--hue2), 50%, 46%) var(--stripe), hsl(var(--hue2), 50%, 46%) calc(var(--stripe) * 2));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+main figure .text span:nth-child(13)::before {
+  transform: translateZ(-0.13em);
+  background: repeating-linear-gradient(var(--stripe-angle), hsl(var(--hue1), 60%, 59%), hsl(var(--hue1), 60%, 59%) var(--stripe), hsl(var(--hue2), 50%, 44%) var(--stripe), hsl(var(--hue2), 50%, 44%) calc(var(--stripe) * 2));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+main figure .text span:nth-child(14)::before {
+  transform: translateZ(-0.14em);
+  background: repeating-linear-gradient(var(--stripe-angle), hsl(var(--hue1), 60%, 57%), hsl(var(--hue1), 60%, 57%) var(--stripe), hsl(var(--hue2), 50%, 42%) var(--stripe), hsl(var(--hue2), 50%, 42%) calc(var(--stripe) * 2));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+main figure .text span:nth-child(15)::before {
+  transform: translateZ(-0.15em);
+  background: repeating-linear-gradient(var(--stripe-angle), hsl(var(--hue1), 60%, 55%), hsl(var(--hue1), 60%, 55%) var(--stripe), hsl(var(--hue2), 50%, 40%) var(--stripe), hsl(var(--hue2), 50%, 40%) calc(var(--stripe) * 2));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+main figure .text span:nth-child(16)::before {
+  transform: translateZ(-0.16em);
+  background: repeating-linear-gradient(var(--stripe-angle), hsl(var(--hue1), 60%, 53%), hsl(var(--hue1), 60%, 53%) var(--stripe), hsl(var(--hue2), 50%, 38%) var(--stripe), hsl(var(--hue2), 50%, 38%) calc(var(--stripe) * 2));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+main figure .text span:nth-child(17)::before {
+  transform: translateZ(-0.17em);
+  background: repeating-linear-gradient(var(--stripe-angle), hsl(var(--hue1), 60%, 51%), hsl(var(--hue1), 60%, 51%) var(--stripe), hsl(var(--hue2), 50%, 36%) var(--stripe), hsl(var(--hue2), 50%, 36%) calc(var(--stripe) * 2));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+main figure .text span:nth-child(18)::before {
+  transform: translateZ(-0.18em);
+  background: repeating-linear-gradient(var(--stripe-angle), hsl(var(--hue1), 60%, 49%), hsl(var(--hue1), 60%, 49%) var(--stripe), hsl(var(--hue2), 50%, 34%) var(--stripe), hsl(var(--hue2), 50%, 34%) calc(var(--stripe) * 2));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+main figure .text span:nth-child(19)::before {
+  transform: translateZ(-0.19em);
+  background: repeating-linear-gradient(var(--stripe-angle), hsl(var(--hue1), 60%, 47%), hsl(var(--hue1), 60%, 47%) var(--stripe), hsl(var(--hue2), 50%, 32%) var(--stripe), hsl(var(--hue2), 50%, 32%) calc(var(--stripe) * 2));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+main figure .text span:nth-child(20)::before {
+  transform: translateZ(-0.2em);
+  background: repeating-linear-gradient(var(--stripe-angle), hsl(var(--hue1), 60%, 45%), hsl(var(--hue1), 60%, 45%) var(--stripe), hsl(var(--hue2), 50%, 30%) var(--stripe), hsl(var(--hue2), 50%, 30%) calc(var(--stripe) * 2));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+main figure .shadow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  transform-style: preserve-3d;
+  perspective: var(--perspective);
+  width: 90vw;
+  height: 90vw;
+  font-size: 1em;
+  transform: translate3D(0, 2em, 0) rotateX(90deg);
+  opacity: 0.9;
+  backface-visibility: hidden;
+}
+main figure .shadow::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(closest-side, var(--light-color), transparent);
+  transform: translateY(1px);
+  z-index: 0;
+  mix-blend-mode: screen;
+  opacity: 0.5;
+}
+main figure .shadow::before {
+  filter: blur(4px);
+  opacity: 0.8;
+  animation: rotate-shadow 3s ease-in-out infinite both alternate;
+  z-index: 1;
+}
+@media not all and (min-resolution: 0.001dpcm) {
+  main figure .shadow::before {
+    filter: none;
+    opacity: 0.6;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate3D(0, 1, 0, calc(var(--spin) * -1)) rotateX(30deg);
+  }
+  to {
+    transform: rotate3D(0, 1, 0, var(--spin)) rotateX(30deg);
+  }
+}
+@keyframes rotate-shadow {
+  from {
+    transform: rotateZ(var(--spin));
+  }
+  to {
+    transform: rotateZ(calc(var(--spin) * -1));
+  }
+}
+@keyframes shine {
+  0% {
+    filter: brightness(1);
+  }
+  30% {
+    filter: brightness(1.2);
+  }
+  50% {
+    filter: brightness(1.5);
+  }
+  70% {
+    filter: brightness(1.2);
+  }
+  100% {
+    filter: brightness(1);
+  }
+}
