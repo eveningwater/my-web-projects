@@ -1,0 +1,71 @@
+.app {
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(135deg,#daa30d 10%,#e6c945);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cs-mobile {
+    max-width: 100%;
+    width: 350px;
+    height: 600px;
+    overflow: hidden;
+    position: relative;
+    max-height: 100%;
+    border-radius: 15px;
+    border: 3px solid #e6c56b;
+    box-shadow: 0 -2px 12px rgba(0,0,0,.15);
+}
+.cs-carousel {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: calc(100% - 60px);
+    width: 100%;
+}
+.cs-carousel-item {
+    object-fit: fill;
+    width: 100%;
+    display: block;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: opacity .4s ease-in-out;
+    opacity: 0;
+}
+.cs-carousel-item.active {
+    opacity: 1;
+}
+.cs-mobile-nav {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-top: -5px;
+}
+.cs-mobile-nav > ul {
+    list-style: none;
+    height: 60px;
+    display: flex;
+    background: linear-gradient(135deg,#f1f094 10%,#e2e61a);
+}
+.cs-mobile-li {
+    flex: 1;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: center;
+    color: #4d4b4b;
+}
+.cs-mobile-li.active {
+    color: #e48e0e;
+}
+.cs-mobile-li > p {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 12px;
+    white-space: nowrap;
+    margin-top: 0.3rem;
+}
