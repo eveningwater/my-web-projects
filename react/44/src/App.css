@@ -1,0 +1,17 @@
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.background {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    filter: blur(20px);
+    z-index: -1;
+    background: url("https://www.eveningwater.com/static/page/CSS/css-code-50-image/comic-girl-01.jpg")no-repeat center/cover;
+}
