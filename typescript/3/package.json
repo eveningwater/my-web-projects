@@ -1,7 +1,7 @@
 {
-  "name": "top",
+  "name": "eat",
   "version": "1.0.0",
-  "description": "to top",
+  "description": "what to eat?",
   "main": "main.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

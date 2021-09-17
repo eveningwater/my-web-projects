@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body,html {
+    overflow: hidden;
+}
+.eat-wrapper {
+    .eat-h1 {
+        color: #3c8fe2;
+        font-size: 200%;
+    }
+    .eat-food {
+        font-size: 180%;
+        color: #c92323;
+        font-family: "幼圆","楷体";
+        letter-spacing: 2px;
+        margin-bottom: 1em;
+        transition: all .4s ease-in-out;
+        text-align: center;
+    }
+    .eat-github {
+        text-decoration: none;
+        color: #126dd4;
+        transition: color .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        position: fixed;
+        right: 15px;
+        bottom: 15px;
+        font-size: 2em;
+        letter-spacing: 2px;
+        &:hover,&:active {
+            color:#ecb46b;
+        }
+    }
+    .eat-random-food {
+        font-size: 200%;
+        letter-spacing: 2px;
+    }
+}
+.app {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(135deg,#f2f4f5 10%,#babcbd 90%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .eat-btn {
+        display: inline-block;
+        padding: 10px 28px;
+        border: 1px solid #616161;
+        color: #616161;
+        background:transparent;
+        font-size: 18px;
+        letter-spacing: 2px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all .4s cubic-bezier(0.075, 0.82, 0.165, 1);
+        &:hover,&:active {
+            color: #ecb46b;
+            border-color:#ebb264;
+        }
+    }
+}
