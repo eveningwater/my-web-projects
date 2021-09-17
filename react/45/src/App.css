@@ -1,0 +1,69 @@
+:focus:focus-visible {
+    outline: none;
+}
+.app {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(135deg, #f37df3 10%, #9F44D3 100%);
+    flex-direction: column;
+}
+.back-box-btn {
+    padding: .6rem .8rem;
+    display: inline-block;
+    background-image: linear-gradient(135deg, #dd16dd 10%, #9114da 100%);
+    color: #fff;
+    border-radius: 8px;
+    border: 0;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    transition: all .4s cubic-bezier(0.075, 0.82, 0.165, 1);
+    font-size: 1.2rem;
+}
+.back-box-boxes {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around;
+    width: 60vw;
+    height: 60vh;
+    position: relative;
+    transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.back-box-boxes.big {
+    width: 65vw;
+    height: 65vh;
+}
+.back-box-boxes.big .back-box-box {
+    transform: rotateZ(360deg);
+}
+.back-box-box {
+    width: 15vw;
+    height: 15vh;
+    position: relative;
+    transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    background-size: 60vw 60vh;
+    background-repeat: no-repeat;
+    background-image: url("https://www.eveningwater.com/my-web-projects/js/21/img/1.gif");
+}
+.back-box-box::before,.back-box-box::after {
+    content:"";
+    position: absolute;
+    background-image: linear-gradient(135deg, #bb12bb 10%, #650a99 100%);
+}
+.back-box-box::before {
+    width: 100%;
+    height: 2vh;
+    transform: skewX(45deg);
+    left: 8px;
+    bottom: -2vh;
+}
+.back-box-box::after {
+    transform: skewY(45deg);
+    width: 2vh;
+    height: 100%;
+    top: 8px;
+    right: -2vh;
+}
