@@ -18,6 +18,8 @@ body {
     border: 3px solid #616152;
     border-radius: 15px;
     max-width: 1200px;
+    height: 600px;
+    overflow: auto;
     text-align: center;
     background-image: linear-gradient(135deg, #fcf3e3 10%, #afb1a2 100%);
 }
@@ -68,4 +70,8 @@ small {
     background-image: linear-gradient(135deg, #fce9e3 10%, #b1a4a2 100%);
     padding: 15px;
     border-radius: 8px;
+}
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
 }
