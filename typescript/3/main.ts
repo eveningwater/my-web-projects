@@ -16,11 +16,11 @@ interface OptionsType {
     lazy?: boolean;
 }
 class WhatToEat {
-    private static morningFoods: string = `牛奶 豆浆 油条 面包 稀饭 馒头 牛肉包 花卷`;
+    private static morningFoods: string = `牛奶 豆浆 油条 面包 稀饭 馒头 花卷 玉米饼 桂花糕 包子 驴肉火烧 煎饼 手抓饼`;
     private static noonFoods: string = `馄饨 拉面 烩面 热干面 刀削面 油泼面 炸酱面 炒面 重庆小面 米线 酸辣粉 
      土豆粉 螺狮粉 凉皮儿 麻辣烫 肉夹馍 羊肉汤 炒饭 盖浇饭 卤肉饭 烤肉饭 黄焖鸡米饭 
      驴肉火烧 川菜 麻辣香锅 火锅 酸菜鱼 烤串 披萨 烤鸭 汉堡 炸鸡 寿司 蟹黄包 煎饼果子 生煎 炒年糕`;
-    private static eveningFoods: string = `火锅 川菜 烤肉 柴火鸡 抄手 杂酱面 盖饭 炒饭`;
+    private static eveningFoods: string = `火锅 川菜 烤肉 柴火鸡 抄手 杂酱面 盖饭 炒饭 烧烤 便当`;
     private static whatEatType: Array<string> = ["早上", "中午", "晚上"];
     private static colorList: Array<string> = [
       "red",
@@ -110,26 +110,23 @@ class WhatToEat {
     }
   }
   initTime(status: boolean) {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
       let currentTime: string = "";
       const date = new Date().getHours();
       const morningFoods = WhatToEat.morningFoods.split(" ");
       const noonFoods = WhatToEat.noonFoods.split(" ");
       const eveningFoods = WhatToEat.eveningFoods.split(" ");
-      // 早餐科学时间7:00到8:00
       if (date >= 7 && date <= 8) {
           currentTime = WhatToEat.whatEatType[0];
           if (status) {
               this.renderData.foodElementList = morningFoods.map((food) => this.createFood(food));
           }
       } else if (date >= 12 && date <= 13) {
-          // 午餐科学时间12:00到13:00
           currentTime = WhatToEat.whatEatType[1];
           if (status) {
             this.renderData.foodElementList = noonFoods.map((food) => this.createFood(food));
           }
       } else if (date >= 18 && date <= 19) {
-          // 晚餐科学时间18:00到19:00
           currentTime = WhatToEat.whatEatType[2];
           if (status) {
             this.renderData.foodElementList = eveningFoods.map((food) => this.createFood(food));
@@ -137,7 +134,7 @@ class WhatToEat {
       } else {
           currentTime = "";
           this.renderData.foodElementList = [];
-          this.renderData.whatEat = `还没有到开饭时间，请等到开饭时间再来吧!科学建议吃饭时间:早餐:7:00 ~ 9:00,午餐:12:00 ~ 14:00,晚餐:18:00 ~ 20:00。`;
+          this.renderData.whatEat = `还没有到开饭时间，请等到开饭时间再来吧!科学建议吃饭时间:早餐:7:00 ~ 9:00,午餐:12:00 ~ 14:00,晚餐:18:00 ~ 20:00，请遵守规则。`;
       }
       if (currentTime) {
           this.renderData.whatEat = "吃什么,吃什么?";
