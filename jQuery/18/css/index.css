@@ -54,7 +54,7 @@ body,button,input,.building,.elevatoShaft,.elevato,.elevato-left,.elevato-right,
 /**** 电梯部分 ****/
 /* 电梯井 */
 .elevatoShaft {
-    width: 200px; height: 100%;);
+    width: 200px; height: 100%;
     padding: 1px;
     border-right: 2px solid #000;
     float: left;

@@ -1,0 +1,88 @@
+:focus:focus-visible {
+    outline: none;
+}
+.app {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: linear-gradient(135deg,#8875f1 10%,#2b45ec 90%);
+}
+.luf-container {
+    width: 300px;
+    box-shadow: 0 2px 12px #1166e6;
+    overflow: hidden;
+}
+.luf-header {
+    width: 100%;
+    padding: 20px 30px;
+    color: #fff;
+    background: linear-gradient(135deg,#2b0cdd 10%,#041792 90%);
+}
+.luf-header-title {
+    font-size: 24px;
+}
+.luf-header-subtitle {
+    display: inline-block;
+    opacity: .8;
+    margin:.5em 0;
+}
+.luf-search-input {
+    display: inline-block;
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 25px;
+    font-size: 14px;
+    color: #fff;
+    background-color: rgba(0,0,0,.3);
+    border: none;
+}
+.luf-user-list {
+    max-height: 450px;
+    overflow: hidden;
+    overflow-y: auto;
+    background-color: #fff;
+    list-style: none;
+}
+.luf-user-list-li {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+}
+.luf-user-list-li:not(:last-of-type) {
+    border-bottom: 1px solid #dadada;
+}
+.luf-user-avatar {
+    object-fit: cover;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.luf-user-avatar:hover {
+    transform: rotate(666turn);
+    transition-property: all;
+    transition-duration: 59s;
+    transition-delay: 1s;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.luf-user-info {
+    margin-left: 10px;
+}
+.luf-user-info-name {
+    margin-bottom: 10px;
+}
+.luf-user-info-location {
+    font-size: 14px;
+}
+.luf-user-list::-webkit-scrollbar {
+    width: 10px;
+    height: 5px;
+    background: linear-gradient(135deg,#a094e4 10%,#a1abec 90%);
+}
+.luf-user-list::-webkit-scrollbar-thumb {
+    width: 10px;
+    height: 5px;
+    background: linear-gradient(135deg,#3319c2 10%,#041dc5 90%);
+}
