@@ -51,3 +51,4 @@
 |  46   | [验证账户页面](https://github.com/eveningwater/my-web-projects/tree/master/react/46/) | [在线 demo](https://www.eveningwater.com/my-web-projects/react/46/) |
 |  47   | [实时用户过滤](https://github.com/eveningwater/my-web-projects/tree/master/react/47/) | [在线 demo](https://www.eveningwater.com/my-web-projects/react/47/) |
 |  48   | [反馈界面设计](https://github.com/eveningwater/my-web-projects/tree/master/react/48/) | [在线 demo](https://www.eveningwater.com/my-web-projects/react/48/) |
+|  49   | [自定义滑块](https://github.com/eveningwater/my-web-projects/tree/master/react/49/) | [在线 demo](https://www.eveningwater.com/my-web-projects/react/49/) |

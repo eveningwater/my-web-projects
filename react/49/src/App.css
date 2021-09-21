@@ -1,0 +1,88 @@
+:focus:focus-visible {
+    outline: none;
+}
+.app {
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(135deg,#eedfbf 10%,#c8d4ec 90%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.crs-title {
+    position: absolute;
+    top: 20px;
+    color: #2396ef;
+    letter-spacing: 2px;
+    font-size: 250%;
+}
+.crs-range-container {
+    position: relative;
+}
+.crs-range-input {
+    max-width: 350px;
+    min-width: 330px;
+    width: 100%;
+    margin: 18px 0;
+    -webkit-appearance: none;
+}
+.crs-range-input + .crs-range-label {
+    position: absolute;
+    text-align: center;
+    border-radius: 6px;
+    box-shadow: 0 0 3px rgba(0,0,0,.5);
+    text-align: center;
+    padding: 5px 0;
+    width: 80px;
+    top: -25px;
+    color: #fff;
+    background: linear-gradient(135deg,#db63e6 10%,#e70fdc 90%);
+}
+.crs-range-input::-webkit-slider-runnable-track {
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+    height: 13px;
+    background: linear-gradient(135deg,#e382ec 10%,#dd1ed4 90%);
+}
+.crs-range-input::-webkit-slider-thumb {
+    background: linear-gradient(135deg,#c23bce 10%,#c20ab9 90%);
+    width: 25px;
+    height: 25px;
+    -webkit-appearance: none;
+    border-radius: 50%;
+    border: 1px solid #e382ec;
+    margin-top: -6px;
+}
+.crs-range-input::-moz-range-track {
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+    height: 13px;
+    background: linear-gradient(135deg,#e382ec 10%,#dd1ed4 90%);
+}
+.crs-range-input::-moz-range-thumb {
+    background: linear-gradient(135deg,#c23bce 10%,#c20ab9 90%);
+    width: 25px;
+    height: 25px;
+    -webkit-appearance: none;
+    border-radius: 50%;
+    border: 1px solid #e382ec;
+    margin-top: -6px;
+}
+.crs-range-input:-ms-range-track {
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+    height: 13px;
+    background: linear-gradient(135deg,#e382ec 10%,#dd1ed4 90%);
+}
+.crs-range-input::-ms-thumb {
+    background: linear-gradient(135deg,#c23bce 10%,#c20ab9 90%);
+    width: 25px;
+    height: 25px;
+    -webkit-appearance: none;
+    border-radius: 50%;
+    border: 1px solid #e382ec;
+    margin-top: -6px;
+}
