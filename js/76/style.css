@@ -51,6 +51,29 @@ body,html {
     top: -15vh;
     z-index: 1;
 }
+.slide-container >.slide-item:nth-child(1) {
+   background-image: url(https://www.eveningwater.com/my-web-projects/jQuery/7/img/2.jpg);
+}
+
+.slide-container >.slide-item:nth-child(2) {
+   background-image: url(https://www.eveningwater.com/my-web-projects/jQuery/7/img/3.jpg);
+}
+
+.slide-container >.slide-item:nth-child(3) {
+   background-image: url(https://www.eveningwater.com/my-web-projects/jQuery/7/img/4.jpg);
+}
+
+.slide-container >.slide-item:nth-child(4) {
+   background-image: url(https://www.eveningwater.com/my-web-projects/jQuery/7/img/5.jpg);
+}
+
+.slide-container >.slide-item:nth-child(5) {
+   background-image: url(https://www.eveningwater.com/my-web-projects/jQuery/7/img/6.jpg);
+}
+
+
+
+
 .slide-container > .slide-item.active {
     opacity: 1;
 }
