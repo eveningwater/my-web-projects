@@ -354,7 +354,7 @@ document.oncontextmenu = function(event) {
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
-### computed year day
+### 最后一天剩余时间
 
 ```html
     <section>
@@ -427,3 +427,152 @@ document.oncontextmenu = function(event) {
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+### 分页导航效果
+
+```html
+<div id="app">
+    <ul class="box">
+        <li class="prev" @click="onPrev">&larr;</li>
+        <div class="group" ref="group">
+            <li 
+                v-for="(item,index) in numList" 
+                :key="item.text + index" 
+                :class="currentIndex === index ? 'active' : ''"
+                @click="onChangePage($event,index)"
+            >{{ item.text }}</li>
+        </div>
+        <li class="next" @click="onNext">&rarr;</li>
+    </ul>
+</div>
+```
+
+```css
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+}
+ul {
+    list-style: none;
+}
+ul {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    padding: 10px;
+    border-bottom: 1px solid #2d8fdf;
+}
+.group {
+    width: 500px;
+    overflow: hidden;
+    overflow-x: auto;
+    margin: 0 10px;
+}
+li {
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    cursor: pointer;
+    color: #8d19f3;
+    font-size: 18px;
+    text-align: center;
+    line-height: 35px;
+    border: 1px solid #d2d3d4;
+}
+li:not(:first-child,.next){
+    border-left: none;
+}
+li.active {
+    background-color: #8d19f3;
+    color: #fff;
+}
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+```
+
+```js
+const app = new Vue({
+    el:"#app",
+    data(){
+        return {
+            numList:[],
+            currentIndex:0,
+            timer:null
+        }
+    },
+    created(){
+        for(let i = 0;i < 40;i++){
+            this.numList.push({ text:i + 1 })
+        }
+    },
+    methods:{
+        onPrev(){
+            if(this.currentIndex <= 0){
+                this.currentIndex = 0;
+            }else{
+                this.currentIndex--;
+            }
+            this.onHandler();
+        },
+        onNext(){
+            if(this.currentIndex >= this.numList.length - 1){
+                this.currentIndex = this.numList.length - 1;
+            }else{
+                this.currentIndex++;
+            }
+            this.$nextTick(() => {
+                this.onHandler();
+            })
+        },
+        onHandler(){
+            const group = this.$refs.group;
+            if(!group){
+                return;
+            }
+            this.changeLeft(group.children[this.currentIndex]);
+        },
+        onChangePage(e,index){
+            const { target } = e;
+            this.currentIndex = index;
+            this.changeLeft(target);
+        },
+        changeLeft(child){
+            let offsetLeft = child.offsetLeft,
+                parentElement = child.parentElement,
+                left = parentElement.getBoundingClientRect().left,
+                scrollX = parentElement.scrollLeft,
+                clientX = parentElement.clientWidth,
+                childClientX = child.clientWidth;
+            let speed = offsetLeft - left - scrollX + childClientX / 2 - clientX / 2,
+                s = speed / 35,
+                totalX = speed + scrollX;
+            if(this.timer){
+                clearInterval(this.timer);
+            }
+            this.timer = setInterval(() => {
+                parentElement.scrollLeft += s;
+                if (
+                    parentElement.scrollLeft <= 0 ||
+                    parentElement.scrollLeft >= parentElement.scrollWidth - clientX ||
+                    (speed > 0 && parentElement.scrollLeft > totalX) ||
+                    (speed < 0 && parentElement.scrollLeft < totalX)
+                ) {
+                    clearInterval(this.timer);
+                }
+            }, 10);
+        }
+    }
+});
+```
+
+<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="NWgzreP" data-user="eveningwater" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/eveningwater/pen/NWgzreP">
+  导航效果</a> by eveningwater (<a href="https://codepen.io/eveningwater">@eveningwater</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
