@@ -1,0 +1,110 @@
+:focus:focus-visible {
+    outline: none;
+}
+.app {
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(135deg,#4cb4e4 10%,#1557db 90%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nmn-btn {
+    cursor: pointer;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    font-size: 25px;
+}
+.nmn-open-btn {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+}
+.nmn-nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    transition: transform .4s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transform: translateX(-100%);
+}
+.nmn-nav.active {
+    transform: translateX(0);
+}
+.nmn-nav-first {
+    width: 60%;
+    min-width: 320px;
+    max-width: 480px;
+    background: linear-gradient(135deg,#87a5e6 10%,#2ee8ee 90%);
+    transition-delay: .4s;
+}
+.nmn-nav-first.active {
+    transition-delay: 0s;
+}
+.nmn-nav-second {
+    width: 95%;
+    background: linear-gradient(135deg,#8fadec 10%,#1c1ff1 90%);
+    transition-delay: .2s;
+}
+.nmn-nav-second.active {
+    transition-delay: .2s;
+}
+.nmn-nav-third {
+    width: 95%;
+    background: linear-gradient(135deg,#517edf 10%,#9906d3 90%);
+    padding: 40px;
+    position: relative;
+    transition-delay: 0s;
+}
+.nmn-nav-third.active {
+    transition-delay: .4s;
+}
+.nmn-close-btn {
+    position: absolute;
+    right: 10px;
+    top: 40px;
+    opacity: .4;
+}
+.nmn-nav-avatar {
+    border-radius: 50%;
+    width: 80px;
+}
+.nmn-nav-list {
+    list-style: none;
+}
+.nmn-nav-list-item > .nmn-nav-list {
+    padding-left: 20px;
+}
+.nmn-nav-list-item,.nmn-nav-list-item-link {
+    text-transform: uppercase;
+    color: #f7f8f9;
+    font-size: 14px;
+}
+.nmn-nav-list-item-link {
+    text-decoration: none;
+}
+.nmn-nav-list-item {
+    margin: 10px 0;
+}
+.nmn-nav-list-item:hover > .nmn-nav-list-item-link {
+    color: #d4a60f;
+}
+.nmn-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+.nmn-content-avatar {
+    width: 150px;
+    border-radius: 50%;
+}
+.nmn-content-text {
+    color: #fff;
+    text-transform: uppercase;
+    margin-top: 1rem;
+    line-height: 1.5;
+    font-size: 18px;
+}
