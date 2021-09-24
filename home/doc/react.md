@@ -54,3 +54,4 @@
 |  49   | [自定义滑块](https://github.com/eveningwater/my-web-projects/tree/master/react/49/) | [在线 demo](https://www.eveningwater.com/my-web-projects/react/49/) |
 |  50   | [移动导航](https://github.com/eveningwater/my-web-projects/tree/master/react/50/) | [在线 demo](https://www.eveningwater.com/my-web-projects/react/50/) |
 |  51   | [测验小应用](https://github.com/eveningwater/my-web-projects/tree/master/react/51/) | [在线 demo](https://www.eveningwater.com/my-web-projects/react/51/) |
+|  52   | [推荐盒切换台](https://github.com/eveningwater/my-web-projects/tree/master/react/52/) | [在线 demo](https://www.eveningwater.com/my-web-projects/react/52/) |

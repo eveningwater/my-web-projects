@@ -1,0 +1,80 @@
+:focus:focus-visible {
+    outline: none;
+}
+.app {
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(135deg,#90f14f 10%,#11eb2e 90%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tbs-container {
+    background: linear-gradient(135deg,#2d4e18 10%,#076914 90%);
+    box-shadow: 0 4px 12px #3e9b04;
+    padding: 50px 80px;
+    max-width: 768px;
+    color: #fff;
+    border-radius: 15px;
+    position: relative;
+}
+.tbs-progress-bar {
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+    transform-origin: left;
+    animation: grow 10s linear infinite;
+}
+.tbs-quote {
+    position: absolute;
+    top: 70px;
+    font-size: 30px;
+    color: rgba(255,255,255,.3);
+}
+.fa-quote-right {
+    left: 40px;
+}
+.fa-quote-left{
+    right: 40px;
+}
+.tbs-content {
+    text-align: justify;
+    margin: 1.2rem 0;
+    line-height: 28px;
+}
+.tbs-user,.tbs-order {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tbs-user-avatar {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.tbs-user-info {
+    margin-left: 10px;
+}
+.tbs-user-role {
+    font-weight: normal;
+    margin: 10px 0;
+}
+.tbs-order-count {
+    margin-left: 15px;
+    font-size: 25px;
+    color: #4ae75a;
+}
+@keyframes grow {
+    0% {
+        transform:scaleX(0)
+    }
+}
+@media screen and (max-width:768px) {
+    .tbs-container {
+        padding: 20px 30px;
+    }
+    .tbs-quote {
+        display: none;
+    }
+}
