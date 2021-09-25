@@ -1,0 +1,113 @@
+:focus:focus-visible {
+    outline: none;
+}
+.rif-flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.rif-title {
+    font-size: 150%;
+    color: #fff;
+    position: relative;
+    cursor: pointer;
+    margin: 1rem 0;
+}
+.rif-title::after,.rif-title::before {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: visibility .4s ease-in-out;
+    visibility: hidden;
+}
+.rif-title::before {
+    content:"";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 30px;
+    border-color: transparent transparent #a819e0 transparent;
+    z-index: 0;
+    top: 0;
+}
+.rif-title::after {
+    content:attr(confirm-title);
+    background: linear-gradient(135deg,#420347 10%,#aa0ed1 90%);
+    min-width: 100%;
+    border-radius: 10px;
+    padding: .4rem 2rem;
+    font-size: 14px;
+    margin-top: .4rem;
+    z-index: 1;
+    top: 100%;
+}
+.rif-title:hover::before,.rif-title:hover::after {
+    visibility: visible;
+}
+.rif-container {
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.rif-image {
+    object-fit: cover;
+    width: 300px;
+    height: 300px;
+    box-shadow: 2px 3px 12px #aa0ed1;
+    margin: 1%;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform .4s ease-in;
+    max-width: 100%;
+}
+.rif-image:hover {
+    transform: scale(1.1);
+}
+.rif-back-btn {
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    visibility: hidden;
+    transition: visibility 1s ease-out;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512'%3E %3Cpath fill='%23ffffff' d='M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z'%3E%3C/path%3E %3C/svg%3E") center no-repeat #b523ef;
+    background-size: 40%;
+}
+.rif-back-btn.show {
+    visibility: visible;
+}
+.rif-preview-image-mask {
+    position: fixed;
+    z-index: 2000;
+    background: linear-gradient(135deg,rgba(0,0,0,.5) 10%,rgba(0,0,0,.4) 90%);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rif-preview-image {
+    max-width: 60%;
+    max-height: 60%;
+    min-width: 40%;
+    min-height: 40%;
+    object-fit: cover;
+    color: #fff;
+}
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background: linear-gradient(135deg,#f0eff0 10%,#ffffff 90%);
+}
+::-webkit-scrollbar-thumb {
+    width: 5px;
+    height: 5px;
+    background: linear-gradient(135deg,#f712e3 10%,#f386e1 90%);
+}

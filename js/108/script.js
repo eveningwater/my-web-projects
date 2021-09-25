@@ -1,3 +1,4 @@
+// https://github.com/eveningwater/my-web-projects/tree/master/js/108
 const $ = (v,el = document) => el.querySelector(v);
 const $$ = (v,el = document) => el.querySelectorAll(v);
 const siblings = el => [].filter.call(el.parentElement.children,item => item !== el);
