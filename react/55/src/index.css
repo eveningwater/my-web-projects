@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+body {
+  font-family:'Press Start 2P', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+  min-height: 100vh;
+  background: linear-gradient(135deg,#e9ce9c 10%,#e0720b 90%);
+}
