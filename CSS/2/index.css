@@ -9,8 +9,7 @@ body {
     align-items: center;
     height: 100vh;
 }
-ul,
-li {
+ul {
   list-style: none;
 }
 
@@ -19,25 +18,26 @@ a {
   outline: none;
 }
 
-img {
+.tn-img {
   border: none;
 }
 
-.wrap {
+.tn-wrap {
   width: 735px;
   height: 420px;
   position: relative;
 }
 
-.banner {
+.tn-banner {
   width: 705px;
   position: absolute;
   left: 15px;
-  bottom: 0;
+  top: 50%;
+  transform: translateY(-50%);
   overflow: hidden;
 }
 
-.banner li {
+.tn-banner .tn-li {
   width: 97px;
   height: 122px;
   cursor: pointer;
@@ -46,15 +46,15 @@ img {
   float: left;
 }
 
-.banner > li > a img {
+.tn-img {
   width: 222px;
   position: absolute;
   left: 0;
   top: 0;
 }
-.banner li:hover {
+.tn-banner .tn-li:hover {
     width: 122px;
 }
-.banner li:hover img{
+.tn-banner .tn-li:hover .tn-img{
     left: -100px;
 }
