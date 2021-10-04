@@ -13,11 +13,11 @@ html, body {
 body {
   background: radial-gradient(circle, #00ea12, #1f9628, #1b491f, #000000);
 }
-.wrapper {
+.glow-wrapper {
   width: 100%;
   height: 600px;
 }
-.stage {
+.glow-stage {
   height: 300px;
   width: 500px;
   margin: auto;
@@ -30,7 +30,7 @@ body {
   transform-style: preserve-3d;
 }
 
-.layer {
+.glow-layer {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -41,7 +41,7 @@ body {
   transform: rotateY(40deg) rotateX(33deg) translateZ(0);
 }
 
-.layer:after {
+.glow-layer:after {
   font: 150px/0.65 'Pacifico', 'Kaushan Script', Futura, 'Roboto', 'Trebuchet MS', Helvetica, sans-serif;
   content: '我爱你\A\A XXXX!';
   white-space: pre;
@@ -55,107 +55,107 @@ body {
   text-shadow: 4px 0 10px rgba(0, 0, 0, 0.13);
 }
 
-.layer:nth-child(1):after {
+.glow-layer:nth-child(1):after {
   transform: translateZ(0px);
 }
 
-.layer:nth-child(2):after {
+.glow-layer:nth-child(2):after {
   transform: translateZ(-2px);
 }
 
-.layer:nth-child(3):after {
+.glow-layer:nth-child(3):after {
   transform: translateZ(-4px);
 }
 
-.layer:nth-child(4):after {
+.glow-layer:nth-child(4):after {
   transform: translateZ(-6px);
 }
 
-.layer:nth-child(5):after {
+.glow-layer:nth-child(5):after {
   transform: translateZ(-8px);
 }
 
-.layer:nth-child(6):after {
+.glow-layer:nth-child(6):after {
   transform: translateZ(-10px);
 }
 
-.layer:nth-child(7):after {
+.glow-layer:nth-child(7):after {
   transform: translateZ(-12px);
 }
 
-.layer:nth-child(8):after {
+.glow-layer:nth-child(8):after {
   transform: translateZ(-14px);
 }
 
-.layer:nth-child(9):after {
+.glow-layer:nth-child(9):after {
   transform: translateZ(-16px);
 }
 
-.layer:nth-child(10):after {
+.glow-layer:nth-child(10):after {
   transform: translateZ(-18px);
 }
 
-.layer:nth-child(11):after {
+.glow-layer:nth-child(11):after {
   transform: translateZ(-20px);
 }
 
-.layer:nth-child(12):after {
+.glow-layer:nth-child(12):after {
   transform: translateZ(-22px);
 }
 
-.layer:nth-child(13):after {
+.glow-layer:nth-child(13):after {
   transform: translateZ(-24px);
 }
 
-.layer:nth-child(14):after {
+.glow-layer:nth-child(14):after {
   transform: translateZ(-26px);
 }
 
-.layer:nth-child(15):after {
+.glow-layer:nth-child(15):after {
   transform: translateZ(-28px);
 }
 
-.layer:nth-child(16):after {
+.glow-layer:nth-child(16):after {
   transform: translateZ(-30px);
 }
 
-.layer:nth-child(17):after {
+.glow-layer:nth-child(17):after {
   transform: translateZ(-32px);
 }
 
-.layer:nth-child(18):after {
+.glow-layer:nth-child(18):after {
   transform: translateZ(-34px);
 }
 
-.layer:nth-child(19):after {
+.glow-layer:nth-child(19):after {
   transform: translateZ(-36px);
 }
 
-.layer:nth-child(20):after {
+.glow-layer:nth-child(20):after {
   transform: translateZ(-38px);
 }
 
-.layer:nth-child(n+10):after {
+.glow-layer:nth-child(n+10):after {
   -webkit-text-stroke: 3px rgba(0, 0, 0, 0.25);
     
 }
 
-.layer:nth-child(n+11):after {
+.glow-layer:nth-child(n+11):after {
   -webkit-text-stroke: 15px #1eff52;
   text-shadow: 6px 0 6px #006b10, 5px 5px 5px #005106, 0 6px 6px #006b10;
    
 }
 
-.layer:nth-child(n+12):after {
+.glow-layer:nth-child(n+12):after {
   -webkit-text-stroke: 15px #00ea09;
    
 }
 
-.layer:last-child:after {
+.glow-layer:last-child:after {
   -webkit-text-stroke: 17px rgba(0, 0, 0, 0.1);
 }
 
-.layer:first-child:after {
+.glow-layer:first-child:after {
   color: #fff;
   text-shadow: none;
 }
