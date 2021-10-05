@@ -12,7 +12,7 @@ body,html{
 	overflow: hidden;
 }
 /*box*/
-.perspective-box{
+.square-perspective-box{
 	width: 320px;height: 320px;
 	transform-style: preserve-3d;
 	position: absolute;
@@ -20,36 +20,36 @@ body,html{
 	margin-left: -160px;margin-top: -160px;
 	animation: move 10s linear infinite;
 }
-.perspective-box:hover .box-front,
-.perspective-box:hover .box-behind,
-.perspective-box:hover .box-top,
-.perspective-box:hover .box-bottom,
-.perspective-box:hover .box-left,
-.perspective-box:hover .box-right {
+.square-perspective-box:hover .square-box-front,
+.square-perspective-box:hover .square-box-behind,
+.square-perspective-box:hover .square-box-top,
+.square-perspective-box:hover .square-box-bottom,
+.square-perspective-box:hover .square-box-left,
+.square-perspective-box:hover .square-box-right {
 	border-radius: 50%;
 	opacity: 1;
 	border: 10px solid #fff;
 	box-shadow: 0 0 15px rgba(70, 214, 240, 0.61);
 }
-.perspective-box:hover .box-front{
+.square-perspective-box:hover .square-box-front{
 	transform: translateZ(220px) scale(0.71);
 }
-.perspective-box:hover .box-behind{
+.square-perspective-box:hover .square-box-behind{
 	transform: translateZ(-220px) scale(0.71);
 }
-.perspective-box:hover .box-top{
+.square-perspective-box:hover .square-box-top{
 	transform: rotateX(60deg) translateZ(220px) translateY(0px) scale(0.71);
 }
-.perspective-box:hover .box-bottom{
+.square-perspective-box:hover .square-box-bottom{
 	transform: rotateY(60deg) translateZ(-220px) translateX(0px) scale(0.71);
 }
-.perspective-box:hover .box-left{
+.square-perspective-box:hover .square-box-left{
 	transform: rotateX(-60deg) translateZ(220px) translateY(0px) scale(0.71);
 }
-.perspective-box:hover .box-right{
+.square-perspective-box:hover .square-box-right{
 	transform: rotateY(-60deg) translateZ(-220px) translateX(0px) scale(0.71);
 }
-.box-front,.box-behind,.box-top,.box-right,.box-bottom,.box-left{
+.square-box-front,.square-box-behind,.square-box-top,.square-box-right,.square-box-bottom,.square-box-left{
 	width: 100%;height: 100%;
 	position: absolute;
 	opacity: 0.6;
@@ -58,27 +58,27 @@ body,html{
 	background-repeat: no-repeat;
 	transition: 0.6s cubic-bezier(.28, .59, .32, .99);
 }
-.box-front {
+.square-box-front {
 	background-image: url(../img/1.jpg);
 	transform: translateZ(160px);
 }
-.box-behind {
+.square-box-behind {
 	background-image: url(../img/11.jpg);
 	transform: translateZ(-160px);
 }
-.box-top {
+.square-box-top {
 	background-image: url(../img/121.jpg);
 	transform: rotateX(90deg) translateZ(160px);
 }
-.box-right {
+.square-box-right {
 	background-image: url(../img/123.jpg);
 	transform: rotateY(90deg) translateZ(160px);
 }
-.box-bottom {
+.square-box-bottom {
 	background-image: url(../img/15_avatar_middle.jpg);
 	transform: rotateX(-90deg) translateZ(160px);
 }
-.box-left {
+.square-box-left {
 	background-image: url(../img/16_avatar_big.jpg);
 	transform: rotateY(-90deg) translateZ(160px);
 }
