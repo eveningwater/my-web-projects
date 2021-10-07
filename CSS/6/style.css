@@ -14,13 +14,13 @@ body {
     align-items: center;
             
 }
-.kinetic {
+.kl-kinetic {
     position: relative;
     width: 150px;
     height: 150px;
     margin: 25% 15%;
 }
-.kinetic::before,.kinetic::after {
+.kl-kinetic::before,.kl-kinetic::after {
     content:"";
     position: absolute;
     left: 0;
@@ -29,17 +29,17 @@ body {
     height: 0;
     border: 100px solid transparent;
 }
-.kinetic.square::before,.kinetic.square::after {
+.kl-kinetic.kl-square::before,.kl-kinetic.kl-square::after {
     border-image: radial-gradient(closest-corner circle at 50% top,#e9b998,#d37218);
 }
-.kinetic.angle::before,.kinetic.angle::after {
+.kl-kinetic.kl-angle::before,.kl-kinetic.kl-angle::after {
     border-bottom-color: #d37218;
 }
-.kinetic::before {
+.kl-kinetic::before {
     transform: rotate(90deg);
     animation: rotateA 4s linear infinite;
 }
-.kinetic::after {
+.kl-kinetic::after {
     animation: rotateB 4s linear infinite 3s;
 }
 @keyframes rotateA {
