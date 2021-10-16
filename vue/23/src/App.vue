@@ -23,7 +23,7 @@ const confirm = () => {
   })
 }
 const onCopyCodeHandler = () => {
-  // 微信浏览器`navigator.clipboard.writeText`无效
+  // `navigator.clipboard.writeText` not working in wechat browser.
   if(navigator.userAgent.toLowerCase().indexOf('micromessenger') === -1){
     navigator.clipboard.writeText(state.code).then(() => confirm())
   }else{
