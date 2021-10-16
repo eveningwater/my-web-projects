@@ -16,13 +16,24 @@ const changeForm = (form) => {
       state.code = templateStyle.replace(/\;/g,";\n").replace(/\{|\}/,w => w + "\n").replace(/((.*?)\:)/g,w => "     "+ w);
    })
 }
+const confirm = () => {
+  ElMessageBox.alert(`CSS代码已复制,请粘贴查看!`,"温馨提示",{
+     confirmButtonText:"确定",
+     callback:() => {}
+  })
+}
 const onCopyCodeHandler = () => {
-    navigator.clipboard.writeText(state.code).then((text) => {
-       ElMessageBox.alert(`CSS代码已复制,请粘贴查看!`,"温馨提示",{
-         confirmButtonText:"确定",
-         callback:() => {}
-       })
-    })
+  if(navigator.clipboard){
+    navigator.clipboard.writeText(state.code).then(() => confirm())
+  }else{
+      const input = document.createElement("input");
+      input.value = state.code;
+      document.body.appendChild(input);
+      input.select();
+      document.execCommand("copy");
+      input.remove();
+      confirm();
+  }
 }
 </script>
 
