@@ -1,6 +1,6 @@
 <template>
    <header class="tri-header">
-       <Title level="2" class="tri-title">趣谈前端|在线三角形样式生成器</Title>
+       <Title level="2" class="tri-title">趣谈前端|在线三角形生成器</Title>
        <slot></slot>
    </header>
 </template>
