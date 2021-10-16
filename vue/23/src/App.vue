@@ -23,7 +23,7 @@ const confirm = () => {
   })
 }
 const onCopyCodeHandler = () => {
-  if(navigator.clipboard){
+  if(navigator.userAgent.toLowerCase().indexOf('micromessenger') === -1){
     navigator.clipboard.writeText(state.code).then(() => confirm())
   }else{
       const input = document.createElement("input");
@@ -54,7 +54,7 @@ const onCopyCodeHandler = () => {
                   <Title level="2">CSS代码</Title>
                   <el-button @click="onCopyCodeHandler">复制代码</el-button>
               </el-header>
-              <el-input :autosize="{ minRows: 8, maxRows: 10 }" type="textarea" v-model="state.code"></el-input>
+              <el-input :autosize="{ minRows: 8, maxRows: 10 }" type="textarea" v-model="state.code" disabled></el-input>
            </el-col>
        </el-row>
        <el-footer class="tri-footer">
