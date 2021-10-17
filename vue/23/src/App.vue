@@ -120,9 +120,10 @@ const onCopyCodeHandler = () => {
         }
         .tri-main {
           padding: 10px 0;
-          min-width: 350px;
+          min-width: 300px;
           max-width: calc(100% - 20px);
           margin: 0 10px;
+          overflow-x: hidden;
           .tri-row {
             min-width: 100%;
             max-width: 100%;
