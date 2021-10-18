@@ -2,7 +2,6 @@ const navZhConfig = require('./config/zh/navConfig.js');
 const sidebarZhConfig = require('./config/zh/sidebarConfig.js');
 const navEnConfig = require('./config/en/navConfig.js');
 const sidebarEnConfig = require('./config/en/sidebarConfig.js');
-
 module.exports = {
     dest: "./dist",
     base: "/my-web-projects/home/",
@@ -10,7 +9,10 @@ module.exports = {
         ['link', {
             rel: 'icon',
             href: '/logo.svg'
-        }]
+        }],
+        [
+            'script', {type: 'text/javascript', src: '/run.js'}
+        ]
     ],
     locales: {
         '/': {
