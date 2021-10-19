@@ -3,8 +3,8 @@
  **作者:eveningwater
  **日期:2017-04-07
  */
-$(function() {
-	setOption("echarts-1", {
+$(function () {
+	const chartDataFirst = {
 		//标题
 		title: {
 			text: 'ECharts基础'
@@ -28,8 +28,7 @@ $(function() {
 			type: 'bar',
 			data: [5000, 2000, 36000, 2000, 1000, 200]
 		}]
-	});
-	setOption("echarts-2", {
+	}, chartDataSecond = {
 		backgroundColor: '#0f12ef',
 		visualMap: {
 			show: true,
@@ -82,76 +81,76 @@ $(function() {
 				}
 			}
 		}]
-	});
-	setOption("echarts-3",{
-	   title: {
-        text: '折线图堆叠'
-    },
-    tooltip: {
-        trigger: 'axis'
-    },
-    legend: {
-        data:['上网','QQ','游戏','音乐','看电影']
-    },
-    grid: {
-        left: '3%',
-        right: '4%',
-        bottom: '3%',
-        containLabel: true
-    },
-    toolbox: {
-        feature: {
-            saveAsImage: {}
-        }
-    },
-    xAxis: {
-        type: 'category',
-        boundaryGap: false,
-        data: ['周一','周二','周三','周四','周五','周六','周日']
-    },
-    yAxis: {
-        type: 'value'
-    },
-    series: [
-        {
-            name:'上网',
-            type:'line',
-            stack: '花费',
-            data:[120, 132, 101, 134, 90, 230, 210]
-        },
-        {
-            name:'QQ',
-            type:'line',
-            stack: '花费',
-            data:[220, 182, 191, 234, 290, 330, 310]
-        },
-        {
-            name:'游戏',
-            type:'line',
-            stack: '花费',
-            data:[150, 232, 201, 154, 190, 330, 410]
-        },
-        {
-            name:'音乐',
-            type:'line',
-            stack: '花费',
-            data:[320, 332, 301, 334, 390, 330, 320]
-        },
-        {
-            name:'看电影',
-            type:'line',
-            stack: '花费',
-            data:[820, 932, 901, 934, 1290, 1330, 1320]
-        }
-    ]
-	});
+	}, chartThird = {
+		title: {
+			text: '折线图堆叠'
+		},
+		tooltip: {
+			trigger: 'axis'
+		},
+		legend: {
+			data: ['上网', 'QQ', '游戏', '音乐', '看电影']
+		},
+		grid: {
+			left: '3%',
+			right: '4%',
+			bottom: '3%',
+			containLabel: true
+		},
+		toolbox: {
+			feature: {
+				saveAsImage: {}
+			}
+		},
+		xAxis: {
+			type: 'category',
+			boundaryGap: false,
+			data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
+		},
+		yAxis: {
+			type: 'value'
+		},
+		series: [
+			{
+				name: '上网',
+				type: 'line',
+				stack: '花费',
+				data: [120, 132, 101, 134, 90, 230, 210]
+			},
+			{
+				name: 'QQ',
+				type: 'line',
+				stack: '花费',
+				data: [220, 182, 191, 234, 290, 330, 310]
+			},
+			{
+				name: '游戏',
+				type: 'line',
+				stack: '花费',
+				data: [150, 232, 201, 154, 190, 330, 410]
+			},
+			{
+				name: '音乐',
+				type: 'line',
+				stack: '花费',
+				data: [320, 332, 301, 334, 390, 330, 320]
+			},
+			{
+				name: '看电影',
+				type: 'line',
+				stack: '花费',
+				data: [820, 932, 901, 934, 1290, 1330, 1320]
+			}
+		]
+	};
+	[chartDataFirst, chartDataSecond, chartThird].forEach((item, index) => createChart("echarts-" + (index + 1), item));
 });
 /*
  **功能:柱状、折线图
  **参数1：元素ID
  **参数2：配置项设置
  */
-function setOption(ident, opt) {
+function createChart(ident, opt) {
 	//基于准备好的dom,初始化echarts实例
 	let myChart = echarts.init($('#' + ident)[0]);
 	// 使用刚指定的配置项和数据显示图表。

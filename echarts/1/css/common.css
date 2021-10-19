@@ -7,6 +7,6 @@
 html,body{
 	font:normal 16px "微软雅黑";
 }
-#echarts-1,#echarts-2,#echarts-3{
+.ec-chart {
 	height: 420px;
 }
