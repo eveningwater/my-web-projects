@@ -25,3 +25,4 @@
 |  21   | [奇怪的JavaScript](https://github.com/eveningwater/my-web-projects/tree/master/vue/21/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/21/) |
 |  22   | [掘金-2020](https://github.com/eveningwater/my-web-projects/tree/master/vue/22/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/22/) |
 |  23   | [在线三角形生成器](https://github.com/eveningwater/my-web-projects/tree/master/vue/23/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/23/) |
+|  24   | [扩展卡片](https://github.com/eveningwater/my-web-projects/tree/master/vue/24/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/24/) |
