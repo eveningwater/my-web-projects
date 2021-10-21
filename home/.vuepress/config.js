@@ -11,7 +11,7 @@ module.exports = {
             href: '/logo.svg'
         }],
         [
-            'script', {type: 'text/javascript', src: '/run.js'}
+            'script', {type: 'text/javascript', src: '/documentTitleScroll.js'}
         ]
     ],
     locales: {

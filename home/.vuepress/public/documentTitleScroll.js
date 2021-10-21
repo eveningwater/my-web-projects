@@ -1,8 +1,7 @@
-const run = () => {
+const documentTitleScroll = () => {
     (function () {
         let interval = null;
         const linkElement = document.querySelector('link[rel*="icon"]');
-        console.log("[tips]:",linkElement);
         if(!linkElement){
             return;
         }
@@ -11,10 +10,10 @@ const run = () => {
         document.addEventListener('visibilitychange', function () {
             if (document.hidden) {
                 interval = setInterval(scroll, 1000);
-                document.title = getUniCode("\\u60a8\\u6b63\\u5728\\u6d4f\\u89c8\\u9ec4\\u8272\\u7f51\\u7ad9") + '...';
+                document.title = getUniCode("\\u60a8\\u6b63\\u5728\\u6d4f\\u89c8\u5176\\u5b83\\u7f51\\u7ad9") + '...';
                 linkElement.href =
-                    'https://king-hcj.github.io/images/posts/zhuangbility100/nh.gif?raw=true';
-                linkElement.type = 'image/gif';
+                    'https://www.eveningwater.com/my-web-projects/home/logo.svg';
+                linkElement.type = 'image/svg';
             } else {
                 clearInterval(interval);
                 document.title = sourceTitle;
@@ -36,4 +35,4 @@ const run = () => {
         }
     })();
 }
-run();
+documentTitleScroll();
