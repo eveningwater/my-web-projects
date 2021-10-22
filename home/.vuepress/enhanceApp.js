@@ -39,7 +39,7 @@ export default ({ isServer,Vue,router }) => {
                 childList:true
             };
             const callback = () => {
-                changeLinkHandler(Vue);
+                changeLinkHandler(Vue,app);
             }
             const observer = new MutationObserver(callback);
             observer.observe(app,config);
