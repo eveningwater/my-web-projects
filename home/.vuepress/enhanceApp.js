@@ -1,4 +1,5 @@
-export default ({ isServer }) => {
+import LocateConfirm from "./components/LocateConfirm.vue"
+export default ({ isServer,Vue }) => {
    if(!isServer){
         console.log(
             `%c my-web-projects%c 联系QQ：854806732 %c 联系微信：eveningwater %c github:https://github.com/eveningwater/my-web-projects %c `,
@@ -11,5 +12,22 @@ export default ({ isServer }) => {
         console.log("%c ", 
             "padding:50px;border-radius:15px;background:url(https://www.eveningwater.com/static/image/smile.svg)no-repeat center/cover;margin-left:15px;"
         );
+        window.addEventListener("load",(e) => {
+            Vue.nextTick().then(() => {
+                const allLinks = document.getElementsByTagName("a");
+                Array.from(allLinks).forEach(item => {
+                    item.addEventListener("click",e => {
+                        const target = item.getAttribute("target");
+                        if(target === "_blank"){
+                            e.preventDefault();
+                            const currentLink = item.getAttribute("href");
+                            new Vue({
+                                render:(h) => h(LocateConfirm,{ props:{ link:currentLink }})
+                            }).$mount("#app");
+                        }
+                    })
+                })
+            })
+        })
    }
 }
