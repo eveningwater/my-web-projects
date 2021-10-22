@@ -27,3 +27,4 @@
 |  23   | [Online triangle generator](https://github.com/eveningwater/my-web-projects/tree/master/vue/23/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/23/) |
 |  24   | [Expanding Cards](https://github.com/eveningwater/my-web-projects/tree/master/vue/24/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/24/) |
 |  25   | [Progress Steps](https://github.com/eveningwater/my-web-projects/tree/master/vue/25/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/25/) |
+|  26   | [Rotating Navigation Animation](https://github.com/eveningwater/my-web-projects/tree/master/vue/26/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/26/) |
