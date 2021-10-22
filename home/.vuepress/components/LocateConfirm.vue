@@ -14,8 +14,8 @@
                 </div>
             </div>
             <div class="mwp-middle-footer">
-                <button type="button" class="mwp-middle-btn" @click="toLastPage">返回上一页</button>
-                <button type="button" class="mwp-middle-btn mwp-middle-btn-primary" @click="continueToViewHandler">继续访问</button>
+                <!-- <button type="button" class="mwp-middle-btn" @click="toLastPage">返回上一页</button> -->
+                <button type="button" class="mwp-middle-btn mwp-middle-btn-primary">继续访问</button>
             </div>
         </div>
     </div>
@@ -34,12 +34,12 @@
             }
         },
         methods:{
-            continueToViewHandler(){
-                location.href = this.link;
-            },
-            toLastPage(){
-                location.href = this.lastLink;
-            }
+            // continueToViewHandler(){
+            //     // window.location.href = this.link;
+            // },
+            // toLastPage(){
+            //     location.href = this.lastLink;
+            // }
         }
     }
 </script>
