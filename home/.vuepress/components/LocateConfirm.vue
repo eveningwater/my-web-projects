@@ -1,19 +1,22 @@
 <template>
-    <div class="mwp-middle-page">
-        <div class="mwp-middle-logo">
-            <img src="https://eveningwater.com/my-web-projects/home/logo.svg" alt="the logo" class="mwp-middle-img">
-            我的个人项目
-        </div>
-        <div class="mwp-middle-content">
-            <p class="mwp-middle-title">即将离开我的个人项目，请注意账号财产安全</p>
-            <div class="mwp-middle-link-container">
-                <div class="mwp-middle-link-content">
-                    <p class="mwp-middle-link-text">{{ link }}</p>
+    <div id="app">
+        <div class="mwp-middle-page">
+            <div class="mwp-middle-logo">
+                <img src="https://eveningwater.com/my-web-projects/home/logo.svg" alt="the logo" class="mwp-middle-img">
+                我的个人项目
+            </div>
+            <div class="mwp-middle-content">
+                <p class="mwp-middle-title">即将离开我的个人项目，请注意账号财产安全</p>
+                <div class="mwp-middle-link-container">
+                    <div class="mwp-middle-link-content">
+                        <p class="mwp-middle-link-text">{{ link }}</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="mwp-middle-footer">
-            <button type="button" class="mwp-middle-btn" @click="continueToViewHandler">继续访问</button>
+            <div class="mwp-middle-footer">
+                <button type="button" class="mwp-middle-btn" @click="toLastPage">返回上一页</button>
+                <button type="button" class="mwp-middle-btn mwp-middle-btn-primary" @click="continueToViewHandler">继续访问</button>
+            </div>
         </div>
     </div>
 </template>
@@ -24,16 +27,18 @@
             link:{
                 type:String,
                 default:""
-            }
-        },
-        data(){
-            return {
-
+            },
+            lastLink:{
+                type:String,
+                default:""
             }
         },
         methods:{
             continueToViewHandler(){
                 location.href = this.link;
+            },
+            toLastPage(){
+                location.href = this.lastLink;
             }
         }
     }
@@ -59,16 +64,25 @@
             min-height 40px
             padding 20px 0
             .mwp-middle-btn
-                background linear-gradient(135deg,#007fff 10%,#4096ef 90%)
+                background transparent
                 border-radius 5px
-                padding 12px 20px
-                color #fff
+                padding 8px 14px
+                color #8d8e8f
                 transition all .4s ease-in-out
                 cursor pointer
-                border none
-                letter-spacing 2px
+                border 1px solid #d2dfdf
+                letter-spacing 1px
+                &:first-child
+                    margin-right 15px
                 &:focus-visible
                     outline none
+                &:hover
+                    border-color #2396ef
+                    color #2396ef
+                &.mwp-middle-btn-primary
+                    background linear-gradient(135deg,#007fff 10%,#4096ef 90%)
+                    color #fff
+                    border none
                 &:hover
                     background linear-gradient(135deg,#517fe7 10%,#2396ef 90%)
                     color #fff
