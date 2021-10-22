@@ -13,15 +13,14 @@ function changeLinkHandler(Vue,el){
                 if(target === "_blank"){
                     e.preventDefault();
                     const currentLink = item.getAttribute("href");
-                    const vm = new Vue({
-                        render:(h) => h(LocateConfirm,{ props:{ link:currentLink,lastLink }})
-                    });
                     //Can not use relative url,this will cause locate error....
                     const host = "https://www.eveningwater.com/my-web-projects/home/";
                     const openWindow = window.open(host + "online-template.html?target=" + encodeURIComponent(currentLink),"_blank");
                     // if you are run in local by use yarn home command,you can use the code as follow:
-                    // window.open("/local-template.html","_blank");
-                    // const openWindow = window.open("/html/template.html","_blank");
+                    // const vm = new Vue({
+                    //     render:(h) => h(LocateConfirm,{ props:{ link:currentLink,lastLink }})
+                    // });
+                    // const openWindow = window.open("/local-template.html","_blank");
                     // openWindow.addEventListener("load",() => {
                     //     const innerDocument = openWindow.frames.document;
                     //     const styleElement = document.createElement("style");

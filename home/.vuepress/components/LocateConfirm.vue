@@ -99,7 +99,6 @@
                 font-size 14px
                 color #8d8e8f
                 .mwp-middle-link-content
-                    max-height 40px
                     word-break break-all
                     line-height 22px
                     overflow hidden
