@@ -1,47 +1,12 @@
-import LocateConfirm from "./components/LocateConfirm.vue";
-function changeLinkHandler(Vue,el){
+function changeLinkHandler(Vue,app){
     Vue.nextTick().then(() => {
-        const allLinks = document.getElementsByTagName("a");
-        const allStyles = document.getElementsByTagName("style");
-        //handle the parse style text
-        const allStyleText = Array.from(allStyles).map(item => item.innerText.replace(/\[data-v-(.*?)\]/g,"")).filter(style => style.indexOf("mwp-") > -1);
-        const lastLink = location.href;
+        const allLinks = app.getElementsByTagName("a");
+        const host = "https://www.eveningwater.com/my-web-projects/home/";
         Array.from(allLinks).forEach(item => {
-            item.addEventListener("click",e => {
-                e.stopPropagation();
-                const target = item.getAttribute("target");
-                if(target === "_blank"){
-                    e.preventDefault();
-                    const currentLink = item.getAttribute("href");
-                    //Can not use relative url,this will cause locate error....
-                    const host = "https://www.eveningwater.com/my-web-projects/home/";
-                    const openWindow = window.open(host + "online-template.html?target=" + encodeURIComponent(currentLink),"_blank");
-                    // if you are run in local by use yarn home command,you can use the code as follow:
-                    // const vm = new Vue({
-                    //     render:(h) => h(LocateConfirm,{ props:{ link:currentLink,lastLink }})
-                    // });
-                    // const openWindow = window.open("/local-template.html","_blank");
-                    // openWindow.addEventListener("load",() => {
-                    //     const innerDocument = openWindow.frames.document;
-                    //     const styleElement = document.createElement("style");
-                    //     styleElement.type = "text/css";
-                    //     styleElement.textContent = allStyleText[0];
-                    //     const app = innerDocument.getElementById("app");
-                    //     const head = innerDocument.head;
-                    //     head.appendChild(styleElement);
-                    //     vm.$mount(app);
-                    //     setTimeout(() => {
-                    //         const continueBtn = innerDocument.getElementsByClassName("mwp-middle-btn")[0];
-                    //         continueBtn.addEventListener("click",() => {
-                    //             const continueWindow = window.open(currentLink,"_blank");
-                    //             continueWindow.opener = null;
-                    //             openWindow.close();
-                    //         })
-                    //     },0)
-                    // });
-                    openWindow.opener = null;
-                }
-            })
+            const currentLink = item.getAttribute("href");
+            if(item.getAttribute("target") === "_blank" && currentLink.indexOf("online-template") === -1){
+                item.setAttribute("href",host + "online-template.html?target=" + encodeURIComponent(currentLink));
+            }
         })
     })
 }
@@ -58,19 +23,19 @@ export default ({ isServer,Vue,router }) => {
         console.log("%c ", 
             "padding:50px;border-radius:15px;background:url(https://www.eveningwater.com/static/image/smile.svg)no-repeat center/cover;margin-left:15px;"
         );
-        window.addEventListener("load",(e) => {
-            const app = document.getElementById("app");
+        window.addEventListener("load",() => {
+            const app = router.app.$el;
             changeLinkHandler(Vue,app);
             const config = {
-                attributes:true,
-                subtree:true,
-                childList:true
+                attributes: true, 
+                childList: true, 
+                subtree: true 
             };
             const callback = () => {
                 changeLinkHandler(Vue,app);
             }
             const observer = new MutationObserver(callback);
             observer.observe(app,config);
-        })
+        });
    }
 }
