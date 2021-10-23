@@ -28,3 +28,4 @@
 |  24   | [扩展卡片](https://github.com/eveningwater/my-web-projects/tree/master/vue/24/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/24/) |
 |  25   | [步骤条](https://github.com/eveningwater/my-web-projects/tree/master/vue/25/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/25/) |
 |  26   | [旋转导航动画](https://github.com/eveningwater/my-web-projects/tree/master/vue/26/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/26/) |
+|  27   | [隐藏搜索框](https://github.com/eveningwater/my-web-projects/tree/master/vue/27/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/27/) |
