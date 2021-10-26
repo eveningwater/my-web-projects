@@ -1,0 +1,28 @@
+// width
+@full:1;
+@half:0.5;
+@percent-8:0.8;
+@percent-2:0.2;
+@position:relative,absolute,fixed,static,sticky;
+// mixin
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.all-transition {
+    transition: all @speed cubic-bezier(0.55, 0.085, 0.68, 0.53);
+}
+// speed covert function
+@speed:convert(1s,"ms");
+// color
+@leftBgColor:fade(#2396ef,40%);
+@rightBgColor:fade(#f8872a,40%);
+@leftHoverColor:fadeOut(#2396ef,40%);
+@rightHoverColor:fadeOut(#f8872a,40%);
+@color:#ffffff;
+@transparent:transparent;
+
+// list
+@text-transform:uppercase,lowercase;
