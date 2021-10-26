@@ -1,0 +1,37 @@
+// variable
+@color:#ffffff;
+@bgColor-1:#94ccf7;
+@bgColor-2:#2686cf;
+@titleColor:#535455;
+@boxBgColor-1:#f1bd81;
+@boxBgColor-2:#e07e0e;
+
+// width,use by percentage function
+@full:1;
+@half:0.5;
+
+// mixin
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.scrollbar {
+    width:10px;
+    height:10px;
+}
+
+// Operations
+@boxWidth:100 * 3px;
+
+// maps
+.boxColors() {
+    lightColor:@boxBgColor-1;
+    darkColor:@boxBgColor-2;
+}
+// escape
+@max768:~"(max-width: 768px)";
+
+// less function
+@textTransform:uppercase,capitalize,none,lowercase,inherit;

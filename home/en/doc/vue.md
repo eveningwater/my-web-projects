@@ -30,3 +30,4 @@
 |  26   | [Rotating Navigation Animation](https://github.com/eveningwater/my-web-projects/tree/master/vue/26/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/26/) |
 |  27   | [hidden-search-widget](https://github.com/eveningwater/my-web-projects/tree/master/vue/27/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/27/) |
 |  28   | [blurry loading](https://github.com/eveningwater/my-web-projects/tree/master/vue/28/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/28/) |
+|  29   | [scroll animation](https://github.com/eveningwater/my-web-projects/tree/master/vue/29/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/29/) |

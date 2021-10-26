@@ -1,0 +1,36 @@
+@import "./variable.less";
+.scroll-ani-box {
+    // use less Maps
+    @color-1:.boxColors[lightColor];
+    @color-2:.boxColors[darkColor];
+    width: percentage(@full);
+    max-width: @boxWidth;
+    height: 250px;
+    color: @color;
+    .flex-center();
+    font-size:3rem;
+    background: linear-gradient(135deg, @color-1 10%,@color-2 90%);
+    // range function
+    margin: range(15px,15px,15);
+    // min function
+    border-radius: min(8px,9px,10px);
+    // fade function
+    box-shadow: 1px 3px 12px fade(@color,40%);
+    letter-spacing: 2px;
+    @media @max768 {
+        font-size: 2rem;
+    }
+    transform: translateX(-400%);
+    transition: transform .4s cubic-bezier(0.075, 0.82, 0.165, 1);
+    &:nth-child(even){
+        transform: translateX(400%);
+    }
+    &.show {
+        transform: translateX(0);
+    }
+    .scroll-ani-box-title {
+        color: @color;
+        text-transform: extract(@textTransform,1);
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+}
