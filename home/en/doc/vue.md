@@ -32,3 +32,4 @@
 |  28   | [blurry loading](https://github.com/eveningwater/my-web-projects/tree/master/vue/28/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/28/) |
 |  29   | [scroll animation](https://github.com/eveningwater/my-web-projects/tree/master/vue/29/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/29/) |
 |  30   | [split panel](https://github.com/eveningwater/my-web-projects/tree/master/vue/30/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/30/) |
+|  31   | [form wave](https://github.com/eveningwater/my-web-projects/tree/master/vue/31/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/31/) |
