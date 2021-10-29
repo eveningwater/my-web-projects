@@ -32,3 +32,4 @@
 |  28   | [模糊加载](https://github.com/eveningwater/my-web-projects/tree/master/vue/28/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/28/) |
 |  29   | [滚动加载动画](https://github.com/eveningwater/my-web-projects/tree/master/vue/29/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/29/) |
 |  30   | [面板分割](https://github.com/eveningwater/my-web-projects/tree/master/vue/30/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/30/) |
+|  31   | [表单波浪特效](https://github.com/eveningwater/my-web-projects/tree/master/vue/31/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/31/) |
