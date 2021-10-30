@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简单的增删改查</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="shortcut icon" href="https://eveningwater.com/static/image/icon.jpg" type="image/x-icon">
+</head>
+<body>
+    <button id="addBtn" class="add-btn">添加学生</button>
+    <button id="deleteBtn" class="delete-btn">删除学生</button>
+    <table class="table" id="myTable">
+        <thead>
+            <th>
+                <input type="checkbox" id="allChecked">
+            </th>
+            <th>编号</th>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>操作</th>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <div class="my-form-container" id="myFormContainer">
+        <form id="myForm" class="my-form">
+            <div>
+                <label>姓名:</label>
+                <input type="text" id="name">
+            </div>
+            <div>
+                <label>年龄:</label>
+                <input type="text" id="age">
+            </div>
+            <div>
+                <button type="button" id="sureBtn">确定</button>
+            </div>
+        </form>
+    </div>
+</body>
+<script src="./js/index.js"></script>
+</html>
