@@ -60,6 +60,12 @@ module.exports = [
         sidebarDepth: 1
     }, 
     {
+        title: 'php-web项目',
+        path: '/doc/php.md',
+        collapsable: true,
+        sidebarDepth: 1
+    }, 
+    {
         title: 'demo',
         path: '/doc/demo.md',
         collapsable: true,

@@ -1,0 +1,27 @@
+// the number
+@full:1;
+@zero-point-1:@full - 0.9;
+@zero-point-9:@full - 0.1;
+@none:0;
+@half:.5;
+// the base selector
+@baseSelector:sb-;
+// the value
+@box-sizing:border-box,content-box;
+@display:flex,block,inline,inline-block,inline-flex,none;
+@align:center,left,right;
+@cursor:pointer,zoom-in,zoom-out,not-allowed;
+//  the color
+@color:#ffffff;
+@transparent:transparent;
+@bgColor-1:fade(#f091e3,80%);
+@bgColor-2:fadeout(#e949e1,20%);
+@btnBgColor-1:fade(#d44de6,80%);
+@btnBgColor-2:fadeout(#b811e2,20%);
+//  the rotate
+@rotate:unit(@half * 10 + @full * 100 + @full * 30,deg);
+.flex-center {
+    display: extract(@display,@full);
+    justify-content: extract(@align,@full);
+    align-items: extract(@align,@full);
+}
