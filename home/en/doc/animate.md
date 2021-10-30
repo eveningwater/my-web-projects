@@ -1,4 +1,4 @@
-### The web project completed by the animation library
+### The web projects completed by the animation library
 
 | Serial number |                                            Project                                            |                                online demo                                 |
 | :--: | :-------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------: |

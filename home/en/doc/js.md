@@ -1,4 +1,4 @@
-# A web project implemented by native js
+# The web projects implemented by native js
 
 | Serial number |                                                 Project                                                  |                                        online demo                                        |
 | :--: | :------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------: |

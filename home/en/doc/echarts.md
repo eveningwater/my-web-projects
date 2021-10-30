@@ -1,5 +1,5 @@
 
-### A web project implemented by echarts.js
+### The web projects implemented by echarts.js
 
 | Serial number |                                            Project                                            |                                online demo                                 |
 | :--: | :-------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------: |

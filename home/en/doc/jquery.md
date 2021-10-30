@@ -1,4 +1,4 @@
-### A web project implemented by jQuery
+### The web projects implemented by jQuery
 
 
 | Serial number |                                            Project                                            |                                online demo                                 |

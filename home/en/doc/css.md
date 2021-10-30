@@ -1,5 +1,5 @@
 
-### A web project implemented using only css
+### The web projects implemented using only css
 
 | Serial number |                                            Project                                            |                                online demo                                 |
 | :--: | :-------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------: |
