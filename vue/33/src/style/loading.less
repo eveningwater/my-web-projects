@@ -1,0 +1,29 @@
+@import "./variable.less";
+.@{baseSelector}loading-container {
+    .flex-center();
+    transition: all convert(400ms,"s") ease-in-out;
+    margin-bottom: unit(pow(6,2) - @full,px);
+    box-sizing: extract(@box-sizing,@full);
+    .@{baseSelector}loading-circle {
+        background: linear-gradient(@rotate,@bgColor-1 percentage(@zero-point-1),@bgColor-2 percentage(@zero-point-9));
+        border-radius: percentage(@half);
+        width: unit(ceil(9.5),px);
+        height: unit(sqrt(100),px);
+        margin: unit(floor(5.9),px);
+        animation: bounce convert(500ms,"s") ease-in infinite;
+        &:nth-of-type(2) {
+            animation-delay: convert(100ms,"s");
+        }
+        &:last-of-type {
+            animation-delay: convert(200ms,"s");
+        }
+    }
+}
+@keyframes bounce {
+    0%,100% {
+        transform: translateY(@none);
+    }
+    50% {
+        transform: translateY(unit(-10,px));
+    }
+}

@@ -1,0 +1,32 @@
+// the number
+@none:0;
+@full:1;
+@half:0.5;
+@zero-point-1:@full - 0.9;
+@zero-point-9:@full - 0.1;
+// the base selector
+@baseSelector:dj-;
+// the value
+@box-sizing:border-box,content-box;
+@display:flex,block,inline,inline-block,inline-flex,none;
+@align:center,left,right;
+@cursor:pointer,zoom-in,zoom-out,not-allowed;
+@overflow:hidden,auto;
+//  the color
+@color:#ffffff;
+@transparent:transparent;
+@bgColor-1:fade(#f0664d,80%);
+@bgColor-2:fadeout(#e05016,20%);
+@btnBgColor-1:fade(#d44de6,80%);
+@btnBgColor-2:fadeout(#b811e2,20%);
+@containerBgColor-2:fadeout(#f1f2f3,10%);
+@boxShadowColor:color(#eb6b44);
+@titleColor:color(#dd911f);
+@fontColor:#535455;
+//  the rotate
+@rotate:unit(@half * 10 + @full * 100 + @full * 30,deg);
+.flex-center {
+    display: extract(@display,@full);
+    justify-content: extract(@align,@full);
+    align-items: extract(@align,@full);
+}

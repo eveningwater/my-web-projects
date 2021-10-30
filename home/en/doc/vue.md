@@ -34,3 +34,4 @@
 |  30   | [split panel](https://github.com/eveningwater/my-web-projects/tree/master/vue/30/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/30/) |
 |  31   | [form wave](https://github.com/eveningwater/my-web-projects/tree/master/vue/31/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/31/) |
 |  32   | [sound board](https://github.com/eveningwater/my-web-projects/tree/master/vue/32/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/32/) |
+|  33   | [dad joke](https://github.com/eveningwater/my-web-projects/tree/master/vue/33/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/33/) |
