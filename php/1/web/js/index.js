@@ -1,4 +1,4 @@
-const host = "https://www.eveningwater.com/php/";
+const host = "https://www.eveningwater.com/my-web-projects/php/1/";
 // const host ='http://localhost:3000/'
 const api = {
     addStudent:host + 'add_student.php',
