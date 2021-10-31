@@ -1,6 +1,6 @@
 <script lang="tsx">
     import { defineComponent, PropType } from "@vue/runtime-core";
-import { useCssModule } from "@vue/runtime-dom";
+    import { useCssModule } from "@vue/runtime-dom";
     export default defineComponent({
         props:{
             content:{
