@@ -1,0 +1,48 @@
+@none:0;
+@full:1;
+@half:0.5;
+
+@color:#fff;
+@appBgColor-1:fade(#e1e2e3,80%);
+@appBgColor-2:fadeout(#f1f2f3,10%);
+@fontColor:color(#535455);
+@borderColor:fade(@fontColor,percentage(@half));
+@keyBgColor-1:fade(#f1f2f3,20%);
+@keyBgColor-2:fadeout(#ffffff,40%);
+@boxShadowCOlor:fadeout(@fontColor,50%);
+@display:flex,block,inline-block,inline-flex,inline,none;
+@overflow:hidden,auto,scroll;
+@align:center,left,right;
+@position:absolute,relative,fixed,static,sticky;
+@cursor:pointer,zoom-in,zoom-out,not-allowed,default;
+@rotate:unit(pow(10,2) + pow(6,2) - @full,deg);
+@baseSelector:kc-;
+// margin
+.mt-(@num) when (default()) {
+    margin-top:unit(@num,px);
+}
+.mb-(@num) when (default()) {
+    margin-bottom:unit(@num,px);
+}
+.ml-(@num) when (default()) {
+    margin-left:unit(@num,px);
+}
+.mr-(@num) when (default()) {
+    margin-right:unit(@num,px);
+}
+// padding
+.pt-(@num) when (default()) {
+    padding-top:unit(@num,px);
+}
+.pb-(@num) when (default()) {
+    padding-left:unit(@num,px);
+}
+.pr-(@num) when (default()) {
+    padding-right:unit(@num,px);
+}
+// mixin
+.flex-center {
+    display: extract(@display,@full);
+    align-items: extract(@align,@full);
+    justify-content: extract(@align,@full);
+}
