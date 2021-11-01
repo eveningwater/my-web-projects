@@ -1,0 +1,55 @@
+@baseSelector:rcp-;
+
+// number
+@full:1;
+@none:0;
+// color
+@color:#ffffff;
+@bgColor-1:fade(#f1ae70,percentage(@full * 0.1 * 9));
+@bgColor-2:fadeout(#e27611,percentage(@full * 0.1));
+@randomBgColor-1:fadeout(#e09ff0,percentage(@full * 0.2));
+@randomBgColor-2:fade(#dc1bee,percentage(@full * 0.6));
+@tagBgColor-1:fadeout(#f059ac,percentage(@full * 0.2));
+@tagBgColor-2:fade(#e910a8,percentage(@full * 0.6));
+@randomBorderColor:fadein(rgba(241, 203, 230, 0.8),percentage(@full * round(.32)));
+// common
+@display:flex,block,inline-block,inline-flex,none;
+@position:absolute,relative,fixed,static,sticky;
+@cursor:pointer,zoom-in,not-allowed;
+@align:center,left,right;
+@overflow:auto,hidden,scroll;
+// 
+@rotate:unit(pow(10,2) + pow(6,2) + @full,deg);
+// mixin
+.flex-center {
+    display: extract(@display,@full);
+    justify-content: extract(@align,@full);
+    align-items: extract(@align,@full);
+    flex-direction: column;
+}
+.dirMarMap(){
+    @t:margin-top;
+    @b:margin-bottom;
+    @l:margin-left;
+    @r:margin-right;
+    @n:none;
+}
+.dirPadMap {
+    @t:padding-top;
+    @b:padding-bottom;
+    @l:padding-left;
+    @r:padding-right;
+    @n:none;
+}
+// margin
+.m(@dir;@num;@unit) when (default()) {
+    @dirProp:.dirMarMap[@@dir];
+    @prop:if((@dirProp = none),margin,@dirProp);
+    @{prop}: unit(@num,@unit);
+}
+// padding
+.p(@dir;@num;@unit) when (default()) {
+    @dirProp:.dirPadMap[@@dir];
+    @prop:if((@dirProp = none),padding,@dirProp);
+    @{prop}: unit(@num,@unit);
+}
