@@ -32,14 +32,15 @@ const state = readonly(reactive({
 const onCollapseHandler = (e:MouseEvent) => {
     const { currentTarget } = e;
     const iconElement = (currentTarget as HTMLElement);
-    iconElement.className = iconElement.classList.contains("fa-chevron-down") ? iconElement.className.replace(/chevron-down/g,"close") : 
-    iconElement.className.replace(/close/g,"chevron-down");
+    const isDown = iconElement.classList.contains("fa-chevron-down");
+    const matchRule = isDown ? /chevron-down/g : /close/g;
+    const updateValue = isDown ? "close" : "chevron-down";
+    iconElement.className = iconElement.className.replace(matchRule,updateValue);
     iconElement.parentElement?.classList.toggle("active");
 }
 </script>
 
 <template>
-    <!-- <i class="fa-close fa fa-lg fa-chevron-down"></i> -->
     <faq-title class="faq-title">Frequently Asked Questions</faq-title>
     <div class="faq-container">
         <faq-collapse v-for="(faq,index) in state.faqList" :key="faq.title + index">
