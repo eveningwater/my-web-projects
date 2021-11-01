@@ -1,0 +1,63 @@
+@baseSelector:faq-;
+
+// number
+@full:1;
+@none:0;
+// color
+@color:#ffffff;
+@titleColor:fade(#700ed1,percentage(@full - 0.11));
+@bgColor-1:fade(#a4d4f5,percentage(@full * 0.1 * 9));
+@bgColor-2:fadeout(#99f5bc,percentage(@full * 0.1));
+@faqBgColor-1:fadeout(#f09fe9,percentage(@full * 0.2));
+@faqBgColor-2:fade(#e48cf0,percentage(@full * 0.6));
+@faqActiveBgColor-1:fadeout(#f0f0f0,percentage(@full * 0.2));
+@faqActiveBgColor-2:fade(#c7c7c7,percentage(@full * 0.6));
+@faqBorderColor:fadein(rgba(245, 83, 196, 0.8),percentage(@full * round(.32)));
+// common
+@display:flex,block,inline-block,inline-flex,none;
+@position:absolute,relative,fixed,static,sticky;
+@cursor:pointer,zoom-in,not-allowed;
+@align:center,left,right;
+@overflow:auto,hidden,scroll;
+// 
+@rotate:unit(pow(10,2) + pow(6,2) + @full,deg);
+// mixin
+.flex-center {
+    display: extract(@display,@full);
+    justify-content: extract(@align,@full);
+    align-items: extract(@align,@full);
+}
+// merge
+.base-shadow() {
+    box-shadow+: unit(@full * sqrt(9),px) unit(@full + pi() * 2,px) unit(@full + floor(16.2),px) rgba(0, 0, 0, 0.3);
+}
+.faq-box-shadow {
+    .base-shadow();
+    box-shadow+: unit(@full,px) unit(@full + @full,px) unit(@full * ceil(9.2),px) rgba(0, 0, 0, 0.5);
+}
+.dirMarMap(){
+    @t:margin-top;
+    @b:margin-bottom;
+    @l:margin-left;
+    @r:margin-right;
+    @n:none;
+}
+.dirPadMap {
+    @t:padding-top;
+    @b:padding-bottom;
+    @l:padding-left;
+    @r:padding-right;
+    @n:none;
+}
+// margin
+.m(@dir;@num;@unit) when (default()) {
+    @dirProp:.dirMarMap[@@dir];
+    @prop:if((@dirProp = none),margin,@dirProp);
+    @{prop}: unit(@num,@unit);
+}
+// padding
+.p(@dir;@num;@unit) when (default()) {
+    @dirProp:.dirPadMap[@@dir];
+    @prop:if((@dirProp = none),padding,@dirProp);
+    @{prop}: unit(@num,@unit);
+}

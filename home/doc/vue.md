@@ -36,3 +36,4 @@
 |  32   | [音板](https://github.com/eveningwater/my-web-projects/tree/master/vue/32/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/32/) |
 |  33   | [开玩笑](https://github.com/eveningwater/my-web-projects/tree/master/vue/33/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/33/) |
 |  34   | [键盘事件对象](https://github.com/eveningwater/my-web-projects/tree/master/vue/34/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/34/) |
+|  35   | [折叠元素](https://github.com/eveningwater/my-web-projects/tree/master/vue/35/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/35/) |
