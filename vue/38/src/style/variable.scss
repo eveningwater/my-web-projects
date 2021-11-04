@@ -1,0 +1,11 @@
+
+
+$map:(m:margin,mt:margin-top,mb:margin-bottom,ml:margin-left,mr:margin-right);
+@each $mgs in mt,mb,m,ml,mr {
+    @for $i from 0 through 100 {
+        .#{$mgs}-#{$i}-#{unit} {
+            $prop:$map($mgs);
+            #{prop}:$i + unit;
+        }
+    }
+}

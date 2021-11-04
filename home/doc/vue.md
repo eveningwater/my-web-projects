@@ -38,3 +38,4 @@
 |  34   | [键盘事件对象](https://github.com/eveningwater/my-web-projects/tree/master/vue/34/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/34/) |
 |  35   | [折叠元素](https://github.com/eveningwater/my-web-projects/tree/master/vue/35/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/35/) |
 |  36   | [随机选择器](https://github.com/eveningwater/my-web-projects/tree/master/vue/36/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/36/) |
+|  37   | [动画导航](https://github.com/eveningwater/my-web-projects/tree/master/vue/37/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/37/) |

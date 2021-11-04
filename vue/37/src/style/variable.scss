@@ -1,0 +1,66 @@
+$bgColor-1:opacify(rgba(142,65,214,.4),.38);
+$bgColor-2:transparentize(#691db1,.09);
+$boxShadowColor:transparentize(#250e3b,.09);
+$navBgColor-1:#f1f2f3;
+$navBgColor-2:#ffffff;
+$fontColor:#535455;
+$transparent:transparent;
+
+
+$baseSelector:"an-";
+// margin
+@for $i from 0 through 100 {
+    .mt-#{$i} {
+        margin-top: $i + px;
+    }
+
+    .m-#{$i} {
+        margin: $i + px;
+    }
+
+    .mb-#{$i} {
+        margin-bottom: $i + px;
+    }
+
+    .ml-#{$i} {
+        margin-left: $i + px;
+    }
+
+    .mr-#{$i} {
+        margin-right: $i + px;
+    }
+}
+// padding
+@for $i from 0 through 100 {
+    .pt-#{$i} {
+        padding-top: $i + px;
+    }
+
+    .p-#{$i} {
+        padding: $i + px;
+    }
+
+    .pb-#{$i} {
+        padding-bottom: $i + px;
+    }
+
+    .pl-#{$i} {
+        padding-left: $i + px;
+    }
+
+    .pr-#{$i} {
+        padding-right: $i + px;
+    }
+}
+@mixin margin-reset {
+    margin: 0;
+}
+
+@mixin padding-reset {
+    padding: 0;
+}
+@mixin  flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
