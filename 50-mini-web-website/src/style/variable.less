@@ -1,0 +1,46 @@
+@bgColor-1:#283d52;
+@bgColor-2:#66a5e4;
+@color:#fff;
+
+@baseSelector:mini-web-;
+
+@full:1;
+@half:0.5;
+
+@position:relative,absolute,fixed;
+@display:block,flex,inline-block,inline,inline-flex,none;
+@cursor:pointer,not-allowed;
+@align:left,center,right;
+@rotate:unit(pow(10,2) + pow(6,2) - 1,deg);
+
+.flex-center {
+    display: extract(@display,floor(2.6));
+    justify-content: extract(@align,floor(2.7));
+    align-items: extract(@align,floor(2.8));
+}
+.dirMarMap(){
+    @t:margin-top;
+    @b:margin-bottom;
+    @l:margin-left;
+    @r:margin-right;
+    @n:none;
+}
+.dirPadMap {
+    @t:padding-top;
+    @b:padding-bottom;
+    @l:padding-left;
+    @r:padding-right;
+    @n:none;
+}
+// margin
+.m(@dir;@num;@unit) when (default()) {
+    @dirProp:.dirMarMap[@@dir];
+    @prop:if((@dirProp = none),margin,@dirProp);
+    @{prop}: unit(@num,@unit);
+}
+// padding
+.p(@dir;@num;@unit) when (default()) {
+    @dirProp:.dirPadMap[@@dir];
+    @prop:if((@dirProp = none),padding,@dirProp);
+    @{prop}: unit(@num,@unit);
+}
