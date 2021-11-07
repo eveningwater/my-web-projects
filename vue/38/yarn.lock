@@ -794,6 +794,11 @@ fill-range@^7.0.1:
   dependencies:
     to-regex-range "^5.0.1"
 
+font-awesome@^4.7.0:
+  version "4.7.0"
+  resolved "https://registry.nlark.com/font-awesome/download/font-awesome-4.7.0.tgz#8fa8cf0411a1a31afd07b06d2902bb9fc815a133"
+  integrity sha1-j6jPBBGhoxr9B7BtKQK7n8gVoTM=
+
 fsevents@~2.3.2:
   version "2.3.2"
   resolved "https://registry.nlark.com/fsevents/download/fsevents-2.3.2.tgz#8a526f78b8fdf4623b709e0b975c52c24c02fd1a"

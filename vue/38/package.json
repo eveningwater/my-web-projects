@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@vitejs/plugin-vue-jsx": "^1.2.0",
+    "font-awesome": "^4.7.0",
     "sass": "^1.43.4",
     "vue": "^3.2.16"
   },

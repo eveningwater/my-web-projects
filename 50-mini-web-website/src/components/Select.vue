@@ -28,7 +28,7 @@
             }
             const directives = [
                 {
-                    name:"clickoutside",value:["onClickOutside"],modifiers:{}
+                    name:clickoutside.directive,value:["onClickOutside"],modifiers:clickoutside.directiveOption
                 }
             ]
             return () => (
