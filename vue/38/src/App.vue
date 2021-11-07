@@ -1,7 +1,7 @@
 <script setup lang="ts">
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
-import { defineAsyncComponent, onMounted, onUnmounted, watch } from '@vue/runtime-core';
+import { defineAsyncComponent, onMounted, onUnmounted } from '@vue/runtime-core';
 import { reactive } from 'vue';
 const AsyncCounter = defineAsyncComponent(() => import("./components/Counter.vue"));
 const state = reactive({
@@ -30,26 +30,41 @@ const state = reactive({
   ]
 })
 const startCounter = () => {
-    state.counterList.forEach(counter => {
-        const value = counter.value;
-        const increament = value / 100;
-        if(counter.initValue < value){
-            counter.initValue += increament;
-            counter.timer = setTimeout(startCounter,60);
-        }else{
-          counter.initValue = value;
-          clearTimeout(counter.timer);
-        }
-    })
+  //  for(let i = 0,l = state.counterList.length;i < l;i++){
+  //     const counter = state.counterList[i];
+  //     const updateCounter = () => {
+  //           const value = counter.value;
+  //           const increament = value / 100;
+  //           if(counter.initValue < value){
+  //               counter.initValue += increament;
+  //               counter.timer = setTimeout(updateCounter,60);
+  //           }else{
+  //             counter.initValue = value;
+  //             clearTimeout(counter.timer);
+  //           }
+  //     }
+  //     updateCounter();
+  //  }
+  state.counterList.forEach(counter => {
+     const updateCounter = () => {
+            const value = counter.value;
+            const increament = value / 100;
+            if(counter.initValue < value){
+                counter.initValue += increament;
+                counter.timer = setTimeout(updateCounter,60);
+            }else{
+              counter.initValue = value;
+              clearTimeout(counter.timer);
+            }
+      }
+      updateCounter();
+  })
 }
 onMounted(() => {
     startCounter();
-    watch(state.counterList,(val) => {
-       console.log(val)
-    })
 });
 onUnmounted(() => {
-
+  
 })
 </script>
 
