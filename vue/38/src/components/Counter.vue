@@ -1,5 +1,6 @@
 <script lang="tsx">
-    import { defineComponent, PropType, watch } from "@vue/runtime-core";
+    import { defineComponent, PropType } from "@vue/runtime-core";
+    import { toRefs } from "vue";
     export default defineComponent({
         props:{
             iconClass:String as PropType<string>,
@@ -7,21 +8,24 @@
             text:String as PropType<string>,
         },
         setup(props){
-            const { iconClass,value,text } = props;
+            // Object deconstruction will destroy the reactivity of the object, so use the `toRefs` method to forward it
+            // Then we can't need to monitor changes in value,and can't need to re-assign the value.
+            const { iconClass,value,text } = toRefs(props);
             let newIconClass = "fa fa-3x";
-            if(typeof iconClass === "string"){
-                newIconClass += " " + iconClass;
+            if(typeof iconClass.value === "string"){
+                newIconClass += " " + iconClass.value;
             }
-            let newValue = value;
-            // Why do you need to monitor changes in data and re-assign values?
-            watch(() => props.value,(val) => {
-                newValue = val;
-            });
+            // let newValue = value;
+            // Why do you need to monitor changes in data and re-assign value?
+            // watch(() => props.value,(val) => {
+            //     newValue = val;
+            // });
             return () => (
                 <div class="ic-counter mt-40 mb-40 ml-50 mr-50">
-                    <i class={newIconClass}></i>
-                    <div class="ic-counter-value mt-10 mb-10">{newValue}</div>
-                    <div class="ic-counter-text">{text}</div>
+                    <i class={ newIconClass }></i>
+                    {/*<div class="ic-counter-value mt-10 mb-10">{newValue}</div>*/}
+                    <div class="ic-counter-value mt-10 mb-10">{value.value}</div>
+                    <div class="ic-counter-text">{text.value }</div>
                 </div>
             )
         }
