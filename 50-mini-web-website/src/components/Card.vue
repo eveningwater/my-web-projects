@@ -68,6 +68,7 @@
                 overflow: hidden;
                 white-space: nowrap;
                 width: 160px;
+                text-align: extract(@align,@full + @full);
             }
             .@{baseSelector}card-link-container {
                  .flex-center();

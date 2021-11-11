@@ -1,0 +1,1 @@
+export const githubURL = "https://github.com/eveningwater/my-web-projects/tree/master/50-mini-web-website";
