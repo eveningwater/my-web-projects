@@ -13,10 +13,10 @@ export default defineComponent({
     },
     setup(props,{ slots }){
         const { level,content,...rest } = props;
-        const Item = "h" + level;
+        const titleItem = "h" + level;
         const renderChildren = () => slots.default ? slots.default() : content;
         return () => (
-            <Item {...rest}>{renderChildren()}</Item>
+            <titleItem {...rest}>{renderChildren()}</titleItem>
         )
     }
 })

@@ -13,6 +13,7 @@
             const onClickHandler = () => {
                  selectContext.isDown.value = false;
                  selectContext.emit("on-change",{ label,value });
+                 selectContext.emit("update:modelValue",value);
                  selectContext.selectValue.value = label;
             }
             return  () => (

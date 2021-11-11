@@ -10,3 +10,6 @@ export function off(element:ElementType,type:string,handler:EventListenerOrEvent
         element.removeEventListener(type,handler,useCapture);
     }
 }
+export function getImageURL(directory:string="javascript",path:string):string{
+    return new URL(`../assets/${directory}/${path}`,import.meta.url).href;
+}

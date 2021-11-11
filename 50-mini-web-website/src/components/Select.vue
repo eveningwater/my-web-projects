@@ -5,11 +5,13 @@
     import classnames from "../utils/classnames";
     export default defineComponent({
         props:{
-            placeholder:String as PropType<string>
+            placeholder:String as PropType<string>,
+            modelValue:String as PropType<string>
         },
         directives:{
             [clickoutside.directive]:clickoutside.directiveOption
         },
+        emits:["update:modelValue","on-change"],
         setup(props,{ emit,slots}){
             const msg = "The select component should has 'mini-web-option' component as childs!";
             let children:VNodeArrayChildren = [];
@@ -21,7 +23,7 @@
             }
             const { placeholder } = props;
             const isDown = ref(false);
-            const selectValue = ref("");
+            const selectValue = ref(props.modelValue);
             const onClickOutside = () => {
                 isDown.value = false;
             }
@@ -93,6 +95,7 @@
             width: percentage(@full);
             background: @color;
             border-top: unit(@full,px) solid @selectPoperBorderColor;
+            z-index: pow(10,2);
         }
     }
 </style>
