@@ -16,5 +16,8 @@ export default defineConfig({
   base:"./",
   server:{
      port:8081
+  },
+  build:{
+   assetsInlineLimit:0
   }
 })
