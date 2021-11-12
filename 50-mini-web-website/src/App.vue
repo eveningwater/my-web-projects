@@ -11,6 +11,7 @@ const AsyncCard = defineAsyncComponent(() => import("./components/Card.vue"));
 const AsyncLinkIcon = defineAsyncComponent(() => import("./components/LinkIcon"));
 const AsyncTab = defineAsyncComponent(() => import("./components/Lang.vue"));
 const AsyncTitle = defineAsyncComponent(() => import("./components/Title"));
+const AsyncBackTop = defineAsyncComponent(() => import("./components/BackTop.vue"));
 interface DataType {
     name:string;
     href:string;
@@ -117,6 +118,7 @@ createDataList(59,"js",50);
               :cardName="card.name" 
             ></async-card>
         </main>
+        <async-back-top></async-back-top>
     </div>
 </template>
 
