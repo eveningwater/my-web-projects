@@ -47,9 +47,6 @@ import { onMounted, watch } from '@vue/runtime-core';
     @tabActiveBgcolor-1:#f5ae51;
     @tabActiveBgcolor-2:#e46e0d;
     .@{baseSelector}tab-container {
-        position: extract(@position,length(@position));
-        top: unit(pow(10,1) + sqrt(16),px);
-        left: unit(pow(10,1),px);
         .flex-center();
         border-radius: unit(round(4.55),px);
         .@{baseSelector}tab-item {

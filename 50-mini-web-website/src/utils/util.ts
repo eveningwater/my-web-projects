@@ -10,30 +10,17 @@ declare interface NewWindow extends Window {
   webkitRequestAnimationFrame?: any;
   webkitCancelAnimationFrame?: any;
 }
-export function on(
-  element: ElementType,
-  type: string,
-  handler: EventListenerOrEventListenerObject,
-  useCapture: boolean = false
-) {
+export function on(element: ElementType,type: string,handler: EventListenerOrEventListenerObject,useCapture: boolean = false) {
   if (element && type && handler) {
     element.addEventListener(type, handler, useCapture);
   }
 }
-export function off(
-  element: ElementType,
-  type: string,
-  handler: EventListenerOrEventListenerObject,
-  useCapture: boolean = false
-) {
+export function off(element: ElementType,type: string,handler: EventListenerOrEventListenerObject,useCapture: boolean = false) {
   if (element && type && handler) {
     element.removeEventListener(type, handler, useCapture);
   }
 }
-export function getImageURL(
-  directory: string = "javascript",
-  path: string
-): string {
+export function getImageURL(directory: string = "javascript",path: string): string {
   return new URL(`../assets/${directory}/${path}`, import.meta.url).href;
 }
 export const requestAnimationFrame = (handler: FrameRequestCallback) => {
@@ -61,7 +48,7 @@ export const easeInOutCubic = (value: number): number => value < 0.5 ? cubic(val
 export const debounce = (fn: Function, wait: number) => {
     let timeout: any = null;
     return function () {
-      if (timeout) clearTimeout(timeout);
+      if (timeout)clearTimeout(timeout);
       timeout = setTimeout(fn, wait);
     };
 };
