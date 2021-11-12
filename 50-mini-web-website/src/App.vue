@@ -190,6 +190,7 @@ body {
         .@{baseSelector}main {
            width: percentage(@full);
            height: calc(percentage(@full) - unit(pow(2,2),em));
+           box-sizing: border-box;
            .@{baseSelector}main-content {
                display: extract(@display,@full + @full);
                justify-content: extract(@align,@full + @full);

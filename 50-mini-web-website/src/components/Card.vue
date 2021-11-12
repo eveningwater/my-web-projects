@@ -55,7 +55,7 @@
             box-shadow: unit(@full,px) unit(pow(2,2),px) unit(pow(4,2),px) fade(rgba(0,0,0,.4),40%);
         }
         .@{baseSelector}card-item-behind {
-            background-color: fade(rgba(0,0,0,.1),70%);
+            background-color: fade(@blackColor,70%);
             z-index: @full + @full;
             .flex-center();
             transform: translateY(-100%) scale(0);
