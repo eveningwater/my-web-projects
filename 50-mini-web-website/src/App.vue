@@ -76,7 +76,7 @@ const loadDataHandler = (val:string) => {
          break;
       }
       case "vue":{
-         createDataList(24,val,15);
+         createDataList(24,val,16);
          break;
       }
    }
