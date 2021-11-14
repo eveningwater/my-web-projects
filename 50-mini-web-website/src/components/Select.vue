@@ -90,7 +90,7 @@
         .@{baseSelector}select-popper {
             box-sizing: border-box;
             position: absolute;
-            top: unit(pow(6,2),px);
+            top: unit(pow(6,2) + pow(2,2),px);
             left: @none;
             width: percentage(@full);
             background: @color;

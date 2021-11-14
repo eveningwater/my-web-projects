@@ -7,3 +7,4 @@ export const AsyncLinkIcon = defineAsyncComponent(() => import("./components/Lin
 export const AsyncTab = defineAsyncComponent(() => import("./components/Lang.vue"));
 export const AsyncTitle = defineAsyncComponent(() => import("./components/Title"));
 export const AsyncBackTop = defineAsyncComponent(() => import("./components/BackTop.vue"));
+export const AsyncFooter = defineAsyncComponent(() => import("./components/Footer.vue"));

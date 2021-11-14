@@ -1,6 +1,7 @@
 <script lang="tsx">
     import { defineComponent, EmitsOptions, inject, PropType } from "@vue/runtime-core";
-    import { Ref } from "vue";
+    import { computed, Ref } from "vue";
+import classnames from "../utils/classnames";
     export default defineComponent({
         props:{
             label:String as PropType<string>,
@@ -16,8 +17,18 @@
                  selectContext.emit("update:modelValue",value);
                  selectContext.selectValue.value = label;
             }
+            const optionClass = computed(() => ({
+                "mini-web-option":true,
+                "active":selectContext.selectValue.value === value 
+            }));
             return  () => (
-                <div class="mini-web-option" { ...rest } onClick={onClickHandler} data-label={label} data-value={value}>{ renderChildren() }</div>
+                <div 
+                    { ...rest } 
+                    onClick={onClickHandler} 
+                    data-label={label} 
+                    data-value={value}
+                    class={classnames(optionClass.value)}
+                >{ renderChildren() }</div>
             )
         }
     })
@@ -36,7 +47,7 @@
     border-bottom: unit(@full,px) solid @selectOptionBgColor;
     cursor: extract(@cursor,@full);
     transition: all convert(.03s,"ms") cubic-bezier(0.39, 0.575, 0.565, @full);
-    &:hover {
+    &:hover,&.active {
         background: @selectOptionBgColor;
         color:@color;
     }

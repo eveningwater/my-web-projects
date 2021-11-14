@@ -5,7 +5,7 @@ import { onMounted, watch } from '@vue/runtime-core';
 import { computed, ref } from 'vue';
 import { githubURL } from './utils/github';
 import { projectNameList,projectNameENList } from './utils/projectNameList';
-import { AsyncSelect,AsyncOption,AsyncCard,AsyncLinkIcon,AsyncTab,AsyncTitle,AsyncBackTop } from "./app";
+import { AsyncSelect,AsyncOption,AsyncCard,AsyncLinkIcon,AsyncTab,AsyncTitle,AsyncBackTop,AsyncFooter } from "./app";
 interface DataType {
     name:string;
     href:string;
@@ -120,6 +120,7 @@ onMounted(() => {
                   :cardName="card.name" 
                ></async-card>
             </div>
+            <async-footer :lang="lang"></async-footer>
         </main>
         <async-back-top target=".mini-web-main"></async-back-top>
     </div>
@@ -195,9 +196,9 @@ body {
                display: extract(@display,@full + @full);
                justify-content: extract(@align,@full + @full);
                flex-wrap: wrap;
+               .p(n,10,px);
            }
            .m(t,10,px);
-           .p(n,10,px);
            overflow: extract(@overflow,@full + @full);
         }
     }
