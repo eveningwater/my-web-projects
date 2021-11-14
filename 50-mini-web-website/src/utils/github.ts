@@ -15,7 +15,6 @@ export const linkListData:LinkListType = {
         { text:"zhi hu",href:"https://www.zhihu.com/people/eveningwater"},
         { text:"blog-1",href:"https://eveningwater.github.io/"},
         { text:"blog-2",href:"https://www.cnblogs.com/eveningwater/"},
-        { text:"blog-2",href:"https://www.cnblogs.com/eveningwater/"},
         { text:"github",href:BASE_GITHUB_URL },
         { text:"gitee",href:"https://gitee.com/eveningwater/" },
     ],

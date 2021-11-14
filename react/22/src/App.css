@@ -110,3 +110,13 @@
     color: #363739;
     padding: 8px;
 }
+@media screen and (max-width: 765px) {
+    .main > .movie-list > .movie {
+        width: calc(50% - 2.4rem);
+    }
+}
+@media screen and (max-width: 350px) {
+    .main > .movie-list > .movie {
+        width: calc(100% - 2.4rem);
+    }
+}

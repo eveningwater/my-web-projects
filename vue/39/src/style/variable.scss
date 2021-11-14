@@ -81,14 +81,14 @@ $column:column;
     border-bottom-right-radius: 28px;
 }
 .bgColor {
-  background: linear-gradient(135deg,$appBgColor-1 10%,$appBgColor-2 90%);
+    background: linear-gradient(135deg,$appBgColor-1 10%,$appBgColor-2 90%);
 }
 .cupBgColor {
-  background: linear-gradient(135deg,$classCupBgColor-1 10%,$classCupBgColor-2 90%);
+    background: linear-gradient(135deg,$classCupBgColor-1 10%,$classCupBgColor-2 90%);
 }
 .cupBgActiveColor {
     background: linear-gradient(135deg,$classCupBgActiveColor-1 10%,$classCupBgActiveColor-2 90%);
-  }
+}
 .base-transition {
-  transition: all .3s linear;
+    transition: all .3s linear;
 }
