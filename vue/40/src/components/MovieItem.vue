@@ -3,13 +3,11 @@
     export default defineComponent({
         setup(){
             return () => (
-                <div class="ma-input">
-                    <input type="text" class="ma-inner-input" />
-                </div>
+                <li class="ma-movie-item"></li>
             )
         }
     })
 </script>
 <style lang="scss" scoped>
-    
+    @import "../style/variable.scss";
 </style>

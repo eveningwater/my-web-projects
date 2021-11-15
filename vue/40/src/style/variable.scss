@@ -1,12 +1,14 @@
 $baseSelector:ma-;
-$appBgColor-1:#72a6eb;
-$appBgColor-2:#1b87eb;
+$appBgColor-1:#f0a749;
+$appBgColor-2:#b16604;
 $color:#fff;
 $headerBgColor-1:#fcc79c;
 $headerBgColor-2:#e98808;
 
 $font-family: Avenir, Helvetica, Arial, sans-serif;
 $column:column;
+
+// https://www.ruanyifeng.com/blog/2012/06/sass.html
 
 @function setMargin($i,$j,$unit){
     $result:0;
