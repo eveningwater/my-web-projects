@@ -1,19 +1,24 @@
 <script lang="tsx">
     import { defineComponent, PropType } from "@vue/runtime-core";
-    import maInput from "./ma-input.vue";
+    import maInput from "./Input.vue";
     export default defineComponent({
         props:{
-            content:String as PropType<string>
+            content:String as PropType<string>,
+            onBlur:Function
         },
         components:{
             maInput
         },
         setup(props,{ slots }){
             const renderChildren = () => slots.default ? slots.default() : props.content;
+            const { onBlur } = props;
+            const onBlurHandler = (e:FocusEvent) => {
+                onBlur && onBlur(e);
+            }
             return () => (
                 <header class="ma-header">
                     { renderChildren() }
-                    <ma-input placeholder="Search movies" class="ma-search-input"></ma-input>
+                    <ma-input placeholder="Search movies" class="ma-search-input" onBlur={ onBlurHandler }></ma-input>
                 </header>
             )
         }

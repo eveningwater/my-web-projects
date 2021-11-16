@@ -2,13 +2,17 @@
     import { defineComponent, PropType } from "@vue/runtime-core";
     export default defineComponent({
         props:{
-            placeholder:String as PropType<string>
+            placeholder:String as PropType<string>,
+            onBlur:Function
         },
-        setup(props,{ slots,emit }){
+        setup(props,{ slots }){
+            const onBlurHandler = (e:FocusEvent) => {
+                props.onBlur && props.onBlur(e);
+            }
             return () => (
                 <div class="ma-input">
                     { slots.prefix ? slots.prefix() : null }
-                    <input type="text" class="ma-inner-input" placeholder={props.placeholder} onBlur={(e) => emit("on-blur",e)}/>
+                    <input type="text" class="ma-inner-input" placeholder={props.placeholder} onBlur={ onBlurHandler}/>
                     { slots.suffix ? slots.suffix() : null}
                 </div>
             )
