@@ -3,7 +3,7 @@
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
 import { onMounted, watch } from '@vue/runtime-core';
 import { computed, ref } from 'vue';
-import { githubURL } from './utils/github';
+import { githubURL } from './utils/const';
 import { projectNameList,projectNameENList } from './utils/projectNameList';
 import { AsyncSelect,AsyncOption,AsyncCard,AsyncLinkIcon,AsyncTab,AsyncTitle,AsyncBackTop,AsyncFooter } from "./app";
 interface DataType {
