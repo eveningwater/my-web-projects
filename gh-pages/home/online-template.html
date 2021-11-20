@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>跳转提示:我的个人项目</title>
+    <style>
+        .mwp-middle-page {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 85%;
+            max-width: 600px;
+            background: linear-gradient(135deg, #f2f3f4 10%, #fff 90%);
+            box-shadow: 1px 2px 12px rgba(255, 255, 255, 0.3);
+            padding: 30px 40px 0;
+            border: 1px solid #dedfde;
+            box-sizing: border-box;
+            border-radius: 8px;
+        }
+
+        .mwp-middle-page .mwp-middle-footer {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            min-height: 40px;
+            padding: 20px 0;
+        }
+
+        .mwp-middle-page .mwp-middle-footer .mwp-middle-btn {
+            background: transparent;
+            border-radius: 5px;
+            padding: 8px 14px;
+            color: #8d8e8f;
+            transition: all 0.4s ease-in-out;
+            cursor: pointer;
+            border: 1px solid #d2dfdf;
+            letter-spacing: 1px;
+        }
+
+        .mwp-middle-page .mwp-middle-footer .mwp-middle-btn:first-child {
+            margin-right: 15px;
+        }
+
+        .mwp-middle-page .mwp-middle-footer .mwp-middle-btn:focus-visible {
+            outline: none;
+        }
+
+        .mwp-middle-page .mwp-middle-footer .mwp-middle-btn:hover {
+            border-color: #2396ef;
+            color: #2396ef;
+        }
+
+        .mwp-middle-page .mwp-middle-footer .mwp-middle-btn.mwp-middle-btn-primary {
+            background: linear-gradient(135deg, #007fff 10%, #4096ef 90%);
+            color: #fff;
+            border: none;
+        }
+
+        .mwp-middle-page .mwp-middle-footer .mwp-middle-btn:hover {
+            background: linear-gradient(135deg, #517fe7 10%, #2396ef 90%);
+            color: #fff;
+        }
+
+        .mwp-middle-page .mwp-middle-content {
+            font-family: "幼圆";
+            position: relative;
+        }
+
+        .mwp-middle-page .mwp-middle-content .mwp-middle-title {
+            margin: 0;
+            font-size: 18px;
+            line-height: 24px;
+        }
+
+        .mwp-middle-page .mwp-middle-content .mwp-middle-link-container {
+            padding: 16px 0 22px;
+            border-bottom: 1px solid #deddfe;
+            font-size: 14px;
+            color: #8d8e8f;
+        }
+
+        .mwp-middle-page .mwp-middle-content .mwp-middle-link-container .mwp-middle-link-content {
+            word-break: break-all;
+            line-height: 22px;
+            overflow: hidden;
+        }
+
+        .mwp-middle-page .mwp-middle-content .mwp-middle-link-container .mwp-middle-link-content .mwp-middle-link-text {
+            margin: 0;
+        }
+
+        .mwp-middle-page .mwp-middle-logo {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            color: #535455;
+            display: flex;
+            align-items: center;
+        }
+
+        .mwp-middle-page .mwp-middle-logo .mwp-middle-img {
+            -o-object-fit: cover;
+            object-fit: cover;
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div class="mwp-middle-page">
+            <div class="mwp-middle-logo">
+                <img src="https://eveningwater.com/my-web-projects/home/logo.svg" alt="the logo" class="mwp-middle-img">
+                我的个人项目
+            </div>
+            <div class="mwp-middle-content">
+                <p class="mwp-middle-title">即将离开我的个人项目，请注意账号财产安全</p>
+                <div class="mwp-middle-link-container">
+                    <div class="mwp-middle-link-content">
+                        <p class="mwp-middle-link-text"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="mwp-middle-footer">
+                <button type="button" class="mwp-middle-btn mwp-middle-btn-primary">继续访问</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const search = location.search;
+    const $ = selector => document.querySelector(selector);
+    if (search.indexOf("target=") > -1) {
+        const url = decodeURIComponent(search.slice(search.indexOf("=") + 1));
+        $(".mwp-middle-link-text").textContent = url;
+        $(".mwp-middle-btn").addEventListener("click", () => {
+            location.href = url;
+        })
+    }
+</script>
+
+</html>
