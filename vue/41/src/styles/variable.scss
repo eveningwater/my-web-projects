@@ -1,14 +1,11 @@
 $baseSelector:bs-;
-$appBgColor-1:#f0a749;
-$appBgColor-2:#b16604;
-$color:#fff;
-$fontColor:#535455;
-$fontContentColor:#a7a7a7;
-$headerBgColor-1:#fcc79c;
-$headerBgColor-2:#e98808;
-
+$black:#000000;
+$white:#ffffff;
+$containerBoxShadowColor-1:#8938e6;
+$containerBoxShadowColor-2:#6c0bdb;
 $font-family: Avenir, Helvetica, Arial, sans-serif;
 $column:column;
+$display:("block":block,"flex":flex,"none":none);
 
 @function setMargin($i,$j,$unit){
     $result:0;
@@ -79,27 +76,27 @@ $column:column;
     width: percentage(1);
     display: flex;
 }
+@mixin reset {
+    @include p(null,0,null);
+    @include m(null,0,null);
+}
 .flex-column {
     flex-direction: $column;
 }
 .overflow-hidden {
     overflow: hidden;
 }
-.text-overflow {
-    text-overflow: ellipsis;
-    @extend .overflow-hidden;
-    white-space: nowrap;
+.position-perfect {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
 }
-.base-cup-style {
-    border:4px solid #663e02;
-    border-bottom-left-radius: 28px;
-    border-bottom-right-radius: 28px;
-}
-.bgColor {
-    background: linear-gradient(135deg,$appBgColor-1 10%,$appBgColor-2 90%);
-}
-.headerBgColor {
-    background: linear-gradient(135deg,$headerBgColor-1 10%,$headerBgColor-2 90%);
+.base-bg {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: percentage(.5);
 }
 .base-transition {
     transition: all .3s linear;

@@ -1,5 +1,5 @@
 <script lang="tsx">
-    import { defineComponent, EmitsOptions, inject, PropType } from "@vue/runtime-core";
+    import { defineComponent, inject, PropType } from "@vue/runtime-core";
     import { computed, Ref } from "vue";
 import classnames from "../utils/classnames";
     export default defineComponent({

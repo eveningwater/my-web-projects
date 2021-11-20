@@ -14,8 +14,8 @@
 <script lang="ts" setup>
     import { computed, readonly } from '@vue/reactivity';
     import { PropType, ref } from 'vue';
-    import { linkListData  } from '../utils/github';
-    import type { LinkListType,LinkItemType } from '../utils/github';
+    import { linkListData  } from '../utils/const';
+    import type { LinkListType,LinkItemType } from '../utils/const';
     const props = defineProps({
         lang:{
             type:String as PropType<string>,

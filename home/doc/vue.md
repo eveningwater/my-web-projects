@@ -42,3 +42,4 @@
 |  38   | [递增计数器](https://github.com/eveningwater/my-web-projects/tree/master/vue/38/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/38/) |
 |  39   | [喝水](https://github.com/eveningwater/my-web-projects/tree/master/vue/39/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/39/) |
 |  40   | [电影小应用](https://github.com/eveningwater/my-web-projects/tree/master/vue/40/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/40/) |
+|  41   | [背景轮播](https://github.com/eveningwater/my-web-projects/tree/master/vue/41/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/41/) |

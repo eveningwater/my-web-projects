@@ -1,5 +1,5 @@
 <script lang="tsx">
-    import { defineComponent, getCurrentInstance, PropType, VNodeArrayChildren,VNode, provide, watch } from "@vue/runtime-core";
+    import { defineComponent, PropType, VNodeArrayChildren,VNode, provide, watch } from "@vue/runtime-core";
     import { ref } from "vue";
     import clickoutside from "../directive/clickoutside";
     import classnames from "../utils/classnames";
