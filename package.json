@@ -31,8 +31,5 @@
     "url": "https://github.com/eveningwater/my-web-projects/issues"
   },
   "homepage": "https://github.com/eveningwater/my-web-projects#readme",
-  "dependencies": {
-    "@vitejs/plugin-vue-jsx": "^1.2.0",
-    "less": "^4.1.2"
-  }
+  "dependencies": {}
 }

@@ -5,36 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>my-web-projects</title>
     <style>
-        * {
+        body,ul,li,a,div {
             margin: 0;
             padding: 0;
         }
+        body,html {
+            overflow: hidden;
+        }
         .app {
-            display: flex;
+            width: 100vw;
             height: 100vh;
-            align-items: center;
+            background-image: linear-gradient(to right top, #8e44ad 0%, #3498db 100%);
+            padding: 10px;
+            overflow: hidden;
+            box-sizing: border-box;
+            display: flex;
             justify-content: center;
-            font: 35px "华文琥珀","楷体";
-            color: #535353;
-            padding: 20px;
-            flex-direction: column;
+            align-items: center;
         }
-        a{
+        .mwp-nav {
+            max-width: 960px;
+            min-width: 60%;
+        }
+        .mwp-ul {
+            text-align: center;
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 25%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0) 100%);
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+            list-style: none;
+        }
+        .mwp-link {
+            padding: 18px;
+            font-family: "Open Sans";
+            text-transform:uppercase;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 18px;
             text-decoration: none;
-            color: #535353;
             display: block;
-            margin-top: 15px;
         }
-        a:hover,a:active {
-            color: #2396ef;
-            text-decoration: underline;
+        .mwp-link:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+            background: rgba(255, 255, 255, 0.1);
+            color: rgba(0, 35, 122, 0.7);
         }
     </style>
 </head>
 <body>
     <div class="app">
-        <a href="./home/index.html" target="_blank" rel="noopener noreferrer">the home website</a>
-        <a href="./50-website/index.html" target="_blank" rel="noopener noreferrer">50-mini-web-projects</a>
+        <div class="mwp-nav">
+            <ul class="mwp-ul"></ul>
+        </div>
     </div>
 </body>
+<script>
+    const linkList = [
+        {
+            text:"项目官网",
+            href:"./home/index.html"
+        },
+        {
+            text:"50个项目官网",
+            href:"./50-website/index.html"
+        },
+        {
+            text:"个人介绍官网",
+            href:"./website/index.html"
+        }
+    ];
+    const $ = selector => document.querySelector(selector);
+    const container = $(".mwp-ul");
+    let containerHTML = "";
+    linkList.forEach(link => {
+        containerHTML += `<li class="mwp-li"><a href="${link.href}" target="_blank" rel="noopener noreferrer" class="mwp-link">${link.text}</a></li>`
+    });
+    container.innerHTML = containerHTML;
+</script>
 </html>
