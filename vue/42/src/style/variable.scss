@@ -1,0 +1,103 @@
+$baseSelector:bs-;
+$black:#000000;
+$white:#ffffff;
+$containerBoxShadowColor-1:#8938e6;
+$containerBoxShadowColor-2:#6c0bdb;
+$font-family: Avenir, Helvetica, Arial, sans-serif;
+$column:column;
+$display:("block":block,"flex":flex,"none":none);
+
+@function setMargin($i,$j,$unit){
+    $result:0;
+    @for $_ from $i through $j {
+      @if $unit {
+        $result:$_ + $unit;
+      } @else {
+        $result:$_;
+      }
+    }
+    @return $result;
+}
+@function setPadding($i,$j,$unit){
+    $result:0;
+    @for $_ from $i through $j {
+      @if $unit {
+        $result:$_ + $unit;
+      } @else {
+        $result:$_;
+      }
+    }
+    @return $result;
+}
+
+@for $i from 0 through 100 {
+    .h-#{$i}p {
+        height:percentage($i / 100);
+    }
+}
+@for $i from 0 through 100 {
+    .w-#{$i}p {
+        width:percentage($i / 100);
+    }
+}
+@mixin m($dir,$number,$unit) {
+    $prop:margin;
+    @if($dir){
+        $prop:$prop + $dir;
+    }
+    @if $unit {
+        #{$prop}:setMargin(0,$number,$unit);
+    }@else {
+        #{$prop}:setMargin(0,$number,null);
+    }
+}
+@mixin p($dir,$number,$unit) {
+    $prop:padding;
+    @if($dir){
+        $prop:$prop + $dir;
+    }
+    @if $unit {
+        #{$prop}:setPadding(0,$number,$unit);
+    }@else {
+        #{$prop}:setPadding(0,$number,null);
+    }
+}
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flex-space {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin flex-100p {
+    width: percentage(1);
+    display: flex;
+}
+@mixin reset {
+    @include p(null,0,null);
+    @include m(null,0,null);
+}
+.flex-column {
+    flex-direction: $column;
+}
+.overflow-hidden {
+    overflow: hidden;
+}
+.position-perfect {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+.base-bg {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: percentage(.5);
+}
+.base-transition {
+    transition: all .3s linear;
+}

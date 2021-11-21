@@ -114,7 +114,7 @@ export default class App extends Component {
                 <div className="center-point"></div>
             </div>
             <div className="time">
-              { hour }:{ minute }&nbsp;{ langText[currentLang]["time-"+(hour >= 12 ? "after" : "before")+"-text"] }
+              { hour }:{ minute >= 10 ? minute : '0' + minute }&nbsp;{ langText[currentLang]["time-"+(hour >= 12 ? "after" : "before")+"-text"] }
             </div>
             <div className="date">
                { langText[currentLang].days[day] },{ langText[currentLang].months[month]}
