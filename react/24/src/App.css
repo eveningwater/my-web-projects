@@ -82,7 +82,7 @@
 }
 .clock .needle.second {
     background: linear-gradient(135deg,#e28d87 10%,#da0f08 90%);
-    height: 75px;
+    height: 95px;
 }
 .clock .center-point,.clock .center-point::after {
     position: absolute;
