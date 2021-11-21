@@ -1,4 +1,4 @@
-$baseSelector:bs-;
+$baseSelector:tc-;
 $black:#000000;
 $white:#ffffff;
 $containerBoxShadowColor-1:#8938e6;
@@ -28,17 +28,6 @@ $display:("block":block,"flex":flex,"none":none);
       }
     }
     @return $result;
-}
-
-@for $i from 0 through 100 {
-    .h-#{$i}p {
-        height:percentage($i / 100);
-    }
-}
-@for $i from 0 through 100 {
-    .w-#{$i}p {
-        width:percentage($i / 100);
-    }
 }
 @mixin m($dir,$number,$unit) {
     $prop:margin;

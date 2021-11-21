@@ -8,7 +8,7 @@
 </template>
 
 <style lang="scss">
-@use "./style/variable.scss";
+@import "./style/variable.scss";
 body {
   .app {
     font-family:$font-family;
