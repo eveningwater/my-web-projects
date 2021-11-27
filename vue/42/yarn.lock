@@ -670,9 +670,9 @@ esbuild-android-arm64@0.13.15:
   integrity sha512-m602nft/XXeO8YQPUDVoHfjyRVPdPgjyyXOxZ44MK/agewFFkPa8tUo6lAzSWh5Ui5PB4KR9UIFTSBKh/RrCmg==
 
 esbuild-darwin-64@0.13.15:
-  version "0.13.14"
-  resolved "https://registry.npmmirror.com/esbuild-darwin-64/download/esbuild-darwin-64-0.13.14.tgz#8e4e237ad847cc54a1d3a5caee26a746b9f0b81f"
-  integrity sha512-YmOhRns6QBNSjpVdTahi/yZ8dscx9ai7a6OY6z5ACgOuQuaQ2Qk2qgJ0/siZ6LgD0gJFMV8UINFV5oky5TFNQQ==
+  version "0.13.15"
+  resolved "https://registry.npmmirror.com/esbuild-darwin-64/download/esbuild-darwin-64-0.13.15.tgz#8e9169c16baf444eacec60d09b24d11b255a8e72"
+  integrity sha512-ihOQRGs2yyp7t5bArCwnvn2Atr6X4axqPpEdCFPVp7iUj4cVSdisgvEKdNR7yH3JDjW6aQDw40iQFoTqejqxvQ==
 
 esbuild-darwin-arm64@0.13.15:
   version "0.13.15"
@@ -680,9 +680,9 @@ esbuild-darwin-arm64@0.13.15:
   integrity sha512-i1FZssTVxUqNlJ6cBTj5YQj4imWy3m49RZRnHhLpefFIh0To05ow9DTrXROTE1urGTQCloFUXTX8QfGJy1P8dQ==
 
 esbuild-freebsd-64@0.13.15:
-  version "0.13.14"
-  resolved "https://registry.npmmirror.com/esbuild-freebsd-64/download/esbuild-freebsd-64-0.13.14.tgz#175ecb2fa8141428cf70ea2d5f4c27534bad53e0"
-  integrity sha512-BKosI3jtvTfnmsCW37B1TyxMUjkRWKqopR0CE9AF2ratdpkxdR24Vpe3gLKNyWiZ7BE96/SO5/YfhbPUzY8wKw==
+  version "0.13.15"
+  resolved "https://registry.npmmirror.com/esbuild-freebsd-64/download/esbuild-freebsd-64-0.13.15.tgz#0b8b7eca1690c8ec94c75680c38c07269c1f4a85"
+  integrity sha512-G3dLBXUI6lC6Z09/x+WtXBXbOYQZ0E8TDBqvn7aMaOCzryJs8LyVXKY4CPnHFXZAbSwkCbqiPuSQ1+HhrNk7EA==
 
 esbuild-freebsd-arm64@0.13.15:
   version "0.13.15"
@@ -700,9 +700,9 @@ esbuild-linux-64@0.13.15:
   integrity sha512-eCKzkNSLywNeQTRBxJRQ0jxRCl2YWdMB3+PkWFo2BBQYC5mISLIVIjThNtn6HUNqua1pnvgP5xX0nHbZbPj5oA==
 
 esbuild-linux-arm64@0.13.15:
-  version "0.13.14"
-  resolved "https://registry.npmmirror.com/esbuild-linux-arm64/download/esbuild-linux-arm64-0.13.14.tgz#a55634d70679ba509adeafd68eebb9fd1ec5af6c"
-  integrity sha512-Lvo391ln9PzC334e+jJ2S0Rt0cxP47eoH5gFyv/E8HhOnEJTvm7A+RRnMjjHnejELacTTfYgFGQYPjLsi/jObQ==
+  version "0.13.15"
+  resolved "https://registry.npmmirror.com/esbuild-linux-arm64/download/esbuild-linux-arm64-0.13.15.tgz?cache=0&sync_timestamp=1637498766925&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fesbuild-linux-arm64%2Fdownload%2Fesbuild-linux-arm64-0.13.15.tgz#3891aa3704ec579a1b92d2a586122e5b6a2bfba1"
+  integrity sha512-bYpuUlN6qYU9slzr/ltyLTR9YTBS7qUDymO8SV7kjeNext61OdmqFAzuVZom+OLW1HPHseBfJ/JfdSlx8oTUoA==
 
 esbuild-linux-arm@0.13.15:
   version "0.13.15"
@@ -710,9 +710,9 @@ esbuild-linux-arm@0.13.15:
   integrity sha512-wUHttDi/ol0tD8ZgUMDH8Ef7IbDX+/UsWJOXaAyTdkT7Yy9ZBqPg8bgB/Dn3CZ9SBpNieozrPRHm0BGww7W/jA==
 
 esbuild-linux-mips64le@0.13.15:
-  version "0.13.14"
-  resolved "https://registry.npmmirror.com/esbuild-linux-mips64le/download/esbuild-linux-mips64le-0.13.14.tgz#6a55362a8fd1e593dea2ecc41877beed8b8184b9"
-  integrity sha512-MZhgxbmrWbpY3TOE029O6l5tokG9+Yoj2hW7vdit/d/VnmneqeGrSHADuDL6qXM8L5jaCiaivb4VhsyVCpdAbQ==
+  version "0.13.15"
+  resolved "https://registry.npmmirror.com/esbuild-linux-mips64le/download/esbuild-linux-mips64le-0.13.15.tgz#36b07cc47c3d21e48db3bb1f4d9ef8f46aead4f7"
+  integrity sha512-KlVjIG828uFPyJkO/8gKwy9RbXhCEUeFsCGOJBepUlpa7G8/SeZgncUEz/tOOUJTcWMTmFMtdd3GElGyAtbSWg==
 
 esbuild-linux-ppc64le@0.13.15:
   version "0.13.15"
@@ -730,9 +730,9 @@ esbuild-openbsd-64@0.13.15:
   integrity sha512-wTfvtwYJYAFL1fSs8yHIdf5GEE4NkbtbXtjLWjM3Cw8mmQKqsg8kTiqJ9NJQe5NX/5Qlo7Xd9r1yKMMkHllp5g==
 
 esbuild-sunos-64@0.13.15:
-  version "0.13.14"
-  resolved "https://registry.npmmirror.com/esbuild-sunos-64/download/esbuild-sunos-64-0.13.14.tgz#85addf5fef6b5db154a955d4f2e88953359d75ce"
-  integrity sha512-mjMrZB76M6FmoiTvj/RGWilrioR7gVwtFBRVugr9qLarXMIU1W/pQx+ieEOtflrW61xo8w1fcxyHsVVGRvoQ0w==
+  version "0.13.15"
+  resolved "https://registry.npmmirror.com/esbuild-sunos-64/download/esbuild-sunos-64-0.13.15.tgz?cache=0&sync_timestamp=1637498783394&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fesbuild-sunos-64%2Fdownload%2Fesbuild-sunos-64-0.13.15.tgz#d0b6454a88375ee8d3964daeff55c85c91c7cef4"
+  integrity sha512-lbivT9Bx3t1iWWrSnGyBP9ODriEvWDRiweAs69vI+miJoeKwHWOComSRukttbuzjZ8r1q0mQJ8Z7yUsDJ3hKdw==
 
 esbuild-windows-32@0.13.15:
   version "0.13.15"

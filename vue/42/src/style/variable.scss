@@ -1,11 +1,12 @@
 $baseSelector:tc-;
 $black:#000000;
 $white:#ffffff;
-$containerBoxShadowColor-1:#8938e6;
-$containerBoxShadowColor-2:#6c0bdb;
+$lightColor:#f2f3f4;
+$darkColor:#232425;
 $font-family: Avenir, Helvetica, Arial, sans-serif;
 $column:column;
-$display:("block":block,"flex":flex,"none":none);
+$display:("block":block,"flex":flex,"none":none,"inline-block":inline-block);
+$position:("r":relative,"a":absolute,"f":fixed);
 
 @function setMargin($i,$j,$unit){
     $result:0;
@@ -75,18 +76,14 @@ $display:("block":block,"flex":flex,"none":none);
 .overflow-hidden {
     overflow: hidden;
 }
-.position-perfect {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-}
-.base-bg {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: percentage(.5);
-}
 .base-transition {
-    transition: all .3s linear;
+    transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.light-style {
+    background-color: $lightColor;
+    color:$darkColor;
+}
+.dark-style {
+    background-color: $darkColor;
+    color:$lightColor;
 }
