@@ -1,0 +1,93 @@
+.exam-main{
+    width: 960px;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: block;
+    margin:20px auto 120px auto;
+    padding: 20px;
+    background-color: #ffffff;
+}
+.exam-header > div{
+    text-align: left;
+}
+.exam-header > div:first-child p{
+    padding: 4px 29px;
+}
+.exam-main .exam-h1{
+    text-align: center;
+    color: #23272c;
+}
+.exam-comment{
+    color: #83878c;
+    font-size: 14px;
+    padding:18px 29px;
+}
+.exam-comment p{
+    line-height: 2em;
+}
+.exam-question {
+    padding-bottom: 40px;
+}
+.exam-question .exam-h1{
+    text-align: left;
+    padding: 4px 29px;
+}
+.exam-question section{
+    counter-increment: titleNumber;
+}
+.exam-question .exam-h1::before{
+    content:counter(titleNumber,simp-chinese-informal) "、";
+}
+.exam-question .exam-h2{
+    font-weight: 400;
+    font-size: 18px;
+    padding: 4px 29px;
+    text-align: left;
+}
+.exam-question div.exam-question-topic{
+    counter-increment: topicNumber;
+
+}
+.exam-question .exam-question-topic .exam-h2::before{
+    content: counters(topicNumber,'.') ".";
+}
+.exam-question .exam-question-topic .exam-question-answer,
+.exam-question .exam-question-requirement{
+    padding: 4px 29px;
+}
+.exam-question .exam-question-topic .exam-question-answer li{
+    list-style: upper-alpha inside;
+}
+.exam-question .exam-question-topic .exam-question-answer li:not(:first-child),
+.exam-question .exam-question-requirement li:not(:first-child){
+    margin-top: 8px;
+}
+.exam-question .exam-question-requirement li{
+    list-style: decimal inside;
+}
+.exam-question div.exam-question-topic .exam-textarea-wrapper,
+.exam-question div.exam-question-topic .exam-code-container{
+    padding: 4px 29px;
+}
+/* 图片 */
+.exam-question div.exam-question-topic img{
+    width: auto;
+    height: auto;
+    margin: 10px auto;
+    display: block;
+}
+.exam-question .exam-question-topic .exam-label-property{
+    text-align: right;
+}
+/* 滚动条样式 */
+.exam-main::-webkit-scrollbar{
+    width: 10px;
+    height: 10px;
+    background-color: #eeebe8;
+}
+.exam-main::-webkit-scrollbar-thumb{
+    width: 10px;
+    height: 10px;
+    background-color: #e7bfb3;
+}

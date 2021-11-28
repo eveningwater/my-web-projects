@@ -1,0 +1,236 @@
+[
+    {
+      "id": 1,
+      "type": "单选题（共10题，每题2分）",
+      "content": [
+        {
+          "question": "前端页面的三层结构分别是（  ）",
+          "selectAnswer": [
+            "数据访问层、业务逻辑层、表示层",
+            "结构层、表现层、行为层",
+            "header层、body层、footer层 ",
+            "视图层、通讯层、数据逻辑层"
+          ]
+        },
+        {
+          "question": "在下方的名称中哪个不是HTML基本标签的组成部分（  ）",
+          "selectAnswer": [
+            "文档声明",
+            "标签名",
+            "属性名 ",
+            "属性值"
+          ]
+        },
+        {
+          "question": "按照语义划分，哪两个标签名是用于分别设置导航和段落的（  ）",
+          "selectAnswer": [
+            "article和section",
+            "header和h1",
+            "nav和p ",
+            "div和ul"
+          ]
+        },
+        {
+          "question": "在以下文件目录结构中（橙色方框表示为文件夹），若“user-info.html”需要使用名为“photo.jpg”的图片，那<img>标签的正确编写方式是（  ）",
+          "src": "/src/assets/content/img-url.png",
+          "selectAnswer": [
+            "<img href='../img/content/photo.jpg' alt='用户头像'>",
+            "<img src='img/content/photo.jpg' alt='用户头像'>",
+            "<img src='../img/content/photo.jpg' alt='用户头像'>",
+            "<img url='../../img/content/photo.jpg' alt='用户头像'>"
+          ]
+        },
+        {
+          "question": "以下哪个属性是用于设置无序和有序列表项目符号的（  ）",
+          "selectAnswer": [
+            "type",
+            "charset",
+            "icon",
+            "src"
+          ]
+        },
+        {
+          "question": "对于表体中单元格跨两行的正确写法是（  ）",
+          "selectAnswer": [
+            "<td rowspan='2'>...</td>",
+            "<td colspan='2'>...</td>",
+            "<tr rowspan='2'>...</tr>",
+            "<th colspan='2'>...</th>"
+          ]
+        },
+        {
+          "question": "五大主流浏览器的指的是（  ）",
+          "selectAnswer": [
+            "谷歌浏览器、火狐浏览器、Opera浏览器、Safari浏览器、Edge浏览器",
+            "IE浏览器、QQ浏览器、360浏览器、搜狗浏览器、猎豹浏览器",
+            "网景浏览器、遨游浏览器、世界之窗浏览器、UC浏览器、火星浏览器",
+            "IE浏览器、苹果浏览器、微软浏览器、网景浏览器、腾讯浏览器"
+          ]
+        },
+        {
+          "question": "作为一个完整的表单，下面哪个标签是必不可少的（  ）",
+          "selectAnswer": [
+            "<input name='userName' type='text'>",
+            "<input name='userPwd' type='password'>",
+            "<button name='btnReset' type='reset'></button>",
+            "<form name='userInfo'>...</form>"
+          ]
+        },
+        {
+          "question": "若制作一个用于手机号的输入框，为type属性设置哪个值是最佳的（  ）",
+          "selectAnswer": [
+            "text",
+            "number",
+            "tel",
+            "email"
+          ]
+        },
+        {
+          "question": "下面哪一组属性是所有HTML标签都能够使用且有效的属性（  ）",
+          "selectAnswer": [
+            "width、height、title、alt",
+            "id、class、title、style",
+            "src、href、url、target",
+            "lang、tabindex、hidden、type"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "多选题（共5题，每题至少有3个选项为正确的，选对一个给1分，两个给2分，全对3分，多选错选不给分）",
+      "content": [
+        {
+          "question": "在不考虑CSS样式处理的情况下，以下哪组属性全部是超链接的有效属性（  ）",
+          "selectAnswer": [
+            "href、target、rel、title",
+            "width、height、href、url",
+            "href、src、alt、url",
+            "href、target、download、id",
+            "id、class、style、title",
+            "name、link、rowspan、colspan"
+          ]
+        },
+        {
+          "question": "下面哪些标签会让文本内容产生斜体的效果（  ）",
+          "selectAnswer": [
+            "<a>...</a>",
+            "<b>...</b>",
+            "<i>...</i>",
+            "<em>...</em>",
+            "<address>...</address>",
+            "<pre>...</pre>"
+          ]
+        },
+        {
+          "question": "下面哪些标签属于表单的基本元素（  ）",
+          "selectAnswer": [
+            "<input>",
+            "<select><option>...</option></select>",
+            "<textarea>...</textarea>",
+            "<button>...</button>",
+            "<range>...</range>",
+            "<time>...</time>"
+          ]
+        },
+        {
+          "question": "在下方文件格式中，哪些是音频或者视频标签支持的格式（  ）",
+          "selectAnswer": [
+            "webp",
+            "ogg",
+            "svg",
+            "mp3",
+            "mp4",
+            "webm"
+          ]
+        },
+        {
+          "question": "下方哪些标签是HTML5版本才新增的（  ）",
+          "selectAnswer": [
+            "header",
+            "main",
+            "footer",
+            "aside",
+            "nav",
+            "picture"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "type": "填空题（1分/个，共20分。根据需求，标签名只需要给出名称即可无需尖括号，属性只需名称不需要写值）",
+      "content": [
+        {
+          "question": "标签名称部分：",
+          "answer": [
+            "基本文本：",
+            "段落：",
+            "三号标题：",
+            "斜体：",
+            "强调：",
+            "网页标签标题：",
+            "文章：",
+            "章节：",
+            "无序列表：",
+            "表格：",
+            "音频：",
+            "视频："
+          ]
+        },
+        {
+          "question": "属性名称部分：",
+          "answer": [
+            "图片URL：",
+            "链接URL：",
+            "标题信息：",
+            "设置类型：",
+            "行内样式：",
+            "类名：",
+            "输入框的值：",
+            "输入提示："
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "type": "简答题",
+      "content": [
+        "请列出不同显示类型（display）的正确嵌套顺序，并说明p标签能否相互嵌套（共3分）。",
+        "请阐述什么时候该用无序列表，什么时候该用有序列表，什么时候又该使用定义列表（共3分）。",
+        "在新的规范中，总是建议给跳转到外部网站的超链接（即带有属性target='_blank'）加上一个rel属性，并将值设置为“noopener”和“noreferrer”，请简述它们各有什么用，这样做的好处是什么（共3分）。",
+        "常用的图片格式有哪些（至少列出3个）？当我们需要在网页内容中加入一些图片时，应该首先对图片做什么处理？这样做的好处是什么？当网页内需要使用大幅图片时应优先选择哪种格式图片，为什么？（共5分）",
+        "谈谈HTML5语义化标签和一些新增的HTML5表单属性除了完善了Web端的功能外，还有哪些好处（每条描述正确2分，至少3条描述即可满分，共6分）。"
+      ]
+    },
+    {
+      "id": 5,
+      "type": "操作题（第一题6分，第二题6分，第三题8分，共20分）",
+      "content": [
+        "请写出HTML文档基本标签结构，并在标签右方说明各标签作用。（meta标签只需要一个设置编码格式的即可，结构编写完整3分，描述完整3分）",
+        {
+          "id":1,
+          "question": "在不考虑后续用JavaScript做处理的情况，下方的代码存在6处错误（相同的错误算作1处），请指出错误并进行改正。(共6分)"
+        },
+        {
+            "id":2,
+            "question":"根据下面的需求编写出对应的HTML代码，需求如下（满足每条需求给1分）：",
+            "requirement":[
+                "标签名和属性名/值编写正确，标签对需拥有正确的闭合标签",
+                "代码结构和次序正确，没有遗漏必要的标签",
+                "编写一个2行6列的表格，表格包含表头和表体两个部分",
+                "表格需要有一个名为“roles-info”的类名和4像素的边框",
+                "表格内每个单元格应该和其内容保持6像素的内间距",
+                "表头包含以下内容的标题单元格：“编号”、“姓名”、“系列”和“技能”",
+                "表头“技能”需要跨3列显示",
+                "表体的第一行包含的内容单元格为：“Thunder-001”、“暴雷兽”、“雷系”、“惊雷之尾”、“高压吨拳”和“雷云天牢闪”"
+            ],
+            "comment":[
+              "※ 无需编写HTML的文档结构，假设是在已有的<body>标签内编写",
+              "※ 考虑纸面编写空间有限，如单元格这类标签可以写为一行"
+            ]
+        }
+      ]
+    }
+  ]
