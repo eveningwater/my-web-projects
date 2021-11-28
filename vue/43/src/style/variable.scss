@@ -1,0 +1,80 @@
+@use "sass:math";
+$white:#fff;
+$appBgColor-1:#5886eb;
+$appBgColor-2:#1372df;
+$btnBgColor-1:#f16b6b;
+$btnBgColor-2:#e41e1e;
+$circleBgColor-1:#eb1c1c;
+$circleBgColor-2:#8f0707;
+// app 
+$app-1:percentage(0.1);
+$app-2:percentage(0.9);
+$app-deg:math.atan2(1, -1);
+$circleWH:math.pow(10,2) + px;
+$baseSelector:bre-;
+$font-family:Avenir, Helvetica, Arial, sans-serif;
+$column:column;
+$display:("ib":inline-block);
+$position:("r":relative,"a":absolute);
+@function setMargin($i,$j,$unit){
+    $result:0;
+    @for $_ from $i through $j {
+      @if $unit {
+        $result:$_ + $unit;
+      } @else {
+        $result:$_;
+      }
+    }
+    @return $result;
+}
+@function setPadding($i,$j,$unit){
+    $result:0;
+    @for $_ from $i through $j {
+      @if $unit {
+        $result:$_ + $unit;
+      } @else {
+        $result:$_;
+      }
+    }
+    @return $result;
+}
+@mixin m($dir,$number,$unit) {
+    $prop:margin;
+    @if($dir){
+        $prop:$prop + '-' + $dir;
+    }
+    @if $unit {
+        #{$prop}:setMargin(0,$number,$unit);
+    }@else {
+        #{$prop}:setMargin(0,$number,null);
+    }
+}
+@mixin p($dir,$number,$unit) {
+    $prop:padding;
+    @if($dir){
+        $prop:$prop + '-' + $dir;
+    }
+    @if $unit {
+        #{$prop}:setPadding(0,$number,$unit);
+    }@else {
+        #{$prop}:setPadding(0,$number,null);
+    }
+}
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin reset {
+    @include p(null,0,null);
+    @include m(null,0,null);
+}
+.flex-column {
+    flex-direction: $column;
+}
+.overflow-hidden {
+    overflow: hidden;
+}
+.base-transition {
+    transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
