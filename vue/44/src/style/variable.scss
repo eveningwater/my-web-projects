@@ -1,0 +1,117 @@
+@use "sass:math";
+@use "sass:map";
+@use "sass:list";
+
+$baseSelector:da-;
+
+$white:#ffffff;
+$black:#000000;
+$boardBorderColor:#2396ef;
+
+$font-family:Avenir, Helvetica, Arial, sans-serif;
+
+$percent-1:percentage(.1);
+$percent-9:percentage(math.pow(0.3,2));
+$containerWidth:math.pow(2,3) * math.pow(10,2) + px;
+
+
+$display:block,flex,inline-block,inline,inline-flex,none;
+$align:center,left,right;
+$position:relative,absolute,fixed;
+
+
+// set the margin
+@function setMargin($start:0,$end:0,$unit:px){
+    $result:0;
+    @for $k from $start to $end {
+        @if $unit {
+            $result:$k + $unit;
+        }@else {
+            $result:$k;
+        }
+    }
+    @return $result;
+}
+// set the padding
+@function setPadding($start:0,$end:0,$unit:px){
+    $result:0;
+    @for $k from $start to $end {
+        @if $unit {
+            $result:$k + $unit;
+        }@else {
+            $result:$k;
+        }
+    }
+    @return $result;
+}
+$direction:("t":-top,"b":-bottom,"l":-left,"r":-right);
+@mixin m($prop,$number:0,$unit:null) {
+    $property:margin;
+    @if $prop {
+        $property:$property + map-get($direction, $prop);
+    }
+    @if $unit {
+        #{$property}:$number + $unit;
+    }@else {
+        #{$property}:$number;
+    }
+}
+@mixin p($prop,$number:0,$unit:null) {
+    $property:padding;
+    @if $prop {
+        $property:$property + map.get($direction, $prop);
+    }
+    @if $unit {
+        #{$property}:$number + $unit;
+    }@else {
+        #{$property}:$number;
+    }
+}
+.reset {
+    @include m(null);
+    @include p(null);
+}
+.m-auto {
+    margin: 0 auto;
+}
+.el-block {
+    display: list.nth($display,1);
+}
+.el-flex {
+    display: list.nth($display,2);
+}
+.el-inline-block {
+    display: list.nth($display,3);
+}
+.p-r {
+    position:list.nth($position,1);
+}
+.flex-center {
+    display: list.nth($display,2);
+    align-items:list.nth($align,1);
+    justify-content: list.nth($align,1);
+}
+.tool-bg {
+    background: linear-gradient(90deg,#e73434,#e6ad45,#e6d543,#32bb54,#47acd4,#5b34e7,#e734c0,#e73434);
+}
+.base-transition {
+    transition: all .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.common-form-style {
+    $borderColor:#dfe0e2;
+    border: {
+        width:1px;
+        style:solid;
+        color:$borderColor;
+        radius:math.round(14.5) + px;
+    }
+    cursor: pointer;
+    @extend .el-inline-block;
+    @include p("t",6,px);
+    @include p("b",6,px);
+    @include p("l",16,px);
+    @include p("r",16,px);
+    &:focus-visible {
+        outline: list.nth($display,list.length($display));
+    }
+}
