@@ -52,3 +52,48 @@ export const debounce = (fn: Function, wait: number) => {
       timeout = setTimeout(fn, wait);
     };
 };
+export function isTextOverflow(element:HTMLElement) {
+  // use range width instead of scrollWidth to determine whether the text is overflowing
+  // to address a potential FireFox bug: https://bugzilla.mozilla.org/show_bug.cgi?id=1074543#c3
+  if (!element || !element.childNodes || !element.childNodes.length) {
+      return false;
+  }
+  const range = document.createRange();
+  range.setStart(element, 0);
+  range.setEnd(element, element.childNodes.length);
+  const rangeWidth = range.getBoundingClientRect().width;
+  // if the element has padding style,should add the padding value.
+  const padding = (parseInt(getStyle(element, 'paddingLeft') as string, 10) || 0) + (parseInt(getStyle(element, 'paddingRight') as string, 10) || 0);
+  return rangeWidth + padding > element.offsetWidth || element.scrollWidth > element.offsetWidth;
+}
+export function hasClass(el:HTMLElement | Element, cls:string):boolean {
+  if (!el || !cls) {
+      return false;
+  }
+  if (cls.indexOf(" ") > -1) {
+      console.error(`className should not contain space!`);
+      return false;
+  }
+  if (el.classList) {
+      return el.classList.contains(cls);
+  } else {
+      return (" " + el.className + " ").indexOf(" " + cls + " ") > -1;
+  }
+}
+export function camelCase(name:string):string {
+  return name.replace(/([\:\_\-]+(.))/g, (_, separator, letter, offset) => offset ? letter.toUpperCase() : letter).replace(/^moz([A-Z])/, "Moz$1")
+}
+// IE version more than 9
+export function getStyle(el:HTMLElement, styleName:string) {
+  if (!el || !styleName) return null;
+  styleName = camelCase(styleName);
+  if (styleName === 'float') {
+      styleName = 'cssFloat';
+  }
+  try {
+      var computed = document.defaultView ? document.defaultView.getComputedStyle(el, '') : window.getComputedStyle(el,"");
+      return el.style[styleName as keyof CSSStyleDeclaration] || computed ? computed[styleName as keyof CSSStyleDeclaration] : null;
+  } catch (e) {
+      return el.style[styleName as keyof CSSStyleDeclaration];
+  }
+}

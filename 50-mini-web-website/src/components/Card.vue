@@ -1,11 +1,12 @@
 <script lang="ts" setup>
-    import { PropType } from '@vue/runtime-core';
+    import { ComponentPublicInstance, nextTick, onMounted, PropType } from '@vue/runtime-core';
     import { toRefs } from 'vue';
-    import { getImageURL } from '../utils/util';
+    import { ref } from '@vue/reactivity';
+    import { getImageURL,isTextOverflow } from '../utils/util';
     import LinkIcon from './LinkIcon';
     import CardTitle from './Title';
     const BASEURL = "https://www.eveningwater.com/my-web-projects/";
-    const BASESOURCEURL = "https://github.com/eveningwater/my-web-projects/tree/master/";
+    const BASE_SOURCE_URL = "https://github.com/eveningwater/my-web-projects/tree/master/";
     const props = defineProps({
         cardSourceURL:String as PropType<string>,
         directory:{
@@ -16,6 +17,17 @@
         cardName:String as PropType<string>
     });
     const { cardSourceURL,href,cardName } = toRefs(props);
+    const titleContainer = ref<ComponentPublicInstance | null>(null);
+    onMounted(() => {
+        nextTick(() => {
+             const element = titleContainer.value?.$el;
+             if(isTextOverflow(element)){
+                 element.classList.add("mini-web-card-hover-title")
+             }else{
+                 element.classList.remove("mini-web-card-hover-title")
+             }
+        })
+    })
 </script>
 <template>
     <div class="mini-web-card">
@@ -23,12 +35,12 @@
             <img :src="getImageURL(directory,cardSourceURL as string)" alt="图片加载中" class="mini-web-card-img">
         </div>
         <div class="mini-web-card-item-behind">
-            <card-title level="2" class="mini-web-card-title" :title="cardName">{{ cardName }}</card-title>
+            <card-title level="2" class="mini-web-card-title" :data-title="cardName" ref="titleContainer">{{ cardName }}</card-title>
             <div class="mini-web-card-link-container">
                 <a :href="BASEURL + href" target="_blank" rel="noopener noreferrer" class="mini-web-card-link">
                     <link-icon></link-icon>
                 </a>
-                <a :href="BASESOURCEURL + href" target="_blank" rel="noopener noreferrer" class="mini-web-card-link">
+                <a :href="BASE_SOURCE_URL + href" target="_blank" rel="noopener noreferrer" class="mini-web-card-link">
                     <link-icon type="githubDProp"></link-icon>
                 </a>
             </div>
@@ -69,6 +81,40 @@
                 white-space: nowrap;
                 width: 160px;
                 text-align: extract(@align,@full + @full);
+                &.@{baseSelector}card-hover-title {
+                    cursor: extract(@cursor,@full);
+                    transition: all convert(200ms,"s") cubic-bezier(0.165, 0.84, 0.44, @full);
+                    &:hover {
+                        @transformOffset:percentage(@half);
+                        &::before {
+                            content:"";
+                            width: @none;
+                            height:@none;
+                            border-style: solid;
+                            border-width: 10px;
+                            border-color:@transparent @transparent fade(@bgColor-2,100%) @transparent;
+                            position: extract(@position,@full + @full);
+                            left: @transformOffset;
+                            top:@transformOffset;
+                            transform: translate(-@transformOffset,calc(-@transformOffset - 8px));
+                        }
+                        &::after {
+                            content:attr(data-title);
+                            position: extract(@position,@full + @full);
+                            left: @transformOffset;
+                            top:@transformOffset;
+                            transform: translate(-@transformOffset,calc(-@transformOffset + 18px));
+                            background-color: fade(@bgColor-2,100%);
+                           .p(n,10,px);
+                           border-radius: unit(pow(2,3),px);
+                           z-index: 999;
+                           color: @color;
+                           white-space: pre;
+                           word-break: break-all;
+                           font-size: 14px;
+                        }
+                    }
+                }
             }
             .@{baseSelector}card-link-container {
                  .flex-center();
