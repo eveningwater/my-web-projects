@@ -117,7 +117,8 @@ onMounted(() => {
                   :cardSourceURL="card.source" 
                   :href="card.href"
                   :directory="directory" 
-                  :cardName="card.name" 
+                  :cardName="card.name"
+                  :cardIndex="index" 
                ></async-card>
             </div>
             <async-footer :lang="lang"></async-footer>
@@ -127,8 +128,6 @@ onMounted(() => {
 </template>
 
 <style lang="less">
-@import "./style/common.less";
-@import "./style/variable.less";
 body {
   .m(n,0,px);
   .app {

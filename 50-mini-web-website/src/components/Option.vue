@@ -1,7 +1,7 @@
 <script lang="tsx">
     import { defineComponent, inject, PropType } from "@vue/runtime-core";
     import { computed, Ref } from "vue";
-import classnames from "../utils/classnames";
+    import classnames from "../utils/classnames";
     export default defineComponent({
         props:{
             label:String as PropType<string>,
@@ -34,7 +34,6 @@ import classnames from "../utils/classnames";
     })
 </script>
 <style lang="less" scoped>
-@import "../style/variable.less";
 @titleBorderColor:#e6e7e8;
 @selectOptionBgColor:#686868;
 .@{baseSelector}option {

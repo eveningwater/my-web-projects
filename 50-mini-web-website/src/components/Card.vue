@@ -14,9 +14,10 @@
             default:"javascript"
         },
         href:String as PropType<string>,
-        cardName:String as PropType<string>
+        cardName:String as PropType<string>,
+        cardIndex:Number as PropType<number>
     });
-    const { cardSourceURL,href,cardName } = toRefs(props);
+    const { cardSourceURL,href,cardName,cardIndex } = toRefs(props);
     const titleContainer = ref<ComponentPublicInstance | null>(null);
     onMounted(() => {
         nextTick(() => {
@@ -35,7 +36,7 @@
             <img :src="getImageURL(directory,cardSourceURL as string)" alt="图片加载中" class="mini-web-card-img">
         </div>
         <div class="mini-web-card-item-behind">
-            <card-title level="2" class="mini-web-card-title" :data-title="cardName" ref="titleContainer">{{ cardName }}</card-title>
+            <card-title level="2" class="mini-web-card-title" :data-title="cardName" ref="titleContainer">{{ (cardIndex as number + 1) }}.{{ cardName }}</card-title>
             <div class="mini-web-card-link-container">
                 <a :href="BASEURL + href" target="_blank" rel="noopener noreferrer" class="mini-web-card-link">
                     <link-icon></link-icon>
@@ -48,7 +49,6 @@
     </div>
 </template>
 <style lang="less" scoped>
-    @import "../style/variable.less";
     @cardBorderColor:#e7e7e7;
     .@{baseSelector}card {
         border-radius: unit(pow(2,2),px);

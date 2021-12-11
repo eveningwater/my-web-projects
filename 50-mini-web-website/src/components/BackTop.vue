@@ -71,7 +71,6 @@ onMounted(() => {
   </div>
 </template>
 <style lang="less" scoped>
-    @import "../style/variable.less";
     .@{baseSelector}back-top {
         position: extract(@position,length(@position));
         z-index: pow(10,3);

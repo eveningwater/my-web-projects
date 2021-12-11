@@ -25,7 +25,6 @@
     const linkList = computed(() => readonly(ref<LinkItemType>(linkListData[props.lang as keyof LinkListType])).value);
 </script>
 <style lang="less" scoped>
-    @import "../style/variable.less";
     @activeColor:#efae23;
     .@{baseSelector}footer {
         .flex-center();

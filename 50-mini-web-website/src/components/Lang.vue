@@ -41,7 +41,6 @@ import { onMounted, watch } from '@vue/runtime-core';
     </div>
 </template>
 <style lang="less" scoped>
-    @import "../style/variable.less";
     @tabBgcolor-1:#84c1f0;
     @tabBgcolor-2:#2396ef;
     @tabActiveBgcolor-1:#f5ae51;

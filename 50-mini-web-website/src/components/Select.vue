@@ -51,7 +51,6 @@
     })
 </script>
 <style lang="less" scoped>
-    @import "../style/variable.less";
     @titleBorderColor:#e6e7e8;
     @selectPoperBorderColor:#dad6d7;
     .@{baseSelector}select{
