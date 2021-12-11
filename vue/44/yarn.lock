@@ -282,6 +282,11 @@
     estree-walker "^2.0.1"
     picomatch "^2.2.2"
 
+"@types/node@^16.11.12":
+  version "16.11.12"
+  resolved "https://registry.npmmirror.com/@types/node/download/@types/node-16.11.12.tgz#ac7fb693ac587ee182c3780c26eb65546a1a3c10"
+  integrity sha512-+2Iggwg7PxoO5Kyhvsq9VarmPbIelXP070HMImEpbtGCoyWNINQj4wzjbQCXzdHTRXnqufutJb5KAURZANNBAw==
+
 "@vitejs/plugin-vue-jsx@^1.3.0":
   version "1.3.0"
   resolved "https://registry.npmmirror.com/@vitejs/plugin-vue-jsx/download/@vitejs/plugin-vue-jsx-1.3.0.tgz#3c91cfc2dbf7fee149794dac884e94288c9aa485"
