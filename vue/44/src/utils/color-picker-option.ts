@@ -27,8 +27,8 @@ export const colorOption = {
   ],
   alpha: true,
   size: {
-    width: 35,
-    height: 35,
+    width: 30,
+    height: 30,
   },
   alphaDirection: "horizontal"
 };

@@ -7,6 +7,7 @@ $baseSelector:da-;
 $white:#ffffff;
 $black:#000000;
 $boardBorderColor:#2396ef;
+$transparent:transparent;
 
 $font-family:Avenir, Helvetica, Arial, sans-serif;
 
@@ -14,11 +15,11 @@ $percent-1:percentage(.1);
 $percent-9:percentage(math.pow(0.3,2));
 $containerWidth:math.pow(2,3) * math.pow(10,2) + px;
 
-
 $display:block,flex,inline-block,inline,inline-flex,none;
 $align:center,left,right;
 $position:relative,absolute,fixed;
-
+$vertical:middle,text-top,text-bottom;
+$direction:("t":-top,"b":-bottom,"l":-left,"r":-right);
 @function handleStyleByUnit($number:0,$unit:px){
     $result:0;
     @if $unit {
@@ -28,7 +29,7 @@ $position:relative,absolute,fixed;
     }
     @return $result;
 }
-$direction:("t":-top,"b":-bottom,"l":-left,"r":-right);
+
 @mixin m($prop,$number:0,$unit:null) {
     $property:margin;
     @if $prop {
@@ -42,6 +43,32 @@ $direction:("t":-top,"b":-bottom,"l":-left,"r":-right);
         $property:$property + map.get($direction, $prop);
     }
     #{$property}:handleStyleByUnit($number,$unit);
+}
+@for $i from 0 to 101 {
+    .w-#{$i}-p {
+        width: percentage(math.div($i,100));
+    }
+    .w-#{$i}-px {
+        width: handleStyleByUnit($i);
+    }
+    .w-#{$i}-vw {
+        width: handleStyleByUnit($i,vw);
+    }
+    .w-#{$i}-rem {
+        width: handleStyleByUnit($i,rem);
+    }
+    .h-#{$i}-p {
+        height: percentage(math.div($i,100));
+    }
+    .h-#{$i}-px {
+        height: handleStyleByUnit($i);
+    }
+    .h-#{$i}-vw {
+        height: handleStyleByUnit($i,vw);
+    }
+    .h-#{$i}-rem {
+        height: handleStyleByUnit($i,rem);
+    }
 }
 .reset {
     @include m(null);
@@ -59,8 +86,14 @@ $direction:("t":-top,"b":-bottom,"l":-left,"r":-right);
 .el-inline-block {
     display: list.nth($display,3);
 }
-.p-r {
+.el-vertical-mid {
+    vertical-align: list.nth($vertical,1);
+}
+.el-position-r {
     position:list.nth($position,1);
+}
+.el-position-a {
+    position:list.nth($position,2);
 }
 .flex-center {
     display: list.nth($display,2);
@@ -87,6 +120,7 @@ $direction:("t":-top,"b":-bottom,"l":-left,"r":-right);
     @include p("b",6,px);
     @include p("l",16,px);
     @include p("r",16,px);
+    box-sizing: border-box;
     &:focus-visible {
         outline: list.nth($display,list.length($display));
     }
