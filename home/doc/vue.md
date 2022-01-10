@@ -46,3 +46,4 @@
 |  42   | [主题钟](https://github.com/eveningwater/my-web-projects/tree/master/vue/42/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/42/) |
 |  43   | [按钮波纹效果](https://github.com/eveningwater/my-web-projects/tree/master/vue/43/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/43/) |
 |  44   | [画板小应用](https://github.com/eveningwater/my-web-projects/tree/master/vue/44/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/44/) |
+|  45   | [拖拽](https://github.com/eveningwater/my-web-projects/tree/master/vue/45/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/45/) |
