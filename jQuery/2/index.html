@@ -37,8 +37,10 @@
 <script src="./js/index.js"></script>
 <script>
     let params = location.search;
-    let name = decodeURIComponent(params.slice(params.indexOf('name') + 5,params.indexOf('birth') - 1)) || 'xxx';
-    let birth = !!decodeURIComponent(params.slice(params.indexOf('birth') + 6)) || false;
+    const birthIndex = params.indexOf('birth');
+    const evalLike = v => new Function(`return ${v}`)();
+    let name = decodeURIComponent(params.slice(params.indexOf('name') + 5,(birthIndex > -1 ? birthIndex  - 1 : -1))) || 'xxx';
+    let birth = birthIndex > -1 ? evalLike(decodeURIComponent(params.slice(birthIndex + 6))): false;
     new girlFriend({
         text: "做我女朋友好不好?",
         textEl: $('#text'),
