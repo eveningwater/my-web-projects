@@ -1,0 +1,7 @@
+@use "sass:color";
+$appBgColor:radial-gradient(49% 81% at 45% 47%,rgba(157,80,4,.270588) 0,rgba(7,58,255,0) 100%),radial-gradient(113% 91% at 17% -2%,#c95011 1%,rgba(220,78,78,0) 99%),radial-gradient(142% 91% at 83% 7%,#edd509 1%,rgba(255,0,0,0) 99%),radial-gradient(142% 91% at -6% 74%,#a30633 1%,rgba(255,0,0,0) 99%),radial-gradient(142% 91% at 111% 84%,#ef710e 0,#ed0707 100%);
+$transparent:transparent;
+$white:#ffffff;
+$black:#000000;
+$markColor:#cf2626;
+$adjustColor:color.adjust($black,$alpha:0.5)
