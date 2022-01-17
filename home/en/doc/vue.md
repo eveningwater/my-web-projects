@@ -48,3 +48,4 @@
 |  44   | [drawing-app](https://github.com/eveningwater/my-web-projects/tree/master/vue/44/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/44/) |
 |  45   | [drag-n-drop](https://github.com/eveningwater/my-web-projects/tree/master/vue/45/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/45/) |
 |  46   | [content-placeholder](https://github.com/eveningwater/my-web-projects/tree/master/vue/46/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/46/) |
+|  47   | [图片旋转动画](https://github.com/eveningwater/my-web-projects/tree/master/vue/47/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/47/) |

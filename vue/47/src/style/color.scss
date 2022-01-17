@@ -1,0 +1,11 @@
+@use "sass:color";
+$appBgColor:radial-gradient(49% 81% at 45% 47%,rgba(4, 101, 157, 0.271) 0,rgba(143, 7, 255, 0) 100%),
+radial-gradient(113% 91% at 17% -2%,#11adc9 1%,rgba(92, 78, 220, 0) 99%),
+radial-gradient(142% 91% at 83% 7%,#0946ed 1%,rgba(119, 0, 255, 0) 99%),
+radial-gradient(142% 91% at -6% 74%,#064aa3 1%,rgba(17, 0, 255, 0) 99%),
+radial-gradient(142% 91% at 111% 84%,#0e4aef 0,#07b7ed 100%);
+$transparent:transparent;
+$white:#ffffff;
+$black:#000000;
+$borderSquareColor:linear-gradient(135deg,#dd8d24 10%,#cc6008 90%);
+$borderAngleColor:#ee730e;
