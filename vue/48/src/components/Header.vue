@@ -45,10 +45,12 @@
             text: "源码仓库"
         }
     ]);
-    const onResizeHandler = () => {
-        showMenu.value = !!(window.innerWidth <= 400);
-    }
-    onMounted(() => window.addEventListener("resize",onResizeHandler));
+    const isShowMenu = () => showMenu.value = !!(window.innerWidth <= 400);
+    const onResizeHandler = () => isShowMenu();
+    onMounted(() => {
+        isShowMenu();
+        window.addEventListener("resize",onResizeHandler)
+    });
 </script>
 <style scoped lang="scss">
     .#{$baseSelector}header {
