@@ -160,13 +160,17 @@
     }
     .action-button .btn.arrow-down-btn {
         transform: translateX(-100%) rotate(90deg);
-        border-top-left-radius: 5px;
-        border-bottom-left-radius: 5px;
+        border-radius: 0;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        top: calc(35% - 2px);
     }
     .action-button .btn.arrow-up-btn {
         transform: translateY(-100%) rotate(90deg);
-        border-top-right-radius: 5px;
-        border-bottom-right-radius: 5px;
+        border-radius: 0;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        top: calc(35% + 1px);
     }
     .action-button > button > .arrow-icon {
         width: 25px;
