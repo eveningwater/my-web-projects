@@ -13,7 +13,7 @@ $flex-direction:row,row-reverse,column,column-reverse;
 $text-align:list.nth($direction,1),$center,list.nth($direction,length($direction));
 $font-family:nunito_for_arco,"Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
 $font-weight:normal,lighter,bold,bolder,100,200,300,400,500,600,700,800,900;
-$border-style:solid,dashed,list.nth($display,4);
+$border-style:solid,dashed,list.nth($display,5);
 $bg-size:contain,cover;
 $cursor:pointer,zoom;
 $box-sizing:border-box,content-box;

@@ -1,0 +1,11 @@
+@use "sass:color";
+$headerBgColor:linear-gradient(135deg,#5e3dd6 10%,#5910df 90%);
+$headerBgActiveColor:linear-gradient(135deg,#3d91d6 10%,#1071df 90%);
+$headerBoxShadowColor:#9778cf;
+$headerBoxShadowActiveColor:#7894cf;
+$transparent:transparent;
+$white:#ffffff;
+$black:#000000;
+$linkHoverColor:#e67272;
+$orderBgColor:linear-gradient(135deg,#6c8de9 10%,#1f54e4 90%);
+$contentColor:#7f8285;
