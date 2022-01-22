@@ -50,3 +50,4 @@
 |  46   | [骨架屏卡片](https://github.com/eveningwater/my-web-projects/tree/master/vue/46/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/46/) |
 |  47   | [图形旋转动画](https://github.com/eveningwater/my-web-projects/tree/master/vue/47/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/47/) |
 |  48   | [固定导航](https://github.com/eveningwater/my-web-projects/tree/master/vue/48/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/48/) |
+|  49   | [双滑动轮播](https://github.com/eveningwater/my-web-projects/tree/master/vue/49/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/49/) |

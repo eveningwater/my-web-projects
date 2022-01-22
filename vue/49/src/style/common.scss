@@ -121,7 +121,8 @@
     color:$black;
 }
 // mixin
-$propList:line-height,width,height,font-size,right,top,bottom,left,margin,padding,border-width,border-radius,max-width,min-height,letter-spacing,text-indent;
+$propList:line-height,width,height,font-size,right,top,bottom,left,margin,
+padding,border-width,border-radius,max-width,min-height,letter-spacing,text-indent;
 @mixin setComponent($prop,$number:0,$unit) {
     $list:loopAppend($propList,1,5,margin-,$direction);
     $newProp:width;
@@ -156,6 +157,15 @@ $propList:line-height,width,height,font-size,right,top,bottom,left,margin,paddin
 }
 @mixin background($color:#fff){
     background: $color;
+}
+@mixin setDisplay($value){
+    display: $value;
+}
+@mixin setFlexContent($value){
+    justify-content: $value;
+}
+@mixin setFlexItems($value){
+    align-items: $value;
 }
 .reset {
     @include setComponent(margin,0,null);

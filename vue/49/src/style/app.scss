@@ -1,0 +1,145 @@
+@use "sass:list";
+
+* {
+    @extend .bs-border-box,.reset;
+}
+
+body {
+    .app {
+        font-family: $font-family;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+
+        .#{$baseSelector}slider-container {
+            @include setComponent(width, 100, vw);
+            @include setComponent(height, 100, vh);
+            @extend .el-pos-r,
+            .over-hidden;
+
+            .#{$baseSelector}left-slide,
+            .#{$baseSelector}right-slide {
+                transition: transform .6s ease-in-out;
+                @extend .el-pos-a;
+                @include setComponentPercent(height, 100);
+                @include setComponent(top, 0, null);
+
+                &-item {
+                    @include setComponentPercent(width, 100);
+                    @include setComponentPercent(height, 100);
+                }
+            }
+
+            .#{$baseSelector}left-slide {
+                @include setComponentPercent(width, 35);
+                @include setComponent(left, 0, null);
+
+                &-item {
+                    @extend .flex-center,
+                    .el-fd-column;
+                    color: $white;
+                    @include setComponent(line-height, 1.5, null);
+                    @include setComponent(letter-spacing, 2, px);
+                }
+
+                @for $i from 1 to 5 {
+                    &-item:nth-child(#{$i}) {
+                        background: list.nth($leftBgColor, $i);
+                    }
+                }
+            }
+
+            .#{$baseSelector}right-slide {
+                @include setComponentPercent(width, 65);
+                @include setComponentPercent(left, 35);
+
+                &-item {
+                    @extend .bg-cover;
+
+                    background: {
+                        position: $center;
+                        repeat: no-repeat;
+                    }
+                }
+            }
+
+            .#{$baseSelector}action-button {
+                @extend .el-pos-a,
+                .el-cursor-pointer,
+                .bd-solid;
+                z-index: 100;
+                background-color: $btnBgColor;
+                @include setComponent(padding, 12, px);
+                @include setComponent(font-size, 15, px);
+                @include setComponent(border-radius, 0, px);
+                @include setComponentPercent(left, 35);
+                @include setComponentPercent(top, 50);
+
+                border: {
+                    width: 1px;
+                    color: $btnBorderColor;
+                }
+
+                &:focus-visible {
+                    outline: none;
+                }
+
+                &.#{$baseSelector}action-up-btn {
+                    transform: translateX(-100%);
+                    border-top-left-radius: 5px;
+                    border-bottom-left-radius: 5px;
+                }
+
+                &.#{$baseSelector}action-down-btn {
+                    transform: translateY(-100%);
+                    border-top-right-radius: 5px;
+                    border-bottom-right-radius: 5px;
+                }
+
+                &:hover path {
+                    filter: drop-shadow($dropShadowColor 70px 0);
+                    transform: translateX(-70px);
+                }
+            }
+            @mixin mediaStyle {
+                .#{$baseSelector}left-slide,
+                .#{$baseSelector}right-slide {
+                    @include setComponent(left,0,null);
+                    @include setDisplay(flex);
+                    @include setFlexContent(flex-start);
+                    &-item {
+                        @include setComponentPercent(height,100);
+                    }
+                    &.#{$baseSelector}left-slide {
+                        @include setComponent(top,0,null);
+                        @include setComponentPercent(height,35);
+                    }
+                    &.#{$baseSelector}right-slide {
+                        @include setComponentPercent(top,35);
+                        @include setComponentPercent(height,65);
+                    }
+                }
+                .#{$baseSelector}action-button {
+                    @include setComponentPercent(left,50);
+                    &.#{$baseSelector}action-up-btn {
+                        transform: translateX(-100%) rotate(90deg);
+                        @include setComponent(border-radius,0,null);
+                        border-top-right-radius: 5px;
+                        border-bottom-right-radius: 5px;
+                        @include setComponent(top,calc(35% - 2px),null);
+                    }
+    
+                    &.#{$baseSelector}action-down-btn {
+                        transform: translateY(-100%) rotate(90deg);
+                        @include setComponent(border-radius,0,null);
+                        border-top-left-radius: 5px;
+                        border-bottom-left-radius: 5px;
+                        @include setComponent(top,calc(35% + 1px),null);
+                    }
+                }
+            }
+            @media screen and (max-width: 869px) {
+                @include mediaStyle();
+            }
+        }
+    }
+}
