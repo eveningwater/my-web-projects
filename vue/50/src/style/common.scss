@@ -1,0 +1,186 @@
+@use "sass:string";
+@use "sass:list";
+@use "sass:math";
+@import "./function.scss";
+// extend
+@each $value in $display {
+    $prop:display;
+    .el-#{$prop}-#{$value} {
+        display: $value;
+    }
+}
+@each $value in $flex-layout {
+    $prop-hor:justify-content;
+    $prop-ver:align-items;
+    $prop-hor-sel:propSlice($prop-hor,1,1) + propSlice($prop-hor,-7,-7);
+    $prop-ver-sel:propSlice($prop-ver,1,1) + propSlice($prop-ver,-5,-5);
+    .el-#{$prop-hor-sel}-#{$value} {
+        #{$prop-hor}: $value;
+    }
+    .el-#{$prop-ver-sel}-#{$value} {
+        #{$prop-ver}: $value;
+    }
+}
+@each $value in $flex-direction {
+    $prop:flex-direction;
+    $prop-sel:propSlice($prop,1,1) + propSlice($prop,6,6);
+    .el-#{$prop-sel}-#{$value} {
+        #{$prop}: $value;
+    }
+}
+@each $value in $flex-direction {
+    $prop:flex-direction;
+    $prop-sel:propSlice($prop,1,1) + propSlice($prop,6,6);
+    .el-#{$prop-sel}-#{$value} {
+        #{$prop}: $value;
+    }
+}
+@each $value in $text-align {
+    $prop:text-align;
+    $prop-sel:propSlice($prop,1,4);
+    .el-#{$prop-sel}-#{$value} {
+        #{$prop}: $value;
+    }
+}
+@each $value in $position {
+    $prop:position;
+    $prop-sel:propSlice($prop,1,3) + '-' + propSlice($value,1,1);
+    .el-#{$prop-sel} {
+        #{$prop}: $value;
+    }
+}
+@each $value in $font-weight {
+    .fw-#{$value} {
+        font-weight: $value;
+    }
+}
+@each $value in $border-style {
+    .bd-#{$value} {
+        border-style: $value;
+    }
+    @each $dir in $direction {
+        $sel:propSlice($dir,1,1);
+        .bd#{$sel}-#{$value} {
+            border-#{$dir}-style:$value;
+        }
+    }
+}
+@each $value in $cursor {
+    .el-cursor-#{$value} {
+        cursor: $value;
+    }
+}
+@each $value in $bg-size {
+    .bg-#{$value} {
+        background-size: $value;
+    }
+}
+@each $value in $overflow {
+    .over-#{$value} {
+        overflow: $value;
+    }
+    .over-x-#{$value} {
+        overflow-x: $value;
+    }
+    .over-y-#{$value} {
+        overflow-y: $value;
+    }
+}
+@each $value in $box-sizing {
+    .box-#{$value} {
+        box-sizing: $value;
+    }
+}
+@each $value in $flex-wrap {
+    .flex-#{$value} {
+        flex-wrap: $value;
+    }
+}
+@each $value in $object-fit {
+    .obj-fit-#{$value} {
+        object-fit: $value;
+    }
+}
+
+.flex-center {
+    @extend .el-display-flex,.el-jc-center,.el-ai-center;
+}
+.link-text-none {
+    text-decoration: list.nth($display,4);
+}
+.bg-transparent {
+    background-color: $transparent;
+}
+.color-white {
+    color:$white;
+}
+.color-transparent {
+    color:$transparent;
+}
+.color-black {
+    color:$black;
+}
+// mixin
+$propList:line-height,width,height,font-size,right,top,bottom,left,margin,
+padding,border-width,border-radius,max-width,min-height,letter-spacing,text-indent;
+$marginList:loopAppend($propList,1,5,margin-,$direction);
+@mixin setComponent($prop,$number:0,$unit) {
+    $list:loopAppend($propList,1,5,padding-,$direction);
+    $newProp:width;
+    // @warn $prop;
+    @if list.nth($list,list.index($list,$prop)) {
+        $newProp:list.nth($list,list.index($list,$prop));
+    }
+    $value:$number;
+    @if $unit {
+        $value:$number + $unit;
+    }
+    #{$newProp}: $value;
+}
+@mixin setComponentIndex($number){
+    z-index:$number;
+}
+@mixin setComponentScale($number){
+    transform: scale($number);
+}
+@mixin setComponentPercent($prop,$number:0) {
+    $list:loopAppend($propList,1,5,padding-,$direction);
+    $newProp:width;
+    @if list.nth($list,list.index($list,$prop)) {
+        $newProp:list.nth($list,list.index($list,$prop));
+    }
+    $value:0;
+    @if $number > 100 {
+        $value:100;
+    }@else if $number < -100 {
+        $value:-100;
+    }@else {
+        $value:$number;
+    }
+    #{$newProp}: percentage(math.div($value,100));
+}
+@mixin background($color:#fff){
+    background: $color;
+}
+@mixin setDisplay($value){
+    display: $value;
+}
+@mixin setFlexContent($value){
+    justify-content: $value;
+}
+@mixin setFlexItems($value){
+    align-items: $value;
+}
+.reset {
+    @include setComponent(margin,0,null);
+    @include setComponent(padding,0,null);
+}
+.margin-center {
+    margin:0 auto;
+}
+.bs-border-box {
+    box-sizing: border-box;
+}
+.#{$baseSelector}link {
+    text-decoration: list.nth($display,5);
+}

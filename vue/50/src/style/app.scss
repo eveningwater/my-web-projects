@@ -1,0 +1,55 @@
+@use "sass:list";
+* {
+    @extend .bs-border-box,
+    .reset;
+}
+
+body,
+html {
+    @include setComponentPercent(height, 100);
+
+    .app {
+        font-family: $font-family;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        @include setComponentPercent(height, 100);
+        @extend .over-hidden;
+        @include background($appBgColor);
+
+        .#{$baseSelector}header {
+            @extend .el-display-flex,
+            .el-jc-space-between,
+            .el-ai-center;
+            @include background($headerBgColor);
+            box-shadow: 0 4px 8px $headerBoxShadowColor;
+            @include setComponentPercent(width, 100);
+            @include setComponent(height, 60, px);
+            color: $white;
+
+            &-btn {
+                &:focus-visible {
+                    outline:list.nth($display,5);
+                }
+                @extend .el-display-inline-block,.el-cursor-pointer,.bd-none;
+                @include setComponent(margin, 2, em);
+                @include setComponent(padding-top, 6, px);
+                @include setComponent(padding-bottom, 6, px);
+                @include setComponent(padding-left, 10, px);
+                @include setComponent(padding-right, 10, px);
+                @include setComponent(border-radius, 8, px);
+                color:$white;
+                @include background($headerBtnBgColor);
+                transition: all .4s cubic-bezier(0.075, 0.82, 0.165, 1);
+                &:hover {
+                    @include background($headerBtnBgHoverColor);
+                    @include setComponentScale(1.1);
+                }
+            }
+        }
+        .#{$baseSelector}toast-container {
+            @include setComponentPercent(width, 100);
+            @include setComponent(height, calc(percentage(1) - 60px),null);
+            @extend .el-pos-r;
+        }
+    }
+}
