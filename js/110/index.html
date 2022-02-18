@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>情人节快乐</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .balloon {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="balloon" class="balloon"></canvas>
+</body>
+<script src="./balloon.js"></script>
+<script>
+    const allBall = new AllBalloon({
+        el: document.getElementById("balloon"),
+        opts: {
+            phrases: [
+                "你是世间的唯一，是我四月的晴天",
+                "一朵花再娇艳，也比不过你的美艳芬芳",
+                "看到你的第一眼，就已确定了永远",
+                "虽然想爱你一万年，但不如每时每刻都有你",
+                "有你在的每一天都是晴天",
+                "你想知道你有多美吗？在我心中你最美",
+                "别问我有多爱你，问，就是永远",
+                "你不知道你的美已经让我血液翻腾，心跳不止"
+            ]
+        }
+    });
+    console.log(allBall);
+</script>
+
+</html>
