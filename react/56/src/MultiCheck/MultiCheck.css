@@ -1,0 +1,28 @@
+/* TODO */
+.MultiCheck {
+    border:1px solid #d8d8d8;
+    max-width: 350px;
+    border-radius: 5px;
+}
+.mul-header {
+    background-color: #eeeeee;
+    color:#535455;
+    text-align: left;
+    font-size: 18px;
+    padding: 8px 15px;
+}
+.mul-container {
+    position: relative;
+}
+.mul-content {
+    padding: 8px;
+}
+.mul-column {
+    display: inline-flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+.mul-column {
+    padding-right: 15%;
+}

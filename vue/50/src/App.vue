@@ -11,7 +11,7 @@ const asyncTitle = defineAsyncComponent(() => import("./components/Title.vue"));
         <async-title level="2" class="tn-header-title">Notification</async-title>
         <button type="button" class="tn-header-btn">show Notification(not auto close)</button>
     </div>
-    <div class="tn-toast-container"></div>
+    <div class="tn-toast-container" id="tn-toast-container"></div>
 </template>
 
 <style lang="scss">

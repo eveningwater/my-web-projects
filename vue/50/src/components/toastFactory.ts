@@ -1,13 +1,25 @@
-import ToastVue from "./Toast.vue";
+import ToastConstructor from "./Toast.vue";
 import { render } from "vue"
 interface ToastOption {
-    visible:Boolean;
-    showClose:Boolean;
+    visible:boolean;
+    showClose:boolean;
     message:string;
     left:number;
     top:number;
     closeTime:number;
+    isRenderHTML:boolean;
 }
-export function Toast(options:ToastOption){
-
+type ToastInstance = {
+    onClose:Function;
+}
+const toastInstances:Array<ToastInstance> = [];
+export function Toast(option:ToastOption){
+    const defaultOption = {
+        showClose:false,
+        closeTime:200,
+        visible:true,
+        isRenderHTML:false,
+        type:"default"
+    }
+    const finalOption = { ...defaultOption,...option };
 }
