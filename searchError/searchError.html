@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>搜索错误</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            overflow: hidden;
+            display: flex;
+            align-items:center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 15px;
+        }
+        .cs-err-text {
+            width: 1000px;
+            max-width: 100%;
+            height: 70vh;
+            padding: 15px;
+            border: 1px solid #535455;
+            box-shadow: 1px 3px 15px rgba(255, 255, 255, .2);
+            display: block;
+            border-radius: 5px;
+        }
+        .cs-err-text:focus {
+            outline: 0;
+            border-color:#2396ef;
+        }
+        .footer {
+            margin-top: 15px;
+        }
+        .btn {
+            outline: none;
+            border: 1px solid #2396ef;
+            border-radius: 5px;
+            padding: .4rem .6rem;
+            color: #535455;
+            background-color: transparent;
+            font-size: 14px;
+            cursor: pointer;
+            letter-spacing: 2px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            transition: all .3s ease;
+            display: inline-block;
+        }
+        .btn:not(:first-child) {
+            margin-left: 15px;
+        }
+        .btn:hover {
+            background-color: #4087ef;
+            border-color: #2a7af3;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <textarea id="error-text" class="cs-err-text" placeholder="请输入错误信息"></textarea>
+    <div class="footer">
+        <button class="btn" type="button">百度</button>
+        <button class="btn" type="button">stack overflow</button>
+        <button class="btn" type="button">谷歌</button>
+    </div>
+</body>
+<script>
+    function searchError(type = 1,value){
+        switch(type){
+            case 2:{
+                url = "https://stackoverflow.com/search?q=[js]+";
+                break;
+            }
+            case 3:{
+                url = "https://www.google.com/search?q=";
+                break;
+            }
+            default:{
+                url = "https://www.baidu.com/s?wd=";
+                break;
+            }
+        }
+        window.open(url + value);
+    }
+    const btnGroup = document.querySelectorAll(".btn"),
+          errorInput = document.querySelector("#error-text");
+    btnGroup.forEach((btn,index) => {
+        btn.addEventListener("click",() => {
+            const value = errorInput.value;
+            if(value.trim()){
+                searchError((index + 1),value);
+            }
+        })
+    })
+</script>
+</html>
