@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片取色器示例</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div class="ip-container">
+        <h1 class="ip-title">取色器</h1>
+        <div class="ip-image">
+            <input type="file" class="ip-file-input">
+            <button class="ip-file-btn" type="button">选择文件</button>
+            <canvas class="ip-render-element"></canvas>
+        </div>
+        <div class="ip-image-data">
+            <div class="ip-col"></div>
+            <ul class="ip-data-color">
+                <li class="ip-data-color-item">RGB(0,0,0)</li>
+                <li class="ip-data-color-item">十六进制:#000000</li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script src="./picker.js"></script>
+<script>
+    const ip = new ImagePicker();
+    ip.change();
+</script>
+</html>
