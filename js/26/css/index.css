@@ -1,6 +1,6 @@
 /*
 * 功能:图片画廊
-* 作者:loho
+* 作者:eveningwater
 * 日期:2017/9/5
 */
 body,html,div,main,section,header,footer,ul,li,button,span,p,h1,h2,h3,h4,h5,h6,textarea,figure,img,a{
@@ -13,10 +13,11 @@ body{
 	background-color: #feefee;
 }
 .fullscreen{
-	width: 100%;height: 100%;
+	width: 100%;
+	height: 100%;
 	overflow: hidden;
 }
-.fullscreen > section{
+.gallery-item{
 	width: 200px;
 	position: absolute;
 	padding: 10px;
@@ -27,13 +28,13 @@ body{
 	transition: all .6s cubic-bezier(0, 0, .39, .66);
 	border-radius: 5px;	
 }
-section > img{
+.gallery-item > img{
 	height: auto;
 	max-width: 100%;
 	margin: 0 auto;
 	margin-bottom: 15px;
 }
-section > span{
+.gallery-item > span{
 	font-family: Comic Sans, Comic Sans MS, cursive;
 	color: #8F8476;
 }

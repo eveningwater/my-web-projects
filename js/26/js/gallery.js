@@ -10,7 +10,11 @@ function Gallery(options = {}){
     this.currentItem = null;
     this.footerHeight = 60;
     this.xhr = new XMLHttpRequest();
-    this.url = options.url || "data/data.json";
+    this.originData = options.data || [];
+    this.originDataKey = options.dataKey || {
+        key:"name",
+        value:"caption"
+    }
     this.data = {};
     this.dataLen = 0;
     this.timer = null;
@@ -21,15 +25,8 @@ function Gallery(options = {}){
 Gallery.prototype = {
     init(){
         this.observe();
-        this.xhr.open("get",this.url,true);
-        this.xhr.send();
-        this.xhr.onreadystatechange = () => {
-            if(this.xhr.readyState === 4 && this.xhr.status === 200){
-                const data = JSON.parse(this.xhr.responseText);
-                this.createGallery(data);
-                this.start();
-            }
-        }
+        this.createGallery(this.originData);
+        this.start();
     },
     start(){
         if(this.showPrev || this.showNext){
@@ -123,11 +120,12 @@ Gallery.prototype = {
     },
     createGallery(data){
         let template = "";
+        const { key,value } = this.originDataKey;
         for(let i = 0;i < data.length;i++){
             template += `
                 <section id = ${i} class="gallery-item">
-			        <img src = "img/${data[i].name}" alt = "${data[i].name}" class="gallery-img" />
-			        <span class="gallery-caption">${data[i].caption}</span>
+			        <img src = "${data[i][key]}" alt = "${data[i][key]}" class="gallery-img" />
+			        <span class="gallery-caption">${data[i][value]}</span>
 			    </section>`;
         }
         this.container.innerHTML = template;

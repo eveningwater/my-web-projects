@@ -1,62 +1,62 @@
 [
 	{
-		"name": "../img/1.jpg", 
+		"name": "img/1.jpg", 
 		"caption": "girl-1"
 	},
 	{
-		"name": "../img/2.jpg",
+		"name": "img/2.jpg",
 		"caption": "girl-2"
 	},
 	{
-		"name": "../img/3.jpg",
+		"name": "img/3.jpg",
 		"caption": "girl-3"
 	},
 	{
-		"name": "../img/4.jpg",
+		"name": "img/4.jpg",
 		"caption": "girl-4"
 	},
 	{
-		"name": "../img/5.jpg", 
+		"name": "img/5.jpg", 
 		"caption": "girl-5"
 	},
 	{
-		"name": "../img/6.jpg", 
+		"name": "img/6.jpg", 
 		"caption": "girl-6"
 	},
 	{
-		"name": "../img/7.jpg", 
+		"name": "img/7.jpg", 
 		"caption": "girl-7"
 	},
 	{
-		"name": "../img/8.jpg", 
+		"name": "img/8.jpg", 
 		"caption": "girl-8"
 	},
 	{
-		"name": "../img/9.jpg",
+		"name": "img/9.jpg",
 		"caption": "girl-9"
 	},
 	{
-		"name": "../img/10.jpg",
+		"name": "img/10.jpg",
 		"caption": "girl-10"
 	},
 	{
-		"name": "../img/11.jpg",
+		"name": "img/11.jpg",
 		"caption": "girl-11"
 	},
 	{
-		"name": "../img/12.jpg",
+		"name": "img/12.jpg",
 		"caption": "girl-12"
 	},
 	{
-		"name": "../img/13.jpg",
+		"name": "img/13.jpg",
 		"caption": "girl-13"
 	},
 	{
-		"name": "../img/14.jpg",
+		"name": "img/14.jpg",
 		"caption": "girl-14"
 	},
 	{
-		"name": "../img/15.jpg",
+		"name": "img/15.jpg",
 		"caption": "girl-15"
 	}
 ]
