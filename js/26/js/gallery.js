@@ -9,7 +9,6 @@ function Gallery(options = {}){
     this.nextText = options.nextText || "下一张&nbsp;&gt;";
     this.currentItem = null;
     this.footerHeight = 60;
-    this.xhr = new XMLHttpRequest();
     this.originData = options.data || [];
     this.originDataKey = options.dataKey || {
         key:"name",
