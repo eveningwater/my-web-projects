@@ -13,3 +13,4 @@
 |  8   | [网易严选模仿页面](https://github.com/eveningwater/my-web-projects/tree/master/CSS/8/) | [在线 demo](https://www.eveningwater.com/my-web-projects/CSS/8/) |
 |  9   | [闪亮发光字](https://github.com/eveningwater/my-web-projects/tree/master/CSS/9/) | [在线 demo](https://www.eveningwater.com/my-web-projects/CSS/9/) |
 |  10   | [路飞](https://github.com/eveningwater/my-web-projects/tree/master/CSS/10/) | [在线 demo](https://www.eveningwater.com/my-web-projects/CSS/10/) |
+|  11   | [弹性盒子布局实现麻将](https://github.com/eveningwater/my-web-projects/tree/master/CSS/11/) | [在线 demo](https://www.eveningwater.com/my-web-projects/CSS/11/) |
