@@ -12,6 +12,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100%;
+    flex-wrap: wrap;
 }
 .card {
     width: 80px;

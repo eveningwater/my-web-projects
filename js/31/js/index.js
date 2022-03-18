@@ -55,6 +55,7 @@ ewScoreCounter.prototype.handleFocus = function(elements,count,total){
         item.oninput = function () {
             let num = Number(this.value);
             if(isNaN(num) || num > total / count || num < 0 || this.value.charAt(0) <= this.value.charAt(1)){
+                $message.warning("输入的分数超出了限制!")
                 this.value = "";
                 return;
             }
@@ -65,9 +66,7 @@ ewScoreCounter.prototype.handleReset = function(el){
     let inp = this.inputElementsArr;
     let result = this.result;
     el.onclick = function () {
-        inp.forEach((item) => {
-            item.value = "";
-        });
+        inp.forEach(item => item.value = "");
         inp[0].focus();
         result.textContent = "";
     }
@@ -80,9 +79,7 @@ ewScoreCounter.prototype.handleCount = function(el){
 }
 ewScoreCounter.prototype.computeResult = function(valueArr,el){
     let count = 0;
-    valueArr.forEach((item) => {
-        count += Number(item.value);
-    });
+    valueArr.forEach(item => count += Number(item.value));
     el.textContent = this.total - count;
 }
 ewScoreCounter.prototype.handleKeyBoard = function(elements){
