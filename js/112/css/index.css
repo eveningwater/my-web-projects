@@ -1,0 +1,98 @@
+@charset "utf-8";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,body {
+  height: 100%;
+}
+
+body {
+  font: normal 16px Arial, sans-serif;
+  color: #3a3e3f;
+  overflow: hidden auto;
+}
+body::before {
+  content: '';
+  height: 1px;
+  display: block;
+}
+body::after {
+  content: '---- 已经到底了 ----';
+  font-size: 14px;
+  padding: 24px 0 30px;
+  display: block;
+  text-align: center;
+  color: #acacac;
+}
+#app {
+  max-width: 960px;
+  margin: 0  auto;
+}
+
+/* 显示HTML的Code容器 */
+.code-html {
+  /* max-height: 66vh; */
+  padding: 12px;
+  padding-left: 70px;
+  margin: 12px;
+  display: block;
+  background-color: #3a3b3c;
+  border-radius: 5px;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  color: #fafeff;
+  white-space: pre-wrap;
+  word-spacing: 4px;
+  font: initial;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 22px;
+  position: relative;
+  overflow: hidden auto;
+}
+.code-html::-webkit-scrollbar {
+  width: 10px;
+}
+.code-html::-webkit-scrollbar-thumb {
+  width: 10px;
+  background-color: #6a6e6f;
+  border-radius: 5px;
+}
+.code-html .line-num-container {
+  min-width: max-content;
+  position: absolute;
+  left: 0;
+  top: 0;
+  min-height: 100%;
+  background-color: #414445;
+  border-right: 1px solid #515455;
+  padding: 12px 14px 12px 10px;
+}
+.code-html .line-num-container span {
+  display: block;
+  text-align: right;
+  font-size: 13px;
+  color: #acacac;
+}
+
+/* HTML-Code容器 -- 标签括号 */
+.code-html .code-brackets {
+  color:#acacac;
+}
+/* HTML-Code容器 -- 注释 */
+.code-html .code-comment {
+  color: #0cba09;
+}
+/* HTML-Code容器 -- 标签名 */
+.code-html .code-tagname {
+  color: #e4755c;
+}
+/* HTML-Code容器 -- 标签名 */
+.code-html .code-attribute {
+  color: #69c8e4;
+}
+/* HTML-Code容器 -- 标签名 */
+.code-html .code-value {
+  color: #f8d78a;
+}

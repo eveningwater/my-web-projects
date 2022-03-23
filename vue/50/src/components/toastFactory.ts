@@ -13,6 +13,7 @@ type ToastInstance = {
     onClose:Function;
 }
 const toastInstances:Array<ToastInstance> = [];
+let seed = 1;
 export function Toast(option:ToastOption){
     const defaultOption = {
         showClose:false,
