@@ -34,11 +34,10 @@
             "id" => (int) substr($value,strrpos($value,"/") + 1,-4)
         ));
     }
-    $ordList = array();
-    foreach($newFileNames as $v){
-        $ordList[] = $v["id"];
-    }
-    array_multisort($newFileNames,SORT_ASC,$ordList);
+    usort($newFileNames, function ($item1, $item2) {
+        if ($item1['id'] == $item2['id']) return 0;
+        return $item1['id'] < $item2['id'] ? -1 : 1;
+    });
     $response_data = array('code' => 200,'msg' => "获取图片列表成功!",'data' => $newFileNames);
     echo json_encode($response_data,JSON_UNESCAPED_UNICODE);
 ?>
