@@ -14,3 +14,4 @@
 |  9   | [Spotlight](https://github.com/eveningwater/my-web-projects/tree/master/CSS/9/) | [在线 demo](https://www.eveningwater.com/my-web-projects/CSS/9/) |
 |  10   | [luffy](https://github.com/eveningwater/my-web-projects/tree/master/CSS/10/) | [在线 demo](https://www.eveningwater.com/my-web-projects/CSS/10/) |
 |  11   | [flex layout for Mahjong](https://github.com/eveningwater/my-web-projects/tree/master/CSS/11/) | [在线 demo](https://www.eveningwater.com/my-web-projects/CSS/11/) |
+|  12   | [Digital clock](https://github.com/eveningwater/my-web-projects/tree/master/CSS/12/) | [在线 demo](https://www.eveningwater.com/my-web-projects/CSS/12/) |

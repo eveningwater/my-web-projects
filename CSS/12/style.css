@@ -1,0 +1,69 @@
+@property --h {
+    syntax:"<integer>";
+    inherits:false;
+    initial-value:0;
+}
+@property --m {
+    syntax:"<integer>";
+    inherits:false;
+    initial-value:0;
+}
+@property --s {
+    syntax:"<integer>";
+    inherits:false;
+    initial-value:0;
+}
+html,body {
+    margin: 0;
+    height: 100%;
+    display: grid;
+    place-content: center;
+    background: linear-gradient(135deg,#f9e4fd 10%,#cb97cf 90%);
+}
+.time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    --step:60s;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 3em;
+    border-radius: 5px;
+}
+span {
+    color:#dd131e;
+    text-shadow: 0 2px 3px #dd830d;
+    margin: 0 4px;
+}
+.hour::after {
+    counter-reset: hour var(--h);
+    content:counter(hour,decimal-leading-zero);
+    animation: hour calc(var(--step) * 60 * 24) infinite steps(24);
+    animation-delay: calc(-1 * var(--step) * var(--dh) * 60);
+}
+.minute::after {
+    counter-reset: minute var(--m);
+    content:counter(minute,decimal-leading-zero);
+    animation: minute calc(var(--step) * 60) infinite steps(60);
+    animation-delay: calc(-1 * var(--step) * var(--dm));
+}
+.second::after {
+    counter-reset: second var(--s);
+    content:counter(second,decimal-leading-zero);
+    animation: second calc(var(--step)) infinite steps(60);
+    animation-delay: calc(-1 * var(--step) * var(--ds) / 60);
+}
+@keyframes hour {
+    to {
+        --h:24;
+    }
+}
+@keyframes minute {
+    to {
+        --m:60;
+    }
+}
+@keyframes second {
+    to {
+        --s:60;
+    }
+}

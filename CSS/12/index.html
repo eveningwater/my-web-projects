@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS数字时钟</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="time" class="time">
+        <span class="hour"></span>
+        <span class="split">:</span>
+        <span class="minute"></span>
+        <span class="split">:</span>
+        <span class="second"></span>
+    </div>
+    <script>
+        const date = new Date(),
+              h = date.getHours(),
+              m = date.getMinutes(),
+              s = date.getSeconds();
+        document.getElementById("time").style.cssText = `--ds:${s};--dm:${m + s / 60};--dh:${h + m / 60 + s / 3600}`;
+    </script>
+</body>
+</html>
