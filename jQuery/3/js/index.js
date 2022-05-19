@@ -4,7 +4,7 @@
  * 日期:2017/8/23.
  **/
 'user strict';
-let videoArr = ['https://www.eveningwater.com/my-web-projects/3/gone.mp4'];
+let videoArr = ['http://rc417uu1f.hd-bkt.clouddn.com/video/猖獗.mkv'];
 let nameArr = [];
 videoArr.map((v) => {
 	let n = v.slice(v.lastIndexOf('/') + 1,v.lastIndexOf('.'));
