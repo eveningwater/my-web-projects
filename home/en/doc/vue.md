@@ -51,3 +51,4 @@
 |  47   | [kinetic-loader](https://github.com/eveningwater/my-web-projects/tree/master/vue/47/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/47/) |
 |  48   | [stick-navbar](https://github.com/eveningwater/my-web-projects/tree/master/vue/48/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/48/) |
 |  49   | [double-slider](https://github.com/eveningwater/my-web-projects/tree/master/vue/49/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/49/) |
+|  50   | [toast-notification](https://github.com/eveningwater/my-web-projects/tree/master/vue/50/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/50/) |

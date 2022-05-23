@@ -6,10 +6,11 @@ $color:#0f2972,#494948,#4a9104,#970707,#864f07;
 $typeList:default,info,success,error,warning;
 .#{$baseSelector}toast {
     @include setComponent(border-radius,15,px);
-    @include setComponent(padding-top,.4,rem);
-    @include setComponent(padding-top,.4,rem);
-    @include setComponent(padding-left,.6,rem);
-    @include setComponent(padding-right,.6,rem);
+    @include setComponent(padding-top,.6,rem);
+    @include setComponent(padding-bottom,.6,rem);
+    @include setComponent(padding-left,4,rem);
+    @include setComponent(padding-right,4,rem);
+    @include setComponent(margin,1,rem);
     @include setComponent(border-radius,15,px);
     @include setComponent(letter-spacing,2,px);
     @include setComponent(font-size,14,px);
@@ -17,10 +18,10 @@ $typeList:default,info,success,error,warning;
     &-close-btn {
         @extend .el-pos-a,.el-cursor-pointer;
         @include setComponent(right,6,px);
-        @include setComponent(top,3,px);
+        @include setComponent(top,6,px);
         @include setComponent(font-size,20,px);
     }
-    @for $type from 1 to length($typeList) {
+    @for $type from 1 to length($typeList) + 1 {
         &.#{$baseSelector}toast-#{list.nth($typeList,$type)} {
             @include background(list.nth($bgColor,$type));
             color:list.nth($color,$type);

@@ -51,3 +51,4 @@
 |  47   | [图形旋转动画](https://github.com/eveningwater/my-web-projects/tree/master/vue/47/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/47/) |
 |  48   | [固定导航](https://github.com/eveningwater/my-web-projects/tree/master/vue/48/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/48/) |
 |  49   | [双滑动轮播](https://github.com/eveningwater/my-web-projects/tree/master/vue/49/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/49/) |
+|  50   | [消息提示框](https://github.com/eveningwater/my-web-projects/tree/master/vue/50/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/50/) |
