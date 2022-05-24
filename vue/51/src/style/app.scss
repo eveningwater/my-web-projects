@@ -1,0 +1,120 @@
+@use "sass:list";
+* {
+    @extend .bs-border-box,
+    .reset;
+}
+
+body,
+html {
+    @extend .over-hidden;
+    .app {
+        font-family: $font-family;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        @extend .over-hidden,.el-display-flex,.el-jc-center,.el-ai-center,.el-fd-column;
+        @include background($appBgColor);
+        @include setComponent(height,100,vh);
+        @include setComponent(padding-top,0,null);
+        @include setComponent(padding-bottom,0,null);
+        @include setComponent(padding-left,1,rem);
+        @include setComponent(padding-right,1,rem);
+        .#{$baseSelector}search-input,.#{$baseSelector}card  {
+            @include setComponentPercent(width,100);
+            @include setComponent(max-width,700,px);
+        }
+        .#{$baseSelector}main {
+            @include setComponentPercent(width,100);
+            @include setComponent(margin-top,2,rem);
+            @include setComponent(padding-left,1,rem);
+            @include setComponent(padding-right,1,rem);
+            @extend .el-display-flex,.el-jc-center;
+            .#{$baseSelector}card {
+                @include setComponent(min-width,600,px);
+                @include background($cardBgColor);
+                @include setComponent(padding,3,rem);
+                @include setComponent(border-radius,25,px);
+                box-shadow: 0 4px 5px $cardShadowColor-1, 0 16px 35px $cardShadowColor-2;
+                @extend .el-display-flex;
+                &.#{$baseSelector}error-card {
+                    @include background($cardErrorBgColor);
+                    @include color($cardErrorColor);
+                    box-shadow: 0 4px 5px $cardShadowErrorColor-1, 0 16px 35px $cardShadowErrorColor-2;
+                    p{
+                        @extend .el-text-center;
+                    }
+                }
+                p{
+                    line-height: 1.5;
+                    @include setComponent(margin-top,1,rem);
+                    @include setComponent(margin-bottom,1,rem);
+                    @include setComponent(letter-spacing,2,px);
+                }
+                &-avatar {
+                    @extend .el-cursor-pointer;
+                    &-img {
+                        @include setComponent(width,120,px);
+                        @include setComponent(height,120,px);
+                        @include setComponentPercent(border-radius,50);
+                        border: {
+                            color:$avatarBorderColor;
+                            style:solid;
+                            width:5px;
+                        };
+                        &:hover {
+                            transform: rotate(100turn);
+                            transition-delay: 1s;
+                            transition-duration: 59s;
+                            transition-timing-function: ease-in-out;
+                        }
+                    }
+                }
+                &-user-info {
+                    @include color($cardUserInfoColor);
+                    @include setComponent(margin-left,1.5,rem);
+                    &-title {
+                        @include setComponent(letter-spacing,2,px);
+                        @include setComponent(margin-top,0,null);
+                    }
+                    &-tag-list {
+                        list-style: none;
+                        @extend .el-display-flex,.el-jc-space-between;
+                        &-item {
+                            @extend .el-display-flex,.el-ai-center;
+                            &:not(:first-child){
+                                @include setComponent(margin-left,0.4,rem);
+                            }
+                            strong {
+                                @include setComponent(margin-left,0.3,rem);
+                            }
+                        }
+                    }
+                    .#{$baseSelector}repo {
+                        text-decoration: none;
+                        @include setComponent(padding-top,0.3,rem);
+                        @include setComponent(padding-bottom,0.3,rem);
+                        @include setComponent(padding-left,.8,rem);
+                        @include setComponent(padding-right,.8,rem);
+                        @include setComponent(margin-top,1,rem);
+                        @include setComponent(border-radius,4,px);
+                        @include setComponent(margin-right,.6,rem);
+                        @include setComponent(font-size,15,px);
+                        @extend .el-display-inline-block;
+                        @include color($white);
+                        @include background($cardLinkBgColor);
+                        &:hover {
+                            @include background($cardLinkHoverBgColor);
+                        }
+                    }
+                }
+            }
+            @media (max-width:500px){
+                .#{$baseSelector}card,.#{$baseSelector}.#{$baseSelector}error-card {
+                    @include setComponent(min-width,300,px);
+                    @include setComponent(padding,1,rem);
+                    justify-content: center;
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+}

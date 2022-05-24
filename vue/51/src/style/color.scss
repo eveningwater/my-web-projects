@@ -1,0 +1,16 @@
+@use "sass:color";
+$transparent:transparent;
+$white:#ffffff;
+$black:#000000;
+$appBgColor:linear-gradient(135deg,#81c2ff 10%,#d43cf3 90%);
+$cardBgColor:linear-gradient(135deg,#b7d9f8 10%,#0a85e9 90%);
+$cardShadowColor-1:#abdcff;
+$cardShadowColor-2:#0396ff;
+$avatarBorderColor:#ce9ffc;
+$cardUserInfoColor:#f4f3f2;
+$cardErrorBgColor: linear-gradient( 135deg, #FEB692 10%, #EA5455 100%);
+$cardShadowErrorColor-1:#ffabab;
+$cardShadowErrorColor-2:#ff0303;
+$cardErrorColor:#b61111;
+$cardLinkBgColor:linear-gradient( 135deg, #3B2667 10%, #BC78EC 100%);
+$cardLinkHoverBgColor:linear-gradient( 135deg, #340892 10%, #832dc0 100%);
