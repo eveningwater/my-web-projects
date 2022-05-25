@@ -1,0 +1,67 @@
+@use "sass:list";
+* {
+    @extend .bs-border-box,
+    .reset;
+}
+
+body,
+html {
+    @extend .over-hidden;
+    .app {
+        font-family: $font-family;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        @extend .over-hidden;
+        @include setComponentPercent(width,100);
+        @include setComponent(height,100,vh);
+        @extend .el-text-center;
+        @include background($appBgColor);
+        .#{$baseSelector}title {
+            @include setComponent(margin-top,2,em);
+            @include color($white);
+        }
+        .#{$baseSelector}count-container {
+            @include setComponent(margin-top,1,em);
+            @include color($white);
+            @extend .el-display-block;
+            .#{$baseSelector}count {
+                @include setComponent(margin-left,5,px);
+                @include setComponent(margin-right,5,px);
+                @include color($countColor);
+                @include setComponent(font-size,16,px);
+            }
+        }
+        .#{$baseSelector}love {
+            $background:url("https://www.eveningwater.com/my-web-projects/js/21/img/2.gif")no-repeat center/cover;
+            @include setComponent(width,350,px);
+            @include setComponent(height,55,vh);
+            @include setComponent(margin-top,2,em);
+            @include setComponent(margin-bottom,2,em);
+            @include setComponent(margin-left,auto,null);
+            @include setComponent(margin-right,auto,null);
+            @include setComponent(border-radius,12,px);
+            @include setComponentPercent(max-width,100);
+            @include background($background);
+            box-shadow: 0 2px 12px fade-in(rgba(255,255,255,.1), .1);
+            @extend .el-cursor-pointer,.el-pos-r;
+        }
+        .#{$baseSelector}btn {
+            @extend .el-display-inline-block,.el-cursor-pointer;
+            @include setComponent(border-width,0,null);
+            @include setComponent(padding-top,12,px);
+            @include setComponent(padding-bottom,12,px);
+            @include setComponent(padding-left,20,px);
+            @include setComponent(padding-right,20,px);
+            @include setComponent(border-radius,10,px);
+            @include background($btnBgColor);
+            @include color($white);
+            box-shadow: 0 -2px 12px fade-out(rgba(255,255,255,.3), .1);
+            &:focus-visible {
+                outline: none;
+            }
+            &:hover {
+                @include background($btnHoverBgColor);
+            }
+        }
+    }
+}

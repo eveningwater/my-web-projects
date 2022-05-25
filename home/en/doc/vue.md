@@ -53,3 +53,4 @@
 |  49   | [double-slider](https://github.com/eveningwater/my-web-projects/tree/master/vue/49/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/49/) |
 |  50   | [toast-notification](https://github.com/eveningwater/my-web-projects/tree/master/vue/50/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/50/) |
 |  50   | [github-profiles](https://github.com/eveningwater/my-web-projects/tree/master/vue/51/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/51/) |
+|  52   | [double-click-heart](https://github.com/eveningwater/my-web-projects/tree/master/vue/52/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/52/) |
