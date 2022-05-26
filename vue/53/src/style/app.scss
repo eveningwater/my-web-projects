@@ -1,0 +1,25 @@
+@use "sass:list";
+* {
+    @extend .bs-border-box,
+    .reset;
+}
+
+body,
+html {
+    @extend .over-hidden;
+    .app {
+        font-family: $font-family;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        @extend .over-hidden,.el-display-flex,.el-jc-center,.el-ai-center;
+        @include background($appBgColor);
+        @include setComponentPercent(width,100);
+        @include setComponent(height,100,vh);
+        .#{$baseSelector}text {
+            font-size: 200%;
+            @include color($white);
+            font-family: "幼圆","楷体";
+            letter-spacing: 2px;
+        }
+    }
+}

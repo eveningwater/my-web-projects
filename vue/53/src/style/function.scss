@@ -1,0 +1,18 @@
+
+@use "sass:list";
+@use "sass:string";
+/*
+* 截取属性字符
+*/
+@function propSlice($prop, $start, $end) {
+    @return string.unquote(string.slice(string.quote($prop), $start, $end));
+}
+/*
+* 循环往列表中添加列表项
+*/
+@function loopAppend($list,$start,$end,$prefix-value,$value){
+    @for $i from $start to $end {
+        $list:append($list,$prefix-value + list.nth($value,$i),list-separator($list));
+    }
+    @return $list;
+}

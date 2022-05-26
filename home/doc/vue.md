@@ -54,3 +54,4 @@
 |  50   | [消息提示框](https://github.com/eveningwater/my-web-projects/tree/master/vue/50/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/50/) |
 |  51   | [github-简介](https://github.com/eveningwater/my-web-projects/tree/master/vue/51/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/51/) |
 |  52   | [点击生成爱心](https://github.com/eveningwater/my-web-projects/tree/master/vue/52/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/52/) |
+|  53   | [自动文本效果](https://github.com/eveningwater/my-web-projects/tree/master/vue/53/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/53/) |
