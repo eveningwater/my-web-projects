@@ -55,3 +55,4 @@
 |  51   | [github-简介](https://github.com/eveningwater/my-web-projects/tree/master/vue/51/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/51/) |
 |  52   | [点击生成爱心](https://github.com/eveningwater/my-web-projects/tree/master/vue/52/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/52/) |
 |  53   | [自动文本效果](https://github.com/eveningwater/my-web-projects/tree/master/vue/53/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/53/) |
+|  54   | [密码生成器](https://github.com/eveningwater/my-web-projects/tree/master/vue/54/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/54/) |

@@ -1,0 +1,107 @@
+@use "sass:list";
+* {
+    @extend .bs-border-box,
+    .reset;
+}
+
+body,
+html {
+    @extend .over-hidden;
+    .app {
+        font-family: $font-family;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        @extend .over-hidden,.el-display-flex,.el-jc-center,.el-ai-center;
+        @include background($appBgColor);
+        @include setComponent(height,100,vh);
+        @include setComponentPercent(width,100);
+        .#{$baseSelector}box {
+            @include setComponent(width,350,px);
+            @include setComponent(padding,20,px);
+            @include setComponent(border-radius,10,px);
+            @include setComponentPercent(max-width,100);
+            @include background($pgBgColor);
+            box-shadow: 0 3px 12px $pgBoxShadowColor;
+            &-title {
+                @extend .el-text-center;
+                @include setComponent(margin-bottom,10,px);
+                @include color($white);
+            }
+            &-result {
+                @extend .el-display-flex,.el-jc-flex-start,.el-ai-center,.el-pos-r;
+                @include color($white);
+                @include background($pgResultBgColor);
+                @include setComponent(height,45,px);
+                @include setComponent(border-radius,5,px);
+                @include setComponent(padding-top,8,px);
+                @include setComponent(padding-bottom,8,px);
+                @include setComponent(padding-left,20,px);
+                @include setComponent(padding-right,20,px);
+                &-btn {
+                    @extend .el-pos-a;
+                    @include setComponent(right,5,px);
+                    @include setComponent(top,5,px);
+                    @include setComponent(width,35,px);
+                    @include setComponent(height,35,px);
+                    @include setComponent(border-radius,5,px);
+                    @extend .el-display-flex,.el-jc-center,.el-ai-center,.el-cursor-pointer;
+                    border: none;
+                    @include background($pgResultBtnBgColor);
+                    &:hover {
+                        @include setComponent(opacity,.8,null);
+                    }
+                }
+            }
+            &-setting-list {
+                @include setComponent(padding-top,20,px);
+                @include setComponent(padding-bottom,20,px);
+                &-item {
+                    @include setComponent(min-height,35,px);
+                    @extend .el-display-flex,.el-jc-space-between,.el-ai-center;
+                    @include color($white);
+                    &-label {
+                        font-family: "幼圆","楷体";
+                    }
+                    &-input[type="number"] {
+                        @extend .el-display-inline-block;
+                        @include setComponent(padding-top,10,px);
+                        @include setComponent(padding-bottom,10,px);
+                        @include setComponent(padding-left,16,px);
+                        @include setComponent(padding-right,16,px);
+                        @include setComponent(font-size,14,px);
+                        @include setComponent(max-width,80,px);
+                        @include setComponent(border-radius,5,px);
+                        &:focus-visible {
+                            outline: none;
+                        }
+                        border: {
+                            color:$inputNumberBorderColor;
+                            style:solid;
+                            width:1px;
+                        }
+                        @include color($inputNumberFontColor);
+                    }
+                }
+            }
+            &-btn {
+                border: none;
+                @include background($pgResultBtnBgColor);
+                @include setComponent(padding-top,14,px);
+                @include setComponent(padding-bottom,14,px);
+                @include setComponent(padding-left,20,px);
+                @include setComponent(padding-right,20,px);
+                @include setComponent(font-size,15,px);
+                @include setComponent(border-radius,6,px);
+                @include setComponent(letter-spacing,2,px);
+                @include setComponentPercent(width,100);
+                @include color($white);
+                @extend .el-cursor-pointer,.el-display-inline-block;
+                box-shadow: 2px 3px 13px $pgBoxShadowColor;
+                transition: background .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                &:hover {
+                    @include background($pgResultBtnBgActiveColor);
+                }
+            }
+        }
+    }
+}

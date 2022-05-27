@@ -55,4 +55,6 @@
 |  50   | [github-profiles](https://github.com/eveningwater/my-web-projects/tree/master/vue/51/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/51/) |
 |  52   | [double-click-heart](https://github.com/eveningwater/my-web-projects/tree/master/vue/52/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/52/) |
 |  53   | [auto-text-effect](https://github.com/eveningwater/my-web-projects/tree/master/vue/53/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/53/) |
+|  54   | [password-generator](https://github.com/eveningwater/my-web-projects/tree/master/vue/54/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/54/) |
+
 
