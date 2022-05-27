@@ -1,7 +1,10 @@
 <script setup lang="ts">
     import { PropType } from 'vue';
     const props = defineProps({
-        modelValue:[Number,String] as PropType<number | string>,
+        modelValue:{
+            type:[Number,String] as PropType<number | string>,
+            default:1
+        },
         min:{
             type:Number as PropType<number>,
             default:1
@@ -11,7 +14,7 @@
             default:10
         }
     });
-    const emit = defineEmits(["update:modelValue"]);
+    const emit = defineEmits(["update:modelValue","on-change"]);
 </script>
 <template>
     <div class="ate-speed">
@@ -21,7 +24,8 @@
             :min="props.min" 
             :max="props.max" 
             class="ate-speed-input" 
-            @input="emit('update:modelValue',($event?.target as HTMLInputElement).value)" 
+            @input="emit('update:modelValue',($event?.target as HTMLInputElement).value)"
+            @change="emit('on-change',$event)" 
             :value="props.modelValue" 
         />
     </div>
