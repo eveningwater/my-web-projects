@@ -1,0 +1,22 @@
+@use "sass:list";
+* {
+    @extend .bs-border-box,
+    .reset;
+}
+
+body,
+html {
+    @extend .over-hidden;
+    .app {
+        font-family: $font-family;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        @extend .over-hidden,.el-display-flex,.el-jc-center,.el-ai-center,.el-fd-column;
+        @include background($appBgColor);
+        @include setComponent(height,100,vh);
+        .#{$baseSelector}title {
+            @include color($titleColor);
+            @include setComponent(margin-bottom,15,px);
+        }
+    }
+}
