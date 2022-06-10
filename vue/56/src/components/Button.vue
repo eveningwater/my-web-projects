@@ -1,6 +1,6 @@
 <script lang="tsx">
     import { PropType,Fragment,defineComponent } from "vue";
-import classnames from "../utils/classnames";
+    import classnames from "../utils/classnames";
     const typeArr = ["button","submit","reset"];
     export default defineComponent({
         props:{
@@ -14,7 +14,8 @@ import classnames from "../utils/classnames";
             content:String as PropType<string>,
             className:String as PropType<string>
         },
-        setup(props,{ slots }){
+        emits:["click"],
+        setup(props,{ slots,emit }){
             const { nativeType,content,className } = props;
             const renderChildren = () => slots.default ? slots.default() : content;
             type ClassType = {
@@ -28,7 +29,7 @@ import classnames from "../utils/classnames";
             }
             return () => (
                 <Fragment>
-                    <button type={ nativeType as "button" } class={classnames(classes)}>{ renderChildren() }</button>
+                    <button type={ nativeType as "button" } class={classnames(classes)} onClick={$event => emit('click',$event)}>{ renderChildren() }</button>
                 </Fragment>
             )
         }

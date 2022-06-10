@@ -57,3 +57,4 @@
 |  53   | [自动文本效果](https://github.com/eveningwater/my-web-projects/tree/master/vue/53/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/53/) |
 |  54   | [密码生成器](https://github.com/eveningwater/my-web-projects/tree/master/vue/54/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/54/) |
 |  55   | [开关小组件](https://github.com/eveningwater/my-web-projects/tree/master/vue/55/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/55/) |
+|  56   | [笔记应用](https://github.com/eveningwater/my-web-projects/tree/master/vue/56/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/56/) |

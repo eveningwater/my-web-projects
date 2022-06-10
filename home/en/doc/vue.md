@@ -57,5 +57,6 @@
 |  53   | [auto-text-effect](https://github.com/eveningwater/my-web-projects/tree/master/vue/53/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/53/) |
 |  54   | [password-generator](https://github.com/eveningwater/my-web-projects/tree/master/vue/54/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/54/) |
 |  55   | [good-cheap-fast](https://github.com/eveningwater/my-web-projects/tree/master/vue/55/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/55/) |
+|  56   | [notes-app](https://github.com/eveningwater/my-web-projects/tree/master/vue/56/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/56/) |
 
 

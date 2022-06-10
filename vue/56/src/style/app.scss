@@ -29,7 +29,8 @@ html {
             }
         }
         .#{$baseSelector}note-container {
-            @extend .el-display-flex,.flex-wrap;
+            @extend .el-display-flex,.flex-wrap,.el-pos-r;
+            @include setComponent(top,3,rem);
         }
     }
 }
