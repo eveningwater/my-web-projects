@@ -1,3 +1,4 @@
+let m = marked.marked;
 function on(element, type, handler, useCapture = false) {
     if (element && type && handler) {
         element.addEventListener(type, handler, useCapture);
@@ -40,7 +41,7 @@ function addNewNote(note,focusStatus) {
         <i class="fas fa-trash-alt"></i>
     </button>
     </div>
-    <div class="main main-content">${marked(note.text)}</div>
+    <div class="main main-content">${m(note.text)}</div>
     <textarea class="textarea main" data-focus="${ focusStatus }"></textarea>`;
     container.appendChild(noteItem);
     addNoteHandler(noteItem, note.id,focusStatus);
@@ -61,7 +62,7 @@ function addNoteHandler(note, dataId,focusStatus) {
     const index = notes.findIndex(_ => _.id === dataId);
     on(textarea, "blur", e => {
         notes[index].text = textarea.value;
-        main.innerHTML = marked(notes[index].text);
+        main.innerHTML = m(notes[index].text);
         if(!textarea.classList.contains("hidden")){
             textarea.classList.add("hidden");
         }
@@ -93,7 +94,7 @@ function addNoteHandler(note, dataId,focusStatus) {
         } else {
             textarea.setAttribute("data-focus","false");
             notes[index].text = textarea.value;
-            main.innerHTML = marked(notes[index].text);
+            main.innerHTML = m(notes[index].text);
             setData("notes", notes);
         }
     });
