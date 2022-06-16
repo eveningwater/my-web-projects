@@ -1,0 +1,97 @@
+@use "sass:list";
+@import "./variable.scss";
+@import "./color.scss";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.perfect {
+    width: percentage(1);
+    height: percentage(1);
+}
+.common-style {
+    position: list.nth($positionList,1);
+	margin-left: auto;
+	margin-right: auto;
+}
+.#{$baseSelector}lang-panel {
+    position: list.nth($positionList,2);
+    list-style: none;
+}
+body,html {
+    font: {
+        size:16px;
+        family:"微软雅黑","楷体";
+    }
+    background-color:$bodyBgColor;
+    overflow: {
+        x:hidden;
+        y:auto;
+    }
+    @extend .perfect;
+    .app {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-family: $globalFontFamily;
+        @extend .perfect;
+        .#{$baseSelector}btn,.#{$baseSelector}textarea {
+            &:focus-visible {
+                outline:0;
+            }
+        }
+        .#{$baseSelector}main,.#{$baseSelector}content,.#{$baseSelector}header {
+            @extend .common-style;
+        }
+        .#{$baseSelector}title,.#{$baseSelector}result {
+            font: {
+                size:20px;
+            }
+            line: {
+                height:45px;
+            }
+            color:$titleOrResultColor;
+        }
+        .#{$baseSelector}lang-panel.#{$baseSelector}mobile-lang-panel {
+            transition: all .4s cubic-bezier(0.075, 0.82, 0.165, 1);
+            height:0;
+            z-index: -1;
+            &.show {
+                height: auto;
+                z-index: 0;
+            }
+        }
+        .#{$baseSelector}content,.#{$baseSelector}footer {
+            z-index: 1;
+            background-color: inherit;
+        }
+        .#{$baseSelector}main {
+            width: calc(100% - 60px);
+            height: auto;
+            border: {
+                width: 1px;
+                style:solid;
+                color:$mainBorderColor;
+                radius:15px;
+            }
+            margin: {
+                top:10px;
+            }
+            background: $mainBgColor;
+            box-shadow: 0 5px 10px $mainBoxShadowColor;
+            padding: 10px;
+        }
+        .#{$baseSelector}title,.#{$baseSelector}header  {
+            text: {
+                align:left;
+            }
+            color:$headerOrTitleColor;
+        }
+        .#{$baseSelector}header .#{$baseSelector}result{
+            text: {
+                align:right;
+            }
+            color: $headerOrResultColor;
+        }
+    }
+}
