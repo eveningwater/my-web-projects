@@ -1,0 +1,6 @@
+.wrap {
+    /*列数*/
+    column-count: 4; 
+    /* 列与列之间的间距 */
+    column-gap: 10px;
+}

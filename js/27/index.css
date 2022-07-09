@@ -42,7 +42,8 @@ html {
 }
 
 .set-unicode-btn,
-.get-unicode-btn {
+.get-unicode-btn,
+.copy-unicode-btn {
   display: inline-block;
   max-width: 150px;
   height: 35px;
@@ -61,7 +62,9 @@ html {
 .set-unicode-btn:hover,
 .set-unicode-btn:active,
 .get-unicode-btn:hover,
-.get-unicode-btn:active {
+.get-unicode-btn:active,
+.copy-unicode-btn:hover,
+.copy-unicode-btn:active {
   background-color: #2391df;
 }
 

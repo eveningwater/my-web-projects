@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4种方式实现瀑布流布局</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            height: 100vh;
+            background: linear-gradient(135deg,#97d4f7 10%,#0ea2e7 90%);
+        }
+        .btn {
+            display: inline-block;
+            outline: none;
+            border: none;
+            background: linear-gradient(135deg,#f7d197 10%,#e7890e 90%);
+            transition: background .4s cubic-bezier(0.075, 0.82, 0.165, 1);
+            color: #fff;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            margin-right: 15px;
+            cursor: pointer;
+            font-size: 17px;
+            letter-spacing: 2px;
+        }
+        .btn:hover {
+            background: linear-gradient(135deg,#eebd73 10%,#e68507 90%);
+        }
+    </style>
+</head>
+<body>
+    <button type="button" class="btn" data-type="css-column-count-flow">column-count固定列数</button>
+    <button type="button" class="btn" data-type="js-computed-flow">js动态计算固定列数</button>
+    <button type="button" class="btn" data-type="css-flex-flow">flex布局固定列数</button>
+    <button type="button" class="btn" data-type="dynamic-column-flow">js动态计算不固定列数</button>
+</body>
+<script>
+    const btnList = document.querySelectorAll(".btn")
+    btnList.forEach(item => {
+        item.addEventListener("click",() => {
+            const type = item.dataset.type;
+            const w = window.open(`./${type}/index.html`)
+            w.opener = null
+        })
+    })
+</script>
+</html>

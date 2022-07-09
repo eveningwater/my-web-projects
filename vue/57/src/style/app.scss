@@ -1,0 +1,15 @@
+@use "sass:list";
+* {
+    @extend .bs-border-box,
+    .reset;
+}
+
+body,
+html {
+    @extend .over-hidden;
+    .app {
+        font-family: $font-family;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
