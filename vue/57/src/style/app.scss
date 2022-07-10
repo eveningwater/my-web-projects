@@ -7,9 +7,47 @@
 body,
 html {
     @extend .over-hidden;
+    :focus-visible {
+        outline:list.nth($display,length($display - 1));
+    }
     .app {
         font-family: $font-family;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
+        @include background($appBgColor);
+        @include setComponent(height,100,vh);
+        .#{$baseSelector}counter,.#{$baseSelector}final {
+            @extend .el-text-center,.el-pos-a;
+            @include setComponentPercent(top,50);
+            @include setComponentPercent(left,50);
+            transform: translate(-50%,-50%);
+            .#{$baseSelector}title {
+                color: #fff;
+                font-family: sans-serif;
+                text-transform: uppercase;
+            }
+        }
+        .#{$baseSelector}counter {
+            &.hide {
+                transform: translate(-50%,-50%) scale(0);
+                animation: hide .3s linear;
+            }
+            .#{$baseSelector}title {
+                @include setComponent(margin-left,1,rem);
+                @include setComponent(margin-right,1,rem);
+                @include setComponent(margin-top,10,px);
+                @include setComponent(margin-bottom,10,px);
+            }
+        }
+        .#{$baseSelector}final {
+            transform: translate(-50%,-50%) scale(0);
+            .#{$baseSelector}title {
+                @include setComponent(margin,5,px);
+            }
+            &.show {
+                transform: translate(-50%,-50%) scale(1);
+                animation: show .4s linear;
+            }
+        }
     }
 }
