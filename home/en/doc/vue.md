@@ -60,5 +60,5 @@
 |  56   | [notes-app](https://github.com/eveningwater/my-web-projects/tree/master/vue/56/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/56/) |
 |  57   | [animated-countdown](https://github.com/eveningwater/my-web-projects/tree/master/vue/57/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/57/) |
 |  58   | [image-carousel](https://github.com/eveningwater/my-web-projects/tree/master/vue/58/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/58/) |
-
+|  59   | [hover board](https://github.com/eveningwater/my-web-projects/tree/master/vue/59/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/59/) |
 

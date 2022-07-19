@@ -60,3 +60,4 @@
 |  56   | [笔记应用](https://github.com/eveningwater/my-web-projects/tree/master/vue/56/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/56/) |
 |  57   | [倒计时动画](https://github.com/eveningwater/my-web-projects/tree/master/vue/57/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/57/) |
 |  58   | [图片轮播](https://github.com/eveningwater/my-web-projects/tree/master/vue/58/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/58/) |
+|  59   | [悬浮面板](https://github.com/eveningwater/my-web-projects/tree/master/vue/59/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/59/) |

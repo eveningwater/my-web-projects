@@ -1,0 +1,4 @@
+$baseSelector:hb-;
+@mixin setProperty($prop,$value,$unit: null){
+    #{$prop}:$value + $unit;
+}
