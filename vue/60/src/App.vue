@@ -12,8 +12,8 @@ const request = async (url: string) => {
     pokeList.value.push(handleData(data))
 }
 onMounted(() => {
-    for(let i = 0;i < pokeCount;i++){
-        request(requestURL+(i + 1))
+    for(let i = 1;i <= pokeCount;i++){
+        request(requestURL + i)
     }
 })
 </script>

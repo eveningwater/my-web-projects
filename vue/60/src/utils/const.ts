@@ -35,6 +35,8 @@ export const handleData = (data: PokeRequestData.PokeDataType) => {
     const pokeTypes = data.types.map(t => t.type.name);
 	const type = mainColors.find(key => pokeTypes.includes(key)) as KeysColorsType;
 	const color = colors[type];
+	console.log(data.id.toString().padStart(3,"0"));
+	
 	return {
 		background: `linear-gradient(135deg, ${ color } 10%, ${ randomColor() } 100%)`,
 		number: data.id.toString().padStart(3,"0"),
