@@ -8,12 +8,12 @@ const AsyncPokeCard = defineAsyncComponent(() => import('@/components/pokeCard.v
 const pokeList = ref<PokeListItem []>([])
 const request = async (url: string) => {
     const res = await fetch(url);
-    const data = await res.json() as PokeRequestData.PokeDataType;
+    const data = await res.json();
     pokeList.value.push(handleData(data))
 }
-onMounted(() => {
+onMounted(async () => {
     for(let i = 1;i <= pokeCount;i++){
-        request(requestURL + i)
+        await request(requestURL + i)
     }
 })
 </script>
