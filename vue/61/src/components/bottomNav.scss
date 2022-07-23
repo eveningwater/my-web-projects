@@ -1,0 +1,31 @@
+.#{$baseSelector}bottom-tab {
+    @include setProperty(width,100%);
+    @include setProperty(position,absolute);
+    @include setProperty(left,0);
+    @include setProperty(bottom,0);
+    @include setProperty(margin-top,-5px);
+    &-ul {
+        @include setProperty(list-style,none);
+        @include setProperty(height,60px);
+        @include setProperty(display,flex);
+        @include setProperty(background,linear-gradient(135deg,#98c5f1 10%,#0da7ee 90%));
+        &-li {
+            @include setProperty(flex,1 1);
+            @include setProperty(padding,.8rem);
+            @include setProperty(font-size,14px);
+            @include setProperty(cursor,pointer);
+            @include setProperty(text-align,center);
+            @include setProperty(color,rgba(255, 255, 255, 0.85));
+            &-text {
+                @include setProperty(text-overflow,ellipsis);
+                @include setProperty(overflow,hidden);
+                @include setProperty(white-space,nowrap);
+                @include setProperty(font-size,12px);
+                @include setProperty(margin-top,.2rem);
+            }
+            &.active {
+                @include setProperty(color,fade-in(#035492,.85));
+            }
+        }
+    }
+}

@@ -1,0 +1,8 @@
+$baseSelector:mtn-;
+@mixin setProperty($prop,$value,$unit: null){
+    @if $unit {
+        #{$prop}:$value + $unit; 
+    }@else{
+        #{$prop}:$value; 
+    }
+}

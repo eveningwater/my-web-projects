@@ -1,0 +1,23 @@
+.base-style {
+    @include setProperty(width,100%);
+    @include setProperty(position,absolute);
+    @include setProperty(left,0);
+    @include setProperty(top,0);
+    @include setProperty(overflow,hidden);
+}
+.#{$baseSelector}carousel {
+    @extend .base-style;
+    $value: calc(100% - 60px);
+    @include setProperty(height,$value);
+    &-item {
+        @include setProperty(height,100%);
+        @extend .base-style;
+        @include setProperty(object-fit,fill);
+        @include setProperty(display,block);
+        @include setProperty(opacity,0);
+        @include setProperty(transition,opacity .3s ease-in-out);
+        &.active {
+            @include setProperty(opacity,1);
+        }
+    }
+}
