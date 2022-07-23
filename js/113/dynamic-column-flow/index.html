@@ -11,44 +11,13 @@
 
 <body>
     <div id="wrap" class="wrap"></div>
+    <script src="../common/create-wrap.js"></script>
+    <script src="../common/create-flow.js"></script>
     <script>
-        const BASE_URL = 'https://www.eveningwater.com/my-web-projects/jQuery/7/img/'
         const wrap = document.querySelector("#wrap");
-        const initWrapItem = () => {
-            return new Promise((resolve) => {
-                for (let i = 0; i < 10; i++) {
-                    const item = document.createElement("div");
-                    item.className = `wrap-item wrap-item-${(i + 1)}`;
-                    item.innerHTML = `<img class='wrap-item-img' src="${BASE_URL + (i + 1)}.jpg">`
-                    wrap.appendChild(item)
-                }
-                resolve()
-            })
-        }
-        const createFlow = (cols = 3) => {
-            let divList = Array.from(wrap.children);
-            let pageW = document.documentElement.clientWidth;
-            let divW = parseInt((pageW - (cols + 1) * 10) / cols);
-            let arrH = [];
-            divList.forEach((item, index) => {
-                item.style.width = `calc(100% / ${ cols } - 20px / ${cols})`
-                if (index < cols) {
-                    arrH.push(item.clientHeight);
-                    item.style.left = index * divW + index * 10 + 'px';
-                }
-            })
-            for (let i = cols; i < divList.length; i++) {
-                let minH = Math.min.apply(null, arrH);
-                let idx_min = arrH.indexOf(minH);
-                divList[i].style.left = divList[idx_min].style.left;
-                // 10为间隙距离
-                divList[i].style.top = minH + 10 + 'px';
-                arrH[idx_min] = minH + divList[i].clientHeight + 10;
-            }
-        }
         window.onload = function () {
-            initWrapItem().then(() => createFlow(5))
-            window.addEventListener("resize",() => createFlow(5))
+            createWrap(wrap).then(() => createFlow(wrap,5))
+            window.addEventListener("resize",() => createFlow(wrap,5))
         }
     </script>
 </body>
