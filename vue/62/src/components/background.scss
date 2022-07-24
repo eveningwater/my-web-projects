@@ -1,0 +1,9 @@
+.#{$baseSelector}background {
+    @include setProperty(position,absolute);
+    @include setProperty(left,0);
+    @include setProperty(right,0);
+    @include setProperty(top,0);
+    @include setProperty(bottom,0);
+    @include setProperty(z-index,-1);
+    // @include setProperty(background,url("https://www.eveningwater.com/static/page/CSS/css-code-50-image/comic-girl-02.jpg")no-repeat 50% / cover)
+}

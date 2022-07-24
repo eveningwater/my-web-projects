@@ -63,3 +63,4 @@
 |  59   | [悬浮面板](https://github.com/eveningwater/my-web-projects/tree/master/vue/59/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/59/) |
 |  60   | [宠物图鉴](https://github.com/eveningwater/my-web-projects/tree/master/vue/60/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/60/) |
 |  61   | [手机选项卡导航](https://github.com/eveningwater/my-web-projects/tree/master/vue/61/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/61/) |
+|  62   | [密码强度背景](https://github.com/eveningwater/my-web-projects/tree/master/vue/62/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/62/) |
