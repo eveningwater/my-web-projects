@@ -7,7 +7,7 @@
     "start": "live-server ./",
     "home": "cd home & yarn dev",
     "home:build": "cd home & yarn build",
-    "50-website-build":"cd 50-mini-web-website & yarn build",
+    "50-website-build": "cd 50-mini-web-website & yarn build",
     "animate": "bash scripts/animate.sh",
     "css": "bash scripts/css.sh",
     "echarts": "bash scripts/echarts.sh",
@@ -32,5 +32,7 @@
     "url": "https://github.com/eveningwater/my-web-projects/issues"
   },
   "homepage": "https://github.com/eveningwater/my-web-projects#readme",
-  "dependencies": {}
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
 }
