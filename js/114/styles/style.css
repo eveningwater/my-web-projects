@@ -1,0 +1,146 @@
+:root {
+    --elevatorBorderColor--: rgba(0,0,0.85);
+    --elevatorBtnBgColor--: #fff;
+    --elevatorBtnBgDisabledColor--: #898989;
+    --elevatorBtnDisabledColor--: #c2c3c4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.ew-elevator-building {
+    width: 350px;
+    max-width: 100%;
+    min-height: 500px;
+    border: 6px solid var(--elevatorBorderColor--);
+    margin: 3vh auto;
+    overflow: hidden;
+    display: flex;  
+}
+
+.ew-elevator-shaft {
+    border-right: 2px solid var(--elevatorBorderColor--);
+    width: 200px;
+    padding: 1px;
+    position: relative;
+}
+
+.ew-elevator {
+    height: 98px;
+    width: calc(100% - 2px);
+    background: url("https://www.eveningwater.com/my-web-projects/js/26/img/6.jpg") center / cover no-repeat;
+    border: 1px solid var(--elevatorBorderColor--);
+    padding: 1px;
+    transition-timing-function: ease-in-out;
+    position: absolute;
+    left: 1px;
+    bottom: 1px;
+}
+
+.ew-elevator-door {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background-color: var(--elevatorBorderColor--);
+    border: 1px solid var(--elevatorBtnBgColor--);
+    top: 0;
+}
+
+.ew-elevator-left-door {
+    left: 0;
+}
+
+.ew-elevator-right-door {
+   right: 0;
+}
+
+.ew-elevator-left-door.toggle {
+    animation: doorLeft 3s 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.ew-elevator-right-door.toggle {
+    animation: doorRight 3s 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.ew-elevator-storey-zone {
+    width: auto;
+    height: 100%;
+}
+
+.ew-elevator-storey {
+    display: flex;
+    align-items: center;
+    height: 98px;
+    border-bottom: 1px solid var(--elevatorBorderColor--);
+}
+
+.ew-elevator-controller {
+    width: 70px;
+    height: 98px;
+    padding: 8px 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.ew-elevator-btn {
+    width: 36px;
+    height: 36px;
+    border: 1px solid var(--elevatorBorderColor--);
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    background-color: var(--elevatorBtnBgColor--);
+}
+.ew-elevator-btn.checked {
+    background-color: var(--elevatorBorderColor--);
+    color:var(--elevatorBtnBgColor--);
+}
+.ew-elevator-btn:last-of-type {
+    margin-top: 8px;
+}
+.ew-elevator-btn[disabled] {
+    cursor: not-allowed;
+    background-color: var(--elevatorBtnBgDisabledColor--);
+    color: var(--elevatorBtnDisabledColor--);
+}
+
+.ew-elevator-count {
+    width: 80px;
+    height: 98px;
+    text-align: center;
+    font: 56px / 98px "微软雅黑","楷体";
+}
+
+@keyframes doorLeft {
+    0% {
+        left: 0px;
+    }
+    25% {
+        left: -90px;
+    }
+    50% {
+        left: -90px;
+    }
+    100% {
+        left:0;
+    }
+}
+
+@keyframes doorRight {
+    0% {
+        right: 0px;
+    }
+    25% {
+        right: -90px;
+    }
+    50% {
+        right: -90px;
+    }
+    100% {
+        right:0;
+    }
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>elevator</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <div class="ew-elevator-building">
+        <div class="ew-elevator-shaft">
+            <div class="ew-elevator">
+                <div class="ew-elevator-left-door ew-elevator-door"></div>
+                <div class="ew-elevator-right-door ew-elevator-door"></div>
+            </div>
+        </div>
+        <div class="ew-elevator-storey-zone"></div>
+    </div>
+</body>
+<script src="https://www.eveningwater.com/static/plugin/message.min.js"></script>
+<script src="./scripts/index.js"></script>
+<script>
+    new Elevator(6);
+</script>
+</html>
