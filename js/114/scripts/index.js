@@ -19,12 +19,10 @@ class Elevator {
       template += `
                 <div class="ew-elevator-storey">
                     <div class="ew-elevator-controller">
-                        <button type="button" class="ew-elevator-to-top ew-elevator-btn" ${
-                          i === count - 1 ? "disabled" : ""
-                        }>↑</button>
-                        <button type="button" class="ew-elevator-to-bottom ew-elevator-btn" ${
-                          i === 0 ? "disabled" : ""
-                        }>↓</button>
+                        <button type="button" class="ew-elevator-to-top ew-elevator-btn" ${i === count - 1 ? "disabled" : ""
+        }>↑</button>
+                        <button type="button" class="ew-elevator-to-bottom ew-elevator-btn" ${i === 0 ? "disabled" : ""
+        }>↓</button>
                     </div>
                     <div class="ew-elevator-count">${i + 1}</div>
                 </div>
@@ -48,6 +46,7 @@ class Elevator {
         if (btn.classList.contains("checked")) {
           return;
         }
+        Array.from(this.btnGroup).forEach(btn => btn.setAttribute('disabled', true));
         btn.classList.add("checked");
         const currentFloor = this.count - floorIndex;
         const moveFloor = currentFloor - 1;
@@ -72,13 +71,17 @@ class Elevator {
     });
 
     $message.success(
-      `本美女就要出来了，请速速来迎接,再等${
-        (diffFloor * 1000 + 3000) / 1000
+      `本美女就要出来了，请速速来迎接,再等${(diffFloor * 1000 + 3000) / 1000
       }s就关电梯门了!`
     );
 
     setTimeout(() => {
-      [...this.btnGroup].forEach((btn) => btn.classList.remove("checked"));
+      [...this.btnGroup].forEach((btn, index) => {
+        btn.classList.remove("checked");
+        if (index !== 0 && index !== this.btnGroup.length - 1) {
+          btn.removeAttribute("disabled");
+        }
+      });
     }, diffFloor * 1000);
 
     setTimeout(() => {
