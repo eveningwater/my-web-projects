@@ -5,35 +5,43 @@
 
 The first 20` demos of the `web` project implemented by the native `js` of this project refer to the Chinese version implemented by [vanilla-web-projects](https://github.com/bradtraversy/vanillawebprojects), although many The code draws on the original project, but it is also different from the original project, because the logic code is completely inconsistent, and each project has been expanded accordingly, and subsequent projects are written for their usual accumulation.
 
-> animate directory: mainly use some examples completed by animation library.
+> angular directory: example done mostly with angular.js
 
-> CSS Catalog: Mainly use simple HTML and CSS to complete the examples.
+> animate directory: Examples done mainly using some animation libraries.
 
-> echarts directory: mainly use the visualization chart examples completed by echarts.
+> CSS Table of Contents: Examples done mostly using simple HTML and CSS.
 
-> JQuery catalog: Examples mainly completed with jQuery.
+> echarts directory: Examples of visual diagrams done mainly using echarts.
 
-> js directory: mainly use HTML, CSS, JavaScript to complete the example.
+> JQuery Catalog: Examples done mostly using jQuery.
 
-> React Catalog: Examples are mainly completed using React.js.
+> js directory: Examples done mainly using HTML, CSS, JavaScript.
 
-> threejs directory: mainly use three.js to complete the example [includes an AR example completed by easy AR API].
+React catalog: Examples done mostly using React.js.
 
-> vue directory: mainly use vue.js to complete the example.
+> threejs directory: Examples done mainly using three.js [including an AR example done with the easy AR API].
 
-> typescript-directory:mainly use typescript to complete the example.
+> vue directory: Examples done mainly using vue.js.
 
-> demo directory: a collection of demos for some small functions.
+> typescript directory: examples done mostly using typescript.
 
-> home directory: the official website of this project, built using vuepress.
+> home directory: the official website of this project, built with vuepress.
 
-> website directory: the personal responsive website.
+> website directory: Personal responsive website.
 
-> plugins directory: Collection of plugins written in JavaScript.
+> php directory: example done using php and frontend.
 
-> error directory:the error html.
+> plugins directory: A collection of plugins written via JavaScript.
 
-> scripts directory:A collection of script files for running.
+> searchError directory: some bad html.
+
+> scripts directory: A collection of script files for running.
+
+> utils directory: some utility functions.
+
+> gh-pages directory: official website, personal website and source code (deployment) of 50 sample websites.
+
+> other directory: some other useful information.
 
 If you feel that this project helps you learn, I hope you don’t be stingy with star.
 

@@ -4,6 +4,8 @@
 
 本项目原生`js`实现的`web`项目前`20`个`demo`参考了[vanilla-web-projects](https://github.com/bradtraversy/vanillawebprojects)所实现的中文版，虽然很多代码借鉴了原项目，但也不同于原项目，因为逻辑代码完全不一致，而且每一个项目也做了相应的扩展，后续的项目为自己平时积累所写。
 
+> angular目录:主要使用angular.js完成的示例
+
 > animate目录:主要使用一些动画库完成的示例。
 
 > CSS目录:主要使用简单的HTML和CSS完成的示例。
@@ -26,11 +28,19 @@
 
 > website目录:个人响应式网站。
 
+> php目录:使用php和前端完成的示例。
+
 > plugins目录:通过JavaScript编写的插件集合。
 
-> error目录:一些错误的html。
+> searchError目录:一些错误的html。
 
 > scripts目录:一些用于运行的脚本文件集合。
+
+> utils目录:一些工具函数。
+
+> gh-pages目录:官网，个人网站以及50个示例网站的源代码（部署）。
+
+> other目录:其它的一些觉得有用的资料。
 
 如果觉得本项目帮助到您学习，还望不吝啬 star。
 
@@ -42,10 +52,17 @@
 
 ### 如何运行
 
+#### gh-pages目录
+
+```shell
+npm install // yarn install 或者 pnpm install
+npm run dev
+```
+
 #### website目录
 
 ```shell
-npm run start //或者yarn start
+npm run start //或者yarn start 或者 pnpm start
 ```
 
 #### 1.home目录，即文档目录。

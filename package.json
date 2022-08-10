@@ -5,6 +5,7 @@
   "main": "website/script/script.js",
   "scripts": {
     "start": "live-server ./",
+    "dev":"live-server ./gh-pages",
     "home": "cd home & yarn dev",
     "home:build": "cd home & yarn build",
     "50-website-build": "cd 50-mini-web-website & yarn build",
