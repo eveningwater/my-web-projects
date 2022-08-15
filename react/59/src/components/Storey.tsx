@@ -103,7 +103,7 @@ const Storey = (props: Partial<StoreyProps>) => {
     changeButtonDisabled(key,true)
     setTimeout(() => {
       setChecked(void 0);
-      changeButtonDisabled(key,true)
+      changeButtonDisabled(key,false)
     }, diffFloor * 1000);
   };
   return (
