@@ -1,0 +1,12 @@
+:root {
+    --elevatorBorderColor--: rgba(0,0,0.85);
+    --elevatorBtnBgColor--: #fff;
+    --elevatorBtnBgDisabledColor--: #898989;
+    --elevatorBtnDisabledColor--: #c2c3c4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
