@@ -87,10 +87,14 @@ const Storey = (props: Partial<StoreyProps>) => {
     }
   },[storeyRef])
 
-  const changeButtonDisabled = (key:string,status: boolean) => {
-    if(+key !== storeyList?.length && +key !== 1){
-      setStoreyList((storey) => storey?.map(item => ({ ...item,disabled: status })))
+  const changeButtonDisabled = (key:string,method: keyof MethodProps,status: boolean) => {
+    if(+key === storeyList?.length && method === 'onUp'){
+      return;
     }
+    if((+key === 1 && method === 'onDown')){
+      return;
+    }
+    setStoreyList((storey) => storey?.map(item => ({ ...item,disabled: status })));
   }
   const onClickHandler = (key: string,index:number,method: keyof MethodProps) => {
     setChecked(key)
@@ -99,11 +103,10 @@ const Storey = (props: Partial<StoreyProps>) => {
     const diffFloor = Math.abs(moveFloor - currentFloor)
     setCurrentFloor(moveFloor)    
     props[method]?.(diffFloor, offset * (moveFloor - 1))
-    // 也许这不是一个好的方法
-    changeButtonDisabled(key,true)
+    changeButtonDisabled(key,method,true)
     setTimeout(() => {
       setChecked(void 0);
-      changeButtonDisabled(key,false)
+      changeButtonDisabled(key,method,false)
     }, diffFloor * 1000);
   };
   return (
