@@ -76,7 +76,7 @@ class Elevator {
           });
         });
 
-        console.log(
+        $message.success((
           `本美女就要出来了，请速速来迎接,再等${this.doorCloseTime / 1000
           }s就关电梯门了!`
         );
