@@ -47,7 +47,6 @@ class Elevator {
         if (btn.classList.contains("checked")) {
           return;
         }
-        Array.from(this.btnGroup).forEach(btn => btn.setAttribute('disabled', true));
         btn.classList.add("checked");
         const currentFloor = this.count - floorIndex;
         const moveFloor = currentFloor - 1;
@@ -69,24 +68,18 @@ class Elevator {
       [...this.btnGroup].forEach((btn, index) => {
 
         // open door
-        Array.from(this.doors).forEach((door) => {
-          door.classList.add("toggle");
-          this.addStyles(door, {
-            animationDelay: 0 + "s",
-          });
-        });
+        Array.from(this.doors).forEach((door) => door.classList.add("toggle"));
 
-        $message.success((
-          `本美女就要出来了，请速速来迎接,再等${this.doorCloseTime / 1000
-          }s就关电梯门了!`
-        );
+        if(!this.$('.ew-message')){
+          $message.success(
+            `本美女就要出来了，请速速来迎接,再等${this.doorCloseTime / 1000
+            }s就关电梯门了!`
+          );
+        }
 
         // close door
         setTimeout(() => {
           Array.from(this.doors).forEach((door) => door.classList.remove("toggle"));
-          if (index !== 0 && index !== this.btnGroup.length - 1) {
-            btn.removeAttribute("disabled");
-          }
         }, this.doorCloseTime);
 
         btn.classList.remove("checked");
