@@ -1,5 +1,6 @@
 <script lang="ts" setup>
-import { ref, onMounted, PropType } from "vue";
+import { ref, onMounted, PropType, defineAsyncComponent } from "vue";
+const AsyncLoader = defineAsyncComponent(() => import('./Loader.vue'))
 const props = defineProps({
   src: String as PropType<string>,
   loadInitially: Boolean as PropType<boolean>,
@@ -37,8 +38,19 @@ onMounted(() => {
 </script>
 <template>
   <img
-    :src="isLoaded ? props.src : ''"
+    :src="props.src"
     ref="imgRef"
     :loading="loadInitially ? undefined : 'lazy'"
+    v-if="isLoaded"
   />
+  <div class="mini-web-loader-container" v-else>
+    <async-loader></async-loader>
+  </div>
 </template>
+<style lang="less" scoped>
+  .@{baseSelector}loader-container {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+  }
+</style>
