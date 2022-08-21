@@ -103,3 +103,7 @@ body {
     left: 0;
     top: -15px;
 }
+.rating-item {
+    width: 40px;
+    height: 40px;
+}

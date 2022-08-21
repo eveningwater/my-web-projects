@@ -1,22 +1,22 @@
 import './App.css';
 import React, { Component } from "react";
+import { unhappyIcon,neutralIcon,satisfiedIcon } from './const'
 const DOCUMENT_TITLE = "feedback-ui-design";
-const BASE_SRC = "https://image.flaticon.com/icons/svg/187/";
 export default class App extends Component {
     constructor(props){
         super(props);
         this.state = {
             feedBackList:[
                 {
-                    src:"187150.svg",
+                    src:unhappyIcon,
                     text:"Unhappy"
                 },
                 {
-                    src:"187136.svg",
+                    src:neutralIcon,
                     text:"Neutral"
                 },
                 {
-                    src:"187133.svg",
+                    src:satisfiedIcon,
                     text:"Satisfied"
                 }
             ],
@@ -56,7 +56,9 @@ export default class App extends Component {
                                         key={feed.text + index}
                                         onClick={this.changeRatingHandler.bind(this,feed)}
                                     >
-                                       <img src={BASE_SRC + feed.src} alt={feed.text} className="fd-send-rating-icon"></img>
+                                       <div className="fd-send-rating-icon">
+                                        <feed.src ></feed.src>
+                                       </div>
                                        <small className="fd-send-text">{feed.text}</small>
                                     </div>
                                ))

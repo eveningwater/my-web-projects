@@ -49,6 +49,7 @@
 }
 .fd-send-rating-icon {
     width: 40px;
+    height: 40px;
 }
 .fd-send-text,.fd-receive-text {
     display: inline-block;
