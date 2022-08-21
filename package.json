@@ -8,6 +8,7 @@
     "dev":"live-server ./gh-pages",
     "home": "cd home & yarn dev",
     "home:build": "cd home & yarn build",
+    "50-website": "cd 50-mini-web-website & yarn dev",
     "50-website-build": "cd 50-mini-web-website & yarn build",
     "animate": "bash scripts/animate.sh",
     "css": "bash scripts/css.sh",

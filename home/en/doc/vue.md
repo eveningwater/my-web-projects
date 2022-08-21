@@ -65,4 +65,5 @@
 |  61   | [mobile-tab-navigation](https://github.com/eveningwater/my-web-projects/tree/master/vue/61/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/61/) |
 |  62   | [password-strength-background](https://github.com/eveningwater/my-web-projects/tree/master/vue/62/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/62/) |
 |  63   | [3d-background-boxes](https://github.com/eveningwater/my-web-projects/tree/master/vue/63/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/63/) |
+|  64   | [verify-account-ui](https://github.com/eveningwater/my-web-projects/tree/master/vue/64/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/64/) |
 
