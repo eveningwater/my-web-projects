@@ -1,6 +1,6 @@
 <script lang="ts" setup>
     import { reactive } from '@vue/reactivity';
-import { onMounted, watch } from '@vue/runtime-core';
+    import { onMounted, watch } from '@vue/runtime-core';
     interface ReactiveType {
         tabList:Array<{ label:string,value:string }>;
         currentLang:string;
