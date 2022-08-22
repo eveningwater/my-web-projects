@@ -1,0 +1,15 @@
+$btnBgColor: linear-gradient(135deg,#faa056 10%,#eb8603 90%);
+$btnBgActiveColor: linear-gradient(135deg,#f5bd90 10%,#eb9321 90%);
+.#{$baseSelector}btn {
+    @include setProperty(background,$btnBgColor);
+    @include setProperty(outline,none);
+    @include setProperty(padding,12px 30px);
+    @include setProperty(cursor,pointer);
+    @include setProperty(color,$white);
+    @include setProperty(border,none);
+    @include setProperty(border-radius,8px);
+    @include setProperty(font-size,18px);
+    &:hover {
+        @include setProperty(background,$btnBgActiveColor);
+    }
+}

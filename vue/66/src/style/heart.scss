@@ -1,0 +1,25 @@
+$heartBgColor:#e63f0c;
+.#{$baseSelector}heart {
+    @include setProperty(width,25px);
+    @include setProperty(height,25px);
+    @include setProperty(background-color,$heartBgColor);
+    @include setProperty(position,relative);
+    @include setProperty(margin,1em auto);
+    @include setProperty(transform,rotate(45deg));
+    &::before,&::after {
+        @include setProperty(width,percentage(1));
+        @include setProperty(height,percentage(1));
+        @include setProperty(content,"");
+        @include setProperty(border-radius,50%);
+        @include setProperty(position,absolute);
+        @include setProperty(background-color,$heartBgColor);
+    }
+    &::before {
+        @include setProperty(left,-15px);
+        @include setProperty(top,0);
+    }
+    &::after {
+        @include setProperty(top,-15px);
+        @include setProperty(left,0);
+    }
+}

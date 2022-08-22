@@ -1,0 +1,12 @@
+.page {
+    @include setProperty(transition, all .1s cubic-bezier(.22, .12, .33, .6));
+    @include setProperty(backface-visibility,hidden);
+    @include setProperty(position,absolute);
+    @include setProperty(left,0);
+    @include setProperty(top,0);
+    @include setProperty(width,percentage(1));
+    @include setProperty(height,percentage(1));
+    @extend .flex-center;
+    @include setProperty(flex-direction,column);
+    @include setProperty(background, $white);
+}

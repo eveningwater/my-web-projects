@@ -1,0 +1,5 @@
+$titleColor: #ef3023;
+.#{$baseSelector}title {
+    @include setProperty(color, $titleColor);
+    @include setProperty(line-height, 22px);
+}
