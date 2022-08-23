@@ -1,0 +1,15 @@
+$prefix:crs-;
+@mixin setProperty($prop,$value,$unit: null){
+    @if $unit {
+        #{$prop}:$value + $unit; 
+    }@else{
+        #{$prop}:$value; 
+    }
+}
+$white:#fff;
+
+.flex-center {
+    @include setProperty(display,flex);
+    @include setProperty(justify-content,center);
+    @include setProperty(align-items,center);
+}

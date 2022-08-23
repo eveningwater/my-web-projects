@@ -68,4 +68,5 @@
 |  64   | [verify-account-ui](https://github.com/eveningwater/my-web-projects/tree/master/vue/64/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/64/) |
 |  65   | [live-user-filter](https://github.com/eveningwater/my-web-projects/tree/master/vue/65/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/65/) |
 |  66   | [feedback-ui-design](https://github.com/eveningwater/my-web-projects/tree/master/vue/66/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/66/) |
+|  67   | [custom-range-slider](https://github.com/eveningwater/my-web-projects/tree/master/vue/67/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/67/) |
 
