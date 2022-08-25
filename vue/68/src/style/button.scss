@@ -1,0 +1,10 @@
+.#{$prefix}btn {
+    @include setProperty(color,$white);
+    @include setProperty(border,none);
+    @include setProperty(font-size,25px);
+    @include setProperty(cursor,pointer);
+    @include setProperty(background,transparent);
+    &::focus-visible {
+        @include setProperty(outline,none);
+    }
+}

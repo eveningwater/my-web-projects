@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body,html {
+    height: 100%;
+}
+.header {
+    width: 100%;
+    padding: 15px 0;
+}
+.upload {
+    width: 200px;
+    height: 200px;
+    border: 6px dashed #2396ef;
+    color: rgba(0,0,0,.85);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-size: 14px;
+    margin: auto;
+}
+.file-input {
+    display: none;
+}
+.btn-group {
+    text-align: center;
+    margin-bottom: 15px;
+}
+.btn {
+    outline: none;
+    cursor: pointer;
+    border: 1px solid #dededf;
+    border-radius: 4px;
+    padding: 4px 12px;
+    color: rgba(0,0,0,.85);
+    background-color: transparent;
+    transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    font-size: 14px;
+    margin-right: 15px;
+}
+.btn:hover,.btn:active {
+    border-color:#2ea1fa;
+    color: #2396ef;
+}
+
+.preview {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 15px;
+}
+.img {
+    margin-top: 15px;
+}
+.loading {
+    font-size: 14px;
+    color: rgba(0,0,0,.85);
+    text-align: center;
+}
+.loading > dot {
+    height:1em;
+    overflow:hidden;
+    display:inline-block;
+    text-align:left;
+    vertical-align:-.25em;
+    line-height:1;
+}
+/* 核心代码 */
+.loading > dot:before {
+    display:block;
+    /* 这行代码最重要 */
+    content:'...\A..\A.';
+    /* 值是Pre也是一样的效果 */
+    white-space:pre-wrap;
+    animation:dot 3s infinite step-start both;
+}
+@keyframes dot {
+    33% {
+        transform:translateY(-2em);
+    }
+    66% {
+        transform:translateY(-1em);
+    }
+}
+.ew-popBox-content {
+    max-width: 400px;
+    word-break: break-all;
+    max-height: 400px;
+    overflow-y: auto;
+}
