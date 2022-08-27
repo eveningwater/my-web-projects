@@ -71,3 +71,4 @@
 |  67   | [自定义范围滑块](https://github.com/eveningwater/my-web-projects/tree/master/vue/67/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/67/) |
 |  68   | [移动导航](https://github.com/eveningwater/my-web-projects/tree/master/vue/68/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/68/) |
 |  69   | [小测验](https://github.com/eveningwater/my-web-projects/tree/master/vue/69/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/69/) |
+|  70   | [推荐盒切换台](https://github.com/eveningwater/my-web-projects/tree/master/vue/70/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/70/) |

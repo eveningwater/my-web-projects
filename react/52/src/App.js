@@ -73,7 +73,7 @@ export default class App extends Component {
     }
     updateTestimonial(){
         let { current,testimonials } = this.state;
-        if(current > testimonials.length - 1){
+        if(current >= testimonials.length - 1){
             current = 0;
         }else{
             current++;

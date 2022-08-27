@@ -71,4 +71,4 @@
 |  67   | [custom-range-slider](https://github.com/eveningwater/my-web-projects/tree/master/vue/67/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/67/) |
 |  68   | [netflix-mobile-navigation](https://github.com/eveningwater/my-web-projects/tree/master/vue/68/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/68/) |
 |  69   | [quiz-app](https://github.com/eveningwater/my-web-projects/tree/master/vue/69/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/69/) |
-
+|  70   | [testimonial-box-switcher](https://github.com/eveningwater/my-web-projects/tree/master/vue/70/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/70/) |
