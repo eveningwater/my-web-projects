@@ -72,3 +72,4 @@
 |  68   | [netflix-mobile-navigation](https://github.com/eveningwater/my-web-projects/tree/master/vue/68/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/68/) |
 |  69   | [quiz-app](https://github.com/eveningwater/my-web-projects/tree/master/vue/69/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/69/) |
 |  70   | [testimonial-box-switcher](https://github.com/eveningwater/my-web-projects/tree/master/vue/70/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/70/) |
+|  71   | [random-image-feed](https://github.com/eveningwater/my-web-projects/tree/master/vue/71/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/71/) |

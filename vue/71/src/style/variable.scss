@@ -1,0 +1,19 @@
+$prefix:rif-;
+@mixin setProperty($prop,$value,$unit: null){
+    @if $unit {
+        #{$prop}:$value + $unit; 
+    }@else{
+        #{$prop}:$value; 
+    }
+}
+$white:#fff;
+.flex-center {
+    @include setProperty(display,flex);
+    @include setProperty(justify-content,center);
+    @include setProperty(align-items,center);
+}
+.reset {
+    @include setProperty(margin,0);
+    @include setProperty(padding,0);
+    @include setProperty(box-sizing,border-box);
+}

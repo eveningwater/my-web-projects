@@ -6,7 +6,7 @@ type ResType = {
     name: Record<string, unknown>,
     location: Record<string, unknown>
 };
-const AsyncLazyLoadImage = defineAsyncComponent(() => import('./LazyLoadImage.vue'));
+const AsyncPreLoadImage = defineAsyncComponent(() => import('./PreLoadImage.vue'));
 const AsyncTitle = defineAsyncComponent(() => import('./Title.vue'));
 const list = ref<{ image: string, name: string, location: string,key: string }[]>([]);
 const originList = ref<{ image: string, name: string, location: string,key: string }[]>([]);
@@ -36,7 +36,7 @@ onMounted(async () => {
 <template>
     <ul class="luf-user-list">
         <li class="luf-user-list-li" v-for="item in list" :key="item.key">
-            <async-lazy-load-image class="luf-user-list-li-avatar" :src="item.image" :alt="item.name"></async-lazy-load-image>
+            <async-pre-load-image class="luf-user-list-li-avatar" :src="item.image" :alt="item.name"></async-pre-load-image>
             <div class="luf-user-list-li-info">
                 <async-title level="4" class="luf-user-list-li-info-name">{{ item.name }}</async-title>
                 <p class="luf-user-list-li-info-location">{{ item.location }}</p>

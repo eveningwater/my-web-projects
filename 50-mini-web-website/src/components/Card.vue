@@ -1,6 +1,6 @@
 <script lang="ts" setup>
     import { ComponentPublicInstance, nextTick, onMounted, PropType } from '@vue/runtime-core';
-    import LazyLoadImage from './LazyLoadImage.vue'
+    import PreLoadImage from './PreLoadImage.vue'
     import { toRefs } from 'vue';
     import { ref } from '@vue/reactivity';
     import { getImageURL,isTextOverflow } from '../utils/util';
@@ -34,7 +34,7 @@
 <template>
     <div class="mini-web-card">
         <div class="mini-web-card-item-front">
-            <LazyLoadImage :src="getImageURL(directory,cardSourceURL as string)" alt="图片加载中" class="mini-web-card-img" />
+            <PreLoadImage :src="getImageURL(directory,cardSourceURL as string)" alt="图片加载中" class="mini-web-card-img" />
         </div>
         <div class="mini-web-card-item-behind">
             <card-title level="2" class="mini-web-card-title" :data-title="cardName" ref="titleContainer">{{ (cardIndex as number + 1) }}.{{ cardName }}</card-title>
