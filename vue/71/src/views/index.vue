@@ -3,8 +3,10 @@ import { defineAsyncComponent, onMounted, ref } from 'vue';
 import { getRandomSize, URL } from '../utils/const';
 const AsyncTitle = defineAsyncComponent(() => import('@/components/Title.vue'));
 const AsyncRandomList = defineAsyncComponent(() => import('@/components/RandomList.vue'));
-const imageList = ref<{ src: string, alt: string }[]>([])
+const AsyncBackTop = defineAsyncComponent(() => import('@/components/BackTop.vue'));
+const imageList = ref<{ src: string, alt: string }[]>();
 const loadImage = (rows = 5) => {
+    imageList.value = [];
     let i = rows * 3;
     do {
         imageList.value.push({
@@ -23,6 +25,7 @@ onMounted(() => {
             random-image-feed
         </async-title>
         <async-random-list :list="imageList"></async-random-list>
+        <async-back-top />
     </div>
 </template>
 <style lang="scss" scoped>
