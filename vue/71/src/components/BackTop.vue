@@ -3,8 +3,8 @@ import { computed, onMounted, onUnmounted, ref } from 'vue';
 const show = ref(false);
 const onScrollHandler = () => {
     const doc = document;
-    const { scrollTop,clientHeight } = doc.documentElement || doc.body;    
-    show.value = scrollTop >= clientHeight - 10;
+    const { scrollTop,clientHeight,scrollHeight } = doc.documentElement || doc.body;
+    show.value = scrollTop + clientHeight >=  scrollHeight;
 }
 onMounted(() => {
     window.addEventListener('scroll',onScrollHandler);
