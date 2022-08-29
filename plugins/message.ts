@@ -145,7 +145,7 @@ export function Message(this: any, option: string | OptionType){
 }
 Message.prototype.render = function(messageOption:OptionType){
     if (messageOption.closeTime <= 0 && !messageOption.showClose) messageOption.showClose = true;
-    let closeBtn = null;
+    let closeBtn:HTMLElement | null = null;
     if (messageOption.showClose) {
         closeBtn = document.createElement('i');
         closeBtn.classList.add('ew-message-close');
