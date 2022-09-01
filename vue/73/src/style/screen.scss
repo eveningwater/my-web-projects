@@ -1,0 +1,35 @@
+$btnBgColor: linear-gradient(135deg, #ebf0ea 10%, #f3f3f3 90%);
+$btnBorderColor:#f2f3f4;
+$btnColor:#0ee44e;
+.#{$prefix}screen {
+    @include setProperty(width,100vw);
+    @include setProperty(height,100vh);
+    @extend .flex-center;
+    @include setProperty(flex-direction,column);
+    @include setProperty(position,relative);
+    @include setProperty(overflow,hidden);
+    @include setProperty(transition,all .3s cubic-bezier(.2,.8,.4,.9));
+    &-title {
+        @include setProperty(margin-bottom,1rem);
+        @include setProperty(letter-spacing,2px);
+        @include setProperty(line-height,1.5);
+    }
+    &-btn {
+        @include setProperty(display,inline-block);
+        @include setProperty(padding,.6rem 1rem);
+        @include setProperty(border-radius,8px);
+        @include setProperty(border,1px solid $btnBorderColor);
+        @include setProperty(cursor,pointer);
+        @include setProperty(color,$btnColor);
+        @include setProperty(font-size,18px);
+        @include setProperty(background,$btnBgColor);
+        @include setProperty(letter-spacing,2px);
+        @include setProperty(outline,none);
+        &:hover {
+            @include setProperty(opacity,.96);
+        }
+    }
+    &.hidden {
+        @include setProperty(margin-top,-100vh);
+    }
+}

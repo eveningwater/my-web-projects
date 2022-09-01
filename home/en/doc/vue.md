@@ -74,3 +74,4 @@
 |  70   | [testimonial-box-switcher](https://github.com/eveningwater/my-web-projects/tree/master/vue/70/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/70/) |
 |  71   | [random-image-feed](https://github.com/eveningwater/my-web-projects/tree/master/vue/71/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/71/) |
 |  72   | [todo-list](https://github.com/eveningwater/my-web-projects/tree/master/vue/72/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/72/) |
+|  73   | [insect-catch-game](https://github.com/eveningwater/my-web-projects/tree/master/vue/73/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/73/) |
