@@ -30,10 +30,11 @@ const createInsect = () => {
     });
 }
 const continueCreateInsect = () => {
-    if (insect?.value) {
-        setTimeout(() => createInsect(), 1500);
-        setTimeout(() => createInsect(), 2000);
+    if (!insect || !insect?.value) {
+        return;
     }
+    setTimeout(() => createInsect(), 1500);
+    setTimeout(() => createInsect(), 2000);
 }
 const increaseTime = () => {
     seconds++;
@@ -42,13 +43,12 @@ const increaseTime = () => {
     time.value = `${filterZero(m)}:${filterZero(s)}`;
 }
 const increaseScore = () => {
+    score.value++;
     if (score.value >= 20) {
         if (timer) {
             clearTimeout(timer as ReturnType<typeof setTimeout>);
         }
         showModal.value = true;
-    } else {
-        score.value++;
     }
 }
 const startGame = () => {
@@ -57,13 +57,13 @@ const startGame = () => {
 }
 const onRestartHandler = () => {
     score.value = 0;
+    if(timer){
+        clearTimeout(timer)
+    }
     time.value = '00:00';
     showModal.value = false;
     currentCaught.value = void 0;
     insectList.value = [];
-    setTimeout(() => {
-        insectList.value = [];
-    }, 3000);
     emit('on-restart');
 }
 const onContinueHandler = () => {
@@ -83,7 +83,7 @@ const onCatchInsect = (index: number) => {
 defineExpose({
     createInsect,
     startGame
-})
+});
 </script>
 <template>
     <async-screen>
@@ -95,7 +95,7 @@ defineExpose({
             {{ data.score }}
             <span class="icg-screen-score-text">{{ score }}</span>
         </async-title>
-        <template v-if="insect">
+        <template v-if="props.insect">
             <div class="icg-screen-insect" v-for="(item, index) in insectList" :key="`${item.x}-${index + 1}`"
                 :class="{ caught: currentCaught === index }" @click="onCatchInsect(index)"
                 :style="{ left: item.x + 'px', top: item.y + 'px' }">
