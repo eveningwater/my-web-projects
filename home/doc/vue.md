@@ -77,5 +77,7 @@
 |  73   | [捉虫小游戏](https://github.com/eveningwater/my-web-projects/tree/master/vue/73/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/73/) |
 |  74   | [迷你自定义元素框架](https://github.com/eveningwater/my-web-projects/tree/master/vue/74/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/74/) |
 |  75   | [element ui 表格组件的封装](https://github.com/eveningwater/my-web-projects/tree/master/vue/75/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/75/) |
+|  76   | [element plus 表格组件的封装(js版本)](https://github.com/eveningwater/my-web-projects/tree/master/vue/76/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/76/) |
+|  77   | [element plus 表格组件的封装(ts版本)](https://github.com/eveningwater/my-web-projects/tree/master/vue/77/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/77/) |
 
 
