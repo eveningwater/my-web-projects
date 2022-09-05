@@ -79,5 +79,7 @@
 |  75   | [element ui 表格组件的封装](https://github.com/eveningwater/my-web-projects/tree/master/vue/75/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/75/) |
 |  76   | [element plus 表格组件的封装(js版本)](https://github.com/eveningwater/my-web-projects/tree/master/vue/76/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/76/) |
 |  77   | [element plus 表格组件的封装(ts版本)](https://github.com/eveningwater/my-web-projects/tree/master/vue/77/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/77/) |
+|  78   | [翻译工具（vue2版本）](https://github.com/eveningwater/my-web-projects/tree/master/vue/78/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/78/) |
+|  79   | [翻译工具（vue3版本）](https://github.com/eveningwater/my-web-projects/tree/master/vue/79/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/79/) |
 
 

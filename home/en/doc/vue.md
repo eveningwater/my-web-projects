@@ -79,3 +79,5 @@
 |  75   | [element ui table component](https://github.com/eveningwater/my-web-projects/tree/master/vue/75/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/75/) |
 |  76   | [element plus table component(js version)](https://github.com/eveningwater/my-web-projects/tree/master/vue/76/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/76/) |
 |  77   | [element plus table component(ts version)](https://github.com/eveningwater/my-web-projects/tree/master/vue/77/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/77/) |
+|  78   | [translate tool（vue2 version）](https://github.com/eveningwater/my-web-projects/tree/master/vue/78/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/78/) |
+|  79   | [translate tool（vue3 version）](https://github.com/eveningwater/my-web-projects/tree/master/vue/79/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/79/) |

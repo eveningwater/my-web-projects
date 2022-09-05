@@ -1,0 +1,56 @@
+body,html,section,main,header,div,button,ul,li,span,textarea,footer,p{
+	margin: 0;padding: 0;
+}
+body,html,section,main,header,div,button,ul,li,span,textarea,footer,p{
+	box-sizing: border-box;
+}
+body,html,section,main,header,div,button,ul,li,textarea,footer,p{
+	display: block;
+}
+button,textarea{
+	outline: none;
+}
+body{
+	font: 16px "微软雅黑";
+	overflow-x: hidden;
+	overflow-y: auto;
+	height: 100%;
+	width: 100%;
+	background-color: #eee;
+}
+.vt-app {
+    font-family: Arial, sans-serif, 'Avenir', Helvetica;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.vt-main,.vt-content,.vt-header{
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+}
+.vt-lang-panel{
+	position: absolute;
+}
+.vt-title,.vt-result {
+	font-size: 20px;
+	line-height: 45px;
+	color: rgb(33, 32, 32,0.99);
+}
+.vt-main{
+	width: calc(100% - 60px);
+	height: auto;
+	border: 1px solid #ddd;
+	box-shadow:  0 5px 10px rgba(255, 255, 255, 0.16);
+	background: #efebf2;
+	border-radius: 15px;
+	padding: 10px;
+	margin-top: 10px;
+}
+.vt-header .vt-title{
+	text-align: left;
+	color: #004000;
+}
+.vt-header .vt-result{
+	text-align: right;
+	color: #26a9f3;
+}

@@ -1,0 +1,11 @@
+@use "sass:color";
+$transparent:transparent;
+$white:#ffffff;
+$black:#000000;
+$bodyBgColor:#e2e2e2;
+$titleOrResultColor:fade-in(rgba(33, 32, 32,0.89),0.1);
+$headerOrTitleColor:#004000;
+$mainBorderColor:fade-out(rgba(221,221,221,1.1),.1);
+$mainBgColor:#efebf2;
+$mainBoxShadowColor:fade-in(rgba(255, 255, 255, 0.06),.1);
+$headerOrResultColor:#26a9f3;
