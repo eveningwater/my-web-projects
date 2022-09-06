@@ -36,6 +36,7 @@ html {
         linear-gradient(-45deg, transparent, transparent calc(50% - 0.5px), var(--black--) calc(50% - 0.5px), var(--black--) calc(50% + 0.5px), transparent calc(50% + 0.5px),
             transparent 0),
         repeating-linear-gradient(-45deg, transparent 0, transparent 5px, var(--white--) 5px, var(--white--) 10px),
+        /* 最下层的虚线 */
         linear-gradient(45deg, transparent,
             transparent calc(50% - 0.5px),
             var(--black--) calc(50% - 0.5px),
