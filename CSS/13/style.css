@@ -20,7 +20,7 @@ html {
     position: relative;
     max-width: 361px;
     width: 100%;
-    height: 451px;
+    height: 407px;
     outline: 1px solid var(--black--);
     outline-offset: 5px;
     background:
@@ -60,7 +60,7 @@ html {
         1px 181px, 0 0, 0 0,
         /* 交叉虚线1 */
         136px 0, 136px 0, 136px 0, 136px 0,
-        136px 360px, 136px 360px, 136px 360px, 136px 360px;
+        136px 315px, 136px 315px, 136px 315px, 136px 315px;
     line-height: 401px;
     text-align: center;
     font-size: 24px;
@@ -86,7 +86,7 @@ html {
         45px 45px, 65px 45px, 45px 55px, 65px 55px,
         135px 45px, 155px 45px, 155px 55px, 135px 55px,
         225px 45px, 245px 45px, 225px 55px, 245px 55px;
-    -webkit-box-reflect: below 280px;
+    -webkit-box-reflect: below 235px;
 }
 
 .chess::after {
@@ -100,5 +100,5 @@ html {
         45px 45px, 55px 45px, 45px 65px, 55px 65px,
         135px 45px, 145px 45px, 135px 65px, 145px 65px,
         225px 45px, 225px 65px, 235px 45px, 235px 65px;
-    -webkit-box-reflect: below 281px;
+    -webkit-box-reflect: below 235px;
 }
