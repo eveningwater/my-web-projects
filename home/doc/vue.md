@@ -81,5 +81,6 @@
 |  77   | [element plus 表格组件的封装(ts版本)](https://github.com/eveningwater/my-web-projects/tree/master/vue/77/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/77/) |
 |  78   | [翻译工具（vue2版本）](https://github.com/eveningwater/my-web-projects/tree/master/vue/78/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/78/) |
 |  79   | [翻译工具（vue3版本）](https://github.com/eveningwater/my-web-projects/tree/master/vue/79/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/79/) |
+|  80   | [element ui后台管理系统（切换中英文）](https://github.com/eveningwater/my-web-projects/tree/master/vue/80/) | [在线 demo](https://www.eveningwater.com/my-web-projects/vue/80/) |
 
 

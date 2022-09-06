@@ -1,0 +1,10 @@
+{
+    "login":{
+        "login-title":"welcome to login",
+        "login-btn-content":"login",
+        "username-content":"username",
+        "password-content":"password",
+        "user-placeholder":"input the username",
+        "password-placeholder":"input the password"
+    }
+}
