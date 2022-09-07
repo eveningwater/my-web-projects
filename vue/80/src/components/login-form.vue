@@ -2,6 +2,9 @@
     <el-card  shadow="always" class="login-form">
         <div slot="header">
             <h3>{{ loginLang['login-title'] }}</h3>
+            <div class="lang-tab">
+                <div class="lang-tab-item" @click="changeLangHandler">{{ langTabItem }}</div>
+            </div>
         </div>
         <el-form :model="loginForm" status-icon :rules="loginRules" ref="loginForm" label-width="80px">
             <el-form-item prop="username" :label="loginLang['username-content']">
@@ -42,6 +45,12 @@ export default {
     computed:{
         loginLang(){
             return this.$langStore.langConfig.login;
+        },
+        langTabItem(){
+            return this.currentLang === 'en' ? '中' : 'en';
+        },
+        currentLang(){
+            return this.$langStore.lang;
         }
     },
     mounted(){
@@ -64,6 +73,13 @@ export default {
                     this.$router.push("/");
                 }
             })
+        },
+        changeLangHandler(){
+            if(this.currentLang === 'en'){
+                this.$requestLangConfig('zh');
+            }else{
+                this.$requestLangConfig('en');
+            }
         }
     }
 }
@@ -80,6 +96,16 @@ export default {
         padding: 15px;
         .login-btn {
             width: 100%;
+        }
+        .lang-tab {
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            &-item {
+                color:rgba(0,0,0,.85);
+                font-size: 16px;
+                cursor: pointer;
+            }
         }
     }
 </style>

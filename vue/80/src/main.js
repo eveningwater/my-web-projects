@@ -9,14 +9,20 @@ Object.keys(request).forEach(key => {
   Vue.prototype['$'+ key] = request[key];
 });
 Vue.config.productionTip = false;
-const requestLangConfig = (type = "zh", params) => request.get(BASE_URL + "/mock/" + type + ".json", params);
+const requestLangConfig = async (type = "zh") => {
+    const res = await request.get(BASE_URL + "/mock/" + type + ".json");
+    if(res){
+      langStore.langConfig = res;
+    }
+    langStore.lang = type;
+};
+Vue.prototype.$requestLangConfig = requestLangConfig;
 new Vue({
   router,
   langStore,
   store,
   render: h => h(App),
   async created(){
-    const res = await requestLangConfig("en");
-    if(res)langStore.langConfig = res;
+    await requestLangConfig(langStore.lang);
   }
 }).$mount('#app')

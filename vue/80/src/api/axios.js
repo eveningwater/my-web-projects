@@ -4,9 +4,10 @@ import { Message, Loading } from 'element-ui'
 export let BASE_URL = '',
     loadingInstance;
 const HOST = process.env.NODE_ENV;
+console.log(111,HOST);
 switch (HOST) {
     case 'development':
-        BASE_URL = 'http://localhost:8080';
+        BASE_URL = '';
         break;
     case 'test':
         BASE_URL = '';
