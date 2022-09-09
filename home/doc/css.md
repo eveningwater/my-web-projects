@@ -16,3 +16,4 @@
 |  11   | [弹性盒子布局实现麻将](https://github.com/eveningwater/my-web-projects/tree/master/CSS/11/) | [在线 demo](https://www.eveningwater.com/my-web-projects/CSS/11/) |
 |  12   | [CSS实现数字时钟](https://github.com/eveningwater/my-web-projects/tree/master/CSS/12/) | [在线 demo](https://www.eveningwater.com/my-web-projects/CSS/12/) |
 |  13   | [CSS中国象棋](https://github.com/eveningwater/my-web-projects/tree/master/CSS/13/) | [在线 demo](https://www.eveningwater.com/my-web-projects/CSS/13/) |
+|  14   | [CSS实现文字轮播和图片轮播](https://github.com/eveningwater/my-web-projects/tree/master/CSS/14/) | [在线 demo](https://www.eveningwater.com/my-web-projects/CSS/14/) |
