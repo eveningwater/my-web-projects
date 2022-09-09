@@ -28,6 +28,7 @@ html {
     display: flex;
     height: 100%;
     justify-content: center;
+    flex-direction: column;
 }
 
 .cl-title {
