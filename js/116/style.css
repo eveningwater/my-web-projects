@@ -46,6 +46,7 @@ body {
     background: url('https://www.eveningwater.com/static/dist/20d6c430c2496590f224.jpg') no-repeat center/cover;
     position: fixed;
     margin: auto;
+    overflow: auto;
     bottom: 10px;
 }
 

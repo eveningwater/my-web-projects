@@ -54,6 +54,9 @@ class Game {
                     item.setAttribute('index', image[0].index);
                     item.style.backgroundImage = `url(${image[0].src})`;
                     const clickHandler = () => {
+                        if(item.parentElement.className === 'ew-collection'){
+                            return;
+                        }
                         if (!item.classList.contains('ew-shadow')) {
                             const currentIndex = item.getAttribute('index');
                             if (this.temp[currentIndex]) {
@@ -100,6 +103,9 @@ class Game {
                 this.leftSource.appendChild(div)
             }
             const clickHandler = () => {
+                if(div.parentElement.className === 'ew-collection'){
+                    return;
+                }
                 const currentIndex = div.getAttribute('index');
                 if (this.temp[currentIndex]) {
                     this.temp[currentIndex] += 1;
