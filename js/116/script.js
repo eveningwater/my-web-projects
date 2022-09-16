@@ -85,7 +85,7 @@ class Game {
                             for (let i in this.temp) {
                                 num += this.temp[i];
                             }
-                            if (num > 7) {
+                            if (num >= 7) {
                                 item.removeEventListener('click', clickHandler);
                                 this.gameOver();
                             }
@@ -131,7 +131,7 @@ class Game {
                 for (let i in this.temp) {
                     num += this.temp[i];
                 }
-                if (num > 7) {
+                if (num >= 7) {
                     div.removeEventListener('click', clickHandler);
                     this.gameOver();
                 }
