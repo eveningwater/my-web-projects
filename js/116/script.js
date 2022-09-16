@@ -16,12 +16,16 @@ class Game {
         this.doc = document;
         this.originSource = originSource;
         this.bindElement = bindElement || this.doc.body;
+        // 存储随机打乱的元素
         this.source = [];
+        // 存储点击的元素
         this.temp = {};
+        // dom元素
         this.box = null;
         this.leftSource = null;
         this.rightSource = null;
         this.collection = null;
+        // 需要调用bind方法修改this指向
         this.init().then(this.startHandler.bind(this));
     }
     startHandler() {
@@ -49,14 +53,17 @@ class Game {
                     item.className = `ew-box-item ew-box-${i}-${j}-${k}`;
                     item.style.position = 'absolute';
                     const image = this.source.splice(0, 1);
+                    // 1.44为item设置的宽度与高度
                     item.style.left = 1.44 * j + Math.random() * .1 * k + 'rem';
                     item.style.top = 1.44 * i + Math.random() * .1 * k + 'rem';
                     item.setAttribute('index', image[0].index);
                     item.style.backgroundImage = `url(${image[0].src})`;
                     const clickHandler = () => {
+                        // 如果是在收集框里是不能够点击的
                         if(item.parentElement.className === 'ew-collection'){
                             return;
                         }
+                        // 没有阴影效果的元素才能够点击
                         if (!item.classList.contains('ew-shadow')) {
                             const currentIndex = item.getAttribute('index');
                             if (this.temp[currentIndex]) {
@@ -66,8 +73,10 @@ class Game {
                             }
                             item.style.position = 'static';
                             this.collection.appendChild(item);
+                            // 重置阴影效果
                             this.$$('.ew-box-item',this.box).forEach(item => item.classList.remove('ew-shadow'));
                             this.createShadow();
+                            // 等于3个就消除掉
                             if (this.temp[currentIndex] === 3) {
                                 this.$$(`div[index="${currentIndex}"]`, this.collection).forEach(item => item.remove());
                                 this.temp[currentIndex] = 0;
@@ -76,7 +85,7 @@ class Game {
                             for (let i in this.temp) {
                                 num += this.temp[i];
                             }
-                            if (num >= 7) {
+                            if (num > 7) {
                                 item.removeEventListener('click', clickHandler);
                                 this.gameOver();
                             }
@@ -122,7 +131,7 @@ class Game {
                 for (let i in this.temp) {
                     num += this.temp[i];
                 }
-                if (num >= 7) {
+                if (num > 7) {
                     div.removeEventListener('click', clickHandler);
                     this.gameOver();
                 }
@@ -133,16 +142,19 @@ class Game {
     }
     createShadow(){
         this.$$('.ew-box-item',this.box).forEach((item,index) => {
-            let x = item.getAttribute('x');
-            let y = item.getAttribute('y');
-            let z = item.getAttribute('z');
-            let ele = this.$$(`.ew-box-${x}-${y}-${z-1}`);
-            let ele1 = this.$$(`.ew-box-${x+1}-${y+1}-${z-1}`);
-            if (ele.length || ele1.length) {
+            let x = item.getAttribute('x'),
+                y = item.getAttribute('y'),
+                z = item.getAttribute('z'),
+                ele = this.$$(`.ew-box-${x}-${y}-${z-1}`),
+                eleOther = this.$$(`.ew-box-${x + 1}-${y + 1}-${z - 1}`);
+            if (ele.length || eleOther.length) {
                 item.classList.add('ew-shadow');
             }
         })
     }
+    /**
+     * 游戏结束
+     */
     gameOver() {
         const self = this;
         ewConfirm({
@@ -159,9 +171,9 @@ class Game {
     create(name) {
         return this.doc.createElement(name);
     }
-    getStyle(el, prop) {
-        return window.getComputedStyle(el, null)[prop];
-    }
+    /**
+     * 重置元素
+     */
     resetHandler() {
         this.box.innerHTML = '';
         this.leftSource.innerHTML = '';
@@ -186,7 +198,11 @@ class Game {
     createElement(el, str) {
         return el.insertAdjacentHTML('beforebegin', str);
     }
-
+    /**
+     * 打乱顺序
+     * @param {*} arr 
+     * @returns 
+     */
     randomList(arr) {
         const newArr = [...arr];
         for (let i = newArr.length - 1; i >= 0; i--) {
