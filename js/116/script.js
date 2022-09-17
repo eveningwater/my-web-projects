@@ -1,3 +1,8 @@
+/**
+ *  温馨提示
+ *  本游戏设定就是一个死局，只需要学习如何实现的就行了，不要尝试去玩
+ */
+
 const globalImageList = [
     'https://www.eveningwater.com/my-web-projects/jQuery/7/img/1.jpg',
     'https://www.eveningwater.com/my-web-projects/jQuery/7/img/2.jpg',
@@ -37,7 +42,8 @@ class Game {
         this.collection = this.$('#ew-collection');
         this.scoreElement = this.$('#ew-score');
         this.resetHandler();
-        for (let i = 0; i < 12; i++) {
+        const count = Math.max(this.source.length,20);
+        for (let i = 0; i < count; i++) {
             this.originSource.forEach((src, index) => {
                 this.source.push({
                     src,
@@ -56,6 +62,9 @@ class Game {
                     item.className = `ew-box-item ew-box-${i}-${j}-${k}`;
                     item.style.position = 'absolute';
                     const image = this.source.splice(0, 1);
+                    if(!image.length){
+                        continue;
+                    }
                     // 1.44为item设置的宽度与高度
                     item.style.left = 1.44 * j + Math.random() * .1 * k + 'rem';
                     item.style.top = 1.44 * i + Math.random() * .1 * k + 'rem';
