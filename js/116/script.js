@@ -20,11 +20,13 @@ class Game {
         this.source = [];
         // 存储点击的元素
         this.temp = {};
+        this.score = 0;
         // dom元素
         this.box = null;
         this.leftSource = null;
         this.rightSource = null;
         this.collection = null;
+        this.scoreElement = null;
         // 需要调用bind方法修改this指向
         this.init().then(this.startHandler.bind(this));
     }
@@ -33,6 +35,7 @@ class Game {
         this.leftSource = this.$('#ew-left-source');
         this.rightSource = this.$('#ew-right-source');
         this.collection = this.$('#ew-collection');
+        this.scoreElement = this.$('#ew-score');
         this.resetHandler();
         for (let i = 0; i < 12; i++) {
             this.originSource.forEach((src, index) => {
@@ -58,39 +61,7 @@ class Game {
                     item.style.top = 1.44 * i + Math.random() * .1 * k + 'rem';
                     item.setAttribute('index', image[0].index);
                     item.style.backgroundImage = `url(${image[0].src})`;
-                    const clickHandler = () => {
-                        // 如果是在收集框里是不能够点击的
-                        if(item.parentElement.className === 'ew-collection'){
-                            return;
-                        }
-                        // 没有阴影效果的元素才能够点击
-                        if (!item.classList.contains('ew-shadow')) {
-                            const currentIndex = item.getAttribute('index');
-                            if (this.temp[currentIndex]) {
-                                this.temp[currentIndex] += 1;
-                            } else {
-                                this.temp[currentIndex] = 1;
-                            }
-                            item.style.position = 'static';
-                            this.collection.appendChild(item);
-                            // 重置阴影效果
-                            this.$$('.ew-box-item',this.box).forEach(item => item.classList.remove('ew-shadow'));
-                            this.createShadow();
-                            // 等于3个就消除掉
-                            if (this.temp[currentIndex] === 3) {
-                                this.$$(`div[index="${currentIndex}"]`, this.collection).forEach(item => item.remove());
-                                this.temp[currentIndex] = 0;
-                            }
-                            let num = 0;
-                            for (let i in this.temp) {
-                                num += this.temp[i];
-                            }
-                            if (num >= 7) {
-                                item.removeEventListener('click', clickHandler);
-                                this.gameOver();
-                            }
-                        }
-                    }
+                    const clickHandler = () => this.blockClickHandler(item,true,null,clickHandler);
                     item.addEventListener('click', clickHandler)
                     this.box.append(item);
                 }
@@ -111,34 +82,41 @@ class Game {
                 div.style.left = `${(5 * index) / 100}rem`;
                 this.leftSource.appendChild(div)
             }
-            const clickHandler = () => {
-                if(div.parentElement.className === 'ew-collection'){
-                    return;
-                }
-                const currentIndex = div.getAttribute('index');
-                if (this.temp[currentIndex]) {
-                    this.temp[currentIndex] += 1;
-                } else {
-                    this.temp[currentIndex] = 1;
-                }
-                div.style.position = 'static';
-                this.collection.appendChild(div);
-                if (this.temp[currentIndex] === 3) {
-                    this.$$(`div[index="${currentIndex}"]`, this.collection).forEach(item => item.remove());
-                    this.temp[currentIndex] = 0;
-                }
-                let num = 0;
-                for (let i in this.temp) {
-                    num += this.temp[i];
-                }
-                if (num >= 7) {
-                    div.removeEventListener('click', clickHandler);
-                    this.gameOver();
-                }
-            }
+            const clickHandler = () => this.blockClickHandler(div,false,div.parentElement.lastElementChild,clickHandler);
             div.addEventListener('click', clickHandler);
         });
         this.createShadow();
+    }
+    blockClickHandler(block,type = false,lastChild,clickHandler){
+        if(block.parentElement.className === 'ew-collection' || (type && block.classList.contains('ew-shadow')) || (!type && lastChild !== block)){
+            return;
+        }
+        const currentIndex = block.getAttribute('index');
+        if (this.temp[currentIndex]) {
+            this.temp[currentIndex] += 1;
+        } else {
+            this.temp[currentIndex] = 1;
+        }
+        block.style.position = 'static';
+        this.collection.appendChild(block);
+        if(type){
+            this.$$('.ew-box-item',this.box).forEach(item => item.classList.remove('ew-shadow'));
+            this.createShadow();
+        }
+        if (this.temp[currentIndex] === 3) {
+            this.score++;
+            this.$$(`div[index="${currentIndex}"]`, this.collection).forEach(item => item.remove());
+            this.temp[currentIndex] = 0;
+            this.scoreElement.textContent = this.scoreElement.textContent.replace(/\d+/g,this.score);
+        }
+        let num = 0;
+        for (let i in this.temp) {
+            num += this.temp[i];
+        }
+        if (num >= 7) {
+            block.removeEventListener('click', clickHandler);
+            this.gameOver();
+        }
     }
     createShadow(){
         this.$$('.ew-box-item',this.box).forEach((item,index) => {
@@ -181,12 +159,14 @@ class Game {
         this.collection.innerHTML = '';
         this.temp = {};
         this.source = [];
+        this.score = 0;
     }
     init() {
         return new Promise(resolve => {
             const template = `<div class="ew-box" id="ew-box"></div>
             <div class="ew-left-source" id="ew-left-source"></div>
             <div class="ew-right-source" id="ew-right-source"></div>
+            <div class="ew-score" id="ew-score">当前得分:${this.score}</div>
             <div class="ew-collection" id="ew-collection"></div>`;
             const div = this.create('div');
             this.bindElement.insertBefore(div, document.body.firstChild);

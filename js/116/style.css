@@ -73,3 +73,11 @@ body {
 .ew-shadow {
     box-shadow: 0 0 50px 10px #535455 inset;
 }
+.ew-score {
+    color: #fff;
+    position: fixed;
+    bottom: calc(2.4rem + 20px);
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+}
