@@ -1,5 +1,5 @@
 module.exports = [
-    { text: 'home', link: '/' },
+    { text: 'home', link: '/en' },
     // { text: 'my website', link: 'https://www.eveningwater.com' },
     // { text: 'ewColorPicker', link: 'https://eveningwater.github.io/ew-color-picker/' },
     // { text: '17sucai', link: 'https://www.17sucai.com/user/800544' },
