@@ -8,7 +8,7 @@ const globalImageList = [
     'https://www.eveningwater.com/my-web-projects/jQuery/7/img/2.jpg',
     'https://www.eveningwater.com/my-web-projects/jQuery/7/img/3.jpg',
     'https://www.eveningwater.com/my-web-projects/jQuery/7/img/4.jpg',
-    'https://www.eveningwater.com/my-web-projects/jQuery/7/img/5.jpg',
+    'https://www.eveningwater.com/my-web-projects/jQuery/7/img/6.jpg',
     'https://www.eveningwater.com/my-web-projects/jQuery/7/img/6.jpg',
     'https://www.eveningwater.com/my-web-projects/jQuery/7/img/7.jpg',
     'https://www.eveningwater.com/my-web-projects/jQuery/7/img/8.jpg',
@@ -24,7 +24,7 @@ class Game {
         // 存储随机打乱的元素
         this.source = [];
         // 存储点击的元素
-        this.temp = {};
+        this.store = {};
         this.score = 0;
         // dom元素
         this.box = null;
@@ -52,8 +52,8 @@ class Game {
             })
         }
         this.source = this.randomList(this.source);
-        for (let k = 5; k > 0; k--) {
-            for (let i = 0; i < 5; i++) {
+        for (let k = 6; k > 0; k--) {
+            for (let i = 0; i < 6; i++) {
                 for (let j = 0; j < k; j++) {
                     const item = this.create('div');
                     item.setAttribute('x', i);
@@ -65,9 +65,9 @@ class Game {
                     if(!image.length){
                         continue;
                     }
-                    // 1.44为item设置的宽度与高度
-                    item.style.left = 1.44 * j + Math.random() * .1 * k + 'rem';
-                    item.style.top = 1.44 * i + Math.random() * .1 * k + 'rem';
+                    // 1.33为item设置的宽度与高度
+                    item.style.left = 1.33 * j + Math.random() * .1 * k + 'rem';
+                    item.style.top = 1.33 * i + Math.random() * .1 * k + 'rem';
                     item.setAttribute('index', image[0].index);
                     item.style.backgroundImage = `url(${image[0].src})`;
                     const clickHandler = () => this.blockClickHandler(item,true,null,clickHandler);
@@ -76,19 +76,20 @@ class Game {
                 }
             }
         }
-        let len = Math.ceil(this.source.length / 2);
+        // 
+        const len = Math.ceil(this.source.length / 2);
         this.source.forEach((item, index) => {
-            let div = this.create('div');
-            div.classList.add('ew-box-item')
+            const div = this.create('div');
+            div.classList.add('ew-box-item');
             div.setAttribute('index', item.index);
             div.style.backgroundImage = `url(${item.src})`;
             div.style.position = 'absolute';
             div.style.top = 0;
             if (index > len) {
-                div.style.right = `${(5 * (index - len)) / 100}rem`;
+                div.style.right = `${(6 * (index - len)) / 100}rem`;
                 this.rightSource.appendChild(div);
             } else {
-                div.style.left = `${(5 * index) / 100}rem`;
+                div.style.left = `${(6 * index) / 100}rem`;
                 this.leftSource.appendChild(div)
             }
             const clickHandler = () => this.blockClickHandler(div,false,div.parentElement.lastElementChild,clickHandler);
@@ -101,26 +102,22 @@ class Game {
             return;
         }
         const currentIndex = block.getAttribute('index');
-        if (this.temp[currentIndex]) {
-            this.temp[currentIndex] += 1;
-        } else {
-            this.temp[currentIndex] = 1;
-        }
+        this.store[currentIndex] = this.store[currentIndex] ? this.store[currentIndex]++ : 1;
         block.style.position = 'static';
         this.collection.appendChild(block);
         if(type){
             this.$$('.ew-box-item',this.box).forEach(item => item.classList.remove('ew-shadow'));
             this.createShadow();
         }
-        if (this.temp[currentIndex] === 3) {
+        if (this.store[currentIndex] === 3) {
             this.score++;
             this.$$(`div[index="${currentIndex}"]`, this.collection).forEach(item => item.remove());
-            this.temp[currentIndex] = 0;
+            this.store[currentIndex] = 0;
             this.scoreElement.textContent = this.scoreElement.textContent.replace(/\d+/g,this.score);
         }
         let num = 0;
-        for (let i in this.temp) {
-            num += this.temp[i];
+        for (let i in this.store) {
+            num += this.store[i];
         }
         if (num >= 7) {
             block.removeEventListener('click', clickHandler);
@@ -166,7 +163,7 @@ class Game {
         this.leftSource.innerHTML = '';
         this.rightSource.innerHTML = '';
         this.collection.innerHTML = '';
-        this.temp = {};
+        this.store = {};
         this.source = [];
         this.score = 0;
     }

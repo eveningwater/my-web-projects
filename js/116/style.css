@@ -25,8 +25,8 @@ body {
 }
 
 .ew-box-item {
-    width: 1.6rem;
-    height: 1.6rem;
+    width: 1.33rem;
+    height: 1.33rem;
     border-radius: 4px;
     border: 1px solid #535455;
     background-position: center;
@@ -56,7 +56,7 @@ body {
 
 .ew-left-source,
 .ew-right-source {
-    width: 2.6rem;
+    width: 3rem;
     height: 1.2rem;
     position: absolute;
     top: 0;
