@@ -72,6 +72,7 @@ body {
 
 .ew-shadow {
     box-shadow: 0 0 50px 10px #535455 inset;
+    background-color: #030303;
 }
 .ew-score {
     color: #fff;

@@ -76,7 +76,7 @@ class Game {
                 }
             }
         }
-        // 
+        // 平分两边
         const len = Math.ceil(this.source.length / 2);
         this.source.forEach((item, index) => {
             const div = this.create('div');
@@ -102,7 +102,7 @@ class Game {
             return;
         }
         const currentIndex = block.getAttribute('index');
-        this.store[currentIndex] = this.store[currentIndex] ? this.store[currentIndex]++ : 1;
+        this.store[currentIndex] ? (this.store[currentIndex]++) : (this.store[currentIndex] = 1);
         block.style.position = 'static';
         this.collection.appendChild(block);
         if(type){
@@ -115,10 +115,7 @@ class Game {
             this.store[currentIndex] = 0;
             this.scoreElement.textContent = this.scoreElement.textContent.replace(/\d+/g,this.score);
         }
-        let num = 0;
-        for (let i in this.store) {
-            num += this.store[i];
-        }
+        let num = Object.values(this.store).reduce((res,item) => res += item,0);
         if (num >= 7) {
             block.removeEventListener('click', clickHandler);
             this.gameOver();
@@ -143,7 +140,7 @@ class Game {
         const self = this;
         ewConfirm({
             title: "温馨提示",
-            content: "游戏结束，别灰心，你能行的！",
+            content: "游戏已结束，别难过，重新试试，你能行的！",
             sureText: "重新开始",
             isClickModal:false,
             sure(context) {
