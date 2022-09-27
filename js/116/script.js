@@ -9,11 +9,13 @@ const globalImageList = [
     'https://www.eveningwater.com/my-web-projects/jQuery/7/img/3.jpg',
     'https://www.eveningwater.com/my-web-projects/jQuery/7/img/4.jpg',
     'https://www.eveningwater.com/my-web-projects/jQuery/7/img/6.jpg',
-    'https://www.eveningwater.com/my-web-projects/jQuery/7/img/6.jpg',
     'https://www.eveningwater.com/my-web-projects/jQuery/7/img/7.jpg',
     'https://www.eveningwater.com/my-web-projects/jQuery/7/img/8.jpg',
     'https://www.eveningwater.com/my-web-projects/jQuery/7/img/9.jpg',
-    'https://www.eveningwater.com/my-web-projects/jQuery/7/img/10.jpg'
+    'https://www.eveningwater.com/my-web-projects/jQuery/7/img/10.jpg',
+    'https://www.eveningwater.com/my-web-projects/js/21/img/3.jpg',
+    'https://www.eveningwater.com/my-web-projects/js/21/img/4.jpg',
+    'https://www.eveningwater.com/my-web-projects/js/21/img/8.jpg'
 ]
 
 class Game {
