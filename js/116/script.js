@@ -3,20 +3,8 @@
  *  本游戏设定就是一个死局，只需要学习如何实现的就行了，不要尝试去玩
  */
 
-const globalImageList = [
-    'https://www.eveningwater.com/my-web-projects/jQuery/7/img/1.jpg',
-    'https://www.eveningwater.com/my-web-projects/jQuery/7/img/2.jpg',
-    'https://www.eveningwater.com/my-web-projects/jQuery/7/img/3.jpg',
-    'https://www.eveningwater.com/my-web-projects/jQuery/7/img/4.jpg',
-    'https://www.eveningwater.com/my-web-projects/jQuery/7/img/6.jpg',
-    'https://www.eveningwater.com/my-web-projects/jQuery/7/img/7.jpg',
-    'https://www.eveningwater.com/my-web-projects/jQuery/7/img/8.jpg',
-    'https://www.eveningwater.com/my-web-projects/jQuery/7/img/9.jpg',
-    'https://www.eveningwater.com/my-web-projects/jQuery/7/img/10.jpg',
-    'https://www.eveningwater.com/my-web-projects/js/21/img/3.jpg',
-    'https://www.eveningwater.com/my-web-projects/js/21/img/4.jpg',
-    'https://www.eveningwater.com/my-web-projects/js/21/img/8.jpg'
-]
+const global_image_url = 'https://www.eveningwater.com/my-web-projects/jQuery/7/img/';
+const globalImageList = new Array(10).fill(null).map((item,index) => (`${global_image_url + (index + 1)}.jpg`))
 
 class Game {
     constructor(originSource, bindElement) {
@@ -207,5 +195,4 @@ class Game {
 }
 window.onload = () => {
     const game = new Game(globalImageList);
-    console.log(game);
 }
