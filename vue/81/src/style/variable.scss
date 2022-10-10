@@ -1,0 +1,13 @@
+$prefix: bm-;
+$white: #fff;
+$black: #000;
+
+@mixin setProperty($prop,$value){
+    #{$prop}:$value; 
+}
+
+.flex-center {
+    @include setProperty(display,flex);
+    @include setProperty(justify-content,center);
+    @include setProperty(align-items,center);
+}

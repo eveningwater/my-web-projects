@@ -1,0 +1,12 @@
+@mixin head {
+    color:$white;
+    width: percentage(1);
+    text: {
+        align: center;
+    }
+    line: {
+        height: 400px;
+    }
+    position: absolute;
+    display: block;
+}

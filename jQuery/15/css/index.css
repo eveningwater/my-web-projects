@@ -323,7 +323,7 @@ button.loginBtn:active{
 	right: 0;top: 0;
 	font-size: 20px;
 	opacity: 0;
-	filter:alpha(opacity:0);
+	filter:alpha(0);
 }
 .mouseRightlist .changespan input[type="file"]:hover{
 	cursor: pointer;

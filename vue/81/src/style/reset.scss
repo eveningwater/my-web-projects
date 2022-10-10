@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body,html {
+    width: percentage(1);
+    height: percentage(1);
+    overflow: hidden;
+    background: url("~/header_bg.jpg") no-repeat center / cover;
+}
+.#{$prefix}clearfix::after {
+    @include setProperty(content,'');
+    @include setProperty(display,table);
+    @include setProperty(clear,both);
+}
+ul,li {
+    @include setProperty(list-style,none);
+}
+.app {
+    @include setProperty(position,absolute);
+    @include setProperty(width,percentage(1));
+    @include setProperty(height,percentage(1));
+}

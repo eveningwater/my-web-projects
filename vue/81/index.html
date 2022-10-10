@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>美女连连看</title>
+  <script>
+    ! function (win, option) {
+      var count = 0,
+        designWidth = option.designWidth,
+        designHeight = option.designHeight || 0,
+        designFontSize = option.designFontSize || 100,
+        callback = option.callback || null,
+        root = document.documentElement,
+        body = document.body,
+        rootWidth, newSize, t, self;
+      function _getNewFontSize() {
+        var iw = win.innerWidth > 750 ? 750 : win.innerWidth;
+        var scale = designHeight !== 0 ? Math.min(iw / designWidth, win.innerHeight / designHeight) : iw / designWidth;
+        return parseInt(scale * 10000 * designFontSize) / 10000;
+      } ! function () {
+        rootWidth = root.getBoundingClientRect().width;
+        self = self ? self : arguments.callee;
+        if (rootWidth !== win.innerWidth && count < 20) {
+          win.setTimeout(function () {
+            count++;
+            self();
+          }, 0);
+        } else {
+          newSize = _getNewFontSize();
+          if (newSize + 'px' !== getComputedStyle(root)['font-size']) {
+            root.style.fontSize = newSize + "px";
+            return callback && callback(newSize);
+          };
+        };
+      }();
+      win.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", function () {
+        clearTimeout(t);
+        t = setTimeout(function () {
+          self();
+        }, 200);
+      }, false);
+    }(window, {
+      designWidth: 750
+    });
+  </script>
+</head>
+
+<body>
+  <div id="app" class="app"></div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>
