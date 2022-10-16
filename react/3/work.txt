@@ -1,7 +1,7 @@
 eveningwater.com
 =========
 
-loho,笔名夕水(eveningwater)
+eveningwater,笔名夕水(eveningwater)
 web前端开发工程师,目前工作在成都,
 以后目标指向全栈开发工程师,
 当然还是一个有梦想的人,

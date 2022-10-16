@@ -16,7 +16,7 @@
 	"keywords": [
 		"project"
 	],
-	"author": "loho",
+	"author": "eveningwater",
 	"license": "ISC",
 	"devDependencies": {
 		"babel-core": "^6.26.0",
