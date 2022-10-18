@@ -7,7 +7,8 @@ body,html {
     width: percentage(1);
     height: percentage(1);
     overflow: hidden;
-    background: url("~/header_bg.jpg") no-repeat center / cover;
+    background:#000 url("https://www.eveningwater.com/img/segmentfault/bg.png") no-repeat;
+    background-size: 100% 100%;
 }
 .#{$prefix}clearfix::after {
     @include setProperty(content,'');
