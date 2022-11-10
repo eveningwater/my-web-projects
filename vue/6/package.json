@@ -2,7 +2,7 @@
 	"name": "vue-master",
 	"version": "1.0.0",
 	"description": "A Vue.js project",
-	"author": "罗浩 <854806732@qq.com>",
+	"author": "<854806732@qq.com>",
 	"private": true,
 	"scripts": {
 		"dev": "node build/dev-server.js",
