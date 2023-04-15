@@ -2,3 +2,9 @@
     margin: 0;
     padding: 0;
 }
+.page {
+    padding: 1em;
+}
+.el-row {
+    margin-bottom: 15px;
+}
