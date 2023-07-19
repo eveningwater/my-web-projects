@@ -1,6 +1,12 @@
 
+ * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+ }
  .dropdown {
     width: 250px;
+    margin: 8px;
 }
 .dropdown-popper {
    width:100%;
@@ -10,7 +16,7 @@
    border: 1px solid #fefefe;
    border-radius: 4px;
    overflow: hidden;
-   box-sizing: border-box;
+   padding: 15px;
 }
 .dropdown-popper-children {
    height: 100%;
@@ -18,8 +24,7 @@
    padding-top: 0.1px;
    overflow-y: scroll;
    margin-right: -18px;
-   box-sizing: border-box;
-   padding: 15px;
+   padding-right: 15px;
 }
 .dropdown-value {
    width: 100%;
@@ -27,7 +32,6 @@
    color:#535554;
    display: inline-block;
    padding: 6px 15px;
-   box-sizing: border-box;
    cursor: pointer;
    margin-bottom: 5px;
 }

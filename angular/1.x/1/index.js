@@ -27,7 +27,7 @@ app.directive('clickOutside', ["$document", function () {
         scope: {
             updateOpen: "&"
         },
-        link: function ($scope, $el, $attrs) {
+        link: function ($scope, $el) {
             clickOutSideHandler($el[0], $el[0].previousElementSibling, () => {
                 $scope.updateOpen();
             })
