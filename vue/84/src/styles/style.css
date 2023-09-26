@@ -1,0 +1,39 @@
+html {
+    overflow: hidden;
+}
+
+.main {
+    padding: 15px;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.block {
+    width: 100%;
+}
+
+.preview-container {
+    border: 1px solid #dadbda;
+    padding: 15px;
+    border-radius: 4px;
+    background: #f1f1f1;
+}
+
+.code-container {
+    border: 1px solid #dadbda;
+    position: relative;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.code-copy-btn {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+.code-select {
+    width: 200px;
+}
