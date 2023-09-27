@@ -3,7 +3,7 @@ html {
 }
 
 .main {
-    padding: 15px;
+    padding: 15px 25px;
 }
 
 .text-align-center {
@@ -36,4 +36,26 @@ html {
 
 .code-select {
     width: 200px;
+}
+
+.header {
+    padding: 8px 25px;
+}
+
+.logo {
+    width: 45px;
+    height: 45px;
+}
+
+.description {
+    padding: 4px 25px;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 6px 25px;
+    background-color: transparent;
 }

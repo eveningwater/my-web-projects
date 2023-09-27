@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { NGrid, NGridItem, NInput, NConfigProvider, NDialogProvider, NSelect, NSpace, NDescriptions, NDescriptionsItem, NScrollbar, NButton } from 'naive-ui'
+import { NGrid, NGridItem, NInput, NConfigProvider, NDialogProvider, NSelect, NSpace, NDescriptions, NDescriptionsItem, NScrollbar, NButton, NPageHeader, NBackTop, NLayoutFooter, NEl } from 'naive-ui'
 import { minMaxValue } from './utils/utils'
 import RuleForm from './components/ruleForm.vue';
 import CodeEditor from './components/codeEditor.vue';
@@ -11,7 +11,8 @@ import { CodeTemplateKey, demoCodeTemplate, selectCodeTypeList } from './const/c
 import { htmlTemplate } from './const/htmlTemplate';
 import { saveAs } from 'file-saver';
 import JSZip from 'jszip';
-
+import Logo from './components/Logo.vue';
+import { footerList } from './const/footerList';
 hljs.registerLanguage('html', html)
 hljs.registerLanguage('javascript', javascript)
 const formValue = ref<IFormValue>({
@@ -48,16 +49,23 @@ const onDownloadDemoHandler = async () => {
   <n-config-provider :hljs="hljs">
     <n-dialog-provider>
       <n-scrollbar style="max-height:100vh">
+        <n-page-header class="header">
+          <template #avatar>
+            <logo />
+          </template>
+          <template #title>
+            输入框插入符号
+          </template>
+        </n-page-header>
+        <n-descriptions label-placement="top" title="需求描述:" class="description">
+          <n-descriptions-item>
+            页面当中存在多个输入框，输入框的 value 值是一个数值组成的字符串（盲猜应该是身份证号码），这个字符串的位数是 15 位或者是 18 位，例如:'621848063680370'(15
+            位)和'621848063688370808'(18 位)，然后默认的值是这样的，现在问题来了，需求希望在这些数值中插入符号(比如当前是空白)，比如 15 位的数字就按照 6 + 6 + 3
+            的格式分隔，分隔的时候就使用符号。比如'621848063680370'分隔后应该变成'621848 063680 370',也就是数字位数到了第 6 位就加个空白符号分隔，...依次类推，而 18
+            位数字的分割规则则是:6 + 4 + 4 + 4。比如'621848063688370808'应该分隔成'621848 0636 8837 0808'。
+          </n-descriptions-item>
+        </n-descriptions>
         <main class="main">
-          <h1 class="text-align-center">输入框插入符号</h1>
-          <n-descriptions label-placement="top" title="需求描述:">
-            <n-descriptions-item>
-              页面当中存在多个输入框，输入框的 value 值是一个数值组成的字符串（盲猜应该是身份证号码），这个字符串的位数是 15 位或者是 18 位，例如:'621848063680370'(15
-              位)和'621848063688370808'(18 位)，然后默认的值是这样的，现在问题来了，需求希望在这些数值中插入符号(比如当前是空白)，比如 15 位的数字就按照 6 + 6 + 3
-              的格式分隔，分隔的时候就使用符号。比如'621848063680370'分隔后应该变成'621848 063680 370',也就是数字位数到了第 6 位就加个空白符号分隔，...依次类推，而 18
-              位数字的分割规则则是:6 + 4 + 4 + 4。比如'621848063688370808'应该分隔成'621848 0636 8837 0808'。
-            </n-descriptions-item>
-          </n-descriptions>
           <n-grid x-gap="12" y-gap="6" cols="2" item-responsive>
             <n-grid-item span="2 800:1">
               <h2 class="text-align-center">定义插入规则</h2>
@@ -85,7 +93,15 @@ const onDownloadDemoHandler = async () => {
               <code-editor :formValue="formValue" :code-type="codeTypeValue"></code-editor>
             </n-grid-item>
           </n-grid>
+          <n-back-top :right="15" :bottom="15" />
         </main>
+        <n-layout-footer class="footer">
+          <n-space>
+            <n-el tag="span">Copyright ©2023</n-el>
+            <n-button v-for="(item, index) in footerList" text tag="a" :href="item.url" target="_blank" type="info"
+              :key="item.text + index">{{ item.text }}</n-button>
+          </n-space>
+        </n-layout-footer>
       </n-scrollbar>
     </n-dialog-provider>
   </n-config-provider>
