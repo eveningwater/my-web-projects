@@ -4,7 +4,7 @@ import { minMaxValue } from './utils/utils'
 import RuleForm from './components/ruleForm.vue';
 import CodeEditor from './components/codeEditor.vue';
 import { computed, ref } from 'vue';
-import hljs from 'highlight.js/lib/core'
+import hljs from 'highlight.js'
 import javascript from 'highlight.js/lib/languages/javascript'
 import html from 'highlight.js/lib/languages/xml'
 import { CodeTemplateKey, demoCodeTemplate, selectCodeTypeList } from './const/code';

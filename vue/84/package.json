@@ -15,7 +15,7 @@
     "@types/file-saver": "^2.0.5",
     "@vitejs/plugin-vue": "^4.2.3",
     "file-saver": "^2.0.5",
-    "highlight": "^0.2.4",
+    "highlight.js": "^11.8.0",
     "jszip": "^3.10.1",
     "naive-ui": "^2.34.4",
     "typescript": "^5.0.2",
