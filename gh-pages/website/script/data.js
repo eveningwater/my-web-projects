@@ -90,7 +90,7 @@ var workData = {
     }
 }
 async function loadContent(lang){
-    const res = await $.get("./markdowns/work." + lang +".md");
+    const res = await $.get("./website/markdowns/work." + lang +".md");
     workData[lang].content = res;
 }
 ["en","zh"].forEach(item => loadContent(item));
