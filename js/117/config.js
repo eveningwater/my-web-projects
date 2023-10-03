@@ -1,1 +1,0 @@
-const API = "https://api.uomg.com/api/rand.qinghua?format=json";

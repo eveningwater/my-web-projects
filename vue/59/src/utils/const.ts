@@ -1,1 +1,0 @@
-export const squares = 500;

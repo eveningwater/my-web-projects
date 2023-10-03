@@ -1,1 +1,0 @@
-export const url = "https://www.eveningwater.com/static/page/CSS/css-code-50-image/comic-girl-02.jpg";

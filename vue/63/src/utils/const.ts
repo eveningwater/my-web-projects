@@ -1,1 +1,0 @@
-export const BG_URL = "https://www.eveningwater.com/my-web-projects/js/21/img/1.gif";

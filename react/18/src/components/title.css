@@ -1,8 +1,0 @@
-:root {
-    --font-color:#fff;
-}
-h1 {
-    color:var(--font-color);
-    margin-bottom: 15px;
-    max-width: 600px;
-}

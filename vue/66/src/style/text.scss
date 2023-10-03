@@ -1,6 +1,0 @@
-$color:#354701;
-.#{$baseSelector}rate-item-text {
-    @include setProperty(display,inline-block);
-    @include setProperty(margin,10px 0 0);
-    @include setProperty(color,$color);
-}
