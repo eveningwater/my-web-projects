@@ -8,31 +8,38 @@
 
 ### 文档地址
 
-* [HTML 文档](https://www.eveningwater.com/docs/index.html?type=html)。
-* [JavaScript 文档](https://www.eveningwater.com/docs/index.html?type=javascript)。
-* [mini-vue 文档](https://www.eveningwater.com/docs/index.html?type=mini-vue)。
-* [vuex 文档](https://www.eveningwater.com/docs/index.html?type=vuex-code)。
-* [mini-compiler 文档](https://www.eveningwater.com/docs/index.html?type=mini-compiler)。
-* [flutter 文档](https://www.eveningwater.com/docs/index.html?type=flutter)。
-* [effective-javascript 文档](https://www.eveningwater.com/docs/index.html?type=effective-javascript)。
-* [browser-javascript 文档](https://www.eveningwater.com/docs/index.html?type=browser)。
+- [相关教程文档](https://www.eveningwater.com/docs/index.html)。
+
+### 个人插件
+
+- [消息提示框](https://eveningwater.github.io/ew-message/)
+- [颜色选择器](https://eveningwater.github.io/ew-color-picker/)
 
 ### 算法
 
-* [剑指offer](https://eveningwater.github.io/to-offer/)。
+- [剑指 offer](https://eveningwater.github.io/to-offer/)。
 
 ### 我的博客
 
-* [我的博客](https://eveningwater.github.io/)。
-* [我的博客](https://www.cnblogs.com/eveningwater/)。
+- [我的博客](https://eveningwater.github.io/)。
+- [我的博客](https://www.cnblogs.com/eveningwater/)。
 
-### Programming community
+## web 简历
 
-* [思否](https://segmentfault.com/u/xishui_5ac9a340a5484)。
-* [掘金](https://juejin.cn/user/4054654613988718)。
-* [stack overflow](https://stackoverflow.com/users/10505577/eveningwater)。
-* [知乎](https://www.zhihu.com/people/eveningwater)。
+- [web 简历](https://www.eveningwater.com/my-web-projects/vue/10/)
+
+### 代码段
+
+- [代码段](https://eveningwater.github.io/code-segment/#/)
+- [react 代码段](https://eveningwater.github.io/code-segment-react/)
+
+### 编程社区
+
+- [思否](https://segmentfault.com/u/xishui_5ac9a340a5484)。
+- [掘金](https://juejin.cn/user/4054654613988718)。
+- [stack overflow](https://stackoverflow.com/users/10505577/eveningwater)。
+- [知乎](https://www.zhihu.com/people/eveningwater)。
 
 ### other links
 
-* [17素材](https://www.17sucai.com/user/800544)。
+- [17 素材](https://www.17sucai.com/user/800544)。
