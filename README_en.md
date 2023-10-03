@@ -1,9 +1,8 @@
-
 [English](./README_en.md) | [简体中文](./README.md)
 
 ### Introduction
 
-The first 20` demos of the `web` project implemented by the native `js` of this project refer to the Chinese version implemented by [vanilla-web-projects](https://github.com/bradtraversy/vanillawebprojects), although many The code draws on the original project, but it is also different from the original project, because the logic code is completely inconsistent, and each project has been expanded accordingly, and subsequent projects are written for their usual accumulation.
+The first 20`demos of the`web`project implemented by the native`js` of this project refer to the Chinese version implemented by [vanilla-web-projects](https://github.com/bradtraversy/vanillawebprojects), although many The code draws on the original project, but it is also different from the original project, because the logic code is completely inconsistent, and each project has been expanded accordingly, and subsequent projects are written for their usual accumulation.
 
 > angular directory: example done mostly with angular.js
 
@@ -47,9 +46,8 @@ If you feel that this project helps you learn, I hope you don’t be stingy with
 
 > Reminder: All project demos are for learning only, not for commercial use, offenders must be investigated.
 
-* [Online access address](https://www.eveningwater.com/my-web-projects/home/).
-* [Online Baidu query code error](https://www.eveningwater.com/my-web-projects/error-baidu.html).
-* [Online Google query code error](https://www.eveningwater.com/my-web-projects/error-google.html).
+- [Online access address](https://www.eveningwater.com/my-web-projects/home/).
+- [Online query code error](https://www.eveningwater.com/my-web-projects/searchError.html)。
 
 ### how to run
 
@@ -70,6 +68,7 @@ build:
 ```shell
 npm run home:build
 ```
+
 #### 2.animate directory。
 
 Which example is run, which parameter is carried.If you run the first example, the directory name is 1.Then run the command as follows:
@@ -162,20 +161,18 @@ The second example is the same as the first example.
 
 > notice:You need to install the git client and run it in git-bash. If you have configured environment variables, you don’t need to run it in git-bash.Of course, except for the home directory.
 
-
 ### links
 
-* [home](/)
-* [my website](https://www.eveningwater.com)
-* [ewColorPicker](https://eveningwater.github.io/ew-color-picker/)
-* [17sucai](https://www.17sucai.com/user/800544)
-* [juejin](https://juejin.cn/user/4054654613988718)
-* [segmentfault](https://segmentfault.com/u/xishui_5ac9a340a5484)
-* [zhihu](https://www.zhihu.com/people/eveningwater)
-* [stackoverflow](https://stackoverflow.com/users/10505577/eveningwater)
-* [my blog](https://www.cnblogs.com/eveningwater/)
-* [my blog](https://eveningwater.github.io/#/)
-* [code-segment](https://eveningwater.github.io/code-segment/#/)
-* [github](https://github.com/eveningwater/my-web-projects)
-* [gitee](https://gitee.com/eveningwater)
-
+- [home](/)
+- [my website](https://www.eveningwater.com)
+- [ewColorPicker](https://eveningwater.github.io/ew-color-picker/)
+- [17sucai](https://www.17sucai.com/user/800544)
+- [juejin](https://juejin.cn/user/4054654613988718)
+- [segmentfault](https://segmentfault.com/u/xishui_5ac9a340a5484)
+- [zhihu](https://www.zhihu.com/people/eveningwater)
+- [stackoverflow](https://stackoverflow.com/users/10505577/eveningwater)
+- [my blog](https://www.cnblogs.com/eveningwater/)
+- [my blog](https://eveningwater.github.io/#/)
+- [code-segment](https://eveningwater.github.io/code-segment/#/)
+- [github](https://github.com/eveningwater/my-web-projects)
+- [gitee](https://gitee.com/eveningwater)
