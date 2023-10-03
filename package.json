@@ -20,7 +20,7 @@
     "threejs": "bash scripts/threejs.sh",
     "typescript": "bash scripts/typescript.sh",
     "allBuild": "node build.js & npm run home:build & npm run 50-website-build",
-    "deploy": "git remote set-url origin https://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@github.com/eveningwater/my-web-projects.git & git subtree push --prefix gh-pages origin gh-pages",
+    "deploy": "git remote set-url origin https://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@github.com/eveningwater/my-web-projects.git & git subtree push --prefix gh-pages origin gh-pages",
     "commit": "bash deploy.sh",
     "build-deploy": "node build.js & npm run home:build & npm run 50-website-build & git subtree push --prefix gh-pages origin gh-pages"
   },

@@ -10,7 +10,7 @@ set -e
 git add -A
 git commit -m 'feat: 完善了文档'
 git pull
-git remote set-url origin https://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@github.com/eveningwater/my-web-projects.git
+git remote set-url origin https://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@github.com/eveningwater/my-web-projects.git
 git push -f https://github.com/eveningwater/my-web-projects.git master
 # 如果发布到 https://<USERNAME>.github.io
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
