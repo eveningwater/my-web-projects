@@ -19,7 +19,10 @@
     "vue": "bash scripts/vue.sh",
     "threejs": "bash scripts/threejs.sh",
     "typescript": "bash scripts/typescript.sh",
-    "deploy": "node build.js & npm run home:build & npm run 50-website-build & git subtree push --prefix gh-pages origin gh-pages"
+    "allBuild": "node build.js & npm run home:build & npm run 50-website-build",
+    "deploy": "git subtree push --prefix gh-pages origin gh-pages",
+    "commit": "bash deploy.sh",
+    "build-deploy": "node build.js & npm run home:build & npm run 50-website-build & git subtree push --prefix gh-pages origin gh-pages"
   },
   "repository": {
     "type": "git",

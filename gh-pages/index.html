@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my-web-projects</title>
+    <style>
+        body,ul,li,a,div {
+            margin: 0;
+            padding: 0;
+        }
+        body,html {
+            overflow: hidden;
+        }
+        .app {
+            width: 100vw;
+            height: 100vh;
+            background-image: linear-gradient(to right top, #8e44ad 0%, #3498db 100%);
+            padding: 10px;
+            overflow: hidden;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .mwp-nav {
+            max-width: 960px;
+            min-width: 60%;
+        }
+        .mwp-ul {
+            text-align: center;
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 25%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0) 100%);
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+            list-style: none;
+        }
+        .mwp-link {
+            padding: 18px;
+            font-family: "Open Sans";
+            text-transform:uppercase;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 18px;
+            text-decoration: none;
+            display: block;
+        }
+        .mwp-link:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+            background: rgba(255, 255, 255, 0.1);
+            color: rgba(0, 35, 122, 0.7);
+        }
+        .mwp-github {
+            position: fixed;
+            right: 10px;
+            top: 10px;
+        }
+        .mwp-link-icon > path {
+            transition: all .4s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="app">
+        <div class="mwp-nav">
+            <ul class="mwp-ul"></ul>
+        </div>
+        <div class="mwp-github">
+            <a href="https://github.com/eveningwater/my-web-projects" target="_blank" rel="noopener noreferrer">
+                <svg 
+                    viewBox="0 0 1024 1024" 
+                    version="1.1" 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    p-id="2426" 
+                    width="38" 
+                    height="38"
+                    class="mwp-link-icon"
+                ><path 
+                    d="M512 42.666667A464.64 464.64 0 0 0 42.666667 502.186667 460.373333 460.373333 0 0 0 363.52 938.666667c23.466667 4.266667 32-9.813333 32-22.186667v-78.08c-130.56 27.733333-158.293333-61.44-158.293333-61.44a122.026667 122.026667 0 0 0-52.053334-67.413333c-42.666667-28.16 3.413333-27.733333 3.413334-27.733334a98.56 98.56 0 0 1 71.68 47.36 101.12 101.12 0 0 0 136.533333 37.973334 99.413333 99.413333 0 0 1 29.866667-61.44c-104.106667-11.52-213.333333-50.773333-213.333334-226.986667a177.066667 177.066667 0 0 1 47.36-124.16 161.28 161.28 0 0 1 4.693334-121.173333s39.68-12.373333 128 46.933333a455.68 455.68 0 0 1 234.666666 0c89.6-59.306667 128-46.933333 128-46.933333a161.28 161.28 0 0 1 4.693334 121.173333A177.066667 177.066667 0 0 1 810.666667 477.866667c0 176.64-110.08 215.466667-213.333334 226.986666a106.666667 106.666667 0 0 1 32 85.333334v125.866666c0 14.933333 8.533333 26.88 32 22.186667A460.8 460.8 0 0 0 981.333333 502.186667 464.64 464.64 0 0 0 512 42.666667" fill="#fff" p-id="2427"></path></svg>
+            </a>
+        </div>
+    </div>
+</body>
+<script>
+    const linkList = [
+        {
+            text:"项目官网",
+            href:"./home/index.html"
+        },
+        {
+            text:"50个项目官网",
+            href:"./50-website/index.html"
+        },
+        {
+            text:"个人介绍官网",
+            href:"./website/index.html"
+        }
+    ];
+    const $ = selector => document.querySelector(selector);
+    const container = $(".mwp-ul");
+    let containerHTML = "";
+    linkList.forEach(link => {
+        containerHTML += `<li class="mwp-li"><a href="${link.href}" target="_blank" rel="noopener noreferrer" class="mwp-link">${link.text}</a></li>`
+    });
+    container.innerHTML = containerHTML;
+    const githubIcon = $(".mwp-link-icon");
+    const handleColor = (children,color) => {
+        Array.from(children).forEach(item => item.setAttribute("fill",color));
+    }
+    githubIcon.addEventListener("mouseenter",() => {
+        handleColor(githubIcon.children,"rgba(0, 35, 122, 0.7)");
+    });
+    githubIcon.addEventListener("mouseleave",() => {
+        handleColor(githubIcon.children,"#ffffff");
+    });
+</script>
+</html>
