@@ -6,6 +6,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   display: flex;
   height: 100vh;
@@ -18,6 +19,7 @@ body {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   letter-spacing: 2px;
 }
+
 h1 {
   margin: 20px 0;
 }
@@ -29,48 +31,53 @@ h1 {
   width: 450px;
   height: 350px;
 }
+
 .figure-container {
   width: 200px;
   height: 250px;
   fill: transparent;
-  stroke-width:4px;
+  stroke-width: 4px;
   stroke-linecap: butt;
-  stroke:#fff;
+  stroke: #fff;
 }
 
 .figure-part {
-    display: none;
+  display: none;
 }
+
 .wrong-letters-container {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    text-align: right;
-    display: flex;
-    flex-direction: column;
-    color: #fa3344;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  color: #fa3344;
 }
 
 .word {
-    display: flex;
-    position: absolute;
-    bottom: 15px;
-    left: 50%;
-    transform: translateX(-50%);
+  display: flex;
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
 }
-.word > .letter {
-    border-bottom: 3px solid #2396ef;
-    display: inline-flex;
-    margin:0 5px;
-    justify-content: center;
-    align-items: center;
-    width: 25px;
-    height: 50px;
-    font-size: 32px;
+
+.word>.letter {
+  border-bottom: 3px solid #2396ef;
+  display: inline-flex;
+  margin: 0 5px;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 50px;
+  font-size: 32px;
 }
+
 .ew-popBox-mask {
-    color: #535355;
+  color: #535355;
 }
+
 .btn {
   border: 1px solid #fdfdfd;
   outline: none;
@@ -83,16 +90,23 @@ h1 {
   cursor: pointer;
   margin: .2em 0;
 }
+
 .btn:hover {
   border-color: #2396ef;
   background-color: #2396ef;
   color: #ffffff;
 }
+
 .prompt-container {
   margin-top: 0.2em;
   padding: 20px 0;
   text-align: center;
 }
+
 .prompt-container p {
   margin: .47em;
+}
+
+.ew-popBox-wrapper {
+  color: #535455;
 }

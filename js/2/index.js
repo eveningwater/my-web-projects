@@ -14,6 +14,58 @@ function $(selector) {
 function $$(selector) {
     return document.querySelectorAll(selector);
 }
+
+const isMobile = () => !navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i);
+const eventType = () => isMobile() ? ['touchstart', 'touchmove', 'touchend'] : ['mousedown', 'mousemove', 'mouseup'];
+const on = (
+    element,
+    type,
+    handler,
+    useCapture = false
+) => {
+    if (element && type && handler) {
+        element.addEventListener(type, handler, useCapture);
+    }
+}
+const off = (
+    element,
+    type,
+    handler,
+    useCapture = false
+) => {
+    if (element && type && handler) {
+        element.removeEventListener(type, handler, useCapture);
+    }
+}
+const getRect = el => el.getBoundingClientRect();
+const isFunction = v => typeof v === 'function';
+const baseClickOutSide = (
+    element,
+    isUnbind = true,
+    callback
+) => {
+    const mouseHandler = (event) => {
+        const target = event.target;
+        if (!target) return;
+        const targetRect = getRect(target);
+        const rect = getRect(element);
+        if (
+            targetRect.x >= rect.x &&
+            targetRect.y >= rect.y &&
+            targetRect.width <= rect.width &&
+            targetRect.height <= rect.height
+        )
+            return;
+        if (isFunction(callback)) callback(target, targetRect);
+        if (isUnbind) {
+            // 延迟解除绑定
+            setTimeout(() => {
+                off(document, eventType()[0], mouseHandler);
+            }, 0);
+        }
+    };
+    on(document, eventType()[0], mouseHandler);
+}
 /**
  * 页面数据
  */

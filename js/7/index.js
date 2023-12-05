@@ -19,13 +19,13 @@ const figurePart = $$('.figure-part');
 // 需要猜测的单词数组，从这个数组中挑选单词
 const words = ["html", 'css', 'javascript', 'vue', 'react', 'typescript'];
 const wordInfos = [
-    "超文本标记语言", 
-    "层叠样式表", 
-    "开发web页面的脚本语言", 
-    "是一套用于构建用户界面的渐进式框架", 
+    "超文本标记语言",
+    "层叠样式表",
+    "开发web页面的脚本语言",
+    "是一套用于构建用户界面的渐进式框架",
     "用于构建用户界面的 JavaScript 库",
     "JavaScript的超集"
-]；
+]
 // 随机抽选
 let selectWord = selectWordRandom();
 
@@ -54,9 +54,8 @@ function selectWordRandom() {
  */
 function displayWord() {
     wordEl.innerHTML = `
-        ${
-        selectWord.split('').map(l => `
-                <span class="letter">${ correctLetters.indexOf(l) > -1 ? l : ''}</span>
+        ${selectWord.split('').map(l => `
+                <span class="letter">${correctLetters.indexOf(l) > -1 ? l : ''}</span>
             `).join('')
         }
     `;
@@ -71,8 +70,7 @@ function displayWord() {
 
 function updateWrongLetters() {
     wrongEl.innerHTML = `
-        ${
-        wrongLetters.map(l => `
+        ${wrongLetters.map(l => `
                 <span>${l}</span>
             `)
         }
@@ -102,6 +100,7 @@ function showPopup(message) {
         sureText: "再玩一次",
         showCancel: false,
         isClickModal: false,
+        showClose: false,
         sure: (context) => {
             context.close(600);
             playStatus = true;
@@ -117,7 +116,7 @@ function showPopup(message) {
 }
 
 function showNotification() {
-    return $message.error("您已经按下过这个字母了!");
+    return ewMessage.error("您已经按下过这个字母了!");
 }
 function eventHandle(letter) {
     if (selectWord.indexOf(letter) > -1) {

@@ -46,7 +46,7 @@ function searchMeal(e) {
             }
         })
     } else {
-        $message.error("请输入你要查找的膳食!");
+        ewMessage.error("请输入你要查找的膳食!");
         mealsEl.innerHTML = "";
         resultHeading.innerHTML = "";
     }
@@ -88,7 +88,7 @@ function addMealToDOM(meal) {
             ${meal.strArea ? `<p>${meal.strArea}</p>` : ''}
           </div>
           <div class="main">
-            <p>${ meal.strInstructions}</p>
+            <p>${meal.strInstructions}</p>
             <h2>Ingredients</h2>
             <ul>
               ${ingredients.map(ing => `<li>${ing}</li>`).join('')}

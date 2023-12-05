@@ -10,25 +10,31 @@
 body {
   overflow: hidden;
 }
+
 :root {
   --primary-color: #2396ef;
   --background-color: #1777c0;
 }
+
 button,
 input {
   border: none;
   outline: none;
 }
+
 a {
   text-decoration: none;
 }
+
 ul,
 li {
   list-style: none;
 }
+
 .nav.show-nav {
   transform: translateX(0);
 }
+
 .nav {
   width: 200px;
   height: 100vh;
@@ -37,10 +43,12 @@ li {
   transform: translateX(-100%);
   transition: transform 0.1s cubic-bezier(0.6, 0.04, 0.98, 0.335);
 }
+
 .nav .logo {
   padding: 30px 0;
   text-align: center;
 }
+
 .nav .logo img {
   width: 85px;
   height: 85px;
@@ -48,6 +56,7 @@ li {
   transition: transform 0.2s linear;
   cursor: pointer;
 }
+
 .nav .logo img:hover {
   transform: rotate(-180deg);
 }
@@ -56,6 +65,7 @@ li {
   padding: 20px;
   border-bottom: 2px solid rgba(0, 0, 0, 0.15);
 }
+
 .nav .nav-ul li a {
   color: #ffffff;
   letter-spacing: 3px;
@@ -77,6 +87,7 @@ li {
   background-color: #f4f5f6;
   transition: all 0.1s cubic-bezier(0.6, 0.04, 0.98, 0.335);
 }
+
 .header {
   padding: 40px 20px;
   text-align: center;
@@ -85,6 +96,7 @@ li {
   color: #ffffff;
   position: relative;
 }
+
 .header .toggle {
   position: absolute;
   top: 20px;
@@ -96,11 +108,13 @@ li {
   border-radius: 5px;
   padding: 10px 12px;
 }
+
 .header .toggle .menu {
   width: 24px;
   height: 24px;
   display: block;
 }
+
 .header .toggle .menu .menu-line {
   width: 100%;
   height: 5px;
@@ -108,18 +122,22 @@ li {
   margin: 4px 0;
   display: block;
 }
+
 .header .toggle:hover .menu-line {
   background-color: rgba(255, 255, 255, 0.5);
 }
+
 .header h1 {
   letter-spacing: 2px;
   font-family: "华文琥珀";
   margin-bottom: 10px;
 }
+
 .header p {
   margin: 30px 0;
   letter-spacing: 2px;
 }
+
 .header .register {
   background-color: var(--background-color);
   padding: 8px 18px;
@@ -129,24 +147,29 @@ li {
   cursor: pointer;
   color: #ffffff;
 }
+
 .header .register:hover,
 .header .register:active {
   background-color: #054474;
 }
+
 .main .content {
   width: 100%;
   overflow-y: auto;
   overflow-x: hidden;
 }
+
 .main .container {
   padding: 10px;
   max-width: 100%;
   width: 800px;
   margin: 0 auto;
 }
+
 .main .container hr {
   margin: 1em 0;
 }
+
 .main .container h2 {
   counter-increment: first-title;
   font-weight: 400;
@@ -154,6 +177,7 @@ li {
   color: #535353;
   margin-bottom: 15px;
 }
+
 .main .container h2:before {
   content: counter(first-title, simp-chinese-informal) ".";
 }
@@ -166,17 +190,21 @@ li {
   line-height: 25px;
   margin: 1em 0;
 }
+
 .main .container a {
   color: #2396ef;
   cursor: alias;
 }
+
 .main .container a:hover,
 .main .container a:active {
   text-decoration: underline wavy #2396ef;
 }
+
 .main .container ul li {
   counter-increment: order;
 }
+
 .main .container ul li:before {
   content: counter(order) ".";
   color: #535353;
@@ -184,30 +212,30 @@ li {
   font-weight: bold;
 }
 
-.ew-popBox-mask .modal-form {
-    width: 350px;
+.ew-popBox .modal-form {
+  width: 350px;
 }
 
-.ew-popBox-mask .modal-form div{
-    margin: 15px 0;
+.ew-popBox .modal-form div {
+  margin: 15px 0;
 }
 
-.ew-popBox-mask .modal-form div label {
-    display: block;
-    margin-bottom: 5px;
-    color: #535353;
+.ew-popBox .modal-form div label {
+  display: block;
+  margin-bottom: 5px;
+  color: #535353;
 }
 
-.ew-popBox-mask .modal-form div input {
-    display: block;
-    width: 100%;
-    border-radius: 2px;
-    border: 1px solid #f2f3f4;
-    padding: 10px 12px;
-    font-size: 16px;
-    color: #535353;
+.ew-popBox .modal-form div input {
+  display: block;
+  width: 100%;
+  border-radius: 2px;
+  border: 1px solid #f2f3f4;
+  padding: 10px 12px;
+  font-size: 16px;
+  color: #535353;
 }
 
-.ew-popBox-mask .ew-popBox-btnGroup button {
-    letter-spacing: 2px;
+.ew-popBox .ew-popBox-btnGroup button {
+  letter-spacing: 2px;
 }
