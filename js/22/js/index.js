@@ -33,7 +33,7 @@ class Page {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
     init(options) {
-        this.uploadBtn.onclick = () => { return this.uploadInput.click()};
+        this.uploadBtn.onclick = () => { return this.uploadInput.click() };
         this.uploadRender();
         this.renderList(options.data);
         this.startSelect();
@@ -70,9 +70,11 @@ class Page {
         });
         this.listImage.innerHTML = str;
         if (this.listImage.children) {
-            [].slice.call(this._selectAll('.list-image-item img')).forEach((item) => {
+            const imgList = [].slice.call(this._selectAll('.list-image-item img'));
+            const viewer = new ewViewer({ img: imgList })
+            imgList.forEach((item, index) => {
                 item.onclick = function () {
-                    return new ewViewer(this);
+                    viewer.viewImage(index)
                 }
             })
         }
@@ -113,7 +115,7 @@ class Page {
     }
     resetSelect() {
         this.resetBtn.onclick = () => {
-            if(this.timer)return ewConfirm('请先点击停止!');
+            if (this.timer) return ewConfirm('请先点击停止!');
             this.result.textContent = "点击开始选择吧!";
             for (var i = 0; i < this.listImage.children.length; i++) {
                 this.listImage.children[i].classList.remove('list-image-item-active');
@@ -122,7 +124,7 @@ class Page {
     }
     originSelect(options) {
         this.originBtn.onclick = () => {
-            if(this.timer)return ewConfirm('请先点击停止!');
+            if (this.timer) return ewConfirm('请先点击停止!');
             this.renderList(options.data);
             this.timer = null;
             this.count = 0;

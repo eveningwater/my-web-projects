@@ -6,20 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>random</title>
-    <link rel="stylesheet" href="https://www.eveningwater.com/static/css/common.css">
     <link rel="shortcut icon" href="https://www.eveningwater.com/static/image/icon.jpg" type="image/x-icon">
     <style>
         * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
-        #list-image {
+        .list-image {
             position: relative;
-            margin-top: 25px;
+            padding-top: 25px;
         }
 
-        #list-image::after {
+        .list-image::after {
             content: "";
             clear: both;
             height: 0;
@@ -27,7 +27,7 @@
             visibility: hidden;
         }
 
-        #list-image .list-image-item {
+        .list-image .list-image-item {
             width: 120px;
             height: 150px;
             float: left;
@@ -38,19 +38,19 @@
             box-shadow: 0 0 15px #2396ef;
         }
 
-        #list-image .list-image-item img {
+        .list-image .list-image-item img {
             width: 120px;
             height: 120px;
             display: block;
             cursor: zoom-in;
         }
 
-        #list-image .list-image-item p {
+        .list-image .list-image-item p {
             text-align: center;
             font-size: 18px;
         }
 
-        #list-button {
+        .list-button {
             margin: 15px;
         }
 
@@ -102,36 +102,36 @@
             border-color: #57a3f3;
         }
 
-        #result {
+        .result {
             color: #2396ef;
             font-size: 25px;
-            margin: 2em;
+            margin: 1em;
         }
 
         @media screen and (max-width: 765px) {
-            #list-image {
+            .list-image {
                 padding: 20px;
                 margin-top: 0;
             }
 
-            #list-image .list-image-item {
+            .list-image .list-image-item {
                 width: 50%;
                 margin-left: 0;
             }
 
-            #list-image .list-image-item img {
+            .list-image .list-image-item img {
                 width: 100px;
                 height: 100px;
                 margin: 10px auto;
             }
 
-            #result {
+            .result {
                 margin: 0;
                 text-align: center;
                 margin-bottom: 1em;
             }
 
-            #list-button {
+            .list-button {
                 margin: 0;
                 margin-bottom: 1em;
                 text-align: center;
@@ -139,17 +139,17 @@
         }
 
         input[type="file"] {
-            display: none !important;
+            display: none;
         }
     </style>
 </head>
 
 <body>
-    <div id="list-image"></div>
-    <div id="result">
+    <div id="list-image" class="list-image"></div>
+    <div id="result" class="result">
         点击开始选择吧!
     </div>
-    <div id="list-button">
+    <div id="list-button" class="list-button">
         <button class="upload-btn btn" id="upload-btn" type="button">
             上传
             <input type="file" id="upload-input" class="upload-input" multiple>
@@ -159,8 +159,8 @@
         <button class="reset-btn btn" id="reset-btn" type="button">重置</button>
         <button class="origin-btn btn" id="origin-btn" type="button">还原</button>
     </div>
-    <script src="./plugins/ewViewer.js"></script>
-    <script src="./plugins/popbox.js"></script>
+    <script src="./plugins/ewViewer-min.js"></script>
+    <script src="https://www.eveningwater.com/static/plugin/popbox.min.js"></script>
     <script src="./js/index.js"></script>
     <script>
         let page = new Page({
