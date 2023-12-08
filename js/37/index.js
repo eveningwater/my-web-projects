@@ -1,5 +1,9 @@
 var content = document.getElementsByClassName("content")[0],
     sec = document.getElementsByTagName("section")[0];
+var equalEval = function (str) {
+    return new Function('return ' + str)
+}();
+
 sec.onclick = function (event) {
     var src = event.target;
     if (src.nodeName == "BUTTON") {
@@ -18,7 +22,7 @@ sec.onclick = function (event) {
 }
 document.onkeyup = function (e) {
     if (e.keyCode == 13) {
-        content.textContent = eval(content.textContent).toFixed(2);
+        content.textContent = equalEval(content.textContent).toFixed(2);
     } else if (e.keyCode == 8) {
         content.textContent = "";
     }
