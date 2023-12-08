@@ -155,17 +155,17 @@ songs.forEach(createPopBox);
  * 创建每一块
  * @param {*} item 
  */
-function createPopBox(item){
+function createPopBox(item) {
     const boxItem = document.createElement('div');
     boxItem.classList.add('box');
     boxItem.innerHTML = `<img src="https://www.eveningwater.com/my-web-projects/react/1/audioImages/${item.imgName}.jpg" alt="图片加载中">
-    <p>我是${ item.singer }，我唱的《${ item.name }》。</p>`;
+    <p>我是${item.singer}，我唱的《${item.name}》。</p>`;
     main.appendChild(boxItem);
 }
 // 点击每一列
 const children = main.querySelectorAll('.box');
 children.forEach(box => {
-    box.addEventListener('click',() => {
+    box.addEventListener('click', () => {
         children.forEach((child) => {
             child.classList.remove('active');
         });
@@ -178,7 +178,7 @@ children.forEach(box => {
  * 设置文本
  * @param {*} text 
  */
-function setMessageText(text){
+function setMessageText(text) {
     return message.text = text;
 }
 /**
@@ -203,7 +203,7 @@ function loadSelect(selectContainer) {
         selectListItem.appendChild(voiceItem);
     });
     const label = voices.find(_ => voice === _.lang).name + '(' + voice + ")";
-    setDefaultSelectValue(selectContainer.querySelector('.select-content'),label);
+    setDefaultSelectValue(selectContainer.querySelector('.select-content'), label);
 }
 /**
  * 设置选择下拉选项值
@@ -277,15 +277,15 @@ function speakMessage() {
 getVoices();
 // 事件监听部分
 speechSynthesis.addEventListener('voiceschanged', getVoices);
-toggleBoxBtn.addEventListener('click',() => {
+toggleBoxBtn.addEventListener('click', () => {
     box.classList.add('show');
 });
-closeBoxBtn.addEventListener('click',() => {
+closeBoxBtn.addEventListener('click', () => {
     box.classList.remove('show');
 });
-readBtn.addEventListener('click',() => {
+readBtn.addEventListener('click', () => {
     const content = readContent.value;
-    if(!content.trim())return $message.warning("请输入要阅读的文本内容!");
+    if (!content.trim()) return ewMessage.warning("请输入要阅读的文本内容!");
     setMessageText(content);
     speakMessage();
 });

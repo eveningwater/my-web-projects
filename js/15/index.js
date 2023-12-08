@@ -29,7 +29,7 @@ function resetResult() {
 resetResult();
 // 点击搜索按钮搜索歌曲
 searchBtn.addEventListener('click', () => {
-    if (!songText.value.trim()) return $message.error("请输入歌曲名!");
+    if (!songText.value.trim()) return ewMessage.error("请输入歌曲名!");
     searchValue = songText.value;
     searchSong(searchValue);
     songText.value = "";
@@ -57,8 +57,8 @@ function showResultData(data) {
         const songItem = document.createElement('li');
         songItem.innerHTML = `
         <span>
-            ${ song.name}-
-            <b>${ song.artists[0].name}</b>
+            ${song.name}-
+            <b>${song.artists[0].name}</b>
         </span>
         <button type="button" class="get-lyric-btn btn" data-id=${song.id}>获取歌词</button>`;
         ulItem.appendChild(songItem);
@@ -70,14 +70,14 @@ function showResultData(data) {
             const songID = item.getAttribute('data-id');
             const songInfo = item.previousElementSibling.innerText;
             fetch(baseDetailAPI + '&id=' + songID).then(res => res.json()).then(data => {
-                if(data.lrc){
-                    const filter_lyric = data.lrc.lyric.replace(/\[.*?\]/g,'').trim().replace(/(\r\n|\r|\n)/g, (word) => {
+                if (data.lrc) {
+                    const filter_lyric = data.lrc.lyric.replace(/\[.*?\]/g, '').trim().replace(/(\r\n|\r|\n)/g, (word) => {
                         return word + '，<br>';
                     }) + '。';
-                    result.innerHTML = `<h2>${ songInfo }</h2><p>${filter_lyric}</p>`;
+                    result.innerHTML = `<h2>${songInfo}</h2><p>${filter_lyric}</p>`;
                     pageEl.innerHTML = '';
-                }else{
-                    return $message.error("暂未找到歌词!");
+                } else {
+                    return ewMessage.error("暂未找到歌词!");
                 }
             })
         })

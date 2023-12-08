@@ -19,16 +19,16 @@ HTMLElement.prototype.hasClass = function (className) {
 // 变量定义部分
 const difficultyArr = [
     {
-        label:"容易",
-        value:"easy"
+        label: "容易",
+        value: "easy"
     },
     {
-        label:"一般",
-        value:"medium"
+        label: "一般",
+        value: "medium"
     },
     {
-        label:"困难",
-        value:"hard"
+        label: "困难",
+        value: "hard"
     }
 ];
 const words = [
@@ -52,10 +52,10 @@ const words = [
     'admit',
     'drag',
     'loving'
-  ];
+];
 // 默认的难易程度
 let difficulty = localStorage.getItem('difficulty') ? localStorage.getItem('difficulty') : 'medium';
-const text= $("#text");
+const text = $("#text");
 const timeEl = $("#time");
 const scoreEl = $("#score");
 const wordEl = $("#word");
@@ -70,46 +70,46 @@ updateTime();
 /**
  * 随机一个单词
  */
-function getRandomWord(){
+function getRandomWord() {
     return words[Math.floor(Math.random() * words.length)];
 }
 /**
  * 更新单词DOM
  */
-function updateWordDom(){
+function updateWordDom() {
     randomWord = getRandomWord();
     wordEl.innerHTML = randomWord;
 }
 /**
  * 更新得分
  */
-function updateScore(){
+function updateScore() {
     score++;
     scoreEl.innerHTML = score;
 }
 /**
  * 更新时间
  */
-function updateTime(){
+function updateTime() {
     time--;
     timeEl.innerHTML = time + 's';
-    if(time <= 0){
-        if(timer)clearTimeout(timer);
+    if (time <= 0) {
+        if (timer) clearTimeout(timer);
         gameOver();
-    }else{
+    } else {
         timer = setTimeout(updateTime, 1000);
     }
 }
 /**
  * 游戏结束
  */
-function gameOver(){
+function gameOver() {
     return ewConfirm({
-        title:"时间已经用完",
-        content:`你最后的得分是${score}`,
-        isClickModal:false,
-        sureText:"再玩一次",
-        sure:(context) => {
+        title: "时间已经用完",
+        content: `你最后的得分是${score}`,
+        isClickModal: false,
+        sureText: "再玩一次",
+        sure: (context) => {
             context.close(1);
             time = 10;
             updateWordDom();
@@ -117,22 +117,23 @@ function gameOver(){
             score = 0;
             scoreEl.innerHTML = 0;
         },
-        footerAlign:"center",
-        showCancel:false
+        showClose: false,
+        footerAlign: "center",
+        showCancel: false
     })
 }
 updateWordDom();
-text.addEventListener('input',(e) => {
+text.addEventListener('input', (e) => {
     const value = e.target.value;
-    if(value === randomWord){
+    if (value === randomWord) {
         e.target.value = '';
         updateWordDom();
         updateScore();
-        if(difficulty === 'easy'){
+        if (difficulty === 'easy') {
             time += 5;
-        }else if(difficulty === 'medium'){
+        } else if (difficulty === 'medium') {
             time += 3;
-        }else{
+        } else {
             time += 2;
         }
     }
@@ -141,25 +142,25 @@ text.addEventListener('input',(e) => {
  * 加载选择项
  * @param {*} selectContainer 
  */
-function loadSelect(selectContainer){
+function loadSelect(selectContainer) {
     const selectListItem = selectContainer.querySelector('.select-items');
     selectListItem.innerHTML = "";
     difficultyArr.forEach(diff => {
-        const  diffItem = document.createElement('div');
+        const diffItem = document.createElement('div');
         diffItem.classList.add('select-option');
-        diffItem.setAttribute('data-value',diff.value);
+        diffItem.setAttribute('data-value', diff.value);
         diffItem.innerHTML = diff.label;
         selectListItem.appendChild(diffItem);
     });
     const label = difficultyArr.find(_ => difficulty === _.value).label;
-    setDefaultSelectValue(selectContainer.querySelector('.select-content'),label);
+    setDefaultSelectValue(selectContainer.querySelector('.select-content'), label);
 }
 /**
  * 设置选择下拉选项值
  * @param {*} el 
  * @param {*} label 
  */
-function setDefaultSelectValue(el,label){
+function setDefaultSelectValue(el, label) {
     return el.innerHTML = label;
 }
 /**
@@ -200,7 +201,7 @@ function selectHandle(selectContainer) {
                 opt.classList.remove('select-this');
             });
             difficulty = this.getAttribute('data-value');
-            localStorage.setItem('difficulty',difficulty);
+            localStorage.setItem('difficulty', difficulty);
             this.classList.add('select-this');
             showSelect(this.parentElement.previousElementSibling, false);
         }
@@ -219,11 +220,13 @@ function selectHandle(selectContainer) {
 loadSelect($('.select-hard'));
 selectHandle($('.select-hard'));
 // 点击设置按钮
-$("#setting-btn").addEventListener('click',() => {
+$("#setting-btn").addEventListener('click', () => {
     $("#setting").classList.toggle('hide');
 });
-document.addEventListener('keydown',(e) => {
-    if(e.ctrlKey && e.keyCode === 67){
-        return $message.error("请不要复制单词,这是违规操作!");
+document.addEventListener('keydown', (e) => {
+    // ios keyboard command board is metaKey.
+    const ctrl = e.ctrlKey || e.metaKey;
+    if (ctrl && e.keyCode === 67) {
+        return ewMessage.error("请不要复制单词,这是违规操作!");
     }
 });
