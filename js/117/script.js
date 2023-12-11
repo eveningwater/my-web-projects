@@ -37,7 +37,7 @@ const request = (options) => {
         }
         return keyStr;
     }
-    return new Promise((resolve,reject) => {
+    return new Promise((resolve, reject) => {
         const xhr = new XMLHttpRequest();
         let requestURL = "";
         if (method.toLowerCase() === "get") {
@@ -62,8 +62,8 @@ const getText = () => {
     $("#refresh").innerHTML = "正在加载中<dot>...</dot>";
     $("#refresh").classList.add('ls-loading');
     $("#refresh").classList.add("ls-disabled");
-    request({ url:API,method:"get" }).then(value => {
-        if(value?.code === 1 && value?.content){
+    request({ url: API, method: "get" }).then(value => {
+        if (value?.code === 1 && value?.content) {
             $("#ls-content-text").innerHTML = value?.content;
             $("#refresh").innerHTML = "不好?换一个";
             $("#refresh").classList.remove('ls-loading');
@@ -83,11 +83,11 @@ window.onload = () => {
             copyHandler(text);
         }
     });
-    $("#refresh").addEventListener("click",() => {
-        if(!$("#refresh").classList.contains('ls-disabled')){
+    $("#refresh").addEventListener("click", () => {
+        if (!$("#refresh").classList.contains('ls-disabled')) {
             getText();
-        }else{
-            $message.warning("土味情话正在查找中，请耐心等待...");
+        } else {
+            ewMessage.warning("土味情话正在查找中，请耐心等待...");
         }
     });
     getText();

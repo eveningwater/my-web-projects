@@ -37,7 +37,7 @@ class Page {
                 const clickType = btn.getAttribute('data-click');
                 if (clickType === 'preview') {
                     if (!this.base64) {
-                        return $message.warning("请先上传图片");
+                        return ewMessage.warning("请先上传图片");
                     }
                     ewConfirm({
                         title: "图片base64字符串",
@@ -46,12 +46,12 @@ class Page {
 
                     const isCopy = this.getUtils().copyToClipboard(this.base64);
                     if (isCopy) {
-                        $message.success("复制base64字符串成功!")
+                        ewMessage.success("复制base64字符串成功!")
                     }
                 }
                 if (clickType === 'download') {
-                    if(!this.base64){
-                        return $message.warning("请先上传图片!")
+                    if (!this.base64) {
+                        return ewMessage.warning("请先上传图片!")
                     }
                     const link = this.getUtils().create('a');
                     link.download = this.fileName || '';
@@ -116,7 +116,7 @@ class Page {
     uploadFile(file) {
         // console.log(file);
         if (!/image\/\w+/.test(file.type) || !['jpeg', 'png', 'jpg'].some(item => file.type.includes(item))) {
-            return $message.error("只允许上传图片!");
+            return ewMessage.error("只允许上传图片!");
         }
         this.fileName = file.name;
         this.originFileType = file.type.slice(file.type.indexOf('/') + 1);
@@ -136,7 +136,7 @@ class Page {
                 this.canvas.height = previewImage.height;
                 this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
                 // 要画实际的imgDOM元素才能成功灰度处理
-                this.ctx.drawImage(previewImage,0,0);
+                this.ctx.drawImage(previewImage, 0, 0);
                 this.ImageGray(this.ctx, 0, 0);
             })
 

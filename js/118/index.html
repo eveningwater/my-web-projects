@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <title>兔兔相册展示器</title>
     <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
     <div class="rabbit-box">
         <header class="rabbit-box-header">
@@ -14,61 +16,63 @@
         </header>
         <div class="rabbit-box-album"></div>
     </div>
+    <script src="https://www.eveningwater.com/static/plugin/viewer.min.js"></script>
     <script src="./script.js"></script>
     <script>
         const rabbit = new RabbitAlbum({
             resources: [
                 {
-                    src:"https://www.eveningwater.com/img/rabbits/rabbit-1.png",
-                    title:"可爱的兔兔-1",
-                    content:"雄兔脚扑朔，雌兔眼迷离。"
+                    src: "https://www.eveningwater.com/img/rabbits/rabbit-1.png",
+                    title: "可爱的兔兔-1",
+                    content: "雄兔脚扑朔，雌兔眼迷离。"
                 },
                 {
-                    src:"https://www.eveningwater.com/img/rabbits/rabbit-2.png",
-                    title:"可爱的兔兔-2",
-                    content:"兔走乌驰人语静，满溪红袂棹歌初。"
+                    src: "https://www.eveningwater.com/img/rabbits/rabbit-2.png",
+                    title: "可爱的兔兔-2",
+                    content: "兔走乌驰人语静，满溪红袂棹歌初。"
                 },
                 {
-                    src:"https://www.eveningwater.com/img/rabbits/rabbit-3.png",
-                    title:"可爱的兔兔-3",
-                    content:"白兔捣药成，问言与谁餐？"
+                    src: "https://www.eveningwater.com/img/rabbits/rabbit-3.png",
+                    title: "可爱的兔兔-3",
+                    content: "白兔捣药成，问言与谁餐？"
                 },
                 {
-                    src:"https://www.eveningwater.com/img/rabbits/rabbit-4.png",
-                    title:"可爱的兔兔-4",
-                    content:"兔丝附蓬麻，引蔓故不长。"
+                    src: "https://www.eveningwater.com/img/rabbits/rabbit-4.png",
+                    title: "可爱的兔兔-4",
+                    content: "兔丝附蓬麻，引蔓故不长。"
                 },
                 {
-                    src:"https://www.eveningwater.com/img/rabbits/rabbit-5.png",
-                    title:"可爱的兔兔-5",
-                    content:"白兔捣药秋复春，嫦娥孤栖与谁邻。"
+                    src: "https://www.eveningwater.com/img/rabbits/rabbit-5.png",
+                    title: "可爱的兔兔-5",
+                    content: "白兔捣药秋复春，嫦娥孤栖与谁邻。"
                 },
                 {
-                    src:"https://www.eveningwater.com/img/rabbits/rabbit-6.png",
-                    title:"可爱的兔兔-6",
-                    content:"吴质不眠倚桂树，露脚斜飞湿寒兔。"
+                    src: "https://www.eveningwater.com/img/rabbits/rabbit-6.png",
+                    title: "可爱的兔兔-6",
+                    content: "吴质不眠倚桂树，露脚斜飞湿寒兔。"
                 },
                 {
-                    src:"https://www.eveningwater.com/img/rabbits/rabbit-7.png",
-                    title:"可爱的兔兔-7",
-                    content:"茕茕白兔，东走西顾。"
+                    src: "https://www.eveningwater.com/img/rabbits/rabbit-7.png",
+                    title: "可爱的兔兔-7",
+                    content: "茕茕白兔，东走西顾。"
                 },
                 {
-                    src:"https://www.eveningwater.com/img/rabbits/rabbit-8.png",
-                    title:"可爱的兔兔-8",
-                    content:"可笑常娥不了事，走却玉兔来人间。"
+                    src: "https://www.eveningwater.com/img/rabbits/rabbit-8.png",
+                    title: "可爱的兔兔-8",
+                    content: "可笑常娥不了事，走却玉兔来人间。"
                 },
                 {
-                    src:"https://www.eveningwater.com/img/rabbits/rabbit-9.png",
-                    title:"可爱的兔兔-9",
-                    content:"兔走乌驰人语静，满溪红袂棹歌初。"
+                    src: "https://www.eveningwater.com/img/rabbits/rabbit-9.png",
+                    title: "可爱的兔兔-9",
+                    content: "兔走乌驰人语静，满溪红袂棹歌初。"
                 }
             ],
-            el:".rabbit-box-album"
+            el: ".rabbit-box-album"
         })
-        RabbitAlbum.$('.rabbit-box-header-btn').addEventListener('click',() => {
+        RabbitAlbum.$('.rabbit-box-header-btn').addEventListener('click', () => {
             rabbit.createAlbum();
         })
     </script>
 </body>
+
 </html>
