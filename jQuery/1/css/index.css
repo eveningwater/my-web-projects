@@ -211,7 +211,6 @@ main {
     width: 100%;
     height: calc(100% - 80px);
     overflow-y: auto;
-    box-sizing: border-box;
 }
 
 main>p {
@@ -221,7 +220,7 @@ main>p {
 
 main.content {
     outline: none;
-    padding-left: 5px;
+    padding: 10px;
     border-radius: 5px;
 }
 
@@ -250,6 +249,12 @@ main.content:focus {
 .maincontent i.checked {
     background-color: rgba(226, 209, 82, 0.95);
     color: #fff;
+}
+
+.maincontent i.checked>.checked-icon {
+    width: 13px;
+    height: 13px;
+    fill: currentColor;
 }
 
 .maincontent>div {

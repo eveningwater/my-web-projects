@@ -12,6 +12,7 @@ var GLOBAL = {
         $(".content").children(".loading").remove();
     }
 };
+var CHECKED_ICON = `<svg t="1702382629512" class="checked-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2321"><path d="M969.6 208c-9.6-9.6-25.6-9.6-35.2 0l-508.8 537.6c-19.2 19.2-48 19.2-70.4 3.2l-265.6-252.8c-9.6-9.6-25.6-9.6-35.2 0-9.6 9.6-9.6 25.6 0 35.2l265.6 252.8c38.4 38.4 102.4 35.2 137.6-3.2l508.8-537.6C979.2 233.6 979.2 217.6 969.6 208z" p-id="2322"></path></svg>`
 /***************************************/
 /*页面加载时运行*/
 /***************************************/
@@ -130,29 +131,29 @@ mainPageHandle.prototype.loadData = function (options) {
         * 如果页面存在数据
         */
         if ($(".maincontent").length !== 0) {
-            resetShow(options,false);
+            resetShow(options, false);
             options.topEditButton.attr("disabled", false).removeClass("disabled");
             let isDelete = false;
             // 点击编辑
             options.topEditButton.off('click').on('click', function () {
                 isDelete = !isDelete;
-                resetShow(options,isDelete);
+                resetShow(options, isDelete);
                 $(".maincontent i").click(function () {
                     //点击选中
                     $(this).toggleClass('checked');
-                    $(this).hasClass('checked') ? $(this).text('√') : $(this).text('');
+                    $(this).html($(this).hasClass('checked') ? CHECKED_ICON : '');
                     $("header h1 .number").text($(".maincontent .checked").length);
                 });
             });
-        }else{
+        } else {
             reset(options);
             options.topEditButton.attr("disabled", true).addClass("disabled");
-            resetShow(options,false);
+            resetShow(options, false);
         }
-    }else{
+    } else {
         reset(options);
         options.topEditButton.attr("disabled", true).addClass("disabled");
-        resetShow(options,false);
+        resetShow(options, false);
     }
 }
 /**
@@ -160,7 +161,7 @@ mainPageHandle.prototype.loadData = function (options) {
  * @param {*} options 
  * @param {*} bool 
  */
-function resetShow(options,bool){
+function resetShow(options, bool) {
     if (bool) {
         $("header h1").html("已选中<span class=\"number\">0</span>项");
         options.topEditButton.text("取消");
