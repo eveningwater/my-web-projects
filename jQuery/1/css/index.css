@@ -42,19 +42,19 @@ button {
 }
 
 /*块级元素*/
-.loadingDot span,
-.maincontent i {
+.loading-dot span,
+.main-content i {
     display: block;
 }
 
 /*行内块元素*/
-.maincontent div {
+.main-content div {
     display: inline-block;
 }
 
 /*绝对定位*/
-.loadingMemo,
-.loadingDot,
+.memo-loading,
+.loading-dot,
 header .topEdit,
 footer .footerEdit,
 header .topKeep,
@@ -66,11 +66,11 @@ footer .footeredit,
 
 /*相对定位*/
 .loading,
-.mainpage,
+.main-page,
 header,
 footer,
 main,
-.editpage {
+.edit-page {
     position: relative;
 }
 
@@ -82,7 +82,7 @@ button {
 
 /*手型按钮*/
 button,
-.maincontent i,
+.main-content i,
 header .topEdit,
 footer .footerEdit,
 header .topKeep,
@@ -130,7 +130,7 @@ html {
     background-color: rgba(248, 231, 209, 0.31);
 }
 
-.loadingMemo {
+.memo-loading {
     width: 100px;
     height: 100px;
     background: url("../img/memo1.svg")no-repeat;
@@ -141,7 +141,7 @@ html {
     margin-left: -50px;
 }
 
-.loadingDot {
+.loading-dot {
     width: 90px;
     height: 30px;
     left: 50%;
@@ -149,7 +149,7 @@ html {
     margin-left: -45px;
 }
 
-.loadingDot span {
+.loading-dot span {
     width: 16px;
     height: 16px;
     border-radius: 8px;
@@ -161,25 +161,25 @@ html {
     animation: loadingAnimate linear .3s infinite 0s alternate;
 }
 
-.loadingDot span:first-child {
+.loading-dot span:first-child {
     /*执行延迟*/
     animation-delay: 0.1s;
 }
 
-.loadingDot span:nth-child(2) {
+.loading-dot span:nth-child(2) {
     animation-delay: 0.3s;
 }
 
-.loadingDot span:nth-child(3) {
+.loading-dot span:nth-child(3) {
     animation-delay: 0.5s;
 }
 
-.loadingDot span:last-child {
+.loading-dot span:last-child {
     margin-right: 0;
 }
 
 /*首页部分*/
-.mainpage {
+.main-page {
     width: 100%;
     height: 100%;
     left: 0;
@@ -228,13 +228,13 @@ main.content:focus {
     border: 1px solid #2396ef;
 }
 
-.maincontent {
+.main-content {
     width: 100%;
     height: auto;
     border-bottom: 1px solid #d9d9d9;
 }
 
-.maincontent i {
+.main-content i {
     width: 20px;
     height: 20px;
     border-radius: 10px;
@@ -246,28 +246,28 @@ main.content:focus {
     margin-top: 15px;
 }
 
-.maincontent i.checked {
+.main-content i.checked {
     background-color: rgba(226, 209, 82, 0.95);
     color: #fff;
 }
 
-.maincontent i.checked>.checked-icon {
+.main-content i.checked>.checked-icon {
     width: 13px;
     height: 13px;
     fill: currentColor;
 }
 
-.maincontent>div {
+.main-content>div {
     width: calc(100% - 35px);
     height: auto;
     margin-top: 5px;
 }
 
-.maincontent div p:first-child {
+.main-content div p:first-child {
     margin-left: 15px;
 }
 
-.maincontent div p:last-child {
+.main-content div p:last-child {
     margin-left: 15px;
 }
 
@@ -302,7 +302,7 @@ footer .footerDelete {
 }
 
 /*编辑页面*/
-.editpage {
+.edit-page {
     width: 0;
     height: 0;
     left: 100%;

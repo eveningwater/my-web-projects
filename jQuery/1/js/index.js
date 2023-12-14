@@ -7,7 +7,7 @@
 "use strict";
 var GLOBAL = {
     /*载入动画*/
-    loadingAnimate: '<div class="loading"><div class="loadingMemo"></div><div class="loadingDot"><span></span><span></span><span></span></div></div>',
+    loadingAnimate: '<div class="loading"><div class="memo-loading"></div><div class="loading-dot"><span></span><span></span><span></span></div></div>',
     removeLoadingAnimate: function () {
         $(".content").children(".loading").remove();
     }
@@ -18,7 +18,7 @@ var CHECKED_ICON = `<svg t="1702382629512" class="checked-icon" viewBox="0 0 102
 /***************************************/
 $(function () {
     //初始加载页面
-    loadBody("pages/mainpage.html");
+    loadBody("pages/main-page.html");
 });
 /**
  * 页面操作
@@ -51,7 +51,7 @@ function mainPageHandle(options) {
  * 初始化
  */
 mainPageHandle.prototype.init = function (options) {
-    options.data = localStorage.getItem('keepobj');
+    options.data = localStorage.getItem('memoData');
     const vm = this;
     // 点击底部的编辑按钮
     options.footerEditButton.off('click').click(function (e) {
@@ -59,22 +59,22 @@ mainPageHandle.prototype.init = function (options) {
         //首页隐藏编辑页面显示
         if ($(this).hasClass('footerEdit')) {
             reset();
-            changePage([{ el: $('.mainpage'), show: false }, { el: $('.editpage'), show: true }]);
+            changePage([{ el: $('.main-page'), show: false }, { el: $('.edit-page'), show: true }]);
             //保存按钮禁用
             $(".topKeep").attr("disabled", true).addClass("disabled");
         } else {
             let _data = options.data ? JSON.parse(options.data) : [];
             if (_data.length) {
-                for (let i = 0, len = $('.maincontent .checked').length; i < len; i++) {
-                    const id = $(".maincontent .checked").eq(i).siblings('div').attr('data-id');
+                for (let i = 0, len = $('.main-content .checked').length; i < len; i++) {
+                    const id = $(".main-content .checked").eq(i).siblings('div').attr('data-id');
                     const deleteIndex = _data.findIndex((item) => { return item.id === Number(id) });
                     if (deleteIndex > -1) {
                         _data.splice(deleteIndex, 1);
                     }
                 }
             }
-            localStorage.setItem('keepobj', JSON.stringify(_data));
-            if ($(".maincontent").length <= 0) {
+            localStorage.setItem('memoData', JSON.stringify(_data));
+            if ($(".main-content").length <= 0) {
                 $(this).removeClass('footerDelete').addClass('footerEdit');
             }
             vm.init(options);
@@ -84,15 +84,15 @@ mainPageHandle.prototype.init = function (options) {
     options.backButton.on('click', function () {
         reset(options);
         //编辑页面隐藏首页显示
-        changePage([{ el: $('.mainpage'), show: true }, { el: $('.editpage'), show: false }]);
+        changePage([{ el: $('.main-page'), show: true }, { el: $('.edit-page'), show: false }]);
     });
     $('#footerEdit').click(function () {
         //首先清空内容，然后将页面设为可编辑状态
-        $(".editpage main").text("").attr('contentEditable', true).focus().addClass("content");
+        $(".edit-page main").text("").attr('contentEditable', true).focus().addClass("content");
         //保存按钮取消禁用样式
         $(".topKeep").removeClass("disabled").attr('disabled', false).off('click').off('click').on('click', function () {
             //获取输入内容
-            var data = $(".editpage .content").text();
+            var data = $(".edit-page .content").text();
             if (!data) {
                 console.warn('不能为空');
                 return;
@@ -105,9 +105,9 @@ mainPageHandle.prototype.init = function (options) {
                 "time": nowDate()
             });
             //存储本地数据
-            localStorage.setItem('keepobj', JSON.stringify(keepData));
+            localStorage.setItem('memoData', JSON.stringify(keepData));
             $(".topKeep").attr("disabled", true).addClass("disabled");
-            changePage([{ el: $('.mainpage'), show: true }, { el: $('.editpage'), show: false }]);
+            changePage([{ el: $('.main-page'), show: true }, { el: $('.edit-page'), show: false }]);
             vm.init(options);
         });
     })
@@ -118,19 +118,19 @@ mainPageHandle.prototype.init = function (options) {
  */
 mainPageHandle.prototype.loadData = function (options) {
     //获取本地存储对象
-    let jsobj = options.data;
-    if (jsobj) {
-        jsobj = JSON.parse(jsobj);
-        $(".mainpage main").empty();
+    let memoData = options.data;
+    if (memoData) {
+        memoData = JSON.parse(memoData);
+        $(".main-page main").empty();
         //遍历对象
-        $.each(jsobj, function (index, obj) {
+        $.each(memoData, function (_, item) {
             //向页面添加元素
-            $(".mainpage main").append("<div class=\"maincontent\"><div data-id=" + obj.id + "><p>" + obj.content + "</p><p>" + obj.time + "</p></div></div>");
+            $(".main-page main").append("<div class=\"main-content\"><div data-id=" + item.id + "><p>" + item.content + "</p><p>" + item.time + "</p></div></div>");
         });
         /**
         * 如果页面存在数据
         */
-        if ($(".maincontent").length !== 0) {
+        if ($(".main-content").length !== 0) {
             resetShow(options, false);
             options.topEditButton.attr("disabled", false).removeClass("disabled");
             let isDelete = false;
@@ -138,11 +138,11 @@ mainPageHandle.prototype.loadData = function (options) {
             options.topEditButton.off('click').on('click', function () {
                 isDelete = !isDelete;
                 resetShow(options, isDelete);
-                $(".maincontent i").click(function () {
+                $(".main-content i").click(function () {
                     //点击选中
                     $(this).toggleClass('checked');
                     $(this).html($(this).hasClass('checked') ? CHECKED_ICON : '');
-                    $("header h1 .number").text($(".maincontent .checked").length);
+                    $("header h1 .number").text($(".main-content .checked").length);
                 });
             });
         } else {
@@ -165,15 +165,15 @@ function resetShow(options, bool) {
     if (bool) {
         $("header h1").html("已选中<span class=\"number\">0</span>项");
         options.topEditButton.text("取消");
-        $(".maincontent").append("<i></i>");
+        $(".main-content").append("<i></i>");
         options.footerEditButton.addClass("footerDelete").removeClass('footerEdit');
     } else {
-        $(".maincontent i").remove();
+        $(".main-content i").remove();
         $("header h1").html('备忘录');
         options.topEditButton.text("编辑");
         options.footerEditButton.removeClass("footerDelete").addClass('footerEdit');
     }
-    $("footer h1 .number").text($(".maincontent").length);
+    $("footer h1 .number").text($(".main-content").length);
 }
 /**
  * 页面的切换
@@ -220,5 +220,5 @@ function nowDate() {
  */
 function reset() {
     //向页面添加内容再将页面设为不可编辑状态并取消css样式
-    $(".editpage main").html("<p>点击下方编辑之后，请在这里输入你想要输入的内容!</p>").attr('contentEditable', false);
+    $(".edit-page main").html("<p>点击下方编辑之后，请在这里输入你想要输入的内容!</p>").attr('contentEditable', false);
 }
