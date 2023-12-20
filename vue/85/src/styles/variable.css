@@ -1,0 +1,31 @@
+:root {
+    --white--: #fff;
+    /* 链接 */
+    --linkColor--: #575859;
+    --linkHoverColor--: #2396ef;
+    /* 滚动条 */
+    --scrollBarBgColor--: rgb(248, 248, 248);
+    --scrollBarBgThumbColor--: #535455;
+    /*  */
+    --headerBottomColor--: #eff0f0;
+    --headerFontColor--: #535455;
+    --btnBorderColor--: #fefef4;
+    --btnBgColor--: #f4f6f7;
+    /*  */
+    --footerTopColor--: #eff0f0;
+    --footerFontColor--: #535455;
+    --footerTotalColor--: #2085ea;
+    /*  */
+    --noDataFontColor--: #888889;
+    --mainListBorderBottomColor--: #fef1f2;
+    --mainListItemColor--: #535455;
+    --mainTextareaBorderColor--: #eff0f0;
+    --mainTextareaBgColor--: #ffffff;
+    --mainTextareaPlaceholderColor--: #b2b2b2;
+    --detailFontColor--: #aaaaab;
+    --search-border-color--: #dadede;
+    --search-color--: #535455;
+    --search-focus-color--: #2396ef;
+    --ew-note-checkbox-border-color--: #e7e7e7;
+    --ew-note-checkbox-bg-color--: #8cb9f4;
+}

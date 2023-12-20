@@ -1,0 +1,395 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: JetBrainsMono-Regular, "微软雅黑", sans-serif;
+    box-sizing: border-box;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+@font-face {
+    font-family: JetBrainsMono-Regular;
+    src: url(/fonts/JetBrainsMono-Regular.ttf),
+        url(/fonts/JetBrainsMono-Regular.ttf) format("truetype");
+}
+
+body,
+html,
+.app {
+    height: 100%;
+    overflow: hidden;
+}
+
+.app svg:not(.ew-note-search-icon),
+.app svg:not(.ew-note-search-icon) path {
+    fill: currentColor;
+}
+
+/* 超链接 */
+
+a {
+    text-decoration: none;
+    color: var(--linkColor--);
+    transition: color 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+a:hover,
+a:active {
+    color: var(--linkHoverColor--);
+}
+
+.ew-note-btn {
+    appearance: none;
+    outline: none;
+    border: 1px solid var(--btnBorderColor--);
+    border-radius: 4px;
+    padding: 6px 10px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: var(--btnBgColor--);
+}
+
+/* 回到顶部 */
+.ew-note-to-top {
+    position: fixed;
+    bottom: 60px;
+    right: 0;
+    background: url("/to-top.svg") no-repeat;
+    background-size: contain;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+.ew-note-to-top:hover {
+    transform: scale(1.2);
+}
+
+.ew-note-flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ew-note-header,
+.ew-note-footer {
+    width: 100%;
+    height: 40px;
+    position: relative;
+}
+
+.ew-note-header {
+    border-bottom: 1px solid var(--headerBottomColor--);
+}
+
+.ew-note-footer {
+    border-top: 1px solid var(--footerTopColor--);
+}
+
+.ew-note-header-title {
+    color: var(--headerFontColor--);
+}
+
+.ew-note-header>.ew-note-edit-btn,
+.ew-note-header>.ew-note-cancel-btn,
+.ew-note-header>.ew-note-back-btn,
+.ew-note-footer>.ew-note-delete-btn,
+.ew-note-footer>.ew-note-save-btn,
+.ew-note-footer>.ew-note-add-btn {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    background-color: transparent;
+    border-color: transparent;
+    font-size: large;
+}
+
+.ew-note-header>.ew-note-edit-btn,
+.ew-note-header>.ew-note-cancel-btn,
+.ew-note-footer>.ew-note-delete-btn,
+.ew-note-footer>.ew-note-save-btn,
+.ew-note-footer>.ew-note-add-btn {
+    margin-left: auto;
+    right: 0;
+}
+
+.ew-note-header>.ew-note-back-btn {
+    margin-right: auto;
+    left: 0;
+}
+
+.ew-note-header>.ew-note-edit-btn,
+.ew-note-header>.ew-note-back-btn,
+.ew-note-header>.ew-note-cancel-btn {
+    color: var(--headerFontColor--);
+}
+
+.ew-note-footer>.ew-note-delete-btn,
+.ew-note-footer>.ew-note-save-btn,
+.ew-note-footer>.ew-note-add-btn {
+    color: var(--footerFontColor--);
+}
+
+.ew-note-footer-title {
+    color: var(--footerFontColor--);
+}
+
+.ew-note-header>.ew-note-edit-btn>.ew-note-edit-btn-icon,
+.ew-note-header>.ew-note-back-btn>.ew-note-back-btn-icon,
+.ew-note-header>.ew-note-cancel-btn>.ew-note-cancel-btn-icon,
+.ew-note-footer>.ew-note-delete-btn>.ew-note-delete-btn-icon,
+.ew-note-footer>.ew-note-save-btn>.ew-note-save-btn-icon,
+.ew-note-footer>.ew-note-add-btn>.ew-note-add-btn-icon {
+    width: 25px;
+    height: 25px;
+}
+
+.ew-note-header>.ew-note-edit-btn:hover,
+.ew-note-header>.ew-note-back-btn:hover,
+.ew-note-header>.ew-note-cancel-btn:hover,
+.ew-note-footer>.ew-note-delete-btn:hover,
+.ew-note-footer>.ew-note-save-btn:hover,
+.ew-note-footer>.ew-note-add-btn:hover {
+    color: var(--linkHoverColor--);
+}
+
+.ew-note-footer-title-total {
+    color: var(--footerTotalColor--);
+    margin-right: 4px;
+    font-size: 18px;
+}
+
+.ew-note-main {
+    width: 100%;
+    height: calc(100% - 80px);
+    margin: auto 0;
+    position: relative;
+    padding: 10px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.ew-note-textarea,
+.ew-note-input {
+    width: 100%;
+    padding: 15px;
+    outline: none;
+    border: 1px solid var(--mainTextareaBorderColor--);
+    border-radius: 6px;
+    background-color: var(--mainTextareaBgColor--);
+}
+
+.ew-note-textarea {
+    height: 400px;
+}
+
+.ew-note-input {
+    height: 50px;
+    margin-bottom: 8px;
+}
+
+.ew-note-textarea:focus,
+.ew-note-textarea:focus::before,
+.ew-note-textarea:not(:empty):before,
+.ew-note-input:focus,
+.ew-note-input:focus::before,
+.ew-note-input:not(:empty):before {
+    content: '';
+}
+
+.ew-note-textarea::before,
+.ew-note-input::before {
+    content: attr(placeholder);
+    display: block;
+    color: var(--mainTextareaPlaceholderColor--);
+    letter-spacing: 2px;
+}
+
+.ew-note-main-no-data-icon {
+    width: 8em;
+    height: 8em;
+}
+
+.ew-note-main-no-data-container {
+    flex-direction: column;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.ew-note-main-no-data-text {
+    color: var(--noDataFontColor--);
+    font-size: larger;
+    letter-spacing: 1.5px;
+}
+
+.ew-note-main-content-list-item {
+    min-height: 50px;
+    border-bottom: 2px solid var(--mainListBorderBottomColor--);
+    padding-bottom: 8px;
+    counter-increment: ListOrder;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+
+.ew-note-main-content-list-item::before {
+    content: counter(ListOrder)'.';
+    display: inline-flex;
+    margin-right: 8px;
+    color: var(--mainListItemColor--);
+}
+
+.ew-note-main-content-list-item-link {
+    width: 100%;
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.ew-note-main-content-list-item-date {
+    display: inline-flex;
+    flex-wrap: wrap;
+    max-width: calc(100% - 90px);
+    margin-right: 90px;
+}
+
+.ew-note-main-content-list-item-date>span {
+    width: calc(50% - 10px);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+.ew-note-main-content-list-item-create-date {
+    margin-right: 5px;
+}
+
+.ew-note-main-content-list-item-update-date {
+    margin-left: 5px;
+}
+
+.ew-note-main-content-list-item-title {
+    max-width: 50%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.ew-note-main-content-list-item-btn-group {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    right: 5px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.ew-note-main-content-list-item-right-icon,
+.ew-note-main-content-list-item-edit-icon,
+.ew-note-main-content-list-item-delete-icon {
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+}
+
+.ew-note-detail-title {
+    color: var(--detailFontColor--);
+    margin-bottom: 5px;
+}
+
+.ew-note-detail-classification-select {
+    max-width: 300px;
+}
+
+.ew-select-option .ew-note-btn {
+    background-color: transparent;
+    border: 0;
+    width: 100%;
+    color: inherit;
+}
+
+.ew-note-detail-content {
+    margin: 10px 0;
+}
+
+.ew-note-detail-date {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 15px;
+
+}
+
+.ew-note-detail-date>p+p {
+    margin: 0 8px;
+}
+
+.ew-note-error {
+    height: 100%;
+    flex-direction: column;
+    color: #535455;
+}
+
+.ew-note-error-icon {
+    width: 165px;
+    height: 165px;
+    margin-bottom: 15px;
+}
+
+.ew-note-error-link {
+    margin-top: 15px;
+}
+
+.ew-note-search-icon {
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    transition: transform .1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.ew-note-search-icon:hover {
+    transform: scale(1.1);
+}
+
+.ew-note-checkbox-checked-icon {
+    width: 20px;
+    height: 20px;
+    transform: scale(0);
+    transition: transform .3s cubic-bezier(0.075, 0.82, 0.165, 1) .1s;
+}
+
+.ew-note-checkbox.checked .ew-note-checkbox-checked-icon {
+    transform: scale(1);
+}
+
+@media (max-width: 400px) {
+    .ew-note-main-content-list-item {
+        padding: 5px;
+    }
+
+    .ew-note-main-content-list-item-btn-group {
+        right: 0;
+    }
+
+    .ew-note-main-content-list-item-link {
+        max-width: calc(100% - 50px);
+    }
+}
