@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed, watch } from 'vue';
+import { ref, computed } from 'vue';
 import { searchIcon } from '../../const/icon';
 
 const emit = defineEmits(['on-search']);
