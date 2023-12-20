@@ -21,6 +21,7 @@ const onSearchHandler = () => {
     display: flex;
     align-items: center;
     position: relative;
+    z-index: 2;
 }
 
 .ew-note-search-input {

@@ -111,6 +111,7 @@ const onSearchHandler = (v: string) => {
     //     })
     // }
     const searchMemoData = searchCacheMemoData.value.filter(item => item.content?.includes(v) || item.title?.includes(v) || item.classification?.includes(v));
+    console.log('搜索到的数据', searchMemoData);
     memoData.value = searchMemoData;
 }
 onMounted(async () => {

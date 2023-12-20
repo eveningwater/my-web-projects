@@ -21,7 +21,7 @@ onMounted(() => {
     <main class="ew-note-main">
         <async-form v-if="['save', 'edit'].includes(props.mainType)" :editData="props.editData"></async-form>
         <async-search @on-search="$emit('on-search', $event)"
-            v-if="['add', 'delete'].includes(props.mainType) && props.memoData?.length"></async-search>
+            v-if="['add', 'delete'].includes(props.mainType)"></async-search>
         <router-view :memoData="props.memoData" :mainType="props.mainType" @on-detail="$emit('on-detail')"
             @on-delete="$emit('on-delete')" @on-edit="(id: string) => $emit('on-edit', id)" :showCheckBox="showCheckBox"
             v-if="props.mainType !== 'save'"></router-view>
