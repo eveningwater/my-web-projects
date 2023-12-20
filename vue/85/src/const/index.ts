@@ -1,0 +1,1 @@
+export const INDEX_URL = process.env.NODE_ENV !== 'production' ? '/' : 'https://www.eveningwater.com/my-web-projects/vue/85/#/'
