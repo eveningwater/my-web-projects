@@ -2,7 +2,6 @@
   <element-table :column="column" :data="tableData">
     <template #name="{ row }">
       <div>
-        <ButtonNumber />
         <span>
           <code>name</code>
           插槽--{{ row.name }}

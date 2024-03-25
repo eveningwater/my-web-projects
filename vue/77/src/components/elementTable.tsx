@@ -7,32 +7,31 @@ export default defineComponent({
     ...(tableProps as MergeTableProps),
   },
   components: { TableColumn },
-  setup(props, { slots,attrs }) {
-    const { data, column, align } = props;
+  setup(props, { slots, attrs }) {
     return () => (
       <div class="element-table">
         <el-table
-          data={data}
+          data={props.data}
           ref="elTableRef"
-          {...attrs }
+          {...attrs}
           v-slots={{
             append: () => slots.append && slots.append(),
             empty: () => slots.empty && slots.empty(),
           }}
         >
-          <table-column column={column} align={align} v-slots={slots}></table-column>
+          <table-column column={props.column} align={props.align} v-slots={slots}></table-column>
         </el-table>
       </div>
     );
   },
-  mounted(){
-      this.injectTablePrimaryMethods();
+  mounted() {
+    this.injectTablePrimaryMethods();
   },
-  methods:{
-    injectTablePrimaryMethods(){
-       const _self = this as any;
-       const elTableRef = _self['$refs']['elTableRef'];
-       const tableMethodNameList: MethodNameType [] = [
+  methods: {
+    injectTablePrimaryMethods() {
+      const _self = this as any;
+      const elTableRef = _self['$refs']['elTableRef'];
+      const tableMethodNameList: MethodNameType[] = [
         "clearSelection",
         "toggleRowSelection",
         "toggleAllSelection",
@@ -45,7 +44,7 @@ export default defineComponent({
       ];
 
       for (const name of tableMethodNameList) {
-        if(!(_self[name])){
+        if (!(_self[name])) {
           _self[name] = elTableRef?.[name];
         }
       }
