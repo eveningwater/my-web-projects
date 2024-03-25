@@ -103,7 +103,6 @@ const column = ref<ElTableColumnProps[]>([
         > 编辑</el-button>
   },
 ]);
-
 const tableData = ref([
   {
     date: '2016/5/1',
@@ -121,8 +120,8 @@ const tableData = ref([
     tag: '公司',
   },
 ]);
-
 const toggleColumnSort = () => {
-  column.value = [...column.value.slice(0, 1), column.value[2], column.value[1], ...column.value.slice(3)];
+  column.value = [...column.value.slice(0, 1), column.value[2], column.value[1], ...column.value.slice(3)];  
 };
+
 </script>

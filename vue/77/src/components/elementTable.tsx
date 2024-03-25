@@ -1,4 +1,4 @@
-import { defineComponent } from "vue";
+import { defineComponent  } from "vue";
 import TableColumn from "./table-column";
 import { MergeTableProps, MethodNameType, tableProps } from "./tableProps";
 export default defineComponent({
@@ -7,23 +7,6 @@ export default defineComponent({
     ...(tableProps as MergeTableProps),
   },
   components: { TableColumn },
-  setup(props, { slots, attrs }) {
-    return () => (
-      <div class="element-table">
-        <el-table
-          data={props.data}
-          ref="elTableRef"
-          {...attrs}
-          v-slots={{
-            append: () => slots.append && slots.append(),
-            empty: () => slots.empty && slots.empty(),
-          }}
-        >
-          <table-column column={props.column} align={props.align} v-slots={slots}></table-column>
-        </el-table>
-      </div>
-    );
-  },
   mounted() {
     this.injectTablePrimaryMethods();
   },
@@ -49,5 +32,24 @@ export default defineComponent({
         }
       }
     }
+  },
+  setup(props, { slots, attrs }) {
+    console.log(1111, props.column);
+    
+    return () => (
+      <div class="element-table">
+        <el-table
+          data={props.data}
+          ref="elTableRef"
+          {...attrs}
+          v-slots={{
+            append: () => slots.append && slots.append(),
+            empty: () => slots.empty && slots.empty(),
+          }}
+        >
+          <table-column column={props.column} align={props.align} v-slots={slots}></table-column>
+        </el-table>
+      </div>
+    );
   }
 });

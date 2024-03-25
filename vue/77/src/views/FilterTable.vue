@@ -9,7 +9,7 @@
     style="width: 100%"
   >
     <template #default="scope">
-      <el-tag :type="scope.row.tag === 'Home' ? '' : 'success'" disable-transitions>
+      <el-tag :type="scope.row.tag === 'Home' ? 'info' : 'success'" disable-transitions>
         {{ scope.row.tag }}
       </el-tag>
     </template>

@@ -7,18 +7,18 @@
     <element-table :data="tableData" :column="column" :border="false" :stripe="false">
       <template #default="props">
         <p>State: {{ props.row.state }}</p>
-        <p>City: {{ props.row.  city }}</p>
+        <p>City: {{ props.row.city }}</p>
         <p>Address: {{ props.row.address }}</p>
         <p>Zip: {{ props.row.zip }}</p>
       </template>
       <template #header> headersdfsf </template>
       <template #append> appendsdfsdf </template>
     </element-table>
-      <el-table  :data="tableData" style="width: 100%">
-    <el-table-column prop="date" label="Date" width="180" />
-    <el-table-column prop="name" label="Name" width="180" />
-    <el-table-column prop="address" label="Address" />
-  </el-table>
+    <el-table :data="tableData" style="width: 100%">
+      <el-table-column prop="date" label="Date" width="180" />
+      <el-table-column prop="name" label="Name" width="180" />
+      <el-table-column prop="address" label="Address" />
+    </el-table>
   </div>
 </template>
 
@@ -88,7 +88,7 @@ export default defineComponent({
       },
     ];
 
-      const column0 = [
+    const column0 = [
       {
         label: '日期',
         prop: 'date',
@@ -114,7 +114,7 @@ export default defineComponent({
         },
         headerSlot: 'header',
         // renderHeader(){
-        //   return <el-input vModel={searchVal.value} size="mini" placeholder="Type to search" />
+        //   return <el-input vModel={searchVal.value} size="default" placeholder="Type to search" />
         // }
       },
     ];
@@ -166,7 +166,7 @@ export default defineComponent({
         },
         headerSlot: 'header',
         // renderHeader(){
-        //   return <el-input vModel={searchVal.value} size="mini" placeholder="Type to search" />
+        //   return <el-input vModel={searchVal.value} size="default" placeholder="Type to search" />
         // }
       },
     ];
@@ -175,14 +175,6 @@ export default defineComponent({
       column0,
       tableData,
     };
-  },
-  methods: {
-    handleEdit(index: any, row: any) {
-      console.log(index, row);
-    },
-    handleDelete(index: any, row: any) {
-      console.log(index, row);
-    },
-  },
+  }
 });
 </script>
