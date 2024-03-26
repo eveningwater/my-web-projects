@@ -29,22 +29,10 @@ interface User {
 }
 
 const tableRef = ref<InstanceType<typeof ElTable>>();
-
-const resetDateFilter = () => {
-  tableRef.value!.clearFilter(["date"]);
-};
-// TODO: improvement typing when refactor table
-const clearFilter = () => {
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-expect-error
-  tableRef.value!.clearFilter();
-};
-const formatter = (row: User, column: TableColumnCtx<User>) => {
-  return row.address;
-};
-const filterTag = (value: string, row: User) => {
-  return row.tag === value;
-};
+const resetDateFilter = () => tableRef.value!.clearFilter(["date"]);
+const clearFilter = () => tableRef.value!.clearFilter();
+const formatter = (row: User) => row.address;
+const filterTag = (value: string, row: User) => row.tag === value;
 const filterHandler = (value: string, row: User, column: TableColumnCtx<User>) => {
   const property = column["property"] as keyof User;
   return row[property] === value;

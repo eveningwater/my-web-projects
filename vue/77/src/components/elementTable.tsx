@@ -34,8 +34,6 @@ export default defineComponent({
     }
   },
   setup(props, { slots, attrs }) {
-    console.log(1111, props.column);
-    
     return () => (
       <div class="element-table">
         <el-table

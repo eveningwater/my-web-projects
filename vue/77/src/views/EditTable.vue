@@ -1,6 +1,7 @@
 <template>
   <el-button @click="toggleColumnSort">互换姓名与标签的顺序</el-button>
-  <element-table :column="column" :data="tableData" />
+  <!-- colum变更时不添加key则不会变化，这个问题有点奇怪 -->
+  <element-table :column="column" :data="tableData" :key="column"/>
 </template>
 <script setup lang="tsx">
 import { ref } from 'vue';
@@ -12,7 +13,7 @@ const handleEdit = (scope: { row: { _pre_data: string; _edit: boolean; }; }) => 
 const handleSave = (scope: { row: { _edit: boolean; }; }) => {
   scope.row._edit = false;
 };
-const handleCancle = (scope: { row: { _pre_data: string; }; }) => {
+const handleCancel = (scope: { row: { _pre_data: string; }; }) => {
   Object.assign(scope.row, {
     ...JSON.parse(scope.row._pre_data),
     _edit: false,
@@ -66,7 +67,7 @@ const column = ref<ElTableColumnProps[]>([
         <el-select
           model-value={value}
           style='width: 120px'
-          onUpdate:modelValue={(val: any) => {
+          onUpdate:modelValue={(val: string) => {
             scope.row[scope.column.property] = val;
           }}
         >
@@ -91,7 +92,7 @@ const column = ref<ElTableColumnProps[]>([
           >保存</el-button>
           <el-button
             onClick={() => {
-              handleCancle(scope);
+              handleCancel(scope);
             }}
           > 取消</el-button>
         </div> :
