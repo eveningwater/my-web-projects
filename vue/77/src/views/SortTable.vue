@@ -8,16 +8,12 @@
 </template>
 
 <script lang="ts" setup>
-import type { TableColumnCtx } from "element-plus/es/components/table/src/table-column/defaults";
-
 interface User {
   date: string;
   name: string;
   address: string;
 }
-const formatter = (row: User, column: TableColumnCtx<User>) => {
-  return row.address;
-};
+const formatter = (row: User) => row.address;
 
 const column = [
   {
