@@ -36,7 +36,7 @@ interface SpanMethodProps {
   columnIndex: number;
 }
 
-const arraySpanMethod = ({ row, column, rowIndex, columnIndex }: SpanMethodProps) => {
+const arraySpanMethod = ({  rowIndex, columnIndex }: SpanMethodProps) => {
   if (rowIndex % 2 === 0) {
     if (columnIndex === 0) {
       return [1, 2];
@@ -46,7 +46,7 @@ const arraySpanMethod = ({ row, column, rowIndex, columnIndex }: SpanMethodProps
   }
 };
 
-const objectSpanMethod = ({ row, column, rowIndex, columnIndex }: SpanMethodProps) => {
+const objectSpanMethod = ({ rowIndex, columnIndex }: SpanMethodProps) => {
   if (columnIndex === 0) {
     if (rowIndex % 2 === 0) {
       return {

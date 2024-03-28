@@ -1,7 +1,7 @@
 <template>
   <element-table border :column="column" :data="tableData" max-height="250">
     <template #default="scope">
-      <el-button type="text" size="small" @click.prevent="deleteRow(scope.$index)">Remove</el-button>
+      <el-button text type="primary" size="small" @click.prevent="deleteRow(scope.$index)">Remove</el-button>
     </template>
   </element-table>
   <el-button class="mt-4" style="width: 100%" @click="onAddItem">Add Item</el-button>

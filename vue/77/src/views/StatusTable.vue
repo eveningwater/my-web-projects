@@ -51,10 +51,10 @@ function tableRowClassName({ rowIndex }: { rowIndex: number }) {
 
 <style>
 .el-table .warning-row {
-  background: oldlace !important;
+  background: oldlace;
 }
 
 .el-table .success-row {
-  background: #f0f9eb !important;
+  background: #f0f9eb;
 }
 </style>

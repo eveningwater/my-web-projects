@@ -31,11 +31,7 @@ const multipleSelection = ref<User[]>([]);
 const toggleSelection = (rows?: User[]) => {
   console.log("🚀 ~ file: MultiSelectTable.vue ~ line 32 ~ toggleSelection ~ rows", rows);
   if (rows) {
-    rows.forEach((row) => {
-      // TODO: improvement typing when refactor table
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      multipleTableRef.value!.toggleRowSelection(row, false);
-    });
+    rows.forEach(row => multipleTableRef.value!.toggleRowSelection(row, false));
   } else {
     multipleTableRef.value!.clearSelection();
   }

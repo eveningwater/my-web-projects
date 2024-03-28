@@ -6,7 +6,6 @@
     show-summary
     style="width: 100%"
   ></element-table>
-
   <element-table
     :column="column2"
     :data="tableData"
@@ -42,8 +41,8 @@ const getSummaries = (param: SummaryMethodProps) => {
       sums[index] = "Total Cost";
       return;
     }
-    const values = data.map((item) => Number(item[column.property as keyof Product]));
-    if (!values.every((value) => isNaN(value))) {
+    const values = data.map(item => Number(item[column.property]));
+    if (!values.every(value => isNaN(value))) {
       sums[index] = `$ ${values.reduce((prev, curr) => {
         const value = Number(curr);
         if (!isNaN(value)) {
