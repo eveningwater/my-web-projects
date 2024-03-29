@@ -12,7 +12,7 @@ export default defineComponent({
   },
   methods: {
     injectTablePrimaryMethods() {
-      const _self = this as any;
+      const _self = this as ThisType<unknown>;
       const elTableRef = _self['$refs']['elTableRef'];
       const tableMethodNameList: MethodNameType[] = [
         "clearSelection",

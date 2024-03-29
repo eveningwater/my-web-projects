@@ -19,8 +19,6 @@
       :load="load"
       :tree-props="{ children: 'children', hasChildren: 'hasChildren' }"
     >
-      <el-table-column prop="date" label="Date" width="180" />
-      <el-table-column prop="name" label="Name" width="180" />
     </element-table>
   </div>
 </template>
@@ -33,7 +31,7 @@ interface User {
   children?: User[];
 }
 
-const load = (row: User, treeNode: unknown, resolve: (date: User[]) => void) => {
+const load = (_row: User, _treeNode: unknown, resolve: (date: User[]) => void) => {
   setTimeout(() => {
     resolve([
       {
