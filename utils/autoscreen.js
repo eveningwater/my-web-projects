@@ -1,4 +1,4 @@
-function resetScreenSize(dw, dh) {
+export function resetScreenSize(dw, dh) {
     let init = () => {
         let root = document.getElementById('app');
         let hScale = window.innerHeight / (dh || 1080);
@@ -17,4 +17,3 @@ function resetScreenSize(dw, dh) {
     }
     init();
 }
-export default ScreenSize;
