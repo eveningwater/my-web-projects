@@ -7,7 +7,7 @@ declare namespace ElementTable {
     }[keyof Base]
   >;
 
-  export type eventKey = NonNullable<eventKeyVal[keyof eventKeyVal]>;
+  export type EventKey = NonNullable<EventKeyVal[keyof EventKeyVal]>;
 
   export type CamelEventKey<T extends string> = {
     [key in T]: key extends `on${infer stringA}-${infer stringB}`

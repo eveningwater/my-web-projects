@@ -21,7 +21,7 @@ export type ElTableColumnProps = InstanceType<typeof ElTableColumn>["$props"] &
   UserElTableColumnProps;
 
 export type OmitTableProp = Required<
-  Omit<ElTableProps, "data" | "class" | ElementTable.eventKey>
+  Omit<ElTableProps, "data" | "class" | ElementTable.EventKey>
 >;
 
 export type KeyConstructor<Base extends object> = {
