@@ -1,0 +1,11 @@
+.base-tag {
+    padding: .4rem .8rem;
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.5;
+    display: inline-block;
+    border-radius: 4px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    margin: 5px;
+}
