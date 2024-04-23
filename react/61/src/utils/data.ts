@@ -17,4 +17,8 @@ export const renderList = [
         key: createUUID(),
         value: `这是一个自定义的标签组件:<CustomTag className="base-tag" color="#2396ef" value="标签1"/></CustomTag>这是一个自定义的标签组件:<CustomTag className="base-tag" color="#2396ef" value="标签2"/></CustomTag>`
     },
+    {
+        key: createUUID(),
+        value: `<CustomTag className="base-tag" color="#2396ef" value="标签1"/></CustomTag>这是一个自定义的标签组件:<CustomTag className="base-tag" color="#2396ef" value="标签2"/></CustomTag>`
+    },
 ]

@@ -12,8 +12,8 @@ const components: Record<
   string,
   (props: Record<string, unknown>) => JSX.Element
 > = {
-  CustomInput: CustomInput,
-  CustomTag: CustomTag
+  CustomInput,
+  CustomTag
 };
 function App() {
   const renderItem = () => {

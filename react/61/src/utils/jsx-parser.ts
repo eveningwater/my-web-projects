@@ -9,7 +9,7 @@ export const simpleJSXParser = (template: string) => {
         let i = len,
             resStr = '',
             componentRes = '';
-        const createComponent = (v: string) => {
+        const createComponent = (v: string): ReactComponentObj => {
             const componentName = v.match(/\w+/)?.[0] as string;
             const props =
                 v
