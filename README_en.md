@@ -163,6 +163,9 @@ The second example is the same as the first example.
 
 > notice:You need to install the git client and run it in git-bash. If you have configured environment variables, you don’t need to run it in git-bash.Of course, except for the home directory.
 
+## Stargazers over time
+[![Stargazers over time](https://starchart.cc/eveningwater/my-web-projects.svg?variant=adaptive)](https://starchart.cc/eveningwater/my-web-projects)
+
 ### links
 
 - [home](/)
