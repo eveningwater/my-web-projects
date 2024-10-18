@@ -1,0 +1,1 @@
+export const MDN_LINK = "https://developer.mozilla.org/docs/Web/CSS/Specificity"
