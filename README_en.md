@@ -1,5 +1,7 @@
 [English](./README_en.md) | [简体中文](./README.md)
 
+[The next big version of my personal project website (under development)](https://github.com/eveningwater/my-web-projects-next/)
+
 ### Introduction
 
 The first 20`demos of the`web`project implemented by the native`js` of this project refer to the Chinese version implemented by [vanilla-web-projects](https://github.com/bradtraversy/vanillawebprojects), although many The code draws on the original project, but it is also different from the original project, because the logic code is completely inconsistent, and each project has been expanded accordingly, and subsequent projects are written for their usual accumulation.

@@ -86,7 +86,7 @@ del {
 }
 
 select {
-    -webkit-appearance:button;
+    appearance:button;
     border: 0px;
 }
 
@@ -103,5 +103,5 @@ table {
 }
 
 .clearfix {
-    *zoom: 1;
+    zoom: 1;
 }

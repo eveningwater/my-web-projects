@@ -1,5 +1,8 @@
 [English](./README_en.md) | [简体中文](./README.md)
 
+
+[我的个人项目网站下一个大版本（开发中）](https://github.com/eveningwater/my-web-projects-next/)
+
 ### 介绍
 
 本项目原生`js`实现的`web`项目前`20`个`demo`参考了[vanilla-web-projects](https://github.com/bradtraversy/vanillawebprojects)所实现的中文版，虽然很多代码借鉴了原项目，但也不同于原项目，因为逻辑代码完全不一致，而且每一个项目也做了相应的扩展，后续的项目为自己平时积累所写。
