@@ -2,10 +2,11 @@
 import { ref, watch } from 'vue'
 import { FormInst, NInput, NFormItem, NButton, NForm, NInputNumber, FormItemRule, NSpace, NGrid, NGi } from 'naive-ui'
 import { minMaxValue } from '../utils/utils'
-import { baseDefaultFormValue, defaultFormValue } from '../config';
+import { defaultFormValue } from '../config';
+import { cloneDeep } from 'lodash-es'
 const emit = defineEmits(['on-submit'])
 const formRef = ref<FormInst | null>(null);
-const formValue = ref({ ...defaultFormValue })
+const formValue = ref(cloneDeep(defaultFormValue))
 const rules = {
     digit: {
         required: true,
@@ -77,25 +78,19 @@ const handleValidateClick = (e: MouseEvent) => {
 }
 const handleResetClick = () => {
     formRef.value?.restoreValidation();
-    // 不重新写一个defaultFormValue已经被污染了
-    formValue.value = {
-        ...baseDefaultFormValue
-    };
+    formValue.value = cloneDeep(defaultFormValue)
     emit('on-submit', formValue.value);
 };
-watch(() => formValue.value.inputNumber, (val) => {
-    const v = defaultFormValue.inputContent[0];
-    for (let i = 0; i < val; i++) {
-        if (formValue.value.inputContent.length === val) {
-            break;
-        }
-        formValue.value.inputContent.push(v);
+watch(() => formValue.value.inputNumber, (val, prevVal) => {
+    const isAdd = val > prevVal;
+    const v = cloneDeep(defaultFormValue).inputContent[0];
+    for (let i = 0; i < Math.abs(val - prevVal); i++) {
+        formValue.value.inputContent[isAdd ? 'push' : 'pop'](isAdd ? v : undefined)
     }
 })
 </script>
 
 <template>
-    <!-- @vue-ignore 类型检查有误,忽略 -->
     <n-form ref="formRef" :model="formValue" :rules="rules" label-placement="left" label-width="auto"
         require-mark-placement="right-hanging" size="large">
         <n-form-item label="位数" path="digit">
@@ -108,8 +103,8 @@ watch(() => formValue.value.inputNumber, (val) => {
             <n-input v-model:value="formValue.symbol" placeholder="请输入插入符号" />
         </n-form-item>
         <n-form-item label="插入符号数" path="symbolNumber">
-            <n-input-number v-model:value="formValue.symbolNumber" placeholder="请输入插入符号位数" min="0" :precision="0" max="5"
-                class="block" />
+            <n-input-number v-model:value="formValue.symbolNumber" placeholder="请输入插入符号位数" min="0" :precision="0"
+                max="5" class="block" />
         </n-form-item>
         <n-form-item label="文本框数" path="inputNumber">
             <n-input-number v-model:value="formValue.inputNumber" placeholder="请输入文本框数" min="1" :precision="0" max="5"

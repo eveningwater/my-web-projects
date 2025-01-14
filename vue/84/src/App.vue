@@ -9,20 +9,16 @@ import javascript from 'highlight.js/lib/languages/javascript'
 import html from 'highlight.js/lib/languages/xml'
 import { CodeTemplateKey, demoCodeTemplate, selectCodeTypeList } from './const/code';
 import { htmlTemplate } from './const/htmlTemplate';
+import { defaultFormValue } from './config';
 import { saveAs } from 'file-saver';
 import JSZip from 'jszip';
 import Logo from './components/Logo.vue';
 import { footerList } from './const/footerList';
+import { cloneDeep } from 'lodash-es';
+
 hljs.registerLanguage('html', html)
 hljs.registerLanguage('javascript', javascript)
-const formValue = ref<IFormValue>({
-  digit: 15,
-  rule: '6 + 6 + 3',
-  symbol: ' ',
-  symbolNumber: 1,
-  inputNumber: 1,
-  inputContent: ['621848063680370']
-})
+const formValue = ref<IFormValue>(cloneDeep(defaultFormValue))
 const codeTypeValue = ref<CodeTemplateKey>('js')
 const onSubmit = (v: IFormValue) => {
   formValue.value = { ...v };
@@ -75,8 +71,8 @@ const onDownloadDemoHandler = async () => {
               <h2 class="text-align-center">预览效果</h2>
               <section class="preview-container">
                 <n-grid y-gap="6" :cols="1">
-                  <n-grid-item v-for="(item, index) in formValue.inputNumber" :key="`input-${index}`">
-                    <n-input :value="onFormatValue(item)" class="block" placeholder="请输入文本框内容，应全部是数字，并且长度等于位数"></n-input>
+                  <n-grid-item v-for="(item, index) in formValue.inputContent" :key="`input-${index}`">
+                    <n-input :value="item" class="block" placeholder="请输入文本框内容，应全部是数字，并且长度等于位数"></n-input>
                   </n-grid-item>
                 </n-grid>
               </section>

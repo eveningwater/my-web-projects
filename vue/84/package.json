@@ -13,10 +13,12 @@
   },
   "devDependencies": {
     "@types/file-saver": "^2.0.5",
+    "@types/lodash-es": "^4.17.12",
     "@vitejs/plugin-vue": "^4.2.3",
     "file-saver": "^2.0.5",
     "highlight.js": "^11.8.0",
     "jszip": "^3.10.1",
+    "lodash-es": "^4.17.21",
     "naive-ui": "^2.34.4",
     "typescript": "^5.0.2",
     "vite": "^4.4.5",
