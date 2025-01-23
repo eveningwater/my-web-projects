@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { NGrid, NGridItem, NInput, NConfigProvider, NDialogProvider, NSelect, NSpace, NDescriptions, NDescriptionsItem, NScrollbar, NButton, NPageHeader, NBackTop, NLayoutFooter, NEl } from 'naive-ui'
-import { minMaxValue } from './utils/utils'
+// import { minMaxValue } from './utils/utils'
 import RuleForm from './components/ruleForm.vue';
 import CodeEditor from './components/codeEditor.vue';
 import { computed, ref } from 'vue';
@@ -23,15 +23,15 @@ const codeTypeValue = ref<CodeTemplateKey>('js')
 const onSubmit = (v: IFormValue) => {
   formValue.value = { ...v };
 }
-const onFormatValue = computed(() => (item: number) => {
-  const v = formValue.value.inputContent[minMaxValue(item, 0, formValue.value.inputNumber - 1)];
-  if (typeof v !== 'string' || !v) {
-    return v;
-  }
-  const regExp = new RegExp(`${formValue.value.rule.split('+').map(item => `(\\d{${Number(item)},})`).reduce((res, item) => (res += item, res), '')}`, 'g');
-  const formatValue = v.replace(regExp, (...args) => args?.slice(1, args.length - 2)?.join(formValue.value.symbol.repeat(formValue.value.symbolNumber)));
-  return formatValue;
-})
+// const onFormatValue = computed(() => (item: number) => {
+//   const v = formValue.value.inputContent[minMaxValue(item, 0, formValue.value.inputNumber - 1)];
+//   if (typeof v !== 'string' || !v) {
+//     return v;
+//   }
+//   const regExp = new RegExp(`${formValue.value.rule.split('+').map(item => `(\\d{${Number(item)},})`).reduce((res, item) => (res += item, res), '')}`, 'g');
+//   const formatValue = v.replace(regExp, (...args) => args?.slice(1, args.length - 2)?.join(formValue.value.symbol.repeat(formValue.value.symbolNumber)));
+//   return formatValue;
+// })
 const renderTemplateCode = computed(() => demoCodeTemplate[<CodeTemplateKey>(codeTypeValue.value)]({ ...(formValue?.value) }));
 const onDownloadDemoHandler = async () => {
   const zip = new JSZip();

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue'
-import { FormInst, NInput, NFormItem, NButton, NForm, NInputNumber, FormItemRule, NSpace, NGrid, NGi } from 'naive-ui'
+import { FormInst, NInput, NFormItem, NButton, NForm, NInputNumber, FormItemRule, NSpace, NGrid, NGi, FormRules } from 'naive-ui'
 import { minMaxValue } from '../utils/utils'
 import { defaultFormValue } from '../config';
 import { cloneDeep } from 'lodash-es'
@@ -65,7 +65,7 @@ const rules = {
             }
         }
     ]
-}
+} as FormRules;
 const handleValidateClick = (e: MouseEvent) => {
     e.preventDefault()
     formRef.value?.validate((errors) => {
@@ -85,7 +85,7 @@ watch(() => formValue.value.inputNumber, (val, prevVal) => {
     const isAdd = val > prevVal;
     const v = cloneDeep(defaultFormValue).inputContent[0];
     for (let i = 0; i < Math.abs(val - prevVal); i++) {
-        formValue.value.inputContent[isAdd ? 'push' : 'pop'](isAdd ? v : undefined)
+        formValue.value.inputContent[isAdd ? 'push' : 'pop'](isAdd ? v : '')
     }
 })
 </script>
