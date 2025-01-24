@@ -78,7 +78,7 @@ const handleValidateClick = (e: MouseEvent) => {
 }
 const handleResetClick = () => {
     formRef.value?.restoreValidation();
-    formValue.value = cloneDeep(defaultFormValue)
+    formValue.value = cloneDeep(defaultFormValue);
     emit('on-submit', formValue.value);
 };
 watch(() => formValue.value.inputNumber, (val, prevVal) => {

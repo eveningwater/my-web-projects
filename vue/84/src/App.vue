@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { NGrid, NGridItem, NInput, NConfigProvider, NDialogProvider, NSelect, NSpace, NDescriptions, NDescriptionsItem, NScrollbar, NButton, NPageHeader, NBackTop, NLayoutFooter, NEl } from 'naive-ui'
-// import { minMaxValue } from './utils/utils'
+import { minMaxValue } from './utils/utils'
 import RuleForm from './components/ruleForm.vue';
 import CodeEditor from './components/codeEditor.vue';
 import { computed, ref } from 'vue';
@@ -21,17 +21,19 @@ hljs.registerLanguage('javascript', javascript)
 const formValue = ref<IFormValue>(cloneDeep(defaultFormValue))
 const codeTypeValue = ref<CodeTemplateKey>('js')
 const onSubmit = (v: IFormValue) => {
-  formValue.value = { ...v };
+  console.log(1111, v);
+
+  formValue.value = cloneDeep(v);
 }
-// const onFormatValue = computed(() => (item: number) => {
-//   const v = formValue.value.inputContent[minMaxValue(item, 0, formValue.value.inputNumber - 1)];
-//   if (typeof v !== 'string' || !v) {
-//     return v;
-//   }
-//   const regExp = new RegExp(`${formValue.value.rule.split('+').map(item => `(\\d{${Number(item)},})`).reduce((res, item) => (res += item, res), '')}`, 'g');
-//   const formatValue = v.replace(regExp, (...args) => args?.slice(1, args.length - 2)?.join(formValue.value.symbol.repeat(formValue.value.symbolNumber)));
-//   return formatValue;
-// })
+const onFormatValue = computed(() => (item: number) => {
+  const v = formValue.value.inputContent[minMaxValue(item, 0, formValue.value.inputNumber - 1)];
+  if (typeof v !== 'string' || !v) {
+    return v;
+  }
+  const regExp = new RegExp(`${formValue.value.rule.split('+').map(item => `(\\d{${Number(item)},})`).reduce((res, item) => (res += item, res), '')}`, 'g');
+  const formatValue = v.replace(regExp, (...args) => args?.slice(1, args.length - 2)?.join(formValue.value.symbol.repeat(formValue.value.symbolNumber)));
+  return formatValue;
+})
 const renderTemplateCode = computed(() => demoCodeTemplate[<CodeTemplateKey>(codeTypeValue.value)]({ ...(formValue?.value) }));
 const onDownloadDemoHandler = async () => {
   const zip = new JSZip();
@@ -71,8 +73,8 @@ const onDownloadDemoHandler = async () => {
               <h2 class="text-align-center">预览效果</h2>
               <section class="preview-container">
                 <n-grid y-gap="6" :cols="1">
-                  <n-grid-item v-for="(item, index) in formValue.inputContent" :key="`input-${index}`">
-                    <n-input :value="item" class="block" placeholder="请输入文本框内容，应全部是数字，并且长度等于位数"></n-input>
+                  <n-grid-item v-for="(item, index) in formValue.inputContent" :key="`input-${item}-${index}`">
+                    <n-input :value="onFormatValue(index)" class="block"></n-input>
                   </n-grid-item>
                 </n-grid>
               </section>
