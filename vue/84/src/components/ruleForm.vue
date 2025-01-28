@@ -82,6 +82,9 @@ const handleResetClick = () => {
     emit('on-submit', formValue.value);
 };
 watch(() => formValue.value.inputNumber, (val, prevVal) => {
+    if (val === 1) {
+        return;
+    }
     const isAdd = val > prevVal;
     const v = cloneDeep(defaultFormValue).inputContent[0];
     for (let i = 0; i < Math.abs(val - prevVal); i++) {

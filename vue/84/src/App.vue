@@ -21,8 +21,6 @@ hljs.registerLanguage('javascript', javascript)
 const formValue = ref<IFormValue>(cloneDeep(defaultFormValue))
 const codeTypeValue = ref<CodeTemplateKey>('js')
 const onSubmit = (v: IFormValue) => {
-  console.log(1111, v);
-
   formValue.value = cloneDeep(v);
 }
 const onFormatValue = computed(() => (item: number) => {
