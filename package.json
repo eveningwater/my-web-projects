@@ -19,6 +19,7 @@
     "vue": "bash scripts/vue.sh",
     "threejs": "bash scripts/threejs.sh",
     "typescript": "bash scripts/typescript.sh",
+    "package-js": "node scripts/package-js-project.js",
     "allBuild": "node build.js & npm run home:build & npm run 50-website-build",
     "build-website": "node build.js",
     "deploy": "git subtree push --prefix gh-pages origin gh-pages",
@@ -40,6 +41,9 @@
   },
   "homepage": "https://github.com/eveningwater/my-web-projects#readme",
   "devDependencies": {
+    "archiver": "^5.3.1",
+    "cheerio": "^1.0.0",
+    "esbuild": "^0.25.4",
     "live-server": "^1.2.2"
   }
 }
