@@ -8,7 +8,7 @@ set -e
 
 # git init
 git add -A
-git commit -m 'feat: 完善了文档'
+git commit -m 'feat: 添加了jquery4.0示例'
 git pull
 git push -f https://github.com/eveningwater/my-web-projects.git master
 # 如果发布到 https://<USERNAME>.github.io

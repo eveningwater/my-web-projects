@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery 4.0</title>
+    <style>
+        :root {
+            color-scheme: dark;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            margin: 0;
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+            background: #05060a;
+            color: #eef2ff;
+            overflow-x: hidden;
+        }
+
+        .page {
+            min-height: 100%;
+            display: grid;
+            place-items: center;
+            padding: 28px 18px;
+        }
+
+        .carousel {
+            width: min(1080px, 96vw);
+            border-radius: 22px;
+            position: relative;
+            isolation: isolate;
+            box-shadow:
+                0 40px 140px rgba(0, 0, 0, 0.75),
+                0 0 0 1px rgba(255, 255, 255, 0.08) inset;
+            overflow: clip;
+            background: radial-gradient(1400px 700px at 10% 10%, rgba(120, 92, 255, 0.25), rgba(0, 0, 0, 0)),
+                radial-gradient(1000px 900px at 70% 50%, rgba(0, 255, 204, 0.12), rgba(0, 0, 0, 0)),
+                #070813;
+            transform: translateZ(0);
+        }
+
+        .carousel::before {
+            content: "";
+            position: absolute;
+            inset: -12%;
+            background: var(--active-bg, radial-gradient(900px 500px at 30% 35%, rgba(105, 120, 255, 0.22), rgba(0,0,0,0)));
+            filter: blur(26px);
+            opacity: 0.95;
+            transform: translate3d(0, 0, 0);
+            z-index: 0;
+            pointer-events: none;
+            transition: background 600ms ease;
+            will-change: filter, opacity, transform;
+        }
+
+        .carousel::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.55)),
+                radial-gradient(900px 520px at 50% 0%, rgba(255,255,255,0.12), rgba(0,0,0,0));
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .carousel__header {
+            position: relative;
+            z-index: 3;
+            padding: 18px 18px 10px;
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            gap: 14px;
+        }
+
+        .carousel__title {
+            margin: 0;
+            font-weight: 650;
+            letter-spacing: 0.2px;
+            font-size: 16px;
+            color: rgba(255,255,255,0.92);
+        }
+
+        .carousel__hint {
+            margin: 0;
+            font-size: 12px;
+            color: rgba(255,255,255,0.68);
+        }
+
+        .carousel__viewport {
+            position: relative;
+            z-index: 2;
+            padding: 16px 18px 10px;
+        }
+
+        .carousel__frame {
+            border-radius: 18px;
+            position: relative;
+            overflow: hidden;
+            background: rgba(0,0,0,0.2);
+            box-shadow:
+                0 0 0 1px rgba(255,255,255,0.07) inset,
+                0 30px 90px rgba(0,0,0,0.6);
+            touch-action: pan-y;
+            cursor: grab;
+        }
+
+        .carousel__track {
+            display: flex;
+            gap: 14px;
+            padding: 22px 22px;
+            transform: translate3d(0, 0, 0);
+            transition: transform 650ms cubic-bezier(.2,.8,.15,1);
+            will-change: transform;
+        }
+
+        .carousel[data-dragging="true"] .carousel__track {
+            transition: none;
+            cursor: grabbing;
+        }
+
+        .carousel[data-jumping="true"] .carousel__track,
+        .carousel[data-jumping="true"] .carousel__slide {
+            transition: none;
+        }
+
+        .carousel__slide {
+            flex: 0 0 auto;
+            width: min(760px, calc(96vw - 110px));
+            aspect-ratio: 16 / 9;
+            border-radius: 18px;
+            position: relative;
+            overflow: hidden;
+            background: rgba(255,255,255,0.04);
+            box-shadow:
+                0 0 0 1px rgba(255,255,255,0.12) inset,
+                0 28px 80px rgba(0,0,0,0.65);
+            transform-style: preserve-3d;
+            transform:
+                perspective(1000px)
+                translateZ(calc((1 - min(var(--abs, 2), 2) / 2) * 90px))
+                rotateY(calc(var(--rel, 0) * -16deg))
+                scale(calc(1 - min(var(--abs, 2), 2) * 0.09));
+            opacity: calc(1 - min(var(--abs, 2), 2) * 0.12);
+            transition: transform 650ms cubic-bezier(.2,.8,.15,1), opacity 650ms cubic-bezier(.2,.8,.15,1);
+        }
+
+        .carousel[data-dragging="true"] .carousel__slide {
+            transition: none;
+        }
+
+        .carousel__slide::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: var(--bg);
+            transform: scale(1.06);
+        }
+
+        .carousel__slide::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(900px 520px at 30% 20%, rgba(255,255,255,0.26), rgba(255,255,255,0) 50%),
+                linear-gradient(180deg, rgba(0,0,0,0.05), rgba(0,0,0,0.62));
+            pointer-events: none;
+        }
+
+        .carousel__content {
+            position: absolute;
+            inset: 0;
+            display: grid;
+            grid-template-columns: 1.25fr 0.75fr;
+            gap: 16px;
+            padding: 22px 22px 18px;
+            z-index: 2;
+        }
+
+        .carousel__meta {
+            align-self: end;
+            max-width: 520px;
+        }
+
+        .carousel__badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 10px;
+            border-radius: 999px;
+            background: rgba(0,0,0,0.28);
+            box-shadow: 0 0 0 1px rgba(255,255,255,0.12) inset;
+            font-size: 12px;
+            letter-spacing: 0.3px;
+            color: rgba(255,255,255,0.86);
+        }
+
+        .carousel__dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.8);
+            box-shadow: 0 0 18px rgba(255,255,255,0.25);
+        }
+
+        .carousel__h2 {
+            margin: 12px 0 8px;
+            font-size: clamp(20px, 3.2vw, 34px);
+            line-height: 1.08;
+            letter-spacing: 0.1px;
+        }
+
+        .carousel__p {
+            margin: 0;
+            font-size: 13px;
+            line-height: 1.55;
+            color: rgba(255,255,255,0.78);
+        }
+
+        .carousel__glass {
+            justify-self: end;
+            align-self: start;
+            width: min(280px, 38vw);
+            border-radius: 16px;
+            padding: 14px 14px 12px;
+            background: rgba(0,0,0,0.26);
+            box-shadow:
+                0 0 0 1px rgba(255,255,255,0.10) inset,
+                0 18px 50px rgba(0,0,0,0.55);
+        }
+
+        .carousel__stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .carousel__stat {
+            border-radius: 12px;
+            background: rgba(255,255,255,0.06);
+            box-shadow: 0 0 0 1px rgba(255,255,255,0.08) inset;
+            padding: 10px 10px 9px;
+        }
+
+        .carousel__k {
+            font-size: 10px;
+            letter-spacing: 0.35px;
+            color: rgba(255,255,255,0.72);
+            text-transform: uppercase;
+        }
+
+        .carousel__v {
+            margin-top: 6px;
+            font-size: 14px;
+            font-weight: 650;
+            color: rgba(255,255,255,0.92);
+        }
+
+        .carousel__controls {
+            position: relative;
+            z-index: 3;
+            padding: 10px 16px 14px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        .carousel__buttons {
+            display: inline-flex;
+            gap: 10px;
+        }
+
+        .carousel__btn {
+            appearance: none;
+            border: 0;
+            border-radius: 999px;
+            padding: 10px 12px;
+            background: rgba(255,255,255,0.08);
+            color: rgba(255,255,255,0.92);
+            box-shadow: 0 0 0 1px rgba(255,255,255,0.10) inset;
+            cursor: pointer;
+            user-select: none;
+            transition: transform 140ms ease, background 140ms ease;
+        }
+
+        .carousel__btn:hover {
+            background: rgba(255,255,255,0.12);
+        }
+
+        .carousel__btn:active {
+            transform: translateY(1px);
+        }
+
+        .carousel__btn:focus-visible {
+            outline: 2px solid rgba(120, 160, 255, 0.85);
+            outline-offset: 2px;
+        }
+
+        .carousel__dots {
+            display: inline-flex;
+            gap: 8px;
+            align-items: center;
+            justify-content: center;
+            flex: 1 1 auto;
+        }
+
+        .carousel__dotbtn {
+            width: 8px;
+            height: 8px;
+            border-radius: 999px;
+            border: 0;
+            padding: 0;
+            cursor: pointer;
+            background: rgba(255,255,255,0.20);
+            box-shadow: 0 0 0 1px rgba(255,255,255,0.12) inset;
+            transition: width 240ms ease, background 240ms ease, transform 240ms ease;
+        }
+
+        .carousel__dotbtn[aria-current="true"] {
+            width: 26px;
+            background: rgba(255,255,255,0.75);
+            transform: translateY(-1px);
+        }
+
+        .carousel__progress {
+            width: 140px;
+            height: 10px;
+            border-radius: 999px;
+            overflow: hidden;
+            background: rgba(255,255,255,0.08);
+            box-shadow: 0 0 0 1px rgba(255,255,255,0.10) inset;
+            flex: 0 0 auto;
+        }
+
+        .carousel__bar {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, rgba(255,255,255,0.75), rgba(255,255,255,0.28));
+            border-radius: 999px;
+            animation: progress var(--autoplay-ms, 5200ms) linear infinite;
+            transform-origin: left center;
+        }
+
+        .carousel[data-paused="true"] .carousel__bar {
+            animation-play-state: paused;
+        }
+
+        @keyframes progress {
+            from { width: 0%; }
+            to { width: 100%; }
+        }
+
+        @media (max-width: 740px) {
+            .carousel__content {
+                grid-template-columns: 1fr;
+            }
+            .carousel__glass {
+                justify-self: start;
+                width: min(360px, 90%);
+            }
+            .carousel__track {
+                padding: 16px 16px;
+                gap: 12px;
+            }
+            .carousel__slide {
+                width: min(760px, calc(96vw - 68px));
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .carousel::before {
+                transition: none;
+            }
+            .carousel__track {
+                transition: none;
+            }
+            .carousel__slide {
+                transition: none;
+            }
+            .carousel__bar {
+                animation: none;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="page">
+        <section class="carousel" id="coolCarousel" aria-roledescription="carousel" aria-label="炫酷轮播图" tabindex="0">
+            <header class="carousel__header">
+                <h1 class="carousel__title">jQuery 4.0 Carousel</h1>
+                <p class="carousel__hint">拖拽 / 滑动 · 键盘 ← → · 自动播放</p>
+            </header>
+
+            <div class="carousel__viewport">
+                <div class="carousel__frame" role="group" aria-label="轮播内容">
+                    <div class="carousel__track">
+                        <article class="carousel__slide" style="--bg: radial-gradient(900px 520px at 20% 30%, rgba(121, 87, 255, 0.95), rgba(0, 0, 0, 0)), radial-gradient(900px 560px at 70% 55%, rgba(0, 255, 204, 0.55), rgba(0, 0, 0, 0)), linear-gradient(135deg, #0f1227, #090a14);">
+                            <div class="carousel__content">
+                                <div class="carousel__meta">
+                                    <div class="carousel__badge"><span class="carousel__dot" aria-hidden="true"></span> NEON FLOW</div>
+                                    <h2 class="carousel__h2">霓虹流光，3D 视差的质感</h2>
+                                    <p class="carousel__p">居中卡片更亮更立体，左右卡片带旋转与景深，形成自然的“聚焦”效果。</p>
+                                </div>
+                                <aside class="carousel__glass" aria-label="关键指标">
+                                    <ul class="carousel__stats">
+                                        <li class="carousel__stat"><div class="carousel__k">Mode</div><div class="carousel__v">3D</div></li>
+                                        <li class="carousel__stat"><div class="carousel__k">Loop</div><div class="carousel__v">Infinite</div></li>
+                                        <li class="carousel__stat"><div class="carousel__k">Drag</div><div class="carousel__v">Pointer</div></li>
+                                        <li class="carousel__stat"><div class="carousel__k">Ease</div><div class="carousel__v">Cubic</div></li>
+                                    </ul>
+                                </aside>
+                            </div>
+                        </article>
+
+                        <article class="carousel__slide" style="--bg: radial-gradient(900px 520px at 15% 20%, rgba(255, 88, 170, 0.82), rgba(0, 0, 0, 0)), radial-gradient(900px 560px at 80% 60%, rgba(255, 221, 100, 0.56), rgba(0, 0, 0, 0)), linear-gradient(135deg, #151021, #080812);">
+                            <div class="carousel__content">
+                                <div class="carousel__meta">
+                                    <div class="carousel__badge"><span class="carousel__dot" aria-hidden="true"></span> AURORA</div>
+                                    <h2 class="carousel__h2">极光渐变，背景跟随切换</h2>
+                                    <p class="carousel__p">切换时整体背景会同步变化并虚化，营造“整张海报在流动”的氛围。</p>
+                                </div>
+                                <aside class="carousel__glass" aria-label="关键指标">
+                                    <ul class="carousel__stats">
+                                        <li class="carousel__stat"><div class="carousel__k">Backdrop</div><div class="carousel__v">Blur</div></li>
+                                        <li class="carousel__stat"><div class="carousel__k">FPS</div><div class="carousel__v">Smooth</div></li>
+                                        <li class="carousel__stat"><div class="carousel__k">Touch</div><div class="carousel__v">OK</div></li>
+                                        <li class="carousel__stat"><div class="carousel__k">Focus</div><div class="carousel__v">A11y</div></li>
+                                    </ul>
+                                </aside>
+                            </div>
+                        </article>
+
+                        <article class="carousel__slide" style="--bg: radial-gradient(900px 520px at 22% 30%, rgba(0, 204, 255, 0.72), rgba(0, 0, 0, 0)), radial-gradient(900px 560px at 70% 65%, rgba(152, 255, 106, 0.45), rgba(0, 0, 0, 0)), linear-gradient(135deg, #091629, #070812);">
+                            <div class="carousel__content">
+                                <div class="carousel__meta">
+                                    <div class="carousel__badge"><span class="carousel__dot" aria-hidden="true"></span> GLASS UI</div>
+                                    <h2 class="carousel__h2">玻璃拟态信息卡片</h2>
+                                    <p class="carousel__p">右侧指标卡片带模糊与内阴影，配合灯光渐变更有“高级 UI”味道。</p>
+                                </div>
+                                <aside class="carousel__glass" aria-label="关键指标">
+                                    <ul class="carousel__stats">
+                                        <li class="carousel__stat"><div class="carousel__k">Glass</div><div class="carousel__v">12px</div></li>
+                                        <li class="carousel__stat"><div class="carousel__k">Shadow</div><div class="carousel__v">Deep</div></li>
+                                        <li class="carousel__stat"><div class="carousel__k">Radius</div><div class="carousel__v">18</div></li>
+                                        <li class="carousel__stat"><div class="carousel__k">Grid</div><div class="carousel__v">2×2</div></li>
+                                    </ul>
+                                </aside>
+                            </div>
+                        </article>
+
+                        <article class="carousel__slide" style="--bg: radial-gradient(900px 520px at 18% 28%, rgba(255, 120, 72, 0.78), rgba(0, 0, 0, 0)), radial-gradient(900px 560px at 72% 62%, rgba(0, 195, 255, 0.38), rgba(0, 0, 0, 0)), linear-gradient(135deg, #1b1011, #070812);">
+                            <div class="carousel__content">
+                                <div class="carousel__meta">
+                                    <div class="carousel__badge"><span class="carousel__dot" aria-hidden="true"></span> SNAP FEEL</div>
+                                    <h2 class="carousel__h2">拖拽释放，带吸附手感</h2>
+                                    <p class="carousel__p">按下拖拽时禁用过渡，释放后根据滑动距离智能切换，让交互更像原生应用。</p>
+                                </div>
+                                <aside class="carousel__glass" aria-label="关键指标">
+                                    <ul class="carousel__stats">
+                                        <li class="carousel__stat"><div class="carousel__k">Threshold</div><div class="carousel__v">12%</div></li>
+                                        <li class="carousel__stat"><div class="carousel__k">Inertia</div><div class="carousel__v">Soft</div></li>
+                                        <li class="carousel__stat"><div class="carousel__k">Pause</div><div class="carousel__v">Hover</div></li>
+                                        <li class="carousel__stat"><div class="carousel__k">Resume</div><div class="carousel__v">Auto</div></li>
+                                    </ul>
+                                </aside>
+                            </div>
+                        </article>
+
+                        <article class="carousel__slide" style="--bg: radial-gradient(900px 520px at 18% 24%, rgba(170, 130, 255, 0.75), rgba(0, 0, 0, 0)), radial-gradient(900px 560px at 78% 58%, rgba(74, 255, 214, 0.45), rgba(0, 0, 0, 0)), linear-gradient(135deg, #0b1022, #060712);">
+                            <div class="carousel__content">
+                                <div class="carousel__meta">
+                                    <div class="carousel__badge"><span class="carousel__dot" aria-hidden="true"></span> CLEAN API</div>
+                                    <h2 class="carousel__h2">按钮 / 指示点都可控</h2>
+                                    <p class="carousel__p">支持左右按钮与指示点跳转，且在无动画偏好下自动降级，兼顾体验与可访问性。</p>
+                                </div>
+                                <aside class="carousel__glass" aria-label="关键指标">
+                                    <ul class="carousel__stats">
+                                        <li class="carousel__stat"><div class="carousel__k">Dots</div><div class="carousel__v">Sync</div></li>
+                                        <li class="carousel__stat"><div class="carousel__k">Keys</div><div class="carousel__v">← →</div></li>
+                                        <li class="carousel__stat"><div class="carousel__k">Reduce</div><div class="carousel__v">OK</div></li>
+                                        <li class="carousel__stat"><div class="carousel__k">Module</div><div class="carousel__v">ESM</div></li>
+                                    </ul>
+                                </aside>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="carousel__controls" aria-label="轮播控制区">
+                <div class="carousel__buttons">
+                    <button class="carousel__btn" type="button" data-action="prev" aria-label="上一张">←</button>
+                    <button class="carousel__btn" type="button" data-action="next" aria-label="下一张">→</button>
+                </div>
+                <div class="carousel__dots" role="tablist" aria-label="轮播指示点"></div>
+                <div class="carousel__progress" aria-hidden="true"><div class="carousel__bar"></div></div>
+            </footer>
+        </section>
+    </main>
+
+    <script type="module">
+        import { $ } from "https://code.jquery.com/jquery-4.0.0.module.min.js";
+
+        const $carousel = $("#coolCarousel");
+        const $track = $carousel.find(".carousel__track");
+        const $frame = $carousel.find(".carousel__frame");
+        const $bar = $carousel.find(".carousel__bar");
+        const $dots = $carousel.find(".carousel__dots");
+        const frameEl = $frame[0];
+        const trackEl = $track[0];
+
+        const prefersReducedMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches ?? false;
+        const autoplayMs = prefersReducedMotion ? 0 : 5200;
+        $carousel[0].style.setProperty("--autoplay-ms", `${autoplayMs}ms`);
+        $carousel.attr("data-paused", autoplayMs > 0 ? "false" : "true");
+
+        const $originalSlides = $track.children(".carousel__slide");
+        const logicalCount = $originalSlides.length;
+        if (logicalCount < 2) {
+            $carousel[0].style.setProperty("--active-bg", getComputedStyle($originalSlides[0]).getPropertyValue("--bg"));
+        }
+
+        const $cloneHead = $originalSlides.first().clone(true).attr("data-clone", "true");
+        const $cloneTail = $originalSlides.last().clone(true).attr("data-clone", "true");
+        $track.prepend($cloneTail);
+        $track.append($cloneHead);
+
+        const $slides = $track.children(".carousel__slide");
+        let realIndex = 1;
+        let dragging = false;
+        let pointerId = null;
+        let startX = 0;
+        let startTranslateX = 0;
+        let currentTranslateX = 0;
+        let pendingMoveX = 0;
+        let moveRaf = 0;
+        let autoplayTimer = null;
+        let transitionLock = false;
+
+        function clamp(value, min, max) {
+            return Math.max(min, Math.min(max, value));
+        }
+
+        function getTargetTranslate(index = realIndex) {
+            const frameWidth = frameEl.getBoundingClientRect().width;
+            const active = $slides.get(index);
+            const center = active.offsetLeft + active.offsetWidth / 2;
+            return -(center - frameWidth / 2);
+        }
+
+        function setTrackTranslate(x, animate = true) {
+            if (!animate) trackEl.style.transition = "none";
+            else trackEl.style.transition = "";
+            currentTranslateX = x;
+            trackEl.style.transform = `translate3d(${x}px, 0, 0)`;
+        }
+
+        function sync3D() {
+            $slides.each((i, el) => {
+                const rel = i - realIndex;
+                const abs = Math.abs(rel);
+                el.style.setProperty("--rel", `${clamp(rel, -2, 2)}`);
+                el.style.setProperty("--abs", `${clamp(abs, 0, 2)}`);
+            });
+
+            const active = $slides.get(realIndex);
+            const bg = getComputedStyle(active).getPropertyValue("--bg").trim();
+            if (bg) $carousel[0].style.setProperty("--active-bg", bg);
+        }
+
+        function syncDots() {
+            const currentLogical = logicalFromReal(realIndex);
+            $dots.children("button").each((i, el) => {
+                el.setAttribute("aria-current", i + 1 === currentLogical ? "true" : "false");
+            });
+        }
+
+        function logicalFromReal(index) {
+            if (index === 0) return logicalCount;
+            if (index === logicalCount + 1) return 1;
+            return index;
+        }
+
+        function realFromLogical(index) {
+            return clamp(index, 1, logicalCount);
+        }
+
+        function buildDots() {
+            const frag = document.createDocumentFragment();
+            for (let i = 1; i <= logicalCount; i++) {
+                const btn = document.createElement("button");
+                btn.type = "button";
+                btn.className = "carousel__dotbtn";
+                btn.setAttribute("aria-label", `跳转到第 ${i} 张`);
+                btn.setAttribute("aria-current", i === 1 ? "true" : "false");
+                btn.dataset.index = String(i);
+                frag.appendChild(btn);
+            }
+            $dots[0].appendChild(frag);
+        }
+
+        function restartProgress() {
+            if (autoplayMs <= 0) return;
+            $bar[0].style.animation = "none";
+            void $bar[0].offsetHeight;
+            $bar[0].style.animation = "";
+        }
+
+        function clearAutoplayTimer() {
+            if (autoplayTimer) {
+                clearInterval(autoplayTimer);
+                autoplayTimer = null;
+            }
+        }
+
+        function goToReal(nextRealIndex, { animate = true, userInitiated = false } = {}) {
+            if (transitionLock && animate) return;
+            const capped = clamp(nextRealIndex, 0, logicalCount + 1);
+            realIndex = capped;
+            $carousel.attr("data-dragging", "false");
+            const targetTranslate = getTargetTranslate(realIndex);
+            const shouldAnimate = animate && Math.abs(targetTranslate - currentTranslateX) > 0.5;
+            transitionLock = shouldAnimate;
+            setTrackTranslate(targetTranslate, shouldAnimate);
+            sync3D();
+            syncDots();
+            if (userInitiated) restartProgress();
+        }
+
+        function go(dir, userInitiated = false) {
+            goToReal(realIndex + dir, { animate: true, userInitiated });
+        }
+
+        function normalizeLoop() {
+            const needsJump = realIndex === 0 || realIndex === logicalCount + 1;
+            if (needsJump) {
+                $carousel.attr("data-jumping", "true");
+                if (realIndex === 0) realIndex = logicalCount;
+                else realIndex = 1;
+                setTrackTranslate(getTargetTranslate(realIndex), false);
+                window.requestAnimationFrame(() => {
+                    window.requestAnimationFrame(() => {
+                        $carousel.attr("data-jumping", "false");
+                    });
+                });
+            }
+            sync3D();
+            syncDots();
+        }
+
+        function stopAutoplay() {
+            clearAutoplayTimer();
+            $carousel.attr("data-paused", "true");
+        }
+
+        function startAutoplay() {
+            if (autoplayMs <= 0) {
+                stopAutoplay();
+                return;
+            }
+            clearAutoplayTimer();
+            $carousel.attr("data-paused", "false");
+            autoplayTimer = setInterval(() => {
+                go(1, false);
+                restartProgress();
+            }, autoplayMs);
+            restartProgress();
+        }
+
+        function onResize() {
+            setTrackTranslate(getTargetTranslate(realIndex), false);
+            sync3D();
+        }
+
+        function setDragging(state) {
+            dragging = state;
+            $carousel.attr("data-dragging", state ? "true" : "false");
+        }
+
+        function onPointerDown(ev) {
+            if (ev.button !== undefined && ev.button !== 0) return;
+            if (transitionLock) return;
+            pointerId = ev.pointerId ?? null;
+            setDragging(true);
+            stopAutoplay();
+            if (pointerId != null) frameEl.setPointerCapture?.(pointerId);
+
+            startX = ev.clientX;
+            pendingMoveX = startX;
+            startTranslateX = currentTranslateX;
+        }
+
+        function flushDragMove() {
+            moveRaf = 0;
+            const dx = pendingMoveX - startX;
+            setTrackTranslate(startTranslateX + dx, false);
+        }
+
+        function onPointerMove(ev) {
+            if (!dragging) return;
+            if (pointerId != null && ev.pointerId != null && ev.pointerId !== pointerId) return;
+            pendingMoveX = ev.clientX;
+            if (!moveRaf) moveRaf = window.requestAnimationFrame(flushDragMove);
+        }
+
+        function onPointerUp(ev) {
+            if (!dragging) return;
+            if (pointerId != null && ev.pointerId != null && ev.pointerId !== pointerId) return;
+
+            setDragging(false);
+            if (moveRaf) {
+                window.cancelAnimationFrame(moveRaf);
+                moveRaf = 0;
+                pendingMoveX = ev.clientX;
+                flushDragMove();
+            }
+            if (pointerId != null) frameEl.releasePointerCapture?.(pointerId);
+            pointerId = null;
+
+            const active = $slides.get(realIndex);
+            const dx = currentTranslateX - startTranslateX;
+            const threshold = Math.max(42, active.offsetWidth * 0.12);
+            if (dx > threshold) go(-1, true);
+            else if (dx < -threshold) go(1, true);
+            else goToReal(realIndex, { animate: true, userInitiated: true });
+
+            startAutoplay();
+        }
+
+        function onKeydown(e) {
+            if (e.key === "ArrowLeft") {
+                e.preventDefault();
+                go(-1, true);
+            } else if (e.key === "ArrowRight") {
+                e.preventDefault();
+                go(1, true);
+            }
+        }
+
+        function onActionClick(e) {
+            const action = $(e.currentTarget).data("action");
+            if (action === "prev") go(-1, true);
+            if (action === "next") go(1, true);
+        }
+
+        function onDotClick(e) {
+            const idx = Number($(e.currentTarget).data("index"));
+            if (!Number.isFinite(idx)) return;
+            goToReal(realFromLogical(idx), { animate: true, userInitiated: true });
+        }
+
+        buildDots();
+
+        frameEl.addEventListener("pointerdown", onPointerDown, { passive: true });
+        window.addEventListener("pointermove", onPointerMove, { passive: true });
+        window.addEventListener("pointerup", onPointerUp, { passive: true });
+        window.addEventListener("pointercancel", onPointerUp, { passive: true });
+        $carousel.on("keydown", onKeydown);
+        $carousel.find("[data-action]").on("click", onActionClick);
+        $dots.on("click", "button", onDotClick);
+
+        $carousel.on("mouseenter", stopAutoplay);
+        $carousel.on("mouseleave", startAutoplay);
+
+        $track.on("transitionend", (e) => {
+            if (e.target !== $track[0]) return;
+            transitionLock = false;
+            normalizeLoop();
+        });
+
+        const ro = "ResizeObserver" in window ? new ResizeObserver(() => window.requestAnimationFrame(onResize)) : null;
+        if (ro) ro.observe(frameEl);
+
+        $(window).on("resize", () => {
+            window.requestAnimationFrame(onResize);
+        });
+
+        document.addEventListener("visibilitychange", () => {
+            if (document.hidden) stopAutoplay();
+            else startAutoplay();
+        }, { passive: true });
+
+        window.requestAnimationFrame(() => {
+            onResize();
+            normalizeLoop();
+            startAutoplay();
+        });
+    </script>
+</body>
+</html>
