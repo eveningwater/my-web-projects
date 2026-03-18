@@ -1,0 +1,30 @@
+{
+  "name": "website-v2",
+  "version": "1.0.0",
+  "description": "Website with micro-frontend architecture using Module Federation",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm run --parallel dev",
+    "build": "pnpm run --parallel build",
+    "preview": "pnpm run --parallel preview",
+    "dev:main": "cd main-app && pnpm dev",
+    "dev:cartoon": "cd child-apps/cartoon-website && pnpm dev",
+    "dev:hacker": "cd child-apps/hacker-website && pnpm dev",
+    "dev:simple": "cd child-apps/simple-website && pnpm dev",
+    "build:main": "cd main-app && pnpm build",
+    "build:cartoon": "cd child-apps/cartoon-website && pnpm build",
+    "build:hacker": "cd child-apps/hacker-website && pnpm build",
+    "build:simple": "cd child-apps/simple-website && pnpm build",
+    "preview:main": "cd main-app && pnpm preview",
+    "preview:cartoon": "cd child-apps/cartoon-website && pnpm preview",
+    "preview:hacker": "cd child-apps/hacker-website && pnpm preview",
+    "preview:simple": "cd child-apps/simple-website && pnpm preview"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "vite": "^5.0.0",
+    "@originjs/vite-plugin-federation": "^1.4.1"
+  },
+  "dependencies": {}
+}

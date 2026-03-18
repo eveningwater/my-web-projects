@@ -1,0 +1,153 @@
+/* 黑客风格应用样式 */
+.hacker-app {
+  font-family: 'Courier New', monospace;
+  background: #000;
+  color: #00ff00;
+  min-height: 100vh;
+  padding: 20px;
+  overflow-x: hidden;
+}
+
+.hacker-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.hacker-header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.glitch {
+  position: relative;
+  animation: glitch 1s infinite;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.glitch::before {
+  animation: glitch-1 0.5s infinite;
+  color: #ff0000;
+  z-index: -1;
+}
+
+.glitch::after {
+  animation: glitch-2 0.5s infinite;
+  color: #0000ff;
+  z-index: -2;
+}
+
+.terminal-text {
+  font-size: 1.2rem;
+  color: #00ffff;
+  animation: blink 1s infinite;
+}
+
+.hacker-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}
+
+.terminal-window {
+  background: #1a1a1a;
+  border: 2px solid #00ff00;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 800px;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+}
+
+.terminal-header {
+  background: #333;
+  padding: 10px;
+  border-bottom: 2px solid #00ff00;
+  border-radius: 8px 8px 0 0;
+  display: flex;
+  align-items: center;
+}
+
+.terminal-button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.terminal-button.red { background: #ff5f56; }
+.terminal-button.yellow { background: #ffbd2e; }
+.terminal-button.green { background: #27ca3f; }
+
+.terminal-body {
+  padding: 20px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.command {
+  color: #00ff00;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.output {
+  color: #00ffff;
+  margin-bottom: 10px;
+  font-family: 'Courier New', monospace;
+}
+
+/* 动画效果 */
+@keyframes glitch {
+  0%, 100% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+}
+
+@keyframes glitch-1 {
+  0%, 100% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+}
+
+@keyframes glitch-2 {
+  0%, 100% { transform: translate(0); }
+  20% { transform: translate(2px, -2px); }
+  40% { transform: translate(2px, 2px); }
+  60% { transform: translate(-2px, -2px); }
+  80% { transform: translate(-2px, 2px); }
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .hacker-header h1 {
+    font-size: 2rem;
+  }
+  
+  .terminal-window {
+    margin: 0 10px;
+  }
+  
+  .terminal-body {
+    padding: 15px;
+    font-size: 12px;
+  }
+}

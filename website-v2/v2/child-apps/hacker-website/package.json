@@ -1,0 +1,17 @@
+{
+  "name": "hacker-website",
+  "version": "1.0.0",
+  "description": "黑客风格子应用",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 3002",
+    "build": "tsc && vite build",
+    "preview": "vite preview --port 3002",
+    "clean": "rm -rf dist"
+  },
+  "devDependencies": {
+    "@types/node": "^24.2.1",
+    "typescript": "^5.9.2",
+    "vite": "^4.5.0"
+  }
+}

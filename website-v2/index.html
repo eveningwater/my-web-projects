@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>夕水的个人网页</title>
+    <style>
+        :root {
+            --leftFolderBgColor--: #EDEDEE;
+            --tabsBorderColor--: #d4d4d4;
+            --tabsBorderActiveColor--: #2396ef;
+            --leftFolderColor--: rgba(27, 30, 40, 1);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .tabs-container {
+            position: fixed;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            align-items: center;
+        }
+
+        .folder {
+            width: 36px;
+            height: 36px;
+            transform: rotate(0);
+            background-color: var(--leftFolderBgColor--);
+            cursor: pointer;
+            color: var(--leftFolderColor--);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .folder.active {
+            transform: rotate(180deg);
+        }
+
+        .folder>.arrow-right-icon {
+            fill: currentColor;
+            color: inherit;
+            width: 20px;
+            height: 20px;
+        }
+
+        .tabs {
+            background-color: var(--leftFolderBgColor--);
+            width: 0;
+            transform: scale(0) translateX(100%);
+            transition: all .4s cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+
+        .tabs.active {
+            width: 150px;
+            transform: scale(1) translateX(0);
+        }
+
+        .tabs-item {
+            cursor: pointer;
+            padding: 5px 0;
+            text-align: center;
+            border-bottom: 1px solid var(--tabsBorderColor--);
+        }
+
+        .tabs-item.active,
+        .tabs-item:hover {
+            border-color: var(--tabsBorderActiveColor--);
+            color: var(--tabsBorderActiveColor--);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tabs-container">
+        <div class="folder" id="folder"><svg t="1690172394135" class="arrow-right-icon" viewBox="0 0 1024 1024"
+                version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2263">
+                <path
+                    d="M320 885.333333c-8.533333 0-17.066667-4.266667-23.466667-10.666666-12.8-12.8-10.666667-34.133333 2.133334-44.8L654.933333 512 298.666667 194.133333c-12.8-10.666667-14.933333-32-2.133334-44.8 10.666667-12.8 32-14.933333 44.8-2.133333l384 341.333333c6.4 6.4 10.666667 14.933333 10.666667 23.466667 0 8.533333-4.266667 17.066667-10.666667 23.466667l-384 341.333333c-6.4 6.4-12.8 8.533333-21.333333 8.533333z"
+                    p-id="2264"></path>
+            </svg>
+        </div>
+        <div class="tabs hidden" id="tabs">
+            <div class="tabs-item active" data-url="cartoon-website">卡通风格</div>
+            <div class="tabs-item" data-url="hacker-website">黑客风格</div>
+            <div class="tabs-item" data-url="simple-website">简约风格</div>
+        </div>
+    </div>
+    <iframe src="./child-app/cartoon-website/index.html" class="iframe" id="iframe"></iframe>
+    <script>
+        const folder = document.getElementById('folder'), tabs = document.getElementById('tabs'), iframe = document.getElementById('iframe');
+        folder.onclick = () => {
+            folder.classList.toggle('active');
+            tabs.classList.toggle('active');
+        }
+        tabs.onclick = (e) => {
+            if (e.target?.classList.contains('tabs-item')) {
+                [...tabs.children].forEach(item => item.classList.remove('active'));
+                e.target?.classList.add('active');
+                const dataUrl = e.target?.getAttribute('data-url');
+                if (dataUrl) {
+                    iframe.setAttribute('src', `./child-app/${dataUrl}/index.html`)
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

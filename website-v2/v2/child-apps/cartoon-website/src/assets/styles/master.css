@@ -1,0 +1,3245 @@
+@charset "UTF-8";
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+body {
+  line-height: 1;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+nav ul,
+li {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+/* ==============================================
+ * COMMON SETTINGS
+ *
+ * memo:
+ *
+ * ============================================== */
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: #fff;
+  color: #82909a;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  font-family: 'Microsoft YaHei', 'Droid Sans Fallback', SimHei, Arial, Helvetica, tahoma, sans-serif;
+  font-size: 16px;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+main,
+section {
+  width: 100%;
+  height: 100%;
+}
+
+a {
+  color: inherit;
+  outline: none;
+  text-decoration: none;
+}
+
+.l-social a,
+.intro-btn-skip a,
+.footer-menu a,
+.l-news-wrap a,
+.movie-btn a,
+.first-btn-1st a {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.l-social a:hover,
+.intro-btn-skip a:hover,
+.footer-menu a:hover,
+.l-news-wrap a:hover,
+.movie-btn a:hover,
+.first-btn-1st a:hover {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.pcv {
+  display: block;
+}
+
+.spv {
+  display: none;
+}
+
+img.pcv {
+  display: inline;
+}
+
+img.spv {
+  display: none;
+}
+
+.l-stage {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  min-width: 1200px;
+  min-height: 800px;
+}
+
+.cover {
+  display: none;
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="1" /><feFuncG type="linear" slope="1" /><feFuncB type="linear" slope="1" /></feComponentTransfer></filter></svg>#filter');
+  -webkit-filter: brightness(100%);
+  filter: brightness(100%);
+}
+
+/* ==============================================
+ * INTRO
+ *
+ * memo:
+ *
+ * ============================================== */
+.l-intro {
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  min-width: 1200px;
+  min-height: 800px;
+  position: absolute;
+  z-index: 100;
+  overflow: hidden;
+}
+
+.intro-btn-skip {
+  position: fixed;
+  top: 31px;
+  right: 40px;
+  z-index: 1000;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+.intro-btn-skip a {
+  display: block;
+  color: #000;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  font-style: italic;
+  letter-spacing: 0.5px;
+  background: url("../images/intro_ico_skip.png") no-repeat right 3px;
+  padding: 0 15px 0 0;
+}
+
+.l-intro-inner {
+  position: absolute;
+  width: 10000px;
+  height: 10000px;
+}
+
+.intro-box-vsl-sp,
+.intro-box-text-sp {
+  display: none;
+}
+
+.intro-box,
+.intro-box-text,
+.intro-box-name,
+.intro-box-movie,
+.intro-box-movie .movie-mask,
+#intro-box-megumi {
+  position: absolute;
+  z-index: 0;
+}
+
+.intro-box {
+  display: none;
+  width: 1200px;
+  height: 800px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.intro-box-movie,
+.intro-box-text,
+.intro-box-name {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+#intro-box-eriri .intro-box-movie {
+  left: 78px;
+  top: 243px;
+}
+
+#intro-box-eriri .intro-box-text {
+  background: url("../images/intro_eriri_text.png") no-repeat 0 0;
+  left: 888px;
+  top: 139px;
+  width: 178px;
+  height: 477px;
+}
+
+#intro-box-eriri .intro-box-name {
+  background: url("../images/intro_eriri_name.png") no-repeat 0 0;
+  left: 838px;
+  top: 137px;
+  width: 10px;
+  height: 223px;
+}
+
+#intro-box-utaha .intro-box-movie {
+  left: 380px;
+  top: 265px;
+}
+
+#intro-box-utaha .intro-box-text {
+  background: url("../images/intro_utaha_text.png") no-repeat 0 0;
+  left: 133px;
+  top: 97px;
+  width: 469px;
+  height: 155px;
+}
+
+#intro-box-utaha .intro-box-name {
+  background: url("../images/intro_utaha_name.png") no-repeat 0 0;
+  left: 132px;
+  top: 296px;
+  width: 184px;
+  height: 10px;
+}
+
+#intro-box-izumi .intro-box-movie {
+  left: 50px;
+  top: 104px;
+}
+
+#intro-box-izumi .intro-box-text {
+  background: url("../images/intro_izumi_text.png") no-repeat 0 0;
+  left: 542px;
+  top: 552px;
+  width: 556px;
+  height: 95px;
+}
+
+#intro-box-izumi .intro-box-name {
+  background: url("../images/intro_izumi_name.png") no-repeat 0 0;
+  left: 542px;
+  top: 679px;
+  width: 130px;
+  height: 10px;
+}
+
+#intro-box-michiru .intro-box-movie {
+  left: 301px;
+  top: 99px;
+}
+
+#intro-box-michiru .intro-box-text {
+  background: url("../images/intro_michiru_text.png") no-repeat 0 0;
+  left: 129px;
+  top: 292px;
+  width: 158px;
+  height: 380px;
+}
+
+#intro-box-michiru .intro-box-name {
+  background: url("../images/intro_michiru_name.png") no-repeat 0 0;
+  left: 88px;
+  top: 295px;
+  width: 9px;
+  height: 134px;
+}
+
+#intro-box-megumi {
+  display: none;
+  width: 1200px;
+  height: 800px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+#intro-box-megumi .intro-box-visual {
+  background: url("../images/intro_megumi.png") no-repeat 0 0;
+  position: absolute;
+  top: -180px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 754px;
+  height: 1286px;
+}
+
+#intro-box-megumi .intro-box-visual.test {
+  background-size: 100% auto;
+  left: 181px;
+  top: 40px;
+  right: auto;
+  width: 481px;
+  height: 839px;
+}
+
+#intro-box-megumi .intro-box-text {
+  background: url("../images/intro_megumi_text.png") no-repeat 0 0;
+  position: absolute;
+  left: 721px;
+  top: 215px;
+  width: 267px;
+  height: 297px;
+}
+
+/* --------------------
+ * テキスト
+ * ------------------- */
+.intro-box-text {
+  z-index: 1;
+}
+
+/* --------------------
+ * ネーム
+ * ------------------- */
+.intro-box-name {
+  z-index: 1;
+}
+
+/* --------------------
+ * ムービー
+ * ------------------- */
+.intro-box-movie {
+  width: 759px;
+  height: 427px;
+  z-index: 0;
+}
+
+.intro-box-movie:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100px;
+  background: #fff;
+  position: absolute;
+  top: -100px;
+  z-index: 100;
+}
+
+.intro-box-movie:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 50px;
+  background: #fff;
+  position: absolute;
+  bottom: -50px;
+  z-index: 100;
+}
+
+.intro-box-movie .movie-mask {
+  background: url("../images/intro_mask.png") no-repeat 0 0;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+}
+
+.intro-box-movie .movie-mask:before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100px;
+  background: #fff;
+  position: absolute;
+  left: -100px;
+  z-index: 100;
+}
+
+.intro-box-movie .movie-mask:after {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 50px;
+  background: #fff;
+  position: absolute;
+  right: -50px;
+  z-index: 100;
+}
+
+/* ==============================================
+ * MAIN first
+ *
+ * memo:
+ *
+ * ============================================== */
+.l-main {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.l-first {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.first-logo {
+  position: fixed;
+  left: 0;
+  bottom: -3px;
+  z-index: 101;
+}
+
+.first-text-main {
+  pointer-events: none;
+  position: absolute;
+  left: 646px;
+  top: 141px;
+  z-index: 100;
+}
+
+.first-date {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 101;
+}
+
+.first-date p {
+  float: left;
+  margin-right: 25px;
+}
+
+.first-date li {
+  float: left;
+  margin-right: 30px;
+}
+
+.first-date li:last-child {
+  margin-right: 0;
+}
+
+.first-btn-1st {
+  position: fixed;
+  left: 30px;
+  top: 30px;
+  z-index: 100;
+}
+
+.first-bg,
+.first-megumi-back,
+.first-megumi-front,
+.first-flare-wrap,
+.first-flare01,
+.first-flare02 {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  min-width: 1200px;
+  min-width: 800px;
+}
+
+.first-bg {
+  background: url("../images/main_bg_l.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.first-megumi-back {
+  background: url("../images/main_megumi_back_l.png") no-repeat center;
+  background-size: cover;
+}
+
+.first-megumi-front {
+  background: url("../images/main_megumi_front_l.png") no-repeat center;
+  background-size: cover;
+}
+
+.first-flare01 {
+  background: url("../images/main_flare01.png") repeat-x center;
+  background-size: cover;
+  z-index: 10;
+}
+
+.first-flare02 {
+  background: url("../images/main_flare02.png") repeat-x center;
+  background-size: cover;
+  z-index: 10;
+}
+
+/* --------------------
+ * さくら表示レイヤー
+ * ------------------- */
+.sakura-front {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.sakura-front-l,
+.sakura-front-m,
+.sakura-front-s {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.sakura-front-l {
+  background: url("../images/main_sakura_front_l.png") no-repeat center;
+  background-size: cover;
+  z-index: 3;
+}
+
+.sakura-front-m {
+  background: url("../images/main_sakura_front_m.png") no-repeat center;
+  background-size: cover;
+  z-index: 2;
+}
+
+.sakura-front-s {
+  background: url("../images/main_sakura_front_s.png") no-repeat center;
+  background-size: cover;
+  z-index: 1;
+}
+
+.sakura-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.sakura-back-l,
+.sakura-back-m,
+.sakura-back-s {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.sakura-back-l {
+  background: url("../images/main_sakura_back_l.png") no-repeat center;
+  z-index: 3;
+}
+
+.sakura-back-m {
+  background: url("../images/main_sakura_back_m.png") no-repeat center;
+  z-index: 2;
+}
+
+.sakura-back-s {
+  background: url("../images/main_sakura_back_s.png") no-repeat center;
+  z-index: 1;
+}
+
+/* --------------------
+ * ドラッグ用に位置調整
+ * ------------------- */
+.first-bg,
+.first-megumi-back,
+.first-megumi-front,
+.sakura-front {
+  width: 104%;
+  height: 104%;
+  left: -2%;
+  top: -2%;
+}
+
+/* ==============================================
+ * MAIN second
+ *
+ * memo:
+ *
+ * ============================================== */
+/* --------------------
+ * ファーストビュー確保レイヤー
+ * ------------------- */
+.l-fix {
+  width: 100%;
+  height: 100%;
+}
+
+.l-second {
+  background: #fff;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* --------------------
+ * ムービー
+ * ------------------- */
+.l-movie {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+
+.l-movie:before {
+  content: "";
+  display: block;
+  background: #fd709f;
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+  width: 100%;
+  height: 101%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+
+.l-movie.is-active:before {
+  display: none;
+}
+
+.movie-btn {
+  position: absolute;
+  top: 22%;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.movie-btn-play,
+.movie-btn-youtube {
+  position: relative;
+  z-index: 4;
+  display: table;
+  margin: auto;
+}
+
+.movie-btn-play {
+  width: 401px;
+  height: 257px;
+  margin: 0 auto 15px;
+}
+
+.movie-btn-youtube a {
+  color: #fff;
+  font-size: 15px;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  display: table;
+  margin: 0 auto;
+}
+
+#movie-player {
+  position: absolute;
+  top: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 2;
+}
+
+/* --------------------
+ * レイアウト共通設定
+ * ------------------- */
+.l-re_air,
+.l-staff,
+.l-news-wrap {
+  position: relative;
+  z-index: 1;
+  width: 1020px;
+  margin: auto;
+}
+
+/* --------------------
+ * 1期 再放送の紹介
+ * ------------------- */
+.l-re_air {
+  padding: 100px 0 0;
+}
+
+.re_air-title {
+  display: table;
+  margin: 0 auto 20px;
+}
+
+.re_air-desc {
+  display: table;
+  margin: 0 auto;
+}
+
+/* --------------------
+ * スタッフクレジット
+ * ------------------- */
+.l-staff {
+  font-size: 0;
+  text-align: center;
+  padding: 100px 0 0;
+  overflow: hidden;
+}
+
+.l-staff p {
+  vertical-align: top;
+}
+
+.staff-01 {
+  display: inline-block;
+  margin: 0 38px 0;
+}
+
+.staff-02 {
+  display: inline-block;
+  margin: 0;
+}
+
+.staff-03 {
+  display: table;
+  margin: 40px auto 0;
+}
+
+.staff-04 {
+  display: table;
+  margin: 80px auto 0;
+}
+
+/* --------------------
+ * Official Twitter
+ * ------------------- */
+.l-news-wrap {
+  overflow: hidden;
+  font-size: 0;
+  padding: 100px 0 0;
+}
+
+.l-news-wrap iframe {
+  border: 1px solid #b0c1cd !important;
+  box-sizing: border-box;
+}
+
+.l-news {
+  float: left;
+  width: 500px;
+}
+
+.l-twitter {
+  float: right;
+  width: 500px;
+}
+
+.news-title,
+.twitter-title {
+  text-align: center;
+  line-height: 0;
+  margin: 0 auto;
+  padding: 18px 0 16px;
+  border: 1px solid #b0c1cd;
+  border-bottom: 0px none;
+  border-radius: 8px 8px 0 0;
+}
+
+/* --------------------
+ * SHAREボタン
+ * ------------------- */
+.l-social {
+  display: none;
+  font-size: 0;
+  position: fixed;
+  right: 30px;
+  top: 30px;
+  z-index: 100;
+  width: 180px;
+  overflow: hidden;
+}
+
+.l-social p {
+  float: left;
+  margin-right: 25px;
+}
+
+.l-social li {
+  float: left;
+  margin-right: 30px;
+}
+
+.l-social li:last-child {
+  margin-right: 0;
+}
+
+.l-social-sp {
+  display: none;
+}
+
+/* --------------------
+ * 外部リンクなど
+ * ------------------- */
+.news-btn-more,
+.twitter-btn-more,
+.link-btn-1st_site,
+.link-btn-radio {
+  width: 100%;
+  border: 1px solid;
+  /*border-radius: 0 0 10px 10px;*/
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.news-btn-more a,
+.twitter-btn-more a,
+.link-btn-1st_site a,
+.link-btn-radio a {
+  color: inherit;
+  font-size: 18px;
+  line-height: 1;
+  letter-spacing: 1px;
+  -webkit-font-smoothing: antialiased;
+  text-align: center;
+  display: block;
+  width: 100%;
+  padding: 26px 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.news-btn-more a:hover,
+.twitter-btn-more a:hover,
+.link-btn-1st_site a:hover,
+.link-btn-radio a:hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+
+.news-btn-more,
+.twitter-btn-more {
+  border-color: #b0c1cd;
+  /*border-top: 0px none;*/
+}
+
+.link-btn-1st_site,
+.link-btn-radio {
+  border-radius: 10px;
+  margin: 20px 0 0;
+}
+
+.link-btn-radio {
+  color: #ffa200;
+  border-color: #ffa200;
+}
+
+.link-btn-1st_site {
+  color: #ff4eaa;
+  border-color: #ff4eaa;
+}
+
+/* ==============================================
+ * FOOTER
+ *
+ * memo:
+ *
+ * ============================================== */
+.l-footer {
+  position: relative;
+  z-index: 2;
+  padding: 100px 0 110px;
+}
+
+.footer-copy,
+.footer-copy-text {
+  font-size: 12px;
+  -webkit-font-smoothing: antialiased;
+  text-align: center;
+  line-height: 20px;
+}
+
+.footer-menu {
+  font-size: 0;
+  -webkit-font-smoothing: antialiased;
+  text-align: center;
+  padding: 50px 0 0;
+}
+
+.footer-menu li {
+  font-size: 12px;
+  display: inline-block;
+  margin: 0 50px 0 0;
+}
+
+.footer-menu li:last-child {
+  margin-right: 0;
+}
+
+/* ==============================================
+ * NEWS IFRAME
+ *
+ * memo:
+ *
+ * ============================================== */
+.l-news-frame {
+  color: #454d54;
+  -webkit-font-smoothing: antialiased;
+  width: 480px;
+  padding: 20px 0 20px 20px;
+  box-sizing: border-box;
+}
+
+.l-news-frame .section {
+  width: calc(100% - 20px);
+  margin-bottom: 30px;
+}
+
+.l-news-frame .date {
+  font-size: 13px;
+  font-style: italic;
+  letter-spacing: 1.5px;
+}
+
+.l-news-frame h3 {
+  font-size: 17px;
+  font-weight: normal;
+  line-height: 24px;
+  margin: 6px 0;
+}
+
+.l-news-frame img {
+  max-width: 100%;
+  height: auto;
+}
+
+.l-news-frame .news-txt {
+  width: 100%;
+  height: 200px;
+}
+
+/* ==============================================
+ * 英梨々 テキスト */
+.intro-box-pos-eriri {
+  position: absolute;
+  top: 100px;
+  width: 100%;
+  height: 100%;
+}
+
+#intro-box-eriri .intro-box-name {
+  background: none !important;
+}
+
+#intro-box-eriri .intro-box-name span {
+  background: url("../images/intro_eriri_name.png") no-repeat 0 0;
+  position: absolute;
+  z-index: 0;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  width: 178px;
+  height: 477px;
+}
+
+#intro-box-eriri .intro-box-text {
+  background: none !important;
+}
+
+#intro-box-eriri .intro-box-text span {
+  background: url("../images/intro_eriri_text.png") no-repeat 0 0;
+  position: absolute;
+  z-index: 0;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  width: 35px;
+  height: 35px;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+#intro-box-eriri .intro-box-text .t1,
+#intro-box-eriri .intro-box-text .t2,
+#intro-box-eriri .intro-box-text .t3,
+#intro-box-eriri .intro-box-text .t4 {
+  left: 148px;
+}
+
+#intro-box-eriri .intro-box-text .t1 {
+  background-position: -149px -1px;
+  top: 0;
+}
+
+#intro-box-eriri .intro-box-text .t2 {
+  background-position: -149px -46px;
+  top: 45px;
+}
+
+#intro-box-eriri .intro-box-text .t3 {
+  background-position: -149px -88px;
+  top: 87px;
+}
+
+#intro-box-eriri .intro-box-text .t4 {
+  background-position: -149px -123px;
+  top: 122px;
+}
+
+#intro-box-eriri .intro-box-text .t5,
+#intro-box-eriri .intro-box-text .t6,
+#intro-box-eriri .intro-box-text .t7,
+#intro-box-eriri .intro-box-text .t8,
+#intro-box-eriri .intro-box-text .t9,
+#intro-box-eriri .intro-box-text .t10,
+#intro-box-eriri .intro-box-text .t11,
+#intro-box-eriri .intro-box-text .t12,
+#intro-box-eriri .intro-box-text .t13,
+#intro-box-eriri .intro-box-text .t14,
+#intro-box-eriri .intro-box-text .t15 {
+  left: 73px;
+}
+
+#intro-box-eriri .intro-box-text .t5 {
+  background-position: -74px -1px;
+  top: 0;
+}
+
+#intro-box-eriri .intro-box-text .t6 {
+  background-position: -74px -45px;
+  top: 44px;
+}
+
+#intro-box-eriri .intro-box-text .t7 {
+  background-position: -74px -88px;
+  top: 87px;
+}
+
+#intro-box-eriri .intro-box-text .t8 {
+  background-position: -74px -128px;
+  top: 127px;
+}
+
+#intro-box-eriri .intro-box-text .t9 {
+  background-position: -74px -178px;
+  top: 177px;
+}
+
+#intro-box-eriri .intro-box-text .t10 {
+  background-position: -74px -223px;
+  top: 222px;
+}
+
+#intro-box-eriri .intro-box-text .t11 {
+  background-position: -74px -267px;
+  top: 266px;
+}
+
+#intro-box-eriri .intro-box-text .t12 {
+  background-position: -74px -313px;
+  top: 312px;
+}
+
+#intro-box-eriri .intro-box-text .t13 {
+  background-position: -74px -358px;
+  top: 357px;
+}
+
+#intro-box-eriri .intro-box-text .t14 {
+  background-position: -74px -401px;
+  top: 400px;
+}
+
+#intro-box-eriri .intro-box-text .t15 {
+  background-position: -74px -448px;
+  top: 447px;
+}
+
+#intro-box-eriri .intro-box-text .t16,
+#intro-box-eriri .intro-box-text .t17,
+#intro-box-eriri .intro-box-text .t18,
+#intro-box-eriri .intro-box-text .t19,
+#intro-box-eriri .intro-box-text .t20 {
+  left: -2px;
+}
+
+#intro-box-eriri .intro-box-text .t16 {
+  background-position: 1px -1px;
+  top: 0px;
+}
+
+#intro-box-eriri .intro-box-text .t17 {
+  background-position: 1px -48px;
+  top: 47px;
+}
+
+#intro-box-eriri .intro-box-text .t18 {
+  background-position: 1px -88px;
+  top: 87px;
+}
+
+#intro-box-eriri .intro-box-text .t19 {
+  background-position: 1px -133px;
+  top: 132px;
+}
+
+#intro-box-eriri .intro-box-text .t20 {
+  background-position: 1px -179px;
+  top: 178px;
+}
+
+/* ==============================================
+ * 詩羽 テキスト */
+.intro-box-pos-utaha {
+  position: absolute;
+  left: 300px;
+  top: 200px;
+  width: 100%;
+  height: 100%;
+}
+
+#intro-box-utaha .intro-box-name {
+  background: none !important;
+}
+
+#intro-box-utaha .intro-box-name span {
+  background: url("../images/intro_utaha_name.png") no-repeat 0 0;
+  position: absolute;
+  z-index: 0;
+  width: 184px;
+  height: 10px;
+}
+
+#intro-box-utaha .intro-box-text {
+  background: none !important;
+}
+
+#intro-box-utaha .intro-box-text span {
+  background: url("../images/intro_utaha_text.png") no-repeat 0 0;
+  position: absolute;
+  z-index: 0;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  width: 35px;
+  height: 38px;
+}
+
+#intro-box-utaha .intro-box-text .t1,
+#intro-box-utaha .intro-box-text .t2,
+#intro-box-utaha .intro-box-text .t3,
+#intro-box-utaha .intro-box-text .t4,
+#intro-box-utaha .intro-box-text .t5,
+#intro-box-utaha .intro-box-text .t6,
+#intro-box-utaha .intro-box-text .t7,
+#intro-box-utaha .intro-box-text .t8,
+#intro-box-utaha .intro-box-text .t9,
+#intro-box-utaha .intro-box-text .t10,
+#intro-box-utaha .intro-box-text .t11 {
+  top: -2px;
+}
+
+#intro-box-utaha .intro-box-text .t1 {
+  background-position: -1px 1px;
+  left: 0;
+}
+
+#intro-box-utaha .intro-box-text .t2 {
+  background-position: -47px 1px;
+  left: 46px;
+}
+
+#intro-box-utaha .intro-box-text .t3 {
+  background-position: -90px 1px;
+  left: 89px;
+}
+
+#intro-box-utaha .intro-box-text .t4 {
+  background-position: -133px 1px;
+  left: 132px;
+}
+
+#intro-box-utaha .intro-box-text .t5 {
+  background-position: -178px 1px;
+  left: 177px;
+}
+
+#intro-box-utaha .intro-box-text .t6 {
+  background-position: -223px 1px;
+  left: 222px;
+}
+
+#intro-box-utaha .intro-box-text .t7 {
+  background-position: -268px 1px;
+  left: 267px;
+}
+
+#intro-box-utaha .intro-box-text .t8 {
+  background-position: -314px 1px;
+  left: 313px;
+}
+
+#intro-box-utaha .intro-box-text .t9 {
+  background-position: -358px 1px;
+  left: 357px;
+}
+
+#intro-box-utaha .intro-box-text .t10 {
+  background-position: -403px 1px;
+  left: 402px;
+}
+
+#intro-box-utaha .intro-box-text .t11 {
+  background-position: -438px 1px;
+  left: 437px;
+}
+
+#intro-box-utaha .intro-box-text .t12,
+#intro-box-utaha .intro-box-text .t13,
+#intro-box-utaha .intro-box-text .t14,
+#intro-box-utaha .intro-box-text .t15,
+#intro-box-utaha .intro-box-text .t16,
+#intro-box-utaha .intro-box-text .t17,
+#intro-box-utaha .intro-box-text .t18 {
+  top: 58px;
+}
+
+#intro-box-utaha .intro-box-text .t12 {
+  background-position: -1px -59px;
+  left: 0;
+}
+
+#intro-box-utaha .intro-box-text .t13 {
+  background-position: -45px -59px;
+  left: 44px;
+}
+
+#intro-box-utaha .intro-box-text .t14 {
+  background-position: -90px -59px;
+  left: 89px;
+}
+
+#intro-box-utaha .intro-box-text .t15 {
+  background-position: -133px -59px;
+  left: 132px;
+}
+
+#intro-box-utaha .intro-box-text .t16 {
+  background-position: -178px -59px;
+  left: 177px;
+}
+
+#intro-box-utaha .intro-box-text .t17 {
+  background-position: -223px -59px;
+  left: 222px;
+}
+
+#intro-box-utaha .intro-box-text .t18 {
+  background-position: -268px -59px;
+  left: 267px;
+}
+
+#intro-box-utaha .intro-box-text .t19,
+#intro-box-utaha .intro-box-text .t20,
+#intro-box-utaha .intro-box-text .t21,
+#intro-box-utaha .intro-box-text .t22,
+#intro-box-utaha .intro-box-text .t23,
+#intro-box-utaha .intro-box-text .t24,
+#intro-box-utaha .intro-box-text .t25 {
+  top: 118px;
+}
+
+#intro-box-utaha .intro-box-text .t19 {
+  background-position: -1px -119px;
+  left: 0;
+}
+
+#intro-box-utaha .intro-box-text .t20 {
+  background-position: -45px -119px;
+  left: 44px;
+}
+
+#intro-box-utaha .intro-box-text .t21 {
+  background-position: -90px -119px;
+  left: 89px;
+}
+
+#intro-box-utaha .intro-box-text .t22 {
+  background-position: -135px -119px;
+  left: 134px;
+}
+
+#intro-box-utaha .intro-box-text .t23 {
+  background-position: -178px -119px;
+  left: 177px;
+}
+
+#intro-box-utaha .intro-box-text .t24 {
+  background-position: -223px -119px;
+  left: 222px;
+}
+
+#intro-box-utaha .intro-box-text .t25 {
+  background-position: -268px -119px;
+  left: 267px;
+}
+
+/* ==============================================
+ * 出海 テキスト */
+.intro-box-pos-izumi {
+  position: absolute;
+  left: 500px;
+  top: -100px;
+  width: 100%;
+  height: 100%;
+}
+
+#intro-box-izumi .intro-box-name {
+  background: none !important;
+}
+
+#intro-box-izumi .intro-box-name span {
+  background: url("../images/intro_izumi_name.png") no-repeat 0 0;
+  position: absolute;
+  z-index: 0;
+  width: 184px;
+  height: 10px;
+}
+
+#intro-box-izumi .intro-box-text {
+  background: none !important;
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+#intro-box-izumi .intro-box-text span {
+  background: url("../images/intro_izumi_text.png") no-repeat 0 0;
+  position: absolute;
+  z-index: 0;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  width: 35px;
+  height: 38px;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+#intro-box-izumi .intro-box-text .t1,
+#intro-box-izumi .intro-box-text .t2,
+#intro-box-izumi .intro-box-text .t3,
+#intro-box-izumi .intro-box-text .t4,
+#intro-box-izumi .intro-box-text .t5,
+#intro-box-izumi .intro-box-text .t6,
+#intro-box-izumi .intro-box-text .t7,
+#intro-box-izumi .intro-box-text .t8,
+#intro-box-izumi .intro-box-text .t9,
+#intro-box-izumi .intro-box-text .t10,
+#intro-box-izumi .intro-box-text .t11,
+#intro-box-izumi .intro-box-text .t12,
+#intro-box-izumi .intro-box-text .t13 {
+  top: -2px;
+}
+
+#intro-box-izumi .intro-box-text .t1 {
+  background-position: 3px 1px;
+  left: -4px;
+}
+
+#intro-box-izumi .intro-box-text .t2 {
+  background-position: -43px 1px;
+  left: 42px;
+}
+
+#intro-box-izumi .intro-box-text .t3 {
+  background-position: -88px 1px;
+  left: 87px;
+}
+
+#intro-box-izumi .intro-box-text .t4 {
+  background-position: -126px 1px;
+  left: 125px;
+}
+
+#intro-box-izumi .intro-box-text .t5 {
+  background-position: -174px 1px;
+  left: 173px;
+}
+
+#intro-box-izumi .intro-box-text .t6 {
+  background-position: -221px 1px;
+  left: 220px;
+}
+
+#intro-box-izumi .intro-box-text .t7 {
+  background-position: -264px 1px;
+  left: 263px;
+}
+
+#intro-box-izumi .intro-box-text .t8 {
+  background-position: -310px 1px;
+  left: 309px;
+}
+
+#intro-box-izumi .intro-box-text .t9 {
+  background-position: -354px 1px;
+  left: 353px;
+}
+
+#intro-box-izumi .intro-box-text .t10 {
+  background-position: -400px 1px;
+  left: 399px;
+}
+
+#intro-box-izumi .intro-box-text .t11 {
+  background-position: -443px 1px;
+  left: 442px;
+}
+
+#intro-box-izumi .intro-box-text .t12 {
+  background-position: -488px 1px;
+  left: 487px;
+}
+
+#intro-box-izumi .intro-box-text .t13 {
+  background-position: -524px 1px;
+  left: 523px;
+}
+
+#intro-box-izumi .intro-box-text .t14,
+#intro-box-izumi .intro-box-text .t15,
+#intro-box-izumi .intro-box-text .t16,
+#intro-box-izumi .intro-box-text .t17 {
+  top: 58px;
+}
+
+#intro-box-izumi .intro-box-text .t14 {
+  background-position: 3px -59px;
+  left: -4px;
+}
+
+#intro-box-izumi .intro-box-text .t15 {
+  background-position: -42px -59px;
+  left: 41px;
+}
+
+#intro-box-izumi .intro-box-text .t16 {
+  background-position: -86px -59px;
+  left: 85px;
+}
+
+#intro-box-izumi .intro-box-text .t17 {
+  background-position: -131px -59px;
+  left: 130px;
+}
+
+/* ==============================================
+ * 美智留 テキスト */
+.intro-box-pos-michiru {
+  position: absolute;
+  left: 700px;
+  top: -550px;
+  width: 100%;
+  height: 100%;
+}
+
+#intro-box-michiru .intro-box-name {
+  background: none !important;
+}
+
+#intro-box-michiru .intro-box-name span {
+  background: url("../images/intro_michiru_name.png") no-repeat 0 0;
+  position: absolute;
+  z-index: 0;
+  opacity: 1;
+  filter: alpha(opacity=100);
+  width: 178px;
+  height: 477px;
+}
+
+#intro-box-michiru .intro-box-text {
+  background: none !important;
+}
+
+#intro-box-michiru .intro-box-text span {
+  background: url("../images/intro_michiru_text.png") no-repeat 0 0;
+  position: absolute;
+  z-index: 0;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  width: 38px;
+  height: 40px;
+}
+
+#intro-box-michiru .intro-box-text .t1,
+#intro-box-michiru .intro-box-text .t2,
+#intro-box-michiru .intro-box-text .t3,
+#intro-box-michiru .intro-box-text .t4,
+#intro-box-michiru .intro-box-text .t5,
+#intro-box-michiru .intro-box-text .t6,
+#intro-box-michiru .intro-box-text .t7 {
+  left: 123px;
+}
+
+#intro-box-michiru .intro-box-text .t1 {
+  background-position: -124px -1px;
+  top: 0;
+}
+
+#intro-box-michiru .intro-box-text .t2 {
+  background-position: -124px -46px;
+  top: 45px;
+}
+
+#intro-box-michiru .intro-box-text .t3 {
+  background-position: -124px -88px;
+  top: 87px;
+}
+
+#intro-box-michiru .intro-box-text .t4 {
+  background-position: -124px -133px;
+  top: 132px;
+}
+
+#intro-box-michiru .intro-box-text .t5 {
+  background-position: -124px -179px;
+  top: 178px;
+}
+
+#intro-box-michiru .intro-box-text .t6 {
+  background-position: -124px -223px;
+  top: 222px;
+}
+
+#intro-box-michiru .intro-box-text .t7 {
+  background-position: -124px -261px;
+  top: 260px;
+}
+
+#intro-box-michiru .intro-box-text .t8,
+#intro-box-michiru .intro-box-text .t9,
+#intro-box-michiru .intro-box-text .t10,
+#intro-box-michiru .intro-box-text .t11,
+#intro-box-michiru .intro-box-text .t12,
+#intro-box-michiru .intro-box-text .t13,
+#intro-box-michiru .intro-box-text .t14,
+#intro-box-michiru .intro-box-text .t15 {
+  left: 63px;
+}
+
+#intro-box-michiru .intro-box-text .t8 {
+  background-position: -64px -1px;
+  top: 0px;
+}
+
+#intro-box-michiru .intro-box-text .t9 {
+  background-position: -64px -43px;
+  top: 42px;
+}
+
+#intro-box-michiru .intro-box-text .t10 {
+  background-position: -64px -88px;
+  top: 87px;
+}
+
+#intro-box-michiru .intro-box-text .t11 {
+  background-position: -64px -133px;
+  top: 132px;
+}
+
+#intro-box-michiru .intro-box-text .t12 {
+  background-position: -64px -176px;
+  top: 175px;
+}
+
+#intro-box-michiru .intro-box-text .t13 {
+  background-position: -64px -221px;
+  top: 220px;
+}
+
+#intro-box-michiru .intro-box-text .t14 {
+  background-position: -64px -266px;
+  top: 265px;
+}
+
+#intro-box-michiru .intro-box-text .t15 {
+  background-position: -64px -311px;
+  top: 310px;
+}
+
+#intro-box-michiru .intro-box-text .t16,
+#intro-box-michiru .intro-box-text .t17,
+#intro-box-michiru .intro-box-text .t18,
+#intro-box-michiru .intro-box-text .t19,
+#intro-box-michiru .intro-box-text .t20,
+#intro-box-michiru .intro-box-text .t21,
+#intro-box-michiru .intro-box-text .t22,
+#intro-box-michiru .intro-box-text .t23,
+#intro-box-michiru .intro-box-text .t24 {
+  left: -1px;
+}
+
+#intro-box-michiru .intro-box-text .t16 {
+  background-position: 0 1px;
+  top: -2px;
+}
+
+#intro-box-michiru .intro-box-text .t17 {
+  background-position: 0 -44px;
+  top: 43px;
+}
+
+#intro-box-michiru .intro-box-text .t18 {
+  background-position: 0 -88px;
+  top: 87px;
+}
+
+#intro-box-michiru .intro-box-text .t19 {
+  background-position: 0 -133px;
+  top: 132px;
+}
+
+#intro-box-michiru .intro-box-text .t20 {
+  background-position: 0 -179px;
+  top: 178px;
+}
+
+#intro-box-michiru .intro-box-text .t21 {
+  background-position: 0 -219px;
+  top: 218px;
+}
+
+#intro-box-michiru .intro-box-text .t22 {
+  background-position: 0 -265px;
+  top: 264px;
+}
+
+#intro-box-michiru .intro-box-text .t23 {
+  background-position: 0 -310px;
+  top: 309px;
+}
+
+#intro-box-michiru .intro-box-text .t24 {
+  background-position: 0 -349px;
+  top: 348px;
+}
+
+/* ==============================================
+ * 恵 テキスト */
+.first-text-wrap {
+  pointer-events: none;
+  width: 1200px;
+  height: 800px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 100;
+}
+
+.first-text {
+  background: none !important;
+  background: url("../images/intro_megumi_text.png") no-repeat 0 0;
+  width: 267px;
+  height: 297px;
+  position: absolute;
+  left: 721px;
+  top: 215px;
+}
+
+.first-text span {
+  background: url("../images/intro_megumi_text.png") no-repeat 0 0;
+  position: absolute;
+  z-index: 0;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  width: 35px;
+  height: 35px;
+}
+
+.first-text .t1,
+.first-text .t2,
+.first-text .t3,
+.first-text .t4,
+.first-text .t5,
+.first-text .t6,
+.first-text .t7,
+.first-text .t8 {
+  left: 237px;
+}
+
+.first-text .t1 {
+  background-position: -238px -1px;
+  top: 0;
+}
+
+.first-text .t2 {
+  background-position: -238px -37px;
+  top: 36px;
+}
+
+.first-text .t3 {
+  background-position: -238px -68px;
+  top: 67px;
+}
+
+.first-text .t4 {
+  background-position: -238px -109px;
+  top: 108px;
+}
+
+.first-text .t5 {
+  background-position: -238px -143px;
+  top: 142px;
+}
+
+.first-text .t6 {
+  background-position: -238px -177px;
+  top: 176px;
+}
+
+.first-text .t7 {
+  background-position: -238px -217px;
+  top: 216px;
+}
+
+.first-text .t8 {
+  background-position: -238px -251px;
+  top: 250px;
+}
+
+.first-text .t9,
+.first-text .t10,
+.first-text .t11 {
+  left: 175px;
+}
+
+.first-text .t9 {
+  background-position: -176px 0px;
+  top: -1px;
+}
+
+.first-text .t10 {
+  background-position: -176px -35px;
+  top: 34px;
+}
+
+.first-text .t11 {
+  background-position: -176px -69px;
+  top: 68px;
+}
+
+.first-text .t12,
+.first-text .t13,
+.first-text .t14,
+.first-text .t15,
+.first-text .t16,
+.first-text .t17,
+.first-text .t18 {
+  left: 116px;
+}
+
+.first-text .t12 {
+  background-position: -117px -1px;
+  top: 0px;
+}
+
+.first-text .t13 {
+  background-position: -117px -35px;
+  top: 34px;
+}
+
+.first-text .t14 {
+  background-position: -117px -70px;
+  top: 69px;
+}
+
+.first-text .t15 {
+  background-position: -117px -107px;
+  top: 106px;
+}
+
+.first-text .t16 {
+  background-position: -117px -143px;
+  top: 142px;
+}
+
+.first-text .t17 {
+  background-position: -117px -177px;
+  top: 176px;
+}
+
+.first-text .t18 {
+  background-position: -117px -211px;
+  top: 210px;
+}
+
+.first-text .t19,
+.first-text .t20,
+.first-text .t21,
+.first-text .t22,
+.first-text .t23,
+.first-text .t24,
+.first-text .t25,
+.first-text .t26,
+.first-text .t27 {
+  left: 55px;
+}
+
+.first-text .t19 {
+  background-position: -56px -1px;
+  top: 0px;
+}
+
+.first-text .t20 {
+  background-position: -56px -35px;
+  top: 34px;
+}
+
+.first-text .t21 {
+  background-position: -56px -69px;
+  top: 68px;
+}
+
+.first-text .t22 {
+  background-position: -56px -106px;
+  top: 106px;
+}
+
+.first-text .t23 {
+  background-position: -56px -141px;
+  top: 140px;
+}
+
+.first-text .t24 {
+  background-position: -56px -181px;
+  top: 180px;
+}
+
+.first-text .t25 {
+  background-position: -56px -211px;
+  top: 210px;
+}
+
+.first-text .t26 {
+  background-position: -56px -251px;
+  top: 250px;
+}
+
+.first-text .t27 {
+  background-position: -56px -287px;
+  top: 286px;
+}
+
+.first-text .t28,
+.first-text .t29,
+.first-text .t30,
+.first-text .t31 {
+  left: -5px;
+}
+
+.first-text .t28 {
+  background-position: 4px -1px;
+  top: 0px;
+}
+
+.first-text .t29 {
+  background-position: 4px -36px;
+  top: 35px;
+}
+
+.first-text .t30 {
+  background-position: 4px -71px;
+  top: 70px;
+}
+
+.first-text .t31 {
+  background-position: 4px -106px;
+  top: 105px;
+}
+
+/* ==============================================
+ * COMMON SETTINGS
+ *
+ * memo:
+ *
+ * ============================================== */
+@media screen and (max-width: 800px) {
+
+  .l-social a,
+  .intro-btn-skip a,
+  .footer-menu a,
+  .l-news-wrap a,
+  .movie-btn a,
+  .first-btn-1st a {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transition: none;
+    transition: none;
+  }
+
+  .l-social a:hover,
+  .intro-btn-skip a:hover,
+  .footer-menu a:hover,
+  .l-news-wrap a:hover,
+  .movie-btn a:hover,
+  .first-btn-1st a:hover {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transition: none;
+    transition: none;
+  }
+
+  .pcv {
+    display: none;
+  }
+
+  .spv {
+    display: block;
+  }
+
+  img.pcv {
+    display: none;
+  }
+
+  img.spv {
+    display: inline;
+  }
+
+  .l-stage {
+    min-width: 0;
+    min-height: 0;
+  }
+
+  /* ==============================================
+   * INTRO
+   *
+   * memo:
+   *
+   * ============================================== */
+  .l-intro {
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+    min-height: 0;
+    position: absolute;
+    z-index: 100;
+    overflow: hidden;
+  }
+
+  .intro-btn-skip {
+    top: 18px;
+    top: 5.625vw;
+    right: 20px;
+    right: 6.25vw;
+  }
+
+  .intro-btn-skip a {
+    color: #454d54;
+    font-size: 13px;
+    font-size: 4.0625vw;
+    -webkit-font-smoothing: antialiased;
+    font-style: italic;
+    background: url("../images/intro_ico_skip_sp.png") no-repeat right 3px;
+    background-position: right 0.78125vw;
+    background-size: 8px auto;
+    background-size: 2.5vw auto;
+    padding: 0 9px 0 0;
+    padding: 0 4.6875vw 0 0;
+  }
+
+  .Android .intro-btn-skip a {
+    padding: 0 18px 0 0;
+    padding: 0 4.6875vw 0 0;
+  }
+
+  .l-intro-inner {
+    position: absolute;
+    width: 10000px;
+    height: 10000px;
+  }
+
+  .intro-box-vsl-sp,
+  .intro-box-text-sp {
+    display: block;
+    line-height: 0;
+  }
+
+  .intro-box-text-group,
+  .intro-box-name,
+  .intro-box-movie {
+    display: none;
+  }
+
+  .intro-box,
+  .intro-box-text,
+  .intro-box-name,
+  .intro-box-movie,
+  .intro-box-movie .movie-mask,
+  #intro-box-megumi {
+    position: absolute;
+    z-index: 0;
+  }
+
+  .intro-box {
+    display: block;
+    width: 100%;
+    height: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+
+  .intro-box .intro-box-vsl-sp img,
+  .intro-box .intro-box-text-sp img {
+    width: 100%;
+    height: auto;
+  }
+
+  .intro-box-movie,
+  .intro-box-text,
+  .intro-box-name {
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+
+  .intro-box-pos {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  #intro-box-eriri .intro-box-text-sp {
+    padding: 26px 0 0;
+    padding: 8.28125vw 0 0;
+  }
+
+  #intro-box-eriri .intro-box-vsl-sp {
+    padding: 50px 0 0;
+    padding: 16.09375vw 0 0;
+  }
+
+  #intro-box-utaha .intro-box-text-sp {
+    padding: 64px 0 0;
+    padding: 20vw 0 0;
+  }
+
+  #intro-box-utaha .intro-box-vsl-sp {
+    padding: 39px 0 0;
+    padding: 12.1875vw 0 0;
+  }
+
+  #intro-box-izumi .intro-box-text-sp {
+    padding: 43px 0 0;
+    padding: 13.4375vw 0 0;
+  }
+
+  #intro-box-izumi .intro-box-vsl-sp {
+    padding: 59px 0 0;
+    padding: 18.28125vw 0 0;
+  }
+
+  #intro-box-michiru .intro-box-text-sp {
+    padding: 68px 0 0;
+    padding: 21.09375vw 0 0;
+  }
+
+  #intro-box-michiru .intro-box-vsl-sp {
+    padding: 35px 0 0;
+    padding: 10.9375vw 0 0;
+  }
+
+  /* --------------------
+   * テキスト
+   * ------------------- */
+  .intro-box-text {
+    z-index: 1;
+  }
+
+  /* --------------------
+   * ネーム
+   * ------------------- */
+  .intro-box-name {
+    z-index: 1;
+  }
+
+  /* --------------------
+   * ムービー
+   * ------------------- */
+  .intro-box-movie {
+    width: 759px;
+    height: 427px;
+    z-index: 0;
+  }
+
+  .intro-box-movie:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100px;
+    background: #fff;
+    position: absolute;
+    top: -100px;
+    z-index: 100;
+  }
+
+  .intro-box-movie:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 50px;
+    background: #fff;
+    position: absolute;
+    bottom: -50px;
+    z-index: 100;
+  }
+
+  .intro-box-movie video {
+    margin-top: -40px;
+  }
+
+  .intro-box-movie .movie-mask {
+    background: url("../images/intro_mask.png") no-repeat 0 0;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+  }
+
+  .intro-box-movie .movie-mask:before {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100px;
+    background: #fff;
+    position: absolute;
+    left: -100px;
+    z-index: 100;
+  }
+
+  .intro-box-movie .movie-mask:after {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 50px;
+    background: #fff;
+    position: absolute;
+    right: -50px;
+    z-index: 100;
+  }
+
+  /* ==============================================
+   * MAIN first
+   *
+   * memo:
+   *
+   * ============================================== */
+  .l-first {
+    position: relative;
+    height: 523px;
+    height: 163.4375vw;
+  }
+
+  .first-logo {
+    position: absolute;
+    left: auto;
+    right: 4px;
+    right: 1.25vw;
+    bottom: auto;
+    top: 2px;
+    top: 0.46875vw;
+    width: 128px;
+    width: 52.5vw;
+    max-width: 336px;
+    height: 86px;
+    height: 26.875vw;
+  }
+
+  .first-logo img {
+    width: 100%;
+    height: auto;
+  }
+
+  .first-date {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 101;
+    margin: auto;
+    line-height: 0;
+  }
+
+  .first-date img {
+    width: 100%;
+    height: auto;
+  }
+
+  .first-btn-1st {
+    width: 71px;
+    width: 22.1875vw;
+    height: 28px;
+    height: 8.75vw;
+    position: absolute;
+    left: 15px;
+    left: 4.6875vw;
+    top: 15px;
+    top: 4.6875vw;
+  }
+
+  .first-btn-1st img {
+    width: 100%;
+    height: auto;
+  }
+
+  .first-bg,
+  .first-megumi-back,
+  .first-megumi-front,
+  .first-flare01,
+  .first-flare02 {
+    min-width: 0;
+    min-height: 0;
+  }
+
+  .first-bg {
+    background: url("../images/main_bg_sp.jpg") no-repeat center;
+    background-size: 100% auto;
+  }
+
+  .first-megumi-back {
+    background: url("../images/main_megumi_back_sp.png") no-repeat center;
+    background-size: 100% auto;
+  }
+
+  .first-megumi-front {
+    background: url("../images/main_megumi_front_sp.png") no-repeat center;
+    background-size: 100% auto;
+  }
+
+  .first-flare01 {
+    background: url("../images/main_flare01_sp.png") repeat-x center;
+    background-size: 100% auto;
+    z-index: 10;
+  }
+
+  .first-flare02 {
+    background: url("../images/main_flare02_sp.png") repeat-x center;
+    background-size: 100% auto;
+    z-index: 10;
+  }
+
+  /* --------------------
+   * テキスト
+   * ------------------- */
+  .first-text-wrap {
+    width: 100%;
+    height: auto;
+  }
+
+  .first-text-main {
+    pointer-events: none;
+    background: none;
+    width: 195px;
+    width: 61.09375vw;
+    max-width: 391px;
+    height: auto;
+    position: absolute;
+    left: auto;
+    right: 0px;
+    top: 128px;
+    top: 40.15625vw;
+  }
+
+  .first-text-main img {
+    width: 100%;
+    height: auto;
+  }
+
+  .first-text {
+    background: url("../images/intro_megumi_text_sp.png") no-repeat 0 0 !important;
+    background-size: 100% auto !important;
+    pointer-events: none;
+    width: 195px;
+    width: 61.09375vw;
+    max-width: 391px;
+    height: 233px;
+    height: 72.8125vw;
+    position: absolute;
+    left: auto;
+    right: 0px;
+    top: 128px;
+    top: 40.15625vw;
+  }
+
+  .first-text span {
+    display: none;
+  }
+
+  /* --------------------
+   * さくら表示レイヤー
+   * ------------------- */
+  .sakura-front {
+    position: absolute;
+    background: url("../images/main_sakura_front_sp.png") no-repeat center;
+    background-size: 100% auto;
+    display: none;
+  }
+
+  .sakura-front .sakura-front-l,
+  .sakura-front .sakura-front-m,
+  .sakura-front .sakura-front-s {
+    display: none;
+  }
+
+  .sakura-back {
+    position: absolute;
+    background: url("../images/main_sakura_back_sp.png") no-repeat center 0;
+    background-size: 100% auto;
+    width: 100%;
+    height: 100%;
+  }
+
+  .sakura-back .sakura-back-l,
+  .sakura-back .sakura-back-m,
+  .sakura-back .sakura-back-s {
+    display: none;
+  }
+
+  /* ==============================================
+   * MAIN second
+   *
+   * memo:
+   *
+   * ============================================== */
+  /* --------------------
+   * ファーストビュー確保レイヤー
+   * ------------------- */
+  .l-fix {
+    display: none;
+  }
+
+  /* --------------------
+   * ムービー
+   * ------------------- */
+  .l-movie {
+    background: url("../images/main_movie_ss_sp.png") no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 180px;
+    height: 56.25vw;
+    margin-top: -1px;
+    overflow: hidden;
+  }
+
+  .movie-btn {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+
+  .movie-btn-play,
+  .movie-btn-youtube {
+    position: absolute;
+    top: 27px;
+    top: 8.4375vw;
+  }
+
+  .movie-btn-play {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+
+  .movie-btn-play a {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  .movie-btn-play img {
+    width: 200px;
+    width: 62.65625vw;
+    max-width: 401px;
+    height: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+  .movie-btn-youtube {
+    top: 192px;
+    top: 60.15625vw;
+  }
+
+  .movie-btn-youtube a {
+    font-size: 7px;
+    font-size: 2.34375vw;
+  }
+
+  #movie-player {
+    display: none;
+  }
+
+  /* --------------------
+   * レイアウト共通設定
+   * ------------------- */
+  .l-re_air,
+  .l-staff,
+  .l-news-wrap {
+    width: 100%;
+  }
+
+  /* --------------------
+   * 1期 再放送の紹介
+   * ------------------- */
+  .l-re_air {
+    padding: 35px 0 0;
+    padding: 10.9375vw 0 0;
+  }
+
+  .l-re_air img {
+    width: 100%;
+    height: auto;
+  }
+
+  .re_air-title {
+    width: 66px;
+    width: 23.75vw;
+    max-width: 152px;
+    margin: 0 auto 10px;
+    margin: 0 auto 3.125vw;
+  }
+
+  .re_air-desc {
+    margin: 0 auto;
+    width: 287px;
+    width: 89.6875vw;
+    max-width: 574px;
+  }
+
+  /* --------------------
+   * スタッフクレジット
+   * ------------------- */
+  .l-staff {
+    font-size: 0;
+    text-align: center;
+    padding: 50px 0 0;
+    padding: 15.625vw 0 0;
+    overflow: hidden;
+  }
+
+  .l-staff img {
+    width: 100%;
+    height: auto;
+  }
+
+  .staff-01 {
+    width: 103px;
+    width: 32.1875vw;
+    max-width: 206px;
+    margin: 0 38px 0 0;
+    margin: 0 5.9375vw 0 0;
+  }
+
+  .staff-02 {
+    width: 129px;
+    width: 40.3125vw;
+    max-width: 258px;
+  }
+
+  .staff-03 {
+    width: 289px;
+    width: 90.3125vw;
+    max-width: 578px;
+    margin: 25px auto 0;
+    margin: 7.8125vw auto 0;
+  }
+
+  .staff-04 {
+    width: 287px;
+    width: 89.6875vw;
+    max-width: 574px;
+    margin: 25px auto 0;
+    margin: 7.8125vw auto 0;
+  }
+
+  /* --------------------
+   * Official Twitter
+   * ------------------- */
+  .l-news-wrap {
+    padding: 50px 0 0;
+    padding: 15.625vw 0 0;
+    box-sizing: border-box;
+  }
+
+  .news-iframe-wrap {
+    background: #fff;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    border: 1px solid #b0c1cd !important;
+    width: 100% !important;
+    height: 715px;
+    box-sizing: border-box;
+  }
+
+  .news-iframe-wrap iframe {
+    width: 100% !important;
+    height: 100%;
+    border: none !important;
+  }
+
+  .l-news,
+  .l-twitter {
+    float: none;
+    width: 250px;
+    width: 78.125vw;
+    margin: 0 auto;
+  }
+
+  .l-news iframe,
+  .l-twitter iframe {
+    margin-top: -1px !important;
+  }
+
+  .news-title,
+  .twitter-title {
+    text-align: center;
+    line-height: 0;
+    margin: 0 auto;
+    padding: 9px 0 8px;
+    padding: 2.8125vw 0 2.5vwpx;
+    border: 1px solid #b0c1cd;
+    border-bottom: 0px none;
+    border-radius: 4px 4px 0 0;
+    border-radius: 1.25vw 1.25vw 0 0;
+  }
+
+  .news-title img {
+    width: 33px;
+    width: 10.3125vw;
+    max-width: 66px;
+    height: auto;
+  }
+
+  .twitter-title,
+  .l-twitter .twitter-timeline {
+    display: none !important;
+  }
+
+  /* --------------------
+   * SHAREボタン
+   * ------------------- */
+  .l-social {
+    display: none !important;
+  }
+
+  .l-social-sp {
+    position: relative;
+    z-index: 1;
+    display: block;
+    font-size: 0;
+    line-height: 1;
+    text-align: center;
+    padding: 50px 0 0;
+    padding: 15.625vw 0 0;
+  }
+
+  .l-social-sp p {
+    font-size: 8px;
+    font-size: 2.34375vw;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    margin-bottom: 6.25vw;
+  }
+
+  .l-social-sp li {
+    display: inline-block;
+    width: 40px;
+    width: 12.5vw;
+    margin-right: 20px;
+    margin-right: 6.25vw;
+  }
+
+  .l-social-sp li:last-child {
+    margin-right: 0;
+  }
+
+  .l-social-sp li a {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  .l-social-sp li img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* --------------------
+   * 外部リンクなど
+   * ------------------- */
+  .news-btn-more,
+  .twitter-btn-more,
+  .link-btn-1st_site,
+  .link-btn-radio {
+    width: 100%;
+    border: 1px solid;
+    border-radius: 0 0 5px 5px;
+    /*border-radius: 0 0 1.5625vw 1.5625vw;*/
+    border-radius: 10px;
+    box-sizing: border-box;
+  }
+
+  .news-btn-more a,
+  .twitter-btn-more a,
+  .link-btn-1st_site a,
+  .link-btn-radio a {
+    color: inherit;
+    font-size: 9px;
+    font-size: 2.8125vw;
+    line-height: 1;
+    letter-spacing: 0;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+    display: block;
+    width: 100%;
+    padding: 13px 0;
+    padding: 4.0625vw 0;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    opacity: 1;
+    filter: alpha(opacity=100);
+  }
+
+  .news-btn-more a:hover,
+  .twitter-btn-more a:hover,
+  .link-btn-1st_site a:hover,
+  .link-btn-radio a:hover {
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+  }
+
+  .news-btn-more,
+  .twitter-btn-more {
+    border-color: #b0c1cd;
+    /*border-top: 0px none;*/
+  }
+
+  .twitter-btn-more {
+    color: #00c6ff;
+    border: 1px solid;
+    border-color: #00c6ff;
+    border-radius: 5px;
+    border-radius: 1.5625vw;
+    margin: 40px auto;
+    margin: 12.5vw auto;
+  }
+
+  .twitter-btn-more a {
+    /*padding: 23px 0;
+    padding: 7.1875vw 0;*/
+  }
+
+  .link-btn-1st_site,
+  .link-btn-radio {
+    border-radius: 5px;
+    border-radius: 1.5625vw;
+    margin: 10px 0 0;
+    margin: 3.125vw 0 0;
+  }
+
+  .link-btn-radio {
+    color: #ffa200;
+    border-color: #ffa200;
+  }
+
+  .link-btn-1st_site {
+    color: #ff4eaa;
+    border-color: #ff4eaa;
+  }
+
+  .l-twitter .link-btn-1st_site {
+    display: block;
+  }
+
+  /* ==============================================
+   * FOOTER
+   *
+   * memo:
+   *
+   * ============================================== */
+  .l-footer {
+    position: relative;
+    z-index: 2;
+    padding: 50px 0 80px;
+    padding: 15.625vw 0 25vw;
+  }
+
+  .footer-copy {
+    font-size: 7px;
+    font-size: 2.03125vw;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+    line-height: 1;
+    margin-bottom: 20px;
+    margin-bottom: 6.25vw;
+  }
+
+  .footer-copy-text {
+    font-size: 7px;
+    font-size: 2.03125vw;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+    line-height: 13px;
+    line-height: 4.0625vw;
+  }
+
+  .footer-menu {
+    padding: 20px 0 0;
+    padding: 6.25vw 0 0;
+  }
+
+  .footer-menu li {
+    font-size: 7px;
+    font-size: 2.03125vw;
+    display: inline-block;
+    margin: 0 20px 0 0;
+    margin: 0 6.25vw 0 0;
+  }
+
+  .footer-menu li:last-child {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-device-width: 800px) {
+
+  /* ==============================================
+   * NEWS IFRAME
+   *
+   * memo:
+   *
+   * ============================================== */
+  .l-news-frame {
+    width: 100%;
+  }
+}
+
+/*! fancyBox v2.1.5 fancyapps.com | fancyapps.com/fancybox/#license */
+.fancybox-wrap,
+.fancybox-skin,
+.fancybox-outer,
+.fancybox-inner,
+.fancybox-image,
+.fancybox-wrap iframe,
+.fancybox-wrap object,
+.fancybox-nav,
+.fancybox-nav span,
+.fancybox-tmp {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: none;
+  vertical-align: top;
+}
+
+.fancybox-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 8020;
+  margin-top: -40px;
+}
+
+.fancybox-skin {
+  position: relative;
+  background: #f9f9f9;
+  color: #444;
+  text-shadow: none;
+  border-radius: 0px;
+}
+
+.fancybox-opened {
+  z-index: 8030;
+}
+
+.fancybox-opened .fancybox-skin {
+  /*-webkit-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5) */
+  /*-moz-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5) */
+  /*box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5) */
+}
+
+.fancybox-outer,
+.fancybox-inner {
+  position: relative;
+}
+
+.fancybox-inner {
+  /*overflow: hidden */
+}
+
+.fancybox-type-iframe .fancybox-inner {
+  /*-webkit-overflow-scrolling: touch */
+}
+
+.fancybox-error {
+  color: #444;
+  font: 14px/20px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 15px;
+  white-space: nowrap;
+}
+
+.fancybox-image,
+.fancybox-iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.fancybox-image {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#fancybox-loading {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -22px;
+  margin-left: -22px;
+  background-position: 0 -108px;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+  cursor: pointer;
+  z-index: 8060;
+}
+
+#fancybox-loading div {
+  width: 44px;
+  height: 44px;
+  background: url("../images/common/fancybox/fancybox_loading.gif") center center no-repeat;
+}
+
+.fancybox-close {
+  background-image: url("../images/common/fancybox/fancybox_close.png");
+  position: absolute;
+  bottom: -90px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 50px;
+  height: 68px;
+  cursor: pointer;
+  z-index: 8040;
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.fancybox-close:hover {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 800px) {
+  .fancybox-close {
+    background-image: url("../images/common/fancybox/fancybox_close.png");
+    background-size: 100% auto;
+    width: 25px;
+    height: 34px;
+    bottom: -45px;
+  }
+
+  .fancybox-wrap {
+    margin-top: 0px;
+  }
+}
+
+.fancybox-nav {
+  position: absolute;
+  top: 0;
+  width: 40%;
+  height: 100%;
+  cursor: pointer;
+  text-decoration: none;
+  background: transparent url("../images/common/fancybox/blank.gif");
+  -webkit-tap-highlight-color: transparent;
+  z-index: 8040;
+}
+
+.fancybox-prev {
+  left: 0;
+}
+
+.fancybox-next {
+  right: 0;
+}
+
+.fancybox-nav span {
+  position: absolute;
+  top: 50%;
+  width: 36px;
+  height: 34px;
+  margin-top: -18px;
+  cursor: pointer;
+  z-index: 8040;
+  visibility: hidden;
+}
+
+.fancybox-prev span {
+  left: 10px;
+  background-position: 0 -36px;
+}
+
+.fancybox-next span {
+  right: 10px;
+  background-position: 0 -72px;
+}
+
+.fancybox-nav:hover span {
+  visibility: visible;
+}
+
+.fancybox-tmp {
+  position: absolute;
+  top: -99999px;
+  left: -99999px;
+  visibility: hidden;
+  max-width: 99999px;
+  max-height: 99999px;
+  /*overflow: visible !important */
+}
+
+/* Overlay helper */
+.fancybox-lock {
+  /*overflow: hidden !important */
+  width: auto;
+}
+
+.fancybox-lock body {
+  /*overflow: hidden !important */
+}
+
+.fancybox-lock-test {
+  /*overflow-y: hidden !important */
+}
+
+.fancybox-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /*overflow: hidden */
+  display: none;
+  z-index: 8010;
+  background: url("../images/common/fancybox/fancybox_overlay.png");
+}
+
+.fancybox-overlay-fixed {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+.fancybox-lock .fancybox-overlay {
+  /*overflow: auto */
+  /*overflow-y: scroll */
+}
+
+/* Title helper */
+.fancybox-title {
+  visibility: hidden;
+  font: normal 13px/20px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  position: relative;
+  text-shadow: none;
+  z-index: 8050;
+}
+
+.fancybox-opened .fancybox-title {
+  visibility: visible;
+}
+
+.fancybox-title-float-wrap {
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  margin-bottom: -35px;
+  z-index: 8050;
+  text-align: center;
+}
+
+.fancybox-title-float-wrap .child {
+  display: inline-block;
+  margin-right: -100%;
+  padding: 2px 20px;
+  background: transparent;
+  background: rgba(0, 0, 0, 0.5);
+  text-shadow: 0 1px 2px #222;
+  color: #FFF;
+  font-weight: bold;
+  line-height: 24px;
+  white-space: nowrap;
+}
+
+.fancybox-title-outside-wrap {
+  position: relative;
+  margin-top: 10px;
+  color: #fff;
+}
+
+.fancybox-title-inside-wrap {
+  padding-top: 10px;
+}
+
+.fancybox-title-over-wrap {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: #fff;
+  padding: 10px;
+  background: #000;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/*Retina graphics! */
+
+.l-news-title {
+  text-align: center;
+  color: #ffffff;
+  background-color: #f8d7e3;
+  margin-bottom: 5px;
+  font-size: 26px;
+  padding: 20px 0;
+}
+
+.move-btn {
+  position: fixed;
+  right: 15px;
+  top: 15px;
+  background-color: transparent;
+  color: #eb2011;
+  cursor: pointer;
+  z-index: 2000;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.move-btn-icon {
+  width: 2em;
+  height: 2em;
+  margin-right: 5px;
+}

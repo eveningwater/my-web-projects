@@ -1,0 +1,92 @@
+:root {
+    --leftFolderBgColor--: #EDEDEE;
+    --tabsBorderColor--: #d4d4d4;
+    --tabsBorderActiveColor--: #2396ef;
+    --leftFolderColor--: rgba(27, 30, 40, 1);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+}
+
+.child-app-container {
+    width: 100%;
+    height: 100%;
+}
+
+.tabs-container {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+}
+
+.folder {
+    width: 36px;
+    height: 36px;
+    transform: rotate(0);
+    background-color: var(--leftFolderBgColor--);
+    cursor: pointer;
+    color: var(--leftFolderColor--);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.folder.active {
+    transform: rotate(180deg);
+}
+
+.folder>.arrow-right-icon {
+    fill: currentColor;
+    color: inherit;
+    width: 20px;
+    height: 20px;
+}
+
+.tabs {
+    background-color: var(--leftFolderBgColor--);
+    width: 0;
+    transform: scale(0) translateX(100%);
+    transition: all .4s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.tabs.active {
+    width: 150px;
+    transform: scale(1) translateX(0);
+}
+
+.tabs-item {
+    cursor: pointer;
+    padding: 5px 0;
+    text-align: center;
+    border-bottom: 1px solid var(--tabsBorderColor--);
+}
+
+.tabs-item.active,
+.tabs-item:hover {
+    border-color: var(--tabsBorderActiveColor--);
+    color: var(--tabsBorderActiveColor--);
+}
+
+#app-container {
+    width: 100%;
+    height: 100%;
+}
+
+#app-container>iframe {
+    width: 100%;
+    border: none;
+    height: 100%;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>黑客风格网站</title>
+    <link rel="stylesheet" href="./src/styles/hacker.css">
+</head>
+<body>
+    <button type="button" style="position: fixed; top: 0; left: 0; z-index: 1000;">测试按钮</button>
+    <div id="hacker-app">
+        <div class="hacker-container">
+            <div class="terminal-header">
+                <div class="terminal-buttons">
+                    <span class="terminal-button close"></span>
+                    <span class="terminal-button minimize"></span>
+                    <span class="terminal-button maximize"></span>
+                </div>
+                <div class="terminal-title">hacker@matrix:~$</div>
+            </div>
+            <div class="terminal-content">
+                <div class="command-line">
+                    <span class="prompt">root@matrix:~$</span>
+                    <span class="command">whoami</span>
+                </div>
+                <div class="output">hacker</div>
+                
+                <div class="command-line">
+                    <span class="prompt">root@matrix:~$</span>
+                    <span class="command">ls -la</span>
+                </div>
+                <div class="output">
+                    <div class="file-item">drwxr-xr-x 2 root root 4096 Dec 25 10:00 <span class="dir">.</span></div>
+                    <div class="file-item">drwxr-xr-x 3 root root 4096 Dec 25 10:00 <span class="dir">..</span></div>
+                    <div class="file-item">-rw-r--r-- 1 root root 1024 Dec 25 10:00 <span class="file">matrix.txt</span></div>
+                    <div class="file-item">-rw-r--r-- 1 root root 2048 Dec 25 10:00 <span class="file">code.js</span></div>
+                </div>
+                
+                <div class="command-line">
+                    <span class="prompt">root@matrix:~$</span>
+                    <span class="command">cat matrix.txt</span>
+                </div>
+                <div class="output">
+                    <div class="matrix-text">Welcome to the Matrix...</div>
+                    <div class="matrix-text">Reality is just a simulation...</div>
+                    <div class="matrix-text">Choose your own adventure...</div>
+                </div>
+                
+                <div class="command-line">
+                    <span class="prompt">root@matrix:~$</span>
+                    <span class="command">_</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="./src/main.ts"></script>
+</body>
+</html>

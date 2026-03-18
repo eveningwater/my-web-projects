@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="theme-color" content="#242628">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+	<link rel="shortcut icon" href="https://templates.eveningwater.info/favicon.ico">
+	<style>
+		@keyframes blink {
+			0% { opacity: 0; }
+			40% { opacity: 0; }
+			50% { opacity: 1; }
+			90% { opacity: 1; }
+			100% { opacity: 0; }
+		}
+		::selection {
+			background: rgba(193, 193, 193, 0.99);
+			color: #000;
+		}
+		::-moz-selection {
+			background: rgba(193, 193, 193, 0.99);
+			color: #000;
+		}
+		body {
+			margin: 10px;
+			background: #131517;
+			color: #dcdde4;
+			font-size: 14px;
+		}
+		.prompt {
+			color: #fff;
+			font-weight: bold;
+		}
+		.gradient {
+			background-image: linear-gradient(
+				to right,
+				#ff3e18 16.66%,
+				#fc9a00 16.66%, #fc9a00 33.32%,
+				#ffd800 33.32%, #ffd800 49.98%,
+				#39ea7c 49.98%, #39ea7c 66.64%,
+				#0bb2ff 66.64%, #0bb2ff 80.3%,
+				#985aff 80.3%
+			);
+			-webkit-background-clip: text;
+			color: transparent;
+			width: max-content;
+			font-weight: bold;
+		}
+		h1, p, a {
+			font-family: 'Consolas', 'Menlo', 'Monaco', 'Courier New', monospace !important;
+			font-size: 14px;
+			line-height: 18px;
+			margin: 0;
+			font-weight: normal;
+			position: relative;
+			word-break: break-all;
+			white-space: pre-wrap;
+		}
+		h1, p {
+			opacity: 0;
+		}
+		a {
+			color: cyan;
+			text-decoration: underline;
+		}
+		.cursor {
+			display: inline-block;
+			background: #bfbfbf;
+			width: 7px;
+			height: 18px;
+			vertical-align: top;
+			animation: blink 1s infinite;
+		}
+	</style>
+	<title>Why not fork me on GitHub?</title>
+</head>
+<body>
+	<p>Connecting to forkmeongithub.com...</p>
+	<p>Connection established.</p>
+	<p> </p>
+	<p>This login: <span id="this-login"></span></p>
+	<p> </p>
+    <p>                   _ooOoo_</p>
+    <p>                  o8888888o</p>
+    <p>                  88" . "88</p>
+    <p>                  (| -_- |)</p>
+    <p>                  O\  =  /O</p>
+    <p>               ____/`---'\____</p>
+    <p>             .'  \\|     |//  `.</p>
+    <p>            /  \\|||  :  |||//  \</p>
+    <p>           /  _||||| -:- |||||-  \</p>
+    <p>           |   | \\\  -  /// |   |</p>
+    <p>           | \_|  ''\---/''  |   |</p>
+    <p>           \  .-\__  `-`  ___/-. /</p>
+    <p>         ___`. .'  /--.--\  `. . __</p>
+    <p>      ."" '<  `.___\_<|>_/___.'  >'"".</p>
+    <p>     | | :  `- \`.;`\ _ /`;.`/ - ` : | |</p>
+    <p>     \  \ `-.   \_ __\ /__ _/   .-` /  /</p>
+    <p>======`-.____`-.___\_____/___.-`____.-'======</p>
+    <p>                   `=---='</p>
+    <p>^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</p>
+    <p>          God Bless       Never Crash</p>
+	<p> </p>
+	<h1 class="gradient">Why not fork me on GitHub?</h1>
+	<p> </p>
+	<p class="prompt">$ uname -a</p>
+	<p>eveningwater a.k.a waterXi, Web developer from chengdu,Sichuan,China.I am passionate about development,interaction and design.I really love what I do.</p>
+	<p> </p>
+	<p class="prompt">$ ls -l ~</p>
+	<p>total 9</p>
+	<p>lrwxr-xr-x 1 eveningwater 25 <a href="https://github.com/eveningwater" target="_blank">GitHub</a></p>
+	<p>lrwxr-xr-x 1 eveningwater 23 <a href="https://www.eveningwater.com" target="_blank">Website</a></p>
+	<p>lrwxr-xr-x 1 eveningwater 34 <a href="https://eveningwater.github.io/#/" target="_blank">blog</a></p>
+	<p>lrwxr-xr-x 1 eveningwater 26 <a href="https://www.eveningwater.com/my-web-projects/" target="_blank">projects</a></p>
+	<p>lrwxr-xr-x 1 eveningwater 35 <a href="https://www.eveningwater.com/docs/index.html" target="_blank">docs</a></p>
+	<p>lrwxr-xr-x 1 eveningwater 39 <a href="https://juejin.cn/user/4054654613988718" target="_blank">juejin</a></p>
+	<p>lrwxr-xr-x 1 eveningwater 40 <a href="https://segmentfault.com/u/xishui_5ac9a340a5484" target="_blank">segmentfault</a></p>
+	<p>lrwxr-xr-x 1 eveningwater 52 <a href="https://stackoverflow.com/users/10505577/eveningwater" target="_blank">stackoverflow</a></p>
+	<p>lrwxr-xr-x 1 eveningwater 43 <a href="https://www.zhihu.com/people/eveningwater" target="_blank">zhihu</a></p>
+	<p> </p>
+	<p class="prompt">$ <span class="cursor"></span></p>
+	<script>
+		document.getElementById('this-login').innerText = `${new Date().toGMTString()}`;
+		const items = [...document.querySelectorAll('h1, p')];
+		let currentIndex = 0;
+		const interval = setInterval(() => {
+			if (currentIndex >= items.length) {
+				clearInterval(interval);
+				return;
+			}
+			items[currentIndex].style.opacity = 1;
+			currentIndex++;
+		}, 100);
+	</script>
+</body>
+</html>

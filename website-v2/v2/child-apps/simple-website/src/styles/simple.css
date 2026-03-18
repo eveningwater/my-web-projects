@@ -1,0 +1,150 @@
+/* 简单风格应用样式 */
+.simple-app {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #f8f9fa;
+  color: #333;
+  min-height: 100vh;
+  padding: 40px 20px;
+  line-height: 1.6;
+}
+
+.simple-header {
+  text-align: center;
+  margin-bottom: 60px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.simple-header h1 {
+  font-size: 3rem;
+  font-weight: 300;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+}
+
+.simple-header p {
+  font-size: 1.3rem;
+  color: #7f8c8d;
+  font-weight: 400;
+}
+
+.simple-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto 60px auto;
+}
+
+.feature-card {
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid #e9ecef;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  border-color: #007bff;
+}
+
+.feature-card .icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.feature-card h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.feature-card p {
+  color: #6c757d;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.simple-footer {
+  text-align: center;
+  padding: 40px 0;
+  border-top: 1px solid #e9ecef;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.simple-footer p {
+  color: #6c757d;
+  font-size: 1.1rem;
+  font-style: italic;
+}
+
+/* 淡入动画 */
+.feature-card {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.feature-card:nth-child(1) { animation-delay: 0.1s; }
+.feature-card:nth-child(2) { animation-delay: 0.2s; }
+.feature-card:nth-child(3) { animation-delay: 0.3s; }
+.feature-card:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .simple-header h1 {
+    font-size: 2.5rem;
+  }
+  
+  .simple-header p {
+    font-size: 1.1rem;
+  }
+  
+  .simple-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 0 10px;
+  }
+  
+  .feature-card {
+    padding: 30px 20px;
+  }
+  
+  .feature-card .icon {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .simple-app {
+    padding: 20px 15px;
+  }
+  
+  .simple-header {
+    margin-bottom: 40px;
+  }
+  
+  .simple-header h1 {
+    font-size: 2rem;
+  }
+  
+  .simple-content {
+    gap: 20px;
+  }
+}
