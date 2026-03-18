@@ -1,0 +1,53 @@
+<!doctype html>
+<!--
+  俄罗斯方块（Vite + TypeScript）
+  - 界面结构写在 HTML
+  - 样式写在 src/style.css
+  - 逻辑写在 src/main.ts（面向对象）
+-->
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>俄罗斯方块</title>
+  </head>
+  <body>
+    <!-- 顶部导航（Hash 路由） -->
+    <header class="topBar" aria-label="导航栏">
+      <div class="topBarInner">
+        <div class="topBrand">俄罗斯方块</div>
+        <button id="topBarToggle" class="topToggle" type="button" aria-label="展开导航" aria-expanded="false">
+          菜单
+        </button>
+        <div class="topActions">
+          <nav class="topNav" aria-label="页面导航">
+            <a class="topLink" href="#/home" data-route="home">首页</a>
+            <a class="topLink" href="#/about" data-route="about">关于</a>
+          </nav>
+          <div class="themeControls" aria-label="主题切换">
+            <label class="themeLabel" for="themeSelectBtn">主题</label>
+            <div id="themeSelect" class="themeSelect" aria-label="主题模式">
+              <button id="themeSelectBtn" class="themeSelectBtn" type="button" aria-haspopup="listbox" aria-expanded="false">
+                dark
+              </button>
+              <div id="themeSelectList" class="themeSelectList" role="listbox">
+                <button class="themeSelectOption" type="button" role="option" data-value="dark">dark</button>
+                <button class="themeSelectOption" type="button" role="option" data-value="light">light</button>
+                <button class="themeSelectOption" type="button" role="option" data-value="custom">自定义</button>
+              </div>
+            </div>
+            <div id="themeColorWrap" class="themeColorWrap">
+              <div id="themeColorBtn" class="themeColorBtn" aria-label="自定义颜色"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- 路由出口：不同页面渲染到这里 -->
+    <div id="app" class="page" aria-live="polite"></div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
