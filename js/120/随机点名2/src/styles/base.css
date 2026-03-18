@@ -1,0 +1,73 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  color: var(--text-0);
+  background:
+    radial-gradient(1200px 800px at 20% 15%, rgba(46, 168, 255, 0.16), transparent 60%),
+    radial-gradient(900px 700px at 85% 25%, rgba(49, 208, 170, 0.14), transparent 60%),
+    radial-gradient(1000px 800px at 50% 90%, rgba(123, 104, 255, 0.12), transparent 65%),
+    linear-gradient(135deg, var(--bg-0), var(--bg-1));
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  overflow-x: hidden;
+}
+
+body::before,
+body::after {
+  content: '';
+  position: fixed;
+  inset: -20vh -20vw;
+  pointer-events: none;
+  filter: blur(35px);
+  opacity: 0.7;
+  transform: translate3d(0, 0, 0);
+}
+
+body::before {
+  background:
+    radial-gradient(300px 220px at 20% 30%, rgba(46, 168, 255, 0.24), transparent 70%),
+    radial-gradient(360px 260px at 80% 25%, rgba(49, 208, 170, 0.2), transparent 70%),
+    radial-gradient(420px 320px at 60% 80%, rgba(123, 104, 255, 0.16), transparent 70%);
+  animation: floaty 16s ease-in-out infinite;
+}
+
+body::after {
+  background:
+    radial-gradient(460px 340px at 25% 80%, rgba(49, 208, 170, 0.12), transparent 75%),
+    radial-gradient(520px 380px at 85% 75%, rgba(46, 168, 255, 0.12), transparent 75%);
+  animation: floaty 20s ease-in-out infinite reverse;
+}
+
+@keyframes floaty {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(2vw, -1.5vh, 0) scale(1.05);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: rgba(46, 168, 255, 0.25);
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
