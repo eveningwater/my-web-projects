@@ -207,7 +207,7 @@ function onOpenMusicList(){
  */
 function loadSong(song, index) {
     songTitleEl.innerHTML = song.name + '-' + song.singer;
-    audio.src = "https://www.eveningwater.com/static/resouces/audio/" + (index + 1) + '.mp3';
+    audio.src = "https://gitcode.com/api/v5/repos/eveningwater11/some-audio/raw/" + (index + 1) + ".mp3?ref=main";
     songCoverEl.src = "https://www.eveningwater.com/my-web-projects/react/1/audioImages/" + song.imgName + '.jpg';
 }
 /**

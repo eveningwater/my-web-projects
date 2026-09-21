@@ -20,60 +20,63 @@ const copyHandler = (str) => {
     }
 };
 const $ = (selector, el = document) => el.querySelector(selector);
+
 const request = (options) => {
     const { url = "", method = "get", params = {} } = options || {};
-    const handleParam = obj => {
-        if (!Object.keys(obj).length) return "";
-        let keys = Object.keys(obj),
-            length = keys.length,
-            keyStr = "";
-        for (let key in obj) {
-            keyStr += key + "=" + obj[key];
-            if (key === keys[length - 1]) {
-                break;
-            } else {
-                keyStr += "&";
-            }
-        }
-        return keyStr;
-    }
     return new Promise((resolve, reject) => {
         const xhr = new XMLHttpRequest();
-        let requestURL = "";
-        if (method.toLowerCase() === "get") {
-            requestURL += url + handleParam(params);
-        } else {
-            requestURL = url;
-        }
-        xhr.open(method, requestURL, true);
+        const u = new URL(url);
+        Object.entries(params).forEach(([k, v]) => u.searchParams.append(k, v));
+        xhr.open(method, method.toLowerCase() === "get" ? u : url, true);
         if (method.toLowerCase() === "post") {
             xhr.setRequestHeader("Content-Type", "application/json");
+            xhr.send(JSON.stringify(params));
+        } else {
+            xhr.send();
         }
-        method.toLowerCase() === "get" ? xhr.send() : xhr.send(JSON.stringify(params));
         xhr.onreadystatechange = () => {
-            if (xhr.readyState === 4 && xhr.status === 200) {
-                resolve(JSON.parse(xhr.responseText));
+            if (xhr.readyState === 4) {
+                if (xhr.status === 200) {
+                    resolve(JSON.parse(xhr.responseText));
+                } else {
+                    reject(new Error(`status ${xhr.status}`));
+                }
             }
         };
-        xhr.onerror = reject;
-    })
-}
+        xhr.onerror = () => reject(new Error("network error"));
+    });
+};
 const getText = () => {
     $("#refresh").innerHTML = "正在加载中<dot>...</dot>";
     $("#refresh").classList.add('ls-loading');
     $("#refresh").classList.add("ls-disabled");
-    request({ url: API, method: "get" }).then(value => {
-        if (value?.code === 1 && value?.content) {
-            $("#ls-content-text").innerHTML = value?.content;
+    request({ url: API, method: "get", params: {} }).then(value => {
+        // 兼容多种返回格式
+        // PHP 代理包装纯文本: { content: "..." }
+        // 一言原生: { hitokoto: "..." }
+        // ALAPI: { code: 200, data: { content: "..." } }
+        const content = value?.content
+                     || value?.hitokoto
+                     || value?.data?.content
+                     || null;
+        if (content) {
+            $("#ls-content-text").innerHTML = content;
             $("#refresh").innerHTML = "不好?换一个";
             $("#refresh").classList.remove('ls-loading');
             $("#refresh").classList.remove("ls-disabled");
+        } else {
+            $("#ls-content-text").textContent = value?.error || "似乎没有找到合适的土味情话!";
+            $("#refresh").innerHTML = "不好?换一个";
+            $("#refresh").classList.remove('ls-loading');
+            $("#refresh").classList.remove("ls-disabled");
+            console.warn("接口返回异常:", value);
         }
     }).catch(error => {
         $("#ls-content-text").textContent = "似乎没有找到合适的土味情话!";
         $("#refresh").innerHTML = "不好?换一个";
         $("#refresh").classList.remove('ls-loading');
         $("#refresh").classList.remove("ls-disabled");
+        console.error(error);
     })
 }
 window.onload = () => {
