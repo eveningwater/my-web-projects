@@ -23,16 +23,16 @@
     "css-loader": "^6.8.1",
     "element-ui": "^2.15.9",
     "file-loader": "^6.2.0",
-    "less": "^3.12.2",
+    "less": "^4.9.1",
     "less-loader": "^7.0.1",
     "style-loader": "^1.2.1",
     "url-loader": "^4.1.1",
-    "vue": "^2.6.12",
+    "vue": "^3.5.43",
     "vue-loader": "^17.2.2",
     "vue-router": "^3.4.9",
-    "vue-template-compiler": "^2.6.12",
-    "webpack": "^4.44.1",
-    "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0"
+    "vue-template-compiler": "^0.1.0",
+    "webpack": "^5.111.1",
+    "webpack-cli": "^7.2.3",
+    "webpack-dev-server": "^6.0.0"
   }
 }
