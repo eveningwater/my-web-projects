@@ -172,7 +172,7 @@ npm run typescript 1 dev/build
 > 注意:需要安装 git 客户端，在 git-bash 中运行，如果有配置环境变量，则无需在 git-bash 中运行。当然,home 目录除外。
 
 ## star的人数，随着时间的推移
-[![star的人数，随着时间的推移](https://starchart.cc/eveningwater/my-web-projects.svg?variant=adaptive)](https://starchart.cc/eveningwater/my-web-projects)
+[![Star History Chart](https://api.star-history.com/svg?repos=eveningwater/my-web-projects&type=Date)](https://star-history.com/#eveningwater/my-web-projects&Date)
 
 ### 友情链接
 
